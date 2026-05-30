@@ -105,7 +105,7 @@ export default function WeatherPage() {
   useEffect(() => {
     async function fetchWeather() {
       try {
-        const res = await fetch(WEATHER_API_URL, { next: { revalidate: 3600 } });
+        const res = await fetch(`${WEATHER_API_URL}?t=${Date.now()}`, { cache: "no-store" });
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const json: WeatherData = await res.json();
         setData(json);

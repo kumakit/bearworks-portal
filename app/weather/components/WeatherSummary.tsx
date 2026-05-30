@@ -35,7 +35,7 @@ export default function WeatherSummary({ locations }: WeatherSummaryProps) {
           </div>
         </div>
         <p className="text-sm text-gray-600 leading-relaxed mt-1 line-clamp-2">
-          {locations[0]?.overview}
+          {locations[0]?.umbrellaAdvice}
         </p>
         {/* 各拠点の降水確率 */}
         <div className="flex gap-4 mt-2">
