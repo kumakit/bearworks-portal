@@ -10,6 +10,25 @@ export interface HourlyMetric {
   cloudflareThreats: number;
 }
 
+export interface ProjectBilling {
+  id: string;
+  costUSD: number;
+}
+
+export interface GoogleBilling {
+  limitUSD: number;
+  currentMonthTotalUSD: number;
+  usagePercent: number;
+  projects: ProjectBilling[];
+  modelCosts: { [key: string]: number }; // e.g. { "Gemini 1.5 Pro": 1.20 }
+}
+
+export interface DailyCost30d {
+  date: string; // "05-20", etc.
+  costs: { [projectId: string]: number }; // Mapping of projectId -> cost
+  total: number;
+}
+
 export interface DashboardSummary {
   googleTotalRequests24h: number;
   googleTotalErrors24h: number;
@@ -17,13 +36,16 @@ export interface DashboardSummary {
   cloudflareTotalRequests24h: number;
   cloudflareTotalThreats24h: number;
   cloudflareCacheRate24h: number;
+  googleBilling: GoogleBilling;
 }
 
 export interface DashboardData {
   updatedAt: string; // ISO String
   summary: DashboardSummary;
   hourly: HourlyMetric[];
+  dailyCosts30d: DailyCost30d[];
 }
+
 
 /**
  * 日付文字列を相対表記（「〇分前」など）に変換する

@@ -12,6 +12,7 @@ interface MetricCardProps {
     value: string;
     isPositive: boolean;
   };
+  children?: React.ReactNode;
 }
 
 export function MetricCard({
@@ -22,6 +23,7 @@ export function MetricCard({
   icon,
   theme = "default",
   trend,
+  children,
 }: MetricCardProps) {
   // テーマごとのスタイル定義
   const themeStyles = {
@@ -69,6 +71,8 @@ export function MetricCard({
         </div>
       </div>
 
+      {children && <div className="mt-3 mb-4">{children}</div>}
+
       <div className="flex items-center justify-between mt-auto">
         {description && (
           <p className="text-xs text-muted font-medium max-w-[80%] leading-relaxed">
@@ -92,3 +96,4 @@ export function MetricCard({
   );
 }
 export default MetricCard;
+

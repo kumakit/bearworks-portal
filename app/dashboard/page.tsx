@@ -53,6 +53,33 @@ function getMockData(): DashboardData {
   const cfTotal = hourly.reduce((sum, h) => sum + h.cloudflareRequests, 0);
   const cfThreats = hourly.reduce((sum, h) => sum + h.cloudflareThreats, 0);
 
+  // 30日間の日次積層データをシミュレート
+  const dailyCosts30d = [];
+  let accumProd = 0;
+  let accumDev = 0;
+  for (let i = 29; i >= 0; i--) {
+    const target = new Date(now.getTime() - i * 24 * 60 * 60 * 1000);
+    const dateStr = `${String(target.getMonth() + 1).padStart(2, "0")}-${String(target.getDate()).padStart(2, "0")}`;
+    
+    const prodCost = Math.random() * 0.15 + 0.02;
+    const devCost = Math.random() * 0.04 + 0.005;
+    accumProd += prodCost;
+    accumDev += devCost;
+    
+    dailyCosts30d.push({
+      date: dateStr,
+      costs: {
+        "bearworks-prod": parseFloat(prodCost.toFixed(2)),
+        "bearworks-dev": parseFloat(devCost.toFixed(2)),
+      },
+      total: parseFloat((prodCost + devCost).toFixed(2)),
+    });
+  }
+
+  const currentMonthTotal = parseFloat((accumProd + accumDev).toFixed(2));
+  const limitUsd = 10.0;
+  const usagePercent = parseFloat(((currentMonthTotal / limitUsd) * 100).toFixed(2));
+
   return {
     updatedAt: now.toISOString(),
     summary: {
@@ -62,10 +89,25 @@ function getMockData(): DashboardData {
       cloudflareTotalRequests24h: cfTotal,
       cloudflareTotalThreats24h: cfThreats,
       cloudflareCacheRate24h: 54.8,
+      googleBilling: {
+        limitUSD: limitUsd,
+        currentMonthTotalUSD: currentMonthTotal,
+        usagePercent: usagePercent,
+        projects: [
+          { id: "bearworks-prod", costUSD: parseFloat(accumProd.toFixed(2)) },
+          { id: "bearworks-dev", costUSD: parseFloat(accumDev.toFixed(2)) },
+        ],
+        modelCosts: {
+          "Gemini 1.5 Pro": parseFloat((currentMonthTotal * 0.85).toFixed(2)),
+          "Gemini 1.5 Flash": parseFloat((currentMonthTotal * 0.15).toFixed(2)),
+        },
+      },
     },
     hourly,
+    dailyCosts30d,
   };
 }
+
 
 export default function DashboardPage() {
   const [data, setData] = useState<DashboardData | null>(null);
@@ -239,19 +281,63 @@ export default function DashboardPage() {
           theme="cloudflare"
         />
 
-        {/* Google Billing Info (Mocked / Conceptual) */}
+        {/* Google Billing Info (Dynamic / BigQuery) */}
         <MetricCard
           title="AI Studio 課金ステータス"
-          value="Free Tier"
-          description="現在無料枠（毎月の無料割り当て枠内）で正常に稼働中"
+          value={`$${(data.summary.googleBilling.limitUSD - data.summary.googleBilling.currentMonthTotalUSD).toFixed(2)}`}
+          unit="残り"
+          description={`今月の消費: $${data.summary.googleBilling.currentMonthTotalUSD.toFixed(2)} / $${data.summary.googleBilling.limitUSD.toFixed(2)}`}
           icon={<ArrowUpRight size={20} />}
           theme="google"
-        />
+        >
+          {/* 進捗ゲージバー (Stitch デザイン適用) */}
+          <div className="w-full mt-2">
+            <div className="flex justify-between items-center mb-1 text-[10px] font-bold text-muted">
+              <span>クレジット消化率</span>
+              <span className={data.summary.googleBilling.usagePercent > 80 ? "text-red-500 animate-pulse" : data.summary.googleBilling.usagePercent > 50 ? "text-amber-500" : "text-purple-500"}>
+                {data.summary.googleBilling.usagePercent}%
+              </span>
+            </div>
+            <div className="w-full bg-purple-50 rounded-full h-2.5 overflow-hidden border border-purple-100/30">
+              <div
+                className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 h-full rounded-full transition-all duration-500"
+                style={{ width: `${Math.min(data.summary.googleBilling.usagePercent, 100)}%` }}
+              />
+            </div>
+          </div>
+
+          {/* モデル別 & プロジェクト別内訳のパネル */}
+          <div className="mt-4 pt-3 border-t border-purple-50/50 flex flex-col gap-2.5">
+            <div className="flex flex-col gap-1">
+              <span className="text-[10px] font-bold text-muted tracking-wider">モデル別消費額</span>
+              <div className="grid grid-cols-2 gap-2">
+                {Object.entries(data.summary.googleBilling.modelCosts).map(([model, cost]) => (
+                  <div key={model} className="bg-purple-50/40 border border-purple-100/10 rounded-xl px-2 py-1 flex flex-col">
+                    <span className="text-[9px] font-bold text-muted/80">{model}</span>
+                    <span className="text-xs font-extrabold text-purple-600/90">${cost.toFixed(2)}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="flex flex-col gap-1">
+              <span className="text-[10px] font-bold text-muted tracking-wider">プロジェクト別消費額</span>
+              <div className="flex flex-col gap-1.5">
+                {data.summary.googleBilling.projects.map((proj) => (
+                  <div key={proj.id} className="flex justify-between items-center text-[10px] font-semibold text-muted/90">
+                    <span className="truncate max-w-[70%] font-bold">{proj.id}</span>
+                    <span className="font-extrabold text-primary">${proj.costUSD.toFixed(2)}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </MetricCard>
       </div>
 
       {/* Main Charts */}
       <div className="w-full">
-        <DashboardCharts hourlyData={data.hourly} />
+        <DashboardCharts hourlyData={data.hourly} dailyCosts30d={data.dailyCosts30d} />
       </div>
 
       {/* Footer */}
