@@ -153,6 +153,17 @@ export default function DashboardPage() {
 
   if (!data) return null;
 
+  // 古い形式のデータがAPIから返ってきた場合（課金エクスポート未連携状態）でも絶対にクラッシュしないためのフォールバック
+  const googleBilling = data.summary.googleBilling || {
+    limitUSD: 10.0,
+    currentMonthTotalUSD: 0.0,
+    usagePercent: 0.0,
+    projects: [],
+    modelCosts: { "Gemini 1.5 Pro": 0.0, "Gemini 1.5 Flash": 0.0 }
+  };
+  const dailyCosts30d = data.dailyCosts30d || [];
+
+
   return (
     <main className="max-w-5xl w-full mx-auto px-4 py-6 flex flex-col gap-6">
       {/* Top Navigation Backlink */}
@@ -284,9 +295,9 @@ export default function DashboardPage() {
         {/* Google Billing Info (Dynamic / BigQuery) */}
         <MetricCard
           title="AI Studio 課金ステータス"
-          value={`$${(data.summary.googleBilling.limitUSD - data.summary.googleBilling.currentMonthTotalUSD).toFixed(2)}`}
+          value={`$${(googleBilling.limitUSD - googleBilling.currentMonthTotalUSD).toFixed(2)}`}
           unit="残り"
-          description={`今月の消費: $${data.summary.googleBilling.currentMonthTotalUSD.toFixed(2)} / $${data.summary.googleBilling.limitUSD.toFixed(2)}`}
+          description={`今月の消費: $${googleBilling.currentMonthTotalUSD.toFixed(2)} / $${googleBilling.limitUSD.toFixed(2)}`}
           icon={<ArrowUpRight size={20} />}
           theme="google"
         >
@@ -294,14 +305,14 @@ export default function DashboardPage() {
           <div className="w-full mt-2">
             <div className="flex justify-between items-center mb-1 text-[10px] font-bold text-muted">
               <span>クレジット消化率</span>
-              <span className={data.summary.googleBilling.usagePercent > 80 ? "text-red-500 animate-pulse" : data.summary.googleBilling.usagePercent > 50 ? "text-amber-500" : "text-purple-500"}>
-                {data.summary.googleBilling.usagePercent}%
+              <span className={googleBilling.usagePercent > 80 ? "text-red-500 animate-pulse" : googleBilling.usagePercent > 50 ? "text-amber-500" : "text-purple-500"}>
+                {googleBilling.usagePercent}%
               </span>
             </div>
             <div className="w-full bg-purple-50 rounded-full h-2.5 overflow-hidden border border-purple-100/30">
               <div
                 className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 h-full rounded-full transition-all duration-500"
-                style={{ width: `${Math.min(data.summary.googleBilling.usagePercent, 100)}%` }}
+                style={{ width: `${Math.min(googleBilling.usagePercent, 100)}%` }}
               />
             </div>
           </div>
@@ -311,7 +322,7 @@ export default function DashboardPage() {
             <div className="flex flex-col gap-1">
               <span className="text-[10px] font-bold text-muted tracking-wider">モデル別消費額</span>
               <div className="grid grid-cols-2 gap-2">
-                {Object.entries(data.summary.googleBilling.modelCosts).map(([model, cost]) => (
+                {Object.entries(googleBilling.modelCosts).map(([model, cost]) => (
                   <div key={model} className="bg-purple-50/40 border border-purple-100/10 rounded-xl px-2 py-1 flex flex-col">
                     <span className="text-[9px] font-bold text-muted/80">{model}</span>
                     <span className="text-xs font-extrabold text-purple-600/90">${cost.toFixed(2)}</span>
@@ -323,7 +334,7 @@ export default function DashboardPage() {
             <div className="flex flex-col gap-1">
               <span className="text-[10px] font-bold text-muted tracking-wider">プロジェクト別消費額</span>
               <div className="flex flex-col gap-1.5">
-                {data.summary.googleBilling.projects.map((proj) => (
+                {googleBilling.projects.map((proj) => (
                   <div key={proj.id} className="flex justify-between items-center text-[10px] font-semibold text-muted/90">
                     <span className="truncate max-w-[70%] font-bold">{proj.id}</span>
                     <span className="font-extrabold text-primary">${proj.costUSD.toFixed(2)}</span>
@@ -337,7 +348,7 @@ export default function DashboardPage() {
 
       {/* Main Charts */}
       <div className="w-full">
-        <DashboardCharts hourlyData={data.hourly} dailyCosts30d={data.dailyCosts30d} />
+        <DashboardCharts hourlyData={data.hourly} dailyCosts30d={dailyCosts30d} />
       </div>
 
       {/* Footer */}
