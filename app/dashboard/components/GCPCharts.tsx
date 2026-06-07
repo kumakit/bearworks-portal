@@ -218,7 +218,13 @@ export function GCPCharts({
             <BarChart data={dailyCosts30d} margin={{ top: 15, right: 10, left: -20, bottom: 0 }}>
               <CartesianGrid strokeDasharray="3 3" stroke="#f3f4f6" />
               <XAxis dataKey="date" tick={{ fontSize: 9, fill: "#9ca3af", fontWeight: 500 }} tickLine={false} axisLine={{ stroke: "#f3f4f6" }} />
-              <YAxis tick={{ fontSize: 9, fill: "#9ca3af", fontWeight: 500 }} tickLine={false} axisLine={false} tickFormatter={(value) => `¥${value}`} />
+              <YAxis
+                domain={[0, 60]}
+                tick={{ fontSize: 9, fill: "#9ca3af", fontWeight: 500 }}
+                tickLine={false}
+                axisLine={false}
+                tickFormatter={(value) => `¥${value}`}
+              />
               <Tooltip content={<ChartTooltip isCost={true} />} />
               <Legend verticalAlign="top" height={30} iconType="circle" iconSize={6} wrapperStyle={{ fontSize: 10, fontWeight: 600 }} />
               <ReferenceLine
@@ -319,7 +325,13 @@ export function GCPCharts({
               </defs>
               <CartesianGrid strokeDasharray="3 3" stroke="#f3f4f6" />
               <XAxis dataKey="date" tick={{ fontSize: 9, fill: "#9ca3af", fontWeight: 500 }} tickLine={false} axisLine={{ stroke: "#f3f4f6" }} />
-              <YAxis tick={{ fontSize: 9, fill: "#9ca3af", fontWeight: 500 }} tickLine={false} axisLine={false} tickFormatter={(value) => `${value} GB`} />
+              <YAxis
+                domain={[0, 40]}
+                tick={{ fontSize: 9, fill: "#9ca3af", fontWeight: 500 }}
+                tickLine={false}
+                axisLine={false}
+                tickFormatter={(value) => `${value} GB`}
+              />
               <Tooltip content={<ChartTooltip />} />
               <Legend verticalAlign="top" height={30} iconType="circle" iconSize={6} wrapperStyle={{ fontSize: 10, fontWeight: 600 }} />
               <ReferenceLine
