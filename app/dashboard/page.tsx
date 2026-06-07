@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
 import {
   ShieldAlert,
   Zap,
@@ -16,6 +17,7 @@ import {
   DashboardData,
   getRelativeTime,
   formatJstTime,
+  formatJPY,
 } from "./lib/dashboardUtils";
 import { MetricCard } from "./components/MetricCard";
 import { DashboardCharts } from "./components/DashboardCharts";
@@ -62,18 +64,19 @@ function getMockData(): DashboardData {
     const target = new Date(now.getTime() - i * 24 * 60 * 60 * 1000);
     const dateStr = `${String(target.getMonth() + 1).padStart(2, "0")}-${String(target.getDate()).padStart(2, "0")}`;
     
-    const prodCost = Math.random() * 0.15 + 0.02;
-    const devCost = Math.random() * 0.04 + 0.005;
+    // 円建てのコストをシミュレート
+    const prodCost = Math.random() * 20.0 + 3.0;
+    const devCost = Math.random() * 5.0 + 0.8;
     accumProd += prodCost;
     accumDev += devCost;
     
     dailyCosts30d.push({
       date: dateStr,
       costs: {
-        "bearworks-prod": parseFloat(prodCost.toFixed(2)),
-        "bearworks-dev": parseFloat(devCost.toFixed(2)),
+        "bearworks-prod": parseFloat(prodCost.toFixed(1)),
+        "bearworks-dev": parseFloat(devCost.toFixed(1)),
       },
-      total: parseFloat((prodCost + devCost).toFixed(2)),
+      total: parseFloat((prodCost + devCost).toFixed(1)),
     });
 
     bigqueryDailyUsage30d.push({
@@ -82,9 +85,9 @@ function getMockData(): DashboardData {
     });
   }
 
-  const currentMonthTotal = parseFloat((accumProd + accumDev).toFixed(2));
-  const limitUsd = 10.0;
-  const usagePercent = parseFloat(((currentMonthTotal / limitUsd) * 100).toFixed(2));
+  const currentMonthTotal = parseFloat((accumProd + accumDev).toFixed(1));
+  const limitJpy = 1550.0;
+  const usagePercent = parseFloat(((currentMonthTotal / limitJpy) * 100).toFixed(1));
 
   return {
     updatedAt: now.toISOString(),
@@ -96,18 +99,18 @@ function getMockData(): DashboardData {
       cloudflareTotalThreats24h: cfThreats,
       cloudflareCacheRate24h: 54.8,
       googleBilling: {
-        limitUSD: limitUsd,
-        currentMonthTotalUSD: currentMonthTotal,
+        limitJPY: limitJpy,
+        currentMonthTotalJPY: currentMonthTotal,
         usagePercent: usagePercent,
         projects: [
-          { id: "bearworks-prod", costUSD: parseFloat(accumProd.toFixed(2)) },
-          { id: "bearworks-dev", costUSD: parseFloat(accumDev.toFixed(2)) },
+          { id: "bearworks-prod", costJPY: parseFloat(accumProd.toFixed(1)) },
+          { id: "bearworks-dev", costJPY: parseFloat(accumDev.toFixed(1)) },
         ],
         modelCosts: {
-          "Gemini Pro": parseFloat((currentMonthTotal * 0.75).toFixed(2)),
-          "Gemini Flash": parseFloat((currentMonthTotal * 0.15).toFixed(2)),
-          "BigQuery": parseFloat((currentMonthTotal * 0.05).toFixed(2)),
-          "Firebase/Storage": parseFloat((currentMonthTotal * 0.05).toFixed(2)),
+          "Gemini Pro": parseFloat((currentMonthTotal * 0.75).toFixed(1)),
+          "Gemini Flash": parseFloat((currentMonthTotal * 0.15).toFixed(1)),
+          "BigQuery": parseFloat((currentMonthTotal * 0.05).toFixed(1)),
+          "Firebase/Storage": parseFloat((currentMonthTotal * 0.05).toFixed(1)),
         },
       },
       bigqueryUsage: {
@@ -172,8 +175,8 @@ export default function DashboardPage() {
 
   // 古い形式のデータがAPIから返ってきた場合（課金エクスポート未連携状態）でも絶対にクラッシュしないためのフォールバック
   const googleBilling = data.summary.googleBilling || {
-    limitUSD: 10.0,
-    currentMonthTotalUSD: 0.0,
+    limitJPY: 1550.0,
+    currentMonthTotalJPY: 0.0,
     usagePercent: 0.0,
     projects: [],
     modelCosts: { "Gemini Pro": 0.0, "Gemini Flash": 0.0 }
@@ -296,7 +299,16 @@ export default function DashboardPage() {
             value: "正常範囲",
             isPositive: true,
           }}
-        />
+        >
+          <div className="mt-2 text-right">
+            <Link
+              href="/dashboard/cloudflare"
+              className="text-xs font-bold text-orange-600 hover:text-orange-700 transition-colors inline-flex items-center gap-0.5"
+            >
+              🛡️ 詳細を見る <ArrowUpRight size={12} />
+            </Link>
+          </div>
+        </MetricCard>
 
         {/* Cloudflare Traffic */}
         <MetricCard
@@ -321,9 +333,9 @@ export default function DashboardPage() {
         {/* Google Billing Info (Dynamic / BigQuery) */}
         <MetricCard
           title="AI Studio 課金ステータス"
-          value={`$${(googleBilling.limitUSD - googleBilling.currentMonthTotalUSD).toFixed(2)}`}
+          value={formatJPY(googleBilling.limitJPY - googleBilling.currentMonthTotalJPY)}
           unit="残り"
-          description={`今月の消費: $${googleBilling.currentMonthTotalUSD.toFixed(2)} / $${googleBilling.limitUSD.toFixed(2)}`}
+          description={`今月の消費: ${formatJPY(googleBilling.currentMonthTotalJPY)} / ${formatJPY(googleBilling.limitJPY)}`}
           icon={<ArrowUpRight size={20} />}
           theme="google"
         >
@@ -351,7 +363,7 @@ export default function DashboardPage() {
                 {Object.entries(googleBilling.modelCosts).map(([model, cost]) => (
                   <div key={model} className="bg-purple-50/40 border border-purple-100/10 rounded-xl px-2 py-1 flex flex-col">
                     <span className="text-[9px] font-bold text-muted/80">{model}</span>
-                    <span className="text-xs font-extrabold text-purple-600/90">${cost.toFixed(2)}</span>
+                    <span className="text-xs font-extrabold text-purple-600/90">{formatJPY(cost)}</span>
                   </div>
                 ))}
               </div>
@@ -363,10 +375,19 @@ export default function DashboardPage() {
                 {googleBilling.projects.map((proj) => (
                   <div key={proj.id} className="flex justify-between items-center text-[10px] font-semibold text-muted/90">
                     <span className="truncate max-w-[70%] font-bold">{proj.id}</span>
-                    <span className="font-extrabold text-primary">${proj.costUSD.toFixed(2)}</span>
+                    <span className="font-extrabold text-primary">{formatJPY(proj.costJPY)}</span>
                   </div>
                 ))}
               </div>
+            </div>
+
+            <div className="text-right mt-1 pt-1 border-t border-purple-50/20">
+              <Link
+                href="/dashboard/gcp"
+                className="text-xs font-bold text-purple-600 hover:text-purple-700 transition-colors inline-flex items-center gap-0.5"
+              >
+                💰 詳細を見る <ArrowUpRight size={12} />
+              </Link>
             </div>
           </div>
         </MetricCard>
@@ -410,6 +431,15 @@ export default function DashboardPage() {
                 style={{ width: `${Math.min(bigqueryUsage.usageStoragePercent, 100)}%` }}
               />
             </div>
+          </div>
+
+          <div className="mt-4 pt-3 border-t border-purple-50/50 text-right">
+            <Link
+              href="/dashboard/gcp"
+              className="text-xs font-bold text-purple-600 hover:text-purple-700 transition-colors inline-flex items-center gap-0.5"
+            >
+              💰 詳細を見る <ArrowUpRight size={12} />
+            </Link>
           </div>
         </MetricCard>
       </div>

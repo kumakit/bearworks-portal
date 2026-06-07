@@ -40,10 +40,11 @@ function CustomTooltip({ active, payload, label }: any) {
           const isCost = 
             entry.name.includes("コスト") || 
             entry.name.includes("bearworks") || 
-            (typeof entry.value === "number" && !Number.isInteger(entry.value));
+            (typeof entry.value === "number" && !Number.isInteger(entry.value)) ||
+            (entry.name.includes("cost") || entry.name.includes("Total"));
             
           if (isCost) {
-            displayValue = `$${entry.value.toFixed(2)}`;
+            displayValue = `¥${entry.value.toLocaleString("ja-JP", { maximumFractionDigits: 1 })}`;
           } else {
             displayValue = `${formatNumber(entry.value)} 件`;
           }
@@ -234,7 +235,7 @@ export function DashboardCharts({ hourlyData, dailyCosts30d, bigqueryDailyUsage3
                 tick={{ fontSize: 9, fill: "#9ca3af", fontWeight: 500 }}
                 tickLine={false}
                 axisLine={false}
-                tickFormatter={(value) => `$${value}`}
+                tickFormatter={(value) => `¥${value.toLocaleString()}`}
               />
               <Tooltip content={<CustomTooltip />} />
               <Legend
@@ -244,14 +245,14 @@ export function DashboardCharts({ hourlyData, dailyCosts30d, bigqueryDailyUsage3
                 iconSize={6}
                 wrapperStyle={{ fontSize: 10, fontWeight: 600, paddingBottom: 10 }}
               />
-              {/* クレジット枠制限に基づく1日あたりの推奨限界値（$10.00 / 30日 ≒ $0.33）のライン */}
+              {/* クレジット枠制限に基づく1日あたりの推奨限界値（1550円 / 30日 ≒ 51.6円）のライン */}
               <ReferenceLine
-                y={0.33}
+                y={51.6}
                 stroke="#ef4444"
                 strokeDasharray="4 3"
                 strokeWidth={1.5}
                 label={{
-                  value: "1日目安上限 ($0.33)",
+                  value: "1日目安上限 (¥51.6)",
                   fill: "#ef4444",
                   fontSize: 8,
                   fontWeight: "bold",

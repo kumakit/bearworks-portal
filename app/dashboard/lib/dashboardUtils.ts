@@ -12,20 +12,20 @@ export interface HourlyMetric {
 
 export interface ProjectBilling {
   id: string;
-  costUSD: number;
+  costJPY: number;
 }
 
 export interface GoogleBilling {
-  limitUSD: number;
-  currentMonthTotalUSD: number;
+  limitJPY: number;
+  currentMonthTotalJPY: number;
   usagePercent: number;
   projects: ProjectBilling[];
-  modelCosts: { [key: string]: number }; // e.g. { "Gemini 1.5 Pro": 1.20 }
+  modelCosts: { [key: string]: number }; // e.g. { "Gemini 1.5 Pro": 381.3 }
 }
 
 export interface DailyCost30d {
   date: string; // "05-20", etc.
-  costs: { [projectId: string]: number }; // Mapping of projectId -> cost
+  costs: { [projectId: string]: number }; // Mapping of projectId -> cost_jpy
   total: number;
 }
 
@@ -41,6 +41,59 @@ export interface BigQueryUsage {
 export interface DailyBigQueryUsage30d {
   date: string;
   usageGB: number;
+}
+
+export interface FreeTierItem {
+  service: string;
+  limit: number;
+  unit: string;
+  current: number;
+  usage_percent: number;
+}
+
+export interface GCPFreeTierUsage {
+  bigquery_query: FreeTierItem;
+  bigquery_storage: FreeTierItem;
+  cloud_storage: FreeTierItem;
+  compute_engine: FreeTierItem;
+  cloud_run: FreeTierItem;
+}
+
+export interface WAFTopRule {
+  rule_id: string;
+  action: string;
+  source: string;
+  count: number;
+}
+
+export interface WAFTopPath {
+  path: string;
+  action: string;
+  count: number;
+}
+
+export interface WAFTopASN {
+  asn: number;
+  org: string;
+  country: string;
+  count: number;
+}
+
+export interface WAFHourlyEvent {
+  hour: string;
+  action: string;
+  count: number;
+}
+
+export interface WAFDetails {
+  period: string;
+  total_events: number;
+  action_summary: { [action: string]: number };
+  top_rules: WAFTopRule[];
+  top_paths: WAFTopPath[];
+  top_asns: WAFTopASN[];
+  bot_distribution: { [botScore: string]: number };
+  hourly_timeline: WAFHourlyEvent[];
 }
 
 export interface DashboardSummary {
@@ -60,6 +113,8 @@ export interface DashboardData {
   hourly: HourlyMetric[];
   dailyCosts30d: DailyCost30d[];
   bigqueryDailyUsage30d: DailyBigQueryUsage30d[];
+  wafDetails?: WAFDetails;
+  gcpFreeTier?: GCPFreeTierUsage;
 }
 
 
@@ -111,4 +166,11 @@ export function formatJstTime(isoString: string): string {
  */
 export function formatNumber(num: number): string {
   return num.toLocaleString("ja-JP");
+}
+
+/**
+ * 日本円の表記にする (例: 1570 -> "¥1,570")
+ */
+export function formatJPY(num: number): string {
+  return "¥" + num.toLocaleString("ja-JP");
 }
