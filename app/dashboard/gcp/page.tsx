@@ -171,6 +171,35 @@ export default function GCPCostsPage() {
   const totalBudget = googleBilling.limitJPY + carryover;
   const remainingPercent = totalBudget > 0 ? (remainingCredit / totalBudget) * 100 : 0;
 
+  // クレジットの定義と残高の動的割り当て
+  // 期限が遠いもの（終了日の遅いもの）から順番に満額を差し引き、余りを最も期限が近いもの（2027年2月18日）に割り当てる
+  const rawCredits = [
+    { name: "Google Developer Program premium benefit", originalValue: 1594.00, startDate: "2026年6月6日", endDate: "2027年6月6日", key: "6-6" },
+    { name: "Google Developer Program premium benefit", originalValue: 1596.00, startDate: "2026年5月17日", endDate: "2027年5月17日", key: "5-17" },
+    { name: "Google Developer Program premium benefit", originalValue: 1566.00, startDate: "2026年3月20日", endDate: "2027年3月20日", key: "3-20" },
+    { name: "Google Developer Program premium benefit", originalValue: 1566.00, startDate: "2026年3月20日", endDate: "2027年2月18日", key: "2-18" },
+  ];
+
+  let pool = remainingCredit;
+  const creditsList = rawCredits.map((c) => {
+    const allocated = Math.max(0, Math.min(c.originalValue, pool));
+    pool -= allocated;
+    const remPercent = c.originalValue > 0 ? (allocated / c.originalValue) * 100 : 0;
+    return {
+      ...c,
+      remainingValue: allocated,
+      remainingPercent: remPercent,
+      status: allocated > 0 ? "利用可能" : "消費済み",
+    };
+  });
+
+  const displayCredits = [
+    creditsList.find(c => c.key === "5-17")!,
+    creditsList.find(c => c.key === "6-6")!,
+    creditsList.find(c => c.key === "3-20")!,
+    creditsList.find(c => c.key === "2-18")!,
+  ].filter(Boolean);
+
   return (
     <DetailPageLayout
       title="GCP Costs"
@@ -249,6 +278,68 @@ export default function GCPCostsPage() {
         bigqueryDailyUsage30d={bigqueryDailyUsage30d}
         gcpFreeTier={gcpFreeTier}
       />
+
+      {/* 発行済みクレジット一覧 */}
+      <div className="rounded-[2.5rem] p-6 border bg-white shadow-soft border-gray-100 flex flex-col gap-4 mt-6">
+        <div>
+          <h3 className="text-sm font-bold tracking-wider text-muted mb-1">🎁 発行済みクレジット一覧</h3>
+          <p className="text-[10px] text-muted font-medium">
+            有効な Google Developer Program 特典クレジットの内訳 (総残高と動的連動)
+          </p>
+        </div>
+
+        <div className="overflow-x-auto">
+          <table className="w-full text-left border-collapse text-xs">
+            <thead>
+              <tr className="border-b border-gray-100 text-[10px] font-bold text-muted uppercase tracking-wider">
+                <th className="py-3 px-4">クレジット名</th>
+                <th className="py-3 px-4">ステータス</th>
+                <th className="py-3 px-4">残りの割合</th>
+                <th className="py-3 px-4">残りの値</th>
+                <th className="py-3 px-4">元の値</th>
+                <th className="py-3 px-4">開始日</th>
+                <th className="py-3 px-4">終了日</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-gray-50/50">
+              {displayCredits.map((item, idx) => (
+                <tr key={idx} className="hover:bg-gray-50/20 transition-colors font-medium">
+                  <td className="py-3.5 px-4 text-primary font-bold">
+                    {item.name}
+                  </td>
+                  <td className="py-3.5 px-4">
+                    <div className="flex items-center gap-1.5 text-emerald-600 font-extrabold">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                      <span>{item.status}</span>
+                    </div>
+                  </td>
+                  <td className="py-3.5 px-4">
+                    <div className="flex items-center gap-2">
+                      <div className="w-16 bg-purple-50 rounded-full h-1.5 overflow-hidden border border-purple-100/10">
+                        <div
+                          className="bg-gradient-to-r from-blue-400 to-purple-600 h-full rounded-full"
+                          style={{ width: `${item.remainingPercent}%` }}
+                        />
+                      </div>
+                      <span className="font-extrabold text-[10px] text-purple-600 w-8">
+                        {Math.round(item.remainingPercent)}%
+                      </span>
+                    </div>
+                  </td>
+                  <td className="py-3.5 px-4 text-primary font-bold">
+                    ¥{item.remainingValue.toLocaleString("ja-JP", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                  </td>
+                  <td className="py-3.5 px-4 text-muted font-semibold">
+                    ¥{item.originalValue.toLocaleString("ja-JP", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                  </td>
+                  <td className="py-3.5 px-4 text-muted">{item.startDate}</td>
+                  <td className="py-3.5 px-4 text-muted">{item.endDate}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
     </DetailPageLayout>
   );
 }
