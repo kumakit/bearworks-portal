@@ -171,6 +171,80 @@ export function formatNumber(num: number): string {
 /**
  * 日本円の表記にする (例: 1570 -> "¥1,570")
  */
-export function formatJPY(num: number): string {
+export function formatJPY(num: number | undefined | null): string {
+  if (num === undefined || num === null || isNaN(num)) {
+    return "¥0";
+  }
   return "¥" + num.toLocaleString("ja-JP");
+}
+
+/**
+ * 移行期間中の互換性のために、古いUSD形式のデータをJPY建てに正規化する
+ */
+export function normalizeDashboardData(data: any): DashboardData {
+  if (!data) return data;
+
+  const JPY_RATE = 155.0; // 移行用の為替レート
+
+  // deep copy
+  const normalized = JSON.parse(JSON.stringify(data));
+
+  // 1. googleBilling の正規化
+  let billing = normalized.summary?.googleBilling;
+  if (billing) {
+    if (billing.limitJPY === undefined && billing.limitUSD !== undefined) {
+      billing.limitJPY = billing.limitUSD * JPY_RATE;
+    }
+    if (billing.currentMonthTotalJPY === undefined && billing.currentMonthTotalUSD !== undefined) {
+      billing.currentMonthTotalJPY = billing.currentMonthTotalUSD * JPY_RATE;
+    }
+    if (billing.projects) {
+      billing.projects = billing.projects.map((proj: any) => {
+        if (proj.costJPY === undefined && proj.costUSD !== undefined) {
+          return { ...proj, costJPY: proj.costUSD * JPY_RATE };
+        }
+        return proj;
+      });
+    }
+    if (billing.modelCosts) {
+      const modelCostsJPY: { [key: string]: number } = {};
+      Object.entries(billing.modelCosts).forEach(([model, val]) => {
+        const numVal = val as number;
+        // modelCosts の合計が 50 未満（USDと思われる）なら換算
+        if (numVal < 50) {
+          modelCostsJPY[model] = parseFloat((numVal * JPY_RATE).toFixed(1));
+        } else {
+          modelCostsJPY[model] = numVal;
+        }
+      });
+      billing.modelCosts = modelCostsJPY;
+    }
+    // usagePercent
+    if (billing.limitJPY && billing.currentMonthTotalJPY) {
+      billing.usagePercent = parseFloat(((billing.currentMonthTotalJPY / billing.limitJPY) * 100).toFixed(1));
+    }
+  }
+
+  // 2. dailyCosts30d の正規化
+  let dailyCosts = normalized.dailyCosts30d;
+  if (dailyCosts) {
+    normalized.dailyCosts30d = dailyCosts.map((d: any) => {
+      if (d.total !== undefined && d.total < 50) {
+        const costsJPY: { [key: string]: number } = {};
+        if (d.costs) {
+          Object.entries(d.costs).forEach(([proj, val]) => {
+            costsJPY[proj] = parseFloat(((val as number) * JPY_RATE).toFixed(1));
+          });
+        }
+        return {
+          ...d,
+          costs: costsJPY,
+          total: parseFloat((d.total * JPY_RATE).toFixed(1)),
+        };
+      }
+      return d;
+    });
+  }
+
+  return normalized;
 }

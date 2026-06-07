@@ -18,6 +18,7 @@ import {
   getRelativeTime,
   formatJstTime,
   formatJPY,
+  normalizeDashboardData,
 } from "./lib/dashboardUtils";
 import { MetricCard } from "./components/MetricCard";
 import { DashboardCharts } from "./components/DashboardCharts";
@@ -142,7 +143,7 @@ export default function DashboardPage() {
       const res = await fetch(DASHBOARD_API_URL, { cache: "no-store" });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const json: DashboardData = await res.json();
-      setData(json);
+      setData(normalizeDashboardData(json));
       setUsingMock(false);
       setError(null);
     } catch (err) {

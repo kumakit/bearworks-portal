@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { AlertTriangle } from "lucide-react";
-import { DashboardData } from "../lib/dashboardUtils";
+import { DashboardData, normalizeDashboardData } from "../lib/dashboardUtils";
 import { DetailPageLayout } from "../components/DetailPageLayout";
 import { WAFCharts } from "../components/WAFCharts";
 
@@ -94,7 +94,7 @@ export default function CloudflareWafPage() {
       const res = await fetch(DASHBOARD_API_URL, { cache: "no-store" });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const json: DashboardData = await res.json();
-      setData(json);
+      setData(normalizeDashboardData(json));
       setUsingMock(false);
       setError(null);
     } catch (err) {

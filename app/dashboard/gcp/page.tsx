@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { AlertTriangle, TrendingUp, Sparkles, CreditCard } from "lucide-react";
-import { DashboardData, formatJPY, formatNumber } from "../lib/dashboardUtils";
+import { DashboardData, formatJPY, formatNumber, normalizeDashboardData } from "../lib/dashboardUtils";
 import { DetailPageLayout } from "../components/DetailPageLayout";
 import { GCPCharts } from "../components/GCPCharts";
 import { MetricCard } from "../components/MetricCard";
@@ -107,7 +107,7 @@ export default function GCPCostsPage() {
       const res = await fetch(DASHBOARD_API_URL, { cache: "no-store" });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const json: DashboardData = await res.json();
-      setData(json);
+      setData(normalizeDashboardData(json));
       setUsingMock(false);
       setError(null);
     } catch (err) {
