@@ -16,6 +16,7 @@ import {
   BarChart,
   Bar,
   ReferenceLine,
+  LabelList,
 } from "recharts";
 import {
   GoogleBilling,
@@ -179,7 +180,7 @@ export function GCPCharts({
               <BarChart
                 data={projectCostData}
                 layout="vertical"
-                margin={{ top: 5, right: 20, left: 10, bottom: 5 }}
+                margin={{ top: 5, right: 45, left: 10, bottom: 5 }}
               >
                 <CartesianGrid strokeDasharray="3 3" stroke="#f3f4f6" horizontal={false} />
                 <XAxis type="number" tickFormatter={(value) => `¥${value}`} tick={{ fontSize: 9, fill: "#9ca3af" }} />
@@ -192,6 +193,12 @@ export function GCPCharts({
                   {projectCostData.map((entry, index) => (
                     <Cell key={`cell-${index}`} fill={projectColors[entry.name] || projectColors["default"]} />
                   ))}
+                  <LabelList
+                    dataKey="cost"
+                    position="right"
+                    formatter={(value: any) => formatJPY(value)}
+                    style={{ fontSize: 10, fill: "#4b5563", fontWeight: "bold" }}
+                  />
                 </Bar>
               </BarChart>
             </ResponsiveContainer>
