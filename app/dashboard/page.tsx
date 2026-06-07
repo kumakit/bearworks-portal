@@ -309,126 +309,120 @@ export default function DashboardPage() {
       </div>
 
       {/* 2段目: AI Studio & GCP Resources */}
-      <div className="grid grid-cols-1 md:grid-cols-5 gap-5">
-        {/* AI Studio リクエスト数 & エラー率 (40% width / col-span-2) */}
-        <div className="md:col-span-2">
-          <MetricCard
-            title="AI Studio リクエスト数"
-            value={data.summary.googleTotalRequests24h}
-            unit="回"
-            description="Generative Language API への総呼び出し回数"
-            icon={<Zap size={20} />}
-            theme="google"
-          >
-            {/* エラー率の情報 */}
-            <div className="mt-2 pt-2 border-t border-purple-50/50 flex justify-between items-center text-xs">
-              <span className="text-muted font-bold">エラー率 (24h)</span>
-              <div className="flex items-center gap-1.5 font-extrabold text-primary">
-                <span>{data.summary.googleErrorRate24h}%</span>
-                <span className={`text-[10px] px-1.5 py-0.5 rounded-full font-bold ${
-                  data.summary.googleErrorRate24h > 1.0 
-                    ? "bg-red-50 text-red-600 border border-red-100" 
-                    : "bg-green-50 text-green-600 border border-green-100"
-                }`}>
-                  {data.summary.googleErrorRate24h > 1.0 ? "要確認" : "安定"}
-                </span>
-              </div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+        {/* AI Studio リクエスト数 & エラー率 */}
+        <MetricCard
+          title="AI Studio リクエスト数"
+          value={data.summary.googleTotalRequests24h}
+          unit="回"
+          description="Generative Language API への総呼び出し回数"
+          icon={<Zap size={20} />}
+          theme="google"
+        >
+          {/* エラー率の情報 */}
+          <div className="mt-2 pt-2 border-t border-purple-50/50 flex justify-between items-center text-xs">
+            <span className="text-muted font-bold">エラー率 (24h)</span>
+            <div className="flex items-center gap-1.5 font-extrabold text-primary">
+              <span>{data.summary.googleErrorRate24h}%</span>
+              <span className={`text-[10px] px-1.5 py-0.5 rounded-full font-bold ${
+                data.summary.googleErrorRate24h > 1.0 
+                  ? "bg-red-50 text-red-600 border border-red-100" 
+                  : "bg-green-50 text-green-600 border border-green-100"
+              }`}>
+                {data.summary.googleErrorRate24h > 1.0 ? "要確認" : "安定"}
+              </span>
             </div>
-            <div className="text-[10px] text-muted font-semibold text-right mt-1">
-              総エラー発生数: {data.summary.googleTotalErrors24h} 回
-            </div>
-          </MetricCard>
-        </div>
+          </div>
+          <div className="text-[10px] text-muted font-semibold text-right mt-1">
+            総エラー発生数: {data.summary.googleTotalErrors24h} 回
+          </div>
+        </MetricCard>
 
-        {/* AI Studio 課金ステータス (20% width / col-span-1) */}
-        <div className="md:col-span-1">
-          <MetricCard
-            title="AI Studio 課金"
-            value={formatJPY(googleBilling.limitJPY - googleBilling.currentMonthTotalJPY)}
-            unit="残り"
-            description={`今月: ${formatJPY(googleBilling.currentMonthTotalJPY)} / ${formatJPY(googleBilling.limitJPY)}`}
-            icon={<ArrowUpRight size={20} />}
-            theme="google"
-          >
-            {/* 進捗ゲージバー (Stitch デザイン適用) */}
-            <div className="w-full mt-2">
-              <div className="flex justify-between items-center mb-1 text-[10px] font-bold text-muted">
-                <span>消化率</span>
-                <span className={googleBilling.usagePercent > 80 ? "text-red-500 animate-pulse" : googleBilling.usagePercent > 50 ? "text-amber-500" : "text-purple-500"}>
-                  {googleBilling.usagePercent}%
-                </span>
-              </div>
-              <div className="w-full bg-purple-50 rounded-full h-2 overflow-hidden border border-purple-100/30">
-                <div
-                  className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 h-full rounded-full transition-all duration-500"
-                  style={{ width: `${Math.min(googleBilling.usagePercent, 100)}%` }}
-                />
-              </div>
+        {/* AI Studio 課金ステータス */}
+        <MetricCard
+          title="AI Studio 課金"
+          value={formatJPY(googleBilling.limitJPY - googleBilling.currentMonthTotalJPY)}
+          unit="残り"
+          description={`今月: ${formatJPY(googleBilling.currentMonthTotalJPY)} / ${formatJPY(googleBilling.limitJPY)}`}
+          icon={<ArrowUpRight size={20} />}
+          theme="google"
+        >
+          {/* 進捗ゲージバー (Stitch デザイン適用) */}
+          <div className="w-full mt-2">
+            <div className="flex justify-between items-center mb-1 text-[10px] font-bold text-muted">
+              <span>消化率</span>
+              <span className={googleBilling.usagePercent > 80 ? "text-red-500 animate-pulse" : googleBilling.usagePercent > 50 ? "text-amber-500" : "text-purple-500"}>
+                {googleBilling.usagePercent}%
+              </span>
             </div>
+            <div className="w-full bg-purple-50 rounded-full h-2 overflow-hidden border border-purple-100/30">
+              <div
+                className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 h-full rounded-full transition-all duration-500"
+                style={{ width: `${Math.min(googleBilling.usagePercent, 100)}%` }}
+              />
+            </div>
+          </div>
 
-            <div className="text-right mt-3">
-              <Link
-                href="/dashboard/gcp"
-                className="text-[10px] font-bold text-purple-600 hover:text-purple-700 transition-colors inline-flex items-center gap-0.5"
-              >
-                💰 詳細を見る <ArrowUpRight size={10} />
-              </Link>
-            </div>
-          </MetricCard>
-        </div>
+          <div className="text-right mt-3">
+            <Link
+              href="/dashboard/gcp"
+              className="text-[10px] font-bold text-purple-600 hover:text-purple-700 transition-colors inline-flex items-center gap-0.5"
+            >
+              💰 詳細を見る <ArrowUpRight size={10} />
+            </Link>
+          </div>
+        </MetricCard>
 
-        {/* BigQuery Resource Usage (40% width / col-span-2) */}
-        <div className="md:col-span-2">
-          <MetricCard
-            title="BigQuery 使用状況"
-            value={`${bigqueryUsage.currentMonthQueryGB.toFixed(1)} GB`}
-            unit="クエリ量"
-            description={`無料枠 (1TB) に対する消費状況とストレージ保存量`}
-            icon={<Activity size={20} />}
-            theme="google"
-          >
-            {/* クエリ量プログレスバー */}
-            <div className="w-full mt-2">
-              <div className="flex justify-between items-center mb-1 text-[10px] font-bold text-muted">
-                <span>クエリ解析量 ({bigqueryUsage.currentMonthQueryGB.toFixed(1)} GB / 1,024 GB)</span>
-                <span className={bigqueryUsage.usageQueryPercent > 80 ? "text-red-500 animate-pulse" : bigqueryUsage.usageQueryPercent > 50 ? "text-amber-500" : "text-purple-500"}>
-                  {bigqueryUsage.usageQueryPercent}%
-                </span>
-              </div>
-              <div className="w-full bg-purple-50 rounded-full h-2 overflow-hidden border border-purple-100/30">
-                <div
-                  className="bg-gradient-to-r from-blue-400 to-purple-500 h-full rounded-full transition-all duration-500"
-                  style={{ width: `${Math.min(bigqueryUsage.usageQueryPercent, 100)}%` }}
-                />
-              </div>
+        {/* BigQuery Resource Usage */}
+        <MetricCard
+          title="BigQuery 使用状況"
+          value={`${bigqueryUsage.currentMonthQueryGB.toFixed(1)} GB`}
+          unit="クエリ量"
+          description={`無料枠 (1TB) に対する消費状況とストレージ保存量`}
+          icon={<Activity size={20} />}
+          theme="google"
+        >
+          {/* クエリ量プログレスバー */}
+          <div className="w-full mt-2">
+            <div className="flex justify-between items-center mb-1 text-[10px] font-bold text-muted">
+              <span>クエリ解析量 ({bigqueryUsage.currentMonthQueryGB.toFixed(1)} GB / 1,024 GB)</span>
+              <span className={bigqueryUsage.usageQueryPercent > 80 ? "text-red-500 animate-pulse" : bigqueryUsage.usageQueryPercent > 50 ? "text-amber-500" : "text-purple-500"}>
+                {bigqueryUsage.usageQueryPercent}%
+              </span>
             </div>
+            <div className="w-full bg-purple-50 rounded-full h-2 overflow-hidden border border-purple-100/30">
+              <div
+                className="bg-gradient-to-r from-blue-400 to-purple-500 h-full rounded-full transition-all duration-500"
+                style={{ width: `${Math.min(bigqueryUsage.usageQueryPercent, 100)}%` }}
+              />
+            </div>
+          </div>
 
-            {/* ストレージ保存量プログレスバー */}
-            <div className="w-full mt-4">
-              <div className="flex justify-between items-center mb-1 text-[10px] font-bold text-muted">
-                <span>ストレージ保存量 ({bigqueryUsage.currentMonthStorageGB.toFixed(1)} GB / 10 GB)</span>
-                <span className={bigqueryUsage.usageStoragePercent > 80 ? "text-red-500 animate-pulse" : bigqueryUsage.usageStoragePercent > 50 ? "text-amber-500" : "text-purple-500"}>
-                  {bigqueryUsage.usageStoragePercent}%
-                </span>
-              </div>
-              <div className="w-full bg-purple-50 rounded-full h-2 overflow-hidden border border-purple-100/30">
-                <div
-                  className="bg-gradient-to-r from-green-400 to-blue-500 h-full rounded-full transition-all duration-500"
-                  style={{ width: `${Math.min(bigqueryUsage.usageStoragePercent, 100)}%` }}
-                />
-              </div>
+          {/* ストレージ保存量プログレスバー */}
+          <div className="w-full mt-4">
+            <div className="flex justify-between items-center mb-1 text-[10px] font-bold text-muted">
+              <span>ストレージ保存量 ({bigqueryUsage.currentMonthStorageGB.toFixed(1)} GB / 10 GB)</span>
+              <span className={bigqueryUsage.usageStoragePercent > 80 ? "text-red-500 animate-pulse" : bigqueryUsage.usageStoragePercent > 50 ? "text-amber-500" : "text-purple-500"}>
+                {bigqueryUsage.usageStoragePercent}%
+              </span>
             </div>
+            <div className="w-full bg-purple-50 rounded-full h-2 overflow-hidden border border-purple-100/30">
+              <div
+                className="bg-gradient-to-r from-green-400 to-blue-500 h-full rounded-full transition-all duration-500"
+                style={{ width: `${Math.min(bigqueryUsage.usageStoragePercent, 100)}%` }}
+              />
+            </div>
+          </div>
 
-            <div className="mt-4 pt-3 border-t border-purple-50/50 text-right">
-              <Link
-                href="/dashboard/gcp"
-                className="text-xs font-bold text-purple-600 hover:text-purple-700 transition-colors inline-flex items-center gap-0.5"
-              >
-                💰 詳細を見る <ArrowUpRight size={12} />
-              </Link>
-            </div>
-          </MetricCard>
-        </div>
+          <div className="mt-4 pt-3 border-t border-purple-50/50 text-right">
+            <Link
+              href="/dashboard/gcp"
+              className="text-xs font-bold text-purple-600 hover:text-purple-700 transition-colors inline-flex items-center gap-0.5"
+            >
+              💰 詳細を見る <ArrowUpRight size={12} />
+            </Link>
+          </div>
+        </MetricCard>
       </div>
 
       {/* Main Charts */}
