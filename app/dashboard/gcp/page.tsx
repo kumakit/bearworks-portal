@@ -148,7 +148,13 @@ export default function GCPCostsPage() {
   };
   const dailyCosts30d = data.dailyCosts30d || [];
   const bigqueryDailyUsage30d = data.bigqueryDailyUsage30d || [];
-  const gcpFreeTier = data.gcpFreeTier || getMockGcpData().gcpFreeTier!;
+  const gcpFreeTier = data.gcpFreeTier || {
+    bigquery_query: { service: "BigQuery (Query)", limit: 1024.0, unit: "GB", current: 0.0, usage_percent: 0.0 },
+    bigquery_storage: { service: "BigQuery (Storage)", limit: 10.0, unit: "GB", current: 0.0, usage_percent: 0.0 },
+    cloud_storage: { service: "Cloud Storage", limit: 5.0, unit: "GB", current: 0.0, usage_percent: 0.0 },
+    compute_engine: { service: "Compute Engine", limit: 744.0, unit: "hours", current: 0.0, usage_percent: 0.0 },
+    cloud_run: { service: "Cloud Run", limit: 2000000.0, unit: "requests", current: 0.0, usage_percent: 0.0 }
+  };
 
   // 月末予測（Forecast）の算出
   const now = new Date();

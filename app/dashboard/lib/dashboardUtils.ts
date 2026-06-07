@@ -178,9 +178,6 @@ export function formatJPY(num: number | undefined | null): string {
   return "¥" + num.toLocaleString("ja-JP");
 }
 
-/**
- * 移行期間中の互換性のために、古いUSD形式のデータをJPY建てに正規化する
- */
 export function normalizeDashboardData(data: any): DashboardData {
   if (!data) return data;
 
@@ -188,6 +185,11 @@ export function normalizeDashboardData(data: any): DashboardData {
 
   // deep copy
   const normalized = JSON.parse(JSON.stringify(data));
+
+  // データが古いUSD形式であるかどうかのフラグ
+  const isUSDData = 
+    (normalized.summary?.googleBilling?.limitUSD !== undefined) ||
+    (normalized.summary?.googleBilling?.limitJPY === undefined && normalized.summary?.googleBilling?.limitUSD !== undefined);
 
   // 1. googleBilling の正規化
   let billing = normalized.summary?.googleBilling;
@@ -210,8 +212,8 @@ export function normalizeDashboardData(data: any): DashboardData {
       const modelCostsJPY: { [key: string]: number } = {};
       Object.entries(billing.modelCosts).forEach(([model, val]) => {
         const numVal = val as number;
-        // modelCosts の合計が 50 未満（USDと思われる）なら換算
-        if (numVal < 50) {
+        // USDデータ判定されている場合のみ換算
+        if (isUSDData && numVal < 50) {
           modelCostsJPY[model] = parseFloat((numVal * JPY_RATE).toFixed(1));
         } else {
           modelCostsJPY[model] = numVal;
@@ -227,22 +229,19 @@ export function normalizeDashboardData(data: any): DashboardData {
 
   // 2. dailyCosts30d の正規化
   let dailyCosts = normalized.dailyCosts30d;
-  if (dailyCosts) {
+  if (dailyCosts && isUSDData) {
     normalized.dailyCosts30d = dailyCosts.map((d: any) => {
-      if (d.total !== undefined && d.total < 50) {
-        const costsJPY: { [key: string]: number } = {};
-        if (d.costs) {
-          Object.entries(d.costs).forEach(([proj, val]) => {
-            costsJPY[proj] = parseFloat(((val as number) * JPY_RATE).toFixed(1));
-          });
-        }
-        return {
-          ...d,
-          costs: costsJPY,
-          total: parseFloat((d.total * JPY_RATE).toFixed(1)),
-        };
+      const costsJPY: { [key: string]: number } = {};
+      if (d.costs) {
+        Object.entries(d.costs).forEach(([proj, val]) => {
+          costsJPY[proj] = parseFloat(((val as number) * JPY_RATE).toFixed(1));
+        });
       }
-      return d;
+      return {
+        ...d,
+        costs: costsJPY,
+        total: parseFloat(((d.total || 0) * JPY_RATE).toFixed(1)),
+      };
     });
   }
 
