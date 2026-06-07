@@ -165,9 +165,11 @@ export default function GCPCostsPage() {
   const currentMonthTotal = googleBilling.currentMonthTotalJPY;
   const forecast = (currentMonthTotal / Math.max(1, today)) * daysInMonth;
 
-  // 残りクレジット枠
-  const remainingCredit = Math.max(0, googleBilling.limitJPY - googleBilling.currentMonthTotalJPY);
-  const remainingPercent = Math.max(0, 100 - googleBilling.usagePercent);
+  // 残りクレジット枠 (繰越クレジットがある場合は加算)
+  const carryover = googleBilling.carryoverCreditJPY || 0;
+  const remainingCredit = Math.max(0, googleBilling.limitJPY - googleBilling.currentMonthTotalJPY) + carryover;
+  const totalBudget = googleBilling.limitJPY + carryover;
+  const remainingPercent = totalBudget > 0 ? (remainingCredit / totalBudget) * 100 : 0;
 
   return (
     <DetailPageLayout
@@ -216,7 +218,10 @@ export default function GCPCostsPage() {
         <MetricCard
           title="⏳ クレジット残高"
           value={formatJPY(remainingCredit)}
-          description={`月間予算 ${formatJPY(googleBilling.limitJPY)} に占める余剰枠`}
+          description={carryover > 0
+            ? `総クレジット枠 ${formatJPY(totalBudget)} に対する残高 (繰越 ¥${carryover.toLocaleString("ja-JP")} 含む)`
+            : `月間予算 ${formatJPY(googleBilling.limitJPY)} に占める余剰枠`
+          }
           icon={<CreditCard size={20} />}
           theme="google"
         >

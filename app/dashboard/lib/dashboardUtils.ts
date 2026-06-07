@@ -21,6 +21,7 @@ export interface GoogleBilling {
   usagePercent: number;
   projects: ProjectBilling[];
   modelCosts: { [key: string]: number }; // e.g. { "Gemini 1.5 Pro": 381.3 }
+  carryoverCreditJPY?: number;
 }
 
 export interface DailyCost30d {
