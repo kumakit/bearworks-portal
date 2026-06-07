@@ -219,7 +219,7 @@ export function GCPCharts({
               <CartesianGrid strokeDasharray="3 3" stroke="#f3f4f6" />
               <XAxis dataKey="date" tick={{ fontSize: 9, fill: "#9ca3af", fontWeight: 500 }} tickLine={false} axisLine={{ stroke: "#f3f4f6" }} />
               <YAxis
-                domain={[0, 60]}
+                domain={[0, (dataMax: number) => Math.max(60, Math.ceil(dataMax))]}
                 tick={{ fontSize: 9, fill: "#9ca3af", fontWeight: 500 }}
                 tickLine={false}
                 axisLine={false}
@@ -326,7 +326,7 @@ export function GCPCharts({
               <CartesianGrid strokeDasharray="3 3" stroke="#f3f4f6" />
               <XAxis dataKey="date" tick={{ fontSize: 9, fill: "#9ca3af", fontWeight: 500 }} tickLine={false} axisLine={{ stroke: "#f3f4f6" }} />
               <YAxis
-                domain={[0, 40]}
+                domain={[0, (dataMax: number) => Math.max(40, Math.ceil(dataMax))]}
                 tick={{ fontSize: 9, fill: "#9ca3af", fontWeight: 500 }}
                 tickLine={false}
                 axisLine={false}
