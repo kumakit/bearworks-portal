@@ -14,47 +14,63 @@ import {
   Bar,
   ReferenceLine,
 } from "recharts";
-import { HourlyMetric, DailyCost30d, formatNumber } from "../lib/dashboardUtils";
+import { HourlyMetric, DailyCost30d, DailyBigQueryUsage30d, formatNumber } from "../lib/dashboardUtils";
 
 interface DashboardChartsProps {
   hourlyData: HourlyMetric[];
   dailyCosts30d: DailyCost30d[];
+  bigqueryDailyUsage30d: DailyBigQueryUsage30d[];
 }
 
 // カスタムすりガラス風ツールチップ
 function CustomTooltip({ active, payload, label }: any) {
   if (!active || !payload || payload.length === 0) return null;
 
-  // コストデータかどうかを判別（値が小数の場合、または名前にコストが含まれる場合）
-  const isCost = 
-    payload[0].name.includes("コスト") || 
-    payload[0].name.includes("bearworks") || 
-    (typeof payload[0].value === "number" && !Number.isInteger(payload[0].value));
-
   return (
     <div className="bg-white/90 backdrop-blur-md rounded-2xl p-3.5 shadow-lg border border-gray-100/50 text-xs">
       <p className="font-extrabold text-primary mb-2 border-b pb-1 border-gray-100">{label}</p>
-      {payload.map((entry: any, index: number) => (
-        <div key={index} className="flex items-center justify-between gap-6 py-0.5 font-medium">
-          <div className="flex items-center gap-1.5 text-muted">
-            <span
-              className="w-2 h-2 rounded-full"
-              style={{ backgroundColor: entry.color }}
-            />
-            <span>{entry.name}:</span>
+      {payload.map((entry: any, index: number) => {
+        let displayValue = "";
+        
+        // 明示的に unit が設定されている場合はそれを優先
+        if (entry.unit) {
+          displayValue = `${entry.value.toFixed(1)}${entry.unit}`;
+        } else {
+          // コストデータかどうかを判別（値が小数の場合、または名前にコストやプロジェクト名が含まれる場合）
+          const isCost = 
+            entry.name.includes("コスト") || 
+            entry.name.includes("bearworks") || 
+            (typeof entry.value === "number" && !Number.isInteger(entry.value));
+            
+          if (isCost) {
+            displayValue = `$${entry.value.toFixed(2)}`;
+          } else {
+            displayValue = `${formatNumber(entry.value)} 件`;
+          }
+        }
+
+        return (
+          <div key={index} className="flex items-center justify-between gap-6 py-0.5 font-medium">
+            <div className="flex items-center gap-1.5 text-muted">
+              <span
+                className="w-2 h-2 rounded-full"
+                style={{ backgroundColor: entry.color }}
+              />
+              <span>{entry.name}:</span>
+            </div>
+            <span className="font-bold text-primary">
+              {displayValue}
+            </span>
           </div>
-          <span className="font-bold text-primary">
-            {isCost ? `$${entry.value.toFixed(2)}` : `${formatNumber(entry.value)} 件`}
-          </span>
-        </div>
-      ))}
+        );
+      })}
     </div>
   );
 }
 
 
-export function DashboardCharts({ hourlyData, dailyCosts30d }: DashboardChartsProps) {
-  const [activeTab, setActiveTab] = useState<"google" | "cloudflare" | "billing">("google");
+export function DashboardCharts({ hourlyData, dailyCosts30d, bigqueryDailyUsage30d }: DashboardChartsProps) {
+  const [activeTab, setActiveTab] = useState<"google" | "cloudflare" | "billing" | "bigquery">("google");
 
   // 日次コストグラフのプロジェクト一覧を動的に抽出
   const projectKeys = React.useMemo(() => {
@@ -83,10 +99,18 @@ export function DashboardCharts({ hourlyData, dailyCosts30d }: DashboardChartsPr
           <span className="text-2xl">📈</span>
           <div>
             <h3 className="text-xl font-bold text-primary">
-              {activeTab === "billing" ? "Google AI Studio 月間コスト" : "アクティビティ推移"}
+              {activeTab === "billing" 
+                ? "Google AI Studio 月間コスト" 
+                : activeTab === "bigquery"
+                ? "BigQuery クエリ解析量"
+                : "アクティビティ推移"}
             </h3>
             <p className="text-xs text-muted font-medium mt-0.5">
-              {activeTab === "billing" ? "過去30日間の日次積層コスト（プロジェクト別）" : "直近24時間の時間ごとのデータ"}
+              {activeTab === "billing" 
+                ? "過去30日間の日次積層コスト（プロジェクト別）" 
+                : activeTab === "bigquery"
+                ? "過去30日間の日次クエリ解析量（GB）"
+                : "直近24時間の時間ごとのデータ"}
             </p>
           </div>
         </div>
@@ -112,6 +136,16 @@ export function DashboardCharts({ hourlyData, dailyCosts30d }: DashboardChartsPr
             }`}
           >
             💰 AI Studio コスト (30日)
+          </button>
+          <button
+            onClick={() => setActiveTab("bigquery")}
+            className={`px-3 py-1.5 rounded-xl text-xs font-bold tracking-wide transition-all ${
+              activeTab === "bigquery"
+                ? "bg-white text-blue-600 shadow-soft border border-blue-50"
+                : "text-muted hover:text-primary"
+            }`}
+          >
+            📊 BigQuery 使用量 (30日)
           </button>
           <button
             onClick={() => setActiveTab("cloudflare")}
@@ -167,6 +201,7 @@ export function DashboardCharts({ hourlyData, dailyCosts30d }: DashboardChartsPr
                 type="monotone"
                 dataKey="googleRequests"
                 name="Gemini API リクエスト数"
+                unit=" 回"
                 stroke="#8b5cf6"
                 strokeWidth={2.5}
                 fill="url(#googleReqGradient)"
@@ -177,6 +212,7 @@ export function DashboardCharts({ hourlyData, dailyCosts30d }: DashboardChartsPr
                 type="monotone"
                 dataKey="googleErrors"
                 name="エラー発生件数"
+                unit=" 回"
                 stroke="#ef4444"
                 strokeWidth={1.5}
                 strokeDasharray="4 3"
@@ -233,6 +269,61 @@ export function DashboardCharts({ hourlyData, dailyCosts30d }: DashboardChartsPr
                 />
               ))}
             </BarChart>
+          ) : activeTab === "bigquery" ? (
+            <AreaChart data={bigqueryDailyUsage30d} margin={{ top: 15, right: 10, left: -20, bottom: 0 }}>
+              <defs>
+                <linearGradient id="bqUsageGradient" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="5%" stopColor="#3b82f6" stopOpacity={0.15} />
+                  <stop offset="95%" stopColor="#3b82f6" stopOpacity={0} />
+                </linearGradient>
+              </defs>
+              <CartesianGrid strokeDasharray="3 3" stroke="#f3f4f6" />
+              <XAxis
+                dataKey="date"
+                tick={{ fontSize: 9, fill: "#9ca3af", fontWeight: 500 }}
+                tickLine={false}
+                axisLine={{ stroke: "#f3f4f6" }}
+              />
+              <YAxis
+                tick={{ fontSize: 9, fill: "#9ca3af", fontWeight: 500 }}
+                tickLine={false}
+                axisLine={false}
+                tickFormatter={(value) => `${value} GB`}
+              />
+              <Tooltip content={<CustomTooltip />} />
+              <Legend
+                verticalAlign="top"
+                height={36}
+                iconType="circle"
+                iconSize={6}
+                wrapperStyle={{ fontSize: 10, fontWeight: 600, paddingBottom: 10 }}
+              />
+              {/* 無料枠 1TB/月 に対する1日あたりの推奨限界値（1024 GB / 30日 ≒ 34.13 GB）のライン */}
+              <ReferenceLine
+                y={34.13}
+                stroke="#ef4444"
+                strokeDasharray="4 3"
+                strokeWidth={1.5}
+                label={{
+                  value: "1日目安上限 (34.1 GB)",
+                  fill: "#ef4444",
+                  fontSize: 8,
+                  fontWeight: "bold",
+                  position: "top",
+                }}
+              />
+              <Area
+                type="monotone"
+                dataKey="usageGB"
+                name="クエリ解析量"
+                unit=" GB"
+                stroke="#3b82f6"
+                strokeWidth={2.5}
+                fill="url(#bqUsageGradient)"
+                dot={false}
+                activeDot={{ r: 4, strokeWidth: 2, fill: "#fff" }}
+              />
+            </AreaChart>
           ) : (
             <AreaChart data={hourlyData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
               <defs>
@@ -271,6 +362,7 @@ export function DashboardCharts({ hourlyData, dailyCosts30d }: DashboardChartsPr
                 type="monotone"
                 dataKey="cloudflareRequests"
                 name="総アクセスリクエスト数"
+                unit=" 回"
                 stroke="#f97316"
                 strokeWidth={2.5}
                 fill="url(#cfReqGradient)"
@@ -281,6 +373,7 @@ export function DashboardCharts({ hourlyData, dailyCosts30d }: DashboardChartsPr
                 type="monotone"
                 dataKey="cloudflareThreats"
                 name="ブロックされた脅威数"
+                unit=" 件"
                 stroke="#111827"
                 strokeWidth={2}
                 fill="url(#cfThreatGradient)"

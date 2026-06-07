@@ -29,6 +29,20 @@ export interface DailyCost30d {
   total: number;
 }
 
+export interface BigQueryUsage {
+  limitQueryGB: number;
+  currentMonthQueryGB: number;
+  usageQueryPercent: number;
+  limitStorageGB: number;
+  currentMonthStorageGB: number;
+  usageStoragePercent: number;
+}
+
+export interface DailyBigQueryUsage30d {
+  date: string;
+  usageGB: number;
+}
+
 export interface DashboardSummary {
   googleTotalRequests24h: number;
   googleTotalErrors24h: number;
@@ -37,6 +51,7 @@ export interface DashboardSummary {
   cloudflareTotalThreats24h: number;
   cloudflareCacheRate24h: number;
   googleBilling: GoogleBilling;
+  bigqueryUsage: BigQueryUsage;
 }
 
 export interface DashboardData {
@@ -44,6 +59,7 @@ export interface DashboardData {
   summary: DashboardSummary;
   hourly: HourlyMetric[];
   dailyCosts30d: DailyCost30d[];
+  bigqueryDailyUsage30d: DailyBigQueryUsage30d[];
 }
 
 

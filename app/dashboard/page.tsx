@@ -55,6 +55,7 @@ function getMockData(): DashboardData {
 
   // 30日間の日次積層データをシミュレート
   const dailyCosts30d = [];
+  const bigqueryDailyUsage30d = [];
   let accumProd = 0;
   let accumDev = 0;
   for (let i = 29; i >= 0; i--) {
@@ -73,6 +74,11 @@ function getMockData(): DashboardData {
         "bearworks-dev": parseFloat(devCost.toFixed(2)),
       },
       total: parseFloat((prodCost + devCost).toFixed(2)),
+    });
+
+    bigqueryDailyUsage30d.push({
+      date: dateStr,
+      usageGB: parseFloat((Math.random() * 12 + 0.5).toFixed(1)),
     });
   }
 
@@ -98,13 +104,24 @@ function getMockData(): DashboardData {
           { id: "bearworks-dev", costUSD: parseFloat(accumDev.toFixed(2)) },
         ],
         modelCosts: {
-          "Gemini 1.5 Pro": parseFloat((currentMonthTotal * 0.85).toFixed(2)),
-          "Gemini 1.5 Flash": parseFloat((currentMonthTotal * 0.15).toFixed(2)),
+          "Gemini Pro": parseFloat((currentMonthTotal * 0.75).toFixed(2)),
+          "Gemini Flash": parseFloat((currentMonthTotal * 0.15).toFixed(2)),
+          "BigQuery": parseFloat((currentMonthTotal * 0.05).toFixed(2)),
+          "Firebase/Storage": parseFloat((currentMonthTotal * 0.05).toFixed(2)),
         },
+      },
+      bigqueryUsage: {
+        limitQueryGB: 1024.0,
+        currentMonthQueryGB: 124.5,
+        usageQueryPercent: 12.16,
+        limitStorageGB: 10.0,
+        currentMonthStorageGB: 4.2,
+        usageStoragePercent: 42.0,
       },
     },
     hourly,
     dailyCosts30d,
+    bigqueryDailyUsage30d,
   };
 }
 
@@ -159,9 +176,18 @@ export default function DashboardPage() {
     currentMonthTotalUSD: 0.0,
     usagePercent: 0.0,
     projects: [],
-    modelCosts: { "Gemini 1.5 Pro": 0.0, "Gemini 1.5 Flash": 0.0 }
+    modelCosts: { "Gemini Pro": 0.0, "Gemini Flash": 0.0 }
+  };
+  const bigqueryUsage = data.summary.bigqueryUsage || {
+    limitQueryGB: 1024.0,
+    currentMonthQueryGB: 0.0,
+    usageQueryPercent: 0.0,
+    limitStorageGB: 10.0,
+    currentMonthStorageGB: 0.0,
+    usageStoragePercent: 0.0
   };
   const dailyCosts30d = data.dailyCosts30d || [];
+  const bigqueryDailyUsage30d = data.bigqueryDailyUsage30d || [];
 
 
   return (
@@ -344,11 +370,53 @@ export default function DashboardPage() {
             </div>
           </div>
         </MetricCard>
+
+        {/* BigQuery Resource Usage */}
+        <MetricCard
+          title="BigQuery 使用状況"
+          value={`${bigqueryUsage.currentMonthQueryGB.toFixed(1)} GB`}
+          unit="クエリ量"
+          description={`無料枠 (1TB) に対する消費状況とストレージ保存量`}
+          icon={<Activity size={20} />}
+          theme="google"
+        >
+          {/* クエリ量プログレスバー */}
+          <div className="w-full mt-2">
+            <div className="flex justify-between items-center mb-1 text-[10px] font-bold text-muted">
+              <span>クエリ解析量 ({bigqueryUsage.currentMonthQueryGB.toFixed(1)} GB / 1,024 GB)</span>
+              <span className={bigqueryUsage.usageQueryPercent > 80 ? "text-red-500 animate-pulse" : bigqueryUsage.usageQueryPercent > 50 ? "text-amber-500" : "text-purple-500"}>
+                {bigqueryUsage.usageQueryPercent}%
+              </span>
+            </div>
+            <div className="w-full bg-purple-50 rounded-full h-2 overflow-hidden border border-purple-100/30">
+              <div
+                className="bg-gradient-to-r from-blue-400 to-purple-500 h-full rounded-full transition-all duration-500"
+                style={{ width: `${Math.min(bigqueryUsage.usageQueryPercent, 100)}%` }}
+              />
+            </div>
+          </div>
+
+          {/* ストレージ保存量プログレスバー */}
+          <div className="w-full mt-4">
+            <div className="flex justify-between items-center mb-1 text-[10px] font-bold text-muted">
+              <span>ストレージ保存量 ({bigqueryUsage.currentMonthStorageGB.toFixed(1)} GB / 10 GB)</span>
+              <span className={bigqueryUsage.usageStoragePercent > 80 ? "text-red-500 animate-pulse" : bigqueryUsage.usageStoragePercent > 50 ? "text-amber-500" : "text-purple-500"}>
+                {bigqueryUsage.usageStoragePercent}%
+              </span>
+            </div>
+            <div className="w-full bg-purple-50 rounded-full h-2 overflow-hidden border border-purple-100/30">
+              <div
+                className="bg-gradient-to-r from-green-400 to-blue-500 h-full rounded-full transition-all duration-500"
+                style={{ width: `${Math.min(bigqueryUsage.usageStoragePercent, 100)}%` }}
+              />
+            </div>
+          </div>
+        </MetricCard>
       </div>
 
       {/* Main Charts */}
       <div className="w-full">
-        <DashboardCharts hourlyData={data.hourly} dailyCosts30d={dailyCosts30d} />
+        <DashboardCharts hourlyData={data.hourly} dailyCosts30d={dailyCosts30d} bigqueryDailyUsage30d={bigqueryDailyUsage30d} />
       </div>
 
       {/* Footer */}
