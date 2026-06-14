@@ -1,5 +1,6 @@
+export const runtime = "edge";
+
 import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
 
 export default function Contact() {
   return (
@@ -10,7 +11,20 @@ export default function Contact() {
           href="/"
           className="inline-flex items-center gap-2 text-sm font-medium text-muted hover:text-primary transition-colors"
         >
-          <ArrowLeft size={16} />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="m12 19-7-7 7-7" />
+            <path d="M19 12H5" />
+          </svg>
           ホームに戻る
         </Link>
       </div>
