@@ -135,7 +135,7 @@ export default function Home() {
           <div className="mt-auto">
             <a href="https://toukei.bearworks.uk/" target="_blank" rel="noopener noreferrer" className="block focus:outline-none">
               <h3 className="text-2xl font-bold text-primary group-hover:text-purple-600 transition-colors">Toukei Kentei Drill</h3>
-              <p className="text-purple-900/60 text-sm mt-1 font-medium">Web Application on Vercel</p>
+              <p className="text-purple-900/60 text-sm mt-1 font-medium">Web Application on Cloudflare Pages</p>
             </a>
           </div>
         </div>

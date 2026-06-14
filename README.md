@@ -1,12 +1,12 @@
 # bearworks.uk // SYS.COM
 
-This repository hosts the source code for the **bearworks.uk** portal site. It serves as a central hub and system monitor linking to various contents and platforms, built with Next.js and hosted on Vercel.
+This repository hosts the source code for the **bearworks.uk** portal site. It serves as a central hub and system monitor linking to various contents and platforms, built with Next.js and hosted on Cloudflare Pages.
 
 ## Features
 - **Weather Dashboard**: Hachioji & Shinjuku weather visualization and Gemini-powered daily clothing & umbrella advice.
   - Automatically fetches the custom batch weather API with local cache-busting.
 - **Data Science Docs**: Documentation and notes on data science, data analysis, and Python (Hosted on Netlify/MkDocs).
-- **Toukei Kentei Drill**: Statistics certification practice application (Hosted on Vercel).
+- **Toukei Kentei Drill**: Statistics certification practice application (Hosted on Cloudflare Pages).
 - **AI Apps**: Python-based AI applications with Streamlit and Ollama (Hosted on OCI).
 - **GitHub Profile**: Portfolio, OSS contributions, and scripts.
 
