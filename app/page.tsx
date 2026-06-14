@@ -197,9 +197,7 @@ export default function Home() {
             PRIVACY POLICY
           </a>
           <a
-            href="https://toukei.bearworks.uk/contact"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/contact"
             className="hover:text-primary transition-colors font-medium text-xs md:text-sm"
           >
             CONTACT
