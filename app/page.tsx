@@ -1,3 +1,5 @@
+export const runtime = "edge";
+
 import { SystemMonitor } from "@/components/SystemMonitor";
 import { Github, MapPin, User, Terminal, Database, Globe, Bot, Book, BarChart3, Hand, Sparkles, CloudSun, Activity } from "lucide-react";
 

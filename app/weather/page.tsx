@@ -1,5 +1,7 @@
 "use client";
 
+export const runtime = "edge";
+
 import { useState, useEffect } from "react";
 import { WeatherData, getRelativeTime } from "./lib/weatherUtils";
 import WeatherSummary from "./components/WeatherSummary";
