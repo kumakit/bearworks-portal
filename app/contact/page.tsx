@@ -1,11 +1,24 @@
+import Link from "next/link";
+import { ArrowLeft } from "lucide-react";
+
 export default function Contact() {
   return (
-    <div className="max-w-4xl w-full mx-auto px-4 py-8 md:py-16 text-center">
-      <h1 className="text-3xl md:text-4xl font-bold mb-12 text-primary">
-        お問い合わせ
-      </h1>
+    <div className="max-w-4xl w-full mx-auto px-4 py-8 md:py-16">
+      {/* 戻るボタン */}
+      <div className="mb-6">
+        <Link
+          href="/"
+          className="inline-flex items-center gap-2 text-sm font-medium text-muted hover:text-primary transition-colors"
+        >
+          <ArrowLeft size={16} />
+          ホームに戻る
+        </Link>
+      </div>
 
-      <div className="max-w-2xl mx-auto space-y-10 text-muted leading-relaxed">
+      <div className="max-w-2xl mx-auto space-y-10 text-muted leading-relaxed text-center">
+        <h1 className="text-3xl md:text-4xl font-bold mb-12 text-primary">
+          お問い合わせ
+        </h1>
         <p className="text-lg">
           bearworks.uk、および提供している各サービスに関するお問い合わせ、不具合報告、改善のご提案などは、以下のメールアドレスにて受け付けております。
         </p>

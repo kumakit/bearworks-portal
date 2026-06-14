@@ -1,6 +1,20 @@
+import Link from "next/link";
+import { ArrowLeft } from "lucide-react";
+
 export default function PrivacyPolicy() {
   return (
     <div className="max-w-4xl w-full mx-auto px-4 py-8 md:py-16">
+      {/* 戻るボタン */}
+      <div className="mb-6">
+        <Link
+          href="/"
+          className="inline-flex items-center gap-2 text-sm font-medium text-muted hover:text-primary transition-colors"
+        >
+          <ArrowLeft size={16} />
+          ホームに戻る
+        </Link>
+      </div>
+
       <div className="bg-white rounded-[2.5rem] p-8 md:p-12 shadow-soft border border-gray-100">
         <h1 className="text-3xl md:text-4xl font-bold mb-10 text-primary text-center">
           プライバシーポリシー
