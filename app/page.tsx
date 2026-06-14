@@ -186,6 +186,32 @@ export default function Home() {
         </a>
 
       </div>
+
+      {/* Footer */}
+      <footer className="mt-12 py-8 border-t border-gray-100 text-center text-sm text-muted">
+        <div className="flex justify-center gap-6 mb-4">
+          <a
+            href="https://toukei.bearworks.uk/privacy"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-primary transition-colors font-medium text-xs md:text-sm"
+          >
+            PRIVACY POLICY
+          </a>
+          <a
+            href="https://toukei.bearworks.uk/contact"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-primary transition-colors font-medium text-xs md:text-sm"
+          >
+            CONTACT
+          </a>
+        </div>
+        <p className="text-xs text-muted/60 font-medium">
+          © 2026 bearworks. All Rights Reserved.
+        </p>
+      </footer>
     </main>
   );
 }
+
