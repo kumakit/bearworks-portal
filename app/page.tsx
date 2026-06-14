@@ -191,9 +191,7 @@ export default function Home() {
       <footer className="mt-12 py-8 border-t border-gray-100 text-center text-sm text-muted">
         <div className="flex justify-center gap-6 mb-4">
           <a
-            href="https://toukei.bearworks.uk/privacy"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/privacy"
             className="hover:text-primary transition-colors font-medium text-xs md:text-sm"
           >
             PRIVACY POLICY
