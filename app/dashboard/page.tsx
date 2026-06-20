@@ -1,6 +1,9 @@
 "use client";
 
+export const runtime = "edge";
+
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
 import {
   ShieldAlert,
   Zap,
@@ -16,6 +19,8 @@ import {
   DashboardData,
   getRelativeTime,
   formatJstTime,
+  formatJPY,
+  normalizeDashboardData,
 } from "./lib/dashboardUtils";
 import { MetricCard } from "./components/MetricCard";
 import { DashboardCharts } from "./components/DashboardCharts";
@@ -62,18 +67,19 @@ function getMockData(): DashboardData {
     const target = new Date(now.getTime() - i * 24 * 60 * 60 * 1000);
     const dateStr = `${String(target.getMonth() + 1).padStart(2, "0")}-${String(target.getDate()).padStart(2, "0")}`;
     
-    const prodCost = Math.random() * 0.15 + 0.02;
-    const devCost = Math.random() * 0.04 + 0.005;
+    // 円建てのコストをシミュレート
+    const prodCost = Math.random() * 20.0 + 3.0;
+    const devCost = Math.random() * 5.0 + 0.8;
     accumProd += prodCost;
     accumDev += devCost;
     
     dailyCosts30d.push({
       date: dateStr,
       costs: {
-        "bearworks-prod": parseFloat(prodCost.toFixed(2)),
-        "bearworks-dev": parseFloat(devCost.toFixed(2)),
+        "bearworks-prod": parseFloat(prodCost.toFixed(1)),
+        "bearworks-dev": parseFloat(devCost.toFixed(1)),
       },
-      total: parseFloat((prodCost + devCost).toFixed(2)),
+      total: parseFloat((prodCost + devCost).toFixed(1)),
     });
 
     bigqueryDailyUsage30d.push({
@@ -82,9 +88,9 @@ function getMockData(): DashboardData {
     });
   }
 
-  const currentMonthTotal = parseFloat((accumProd + accumDev).toFixed(2));
-  const limitUsd = 10.0;
-  const usagePercent = parseFloat(((currentMonthTotal / limitUsd) * 100).toFixed(2));
+  const currentMonthTotal = parseFloat((accumProd + accumDev).toFixed(1));
+  const limitJpy = 1550.0;
+  const usagePercent = parseFloat(((currentMonthTotal / limitJpy) * 100).toFixed(1));
 
   return {
     updatedAt: now.toISOString(),
@@ -96,18 +102,18 @@ function getMockData(): DashboardData {
       cloudflareTotalThreats24h: cfThreats,
       cloudflareCacheRate24h: 54.8,
       googleBilling: {
-        limitUSD: limitUsd,
-        currentMonthTotalUSD: currentMonthTotal,
+        limitJPY: limitJpy,
+        currentMonthTotalJPY: currentMonthTotal,
         usagePercent: usagePercent,
         projects: [
-          { id: "bearworks-prod", costUSD: parseFloat(accumProd.toFixed(2)) },
-          { id: "bearworks-dev", costUSD: parseFloat(accumDev.toFixed(2)) },
+          { id: "bearworks-prod", costJPY: parseFloat(accumProd.toFixed(1)) },
+          { id: "bearworks-dev", costJPY: parseFloat(accumDev.toFixed(1)) },
         ],
         modelCosts: {
-          "Gemini Pro": parseFloat((currentMonthTotal * 0.75).toFixed(2)),
-          "Gemini Flash": parseFloat((currentMonthTotal * 0.15).toFixed(2)),
-          "BigQuery": parseFloat((currentMonthTotal * 0.05).toFixed(2)),
-          "Firebase/Storage": parseFloat((currentMonthTotal * 0.05).toFixed(2)),
+          "Gemini Pro": parseFloat((currentMonthTotal * 0.75).toFixed(1)),
+          "Gemini Flash": parseFloat((currentMonthTotal * 0.15).toFixed(1)),
+          "BigQuery": parseFloat((currentMonthTotal * 0.05).toFixed(1)),
+          "Firebase/Storage": parseFloat((currentMonthTotal * 0.05).toFixed(1)),
         },
       },
       bigqueryUsage: {
@@ -139,7 +145,7 @@ export default function DashboardPage() {
       const res = await fetch(DASHBOARD_API_URL, { cache: "no-store" });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const json: DashboardData = await res.json();
-      setData(json);
+      setData(normalizeDashboardData(json));
       setUsingMock(false);
       setError(null);
     } catch (err) {
@@ -172,8 +178,8 @@ export default function DashboardPage() {
 
   // 古い形式のデータがAPIから返ってきた場合（課金エクスポート未連携状態）でも絶対にクラッシュしないためのフォールバック
   const googleBilling = data.summary.googleBilling || {
-    limitUSD: 10.0,
-    currentMonthTotalUSD: 0.0,
+    limitJPY: 1550.0,
+    currentMonthTotalJPY: 0.0,
     usagePercent: 0.0,
     projects: [],
     modelCosts: { "Gemini Pro": 0.0, "Gemini Flash": 0.0 }
@@ -258,45 +264,30 @@ export default function DashboardPage() {
         </div>
       )}
 
-      {/* Bento Grid layout for metrics */}
+      {/* 1段目: Cloudflare (Security & Traffic) */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-        {/* Gemini API Requests */}
-        <MetricCard
-          title="AI Studio リクエスト数 (24h)"
-          value={data.summary.googleTotalRequests24h}
-          unit="回"
-          description="Generative Language API への総呼び出し回数"
-          icon={<Zap size={20} />}
-          theme="google"
-        />
-
-        {/* Gemini API Error Rate */}
-        <MetricCard
-          title="AI Studio エラー率 (24h)"
-          value={data.summary.googleErrorRate24h}
-          unit="%"
-          description={`総エラー発生数: ${data.summary.googleTotalErrors24h} 回`}
-          icon={<ShieldAlert size={20} />}
-          theme="google"
-          trend={{
-            value: data.summary.googleErrorRate24h > 1.0 ? "やや高め" : "安定",
-            isPositive: data.summary.googleErrorRate24h < 1.0,
-          }}
-        />
-
         {/* Cloudflare Security threats */}
         <MetricCard
           title="CF ブロック脅威数 (24h)"
           value={data.summary.cloudflareTotalThreats24h}
           unit="件"
-          description="WAF やボットルールによって検知・遮断された悪意ある通信"
+          description="WAF やボットルールによって検知・遮断された通信"
           icon={<ShieldAlert size={20} />}
           theme="cloudflare"
           trend={{
             value: "正常範囲",
             isPositive: true,
           }}
-        />
+        >
+          <div className="mt-2 text-right">
+            <Link
+              href="/dashboard/cloudflare"
+              className="text-xs font-bold text-orange-600 hover:text-orange-700 transition-colors inline-flex items-center gap-0.5"
+            >
+              🛡️ 詳細を見る <ArrowUpRight size={12} />
+            </Link>
+          </div>
+        </MetricCard>
 
         {/* Cloudflare Traffic */}
         <MetricCard
@@ -317,25 +308,56 @@ export default function DashboardPage() {
           icon={<Activity size={20} />}
           theme="cloudflare"
         />
+      </div>
 
-        {/* Google Billing Info (Dynamic / BigQuery) */}
+      {/* 2段目: AI Studio & GCP Resources */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+        {/* AI Studio リクエスト数 & エラー率 */}
         <MetricCard
-          title="AI Studio 課金ステータス"
-          value={`$${(googleBilling.limitUSD - googleBilling.currentMonthTotalUSD).toFixed(2)}`}
+          title="AI Studio リクエスト数"
+          value={data.summary.googleTotalRequests24h}
+          unit="回"
+          description="Generative Language API への総呼び出し回数"
+          icon={<Zap size={20} />}
+          theme="google"
+        >
+          {/* エラー率の情報 */}
+          <div className="mt-2 pt-2 border-t border-purple-50/50 flex justify-between items-center text-xs">
+            <span className="text-muted font-bold">エラー率 (24h)</span>
+            <div className="flex items-center gap-1.5 font-extrabold text-primary">
+              <span>{data.summary.googleErrorRate24h}%</span>
+              <span className={`text-[10px] px-1.5 py-0.5 rounded-full font-bold ${
+                data.summary.googleErrorRate24h > 1.0 
+                  ? "bg-red-50 text-red-600 border border-red-100" 
+                  : "bg-green-50 text-green-600 border border-green-100"
+              }`}>
+                {data.summary.googleErrorRate24h > 1.0 ? "要確認" : "安定"}
+              </span>
+            </div>
+          </div>
+          <div className="text-[10px] text-muted font-semibold text-right mt-1">
+            総エラー発生数: {data.summary.googleTotalErrors24h} 回
+          </div>
+        </MetricCard>
+
+        {/* AI Studio 課金ステータス */}
+        <MetricCard
+          title="AI Studio 課金"
+          value={formatJPY(googleBilling.limitJPY - googleBilling.currentMonthTotalJPY)}
           unit="残り"
-          description={`今月の消費: $${googleBilling.currentMonthTotalUSD.toFixed(2)} / $${googleBilling.limitUSD.toFixed(2)}`}
+          description={`今月: ${formatJPY(googleBilling.currentMonthTotalJPY)} / ${formatJPY(googleBilling.limitJPY)}`}
           icon={<ArrowUpRight size={20} />}
           theme="google"
         >
           {/* 進捗ゲージバー (Stitch デザイン適用) */}
           <div className="w-full mt-2">
             <div className="flex justify-between items-center mb-1 text-[10px] font-bold text-muted">
-              <span>クレジット消化率</span>
+              <span>消化率</span>
               <span className={googleBilling.usagePercent > 80 ? "text-red-500 animate-pulse" : googleBilling.usagePercent > 50 ? "text-amber-500" : "text-purple-500"}>
                 {googleBilling.usagePercent}%
               </span>
             </div>
-            <div className="w-full bg-purple-50 rounded-full h-2.5 overflow-hidden border border-purple-100/30">
+            <div className="w-full bg-purple-50 rounded-full h-2 overflow-hidden border border-purple-100/30">
               <div
                 className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 h-full rounded-full transition-all duration-500"
                 style={{ width: `${Math.min(googleBilling.usagePercent, 100)}%` }}
@@ -343,31 +365,13 @@ export default function DashboardPage() {
             </div>
           </div>
 
-          {/* モデル別 & プロジェクト別内訳のパネル */}
-          <div className="mt-4 pt-3 border-t border-purple-50/50 flex flex-col gap-2.5">
-            <div className="flex flex-col gap-1">
-              <span className="text-[10px] font-bold text-muted tracking-wider">モデル別消費額</span>
-              <div className="grid grid-cols-2 gap-2">
-                {Object.entries(googleBilling.modelCosts).map(([model, cost]) => (
-                  <div key={model} className="bg-purple-50/40 border border-purple-100/10 rounded-xl px-2 py-1 flex flex-col">
-                    <span className="text-[9px] font-bold text-muted/80">{model}</span>
-                    <span className="text-xs font-extrabold text-purple-600/90">${cost.toFixed(2)}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="flex flex-col gap-1">
-              <span className="text-[10px] font-bold text-muted tracking-wider">プロジェクト別消費額</span>
-              <div className="flex flex-col gap-1.5">
-                {googleBilling.projects.map((proj) => (
-                  <div key={proj.id} className="flex justify-between items-center text-[10px] font-semibold text-muted/90">
-                    <span className="truncate max-w-[70%] font-bold">{proj.id}</span>
-                    <span className="font-extrabold text-primary">${proj.costUSD.toFixed(2)}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
+          <div className="text-right mt-3">
+            <Link
+              href="/dashboard/gcp"
+              className="text-[10px] font-bold text-purple-600 hover:text-purple-700 transition-colors inline-flex items-center gap-0.5"
+            >
+              💰 詳細を見る <ArrowUpRight size={10} />
+            </Link>
           </div>
         </MetricCard>
 
@@ -410,6 +414,15 @@ export default function DashboardPage() {
                 style={{ width: `${Math.min(bigqueryUsage.usageStoragePercent, 100)}%` }}
               />
             </div>
+          </div>
+
+          <div className="mt-4 pt-3 border-t border-purple-50/50 text-right">
+            <Link
+              href="/dashboard/gcp"
+              className="text-xs font-bold text-purple-600 hover:text-purple-700 transition-colors inline-flex items-center gap-0.5"
+            >
+              💰 詳細を見る <ArrowUpRight size={12} />
+            </Link>
           </div>
         </MetricCard>
       </div>

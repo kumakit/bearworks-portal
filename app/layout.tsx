@@ -33,9 +33,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
+      <head>
+        {process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID && (
+          <script
+            async
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID}`}
+            crossOrigin="anonymous"
+          />
+        )}
+      </head>
       <body className={`${inter.className} min-h-screen p-4 md:p-8 flex justify-center`}>
         {children}
       </body>
     </html>
   );
 }
+

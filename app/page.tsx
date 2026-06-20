@@ -1,3 +1,5 @@
+export const runtime = "edge";
+
 import { SystemMonitor } from "@/components/SystemMonitor";
 import { Github, MapPin, User, Terminal, Database, Globe, Bot, Book, BarChart3, Hand, Sparkles, CloudSun, Activity } from "lucide-react";
 
@@ -133,7 +135,7 @@ export default function Home() {
           <div className="mt-auto">
             <a href="https://toukei.bearworks.uk/" target="_blank" rel="noopener noreferrer" className="block focus:outline-none">
               <h3 className="text-2xl font-bold text-primary group-hover:text-purple-600 transition-colors">Toukei Kentei Drill</h3>
-              <p className="text-purple-900/60 text-sm mt-1 font-medium">Web Application on Vercel</p>
+              <p className="text-purple-900/60 text-sm mt-1 font-medium">Web Application on Cloudflare Pages</p>
             </a>
           </div>
         </div>
@@ -184,6 +186,28 @@ export default function Home() {
         </a>
 
       </div>
+
+      {/* Footer */}
+      <footer className="mt-12 py-8 border-t border-gray-100 text-center text-sm text-muted">
+        <div className="flex justify-center gap-6 mb-4">
+          <a
+            href="/privacy"
+            className="hover:text-primary transition-colors font-medium text-xs md:text-sm"
+          >
+            PRIVACY POLICY
+          </a>
+          <a
+            href="/contact"
+            className="hover:text-primary transition-colors font-medium text-xs md:text-sm"
+          >
+            CONTACT
+          </a>
+        </div>
+        <p className="text-xs text-muted/60 font-medium">
+          © 2026 bearworks. All Rights Reserved.
+        </p>
+      </footer>
     </main>
   );
 }
+
