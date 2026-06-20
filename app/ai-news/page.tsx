@@ -75,7 +75,7 @@ export default async function AiNewsPage() {
           🤖 AI ニュースフィード
         </h1>
         <p className="text-sm text-gray-400 mt-1 font-medium font-sans">
-          N100PC から収集された最新の AI トピックと要約
+          ネットから収集された最新の AI トピックと要約
         </p>
       </div>
 
