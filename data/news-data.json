@@ -1,1 +1,37 @@
-[]
+[
+  {
+    "date": "2026-06-20",
+    "articles": [
+      {
+        "title": "OpenAI、IPO 控え幹部獲得で体制強化",
+        "content": "OpenAI が、IPO を前に、Google DeepMind で Gemini 共同主導の Noam Shazeer を獲得。また、前トランプ政権 AI 政策官の Dean Ball を 7 月 6 日付で「Strategic Futures」チーム責任者として迎えると発表。Ball は、AI ガバナンスや国家安全保障に関する政策対応、AI の再帰的自己改善・労働市場影響などを担当する予定。",
+        "source": "TechCrunch (Rebecca Bellan)",
+        "published_at": "2026-06-18"
+      },
+      {
+        "title": "Amazon AWS、外販向け Trainium AI チップ販売に前向き",
+        "content": "AWS が自社開発の Trainium チップを外部顧客に直接販売する可能性に言及。Andy Jassy CEO は「独立事業とすれば今年の売上高は約 500 億ドル規模になる」と指摘。ただし、TSMC の製造キャパシティ競争や AWS 顧客の待ちリスト問題から、実現には供給制約が伴う模様。",
+        "source": "TechCrunch (Julie Bort)",
+        "published_at": "2026-06-18"
+      },
+      {
+        "title": "米国エネルギー規制委が AI データセンターの電力接続を優先化",
+        "content": "FERC（連邦エネルギー規制委員会）が 6 月 18 日、主要 6 大電力系統運用者に対し、データセンター等の大規模電気利用者の接続申請を迅速化するよう指示。コストはデータセンター側が負担し、代替送電技術の検討も義務化。ただし、発電能力そのものの不足には直接触れていない。",
+        "source": "TechCrunch (Tim De Chant)",
+        "published_at": "2026-06-18"
+      },
+      {
+        "title": "米国政府、Anthropic への安全保障上の警戒を事実上緩和",
+        "content": "トランプ米大統領が、先週は安全保障上の脅威と位置付けていた Anthropic について、もはやそのように見なしていないと発言。この動きは、Anthropic の最新モデルに対する米政府の輸出規制・禁止措置の背景とも連動している。",
+        "source": "Reuters",
+        "published_at": "2026-06-19"
+      },
+      {
+        "title": "SpaceX–Anthropic の AI コンピュート大型契約",
+        "content": "Anthropic が SpaceX に対し、2029 年 5 月まで月額 12 億 5000 万ドル規模で AI コンピュート能力を調達する契約を結んだとされる。5〜6 月に段階的に引き渡しが進行中で、AI 競争の焦点が「モデル」から「コンピュート・インフラ」に移っていることを示す取引とされている。",
+        "source": "X (@SawyerMerritt) / SpaceX S-1 ファイル",
+        "published_at": "2026-05-20"
+      }
+    ]
+  }
+]
