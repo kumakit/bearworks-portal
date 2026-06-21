@@ -3,6 +3,59 @@
     "date": "2026-06-20",
     "articles": [
       {
+        "title": "DeepMindのノーベル受賞科学者John JumperがAnthropicへ移籍",
+        "content": "2024年ノーベル化学賞受賞者でAlphaFoldの中心開発者であるJohn Jumperが、約9年在籍したGoogle DeepMindを退職し、ライバルのAnthropicに移籍すると6月20日に発表。DeepMindでは科学とAIの融合分野を牽引してきたが、AnthropicではAI安全・研究の最前線で活動する見通し。同時期にGemini共同主導のNoam ShazeerもOpenAIへ移っており、DeepMindの幹部人材流出が注目されている。",
+        "source": "Reuters / TechCrunch (Anthony Ha)",
+        "published_at": "2026-06-20"
+      },
+      {
+        "title": "AmazonがAIデータセンター拡張に批判した技術者の調査を実施",
+        "content": "AmazonがAIデータセンターの大規模拡張計画に異議を唱えた社内技術者を調査していることがCNBCの報道で判明。AIインフラ需要の急拡大と環境負荷をめぐる内外の監視が強まる中、企業内の意見統制と従業員の説明責任のバランスが問われる事例として関心を集めている。",
+        "source": "CNBC",
+        "published_at": "2026-06-18"
+      },
+      {
+        "title": "AIメモリー逼迫でAppleも価格引き上げを余儀なくされる深刻化",
+        "content": "CNBCの報道によると、AIブームによるメモリー需要の急拡張でDRAM/HBM供給が逼迫し、Appleが製品価格の引き上げを決定した。Tim Cook氏は価格上昇を「避けられない」と発言。iPhoneやMacの価格改定が想定されるほか、Android勢もコスト上昇圧力にさらされ、2026年の平均スマホ価格は最大20%上昇する見通し。",
+        "source": "CNBC",
+        "published_at": "2026-06-19"
+      },
+      {
+        "title": "AIインフラ投資でハイテク投資家が債券市場を注視する新たな局面に",
+        "content": "CNBCの6月20日付報道によると、Amazon、Alphabet、Microsoft、Metaのハイパースケーラー4社は2026年にAIインフラへ7,500億ドル規模の投融資を見込む。巨額の資金需要に伴いこれらの企業の債務発行が拡大し、投資家は金利動向や米国債利回りにも注意を払う必要が生じている。特に金利上昇局面ではAI関連コストの重石が利益を圧迫するリスクがある。",
+        "source": "CNBC",
+        "published_at": "2026-06-20"
+      },
+      {
+        "title": "中国が国家規模のAIインフラ整備に2950億ドル計画を準備",
+        "content": "ロイターの報道によると、中国は今後5年間でデータセンター整備などを中心に約2950億ドル規模の国家AI投資計画を準備している。米中半導体・AI覇権争いが長期化する中、中国におけるAIエコシステムの国内的整備とサプライチェーン強靭化が一段と加速する公算が大きい。",
+        "source": "Reuters",
+        "published_at": "2026-06-09"
+      },
+      {
+        "title": "Mistral創業者が語る「小さく安いAIモデル」が主戦場になる近未来",
+        "content": "Reutersが18日に掲載した分析記事で、Mistral創業者は「小規模で低コストのAIモデルがデスクトップ/端末で多くを処理するようになり、巨額投資を必要とする巨大モデルの収益性に疑問が生まれる」と指摘。小規模モデルの躍進がデータセンター投資の前提を変え、AI事業の収益構造そのものを再定義する可能性が示唆されている。",
+        "source": "Reuters",
+        "published_at": "2026-06-18"
+      },
+      {
+        "title": "Snap、AI動画部門を新会社Dotmoとして分社化",
+        "content": "TechCrunchの18日付報道によると、SnapはAI動画チームを独立企業のDotmoに分社化する。人件費や開発コストの高騰が背景で、CTOのBobby Murphy氏はDotmoの個人投資家として主導し、Snapは株式持分を保持する。今年1月にAR事業、4月に千人規模の人員削減に続く構造改革の一環と位置づけられる。",
+        "source": "TechCrunch",
+        "published_at": "2026-06-18"
+      },
+      {
+        "title": "Bezos、AIは雇用を奪わず「労働力不足」をもたらすと楽観的見通し",
+        "content": "Reutersが17日付で伝えたところによると、Jeff BezosはVivaTechでAIによる雇用代替の警戒感に反論し、「AIは労働力不足を生む」と発言。一方、Challenger, Gray & Christmasの集計では2026年5月の米国企業の雇用削減件数のうち40%がAI関連。AmazonもAI効率化の一環で約3万人のリストラを進めており、発言と実態の乖離が批判を招いている。",
+        "source": "Reuters",
+        "published_at": "2026-06-17"
+      }
+    ]
+  },
+  {
+    "date": "2026-06-20",
+    "articles": [
+      {
         "title": "OpenAI、IPO 控え幹部獲得で体制強化",
         "content": "OpenAI が、IPO を前に、Google DeepMind で Gemini 共同主導の Noam Shazeer を獲得。また、前トランプ政権 AI 政策官の Dean Ball を 7 月 6 日付で「Strategic Futures」チーム責任者として迎えると発表。Ball は、AI ガバナンスや国家安全保障に関する政策対応、AI の再帰的自己改善・労働市場影響などを担当する予定。",
         "source": "TechCrunch (Rebecca Bellan)",
