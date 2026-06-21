@@ -106,11 +106,39 @@ export function GCPCharts({
     return Array.from(keys);
   }, [dailyCosts30d]);
 
-  const projectColors: { [key: string]: string } = {
-    "bearworks-prod": "#8b5cf6",
-    "bearworks-dev": "#c084fc",
-    "default": "#94a3b8",
-  };
+  const projectColorsMap = React.useMemo(() => {
+    const baseColors: { [key: string]: string } = {
+      "bearworks-prod": "#8b5cf6",
+      "bearworks-dev": "#c084fc",
+      "Gemini API Key in OCI": "#3b82f6",
+      "Hermes Agent": "#10b981",
+      "bearworks-apps": "#ec4899",
+      "mission-control": "#f59e0b",
+    };
+
+    const palette = [
+      "#3b82f6", // ブルー
+      "#10b981", // エメラルド
+      "#f59e0b", // アンバー
+      "#ec4899", // ピンク
+      "#8b5cf6", // バイオレット
+      "#06b6d4", // シアン
+      "#f43f5e", // ローズ
+      "#14b8a6", // ティール
+    ];
+
+    const map: { [key: string]: string } = { ...baseColors };
+    
+    let colorIdx = 0;
+    projectKeys.forEach((key) => {
+      if (!map[key]) {
+        map[key] = palette[colorIdx % palette.length];
+        colorIdx++;
+      }
+    });
+
+    return map;
+  }, [projectKeys]);
 
   return (
     <div className="flex flex-col gap-6">
@@ -191,7 +219,7 @@ export function GCPCharts({
                 />
                 <Bar dataKey="cost" name="コスト" fill="#8b5cf6" radius={[0, 8, 8, 0]} barSize={16}>
                   {projectCostData.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={projectColors[entry.name] || projectColors["default"]} />
+                    <Cell key={`cell-${index}`} fill={projectColorsMap[entry.name] || "#94a3b8"} />
                   ))}
                   <LabelList
                     dataKey="cost"
@@ -249,7 +277,7 @@ export function GCPCharts({
                   dataKey={`costs.${projKey}`}
                   name={projKey}
                   stackId="a"
-                  fill={projectColors[projKey] || projectColors["default"]}
+                  fill={projectColorsMap[projKey] || "#94a3b8"}
                   radius={[2, 2, 0, 0]}
                 />
               ))}
