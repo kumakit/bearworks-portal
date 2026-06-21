@@ -36,103 +36,127 @@ export default async function AiNewsPage() {
   const totalArticles = newsGroups.reduce((acc, curr) => acc + (curr.articles?.length || 0), 0);
 
   return (
-    <div className="w-full max-w-4xl bg-black border border-green-500/20 rounded-lg p-6 md:p-8 font-mono text-green-400 shadow-[0_0_30px_rgba(34,197,94,0.1)]">
-      {/* ターミナル風ヘッダー */}
-      <div className="flex items-center justify-between border-b border-green-500/20 pb-4 mb-6 select-none">
-        <div className="flex items-center gap-2">
-          <div className="w-3 h-3 rounded-full bg-red-500/80"></div>
-          <div className="w-3 h-3 rounded-full bg-yellow-500/80"></div>
-          <div className="w-3 h-3 rounded-full bg-green-500/80"></div>
-          <span className="text-xs text-green-500/60 ml-2">bear-term ~ ai-news</span>
+    <main className="max-w-4xl w-full mx-auto px-4 py-6 flex flex-col gap-6">
+      {/* Header */}
+      <header className="flex items-center justify-between flex-wrap gap-3 select-none">
+        <div className="flex items-center gap-3">
+          <a
+            href="/"
+            className="flex items-center gap-1.5 text-sm text-gray-400 hover:text-gray-600 transition-colors"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="m15 18-6-6 6-6" />
+            </svg>
+            bearworks.uk
+          </a>
         </div>
-        <span className="text-xs text-green-500/60">bash 5.1</span>
-      </div>
+        {sortedGroups[0] && (
+          <div className="flex items-center gap-2">
+            <span className="text-xs text-gray-400">
+              最新データ: {sortedGroups[0].date}
+            </span>
+          </div>
+        )}
+      </header>
 
-      {/* ログイン・プロンプト情報 */}
-      <div className="space-y-1 mb-6 text-sm">
-        <p className="text-green-500/60">Last login: {new Date().toLocaleString("ja-JP")}</p>
-        <p className="text-green-500">
-          <span className="text-blue-400">guest@bearworks</span>:
-          <span className="text-purple-400">~/news</span>$ cat ./ai-news.log
+      {/* Title */}
+      <div className="text-center">
+        <h1 className="text-2xl md:text-3xl font-extrabold text-gray-900 tracking-tight font-sans">
+          🤖 AI ニュースフィード
+        </h1>
+        <p className="text-sm text-gray-400 mt-1 font-medium font-sans">
+          ネットから収集された最新の AI トピックと要約
         </p>
       </div>
 
-      {/* ニュース表示エリア */}
-      {sortedGroups.length === 0 ? (
-        <div className="py-16 text-center text-green-500/40 select-none">
-          <p className="text-lg font-bold">No news available.</p>
-          <p className="text-xs mt-2">Waiting for feed updates from N100PC...</p>
-          <span className="inline-block w-2 h-4 bg-green-400 animate-pulse align-middle mt-4"></span>
-        </div>
-      ) : (
-        <div className="space-y-8">
-          {sortedGroups.map((group) => (
-            <div key={group.date} className="space-y-3">
-              {/* 日付ヘッダー */}
-              <div className="flex items-center gap-4 text-green-500/80 font-bold border-b border-dashed border-green-500/20 pb-1 select-none">
-                <span>[ {group.date} ]</span>
-                <div className="h-px bg-green-500/20 flex-grow"></div>
-                <span className="text-xs font-normal text-green-500/40">
-                  {group.articles?.length || 0} item(s)
-                </span>
-              </div>
+      {/* Content Box (Bento Card style) */}
+      <div className="w-full bg-white rounded-[2.5rem] p-6 md:p-10 shadow-soft border border-gray-100 font-mono text-green-700">
+        
+        {/* ニュース表示エリア */}
+        {sortedGroups.length === 0 ? (
+          <div className="py-16 text-center text-zinc-400 select-none">
+            <p className="text-lg font-bold">No news available.</p>
+            <p className="text-xs mt-2">Waiting for feed updates from N100PC...</p>
+            <span className="inline-block w-2 h-4 bg-green-600 animate-pulse align-middle mt-4"></span>
+          </div>
+        ) : (
+          <div className="space-y-8">
+            {sortedGroups.map((group) => (
+              <div key={group.date} className="space-y-3">
+                {/* 日付ヘッダー */}
+                <div className="flex items-center gap-4 text-green-800 font-bold border-b border-dashed border-green-100 pb-1 select-none">
+                  <span>[ {group.date} ]</span>
+                  <div className="h-px bg-green-100 flex-grow"></div>
+                  <span className="text-xs font-normal text-zinc-400">
+                    {group.articles?.length || 0} item(s)
+                  </span>
+                </div>
 
-              {/* ニュースリスト */}
-              <div className="space-y-2">
-                {group.articles?.map((article, idx) => (
-                  <details
-                    key={idx}
-                    className="group border border-green-500/10 hover:border-green-500/30 rounded p-3 transition-colors bg-zinc-950/40"
-                  >
-                    <summary className="flex items-center justify-between cursor-pointer list-none select-none [&::-webkit-details-marker]:hidden">
-                      <div className="flex items-center gap-3 pr-4 overflow-hidden">
-                        <span className="text-green-500/40 font-bold group-open:hidden shrink-0">[+]</span>
-                        <span className="text-green-500/80 font-bold hidden group-open:inline shrink-0">[-]</span>
-                        <span className="truncate group-hover:text-green-300 font-semibold transition-colors">
-                          {article.title}
-                        </span>
-                      </div>
-                      <span className="text-xs text-green-500/40 shrink-0 select-none font-mono">
-                        {article.source}
-                      </span>
-                    </summary>
-                    <div className="mt-3 pt-3 border-t border-green-500/10 text-sm text-green-300/80 font-sans leading-relaxed pl-6 space-y-3">
-                      <p className="whitespace-pre-wrap">{article.content}</p>
-                      {(article.url || article.published_at) && (
-                        <div className="pt-2 font-mono text-xs flex flex-wrap gap-4 text-green-500/40">
-                          {article.published_at && (
-                            <span>Published: {article.published_at}</span>
-                          )}
-                          {article.url && (
-                            <a
-                              href={article.url}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-blue-400 hover:text-blue-300 hover:underline inline-flex items-center gap-1"
-                            >
-                              <span>🔗 Go to source</span>
-                              <span className="text-green-500/40">({article.url})</span>
-                            </a>
-                          )}
+                {/* ニュースリスト */}
+                <div className="space-y-2.5">
+                  {group.articles?.map((article, idx) => (
+                    <details
+                      key={idx}
+                      className="group border border-gray-100 hover:border-green-200 rounded-2xl p-4 transition-colors bg-white hover:bg-green-50/10 shadow-sm hover:shadow-soft"
+                    >
+                      <summary className="flex items-center justify-between cursor-pointer list-none select-none [&::-webkit-details-marker]:hidden">
+                        <div className="flex items-center gap-3 pr-4 overflow-hidden">
+                          <span className="text-green-600 font-bold group-open:hidden shrink-0">[+]</span>
+                          <span className="text-green-700 font-bold hidden group-open:inline shrink-0">[-]</span>
+                          <span className="truncate text-zinc-800 group-hover:text-green-700 font-semibold transition-colors font-sans">
+                            {article.title}
+                          </span>
                         </div>
-                      )}
-                    </div>
-                  </details>
-                ))}
+                        <span className="text-xs text-zinc-400 shrink-0 select-none font-mono font-medium">
+                          {article.source}
+                        </span>
+                      </summary>
+                      <div className="mt-3 pt-3 border-t border-gray-100 text-sm text-zinc-650 font-sans leading-relaxed pl-6 space-y-3 bg-[#F0FDF4]/30 rounded-xl p-4 border border-[#F0FDF4]/80">
+                        <p className="whitespace-pre-wrap">{article.content}</p>
+                        {(article.url || article.published_at) && (
+                          <div className="pt-2 font-mono text-xs flex flex-wrap gap-4 text-zinc-400">
+                            {article.published_at && (
+                              <span>Published: {article.published_at}</span>
+                            )}
+                            {article.url && (
+                              <a
+                                href={article.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-blue-600 hover:text-blue-500 hover:underline inline-flex items-center gap-1 font-medium font-sans"
+                              >
+                                <span>🔗 Go to source</span>
+                                <span className="text-zinc-400 font-normal">({article.url})</span>
+                              </a>
+                            )}
+                          </div>
+                        )}
+                      </div>
+                    </details>
+                  ))}
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
-      )}
-
-      {/* フッター */}
-      <div className="mt-8 pt-6 border-t border-green-500/20 text-xs text-green-500/40 flex justify-between items-center select-none">
-        <span>Total: {totalArticles} news items</span>
-        <div className="flex items-center gap-1">
-          <span>guest@bearworks:~$</span>
-          <span className="inline-block w-2 h-4 bg-green-500 animate-pulse"></span>
-        </div>
+            ))}
+          </div>
+        )}
       </div>
-    </div>
+
+      {/* Footer */}
+      <footer className="text-center text-xs text-gray-300 py-4 font-sans select-none">
+        <p>
+          Data collected by N100PC • Summaries by Gemini API • Total {totalArticles} news items
+        </p>
+      </footer>
+    </main>
   );
 }
