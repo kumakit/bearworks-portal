@@ -109,15 +109,20 @@ export default async function AiNewsPage() {
                       key={idx}
                       className="group border border-gray-100 hover:border-green-200 rounded-2xl p-4 transition-colors bg-white hover:bg-green-50/10 shadow-sm hover:shadow-soft"
                     >
-                      <summary className="flex items-center justify-between cursor-pointer list-none select-none [&::-webkit-details-marker]:hidden">
-                        <div className="flex items-center gap-3 pr-4 overflow-hidden">
-                          <span className="text-green-600 font-bold group-open:hidden shrink-0">[+]</span>
+                      <summary className="flex items-start justify-between gap-4 cursor-pointer list-none select-none [&::-webkit-details-marker]:hidden">
+                        <div className="flex items-start gap-3 min-w-0 flex-1">
+                          <span className="text-green-600 font-bold group-open:hidden shrink-0 mt-0.5">[+]</span>
                           <span className="text-green-700 font-bold hidden group-open:inline shrink-0">[-]</span>
-                          <span className="truncate text-zinc-800 group-hover:text-green-700 font-semibold transition-colors font-sans">
-                            {article.title}
-                          </span>
+                          <div className="flex flex-col gap-1 min-w-0">
+                            <span className="text-zinc-800 group-hover:text-green-700 font-semibold transition-colors font-sans break-words text-sm sm:text-base leading-snug">
+                              {article.title}
+                            </span>
+                            <span className="sm:hidden text-[10px] text-zinc-400 font-mono font-medium">
+                              {article.source}
+                            </span>
+                          </div>
                         </div>
-                        <span className="text-xs text-zinc-400 shrink-0 select-none font-mono font-medium">
+                        <span className="hidden sm:inline text-xs text-zinc-400 shrink-0 select-none font-mono font-medium mt-0.5">
                           {article.source}
                         </span>
                       </summary>
