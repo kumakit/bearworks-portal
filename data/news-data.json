@@ -1,5 +1,70 @@
 [
   {
+    "date": "2026-06-25",
+    "articles": [
+      {
+        "title": "OpenAI、Broadcomと共同開発した初のカスタムAIチップ「Jalapeño」を発表",
+        "content": "OpenAIはBroadcomと共同で、推論システムに特化した初のカスタムAIチップ「Jalapeño」を発表した。これにより、OpenAIはAIスタック全体を自社で構築する戦略を強化し、Nvidiaへの依存度を減らし、コスト効率と性能向上を目指す。",
+        "source": "CNBC",
+        "published_at": "2026-06-24"
+      },
+      {
+        "title": "Anthropic、AlibabaをAI機能の「露骨かつ違法な抽出」で告発",
+        "content": "AnthropicはAlibabaが同社のAIモデルから機能を不正に抽出する「蒸留攻撃」を行ったと主張。これはAnthropicにとって過去最大規模の攻撃であり、AI企業の知的財産保護と競争環境における倫理問題に大きな影響を与える可能性がある。",
+        "source": "CNBC",
+        "published_at": "2026-06-25"
+      },
+      {
+        "title": "GoogleからトップAI研究者の流出が続く、Anthropicなど競合へ",
+        "content": "GoogleのトップAI研究者であるJonas Adler氏とAlexander Pritzel氏がAnthropicへ移籍。以前のNoam Shazeer氏やJohn Jumper氏の離脱に続き、GoogleのAI部門における人材流出が続き、競合他社のAI開発力強化に繋がる動きとして注目される。",
+        "source": "TechCrunch",
+        "published_at": "2026-06-25"
+      },
+      {
+        "title": "Nvidia CEO、密輸部品による闇データセンターを「行き止まり」と警告",
+        "content": "Nvidiaのジェンスン・フアンCEOは、密輸された部品で構築されたデータセンターは、米国の輸出規制強化により、将来的にソフトウェアアップデートやサポートが受けられず「行き止まり」になると指摘。米中間の半導体摩擦がAIインフラに与える影響が浮き彫りになった。",
+        "source": "CNBC",
+        "published_at": "2026-06-25"
+      },
+      {
+        "title": "欧州、米国の対中半導体規制強化に反発の動き",
+        "content": "米国が中国への旧世代深紫外線露光装置（DUV）の輸出規制を検討する中、ASMLのCEOはこれが約10年前の技術であり、中国が現在購入可能な範囲を制限することに懸念を表明。欧州は米国の「チップ戦争」への反発を強めている。",
+        "source": "TechCrunch",
+        "published_at": "2026-06-25"
+      },
+      {
+        "title": "Micron、メモリ危機で粗利益率が急上昇しテクノロジー業界の「マージンキング」に",
+        "content": "Micronの粗利益率が前年同期の39%から84.9%に急上昇し、NvidiaやMetaを上回る水準に。AI需要によるメモリ不足が価格高騰を招き、同社の収益性を大幅に押し上げ、半導体サプライチェーンにおけるメモリの重要性が再認識された。",
+        "source": "CNBC",
+        "published_at": "2026-06-25"
+      },
+      {
+        "title": "SK Hynix、ナスダック上場申請で株価11%急騰、最大294億ドル調達へ",
+        "content": "韓国の半導体大手SK Hynixがナスダック上場を申請し、最大294億ドルの資金調達を目指す計画が報じられ、株価が11%急騰。AI向けHBM（高帯域幅メモリ）需要の恩恵を受け、グローバル市場での存在感をさらに高める動き。",
+        "source": "CNBC",
+        "published_at": "2026-06-25"
+      },
+      {
+        "title": "Anthropicの「Claude Tag」、Slack連携で企業の知識を学習しAIアシスタントを強化",
+        "content": "AnthropicがSlackに常駐するAIアシスタント「Claude Tag」を発表。企業内のコミュニケーションから組織の文脈や知識を学習し、生産性向上だけでなく、企業のワークフローや制度的知識を取り込む戦略的な動きとして注目される。",
+        "source": "TechCrunch",
+        "published_at": "2026-06-24"
+      },
+      {
+        "title": "Alphabet、ダウ・ジョーンズ工業株平均に採用、Verizonと交代",
+        "content": "Googleの親会社であるAlphabetが、ダウ・ジョーンズ工業株平均に採用され、Verizonと入れ替わることに。これはAlphabetの市場における重要性と影響力の増大を示すものであり、AI時代のテクノロジー企業の存在感を象徴する動き。",
+        "source": "CNBC",
+        "published_at": "2026-06-25"
+      },
+      {
+        "title": "AI時代にGoogleのオンライン支配にほころびの兆候",
+        "content": "AIの進化により、Googleの検索エンジンを中心としたオンライン支配に変化の兆しが見られる。ウォール街はGoogleの強さを認識しつつも、AIがもたらす新たな競争環境が同社のビジネスモデルに複雑な影響を与え始めていると指摘。",
+        "source": "CNBC",
+        "published_at": "2026-06-24"
+      }
+    ]
+  },
+  {
     "date": "2026-06-24",
     "articles": [
       {
@@ -41,12 +106,6 @@
       {
         "title": "AIデータセンター向けオフグリッド電源プロジェクトが概念実証を達成",
         "content": "AIデータセンター向けのオフグリッド電源プロジェクトが重要な概念実証を達成。これはGE Vernovaにとって好材料であり、AI産業が直面するエネルギー課題に対し、自立型電源ソリューションが大きな一歩を踏み出したことを示す。",
-        "source": "CNBC",
-        "published_at": "2026-06-24"
-      },
-      {
-        "title": "AI時代にGoogleのオンライン支配にほころびの兆候",
-        "content": "AI時代の到来により、Googleのオンラインにおける支配的地位に変化の兆しが見え始めている。ウォール街はGoogleの強さを認識しつつも、AIが同社のビジネスモデルを複雑化させていると指摘している。",
         "source": "CNBC",
         "published_at": "2026-06-24"
       },
