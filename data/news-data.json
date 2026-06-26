@@ -3,12 +3,6 @@
     "date": "2026-06-27",
     "articles": [
       {
-        "title": "AnthropicのClaude、有料AI市場でChatGPTから顧客を獲得し優勢に",
-        "content": "AnthropicのAIエージェント「Claude」が、有料AIサービス市場でChatGPTから顧客を獲得しつつある。データによると、有料ユーザーの間でClaudeの選択が増加傾向にある。",
-        "source": "TechCrunch",
-        "published_at": "2026-06-26"
-      },
-      {
         "title": "Meta、クリエイター向けAIコンパニオンアプリをFacebookでテスト開始",
         "content": "Facebookがクリエイター向けAIコンパニオンアプリのテストを開始。このアプリには、最近発表されたFacebookのAIクリエイターアシスタントが組み込まれており、クリエイターの作業を支援する。",
         "source": "TechCrunch",
@@ -27,51 +21,9 @@
         "published_at": "2026-06-25"
       },
       {
-        "title": "OpenAI、新モデル公開をホワイトハウスが安全懸念で一時停止",
-        "content": "OpenAIの次期モデルGPT 5.6の一般公開が、米政府の安全懸念により一部パートナー限定に。AIの安全性規制が新モデル開発・展開に直接影響を与えることを示唆する。",
-        "source": "TechCrunch",
-        "published_at": "2026-06-26"
-      },
-      {
-        "title": "Patronus AIがAIエージェントのストレステスト用「デジタル世界」構築で5000万ドル調達",
-        "content": "元Meta AI研究者によるPatronus AIが、AIエージェントの安全性と堅牢性を検証するデジタル環境開発で5000万ドルを調達。AIエージェントの信頼性向上に不可欠な技術として注目される。",
-        "source": "TechCrunch",
-        "published_at": "2026-06-26"
-      },
-      {
-        "title": "General Intuition、ビデオゲームでAIエージェントを訓練する戦略に23億ドル投資",
-        "content": "General Intuitionが、数百万時間のゲームプレイデータでAIを訓練し、人間のような直感を開発するアプローチに3.2億ドルを調達。実世界で機能するAIエージェント開発の新たな道を開く可能性を秘める。",
-        "source": "TechCrunch",
-        "published_at": "2026-06-26"
-      },
-      {
         "title": "Anthropic、AlibabaがAI能力を「不正に抽出」したと非難",
         "content": "AnthropicがAlibabaに対し、同社のAI能力を「大規模かつ不正に抽出する蒸留攻撃」を行ったと告発。AIモデルの知的財産保護とセキュリティに関する重大な問題提起となる。",
         "source": "CNBC",
-        "published_at": "2026-06-25"
-      },
-      {
-        "title": "Broadcom、OpenAI共同設計の「Jalapeno」チップで株価回復に期待",
-        "content": "BroadcomがChatGPT開発元のOpenAIと共同設計した新チップ「Jalapeno」に期待。AI特化型チップ開発における大手AI企業と半導体メーカーの連携強化が、市場競争を加速させる。",
-        "source": "CNBC",
-        "published_at": "2026-06-25"
-      },
-      {
-        "title": "元Databricks AI責任者、AIの電力消費を1000分の1に削減する新技術を発表",
-        "content": "Databricksの元AI責任者が、画像生成システム「Un-0」を通じて、従来のAIシステムの電力消費を大幅に削減する技術を実証。AIインフラの持続可能性とコスト効率に革命をもたらす可能性を秘める。",
-        "source": "TechCrunch",
-        "published_at": "2026-06-26"
-      },
-      {
-        "title": "Anthropic、AIデータセンターのグローバル展開を加速、豪州と日本で採用強化",
-        "content": "AnthropicがAIデータセンターのコンピューティング能力を海外で拡大するため、オーストラリアと日本で関連職種の採用を強化。AIインフラの地理的拡大と国際競争の激化を示す。",
-        "source": "CNBC",
-        "published_at": "2026-06-25"
-      },
-      {
-        "title": "Amazon、インドのAIインフラに130億ドルの追加投資を発表",
-        "content": "AmazonがインドでのAIインフラ拡張に130億ドルを追加投資。グローバルなAIインフラ競争が激化する中、インド市場の重要性とAI技術の普及に向けた大規模なコミットメントを示す。",
-        "source": "TechCrunch",
         "published_at": "2026-06-25"
       },
       {
@@ -81,10 +33,64 @@
         "published_at": "2026-06-25"
       },
       {
-        "title": "ON Semiconductor、Synapticsを70億ドルで買収し物理AI分野を強化",
-        "content": "ON SemiconductorがSynapticsを70億ドルで買収し、物理AI市場での事業拡大を目指す。この買収により、同社のターゲット市場規模は2030年までに2430億ドルに拡大する見込み。",
+        "title": "米政府、OpenAIのGPT 5.6公開延期を要請 - 安全性懸念で規制強化",
+        "content": "OpenAIの次期モデルGPT 5.6の公開が、米政府の安全保障上の懸念により延期される見込みだ。これはAI技術の急速な進化に対する政府の監視強化と、安全性確保への強い姿勢を示すもので、今後のAI開発と規制のバランスに大きな影響を与えるだろう。",
+        "source": "TechCrunch",
+        "published_at": "2026-06-26"
+      },
+      {
+        "title": "Databricks元AI責任者、AI電力消費を1000分の1に削減する新技術発表",
+        "content": "Databricksの元AI責任者が、AIの電力消費を1000分の1に削減できる新技術を発表した。これはAIインフラの運用コストと環境負荷を劇的に低減し、AIの普及と持続可能性に革命的な影響を与える可能性がある。",
+        "source": "TechCrunch",
+        "published_at": "2026-06-26"
+      },
+      {
+        "title": "Patronus AIが5000万ドル調達、AIエージェントのストレステスト用「デジタル世界」構築へ",
+        "content": "AIエージェントのストレステストを行うスタートアップPatronus AIが5000万ドルを調達した。これはAIエージェントの信頼性と安全性を確保するための基盤技術開発が加速し、より堅牢なAIシステムの普及に貢献するだろう。",
+        "source": "TechCrunch",
+        "published_at": "2026-06-26"
+      },
+      {
+        "title": "General Intuitionが23億ドル投資、ビデオゲームで実世界向けAIエージェント訓練",
+        "content": "General Intuitionがビデオゲームを用いたAIエージェント訓練に23億ドルを投資した。これは実世界でのAIエージェントの汎用性向上に向けた新たなアプローチであり、AIの学習効率と応用範囲を飛躍的に拡大する可能性を秘めている。",
+        "source": "TechCrunch",
+        "published_at": "2026-06-26"
+      },
+      {
+        "title": "OpenAIとBroadcomが共同設計した新チップ「Jalapeno」発表、AI処理効率向上へ",
+        "content": "OpenAIがBroadcomと共同設計した新チップ「Jalapeno」が発表された。これはAIモデルに特化したカスタムチップ開発の加速を示し、AI処理の効率を大幅に向上させることで、AIインフラ市場に新たな競争をもたらす可能性がある。",
+        "source": "CNBC",
+        "published_at": "2026-06-25"
+      },
+      {
+        "title": "ON SemiconductorがSynapticsを70億ドルで買収、物理AI分野を強化",
+        "content": "ON SemiconductorがSynapticsを70億ドルで買収し、物理AI分野を強化する。この買収は、エッジAIや組み込みAI市場での競争力を高め、AIチップの多様な応用を加速させる戦略的な動きである。",
         "source": "CNBC",
         "published_at": "2026-06-26"
+      },
+      {
+        "title": "Scaled Cognitionが1億ドル調達、AIの幻覚（ハルシネーション）問題解決へ",
+        "content": "AIの幻覚（ハルシネーション）問題解決を目指すScaled Cognitionが1億ドルを調達した。これはAIの信頼性と実用性を高める上で不可欠な技術開発を加速させ、AIエージェントの広範な導入を後押しする重要な動きである。",
+        "source": "Google News",
+        "published_at": "2026-06-26"
+      },
+      {
+        "title": "AnthropicのClaudeが有料AI市場でChatGPTからシェア獲得、競争激化",
+        "content": "AnthropicのClaudeが有料AI消費者市場でChatGPTからシェアを奪っている。これはAIアシスタント市場における競争激化を示し、ユーザーはより多様な選択肢と高品質なサービスを享受できるようになるだろう。",
+        "source": "TechCrunch",
+        "published_at": "2026-06-26"
+      },
+      {
+        "title": "Anthropicが豪州と日本でAIデータセンター人材採用、グローバル展開加速",
+        "content": "Anthropicがオーストラリアと日本でAIデータセンター関連の人材を積極的に採用している。これは同社がグローバルな計算能力を急速に拡大し、AIサービスの提供地域を広げる戦略を示しており、各国のAIインフラ競争を激化させる。",
+        "source": "CNBC",
+        "published_at": "2026-06-25"
+      },
+      {
+        "title": "AmazonがインドのAIインフラに130億ドル追加投資、デジタル経済成長を加速",
+        "content": "AmazonがインドのAIインフラに130億ドルを追加投資する。これはインドにおけるAI開発とデータセンター需要の急増に対応するもので、同国のデジタル経済成長を加速させ、グローバルなAI競争における戦略的拠点としての地位を強化する。",
+        "source": "TechCrunch",
+        "published_at": "2026-06-25"
       }
     ]
   },
