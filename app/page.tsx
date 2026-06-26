@@ -1,7 +1,7 @@
 export const runtime = "edge";
 
 import { SystemMonitor } from "@/components/SystemMonitor";
-import { Github, MapPin, User, Terminal, Database, Globe, Bot, Book, BarChart3, Hand, Sparkles, CloudSun, Activity } from "lucide-react";
+import { Github, MapPin, User, Terminal, Database, Globe, Bot, Book, BarChart3, Hand, Sparkles, CloudSun, Activity, Key } from "lucide-react";
 
 export default function Home() {
   return (
@@ -71,7 +71,7 @@ export default function Home() {
               automation.
             </p>
           </div>
-          <div className="mt-auto">
+          <div className="mt-auto flex items-center justify-between w-full">
             <a
               href="https://www.google.com/maps/place/Hachioji,+Tokyo"
               target="_blank"
@@ -84,6 +84,22 @@ export default function Home() {
               </span>
               <span>Hachioji, Tokyo</span>
             </a>
+            <div className="flex items-center gap-3">
+              <a
+                href="/weather"
+                title="Weather Dashboard"
+                className="text-muted hover:text-orange-500 transition-colors p-1 rounded-lg hover:bg-orange-50/50"
+              >
+                <CloudSun size={16} />
+              </a>
+              <a
+                href="/dashboard"
+                title="Mission Control Dashboard"
+                className="text-muted hover:text-purple-600 transition-colors p-1 rounded-lg hover:bg-purple-50/50"
+              >
+                <Key size={16} />
+              </a>
+            </div>
           </div>
         </div>
 
@@ -157,33 +173,7 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Weather Dashboard (1 col) */}
-        <a href="/weather" className="bg-[#FFF7ED] rounded-[2.5rem] p-8 shadow-soft border border-orange-50 flex flex-col gap-6 group hover:shadow-lg transition-all hover:-translate-y-1 block">
-          <div className="flex justify-between items-start">
-            <span className="icon-with-blob text-2xl">
-              <CloudSun size={32} className="text-orange-500" />
-              <span className="blob blob-yellow blob-lg"></span>
-            </span>
-          </div>
-          <div className="mt-auto">
-            <h3 className="text-2xl font-bold text-primary group-hover:text-orange-500 transition-colors">Weather Dashboard</h3>
-            <p className="text-orange-900/60 text-sm mt-1 font-medium">八王子 🏠 ↔ 新宿 🏢</p>
-          </div>
-        </a>
 
-        {/* Dashboard Card (1 col) */}
-        <a href="/dashboard" className="bg-[#FAF5FF] rounded-[2.5rem] p-8 shadow-soft border border-purple-50 flex flex-col gap-6 group hover:shadow-lg transition-all hover:-translate-y-1 block">
-          <div className="flex justify-between items-start">
-            <span className="icon-with-blob text-2xl">
-              <Activity size={32} className="text-purple-600" />
-              <span className="blob blob-purple blob-lg"></span>
-            </span>
-          </div>
-          <div className="mt-auto">
-            <h3 className="text-2xl font-bold text-primary group-hover:text-purple-500 transition-colors">Mission Control Dashboard</h3>
-            <p className="text-purple-900/60 text-sm mt-1 font-medium">Google AI Studio & Cloudflare</p>
-          </div>
-        </a>
 
         {/* AI News Card (1 col) */}
         <a href="/ai-news" className="bg-[#F0FDF4] rounded-[2.5rem] p-8 shadow-soft border border-green-50 flex flex-col gap-6 group hover:shadow-lg transition-all hover:-translate-y-1 block">
