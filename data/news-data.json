@@ -3,18 +3,6 @@
     "date": "2026-06-27",
     "articles": [
       {
-        "title": "ホワイトハウス、OpenAIに新モデル公開の遅延を要請：安全保障上の懸念",
-        "content": "OpenAIの次期モデルGPT 5.6の公開を、トランプ政権が安全保障上の懸念から遅らせるよう要請。OpenAIは一般公開ではなく一部パートナーへの提供を計画している。",
-        "source": "TechCrunch",
-        "published_at": "2026-06-26"
-      },
-      {
-        "title": "OpenAIとBroadcomが共同設計した新AIチップ「Jalapeno」がBroadcom株価回復の鍵に",
-        "content": "BroadcomがOpenAIと共同設計した新チップ「Jalapeno」が、同社の株価回復の鍵となる可能性。ChatGPT開発元との連携により、AI半導体市場での競争力強化を目指す。",
-        "source": "CNBC",
-        "published_at": "2026-06-25"
-      },
-      {
         "title": "AnthropicのClaude、有料AI市場でChatGPTから顧客を獲得し優勢に",
         "content": "AnthropicのAIエージェント「Claude」が、有料AIサービス市場でChatGPTから顧客を獲得しつつある。データによると、有料ユーザーの間でClaudeの選択が増加傾向にある。",
         "source": "TechCrunch",
@@ -33,34 +21,70 @@
         "published_at": "2026-06-25"
       },
       {
-        "title": "Patronus AIが5000万ドル調達、AIエージェントのストレステスト用「デジタルワールド」構築へ",
-        "content": "元Meta AI研究者が設立したPatronus AIが、AIエージェントのストレステストを行う「デジタルワールド」構築のため5000万ドルを調達。AIエージェントの安全性と堅牢性向上に貢献する。",
-        "source": "TechCrunch",
-        "published_at": "2026-06-26"
-      },
-      {
-        "title": "General Intuitionが3.2億ドル調達、ビデオゲームでAIエージェントを訓練し現実世界へ応用",
-        "content": "General Intuitionが、ビデオゲームのプレイデータでAIエージェントを訓練し、現実世界での人間のような直感を開発するため3.2億ドルを調達。AIの汎用性向上に期待。",
-        "source": "TechCrunch",
-        "published_at": "2026-06-26"
-      },
-      {
         "title": "GoogleのトップAI研究者がAnthropicへ移籍、人材流出が続く",
         "content": "GoogleのトップAI研究者であるJonas AdlerとAlexander PritzelがAnthropicに移籍。Noam ShazeerやJohn Jumperに続く主要研究者の流出で、GoogleのAI部門に影響。",
         "source": "TechCrunch",
         "published_at": "2026-06-25"
       },
       {
-        "title": "Anthropic、AlibabaをAI能力の「違法な抽出」で非難",
-        "content": "AnthropicがAlibabaに対し、AI能力を「露骨かつ違法に」抽出する大規模な「蒸留攻撃」を行ったと非難。AIモデルの知的財産保護とセキュリティに関する懸念が高まる。",
+        "title": "OpenAI、新モデル公開をホワイトハウスが安全懸念で一時停止",
+        "content": "OpenAIの次期モデルGPT 5.6の一般公開が、米政府の安全懸念により一部パートナー限定に。AIの安全性規制が新モデル開発・展開に直接影響を与えることを示唆する。",
+        "source": "TechCrunch",
+        "published_at": "2026-06-26"
+      },
+      {
+        "title": "Patronus AIがAIエージェントのストレステスト用「デジタル世界」構築で5000万ドル調達",
+        "content": "元Meta AI研究者によるPatronus AIが、AIエージェントの安全性と堅牢性を検証するデジタル環境開発で5000万ドルを調達。AIエージェントの信頼性向上に不可欠な技術として注目される。",
+        "source": "TechCrunch",
+        "published_at": "2026-06-26"
+      },
+      {
+        "title": "General Intuition、ビデオゲームでAIエージェントを訓練する戦略に23億ドル投資",
+        "content": "General Intuitionが、数百万時間のゲームプレイデータでAIを訓練し、人間のような直感を開発するアプローチに3.2億ドルを調達。実世界で機能するAIエージェント開発の新たな道を開く可能性を秘める。",
+        "source": "TechCrunch",
+        "published_at": "2026-06-26"
+      },
+      {
+        "title": "Anthropic、AlibabaがAI能力を「不正に抽出」したと非難",
+        "content": "AnthropicがAlibabaに対し、同社のAI能力を「大規模かつ不正に抽出する蒸留攻撃」を行ったと告発。AIモデルの知的財産保護とセキュリティに関する重大な問題提起となる。",
         "source": "CNBC",
         "published_at": "2026-06-25"
       },
       {
-        "title": "AmazonがインドのAIインフラに130億ドルの追加投資、グローバル競争を加速",
-        "content": "AmazonがインドのAIインフラに130億ドルの追加投資を発表。世界的なAIインフラ拡大競争の中、インド市場でのAI関連事業強化とデータセンター構築を加速させる。",
+        "title": "Broadcom、OpenAI共同設計の「Jalapeno」チップで株価回復に期待",
+        "content": "BroadcomがChatGPT開発元のOpenAIと共同設計した新チップ「Jalapeno」に期待。AI特化型チップ開発における大手AI企業と半導体メーカーの連携強化が、市場競争を加速させる。",
+        "source": "CNBC",
+        "published_at": "2026-06-25"
+      },
+      {
+        "title": "元Databricks AI責任者、AIの電力消費を1000分の1に削減する新技術を発表",
+        "content": "Databricksの元AI責任者が、画像生成システム「Un-0」を通じて、従来のAIシステムの電力消費を大幅に削減する技術を実証。AIインフラの持続可能性とコスト効率に革命をもたらす可能性を秘める。",
+        "source": "TechCrunch",
+        "published_at": "2026-06-26"
+      },
+      {
+        "title": "Anthropic、AIデータセンターのグローバル展開を加速、豪州と日本で採用強化",
+        "content": "AnthropicがAIデータセンターのコンピューティング能力を海外で拡大するため、オーストラリアと日本で関連職種の採用を強化。AIインフラの地理的拡大と国際競争の激化を示す。",
+        "source": "CNBC",
+        "published_at": "2026-06-25"
+      },
+      {
+        "title": "Amazon、インドのAIインフラに130億ドルの追加投資を発表",
+        "content": "AmazonがインドでのAIインフラ拡張に130億ドルを追加投資。グローバルなAIインフラ競争が激化する中、インド市場の重要性とAI技術の普及に向けた大規模なコミットメントを示す。",
         "source": "TechCrunch",
         "published_at": "2026-06-25"
+      },
+      {
+        "title": "Micron、メモリ危機で粗利益率がNvidiaやMetaを上回りテクノロジー業界の新たな利益王に",
+        "content": "Micronの粗利益率が84.9%に急上昇し、NvidiaやMetaを凌駕。AI需要によるメモリ市場の逼迫が、半導体企業の収益構造を劇的に変化させていることを示す。",
+        "source": "CNBC",
+        "published_at": "2026-06-25"
+      },
+      {
+        "title": "ON Semiconductor、Synapticsを70億ドルで買収し物理AI分野を強化",
+        "content": "ON SemiconductorがSynapticsを70億ドルで買収し、物理AI市場での事業拡大を目指す。この買収により、同社のターゲット市場規模は2030年までに2430億ドルに拡大する見込み。",
+        "source": "CNBC",
+        "published_at": "2026-06-26"
       }
     ]
   },
@@ -76,12 +100,6 @@
       {
         "title": "Nvidia CEO、密輸部品によるブラックマーケットデータセンターを「行き止まり」と警告",
         "content": "Nvidiaのジェンスン・フアンCEOは、密輸された部品で構築されたデータセンターは「行き止まり」だと指摘した。これは、米国の対中半導体輸出規制が強化される中、AIチップの不正流通に対するNvidiaの姿勢と、地政学的なサプライチェーン問題の深刻さを示している。",
-        "source": "CNBC",
-        "published_at": "2026-06-25"
-      },
-      {
-        "title": "Anthropic、豪州と日本でAIデータセンター要員を募集しグローバル展開を加速",
-        "content": "Anthropicがオーストラリアと日本でAIデータセンター関連職の採用を強化している。これは、同社が海外での計算能力を急速に拡大し、グローバルなAIインフラ構築を推進していることを示しており、地域ごとのAIサービス提供能力を強化する狙いがある。",
         "source": "CNBC",
         "published_at": "2026-06-25"
       },
@@ -136,12 +154,6 @@
         "title": "欧州、米国の対中半導体規制強化に反発の動き",
         "content": "米国が中国への旧世代深紫外線露光装置（DUV）の輸出規制を検討する中、ASMLのCEOはこれが約10年前の技術であり、中国が現在購入可能な範囲を制限することに懸念を表明。欧州は米国の「チップ戦争」への反発を強めている。",
         "source": "TechCrunch",
-        "published_at": "2026-06-25"
-      },
-      {
-        "title": "Micron、メモリ危機で粗利益率が急上昇しテクノロジー業界の「マージンキング」に",
-        "content": "Micronの粗利益率が前年同期の39%から84.9%に急上昇し、NvidiaやMetaを上回る水準に。AI需要によるメモリ不足が価格高騰を招き、同社の収益性を大幅に押し上げ、半導体サプライチェーンにおけるメモリの重要性が再認識された。",
-        "source": "CNBC",
         "published_at": "2026-06-25"
       },
       {
