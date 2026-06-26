@@ -21,12 +21,6 @@
         "published_at": "2026-06-25"
       },
       {
-        "title": "Anthropic、AlibabaがAI能力を「不正に抽出」したと非難",
-        "content": "AnthropicがAlibabaに対し、同社のAI能力を「大規模かつ不正に抽出する蒸留攻撃」を行ったと告発。AIモデルの知的財産保護とセキュリティに関する重大な問題提起となる。",
-        "source": "CNBC",
-        "published_at": "2026-06-25"
-      },
-      {
         "title": "Micron、メモリ危機で粗利益率がNvidiaやMetaを上回りテクノロジー業界の新たな利益王に",
         "content": "Micronの粗利益率が84.9%に急上昇し、NvidiaやMetaを凌駕。AI需要によるメモリ市場の逼迫が、半導体企業の収益構造を劇的に変化させていることを示す。",
         "source": "CNBC",
@@ -45,28 +39,10 @@
         "published_at": "2026-06-26"
       },
       {
-        "title": "Patronus AIが5000万ドル調達、AIエージェントのストレステスト用「デジタル世界」構築へ",
-        "content": "AIエージェントのストレステストを行うスタートアップPatronus AIが5000万ドルを調達した。これはAIエージェントの信頼性と安全性を確保するための基盤技術開発が加速し、より堅牢なAIシステムの普及に貢献するだろう。",
-        "source": "TechCrunch",
-        "published_at": "2026-06-26"
-      },
-      {
-        "title": "General Intuitionが23億ドル投資、ビデオゲームで実世界向けAIエージェント訓練",
-        "content": "General Intuitionがビデオゲームを用いたAIエージェント訓練に23億ドルを投資した。これは実世界でのAIエージェントの汎用性向上に向けた新たなアプローチであり、AIの学習効率と応用範囲を飛躍的に拡大する可能性を秘めている。",
-        "source": "TechCrunch",
-        "published_at": "2026-06-26"
-      },
-      {
         "title": "OpenAIとBroadcomが共同設計した新チップ「Jalapeno」発表、AI処理効率向上へ",
         "content": "OpenAIがBroadcomと共同設計した新チップ「Jalapeno」が発表された。これはAIモデルに特化したカスタムチップ開発の加速を示し、AI処理の効率を大幅に向上させることで、AIインフラ市場に新たな競争をもたらす可能性がある。",
         "source": "CNBC",
         "published_at": "2026-06-25"
-      },
-      {
-        "title": "ON SemiconductorがSynapticsを70億ドルで買収、物理AI分野を強化",
-        "content": "ON SemiconductorがSynapticsを70億ドルで買収し、物理AI分野を強化する。この買収は、エッジAIや組み込みAI市場での競争力を高め、AIチップの多様な応用を加速させる戦略的な動きである。",
-        "source": "CNBC",
-        "published_at": "2026-06-26"
       },
       {
         "title": "Scaled Cognitionが1億ドル調達、AIの幻覚（ハルシネーション）問題解決へ",
@@ -75,21 +51,63 @@
         "published_at": "2026-06-26"
       },
       {
-        "title": "AnthropicのClaudeが有料AI市場でChatGPTからシェア獲得、競争激化",
-        "content": "AnthropicのClaudeが有料AI消費者市場でChatGPTからシェアを奪っている。これはAIアシスタント市場における競争激化を示し、ユーザーはより多様な選択肢と高品質なサービスを享受できるようになるだろう。",
+        "title": "米政府、OpenAIのGPT-5.6とAnthropicのMythosの公開を制限",
+        "content": "米政府はOpenAIに対し、最新モデルGPT-5.6の公開を承認なしに行わないよう警告した。これはAnthropicのMythosにも適用されており、AIモデルのリリースにおける政府の規制介入が常態化する可能性を示唆し、技術開発と普及に大きな影響を与えるだろう。",
+        "source": "Tom's Hardware",
+        "published_at": "2026-06-27"
+      },
+      {
+        "title": "OpenAIがNvidiaに対抗し自社製AI推論チップ「Jalapeño」を開発",
+        "content": "OpenAIはBroadcomと共同でカスタムAI推論チップ「Jalapeño」を開発すると発表した。これはGoogleやAppleに続き、Nvidiaへの依存を減らす動きであり、AIチップ市場の競争激化とサプライチェーン多様化を加速させる。",
+        "source": "TechCrunch",
+        "published_at": "2026-06-27"
+      },
+      {
+        "title": "General Intuition、ビデオゲームでAIエージェントを訓練するため23億ドルを調達",
+        "content": "General Intuitionは、数百万時間のゲームプレイデータでAIを訓練し、現実世界で機能するAIエージェントを開発するため、23億ドルを調達した。これはAIエージェントの訓練方法に新たなパラダイムをもたらす可能性があり、汎用AIへの道を開く。",
         "source": "TechCrunch",
         "published_at": "2026-06-26"
       },
       {
-        "title": "Anthropicが豪州と日本でAIデータセンター人材採用、グローバル展開加速",
-        "content": "Anthropicがオーストラリアと日本でAIデータセンター関連の人材を積極的に採用している。これは同社がグローバルな計算能力を急速に拡大し、AIサービスの提供地域を広げる戦略を示しており、各国のAIインフラ競争を激化させる。",
+        "title": "Patronus AI、AIエージェントのストレステスト用「デジタルワールド」構築で5000万ドル調達",
+        "content": "元Meta AI研究者が設立したPatronus AIは、AIエージェントの信頼性と安全性を検証する「デジタルワールド」開発のため5000万ドルを調達した。AIエージェントの普及に伴い、その安全性と堅牢性を確保する技術の重要性が高まっている。",
+        "source": "TechCrunch",
+        "published_at": "2026-06-26"
+      },
+      {
+        "title": "Anthropic、AlibabaがAI機能の「露骨かつ違法な抽出」を行ったと非難",
+        "content": "AnthropicはAlibabaが「史上最大規模の蒸留攻撃」を行ったと主張し、AIモデルの知的財産権とセキュリティに関する重大な懸念を提起した。これはAI業界における競争と倫理、法規制の課題を浮き彫りにする。",
         "source": "CNBC",
         "published_at": "2026-06-25"
       },
       {
-        "title": "AmazonがインドのAIインフラに130億ドル追加投資、デジタル経済成長を加速",
-        "content": "AmazonがインドのAIインフラに130億ドルを追加投資する。これはインドにおけるAI開発とデータセンター需要の急増に対応するもので、同国のデジタル経済成長を加速させ、グローバルなAI競争における戦略的拠点としての地位を強化する。",
+        "title": "ON Semiconductor、Synapticsを70億ドルで買収しエッジAIハードウェアを強化",
+        "content": "ON SemiconductorはSynapticsを70億ドルで買収し、物理AI分野への進出を加速させる。この買収により、同社はエッジAIハードウェア市場での競争力を高め、AIインフラの多様化と進化に貢献する。",
+        "source": "Tom's Hardware",
+        "published_at": "2026-06-27"
+      },
+      {
+        "title": "AnthropicのClaude、有料AI市場でChatGPTから顧客を獲得し競争激化",
+        "content": "ChatGPTが支配的だった有料AI市場で、AnthropicのClaudeが消費者の支持を集めている。これはAIモデル間の競争が激化し、ユーザー体験や特定の機能が市場シェアを左右する新たな局面に入ったことを示唆する。",
         "source": "TechCrunch",
+        "published_at": "2026-06-26"
+      },
+      {
+        "title": "Amazon、インドのAIインフラに130億ドルを追加投資",
+        "content": "AmazonはインドのAIインフラに新たに130億ドルを投資すると発表した。これは、世界的なAIインフラ拡張競争の一環であり、インド市場におけるAI技術の普及とデータセンター需要の急増を加速させるだろう。",
+        "source": "TechCrunch",
+        "published_at": "2026-06-25"
+      },
+      {
+        "title": "Anthropic、豪州と日本でAIデータセンター要員を募集しグローバル展開を加速",
+        "content": "Anthropicは豪州と日本でAIデータセンター関連職の採用を強化しており、海外での計算能力拡張を急いでいる。これは主要AI企業がグローバルなAIインフラ競争を激化させている現状を反映している。",
+        "source": "CNBC",
+        "published_at": "2026-06-25"
+      },
+      {
+        "title": "カリフォルニア州、AIの労働力への影響を監視・追跡するツールを導入",
+        "content": "カリフォルニア州は、AIが労働市場に与える影響を監視・追跡する初の州レベルのツールを導入した。これはAI技術の急速な進展に伴う社会経済的変化に対し、政府が積極的に対応しようとする動きであり、今後のAI規制の先駆けとなる可能性がある。",
+        "source": "California State Portal | CA.gov",
         "published_at": "2026-06-25"
       }
     ]
@@ -132,12 +150,6 @@
   {
     "date": "2026-06-25",
     "articles": [
-      {
-        "title": "OpenAI、Broadcomと共同開発した初のカスタムAIチップ「Jalapeño」を発表",
-        "content": "OpenAIはBroadcomと共同で、推論システムに特化した初のカスタムAIチップ「Jalapeño」を発表した。これにより、OpenAIはAIスタック全体を自社で構築する戦略を強化し、Nvidiaへの依存度を減らし、コスト効率と性能向上を目指す。",
-        "source": "CNBC",
-        "published_at": "2026-06-24"
-      },
       {
         "title": "Anthropic、AlibabaをAI機能の「露骨かつ違法な抽出」で告発",
         "content": "AnthropicはAlibabaが同社のAIモデルから機能を不正に抽出する「蒸留攻撃」を行ったと主張。これはAnthropicにとって過去最大規模の攻撃であり、AI企業の知的財産保護と競争環境における倫理問題に大きな影響を与える可能性がある。",
