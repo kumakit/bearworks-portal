@@ -12,6 +12,11 @@ This repository hosts the source code for the **bearworks.uk** portal site. It s
 
 The site also includes a lightweight system monitoring component that checks the online status of the linked platforms.
 
+## Security & Authentication
+- **Dashboard Protection**:
+  - `bearworks.uk/dashboard` (and detailed pages) and `/api/dashboard-data` are protected by **Cloudflare Zero Trust (Access)**.
+  - The API route `/api/dashboard-data` acts as a secure proxy to the OCI backend. In production, it enforces a **Fail-Closed** design by validating the `cf-access-jwt-assertion` header and rejecting any unauthenticated requests with a `401 Unauthorized` status.
+
 ## 変更履歴 (Update History)
 
 ### 2026-05-17
