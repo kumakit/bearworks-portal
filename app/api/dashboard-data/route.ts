@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
 export const runtime = "edge";
 
@@ -11,7 +11,7 @@ const NO_CACHE_HEADERS = {
   "Expires": "0",
 };
 
-export async function GET() {
+export async function GET(request: NextRequest) {
   const token = process.env.DASHBOARD_API_TOKEN;
 
   // 1. Fail-Closed: トークンが未設定の場合は upstream を叩かずに 500 エラー
@@ -29,8 +29,30 @@ export async function GET() {
     );
   }
 
+  // 2. 多層防御 (Defense in Depth): 
+  // 本番環境（Cloudflare Pagesの本番デプロイ）では、Cloudflare Access経由であることを保証するため
+  // JWTアサーションヘッダー (cf-access-jwt-assertion) の存在を強制します。
+  // これにより、Cloudflare Accessの設定漏れやバイパスがあっても、未認証リクエストを確実に遮断します。
+  const isProduction = process.env.NODE_ENV === "production";
+  if (isProduction) {
+    const cfAccessJwt = request.headers.get("cf-access-jwt-assertion");
+    if (!cfAccessJwt) {
+      console.warn("Unauthorized request: Missing cf-access-jwt-assertion header.");
+      return new NextResponse(
+        JSON.stringify({ error: "Unauthorized: Access restricted to authenticated sessions." }),
+        {
+          status: 401,
+          headers: {
+            "Content-Type": "application/json",
+            ...NO_CACHE_HEADERS,
+          },
+        }
+      );
+    }
+  }
+
   try {
-    // 2. キャッシュ無効化ヘッダーを付けて upstream から取得
+    // 3. キャッシュ無効化ヘッダーを付けて upstream から取得
     const res = await fetch(TARGET_API_URL, {
       headers: {
         "X-Dashboard-Token": token,
@@ -44,7 +66,7 @@ export async function GET() {
 
     const data = await res.json();
 
-    // 3. 成功時もキャッシュ無効化ヘッダーを付与して返却
+    // 4. 成功時もキャッシュ無効化ヘッダーを付与して返却
     return NextResponse.json(data, {
       headers: {
         ...NO_CACHE_HEADERS,
