@@ -9,7 +9,7 @@ import { DetailPageLayout } from "../components/DetailPageLayout";
 import { GCPCharts } from "../components/GCPCharts";
 import { MetricCard } from "../components/MetricCard";
 
-const DASHBOARD_API_URL = "https://apps.bearworks.uk/api/dashboard/data.json";
+const DASHBOARD_API_URL = "/api/dashboard-data";
 
 // 動的モックデータの生成 (GCP用)
 function getMockGcpData(): DashboardData {

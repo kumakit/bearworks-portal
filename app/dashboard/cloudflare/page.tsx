@@ -8,7 +8,7 @@ import { DashboardData, normalizeDashboardData } from "../lib/dashboardUtils";
 import { DetailPageLayout } from "../components/DetailPageLayout";
 import { WAFCharts } from "../components/WAFCharts";
 
-const DASHBOARD_API_URL = "https://apps.bearworks.uk/api/dashboard/data.json";
+const DASHBOARD_API_URL = "/api/dashboard-data";
 
 // 動的モックデータの生成
 function getMockWafData(): DashboardData {

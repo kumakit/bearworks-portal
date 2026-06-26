@@ -25,7 +25,7 @@ import {
 import { MetricCard } from "./components/MetricCard";
 import { DashboardCharts } from "./components/DashboardCharts";
 
-const DASHBOARD_API_URL = "https://apps.bearworks.uk/api/dashboard/data.json";
+const DASHBOARD_API_URL = "/api/dashboard-data";
 
 // 動的モックデータの生成 (APIが利用できない場合の完全なフォールバック)
 function getMockData(): DashboardData {
