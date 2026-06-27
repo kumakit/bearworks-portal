@@ -1,7 +1,7 @@
 export const runtime = "edge";
 
 import { SystemMonitor } from "@/components/SystemMonitor";
-import { Github, MapPin, User, Terminal, Database, Globe, Bot, Book, BarChart3, Hand, Sparkles, CloudSun, Activity, Key } from "lucide-react";
+import { Github, MapPin, User, Terminal, Database, Globe, Bot, Book, BarChart3, Hand, Sparkles, CloudSun, Key, ArrowRight } from "lucide-react";
 
 export default function Home() {
   return (
@@ -34,8 +34,23 @@ export default function Home() {
             & MODELS.
           </h1>
           <p className="mt-4 text-muted text-lg font-medium max-w-lg">
-            Welcome to bearworks.uk. This is the central hub for monitoring and navigating my digital ecosystem.
+            Welcome to bearworks.uk. This is the home for my statistics learning tools, data dashboards, and small AI applications.
           </p>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <a
+              href="/toukei"
+              className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-bold text-white hover:bg-primary/90 transition-colors"
+            >
+              Toukei Kentei Drill
+              <ArrowRight size={16} />
+            </a>
+            <a
+              href="/about"
+              className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white px-5 py-3 text-sm font-bold text-primary hover:bg-gray-50 transition-colors"
+            >
+              ABOUT
+            </a>
+          </div>
         </div>
 
         {/* Profile Card (1 col) */}
@@ -149,9 +164,9 @@ export default function Home() {
             <SystemMonitor url="https://toukei.bearworks.uk/" />
           </div>
           <div className="mt-auto">
-            <a href="https://toukei.bearworks.uk/" target="_blank" rel="noopener noreferrer" className="block focus:outline-none">
+            <a href="/toukei" className="block focus:outline-none">
               <h3 className="text-2xl font-bold text-primary group-hover:text-purple-600 transition-colors">Toukei Kentei Drill</h3>
-              <p className="text-purple-900/60 text-sm mt-1 font-medium">Web Application on Cloudflare Pages</p>
+              <p className="text-purple-900/60 text-sm mt-1 font-medium">統計検定2級向けの模擬試験・ドリル・学習分析</p>
             </a>
           </div>
         </div>
@@ -194,6 +209,18 @@ export default function Home() {
       {/* Footer */}
       <footer className="mt-12 py-8 border-t border-gray-100 text-center text-sm text-muted">
         <div className="flex justify-center gap-6 mb-4">
+          <a
+            href="/toukei"
+            className="hover:text-primary transition-colors font-medium text-xs md:text-sm"
+          >
+            TOUKEI
+          </a>
+          <a
+            href="/about"
+            className="hover:text-primary transition-colors font-medium text-xs md:text-sm"
+          >
+            ABOUT
+          </a>
           <a
             href="/privacy"
             className="hover:text-primary transition-colors font-medium text-xs md:text-sm"
