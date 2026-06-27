@@ -1,5 +1,58 @@
 [
   {
+    "date": "2026-06-28",
+    "articles": [
+      {
+        "title": "OpenAI、政府要請でGPT-5.6展開を制限、規制は常態化すべきでないと表明",
+        "content": "OpenAIは政府の要請により、最新モデルGPT-5.6の展開を制限した。同社は、このような政府によるアクセス制限が常態化すべきではないと主張しており、AI技術の普及と利用に大きな影響を与える可能性がある。",
+        "source": "TechCrunch",
+        "published_at": "2026-06-27"
+      },
+      {
+        "title": "トランプ政権、AnthropicのAIモデル「Mythos」を100以上の米企業・機関に提供開始",
+        "content": "トランプ政権は、Anthropicの強力なAIモデル「Mythos 5」を100以上の米企業および政府機関が利用することを許可した。これは、国家安全保障上の懸念から課されていた輸出規制が部分的に解除されたことを示し、米国内でのAI技術活用を加速させるだろう。",
+        "source": "TechCrunch",
+        "published_at": "2026-06-27"
+      },
+      {
+        "title": "AnthropicのAIモデル「Claude Fable 5」、数日中に利用再開の見込み",
+        "content": "AnthropicのAIモデル「Claude Fable 5」が数日中に利用再開されると報じられた。これは、以前の政府による輸出規制でアクセスが停止されていたFable 5が、Mythos 5と同様に一部解除される動きであり、Anthropicのモデル展開に弾みをつける。",
+        "source": "Gizmodo",
+        "published_at": "2026-06-28"
+      },
+      {
+        "title": "Alphabet、AI覇権争いで自社製チップの優位性を強化",
+        "content": "Googleの親会社Alphabetは、AIコンピューティング競争における主要な武器である自社開発のTPU（Tensor Processing Unit）の優位性を強調した。これは、AIモデルの効率的な実行に不可欠なインフラ競争において、Googleの強力な差別化要因となる。",
+        "source": "CNBC",
+        "published_at": "2026-06-27"
+      },
+      {
+        "title": "中国Zhipu、米国のAI規制でAnthropicやOpenAIに迫る勢い",
+        "content": "米国の輸出規制によりAnthropicやOpenAIのモデル展開が制限される中、中国のAIスタートアップZhipuのGLM 5.2がトップレベルの性能に近づいている。これは、AI競争がコスト効率とオープンソースにシフトし、地政学的な影響が顕在化していることを示す。",
+        "source": "CNBC",
+        "published_at": "2026-06-27"
+      },
+      {
+        "title": "アジアのAIスタートアップ、Anthropicの輸出規制長期化で独自モデルを投入",
+        "content": "AnthropicのAIモデルに対する米国の輸出規制が長期化する中、アジアのAIスタートアップが「Mythos」に匹敵する能力を持つモデルを相次いで発表している。これは、米国AIラボがアジア市場を失う可能性を示唆し、地域的なAIエコシステムの台頭を加速させる。",
+        "source": "TechCrunch",
+        "published_at": "2026-06-27"
+      },
+      {
+        "title": "OpenAI、Uberインド責任者をヘッドハントし米国外最大市場を強化",
+        "content": "OpenAIはUberインドの責任者を迎え入れ、米国以外で最大の市場であるインドでの事業拡大を加速させる。これは、オフィス開設やパートナーシップ強化、人材採用を通じて、OpenAIがグローバル市場での存在感を高める戦略的な動きである。",
+        "source": "TechCrunch",
+        "published_at": "2026-06-27"
+      },
+      {
+        "title": "OpenAIとAnthropic、AI利用者の「効率重視」へのシフトに直面",
+        "content": "AI利用企業が、トークン消費量最大化から投資対効果を重視した効率的なAI利用へと予算を絞り込んでいる。この傾向は、OpenAIやAnthropicといった主要AIプロバイダーの成長率に影響を与え、AI市場全体のビジネスモデル変革を促す可能性がある。",
+        "source": "CNBC",
+        "published_at": "2026-06-27"
+      }
+    ]
+  },
+  {
     "date": "2026-06-27",
     "articles": [
       {
