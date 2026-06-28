@@ -111,7 +111,7 @@ export function GCPCharts({
       "bearworks-prod": "#8b5cf6",
       "bearworks-dev": "#c084fc",
       "Gemini API Key in OCI": "#3b82f6",
-      "Hermes Agent": "#10b981",
+      "N100": "#10b981",
       "bearworks-apps": "#ec4899",
       "mission-control": "#f59e0b",
     };
