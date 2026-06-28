@@ -32,7 +32,7 @@ export default function AboutPage() {
             bearworks.uk について
           </h1>
           <p className="text-muted text-lg leading-relaxed">
-            bearworks.uk は、KUMA が個人で運営している学習ツール、データ可視化、
+            bearworks.uk は、kuma が個人で運営している学習ツール、データ可視化、
             AI アプリケーションのハブサイトです。統計学習を継続しやすくするための
             Web アプリや、日常的に使う小さなダッシュボードを公開しています。
           </p>
@@ -43,7 +43,7 @@ export default function AboutPage() {
             <Code2 className="text-accent-blue mb-3" size={24} />
             <h2 className="font-bold text-primary mb-2">運営者</h2>
             <p className="text-sm text-muted leading-relaxed">
-              KUMA。データ分析、Web アプリ開発、学習支援ツールの設計に関心があります。
+              kuma。データ分析、Web アプリ開発、学習支援ツールの設計に関心があります。
             </p>
           </div>
           <div className="rounded-3xl border border-gray-100 bg-gray-50 p-5">

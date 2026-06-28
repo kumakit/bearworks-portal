@@ -63,10 +63,10 @@ export default function Home() {
               </span>
               <span className="text-xs font-semibold tracking-wide">PROFILE</span>
             </div>
-            <img src="/icon.png" alt="KUMA" className="w-12 h-12 rounded-full shadow-sm border border-gray-100" />
+            <img src="/icon.png" alt="kuma" className="w-12 h-12 rounded-full shadow-sm border border-gray-100" />
           </div>
           <div>
-            <h2 className="text-xl font-bold text-primary">KUMA</h2>
+            <h2 className="text-xl font-bold text-primary">kuma</h2>
             <p className="text-muted mt-2 text-sm leading-relaxed">
               Data Scientist & Developer exploring the{" "}
               <span className="icon-with-blob">
