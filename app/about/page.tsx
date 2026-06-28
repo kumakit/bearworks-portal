@@ -2,7 +2,7 @@ export const runtime = "edge";
 
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowLeft, Code2, Database, Mail, MapPin } from "lucide-react";
+import { ArrowLeft, Code2, Database, Mail, MapPin, RefreshCw, ShieldCheck } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "運営者情報 | bearworks.uk",
@@ -85,6 +85,47 @@ export default function AboutPage() {
               誤りや改善点が見つかった場合は更新していきます。
             </p>
           </section>
+
+          <section>
+            <h2 className="text-xl font-bold text-primary mb-3">
+              Toukei Kentei Drill を作っている理由
+            </h2>
+            <p className="mb-3">
+              統計検定2級の学習では、公式を覚えるだけでなく、
+              問題文から適切な分布や検定方法を選ぶ練習が必要です。
+              そのため、模擬試験、分野別ドリル、暗記カード、学習分析を分けずに、
+              ひとつの学習サイクルとして扱えるツールを作っています。
+            </p>
+            <p>
+              問題や説明は、日々の学習でつまずきやすい点を見直しながら改善しています。
+              本番試験の出題内容を保証するものではありませんが、
+              反復演習と弱点把握の補助として使えることを重視しています。
+            </p>
+          </section>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <section className="rounded-3xl border border-gray-100 bg-gray-50 p-5">
+              <RefreshCw className="text-accent-green mb-3" size={24} />
+              <h2 className="text-lg font-bold text-primary mb-2">
+                改善の進め方
+              </h2>
+              <p className="text-sm leading-relaxed">
+                学習分析、暗記カード、AI ニュースなど、公開している機能は小さく更新し、
+                動作確認と本番反映を分けて進めています。
+              </p>
+            </section>
+
+            <section className="rounded-3xl border border-gray-100 bg-gray-50 p-5">
+              <ShieldCheck className="text-accent-blue mb-3" size={24} />
+              <h2 className="text-lg font-bold text-primary mb-2">
+                プライバシーと連絡先
+              </h2>
+              <p className="text-sm leading-relaxed">
+                Cookie や広告配信に関する説明はプライバシーポリシーに掲載し、
+                不具合や内容の指摘は contact@bearworks.uk で受け付けています。
+              </p>
+            </section>
+          </div>
 
           <section>
             <h2 className="text-xl font-bold text-primary mb-3">連絡先</h2>

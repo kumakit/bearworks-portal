@@ -10,6 +10,8 @@ import {
   Brain,
   CheckCircle2,
   Clock,
+  History,
+  Lightbulb,
   RotateCcw,
   Target,
 } from "lucide-react";
@@ -52,16 +54,85 @@ const features = [
 ];
 
 const categories = [
-  "記述統計",
-  "確率",
-  "確率分布",
-  "標本分布",
-  "推定",
-  "仮説検定",
-  "カイ二乗検定",
-  "分散分析",
-  "回帰分析",
-  "データ収集",
+  {
+    name: "記述統計",
+    description: "代表値、散布度、標準化、相関など、計算問題の土台になる分野。",
+  },
+  {
+    name: "確率",
+    description: "条件付き確率、独立性、ベイズの考え方を確認する分野。",
+  },
+  {
+    name: "確率分布",
+    description: "二項分布、正規分布、ポアソン分布などの性質と使い分け。",
+  },
+  {
+    name: "標本分布",
+    description: "標本平均、標準誤差、中心極限定理、t分布の扱い。",
+  },
+  {
+    name: "推定",
+    description: "点推定、区間推定、信頼区間の正しい解釈。",
+  },
+  {
+    name: "仮説検定",
+    description: "帰無仮説、対立仮説、有意水準、p値、検定統計量の判断。",
+  },
+  {
+    name: "カイ二乗検定",
+    description: "適合度検定、独立性検定、母分散の検定。",
+  },
+  {
+    name: "分散分析",
+    description: "一元配置分散分析、平方和、自由度、F値の読み方。",
+  },
+  {
+    name: "回帰分析",
+    description: "単回帰、決定係数、回帰係数の検定、残差の見方。",
+  },
+  {
+    name: "データ収集",
+    description: "標本抽出、調査設計、バイアス、データの取り方。",
+  },
+];
+
+const studySteps = [
+  {
+    title: "1. まず90分の模擬試験で時間感覚をつかむ",
+    description:
+      "統計検定2級のCBTでは、知識だけでなく計算速度と見直しの優先順位が重要です。最初に模擬試験を使い、どの分野で時間を使いすぎるかを確認します。",
+  },
+  {
+    title: "2. 間違えた分野をドリルで短く反復する",
+    description:
+      "分野別ドリルでは、記述統計、推定、仮説検定、回帰分析などを切り分けて練習できます。広く解くより、苦手分野を短い単位で戻す使い方を想定しています。",
+  },
+  {
+    title: "3. 公式・判断ルールは暗記カードで戻す",
+    description:
+      "検定統計量、分布の期待値と分散、信頼区間の解釈など、取り違えやすい知識は暗記カードで復習します。学習分析から復習対象を見つける流れにしています。",
+  },
+];
+
+const updates = [
+  {
+    date: "2026-06",
+    title: "学習分析と暗記カード復習の連携を強化",
+    description:
+      "模擬試験やドリルで間違えた内容を、暗記カードの復習候補として扱えるようにしました。",
+  },
+  {
+    date: "2026-06",
+    title: "CBT模擬試験と分野別ドリルをCloudflare Pagesで公開",
+    description:
+      "統計検定2級の演習、模擬試験、チートシートをブラウザだけで使える構成にしました。",
+  },
+  {
+    date: "2026-05",
+    title: "bearworks.uk からの案内ページを整備",
+    description:
+      "ルートドメイン側でサービスの目的、対象範囲、学習の進め方を確認できるようにしました。",
+  },
 ];
 
 export default function ToukeiPage() {
@@ -91,6 +162,20 @@ export default function ToukeiPage() {
               学習アプリです。模擬試験、分野別ドリル、チートシート、
               暗記カード、学習分析をひとつの流れで使えるようにしています。
             </p>
+            <div className="mt-6 grid grid-cols-3 gap-3 max-w-xl">
+              <div className="rounded-2xl border border-gray-100 bg-gray-50 p-4">
+                <p className="text-2xl font-bold text-primary">100</p>
+                <p className="text-xs font-bold text-muted">演習問題</p>
+              </div>
+              <div className="rounded-2xl border border-gray-100 bg-gray-50 p-4">
+                <p className="text-2xl font-bold text-primary">10</p>
+                <p className="text-xs font-bold text-muted">対象分野</p>
+              </div>
+              <div className="rounded-2xl border border-gray-100 bg-gray-50 p-4">
+                <p className="text-2xl font-bold text-primary">74</p>
+                <p className="text-xs font-bold text-muted">暗記カード</p>
+              </div>
+            </div>
             <div className="mt-8 flex flex-col sm:flex-row gap-3">
               <a
                 href="https://toukei.bearworks.uk/"
@@ -177,14 +262,14 @@ export default function ToukeiPage() {
             統計検定2級で頻出する基礎概念、計算問題、検定手順を中心に、
             以下の分野を演習対象にしています。
           </p>
-          <div className="flex flex-wrap gap-2">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {categories.map((category) => (
-              <span
-                key={category}
-                className="rounded-full bg-gray-50 border border-gray-100 px-3 py-1.5 text-xs font-bold text-muted"
-              >
-                {category}
-              </span>
+              <div key={category.name} className="rounded-2xl bg-gray-50 border border-gray-100 p-4">
+                <h3 className="text-sm font-bold text-primary">{category.name}</h3>
+                <p className="mt-1 text-xs leading-relaxed text-muted">
+                  {category.description}
+                </p>
+              </div>
             ))}
           </div>
         </div>
@@ -217,6 +302,43 @@ export default function ToukeiPage() {
               学習分析を見る
               <BarChart3 size={16} />
             </a>
+          </div>
+        </div>
+      </section>
+
+      <section className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-6 mt-6">
+        <div className="bg-white rounded-[2rem] border border-gray-100 p-7 shadow-soft">
+          <Lightbulb className="text-accent-yellow mb-4" size={28} />
+          <h2 className="text-2xl font-bold text-primary mb-3">
+            おすすめの学習方針
+          </h2>
+          <div className="space-y-5">
+            {studySteps.map((step) => (
+              <div key={step.title} className="border-l-4 border-yellow-300 pl-4">
+                <h3 className="font-bold text-primary">{step.title}</h3>
+                <p className="mt-1 text-sm leading-relaxed text-muted">
+                  {step.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="bg-white rounded-[2rem] border border-gray-100 p-7 shadow-soft">
+          <History className="text-accent-green mb-4" size={28} />
+          <h2 className="text-2xl font-bold text-primary mb-3">更新履歴</h2>
+          <div className="space-y-5">
+            {updates.map((update) => (
+              <div key={`${update.date}-${update.title}`}>
+                <p className="text-xs font-bold tracking-[0.16em] text-muted">
+                  {update.date}
+                </p>
+                <h3 className="mt-1 font-bold text-primary">{update.title}</h3>
+                <p className="mt-1 text-sm leading-relaxed text-muted">
+                  {update.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
