@@ -3,10 +3,11 @@
 export const runtime = "edge";
 
 import React, { useState, useEffect } from "react";
-import { AlertTriangle } from "lucide-react";
+import { AlertTriangle, Zap, Globe, ShieldAlert } from "lucide-react";
 import { DashboardData, normalizeDashboardData } from "../lib/dashboardUtils";
 import { DetailPageLayout } from "../components/DetailPageLayout";
 import { WAFCharts } from "../components/WAFCharts";
+import { MetricCard } from "../components/MetricCard";
 
 const DASHBOARD_API_URL = "/api/dashboard-data";
 
@@ -60,6 +61,11 @@ function getMockWafData(): DashboardData {
       cloudflareTotalRequests24h: 12500,
       cloudflareTotalThreats24h: 35,
       cloudflareCacheRate24h: 62.4,
+      cloudflarePages: {
+        currentMonthBuilds: 42,
+        limitBuilds: 500,
+        usagePercent: 8.4,
+      },
       googleBilling: {
         limitJPY: 1550.0,
         currentMonthTotalJPY: 450.0,
@@ -128,10 +134,15 @@ export default function CloudflareWafPage() {
   if (!data) return null;
 
   const wafDetails = data.wafDetails || getMockWafData().wafDetails!;
+  const cloudflarePages = data.summary.cloudflarePages || {
+    currentMonthBuilds: 0,
+    limitBuilds: 500,
+    usagePercent: 0.0,
+  };
 
   return (
     <DetailPageLayout
-      title="Cloudflare WAF"
+      title="Cloudflare"
       updatedAt={data.updatedAt}
       refreshing={refreshing}
       onRefresh={() => fetchData(true)}
@@ -151,8 +162,99 @@ export default function CloudflareWafPage() {
         </div>
       )}
 
-      {/* WAF Charts & Tables */}
-      <WAFCharts wafDetails={wafDetails} />
+      {/* Section 1: Cloudflare Pages */}
+      <section className="flex flex-col gap-4">
+        <div>
+          <h2 className="text-xl font-bold tracking-tight text-primary">⚡ Cloudflare Pages</h2>
+          <p className="text-xs text-muted font-medium mt-0.5">静的サイト・Webアプリのホスティング枠の消費状況</p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <MetricCard
+            title="Pages 当月ビルド数"
+            value={`${cloudflarePages.currentMonthBuilds} / ${cloudflarePages.limitBuilds}`}
+            unit=" 回"
+            description="無料枠500回/月に対する現在のビルド（デプロイ）回数（毎月1日にリセット）"
+            icon={<Zap size={20} />}
+            theme="cloudflare"
+            trend={{
+              value: `${cloudflarePages.usagePercent}% 使用`,
+              isPositive: cloudflarePages.usagePercent < 80,
+            }}
+          />
+          
+          <div className="rounded-[2rem] p-6 border border-orange-100/50 bg-white/80 backdrop-blur-md shadow-soft flex flex-col justify-between relative overflow-hidden">
+            <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-orange-500 to-yellow-500" />
+            <div>
+              <span className="text-xs font-semibold tracking-wider text-muted block mb-1">
+                Pages 無料枠ステータス
+              </span>
+              <h4 className="text-lg font-bold text-primary mt-1">
+                {cloudflarePages.currentMonthBuilds >= cloudflarePages.limitBuilds ? "🚨 制限に達しました" : "✅ 正常稼働中"}
+              </h4>
+              <p className="text-[11px] text-muted/90 mt-2 leading-relaxed">
+                無料プランのビルド回数上限は月間 500 回です。これを超えると、新しいコミットの自動ビルドが一時的に停止されます。
+              </p>
+            </div>
+            
+            {/* プログレスバー表示 */}
+            <div className="mt-4">
+              <div className="flex justify-between text-[10px] font-bold text-muted mb-1">
+                <span>使用率: {cloudflarePages.usagePercent}%</span>
+                <span>残り: {Math.max(0, cloudflarePages.limitBuilds - cloudflarePages.currentMonthBuilds)} 回</span>
+              </div>
+              <div className="w-full bg-gray-100 h-2 rounded-full overflow-hidden">
+                <div 
+                  className={`h-full rounded-full transition-all duration-500 ${
+                    cloudflarePages.usagePercent > 90 ? "bg-red-500" : cloudflarePages.usagePercent > 70 ? "bg-amber-500" : "bg-orange-500"
+                  }`}
+                  style={{ width: `${Math.min(100, cloudflarePages.usagePercent)}%` }}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr className="border-gray-100 my-2" />
+
+      {/* Section 2: Cloudflare WAF */}
+      <section className="flex flex-col gap-4">
+        <div>
+          <h2 className="text-xl font-bold tracking-tight text-primary">🛡️ Web Application Firewall (WAF)</h2>
+          <p className="text-xs text-muted font-medium mt-0.5">脅威のブロックやアクセスセキュリティ統計</p>
+        </div>
+        
+        {/* WAFサマリカード */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <MetricCard
+            title="直近24時間 総リクエスト数"
+            value={data.summary.cloudflareTotalRequests24h}
+            unit=" 回"
+            description="Cloudflare 経由でプロキシされた全リクエスト数"
+            icon={<Globe size={20} />}
+            theme="cloudflare"
+            trend={{
+              value: `${data.summary.cloudflareCacheRate24h}% キャッシュ率`,
+              isPositive: true,
+            }}
+          />
+          <MetricCard
+            title="直近24時間 総ブロック・脅威数"
+            value={data.summary.cloudflareTotalThreats24h}
+            unit=" 件"
+            description="セキュリティルールで検知・ブロックされたアクセス"
+            icon={<ShieldAlert size={20} />}
+            theme="cloudflare"
+            trend={{
+              value: data.summary.cloudflareTotalThreats24h > 100 ? "脅威検出増加" : "平常",
+              isPositive: data.summary.cloudflareTotalThreats24h <= 100,
+            }}
+          />
+        </div>
+
+        {/* WAF Charts & Tables */}
+        <WAFCharts wafDetails={wafDetails} />
+      </section>
     </DetailPageLayout>
   );
 }

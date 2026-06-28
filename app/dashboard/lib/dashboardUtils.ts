@@ -97,6 +97,12 @@ export interface WAFDetails {
   hourly_timeline: WAFHourlyEvent[];
 }
 
+export interface CloudflarePagesUsage {
+  currentMonthBuilds: number;
+  limitBuilds: number;
+  usagePercent: number;
+}
+
 export interface DashboardSummary {
   googleTotalRequests24h: number;
   googleTotalErrors24h: number;
@@ -106,6 +112,7 @@ export interface DashboardSummary {
   cloudflareCacheRate24h: number;
   googleBilling: GoogleBilling;
   bigqueryUsage: BigQueryUsage;
+  cloudflarePages?: CloudflarePagesUsage;
 }
 
 export interface DashboardData {
