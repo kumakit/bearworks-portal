@@ -12,6 +12,7 @@ import {
   Clock,
   History,
   Lightbulb,
+  ShieldCheck,
   RotateCcw,
   Target,
 } from "lucide-react";
@@ -193,6 +194,12 @@ export default function ToukeiPage() {
               学習アプリです。模擬試験、分野別ドリル、チートシート、
               暗記カード、学習分析をひとつの流れで使えるようにしています。
             </p>
+            <p className="mt-4 text-muted leading-relaxed">
+              模擬試験やドリルの問題は、公式問題集や公開されている出題範囲を確認し、
+              頻出する論点、設問形式、計算プロセスを研究したうえで作成した
+              オリジナル問題です。公式問題の転載ではなく、学習者が考え方を練習できるように
+              題材や数値を独自に設計しています。
+            </p>
             <div className="mt-6 grid grid-cols-3 gap-3 max-w-xl">
               <div className="rounded-2xl border border-gray-100 bg-gray-50 p-4">
                 <p className="text-2xl font-bold text-primary">100</p>
@@ -360,6 +367,21 @@ export default function ToukeiPage() {
         </div>
 
         <div className="bg-white rounded-[2rem] border border-gray-100 p-7 shadow-soft">
+          <ShieldCheck className="text-accent-purple mb-4" size={28} />
+          <h2 className="text-2xl font-bold text-primary mb-3">
+            問題作成の方針
+          </h2>
+          <p className="text-muted leading-relaxed mb-4">
+            問題は、統計検定2級で問われやすい概念、計算手順、ひっかかりやすい選択肢を
+            研究し、オリジナルの設問として作成しています。
+            公式問題集は出題傾向や難易度感を確認するために参照していますが、
+            問題文・選択肢・解説をそのまま転載することはありません。
+          </p>
+          <p className="text-muted leading-relaxed mb-6">
+            目標は、答えを暗記することではなく、分布や検定方法を選ぶ根拠、
+            計算式を立てる順序、結果の読み取り方を練習できる状態にすることです。
+          </p>
+
           <h2 className="text-2xl font-bold text-primary mb-3">
             bearworks.uk から案内している理由
           </h2>
