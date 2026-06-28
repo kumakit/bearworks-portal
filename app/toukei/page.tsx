@@ -53,6 +53,37 @@ const features = [
   },
 ];
 
+const screenshots = [
+  {
+    title: "CBT模擬試験",
+    description: "90分・35問の試験概要を確認してから、本番に近い形式で演習できます。",
+    src: "/screenshots/toukei-exam.png",
+    alt: "統計検定2級 CBT模擬試験の開始画面",
+    href: "https://toukei.bearworks.uk/exam",
+  },
+  {
+    title: "分野別ドリル",
+    description: "出題分野、難易度、問題数を選び、苦手な領域を短時間で反復できます。",
+    src: "/screenshots/toukei-drill.png",
+    alt: "統計検定2級 分野別ドリルの設定画面",
+    href: "https://toukei.bearworks.uk/drill",
+  },
+  {
+    title: "学習分析",
+    description: "解答数、正答率、継続日数、分野別の状態をまとめて確認できます。",
+    src: "/screenshots/toukei-dashboard.png",
+    alt: "統計検定2級 学習分析ダッシュボードの画面",
+    href: "https://toukei.bearworks.uk/dashboard",
+  },
+  {
+    title: "暗記カード",
+    description: "公式や検定統計量を一問一答で復習し、理解度を記録できます。",
+    src: "/screenshots/toukei-flashcard.png",
+    alt: "統計学 暗記カードの画面",
+    href: "https://toukei.bearworks.uk/cheatsheet/flashcard",
+  },
+];
+
 const categories = [
   {
     name: "記述統計",
@@ -250,6 +281,60 @@ export default function ToukeiPage() {
             </div>
           );
         })}
+      </section>
+
+      <section className="bg-white rounded-[2.5rem] p-7 md:p-10 shadow-soft border border-gray-100 mb-6">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-7">
+          <div>
+            <p className="text-sm font-bold tracking-[0.2em] text-accent-blue mb-3">
+              SCREENSHOTS
+            </p>
+            <h2 className="text-2xl md:text-3xl font-bold text-primary">
+              実際の画面
+            </h2>
+            <p className="mt-3 text-muted leading-relaxed max-w-2xl">
+              模擬試験、分野別ドリル、学習分析、暗記カードをブラウザ上で使えます。
+              それぞれの画面から、演習、復習、進捗確認へ移動できます。
+            </p>
+          </div>
+          <a
+            href="https://toukei.bearworks.uk/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 rounded-full border border-gray-200 bg-white px-5 py-3 text-sm font-bold text-primary hover:bg-gray-50 transition-colors"
+          >
+            アプリ全体を見る
+            <ArrowRight size={16} />
+          </a>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          {screenshots.map((screenshot) => (
+            <a
+              key={screenshot.src}
+              href={screenshot.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group overflow-hidden rounded-[2rem] border border-gray-100 bg-gray-50 shadow-soft transition-all hover:-translate-y-1 hover:shadow-lg"
+            >
+              <div className="aspect-video overflow-hidden bg-white">
+                <img
+                  src={screenshot.src}
+                  alt={screenshot.alt}
+                  className="h-full w-full object-cover object-top transition-transform duration-300 group-hover:scale-[1.02]"
+                />
+              </div>
+              <div className="p-5">
+                <h3 className="font-bold text-primary group-hover:text-accent-blue transition-colors">
+                  {screenshot.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted">
+                  {screenshot.description}
+                </p>
+              </div>
+            </a>
+          ))}
+        </div>
       </section>
 
       <section className="grid grid-cols-1 lg:grid-cols-[0.95fr_1.05fr] gap-6">
