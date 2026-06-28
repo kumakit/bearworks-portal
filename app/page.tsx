@@ -191,6 +191,7 @@ export default function Home() {
 
 
         {/* AI News Card (1 col) */}
+        {/* 
         <a href="/ai-news" className="bg-[#F0FDF4] rounded-[2.5rem] p-8 shadow-soft border border-green-50 flex flex-col gap-6 group hover:shadow-lg transition-all hover:-translate-y-1 block">
           <div className="flex justify-between items-start">
             <span className="icon-with-blob text-2xl">
@@ -203,6 +204,7 @@ export default function Home() {
             <p className="text-green-900/60 text-sm mt-1 font-medium">ネットから収集された最新AI情報の要約</p>
           </div>
         </a>
+        */}
 
       </div>
 

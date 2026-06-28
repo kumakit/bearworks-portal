@@ -7,6 +7,7 @@ interface Article {
   source: string;
   published_at?: string;
   url?: string;
+  comment?: string;
 }
 
 interface NewsGroup {
@@ -128,6 +129,31 @@ export default async function AiNewsPage() {
                       </summary>
                       <div className="mt-3 pt-3 border-t border-gray-100 text-sm text-zinc-650 font-sans leading-relaxed pl-6 space-y-3 bg-[#F0FDF4]/30 rounded-xl p-4 border border-[#F0FDF4]/80">
                         <p className="whitespace-pre-wrap">{article.content}</p>
+                        {article.comment && (
+                          <div className="mt-3 p-4 rounded-xl bg-blue-50/40 border border-blue-100 text-zinc-700 space-y-1.5">
+                            <div className="flex items-center gap-1.5 text-xs font-bold text-blue-600 tracking-wide select-none">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="14"
+                                height="14"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="2.5"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                              >
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                                <path d="m10 8-2 2 2 2" />
+                                <path d="m14 8 2 2-2 2" />
+                              </svg>
+                              <span>kuma's View</span>
+                            </div>
+                            <p className="text-xs sm:text-sm leading-relaxed whitespace-pre-wrap font-sans text-zinc-800">
+                              {article.comment}
+                            </p>
+                          </div>
+                        )}
                         {(article.url || article.published_at) && (
                           <div className="pt-2 font-mono text-xs flex flex-wrap gap-4 text-zinc-400">
                             {article.published_at && (
