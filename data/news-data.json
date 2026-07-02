@@ -1,15 +1,92 @@
 [
   {
-    "date": "2026-07-02",
+    "date": "2026-07-03",
     "articles": [
       {
-        "title": "GoogleのAIエージェント「Gemini Spark」がMacに対応",
-        "content": "Googleの24時間稼働AIエージェント「Gemini Spark」がMacで利用可能になった。リアルタイム追跡や対応アプリの拡充など、機能改善も同時に実施された。",
+        "title": "Google、エージェントAI「Gemini Spark」をMac向けに提供開始",
+        "content": "Googleは、24時間稼働するエージェントAIアシスタント「Gemini Spark」をMac向けにリリースした。リアルタイム追跡や対応アプリの拡大など、機能改善も同時に実施されている。",
         "source": "TechCrunch",
         "published_at": "2026-07-01",
         "url": "https://techcrunch.com/2026/07/01/gemini-spark-googles-agentic-assistant-is-now-available-on-mac/",
-        "comment": "AI技術者にとって、Gemini SparkのMac対応は開発環境の選択肢を広げ、エージェント開発の敷居を下げる。データサイエンティストは、より多様なOS環境でのエージェントの挙動や性能評価が可能となり、実世界での適用範囲拡大に貢献する。特にリアルタイム追跡機能は、エージェントのデバッグや性能監視において重要な進歩である。"
+        "comment": "AI技術者にとって、MacネイティブでのエージェントAI提供は開発・テスト環境の多様化を意味する。データサイエンティストは、エージェントの行動ログからユーザーインタラクションやタスク遂行の評価指標を設計し、モデルの改善に活用できる。ワークフロー自動化の可能性が広がるだろう。"
       },
+      {
+        "title": "Microsoft、AI導入支援の新会社を設立、25億ドルを投資",
+        "content": "Microsoftは、顧客のAI導入を支援する新会社を設立し、25億ドルを投じ6,000人の従業員を配置すると発表した。AmazonやOpenAI、Anthropicに続く動きである。",
+        "source": "TechCrunch",
+        "published_at": "2026-07-02",
+        "url": "https://techcrunch.com/2026/07/02/microsoft-launches-its-own-ai-deployment-company-with-2-5-billion-commitment/",
+        "comment": "AI技術者にとって、MicrosoftがAI導入の専門部隊を立ち上げたことは、エンタープライズAIソリューションの標準化と大規模展開を加速させる。データサイエンティストは、多様な顧客データに基づきモデルの汎用性や堅牢性を高める機会を得るが、データプライバシーとガバナンスの設計がより重要となるだろう。"
+      },
+      {
+        "title": "Anthropic、SamsungとカスタムAIチップ開発を協議中",
+        "content": "AI大手Anthropicが、SamsungとカスタムAIチップの開発について協議していることが報じられた。これはOpenAIがBroadcomと提携しカスタムチップを発表した動きに続くものである。",
+        "source": "TechCrunch",
+        "published_at": "2026-07-03",
+        "url": "https://techcrunch.com/2026/07/02/anthropic-is-discussing-a-new-custom-chip-with-samsung/",
+        "comment": "AI技術者にとって、主要AI企業によるカスタムチップ開発は、特定のモデルアーキテクチャに最適化されたハードウェア設計のトレンドを加速させる。データサイエンティストは、モデルの計算効率と性能向上に直結するため、ハードウェアとソフトウェアの協調設計が重要となるだろう。"
+      },
+      {
+        "title": "Amazon、EchoやFire TV向けに自社製AIチップを開発中",
+        "content": "Amazonのハードウェア責任者が、EchoやFire TV、将来のデバイス向けにカスタムAIチップを設計していることを明らかにした。AIガジェットの実験を強化する狙いがある。",
+        "source": "CNBC",
+        "published_at": "2026-07-02",
+        "url": "https://www.cnbc.com/2026/07/02/amazon-ai-chips-devices.html",
+        "comment": "AI技術者にとって、AmazonのカスタムAIチップ開発は、エッジAIデバイスの性能向上とコスト削減に貢献する。データサイエンティストは、限られたリソース下でのモデル最適化や、デバイス上でのリアルタイム推論性能の評価指標設計が重要となるだろう。"
+      },
+      {
+        "title": "Meta、余剰AI計算能力を外部に販売するクラウド事業を検討",
+        "content": "Metaは、自社の膨大なAIインフラの計算能力とモデルへのアクセスを販売するクラウド事業の計画を進めている。これにより、AWSやGoogle Cloud、Microsoft Azureと競合する可能性がある。",
+        "source": "TechCrunch",
+        "published_at": "2026-07-01",
+        "url": "https://techcrunch.com/2026/07/01/meta-like-spacex-looks-to-turn-excess-ai-compute-into-cash/",
+        "comment": "AI技術者にとって、Metaのクラウド参入は新たな計算リソースの選択肢を提供し、大規模モデルの学習・推論環境を多様化させる。データサイエンティストは、異なるクラウド環境でのモデル移植性や性能ベンチマークの重要性が増し、コスト効率を考慮したリソース選定が求められるだろう。"
+      },
+      {
+        "title": "OpenAI、米国政府系ファンドに株式5%寄付を提案か",
+        "content": "OpenAIのサム・アルトマンCEOが、AIブームによる経済的利益を国民と共有するため、同社株式の5%を米国政府系ファンドに寄付することを提案したと報じられた。",
+        "source": "TechCrunch",
+        "published_at": "2026-07-03",
+        "url": "https://techcrunch.com/2026/07/02/openai-proposed-donating-5-of-its-equity-to-a-us-sovereign-wealth-fund/",
+        "comment": "AI技術者にとって、この提案はAI企業のガバナンスと社会貢献のあり方に大きな影響を与える。データサイエンティストは、AIの公共性や倫理的利用に関する議論が活発化する中で、モデルの公平性や透明性といった非技術的側面への配慮がより一層求められるだろう。"
+      },
+      {
+        "title": "Elon Musk、SpaceXのAIデバイス開発報道を「全くの虚偽」と否定",
+        "content": "Elon Musk氏は、SpaceXが独自のOSを搭載したAIハンドセットを開発しているとの報道を「全くの虚偽」と強く否定した。iPhoneより薄いデバイスの噂も否定している。",
+        "source": "Tom's Hardware",
+        "published_at": "2026-07-02",
+        "url": "https://news.google.com/rss/articles/CBMiugJBVV95cUxQdkh2ZGNDd2M4RVFwSFdGaC1oLUtvZlVfVm9PWUJNVDlCUjBuZFR2S28xem1qdGdOckg5ejIza2F1UjV1NlJxMVhTLU54NURfT3g2ZC13VXlzWHFoZUJhZjZwc1dmcHNnR3huY1RUaHNRVkhjT3FSOWJiVVdGUUJrZ2R6NjAxWUlVZVpzTThXQlVicEtfeVl6dm9Oc19qbXAweFd4NldzT19kTnl5enIyeDV0U1pxbEw0OHdKWXZZUGZMcnRRRm1sWnR3eVZCT05aSDdTek0ySUgxWmVHLWhNRUdzbEdJYTYxcUlhZnJWMGtVZFo4M3JTZ0dlTmNUSVc1NGtQUmU0RXZ0RlRULXlrVFB4RENndkRhcWJ3aTNfcng1azB2WWJzaksxSzAyX1hKelI0T3VBLWRHZw?oc=5",
+        "comment": "AI技術者にとって、この否定は市場の憶測を鎮め、SpaceXのAI戦略に関する明確な情報を提供する。データサイエンティストは、AIデバイスの設計や機能に関する情報が錯綜する中で、公式発表の重要性を再認識し、誤情報に基づくプロジェクト計画のリスクを避ける必要があるだろう。"
+      },
+      {
+        "title": "Palantir CEO、OpenAI等のトークンモデルを批判「顧客データ窃盗、無価値なトークンに課金」",
+        "content": "PalantirのAlex Karp CEOは、OpenAIやAnthropicのトークンモデルを厳しく批判した。トークンコストの高騰が企業にオープンウェイトモデルの選択と効率性を優先させていると主張している。",
+        "source": "Tom's Hardware",
+        "published_at": "2026-07-03",
+        "url": "https://news.google.com/rss/articles/CBMi5AJBVV95cUxQR0lXams3anl0ZW1zZ3JXU1p2a01UdUpod282M09GaDFjcWxsR2UwczlqSUZzSUo2SlBFTEladG1RMXp5QmVfaHZGWnRpOVVCN3p6ZklKb0F2SkpXUjhtR0xDOXlHdEFLUENDQ25PUHUzcUp0aFczZjh0cXJVSDUtTUJVZ2JqTy1KNzJnRndDbmpaX0c1cEFGeDlCS1RvQ3Z1UmpwQWRXX1J1OERPeWRFQVFGbGhSblIzdy1FdVkzRS1iNFJrWTgyOFdtaXZoSHpCaHZKMWE4WmRMOHZoRWF5aWpfNFQyRERlbkRVcXNLWjhmVTB0d1lEanotZm1nb3pNdmpiRGxQUXo5VV9tSmc2OXgwOFZ5ajFJLV9uWlhOQk5OMXlFWTFia2M1Y3JuVkVpa2dQTGJWbFFTTlBLeEhZZUVYMkZTSVdDZlltbjQtZjNJTVhTNG5CNm5lQ1RWOXEzQ1AzMg?oc=5",
+        "comment": "AI技術者にとって、トークンコストの経済性はモデル選定やアーキテクチャ設計に直結する。データサイエンティストは、モデルの性能評価だけでなく、推論コストやデータ利用の透明性を評価指標に含める必要があり、オープンソースモデルの活用戦略が再評価されるだろう。"
+      },
+      {
+        "title": "Gartner、エージェントAIがエンタープライズSaaS市場に2340億ドルのリスクをもたらすと予測",
+        "content": "Gartnerは、エージェントAIがエンタープライズSaaS市場において2340億ドル相当の支出を危険に晒す可能性があると予測した。AIによるワークフロー自動化が既存SaaSの価値を再定義する。",
+        "source": "cio.com",
+        "published_at": "2026-07-02",
+        "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQdlFuZ2hheDBDNXVnTjlCbVpVZUNYUUM3MGduR2ZhZWRyMHBaQUpKUVhRbGZ2NE5CQ1NCWHdoQkRteWl3YVJFakdLWjZ6YWtuMjQ2bHdWcmZhLVR3MEZwQWUxQ21vU0xhWldJSjhFMmZUNklzVXVBVk1NQlRQV3RyYngydk8xczhGa2ZrdGItdzdCMFJ4TkhTeFBvdHg0VXhVR3l2UnlQZUZjY0pZZFBB?oc=5",
+        "comment": "AI技術者にとって、エージェントAIは既存のSaaS連携やAPI設計に大きな変革を迫る。データサイエンティストは、エージェントの自律的な意思決定能力を評価するための新たな指標や、複雑なビジネスプロセスにおけるAIの信頼性と安全性を確保するデータ設計が求められるだろう。"
+      },
+      {
+        "title": "Cloudflare、AI企業にパブリッシャーコンテンツへの支払い促す新ポリシー",
+        "content": "Cloudflareは、AI企業に対し、検索用とAI学習・エージェント用のウェブクローラーを9月15日までに分離するよう求める新ポリシーを発表した。分離しない場合、多くのサイトでデフォルトでブロックされる可能性がある。",
+        "source": "TechCrunch",
+        "published_at": "2026-07-02",
+        "url": "https://techcrunch.com/2026/07/01/cloudflares-new-policy-pushes-ai-companies-to-pay-for-publishers-content/",
+        "comment": "AI技術者にとって、このポリシーはクローラーの設計と運用に直接的な影響を与え、データ収集戦略の見直しを迫る。データサイエンティストは、学習データの出所とライセンスの透明性を確保し、倫理的なデータ利用とモデル開発の重要性が高まるだろう。"
+      }
+    ]
+  },
+  {
+    "date": "2026-07-02",
+    "articles": [
       {
         "title": "Anthropic、AIエージェント向け低価格モデル「Claude Sonnet 5」を発表",
         "content": "Anthropicは、エージェント機能強化、低価格化、安全性向上を実現した新モデル「Claude Sonnet 5」を発表した。OpusやGPT-5.5、Gemini Proの代替として位置づけられる。",
@@ -17,22 +94,6 @@
         "published_at": "2026-07-01",
         "url": "https://techcrunch.com/2026/06/30/anthropic-launches-claude-sonnet-5-as-a-cheaper-way-to-run-agents/",
         "comment": "AI技術者にとって、Sonnet 5の低価格化はエージェント開発・運用のコスト障壁を下げ、より広範な実用化を促進する。データサイエンティストは、コスト効率の高いモデルでエージェントの性能評価やデータ設計を最適化できる。安全性向上は、倫理的AI開発と信頼性確保の観点から重要であり、実務におけるリスク管理に直結する。"
-      },
-      {
-        "title": "Cloudflare、AI企業にパブリッシャーコンテンツへの支払い義務化を推進",
-        "content": "Cloudflareは、AI企業に対し、検索用とAI学習・エージェント用クローラーの分離を9月15日までに義務付けた。従わない場合、多くのパブリッシャーサイトでデフォルトでブロックされる可能性がある。",
-        "source": "TechCrunch",
-        "published_at": "2026-07-02",
-        "url": "https://techcrunch.com/2026/07/01/cloudflares-new-policy-pushes-ai-companies-to-pay-for-publishers-content/",
-        "comment": "AI技術者にとって、このポリシーはデータ収集戦略の再考を迫る。クローラーの分離はインフラ設計やデータパイプラインに影響を与え、コスト増の要因となる。データサイエンティストは、学習データの調達コストと品質のバランスを再評価する必要がある。著作権保護とAI開発のバランスを巡る規制動向は、今後のAIエコシステムに大きな影響を与えるだろう。"
-      },
-      {
-        "title": "Meta、余剰AI計算能力をクラウドサービスとして販売へ",
-        "content": "Metaは、余剰AI計算能力とモデルへのアクセスを販売するクラウドインフラ事業の計画を進めている。これにより、Amazon Web Services、Google Cloud、Microsoft Azureなどの大手クラウドプロバイダーと競合する。",
-        "source": "TechCrunch",
-        "published_at": "2026-07-01",
-        "url": "https://techcrunch.com/2026/07/01/meta-like-spacex-looks-to-turn-excess-ai-compute-into-cash/",
-        "comment": "AI技術者にとって、Metaの参入は新たな計算資源の選択肢を提供し、特定のAIモデルやフレームワークに最適化されたインフラ利用の可能性を開く。データサイエンティストは、大規模モデルの学習や推論において、より多様なコストと性能のトレードオフを検討できる。クラウド市場の競争激化は、AI開発コストの最適化に寄与する可能性がある。"
       },
       {
         "title": "Nvidia競合のEtched、AIチップで評価額50億ドル、売上10億ドル達成",
