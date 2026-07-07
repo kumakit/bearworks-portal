@@ -119,12 +119,12 @@ export default async function AiNewsPage() {
                               {article.title}
                             </span>
                             <span className="sm:hidden text-[10px] text-zinc-400 font-mono font-medium">
-                              {article.source}
+                              {article.source}{article.published_at && ` • ${article.published_at.substring(5)}`}
                             </span>
                           </div>
                         </div>
                         <span className="hidden sm:inline text-xs text-zinc-400 shrink-0 select-none font-mono font-medium mt-0.5">
-                          {article.source}
+                          {article.source}{article.published_at && ` • ${article.published_at.substring(5)}`}
                         </span>
                       </summary>
                       <div className="mt-3 pt-3 border-t border-gray-100 text-sm text-zinc-650 font-sans leading-relaxed pl-6 space-y-3 bg-[#F0FDF4]/30 rounded-xl p-4 border border-[#F0FDF4]/80">
