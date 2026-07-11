@@ -119,7 +119,7 @@ export default function AboutPage() {
                 改善の進め方
               </h2>
               <p className="text-sm leading-relaxed">
-                学習分析、暗記カード、AI ニュースなど、公開している機能は小さく更新し、
+                学習分析、暗記カード、学習ガイドなど、公開している機能は小さく更新し、
                 動作確認と本番反映を分けて進めています。
               </p>
             </section>

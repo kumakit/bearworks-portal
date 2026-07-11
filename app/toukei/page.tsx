@@ -227,6 +227,13 @@ export default function ToukeiPage() {
                 アプリを開く
                 <ArrowRight size={16} />
               </a>
+              <Link
+                href="/toukei/guides"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-primary text-primary bg-white px-6 py-3.5 text-sm font-bold hover:bg-primary/5 transition-colors"
+              >
+                学習ガイドを読む
+                <BookOpen size={16} />
+              </Link>
               <a
                 href="https://toukei.bearworks.uk/exam"
                 target="_blank"
@@ -372,7 +379,7 @@ export default function ToukeiPage() {
           </div>
         </div>
 
-        <div id="question-policy" className="bg-white rounded-[2rem] border border-gray-100 p-7 shadow-soft">
+        <section id="question-policy" className="bg-white rounded-[2rem] border border-gray-100 p-7 shadow-soft">
           <ShieldCheck className="text-accent-purple mb-4" size={28} />
           <h2 className="text-2xl font-bold text-primary mb-3">
             問題作成の方針
@@ -388,9 +395,9 @@ export default function ToukeiPage() {
             計算式を立てる順序、結果の読み取り方を練習できる状態にすることです。
           </p>
 
-          <h2 className="text-2xl font-bold text-primary mb-3">
+          <h3 className="text-xl font-bold text-primary mt-6 mb-3">
             bearworks.uk から案内している理由
-          </h2>
+          </h3>
           <p className="text-muted leading-relaxed">
             bearworks.uk は、公開している個人開発サービスの入口です。
             リンク先のアプリを開く前に、サービスの目的、機能、対象ユーザー、
@@ -416,7 +423,7 @@ export default function ToukeiPage() {
               <BarChart3 size={16} />
             </a>
           </div>
-        </div>
+        </section>
       </section>
 
       <section className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-6 mt-6">
@@ -434,6 +441,15 @@ export default function ToukeiPage() {
                 </p>
               </div>
             ))}
+          </div>
+          <div className="mt-6 pt-4 border-t border-gray-50">
+            <Link
+              href="/toukei/guides"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-gray-200 bg-white px-5 py-3 text-sm font-bold text-primary hover:bg-gray-50 transition-colors"
+            >
+              学習ガイドで弱点対策をする
+              <ArrowRight size={16} />
+            </Link>
           </div>
         </div>
 

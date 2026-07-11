@@ -16,6 +16,11 @@ export default function PublicSiteFooter() {
             </Link>
           </li>
           <li>
+            <Link href="/toukei/guides" className="hover:text-primary transition-colors">
+              学習ガイド
+            </Link>
+          </li>
+          <li>
             <Link href="/toukei#question-policy" className="hover:text-primary transition-colors">
               問題作成方針
             </Link>
