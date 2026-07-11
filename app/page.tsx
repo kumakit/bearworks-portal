@@ -1,246 +1,167 @@
 export const runtime = "edge";
 
-import { SystemMonitor } from "@/components/SystemMonitor";
-import { Github, MapPin, User, Terminal, Database, Globe, Bot, Book, BarChart3, Hand, Sparkles, CloudSun, Key, ArrowRight } from "lucide-react";
+import type { Metadata } from "next";
+import Link from "next/link";
+import PublicSiteHeader from "@/components/PublicSiteHeader";
+import PublicSiteFooter from "@/components/PublicSiteFooter";
+import { BookOpen, BarChart3, Target, ArrowRight } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "統計検定2級の学習支援 | bearworks.uk",
+  description: "Toukei Kentei Drillの模擬試験、分野別ドリル、学習分析、チートシート、暗記カードを案内する統計検定2級の学習支援サイトです。",
+};
 
 export default function Home() {
   return (
     <main className="max-w-5xl w-full flex flex-col gap-8 pb-12">
-      {/* Top Header / Pill */}
-      <header className="flex justify-center pt-4">
-        <div className="bg-white px-4 py-2 rounded-full shadow-soft flex items-center gap-2 text-sm font-medium border border-gray-100">
-          <img src="/icon.png" alt="Bear Icon" className="w-5 h-5 rounded-full" />
-          <span>bearworks.uk</span>
-        </div>
-      </header>
+      <PublicSiteHeader />
 
-      {/* Bento Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-min">
-
-        {/* Intro Hero (2 cols, span 1 row) */}
-        <div className="md:col-span-2 bg-white rounded-[2.5rem] p-8 md:p-10 shadow-soft border border-gray-100 flex flex-col justify-center">
+      {/* Hero Section */}
+      <section className="bg-white rounded-[2.5rem] p-8 md:p-12 shadow-soft border border-gray-100 flex flex-col justify-center">
+        <div className="max-w-3xl">
           <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-primary leading-tight">
-            <span className="icon-with-blob animate-wave">
-              <Hand size={40} className="text-accent-yellow" />
-              <span className="blob blob-yellow blob-sm"></span>
-            </span>{" "}
-            HI! I DESIGN & BUILD <br />
-            <span className="text-accent-blue">DATA EXPERIENCES</span>, <br />
-            APPS{" "}
-            <span className="icon-with-blob">
-              <Sparkles size={32} className="text-accent-pink" />
-              <span className="blob blob-pink blob-sm"></span>
-            </span>{" "}
-            & MODELS.
+            統計検定2級の学習を、<br />
+            <span className="text-accent-purple">解いて理解する。</span>
           </h1>
-          <p className="mt-4 text-muted text-lg font-medium max-w-lg">
-            Welcome to bearworks.uk. This is the home for my statistics learning tools, data dashboards, and small AI applications.
+          <p className="mt-6 text-muted text-lg leading-relaxed">
+            Toukei Kentei Drill（統計検定ドリル）は、統計検定2級のCBT試験対策を目的とした個人開発の学習支援アプリです。
+            模擬試験、分野別ドリル、学習分析、チートシート、暗記カードを組み合わせて、効率的な復習ループを回せるように設計されています。
           </p>
-          <div className="mt-6 flex flex-wrap gap-3">
-            <a
+          <p className="mt-4 text-muted leading-relaxed">
+            掲載している演習問題は、公式問題集や出題範囲を研究し、頻出論点や計算プロセスを網羅するように独自に作成したオリジナル問題です。公式問題のそのままの転載ではなく、本質的な考え方を練習できるように数値や題材を設計しています。
+          </p>
+          <div className="mt-8 flex flex-wrap gap-4">
+            <Link
               href="/toukei"
-              className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-bold text-white hover:bg-primary/90 transition-colors"
+              className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3.5 text-sm font-bold text-white hover:bg-primary/90 transition-colors"
             >
-              Toukei Kentei Drill
+              Toukei Kentei Drill について
               <ArrowRight size={16} />
-            </a>
+            </Link>
             <a
-              href="/about"
-              className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white px-5 py-3 text-sm font-bold text-primary hover:bg-gray-50 transition-colors"
-            >
-              ABOUT
-            </a>
-          </div>
-        </div>
-
-        {/* Profile Card (1 col) */}
-        <div className="bg-white rounded-[2.5rem] p-8 shadow-soft border border-gray-100 flex flex-col gap-6">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2 bg-gray-50 px-3 py-1.5 rounded-full w-fit border border-gray-100">
-              <span className="icon-with-blob">
-                <User size={14} className="text-accent-pink" />
-                <span className="blob blob-pink"></span>
-              </span>
-              <span className="text-xs font-semibold tracking-wide">PROFILE</span>
-            </div>
-            <img src="/icon.png" alt="kuma" className="w-12 h-12 rounded-full shadow-sm border border-gray-100" />
-          </div>
-          <div>
-            <h2 className="text-xl font-bold text-primary">kuma</h2>
-            <p className="text-muted mt-2 text-sm leading-relaxed">
-              Data Scientist & Developer exploring the{" "}
-              <span className="icon-with-blob">
-                <Database size={14} className="text-blue-500" />
-                <span className="blob blob-blue"></span>
-              </span>{" "}
-              intersection of data,{" "}
-              <span className="icon-with-blob">
-                <Globe size={14} className="text-green-500" />
-                <span className="blob blob-green"></span>
-              </span>{" "}
-              web, and{" "}
-              <span className="icon-with-blob">
-                <Bot size={14} className="text-purple-500" />
-                <span className="blob blob-purple"></span>
-              </span>{" "}
-              automation.
-            </p>
-          </div>
-          <div className="mt-auto flex items-center justify-between w-full">
-            <a
-              href="https://www.google.com/maps/place/Hachioji,+Tokyo"
+              href="https://toukei.bearworks.uk/exam"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-xs font-medium text-muted hover:text-primary transition-colors w-fit"
+              className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white px-6 py-3.5 text-sm font-bold text-primary hover:bg-gray-50 transition-colors"
             >
-              <span className="icon-with-blob">
-                <MapPin size={14} className="text-blue-500" />
-                <span className="blob blob-blue"></span>
-              </span>
-              <span>Hachioji, Tokyo</span>
+              模擬試験に挑戦する
+              <ArrowRight size={16} />
             </a>
-            <div className="flex items-center gap-3">
-              <a
-                href="/weather"
-                title="Weather Dashboard"
-                className="text-muted hover:text-orange-500 transition-colors p-1 rounded-lg hover:bg-orange-50/50"
-              >
-                <CloudSun size={16} />
-              </a>
-              <a
-                href="/dashboard"
-                title="Mission Control Dashboard"
-                className="text-muted hover:text-purple-600 transition-colors p-1 rounded-lg hover:bg-purple-50/50"
-              >
-                <Key size={16} />
-              </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="bg-white rounded-[2rem] p-8 shadow-soft border border-gray-100 flex flex-col justify-between">
+          <div>
+            <div className="w-12 h-12 rounded-2xl bg-pink-50 border border-pink-100 flex items-center justify-center text-accent-pink mb-6">
+              <Target size={24} className="text-accent-pink" />
             </div>
+            <h3 className="text-xl font-bold text-primary mb-3">模擬試験・分野別ドリル</h3>
+            <p className="text-muted text-sm leading-relaxed mb-6">
+              本番に近い90分の制限時間で行うCBT模擬試験と、特定の苦手分野をピンポイントで反復演習できる分野別ドリルを提供しています。
+            </p>
           </div>
-        </div>
-
-        {/* GitHub Contribution Card (2 cols) */}
-        <a href="https://github.com/kumakit" target="_blank" rel="noopener noreferrer" className="md:col-span-2 bg-white rounded-[2.5rem] p-8 shadow-soft border border-gray-100 flex flex-col group hover:shadow-lg transition-all hover:-translate-y-1 block">
-          <div className="flex items-center justify-between mb-6">
-            <div className="flex items-center gap-2 bg-gray-50 px-3 py-1.5 rounded-full border border-gray-100">
-              <span className="icon-with-blob">
-                <Github size={14} className="text-primary" />
-                <span className="blob blob-gray"></span>
-              </span>
-              <span className="text-xs font-semibold tracking-wide">GITHUB</span>
-            </div>
-          </div>
-          <div className="block w-full mt-auto">
-            <div className="bg-gray-50 rounded-2xl p-4 overflow-hidden flex items-center justify-center min-h-[120px] border border-gray-100">
-              {/* Re-using the chart from previous site, but inverted for light theme */}
-              <img src="https://ghchart.rshah.org/3B82F6/kumakit" alt="Github Chart" className="w-full opacity-80 group-hover:opacity-100 transition-opacity" />
-            </div>
-          </div>
-        </a>
-
-        {/* MkDocs Card */}
-        <div className="bg-[#F0FDF4] rounded-[2.5rem] p-8 shadow-soft border border-green-50 flex flex-col gap-6 group hover:shadow-lg transition-all hover:-translate-y-1">
-          <div className="flex justify-between items-start">
-            <span className="icon-with-blob text-2xl">
-              <Book size={32} className="text-green-600" />
-              <span className="blob blob-green blob-lg"></span>
-            </span>
-            <SystemMonitor url="https://docs.bearworks.uk/" />
-          </div>
-          <div className="mt-auto">
-            <a href="https://docs.bearworks.uk/" target="_blank" rel="noopener noreferrer" className="block focus:outline-none">
-              <h3 className="text-2xl font-bold text-primary group-hover:text-green-600 transition-colors">Data Science Docs (MkDocs)</h3>
-              <p className="text-green-900/60 text-sm mt-1 font-medium">Hosted on Netlify</p>
-            </a>
-          </div>
-        </div>
-
-        {/* Toukei Kentei Drill (1 col) */}
-        <div className="bg-[#F5F3FF] rounded-[2.5rem] p-8 shadow-soft border border-purple-50 flex flex-col gap-6 group hover:shadow-lg transition-all hover:-translate-y-1">
-          <div className="flex justify-between items-start">
-            <span className="icon-with-blob text-2xl">
-              <BarChart3 size={32} className="text-purple-600" />
-              <span className="blob blob-purple blob-lg"></span>
-            </span>
-            <SystemMonitor url="https://toukei.bearworks.uk/" />
-          </div>
-          <div className="mt-auto">
-            <a href="/toukei" className="block focus:outline-none">
-              <h3 className="text-2xl font-bold text-primary group-hover:text-purple-600 transition-colors">Toukei Kentei Drill</h3>
-              <p className="text-purple-900/60 text-sm mt-1 font-medium">統計検定2級向けの模擬試験・ドリル・学習分析</p>
-            </a>
-          </div>
-        </div>
-
-        {/* OCI Data Apps (1 col) */}
-        <div className="bg-[#EFF6FF] rounded-[2.5rem] p-8 shadow-soft border border-blue-50 flex flex-col gap-6 group hover:shadow-lg transition-all hover:-translate-y-1">
-          <div className="flex justify-between items-start">
-            <span className="icon-with-blob text-2xl">
-              <Terminal size={32} className="text-blue-600" />
-              <span className="blob blob-blue blob-lg"></span>
-            </span>
-            <SystemMonitor url="https://apps.bearworks.uk/" />
-          </div>
-          <div className="mt-auto">
-            <a href="https://apps.bearworks.uk/" target="_blank" rel="noopener noreferrer" className="block focus:outline-none">
-              <h3 className="text-2xl font-bold text-primary group-hover:text-blue-600 transition-colors">AI Apps (Streamlit + Ollama)</h3>
-              <p className="text-blue-900/60 text-sm mt-1 font-medium">Hosted on OCI via Cloudflare</p>
-            </a>
-          </div>
-        </div>
-
-
-
-        {/* AI News Card (1 col) */}
-        {/* 
-        <a href="/ai-news" className="bg-[#F0FDF4] rounded-[2.5rem] p-8 shadow-soft border border-green-50 flex flex-col gap-6 group hover:shadow-lg transition-all hover:-translate-y-1 block">
-          <div className="flex justify-between items-start">
-            <span className="icon-with-blob text-2xl">
-              <Bot size={32} className="text-green-600" />
-              <span className="blob blob-green blob-lg"></span>
-            </span>
-          </div>
-          <div className="mt-auto">
-            <h3 className="text-2xl font-bold text-primary group-hover:text-green-600 transition-colors">AI News Feed</h3>
-            <p className="text-green-900/60 text-sm mt-1 font-medium">ネットから収集された最新AI情報の要約</p>
-          </div>
-        </a>
-        */}
-
-      </div>
-
-      {/* Footer */}
-      <footer className="mt-12 py-8 border-t border-gray-100 text-center text-sm text-muted">
-        <div className="flex justify-center gap-6 mb-4">
-          <a
+          <Link
             href="/toukei"
-            className="hover:text-primary transition-colors font-medium text-xs md:text-sm"
+            aria-label="模擬試験・分野別ドリルの詳細を Toukei Kentei Drill ページで確認する"
+            className="text-accent-pink hover:underline font-bold text-sm inline-flex items-center gap-1"
           >
-            TOUKEI
-          </a>
+            ドリル機能の詳細を確認する <ArrowRight size={14} />
+          </Link>
+        </div>
+
+        <div className="bg-white rounded-[2rem] p-8 shadow-soft border border-gray-100 flex flex-col justify-between">
+          <div>
+            <div className="w-12 h-12 rounded-2xl bg-purple-50 border border-purple-100 flex items-center justify-center text-accent-purple mb-6">
+              <BarChart3 size={24} className="text-accent-purple" />
+            </div>
+            <h3 className="text-xl font-bold text-primary mb-3">学習分析ダッシュボード</h3>
+            <p className="text-muted text-sm leading-relaxed mb-6">
+              解答履歴や正答率、分野別の演習量をグラフで可視化。自分の弱点を一目で把握し、次にどの分野を学習すべきかを明確にします。
+            </p>
+          </div>
           <a
-            href="/about"
-            className="hover:text-primary transition-colors font-medium text-xs md:text-sm"
+            href="https://toukei.bearworks.uk/dashboard"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Toukei Kentei Drill の学習分析ダッシュボードを新しいタブで開く"
+            className="text-accent-purple hover:underline font-bold text-sm inline-flex items-center gap-1"
           >
-            ABOUT
-          </a>
-          <a
-            href="/privacy"
-            className="hover:text-primary transition-colors font-medium text-xs md:text-sm"
-          >
-            PRIVACY POLICY
-          </a>
-          <a
-            href="/contact"
-            className="hover:text-primary transition-colors font-medium text-xs md:text-sm"
-          >
-            CONTACT
+            学習分析ダッシュボードを開く <ArrowRight size={14} />
           </a>
         </div>
-        <p className="text-xs text-muted/60 font-medium">
-          © 2026 bearworks. All Rights Reserved.
-        </p>
-      </footer>
+
+        <div className="bg-white rounded-[2rem] p-8 shadow-soft border border-gray-100 flex flex-col justify-between">
+          <div>
+            <div className="w-12 h-12 rounded-2xl bg-blue-50 border border-blue-100 flex items-center justify-center text-accent-blue mb-6">
+              <BookOpen size={24} className="text-accent-blue" />
+            </div>
+            <h3 className="text-xl font-bold text-primary mb-3">チートシート・暗記カード</h3>
+            <p className="text-muted text-sm leading-relaxed mb-6">
+              試験によく出る公式や各種確率分布の性質、検定の判断ルールをすばやく確認できるチートシートと、一問一答形式の暗記カードを用意しています。
+            </p>
+          </div>
+          <a
+            href="https://toukei.bearworks.uk/cheatsheet"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Toukei Kentei Drill の暗記カード・チートシートを新しいタブで開く"
+            className="text-accent-blue hover:underline font-bold text-sm inline-flex items-center gap-1"
+          >
+            暗記カード・チートシートを開く <ArrowRight size={14} />
+          </a>
+        </div>
+      </section>
+
+      {/* Study Loop Section */}
+      <section className="bg-white rounded-[2.5rem] p-8 md:p-12 shadow-soft border border-gray-100">
+        <h2 className="text-2xl font-bold text-primary mb-6">効果的な学び方</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="flex gap-4">
+            <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center font-bold text-primary text-sm">1</div>
+            <div>
+              <h4 className="font-bold text-primary mb-2">実力と時間感覚の把握</h4>
+              <p className="text-muted text-sm leading-relaxed">まずは90分の模擬試験を受け、CBT試験での時間配分と、現在の正答状況を確認します。</p>
+            </div>
+          </div>
+          <div className="flex gap-4">
+            <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center font-bold text-primary text-sm">2</div>
+            <div>
+              <h4 className="font-bold text-primary mb-2">苦手分野の集中演習</h4>
+              <p className="text-muted text-sm leading-relaxed">学習分析で判明した正答率の低い分野を、分野別ドリルで重点的に復習します。</p>
+            </div>
+          </div>
+          <div className="flex gap-4">
+            <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center font-bold text-primary text-sm">3</div>
+            <div>
+              <h4 className="font-bold text-primary mb-2">要点の暗記と知識定着</h4>
+              <p className="text-muted text-sm leading-relaxed">公式や検定の定義などは、暗記カードを用いて隙間時間に反復してインプットします。</p>
+            </div>
+          </div>
+        </div>
+        <div className="mt-8 pt-6 border-t border-gray-100 flex justify-end">
+          <Link href="/toukei#study-flow" className="text-sm font-medium text-muted hover:text-primary inline-flex items-center gap-1 transition-colors">
+            おすすめの学習方針の詳細を確認する <ArrowRight size={14} />
+          </Link>
+        </div>
+      </section>
+
+      {/* Other Projects Section */}
+      <section className="py-6 border-t border-gray-100">
+        <h3 className="text-xs font-bold tracking-wider text-muted uppercase mb-4">その他の制作物</h3>
+        <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted">
+          <a href="https://docs.bearworks.uk/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+            Data Science Docs (MkDocs)
+          </a>
+          <a href="https://apps.bearworks.uk/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+            AI Apps (Streamlit + Ollama)
+          </a>
+        </div>
+      </section>
+
+      <PublicSiteFooter />
     </main>
   );
 }
-

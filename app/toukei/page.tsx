@@ -2,6 +2,8 @@ export const runtime = "edge";
 
 import type { Metadata } from "next";
 import Link from "next/link";
+import PublicSiteHeader from "@/components/PublicSiteHeader";
+import PublicSiteFooter from "@/components/PublicSiteFooter";
 import {
   ArrowLeft,
   ArrowRight,
@@ -170,6 +172,7 @@ const updates = [
 export default function ToukeiPage() {
   return (
     <main className="max-w-5xl w-full mx-auto px-4 py-8 md:py-16">
+      <PublicSiteHeader />
       <div className="mb-6">
         <Link
           href="/"
@@ -236,7 +239,10 @@ export default function ToukeiPage() {
             </div>
           </div>
 
-          <div className="rounded-[2rem] border border-purple-100 bg-[#F5F3FF] p-6">
+          <aside
+            aria-label="学習ループの概要"
+            className="rounded-[2rem] border border-purple-100 bg-[#F5F3FF] p-6"
+          >
             <div className="flex items-center gap-3 mb-5">
               <div className="rounded-2xl bg-white p-3 shadow-soft">
                 <Brain className="text-accent-purple" size={28} />
@@ -245,7 +251,7 @@ export default function ToukeiPage() {
                 <p className="text-xs font-bold text-purple-900/50">
                   STUDY LOOP
                 </p>
-                <h2 className="font-bold text-primary">学習の流れ</h2>
+                <p className="font-bold text-primary">学習の流れ</p>
               </div>
             </div>
             <ol className="space-y-4 text-sm text-purple-950/70">
@@ -266,7 +272,7 @@ export default function ToukeiPage() {
                 <span>次の演習で時間配分と正答率を見直す。</span>
               </li>
             </ol>
-          </div>
+          </aside>
         </div>
       </section>
 
@@ -366,7 +372,7 @@ export default function ToukeiPage() {
           </div>
         </div>
 
-        <div className="bg-white rounded-[2rem] border border-gray-100 p-7 shadow-soft">
+        <div id="question-policy" className="bg-white rounded-[2rem] border border-gray-100 p-7 shadow-soft">
           <ShieldCheck className="text-accent-purple mb-4" size={28} />
           <h2 className="text-2xl font-bold text-primary mb-3">
             問題作成の方針
@@ -414,7 +420,7 @@ export default function ToukeiPage() {
       </section>
 
       <section className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-6 mt-6">
-        <div className="bg-white rounded-[2rem] border border-gray-100 p-7 shadow-soft">
+        <div id="study-flow" className="bg-white rounded-[2rem] border border-gray-100 p-7 shadow-soft">
           <Lightbulb className="text-accent-yellow mb-4" size={28} />
           <h2 className="text-2xl font-bold text-primary mb-3">
             おすすめの学習方針
@@ -449,6 +455,7 @@ export default function ToukeiPage() {
           </div>
         </div>
       </section>
+      <PublicSiteFooter />
     </main>
   );
 }

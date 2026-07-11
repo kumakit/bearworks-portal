@@ -2,17 +2,20 @@ export const runtime = "edge";
 
 import type { Metadata } from "next";
 import Link from "next/link";
+import PublicSiteHeader from "@/components/PublicSiteHeader";
+import PublicSiteFooter from "@/components/PublicSiteFooter";
 import { ArrowLeft, Code2, Database, Mail, MapPin, RefreshCw, ShieldCheck } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "運営者情報 | bearworks.uk",
   description:
-    "bearworks.uk と関連サービスの運営目的、公開しているサービス、連絡先について。",
+    "統計検定2級の学習アプリ『Toukei Kentei Drill』などを開発・運営する bearworks.uk の運営者 kuma の情報と運営方針について。",
 };
 
 export default function AboutPage() {
   return (
     <main className="max-w-4xl w-full mx-auto px-4 py-8 md:py-16">
+      <PublicSiteHeader />
       <div className="mb-6">
         <Link
           href="/"
@@ -75,7 +78,7 @@ export default function AboutPage() {
             </p>
           </section>
 
-          <section>
+          <section id="operating-policy">
             <h2 className="text-xl font-bold text-primary mb-3">
               運営方針
             </h2>
@@ -149,6 +152,7 @@ export default function AboutPage() {
           </section>
         </div>
       </article>
+      <PublicSiteFooter />
     </main>
   );
 }

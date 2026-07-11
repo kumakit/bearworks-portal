@@ -7,10 +7,10 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   metadataBase: new URL("https://bearworks.uk"),
   title: "bearworks.uk",
-  description: "Personal Hub Site and Digital Garden",
+  description: "統計検定2級の模擬試験、分野別ドリル、学習分析、チートシート、暗記カードを案内する統計学習ハブサイトです。",
   openGraph: {
     title: "bearworks.uk",
-    description: "Personal Hub Site and Digital Garden",
+    description: "統計検定2級の模擬試験、分野別ドリル、学習分析、チートシート、暗記カードを案内する統計学習ハブサイトです。",
     url: "https://bearworks.uk",
     siteName: "bearworks.uk",
     locale: "ja_JP",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "bearworks.uk",
-    description: "Personal Hub Site and Digital Garden",
+    description: "統計検定2級の模擬試験、分野別ドリル、学習分析、チートシート、暗記カードを案内する統計学習ハブサイトです。",
   },
   icons: {
     icon: "/icon.png",

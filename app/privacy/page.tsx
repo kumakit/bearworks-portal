@@ -1,10 +1,20 @@
 export const runtime = "edge";
 
+import type { Metadata } from "next";
 import Link from "next/link";
+import PublicSiteHeader from "@/components/PublicSiteHeader";
+import PublicSiteFooter from "@/components/PublicSiteFooter";
+
+export const metadata: Metadata = {
+  title: "プライバシーポリシー | bearworks.uk",
+  description:
+    "bearworks.uk および提供する各種サービスのプライバシーポリシー、広告配信、アクセス解析ツール、免責事項、著作権について。",
+};
 
 export default function PrivacyPolicy() {
   return (
-    <div className="max-w-4xl w-full mx-auto px-4 py-8 md:py-16">
+    <main className="max-w-4xl w-full mx-auto px-4 py-8 md:py-16">
+      <PublicSiteHeader />
       {/* 戻るボタン */}
       <div className="mb-6">
         <Link
@@ -40,7 +50,7 @@ export default function PrivacyPolicy() {
               1. 広告の配信について
             </h2>
             <p className="mb-3">
-              当サイト（bearworks.uk およびそのサブドメインのサービス）では、第三者配信 of 広告サービス「Google AdSense」を利用しています。
+              当サイト（bearworks.uk およびそのサブドメインのサービス）では、第三者配信の広告サービス「Google AdSense」を利用しています。
             </p>
             <p className="mb-3">
               広告配信事業者は、ユーザーの興味に応じた広告を表示するためにCookie（クッキー）を使用することがあります。これによってユーザーのブラウザを識別できるようになりますが、個人を特定するものではありません。
@@ -105,6 +115,7 @@ export default function PrivacyPolicy() {
           </div>
         </div>
       </div>
-    </div>
+      <PublicSiteFooter />
+    </main>
   );
 }

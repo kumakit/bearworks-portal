@@ -1,10 +1,20 @@
 export const runtime = "edge";
 
+import type { Metadata } from "next";
 import Link from "next/link";
+import PublicSiteHeader from "@/components/PublicSiteHeader";
+import PublicSiteFooter from "@/components/PublicSiteFooter";
+
+export const metadata: Metadata = {
+  title: "お問い合わせ | bearworks.uk",
+  description:
+    "bearworks.uk および提供する各種サービスに関するお問い合わせ、不具合報告、改善のご提案窓口について。",
+};
 
 export default function Contact() {
   return (
-    <div className="max-w-4xl w-full mx-auto px-4 py-8 md:py-16">
+    <main className="max-w-4xl w-full mx-auto px-4 py-8 md:py-16">
+      <PublicSiteHeader />
       {/* 戻るボタン */}
       <div className="mb-6">
         <Link
@@ -55,6 +65,7 @@ export default function Contact() {
           </p>
         </div>
       </div>
-    </div>
+      <PublicSiteFooter />
+    </main>
   );
 }
