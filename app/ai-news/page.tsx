@@ -1,5 +1,14 @@
+import type { Metadata } from "next";
 import { promises as fs } from "fs";
 import path from "path";
+
+export const metadata: Metadata = {
+  title: "AIニュースフィード | bearworks.uk",
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
 
 interface Article {
   title: string;
