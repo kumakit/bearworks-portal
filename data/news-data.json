@@ -1,5 +1,207 @@
 [
   {
+    "date": "2026-07-12",
+    "articles": [
+      {
+        "title": "OpenAI、GPT-5.6がMicrosoft Copilot 365の「推奨モデル」であると発表",
+        "content": "OpenAIは、最新モデルGPT-5.6がMicrosoft Copilot 365の推奨モデルであることを明らかにした。これは両社の提携関係が継続していることを示し、企業向けAI市場におけるGPT-5.6の重要性を強調する。",
+        "source": "TechCrunch",
+        "published_at": "2026-07-10",
+        "url": "https://techcrunch.com/2026/07/09/openai-says-gpt-5-6-is-the-preferred-model-for-microsoft-copilot-amid-breakup-chatter"
+      },
+      {
+        "title": "Google Cloudの最新情報：Cloud RunサンドボックスでAI生成コードを安全に実行",
+        "content": "Google CloudがCloud Runサンドボックスのパブリックプレビューを開始した。これにより、既存のCloud Runサービスインスタンス内でAI生成コードを軽量かつ隔離された環境で安全に実行できる。",
+        "source": "Google Cloud",
+        "published_at": "2026-07-11",
+        "url": "https://cloud.google.com/blog/topics/inside-google-cloud/whats-new-google-cloud"
+      },
+      {
+        "title": "テロ組織ボコ・ハラムがフロンティアAIをどのように利用しているか",
+        "content": "レポートによると、テロ組織ボコ・ハラムがフロンティアAI技術を悪用している実態が明らかになった。これはAIの安全性と悪用防止に関する国際的な議論に新たな課題を提起する。",
+        "source": "Hacker News",
+        "published_at": "2026-07-11",
+        "url": "https://casp.ac/reports/ai-enabled-terrorism"
+      },
+      {
+        "title": "OpenAIのNo.2、フィジー・シモ氏が退任",
+        "content": "OpenAIのNo.2であるフィジー・シモ氏が、長期の病気休暇を経てフルタイムの役職から退任した。これは同社がIPOを検討し、企業市場でAnthropicとの競争を加速させる中で、リーダーシップの空白を生む可能性がある。",
+        "source": "TechCrunch",
+        "published_at": "2026-07-10",
+        "url": "https://techcrunch.com/2026/07/09/fidji-simo-steps-down-from-openais-no-2-role"
+      },
+      {
+        "title": "Meta、Instagramの物議を醸したAI機能を批判を受け削除",
+        "content": "MetaがInstagramで導入したAI機能に対し、ユーザーからの強い反発を受け、当該機能を削除した。同社は、意図した創造的ツールとしての役割を果たせず、ユーザーのフィードバックを尊重したと説明している。",
+        "source": "TechCrunch",
+        "published_at": "2026-07-11",
+        "url": "https://techcrunch.com/2026/07/10/meta-removes-controversial-ai-feature-on-instagram-after-backlash"
+      },
+      {
+        "title": "Hugging Face CEO、企業がAIを「借りる」時代は終わったと語る",
+        "content": "Hugging FaceのCEOは、企業がAIモデルを「借りる」のではなく、オープンソースAIを活用して自社で構築する傾向が強まっていると指摘した。これはAI開発の民主化と企業戦略の変化を示唆している。",
+        "source": "TechCrunch",
+        "published_at": "2026-07-10",
+        "url": "https://techcrunch.com/2026/07/10/hugging-faces-ceo-on-why-companies-are-done-renting-their-ai"
+      },
+      {
+        "title": "AIエージェントスタートアップが1億ドルの資金調達を自社AIエージェントに実行させる",
+        "content": "AIエージェント開発スタートアップのLyzrが、自社のAIエージェントに1億ドルの資金調達プロセスを任せた。これはAIエージェントの実用性と能力を示す具体的な事例である。",
+        "source": "TechCrunch",
+        "published_at": "2026-07-10",
+        "url": "https://techcrunch.com/2026/07/09/an-ai-agent-startup-just-let-its-agent-run-its-100-million-fundraise"
+      },
+      {
+        "title": "イーロン・マスク氏、Mythos/Fableを称賛しAnthropicを「切り離さない」と約束",
+        "content": "イーロン・マスク氏がAnthropicのモデル「Mythos/Fable」を称賛し、Anthropicとの関係を維持すると表明した。これはAI業界における主要プレイヤー間の複雑な関係性を示す。",
+        "source": "TechCrunch",
+        "published_at": "2026-07-10",
+        "url": "https://techcrunch.com/2026/07/09/elon-musk-praises-mythos-fable-promises-not-to-cut-off-anthropic"
+      },
+      {
+        "title": "OpenAI、ChatGPTの家庭向け展開を強化、家族層に注力",
+        "content": "OpenAIがChatGPTの家庭向け展開を強化するため、家族、介護者、高齢者向けの体験構築を担うプロダクトマネージャーを募集している。これはChatGPTのユーザー層拡大に向けた戦略的動きである。",
+        "source": "TechCrunch",
+        "published_at": "2026-07-11",
+        "url": "https://techcrunch.com/2026/07/11/openai-bets-on-families-as-chatgpt-goes-deeper-into-households"
+      },
+      {
+        "title": "Micron CEO、AIメモリチップ開発拡大に2500億ドルの投資を発表",
+        "content": "Micronのサンジェイ・メーロートラCEOは、AIメモリチップ開発の拡大に向けて2500億ドルを投資すると発表した。これは次世代AIチップとインフラの進化を加速させる重要な動きである。",
+        "source": "Google News",
+        "published_at": "2026-07-11",
+        "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOYkhyV0RuMGJPblFZS28wQjJ5bFNaT3VoZ0NYamd5RnZNRzBIV2xvYjlGSjBzMFFTVkFJS1YxekE0UjJsRzlJTXI2S2lXbVE1YmpSSEx6NTk1ekxScFd0MkNWNDBHbXZnWGdROGhOZnkyY3pkc2dWQmJjVjJ1Y1Bma0xrV2FzWDhsYW1vM2xzUUNzZFFLaWE0Tg?oc=5"
+      },
+      {
+        "title": "Microsoftの気候変動を加速させる排出量がAIにより25%急増",
+        "content": "Microsoftの気候変動を加速させる排出量が、AI関連の活動により25%増加した。これはAIインフラの拡大が環境に与える影響の深刻さを示しており、持続可能なAI開発への課題を提起している。",
+        "source": "Google News",
+        "published_at": "2026-07-12",
+        "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPUGhMRlBXVTFEUFM4c2E3cU83QW03cVktVkZpYWdqNFpoQ01WR3hjak12emlIOUdYSFNfSlpkalNuWFlxRTIxREpUSFVqRFhoVEctcTlTYUwxM0VsckR6WGN0UFJ4N3V0UHJkU2o3ZGd4aEl2SmJpaXFKbmZveUpVQ04xQVNZZzdyRWtOX2xZOGxvaVZ0Wm5meUZNTHUtUQ?oc=5"
+      },
+      {
+        "title": "批判を受け、Metaが公開Instagram画像に自動アクセスする新AIツールの利用を制限",
+        "content": "Metaは、公開されているInstagram画像に自動的にアクセスするAIツールに対し、プライバシーに関する批判を受けて利用を制限した。これはAIの倫理的利用とデータプライバシーに関する懸念に対応する動きである。",
+        "source": "Google News",
+        "published_at": "2026-07-12",
+        "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNV3dWTkVYeFZCMmRRcHZMa1BhSGU5dGxTM1VHQnhrV2NmSHJ5RmlGeHRBQmMxZmR0Zno4dmhyamh2NEIxZl9ZSnFtaEdXNDhOWUdWUVQyajk4Y3lpNml2YTA2WVJHRlhGZnJON3hncVpWSlREZ3YwbjFhNXBJYjdpQjJCSEhuVUY4UVZNMnhsOXZyQmdjR0tEM3dPRUdlMENVbV90clVhOFh6blljU05yUzRFTQ?oc=5"
+      },
+      {
+        "title": "AI企業がオーストラリアの著作権法緩和を要求、アーティストは反発し労働党は分裂",
+        "content": "オーストラリアでAI企業が著作権法の緩和を求めていることに対し、アーティストらが強く反発している。この問題は労働党内でも意見が分かれており、AIとクリエイティブ産業の間の法的枠組みが焦点となっている。",
+        "source": "Google News",
+        "published_at": "2026-07-12",
+        "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPZm1ZbGlKbjZncnFvcFdJLUhFekxmNU52Ml9xekhNSTR2TUFGSkxkWThzLV9TcE9sbmp0YUNLZFZRd0VpM2hiclhJLWw2SFhtWlNnZWgxWmZtWjBIaEtLMkc0XzlqSzlaRmdBdjNTWDctdzJhWkM0ck0zekxMMS1DOUZ0MXZGVk1JeEtpZW05UE1veWtGcEVzalNaWm9qeVB5N2VFNWpmQVVFajNxQ2NxUTFR?oc=5"
+      },
+      {
+        "title": "シカゴ大学ロースクール、AI対策で1年生の授業での電子機器使用を禁止",
+        "content": "シカゴ大学ロースクールは、AIの不正利用を防ぐため、1年生の授業で携帯電話やノートパソコンなどの電子機器の使用を禁止すると発表した。これはAI時代における教育方針の一環である。",
+        "source": "Google News",
+        "published_at": "2026-07-12",
+        "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQVVBoR2ZaRlNnejIwNHFKWWYwSmpncUFGcFh3cVBTMVdJMjR1RnJudUZ5UUF5RENVOTRGNDBFWmFRcmtDdHpGM0pRMWdmVGlDUzBzT1o2aDd3SzVMWFc3VDM1ajFvYlhQSjgxSG5LXy1hTEZNcHJ0eGxkX1FDaDJfcDlQQjhBYVgyODY1aWV0elNXRDBjTUc2ZjUyU0dqMVoxOGw5V0h4Z0dNTlFPUzN3?oc=5"
+      },
+      {
+        "title": "イリノイ州教育委員会、学校でのAI利用に関するガイドラインを発表",
+        "content": "イリノイ州教育委員会は、州内の学校におけるAIの適切な利用を促進するため、新たなガイドラインを公開した。これは教育現場でのAI導入に伴う課題に対応し、安全かつ効果的な活用を目指すものである。",
+        "source": "Google News",
+        "published_at": "2026-07-12",
+        "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPdjdTQkxDNGtjS3VsOXdicHJCcEJsQmZ3UFo5MTBMRDZzMzQzT0lKMUVZM0FfUXROdER4NXpkcHNsMzJtcnI5bjUyc0R0YTFSOWlTQkpKejE2dTExQzhYVVBQTHYtRXlybUY1MkdwVXVTanlvdlF0ZEJXMEhkeTJ0QmtLWHdBVmZQZGpDT3ZtTTFRdmc5M29haGJCUHl1SDN2S2FKdEMxT3l2NFFUTGpvMkRwSFB0UW5WTnIw?oc=5"
+      },
+      {
+        "title": "学校における人工知能の児童安全要件",
+        "content": "学校でのAI利用における児童の安全確保に関する要件が議論されている。AI技術の教育現場への導入が進む中、未成年者のプライバシー保護や倫理的な利用が重要な課題として浮上している。",
+        "source": "Google News",
+        "published_at": "2026-07-11",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBua3dkNlk2YTJ1T0VKRHRZRURYRDUyMFRUVHZsT2xvZW5TUEs0a0d6eHpGOTdMam00ZmhsdF8wdWZXN0Y5SEJnYS1ZMDg0UGUwS1p2OTdLV2R0NDBkc182elFZekx5WkdnYlFnWlR3?oc=5"
+      },
+      {
+        "title": "人工知能がミネソタ州の選挙運動に新たな問題を提起",
+        "content": "ミネソタ州の選挙運動において、人工知能の利用が新たな倫理的・規制上の問題を提起している。AIによる情報操作や誤情報の拡散リスクが懸念され、選挙の公正性に対する影響が議論されている。",
+        "source": "Google News",
+        "published_at": "2026-07-11",
+        "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQeU9ZVGtOV193cE83RUNOQ0J1Rm0tN0ZWU1dwenhZM2REa0JJR2lXc3J3TXRvbmVON25RZUJHQ0VpTHVSeWQzSGFjWkk5Qi1PUkd3aDlkelFtaUt2UmxWU19BTzFsVkhHcHJiNVpYTFBWRkNteGhKaW43MUtwWU0xZVZZMWpYYjZ4dnc?oc=5"
+      },
+      {
+        "title": "ノースダコタ州AI委員会、来週の初会合の議題を公開",
+        "content": "ノースダコタ州のAI委員会が、来週開催される初の会合の議題を公開した。これは州レベルでのAI政策や規制の方向性を議論する初期段階の動きであり、今後の動向が注目される。",
+        "source": "Google News",
+        "published_at": "2026-07-11",
+        "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNal9WN0VQM3A0R0RQWmE0clIyZU01dGNEcW54X1NKSmJ1MDQyWWgtd3RqSGo2WUwyc2NDVG5jNFRvTk5idm9jZGh3Y3dtRjhUbkpCMGJwcFlvMmFxVld4NzlOWFFWTjZMY0haOHg2cVh2RDFDRE81Z0Z3ZEdSbmRldklRZWV1ZXJIRnNHNWRweWp3aU5sM1lOemxqVWxnTTQ?oc=5"
+      },
+      {
+        "title": "Colibrìの概念実証、フロンティアレベルの1.5TB AIモデルを実現 — 25GBのRAMで動作しローカルAI設定に有望",
+        "content": "Colibrìの概念実証が、わずか25GBのRAMで動作する1.5TBのフロンティアレベルAIモデルを実現した。この新しいアプローチは、ローカル環境での高性能AI展開に大きな可能性を示しており、次世代エッジAIの進化を加速するだろう。",
+        "source": "Google News",
+        "published_at": "2026-07-11",
+        "url": "https://news.google.com/rss/articles/CBMirwJBVV95cUxNbmdla0tsTXRYRm1mVXRDS0FsSTNtZnBRSUNlNUJpcDdfZkdMYUNEMEUzX3JzdXVFMnF2Ull5QXIxTmZKOUdvRURHOE5ib2JHeUVTQ2lQTkMtRFBuUmoySDhLc0R1TG9HYUdMelZZdUNTWVRlbHlqYTU2UkZzOTNONmVPa1ZaWHpIUzU5Z3dZQ09WUWtsLS1BZkZQLUt2Ym5vSFB1VUJTLXI5TzFONWZIZmdKVmlDVFFTUTlDSXB3N0ZnMV8xczZDRWI1MmREZ1h1RkV0Tk1UZFhtNFhsWFpSdjNqanN0MWE0LWZzUnUwaVVOUXJLUUJkU2VTSVpBN1gzaFJDRlZlVlNlY0lQZVVZLTRJTUJpV21ONnA4S3JlWFE2VGh4aE9TWGphTHJGT28?oc=5"
+      },
+      {
+        "title": "Metaの積極的なAI戦略：ザッカーバーグ氏のスーパーインテリジェンス構想",
+        "content": "Metaのマーク・ザッカーバーグCEOは、同社の積極的なAI戦略とスーパーインテリジェンス実現に向けたビジョンを語った。これは、MetaがフロンティアAIモデル開発に注力する姿勢を明確にし、長期的な技術目標を示すものである。",
+        "source": "Google News",
+        "published_at": "2026-07-12",
+        "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPVmEteVQ5bVZyYThWRkEzWlZUS3pMX0o0clFQbDZtUWJKOGFIaXdjYzJzbmZ5V1BBVTJGR2Juell5d1pUWE9NMG1xaERURTA5TXgxWUIybzdxbExKMW0zbkx4RmpiLTViNTlyREhXb20tOE01eS1HTDN0UVFxWTF2aHNMOHhjUDQxM3d0YVhqVEV3ZUEwUFY3TmNJSXhZMGk0NHozZ1BBRk12czNyRDNmQUh3NkE2T0ZXRnR3TVZsOE82dGV5aDlzbnpB?oc=5"
+      },
+      {
+        "title": "ChatGPTにおけるOpenAIのCodex：エンジニアリングチーム向けAI",
+        "content": "OpenAIは、ChatGPTにCodexを統合し、エンジニアリングチーム向けのAI機能を提供している。これにより、コード生成やデバッグなどの開発作業が効率化され、ソフトウェア開発の生産性向上が期待される。",
+        "source": "Google News",
+        "published_at": "2026-07-12",
+        "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPVE5xREN4RDBKVzcxTUE3cXJKWEZIRFZ6T2JvenRhVHRjSjRzOExyRUhPY055c2I1MzVMdmJxbHQySDZMMVZ2VFVlSzlWeWxMdGF3NjZxRXd5R18tS3RmcFNWNVpyenZuTGdJRnkxVk5iMGhYNl9lMjdmXzZsWDV6d0YxRlFleW9CZHo3NlZsUUNqNVpkY1NvVTcyRk0xOFdVNV9qMHpva1ZUUWVZMHAxdW9MMA?oc=5"
+      },
+      {
+        "title": "OpenAIがビジネスオペレーションチーム向けにChatGPT Workを発表",
+        "content": "OpenAIは、ビジネスオペレーションチーム向けの新製品「ChatGPT Work」を発表した。これは、企業内の業務効率化を目的としたAIエージェントの進化であり、ビジネス分野でのAI活用をさらに推進するだろう。",
+        "source": "Google News",
+        "published_at": "2026-07-12",
+        "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNNm1lSVBqdFBNbGpVZkhSa1pGMFRERllfcmRVUTZaZ2sxbDFObThreGMxUktwU2ltQy0yeVdTN3BrX1BuR3p0QlJLeFQxQjRsNzNGYVlqNmdKZWQtZm13WHFOc3M3MnE3OWRHcGRQMDlFam05eV83TlE4T3pNNmhFOW40NWhVVWp4OERjdXJZT25WOV9jRjdiajY2TUxXX2VkQksyNVRKVmtPM0J2SnpmTEc5eUZVUVlZdTlGM0dFb0M?oc=5"
+      },
+      {
+        "title": "AppleがOpenAIを企業秘密窃盗で提訴",
+        "content": "AppleはOpenAIに対し、企業秘密の窃盗を理由に訴訟を提起した。これは、主要テクノロジー企業間のAI人材と技術を巡る競争が激化し、法廷闘争に発展したことを示す重大な動きである。",
+        "source": "Google News",
+        "published_at": "2026-07-12",
+        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1CdXNBQU5IVXptOGlYNnFIbXh4b1NWc21rckdCZkx6akNhdjVtSkhRY2xscXNnRWhVTnUydE04VUFjYzduVkZhbGh5QmxreDRQMDd0WXNrX21mVkktSk9TT0RlRWNfRFppZGRFWEV2bWl5VHpoOFE?oc=5"
+      },
+      {
+        "title": "ブラックリストに載った中国企業がOpenAIとGoogleの技術を依然購入：シンガポールの抜け穴",
+        "content": "米国のブラックリストに指定された中国企業が、シンガポールを経由してOpenAIやGoogleのAI技術を依然として購入している。これは、AI技術の輸出規制における国際的な課題と抜け穴の存在を浮き彫りにする。",
+        "source": "Google News",
+        "published_at": "2026-07-12",
+        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPQXlUanBXWWZSZ2xNeFdqb2hZa2VkTHFvaElNSEVPOW1RcDVjemRYWGxyeUJFU0tQUDVCR2xmQzVvdWk1VFk5RGhWajJCWTY5RW5tejk4TjlzdmFOS0JWanVtd20zRXVvdndRdFEzSnA0S0wyaGR0WnJkZHFPa3ltd05oclVsYnJJTjJRUjZzYkhFZWpPLWZTNDE5QzJvT0tlM3c?oc=5"
+      },
+      {
+        "title": "バーナンキ氏がAnthropic AIトラストに参加",
+        "content": "元FRB議長のベン・バーナンキ氏が、主要AI企業AnthropicのAIトラストに加わった。これは、AIの安全性と倫理的開発に対するAnthropicのコミットメントを強化し、信頼性向上を図る動きと見られる。",
+        "source": "Google News",
+        "published_at": "2026-07-12",
+        "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPMDVrSWNxMGtDWFZYNnEyOW56Z1d5TU5yYVBzbWNDdHJ0Q3JzRFYzaEl2NHhGT3hURU5YQ2hoWmhlQk9pdEZfNzJneWRyNHZSeDBlclpkRXV4ckJPMzRKeXMzc1ZERkNCSkNpYXRTeTdZLVpJemVUZl9jWG5pTWs3R29qa3o5bnh5Q0N3dFo4RHNXVEQ4TU5LLW16N3U?oc=5"
+      },
+      {
+        "title": "AnthropicがAIの未来に関する一般からの意見を募集",
+        "content": "Anthropicは、AIの将来的な開発と利用について一般からの意見を募集している。これは、AIの安全性と倫理的アライメントを重視する同社が、社会との対話を通じて責任あるAIの方向性を模索する取り組みである。",
+        "source": "Google News",
+        "published_at": "2026-07-12",
+        "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNd1E4MERDWGpIbUQ0R1FJdzRmZ1hWTENtbVNpcml4Q0JMWmpoekJDMURfNWwwdTFMN1hneU5jYkRaaE5jU3Fxdy1NNWotbllmVW1TejV2bUJ2RzhzQlY2TDM0bERvR0Q0dHJ5MWp1TFlYb1otTVlDbDFqRFhuX2NHNmxpNDhIUUpuLXNXUUtoQjltbFg1Njc4bS1hVWpCTk9ScWtsM25uYw?oc=5"
+      },
+      {
+        "title": "新しいFRBタスクフォースメンバーがケビン・ウォーシュ議長のAI活用姿勢を共有",
+        "content": "米連邦準備制度理事会（FRB）の新しいタスクフォースメンバーが、ケビン・ウォーシュ議長のAI活用に対する積極的な姿勢を共有している。これは、金融政策と経済分析におけるAIの役割拡大を示唆する。",
+        "source": "Google News",
+        "published_at": "2026-07-10",
+        "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPeHM0NmhkamxaejFYOE9WcUpDMnZPYnVoRmlLSVpqYnpBQ3Z2MXZMNmVJZUpVV25sVmJack9TWU5uRjgyNXQwa000QTZpaEY4YWhtdE9CR1JESEg4Um5ZMmY2dC1SMl9oOElMYTZNOUg0M0YwV01FLWpRMk9jcWlsRmtEM1dtZkxZRHfSAY8BQVVfeXFMTVRxNWljeFB2Z3gzZnR3NWR1bVhVRVpyOFlhdXM4WHJHWHFCWGo0ZnVGdEVSLWdYWjUxV25CeThnQmNvZjk2UDF4ZzFtaDcyOWt4TzVDYUZId2lLQXVvNWQ1dzJObm44YUNxeTgwaWZCclg1bWZCSkszWXpUQkZMOXJpN2RSQlN0Q2RvV1BSVGs?oc=5"
+      },
+      {
+        "title": "Metaの新しいAI写真ツール、世間の怒りを買いすでに廃止",
+        "content": "Metaが発表した新しいAI写真ツールが、公開直後に世間からの強い反発を受け、すでに廃止された。これは、AI製品開発における倫理的配慮とユーザー受容性の重要性を示す事例である。",
+        "source": "Google News",
+        "published_at": "2026-07-12",
+        "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQdlp0R3Zhc3dMR1QwOE0xcUx6VDl4b00zejVZQmo2RUV6SzFNSjdqV2M1STZYa2l1QXNpakZ5Wk9Qamt6WUhKa2JSN1FJS29lU08yS2xKQVJTV1Z6VGpVbmpaTlRHYXZQN000dXR0M0NvN3ZyMk9lQWpXOHFIZjhQMjhDc1BIQk9jMG9sbllYSk1lYXpVMDQxaDlaN0RXM1Y2aG5ZMWZqVG4?oc=5"
+      }
+    ],
+    "daily_summary": "今日のAIニュースは、技術の急速な実用化とそれに伴う倫理的・社会的な課題が顕著に表れた一日であった。OpenAIはGPT-5.6をMicrosoft Copilot 365の推奨モデルとし、企業向けAI市場での存在感を強化する一方、ChatGPTの家庭向け展開も進めている。Google CloudもAI生成コードの安全な実行環境を提供し、AIのビジネス活用は着実に広がりを見せている。しかし、MetaがInstagramのAI機能をユーザーの反発を受け削除した事例や、テロ組織によるフロンティアAIの悪用が報じられたことは、AIの倫理的利用と安全性確保の重要性を改めて浮き彫りにした。著作権問題や選挙への影響、教育現場でのAI利用ガイドライン策定など、社会全体でAIとの向き合い方を模索する動きが活発化している。また、MicronがAIメモリチップに大規模投資を発表するなど、基盤技術への投資も加速する一方で、MicrosoftのAI関連排出量増加は環境負荷への懸念を提起した。主要プレイヤー間では、AppleがOpenAIを提訴するなど競争が激化する一方、オープンソースAIの重要性も指摘され、AIエコシステムは複雑な様相を呈している。"
+  },
+  {
     "date": "2026-07-11",
     "articles": [
       {
@@ -45,13 +247,6 @@
         "url": "https://developers.googleblog.com/litertjs-googles-high-performance-web-ai-inference/"
       },
       {
-        "title": "Google Cloud Runサンドボックスがパブリックプレビュー、AI生成コードを安全に実行",
-        "content": "Google Cloud Runサンドボックスがパブリックプレビューとなり、AI生成コードや信頼できないバイナリを安全かつ高速に実行可能にする。既存のCloud Runサービスインスタンス内で軽量な分離実行環境を提供する。",
-        "source": "Google Cloud",
-        "published_at": "2026-07-10",
-        "url": "https://cloud.google.com/blog/topics/developers-practitioners/google-cloud-run-sandboxes-are-in-public-preview/"
-      },
-      {
         "title": "Hugging FaceがPyTorchプロファイリングの深掘り、Attention機構の最適化に焦点",
         "content": "Hugging FaceがPyTorchプロファイリングに関するシリーズの第3弾を公開。Attention機構のプロファイリングに焦点を当て、大規模言語モデルのパフォーマンス最適化におけるその重要性を解説する。",
         "source": "Hugging Face",
@@ -71,13 +266,6 @@
         "source": "Google Cloud",
         "published_at": "2026-07-11",
         "url": "https://cloud.google.com/blog/products/identity-security/contributing-to-uk-financial-sector-resilience-as-a-critical-third-party/"
-      },
-      {
-        "title": "OpenAI、新モデル「GPT-5.6」を発表、Microsoft Copilot 365の推奨モデルに",
-        "content": "OpenAIが新世代モデル「GPT-5.6」をリリースした。サイバーセキュリティを含む多岐にわたる分野で性能が向上し、Microsoft Copilot 365の推奨モデルとして採用される。これにより、企業向け生産性アプリのAI機能が強化される見込みだ。",
-        "source": "TechCrunch",
-        "published_at": "2026-07-10",
-        "url": "https://techcrunch.com/2026/07/09/openai-launches-its-new-family-of-models-with-gpt-5-6/"
       },
       {
         "title": "Meta、AIコーディングアシスタント「Muse Spark 1.1」を発表、大規模エージェントワークロードに対応",
