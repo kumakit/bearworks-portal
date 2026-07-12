@@ -203,6 +203,9 @@ export default function ToukeiPage() {
               オリジナル問題です。公式問題の転載ではなく、学習者が考え方を練習できるように
               題材や数値を独自に設計しています。
             </p>
+            <p className="mt-4 text-muted leading-relaxed">
+              また、アプリの演習とは別に、計算のプロセスや詳細な解説、誤答分析をログイン不要で全文読める「<Link href="/toukei/problems" className="text-accent-purple font-bold hover:underline">オリジナル例題</Link>」も用意しています。
+            </p>
             <div className="mt-6 grid grid-cols-3 gap-3 max-w-xl">
               <div className="rounded-2xl border border-gray-100 bg-gray-50 p-4">
                 <p className="text-2xl font-bold text-primary">100</p>
@@ -217,7 +220,7 @@ export default function ToukeiPage() {
                 <p className="text-xs font-bold text-muted">暗記カード</p>
               </div>
             </div>
-            <div className="mt-8 flex flex-col sm:flex-row gap-3">
+            <div className="mt-8 flex flex-col sm:flex-row flex-wrap gap-3">
               <a
                 href="https://toukei.bearworks.uk/"
                 target="_blank"
@@ -233,6 +236,13 @@ export default function ToukeiPage() {
               >
                 学習ガイドを読む
                 <BookOpen size={16} />
+              </Link>
+              <Link
+                href="/toukei/problems"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-primary text-primary bg-white px-6 py-3.5 text-sm font-bold hover:bg-primary/5 transition-colors"
+              >
+                オリジナル例題を解く
+                <Target size={16} />
               </Link>
               <a
                 href="https://toukei.bearworks.uk/exam"
@@ -442,12 +452,19 @@ export default function ToukeiPage() {
               </div>
             ))}
           </div>
-          <div className="mt-6 pt-4 border-t border-gray-50">
+          <div className="mt-6 pt-4 border-t border-gray-50 flex flex-wrap gap-3">
             <Link
               href="/toukei/guides"
               className="inline-flex items-center justify-center gap-2 rounded-full border border-gray-200 bg-white px-5 py-3 text-sm font-bold text-primary hover:bg-gray-50 transition-colors"
             >
               学習ガイドで弱点対策をする
+              <ArrowRight size={16} />
+            </Link>
+            <Link
+              href="/toukei/problems"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-gray-200 bg-white px-5 py-3 text-sm font-bold text-primary hover:bg-gray-50 transition-colors"
+            >
+              解説付きのオリジナル例題で練習する
               <ArrowRight size={16} />
             </Link>
           </div>

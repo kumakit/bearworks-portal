@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { guides } from "./toukei/guides/guide-data";
+import { problems } from "./toukei/problems/problem-data";
 
 type SitemapEntry = Omit<MetadataRoute.Sitemap[number], "url"> & {
   pathname: string;
@@ -31,6 +32,12 @@ const staticPaths: SitemapEntry[] = [
     priority: 0.8,
   },
   {
+    pathname: "/toukei/problems",
+    lastModified: new Date("2026-07-12"),
+    changeFrequency: "monthly",
+    priority: 0.8,
+  },
+  {
     pathname: "/privacy",
     lastModified: new Date("2026-07-11"),
     changeFrequency: "yearly",
@@ -51,4 +58,15 @@ const guidePaths: SitemapEntry[] = guides.map((guide) => ({
   priority: 0.7,
 }));
 
-export const siteContent: SitemapEntry[] = [...staticPaths, ...guidePaths];
+const problemPaths: SitemapEntry[] = problems.map((problem) => ({
+  pathname: `/toukei/problems/${problem.slug}`,
+  lastModified: new Date(problem.reviewedAt),
+  changeFrequency: "monthly" as const,
+  priority: 0.7,
+}));
+
+export const siteContent: SitemapEntry[] = [
+  ...staticPaths,
+  ...guidePaths,
+  ...problemPaths,
+];

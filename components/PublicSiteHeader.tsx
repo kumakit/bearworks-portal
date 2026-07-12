@@ -30,6 +30,11 @@ export default function PublicSiteHeader() {
             </Link>
           </li>
           <li>
+            <Link href="/toukei/problems" className="hover:text-primary transition-colors">
+              オリジナル例題
+            </Link>
+          </li>
+          <li>
             <Link href="/toukei#question-policy" className="hover:text-primary transition-colors">
               問題作成方針
             </Link>

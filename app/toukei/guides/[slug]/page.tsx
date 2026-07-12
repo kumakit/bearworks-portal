@@ -8,10 +8,12 @@ import {
   Lightbulb,
   AlertTriangle,
   MessageSquare,
+  Target,
 } from "lucide-react";
 import PublicSiteHeader from "@/components/PublicSiteHeader";
 import PublicSiteFooter from "@/components/PublicSiteFooter";
 import { guides } from "../guide-data";
+import { problems } from "../../problems/problem-data";
 
 export const dynamicParams = false;
 
@@ -49,6 +51,10 @@ export default function GuideDetailPage({ params }: PageProps) {
   const relatedGuideObjects = guide.relatedGuides
     .map((slug) => guides.find((g) => g.slug === slug))
     .filter((g): g is typeof guides[0] => !!g);
+
+  const relatedProblems = problems.filter((prob) =>
+    prob.relatedGuideSlugs.includes(guide.slug)
+  );
 
   return (
     <main className="max-w-4xl w-full mx-auto px-4 py-8 md:py-16">
@@ -172,6 +178,36 @@ export default function GuideDetailPage({ params }: PageProps) {
             ))}
           </div>
         </section>
+
+        {/* Related Original Problems */}
+        {relatedProblems.length > 0 && (
+          <section className="mb-8 pt-6 border-t border-gray-100">
+            <h2 className="text-lg font-bold text-primary mb-4 flex items-center gap-2">
+              <Target className="text-accent-purple" size={20} />
+              関連するオリジナル例題
+            </h2>
+            <p className="text-sm text-muted mb-4 leading-relaxed">
+              本ガイドの理解を深めるための、解説・途中計算付きの練習問題です。
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {relatedProblems.map((prob) => (
+                <Link
+                  key={prob.slug}
+                  href={`/toukei/problems/${prob.slug}`}
+                  className="group block rounded-2xl border border-gray-100 bg-gray-50 p-4 hover:border-purple-100 transition-colors"
+                >
+                  <div className="flex items-center gap-1.5 text-xs text-accent-purple font-bold mb-1">
+                    <Target size={12} />
+                    <span>オリジナル例題</span>
+                  </div>
+                  <p className="text-sm font-bold text-primary group-hover:text-accent-purple transition-colors">
+                    {prob.title}
+                  </p>
+                </Link>
+              ))}
+            </div>
+          </section>
+        )}
 
         {/* Contact Navigation */}
         <section className="mb-8 pt-6 border-t border-gray-100">

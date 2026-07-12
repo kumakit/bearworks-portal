@@ -18,8 +18,18 @@ export interface AppLink {
   url: string;
 }
 
+export type GuideSlug =
+  | "learning-roadmap"
+  | "cbt-time-management"
+  | "hypothesis-testing-basics"
+  | "choosing-statistical-tests"
+  | "distribution-selection"
+  | "regression-interpretation"
+  | "anova-and-chi-square"
+  | "sampling-and-bias";
+
 export interface Guide {
-  slug: string;
+  slug: GuideSlug;
   title: string;
   description: string;
   question: string;
@@ -29,7 +39,7 @@ export interface Guide {
   references: Reference[];
   sections: Section[];
   commonMistakes: CommonMistake[];
-  relatedGuides: string[];
+  relatedGuides: GuideSlug[];
   appLinks: AppLink[];
 }
 
