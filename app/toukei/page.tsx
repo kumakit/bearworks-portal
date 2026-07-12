@@ -395,14 +395,16 @@ export default function ToukeiPage() {
             問題作成の方針
           </h2>
           <p className="text-muted leading-relaxed mb-4">
-            問題は、統計検定2級で問われやすい概念、計算手順、ひっかかりやすい選択肢を
-            研究し、オリジナルの設問として作成しています。
-            公式問題集は出題傾向や難易度感を確認するために参照していますが、
-            問題文・選択肢・解説をそのまま転載することはありません。
+            問題は、統計検定2級で問われやすい概念や計算手順を研究し、オリジナルの設問として作成しています。
+            公式問題集等は出題傾向や難易度感を確認するために参照していますが、公式問題の転載・複製ではありません。
           </p>
           <p className="text-muted leading-relaxed mb-6">
-            目標は、答えを暗記することではなく、分布や検定方法を選ぶ根拠、
-            計算式を立てる順序、結果の読み取り方を練習できる状態にすることです。
+            詳しい参照範囲、非公式性の明記、自主確認のプロセスについては「
+            <Link href="/toukei/methodology" className="text-accent-purple font-bold hover:underline inline-flex items-center gap-1">
+              編集・作問方針
+              <ArrowRight size={14} />
+            </Link>
+            」のページにまとめて公開しています。
           </p>
 
           <h3 className="text-xl font-bold text-primary mt-6 mb-3">

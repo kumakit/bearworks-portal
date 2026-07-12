@@ -8,7 +8,7 @@ import PublicSiteFooter from "@/components/PublicSiteFooter";
 export const metadata: Metadata = {
   title: "プライバシーポリシー | bearworks.uk",
   description:
-    "bearworks.uk および提供する各種サービスのプライバシーポリシー、広告配信、アクセス解析ツール、免責事項、著作権について。",
+    "bearworks.uk および提供する各種サービスのプライバシーポリシー、広告配信、Cookie、免責事項、著作権について。",
 };
 
 export default function PrivacyPolicy() {
@@ -50,10 +50,10 @@ export default function PrivacyPolicy() {
               1. 広告の配信について
             </h2>
             <p className="mb-3">
-              当サイト（bearworks.uk およびそのサブドメインのサービス）では、第三者配信の広告サービス「Google AdSense」を利用しています。
+              当サイト（bearworks.uk およびそのサブドメインのサービス）では、環境設定に応じて、第三者配信の広告サービス「Google AdSense」による広告を掲載する場合があります。
             </p>
             <p className="mb-3">
-              広告配信事業者は、ユーザーの興味に応じた広告を表示するためにCookie（クッキー）を使用することがあります。これによってユーザーのブラウザを識別できるようになりますが、個人を特定するものではありません。
+              広告が有効化されている場合、広告配信事業者はユーザーの興味に応じた広告を表示するためにCookie（クッキー）を使用することがあります。これによってユーザーのブラウザを識別できるようになりますが、個人を特定するものではありません。
             </p>
             <p>
               Cookie（クッキー）を無効にする設定およびGoogleアドセンスに関する詳細は「
@@ -71,19 +71,7 @@ export default function PrivacyPolicy() {
 
           <section className="group">
             <h2 className="text-xl font-bold mb-4 text-primary transition-colors">
-              2. アクセス解析ツールについて
-            </h2>
-            <p className="mb-3">
-              当サイトでは、Googleによるアクセス解析ツール「Googleアナリティクス」を利用しています。
-            </p>
-            <p>
-              このGoogleアナリティクスはトラフィックデータの収集のためにCookieを使用しています。このトラフィックデータは匿名で収集されており、個人を特定するものではありません。この機能はCookieを無効にすることで収集を拒否することが出来ますので、お使いのブラウザの設定をご確認ください。
-            </p>
-          </section>
-
-          <section className="group">
-            <h2 className="text-xl font-bold mb-4 text-primary transition-colors">
-              3. 免責事項
+              2. 免責事項
             </h2>
             <p className="mb-3">
               当サイトのコンテンツ・情報につきまして、可能な限り正確な情報を掲載するよう努めておりますが、誤情報が入り込んだり、情報が古くなっていることもございます。
@@ -98,20 +86,19 @@ export default function PrivacyPolicy() {
 
           <section className="group">
             <h2 className="text-xl font-bold mb-4 text-primary transition-colors">
-              4. 著作権について
+              3. 著作権について
             </h2>
             <p className="mb-3">
               当サイトで掲載している文章や画像などにつきましては、無断転載することを禁止します。
             </p>
             <p>
-              当サイトは著作権や肖像権の侵害を目的としたものではありません。著作権や肖像権に関して問題がございましたら、お問い合わせページよりご連絡ください。迅速に対応いたします。
+              当サイトは著作権や肖像権の侵害を目的としたものではありません。著作権や肖像権に関して問題がございましたら、<Link href="/contact" className="text-accent-cyan hover:text-cyan-600 hover:underline transition-colors">お問い合わせページ</Link> よりご連絡ください。迅速に対応いたします。
             </p>
           </section>
 
-          <div className="pt-8 border-t border-gray-100">
-            <p className="text-sm font-mono text-muted/60">
-              初出掲載日：2026年6月14日
-            </p>
+          <div className="pt-8 border-t border-gray-100 flex flex-col gap-1 text-sm font-mono text-muted/60">
+            <p>初出掲載日：2026年6月14日</p>
+            <p>最終更新日：2026年7月12日</p>
           </div>
         </div>
       </div>

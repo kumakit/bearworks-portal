@@ -38,6 +38,12 @@ const staticPaths: SitemapEntry[] = [
     priority: 0.8,
   },
   {
+    pathname: "/toukei/methodology",
+    lastModified: new Date("2026-07-12"),
+    changeFrequency: "monthly",
+    priority: 0.8,
+  },
+  {
     pathname: "/privacy",
     lastModified: new Date("2026-07-11"),
     changeFrequency: "yearly",
