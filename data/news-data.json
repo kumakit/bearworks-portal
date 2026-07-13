@@ -1,5 +1,200 @@
 [
   {
+    "date": "2026-07-14",
+    "articles": [
+      {
+        "title": "GKEにおけるAIサプライチェーンの保護：自動AI BOMのためのk8s-aibomを発表",
+        "content": "Google Cloudは、Kubernetes上でAIワークロードのセキュリティを管理するオープンソースツール「k8s-aibom」を発表した。これは、AIランタイムを自動検出し、標準の機械学習部品表（ML-BOM）を生成することで、開発者の摩擦なくAIプロジェクトの安全な本番移行を支援する。AIサプライチェーンの透明性とセキュリティ向上に貢献する。",
+        "source": "Google Cloud",
+        "published_at": "2026-07-14",
+        "url": "https://cloud.google.com/blog/products/identity-security/introducing-k8s-aibom-on-gke-for-automated-ai-bills-of-materials"
+      },
+      {
+        "title": "Android、Google Cloud、Nexus SDVでAI定義車両を構築",
+        "content": "GoogleはAndroid Automotive OS (AAOS) SDVとGoogle Cloudを活用し、AI定義車両の構築を推進している。パートナーのValtechはNexus SDVプラットフォームでエージェント型モビリティを実現し、自動車OEM向けに次世代コネクテッド車両の基盤を提供する。AIの自動車分野への本格的な応用を示す。",
+        "source": "Google Cloud",
+        "published_at": "2026-07-14",
+        "url": "https://cloud.google.com/blog/products/databases/nexus-sdv-uses-bigtable-android-automotive-for-agentic-vehicles"
+      },
+      {
+        "title": "サティア・ナデラ氏、AI利用企業に衝撃的な警告を発する",
+        "content": "Microsoftのサティア・ナデラCEOが、AnthropicやOpenAIのようなプロプライエタリモデルを使用する企業に対し、その危険性について警告を発した。これはAIの安全性とガバナンスに関する主要企業からの重要なメッセージであり、AI導入におけるリスク管理の必要性を強調している。",
+        "source": "TechCrunch",
+        "published_at": "2026-07-14",
+        "url": "https://techcrunch.com/2026/07/13/satya-nadella-has-issued-a-shocking-warning-to-companies-using-ai"
+      },
+      {
+        "title": "AppleのOpenAIに対する企業秘密訴訟における最も過激な主張",
+        "content": "AppleがOpenAIを相手取った企業秘密訴訟で、従業員がAppleシステムへの不正アクセスについて冗談を言っていた疑惑や、求職者にAppleハードウェア持参を求めたとされる主張が明らかになった。これは主要AI企業間の法的紛争として注目され、AI開発における倫理と情報管理の重要性を浮き彫りにする。",
+        "source": "TechCrunch",
+        "published_at": "2026-07-14",
+        "url": "https://techcrunch.com/2026/07/13/the-wildest-allegations-in-apples-trade-secrets-lawsuit-against-openai"
+      },
+      {
+        "title": "Anthropic、米国に次ぐ最大の市場であるインドでClaudeの価格ローカライズを開始",
+        "content": "Anthropicが、AIモデルClaudeのサブスクリプションプランをインド向けに現地通貨建てで提供開始した。インドは米国に次ぐ最大の市場であり、この価格戦略はClaudeのグローバル展開と市場浸透を加速させる重要なビジネス動向である。AIサービスの地域戦略の深化を示す。",
+        "source": "TechCrunch",
+        "published_at": "2026-07-14",
+        "url": "https://techcrunch.com/2026/07/13/anthropic-starts-localizing-claude-pricing-for-india-its-biggest-market-after-the-us"
+      },
+      {
+        "title": "Waze、新たなAI搭載機能とカスタマイズアップデートを追加",
+        "content": "WazeがGoogleのGemini AIアシスタントを搭載した新機能とカスタマイズアップデートを発表した。これはGoogleがGeminiを自社製品全体に統合する広範な取り組みの一環であり、Wazeの競合サービスに対する競争力強化を図るものだ。主要AIエージェントの製品への統合が進む。",
+        "source": "TechCrunch",
+        "published_at": "2026-07-13",
+        "url": "https://techcrunch.com/2026/07/13/waze-adds-new-ai-powered-features-and-customization-updates"
+      },
+      {
+        "title": "ノーベル賞受賞者を含む200名以上の専門家がAIの経済的影響への対策を要請",
+        "content": "ノーベル賞受賞者や経済学者、テクノロジーリーダーを含む200名以上の専門家が、AIが雇用に与える脅威と経済的影響について警告を発し、対策を講じるよう強く求めた。これはAIの安全性と社会へのアライメントに関する国際的な議論を加速させる動きである。",
+        "source": "Google News",
+        "published_at": "2026-07-13",
+        "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQTUt1OTNadWljZVE1WXI3UzhWbC15R3h2eVpFWXFkY2wzeTcyWGNsaFZnYjc5TFhzTE1wX1RRQmdSRGJ5VkFRRzUxZUJ0N0tYdXBkZk1IdGlETTRfaDVXbUs2aTAtcjI3TU9UOFZKU1A3SEs0R25wWWNYTlFyZDZ2ejRGUkJiMjdYaFdOTE9zbmF5QTRxTTFzSmxGWHZqOUhYS1RfNFNGVFdYN00?oc=5"
+      },
+      {
+        "title": "バークレー郡で人工知能および自律型軍事システムのメーカーが発表される",
+        "content": "バークレー郡で、人工知能および自律型軍事システムを製造する企業の設立が発表された。これはAI技術の軍事分野への応用が進展していることを示し、関連する産業インフラの発展に寄与する動きである。AIの特定分野へのビジネス展開が具体化している。",
+        "source": "Google News",
+        "published_at": "2026-07-14",
+        "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPRmc1cUdKYm5LRUlmT3lCUlVCbU53Zk1oRTBuNTg5czgteC1vQjVxSm93QzNCcHk5YUxFWUpSTmdneXc0dEZGMU1TaWpRLXVpejRPbzlSdEg3RGl3NE5KZ3BrTXdjemxsWjRWeV9YX3ZoSTdmMmMycUlNbllkMGVBX2RfNUZQdlU2TWVQVUgzVEgzNlpVRG56QWY3MWhNWTFKZ0thX3kxNVBHTjdEQkhkN1Q2RnpNN2Jxbmo4WW5KQW9SNDk5RjROS0lLOFpocGUtRGRKLTFWcWdiTG50OVl3?oc=5"
+      },
+      {
+        "title": "デラウェア州務長官がNorm Aiと提携し、エージェント向け法的エンティティAICを提案",
+        "content": "デラウェア州務長官がNorm Aiと協力し、AIエージェントのための新たな法的エンティティ「AIC」の設立を提案した。これはAIエージェントの法的責任とガバナンスに関する画期的な動きである。",
+        "source": "Google News",
+        "published_at": "2026-07-14",
+        "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPMFZMMTdxQVhCWnZtYXg5VHgwcDVCeVdoZ1FUc0pmNWliM3hvS3MyNjl5Z0FIQXdVR0xLUjl5b1hINnBBYlBQNlNBUUZ0RkdmVTN6cXJNdVhkRzFGeEExd1pDS2Z0WUlmMElvdDllWkczbHdoMU5DeTVoVmhiQ0J4eDF0cm45bV95T2JJRnRMa296RnN2?oc=5"
+      },
+      {
+        "title": "Amazon SageMaker AIで生成AI推論推奨機能のUIをローンチ",
+        "content": "Amazon Web Servicesが、Amazon SageMaker AIにおいて生成AIの推論推奨機能のユーザーインターフェースを公開した。これにより、開発者は生成AIモデルの最適な推論設定を容易に特定できる。",
+        "source": "Google News",
+        "published_at": "2026-07-14",
+        "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNYThYclBjamhlY3VjM0w3YzJJUUZKZnZySGhhU1J4VWNJWFF6YnJGcDMwOTE5REtZbXBJNDR6M0l5cjg5X25HbHNKZzRZZEV4UE1mZ1M5eWhsZGVtRlptRUtZbmtFTEQ2ZUs1VDRWV1FVRExsX2dOdGRiX2JTYmIySXNXWWwzcnIzRXNlS1l3S01Jb3lxQ1NNc0UyTkxybFNlWExNY1FOdTh6TFVES0VKV1hfMHlZZXZPZGI1QzZVNE5LUFlt?oc=5"
+      },
+      {
+        "title": "Amazon BedrockでBluesightのAgentic AIソリューションを構築",
+        "content": "AWSの公式ブログが、Amazon Bedrockを活用してBluesightがエージェントAIソリューションを構築した事例を紹介した。これにより、企業がBedrockを用いて高度なAIエージェントを開発する可能性が示された。",
+        "source": "Google News",
+        "published_at": "2026-07-14",
+        "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOYi1BVHd0Z0lVNkxMeDFTaWMycldub1dlc05VMWhjM3AzandNR3poZkVJeTdCXzVjLUdXR2kwdHE1ckV4NVlIeWpoLUlBS3dFNG1KQ3RydDd5MVhCbzM0UW1DRDd6WVVuQUduVUVQRGxKeUtsdDd1QWlBX3hoZ0xBZlNqWFhPeGdfdUtRVS1UM241RUpzTFdTMWFCZUxHdElUR2FBbERiYW1sZ2VZRUdtZQ?oc=5"
+      },
+      {
+        "title": "AIエージェントがロボットの重要な訓練データ取得を助ける仮想プレイグラウンドを生成",
+        "content": "MITの研究者が、AIエージェントが仮想環境を生成し、ロボットが多様な訓練データを効率的に取得できる技術を開発した。これはロボット学習の効率化と汎用性向上に貢献する。",
+        "source": "Google News",
+        "published_at": "2026-07-14",
+        "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPU1d5RERIVmlzempEVHVzZGVER2JGMEVRcGdIUDZtZGppWFF0SEFfaEluYm5SZzZkeWFMOUxXcWkwb3NraDdYVUxKaG92UFFVZ0hfTDkxdnJ5LWl4bkx2eTdaNFNmTDJQLW9lay1oQ3Iyb0tfakVRQmVPQUlKTnNwOWVxOTNjVVJzVTh3RHhxLXRJRFJwYVIyZ3FGRTlNWHQyU095c3pDUHJpNGQ4?oc=5"
+      },
+      {
+        "title": "Meta、プライバシー懸念を受けInstagramのAI機能を停止",
+        "content": "Metaがプライバシーに関する懸念を受け、Instagramの一部のAI機能を一時的に停止した。これは大手テクノロジー企業がAI機能導入においてプライバシー保護を重視する姿勢を示している。",
+        "source": "Google News",
+        "published_at": "2026-07-14",
+        "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNTFpwNWxseWR6T2xsZHRrUXFlLWN1ZTlTZHhIV3ozUk5rXzlHbndjdHJWa09qcHlTd1pjQnc2UHQwd2VtMURWeHZqNjJwY2pOUzRxdTJCbjY3WnQ2am45MWw5RnFTdWVidGZ4c0hsUUkwSGViM2lwNTE3R0NmOGZEd1dlZ1dZSS1UcWdZV2loZ0tVRHd4VXA1V1Nfc0lTR0RvenBfNFVUNA?oc=5"
+      },
+      {
+        "title": "イリノイ州の画期的なAI措置はビッグテックを超えた影響を予兆",
+        "content": "イリノイ州で導入された画期的なAI規制措置が、ビッグテック企業だけでなく広範な産業に影響を与える可能性が報じられた。これはAIガバナンスの新たな基準を確立する動きである。",
+        "source": "Google News",
+        "published_at": "2026-07-14",
+        "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQbjNKNTE5S0RMVnl2WlJlMjJDSXN4QjRVRy1BeUo1bGZxRXNvcnZwb05nR0pIQlJRdEhSQm94aE5ITVpzVDRRdzNoUnY4Z2JVVzZOQmFVcVAxQ3VDdktyazdyVkM2UnRnS2FKUEdzbEFkcWQyYi0xOVRtUHU3RjRpUURiM0J1RGZqLUtaeWpVV2JaRTZjdDh6VFloUlNPY1ZXYkF4VjZwNjJRa2c0MHA3YkdtOE50TC1v?oc=5"
+      },
+      {
+        "title": "イリノイ州のAI規制の鍵は独立した安全性レビューにあり得る",
+        "content": "イリノイ州のAI規制において、独立した安全性レビューが重要な要素となる可能性が指摘された。これはAIの信頼性と安全性を確保するための新たな規制アプローチを示唆している。",
+        "source": "Google News",
+        "published_at": "2026-07-13",
+        "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNd3g0ckw5eTI3NHdfTFFCSXhoUzNuZ09WQmhXRjd5YU1EWWlYd2FjRExtOGttVXhXTjVJWlFhNmdkc3IzZmxzaGREVnZlbS1aMEtETHAwVWdfdzROaU9CNmlIY3FROGl0R1JKWTM2dHVVekk5MWo4R01qajMwRTdsdVZVWlo0QTFTU3M5VEgwbEd6blpCZk13ZTNDX0FSX1dsZW43djNVMHBjTkZNMDNMdWdfSGZRM2VXQXlHcF9xZm5HUUp4Snc4MUVSRVdxbEZrNGfSAdcBQVVfeXFMTzk2SXE0aUluWTFLX01LT2NJRGRSQUtOZ1plM0N1UXdEeUs3MVE5dlo3eng0bjJPSDFQZjFweTZsV2Y1elZnMkpDZTNmWmxqZ0FLaTF1MV9pRDhjSzV5VXZEM0VMa3dyX0xkUXhXMWcwdXpTd0R1QzhQRHhpa0h4SmwwaW5sSDhOM29BaktsQU9xbWpOV0hMTXB2cXJfZmVjdmpxWlMxZ2hEampMT0gxVXFhdnVkVTQtZEF4RGVpalgzQ2tyck1NNVEyQUZwT1pSdldfLTRlcGs?oc=5"
+      },
+      {
+        "title": "FCAの小売金融サービスにおけるAIに関するミルズレビュー：さらなる規制変更が目前に",
+        "content": "英国金融行動監視機構（FCA）のミルズレビューが、小売金融サービスにおけるAI利用に関するさらなる規制変更を示唆した。AIの責任ある導入に向けた規制強化の動きが加速している。",
+        "source": "Google News",
+        "published_at": "2026-07-14",
+        "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQYlNuRkRQek5wakZzM1E3N1dCVHVBRi1OY3pNV0IwY19Uc3ZCMGtlY3d1d1ZBUXJDM0FJMmFOR0FIMFVxU3dVVEdyYUxYYTJYX3g4Z3lLVUZOMkF1LWNYZUlfLXB6cDktYlFvbUtUVmxaRDg0NF9YRV9Rc3BXNnFmWQ?oc=5"
+      },
+      {
+        "title": "AIに電力を供給するためガス発電所が増加する中、再生可能エネルギー推進派はよりクリーンな代替案を求める",
+        "content": "AIデータセンターの電力需要増大に伴いガス発電所の建設が進む中、再生可能エネルギー推進団体はよりクリーンな電力源への移行を求めている。AIインフラの環境負荷が課題となっている。",
+        "source": "Google News",
+        "published_at": "2026-07-14",
+        "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPb1JIeDU0eE5HSmdnWnZPbEFXMkd6TGY4eGx0alYwbGpzU0xhd1hMaUZwQjd5ZFByWkc1VFNWLXZYemZ6akxzNUN0VFFhRThseEJjdVhjTVRTZTcyRm54cDhaRk5vVDZldjZTOXVkOTB2cVdOd0U4SGt1Zlo2VkM1Y2ZyRzNqNWUxUWN3MDloX1EzT0FiVEVEZUFrcVVSUFlyMDhRMnRjVXJpZVp3SkhVdUxqTHRTYkd4cEZSam9GVU55aTcxSnBzNlg1TThjRjZPMi1WU1Bqa3kxdll3SlpNdFoyd1c?oc=5"
+      },
+      {
+        "title": "バージニア州、AI推進政策にもかかわらずデータセンター建設に冷淡な姿勢",
+        "content": "バージニア州がAI技術を推進する政策を採る一方で、その基盤となるデータセンターの建設に対しては慎重な姿勢を見せている。AIインフラ整備における州政府の政策矛盾が浮き彫りになった。",
+        "source": "Google News",
+        "published_at": "2026-07-13",
+        "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPaEg3alBIVHdtOU10c1ZsbnlzTWJ1dEdENy1Hejd3MDF3OVpyMzJsdnZSMGNjSjgycG1wc1NMQWtVd1BKVE1yM1RxbzB5bnNTR1ZDdW1UQmpJeVpUWUpGcmMwc3U4c0ZXZ09xYVZrVTg3MU03TFRITkVrYnVqX2FmeVc0RG1FUUdOSjFYX096aDRqblJCbE5DOU5Yc3NmTUYyU1pJYllBZ054VnZOOHA0MUtVcVZrOHJZWnM2dU9HdFQyTnBvRU8yYVUyd05jQjN4RjQ1UklzaTVqdHpu?oc=5"
+      },
+      {
+        "title": "大規模なAI構築が最新のインフレ脅威をもたらす：消費者はラップトップと電気代により多く支払う",
+        "content": "大規模なAIインフラ構築が、ラップトップや電気代の高騰を通じて消費者に新たなインフレ圧力をもたらしている。AI需要の急増が経済全体に影響を与え始めている。",
+        "source": "Google News",
+        "published_at": "2026-07-13",
+        "url": "https://news.google.com/rss/articles/CBMipAJBVV95cUxQYTN6M2REWk14WnVULTdnSG1ZX2tabnVIejlFNFZrUXpZLUx4LVdlY09sUHA1OHBKbENiU21vbFdTdmNUdWt6ZHNEeXd2MHlmaW40OVg5cUdnYkgzck9SWVFrU2paM2M3a2MwRmNYMnF1cjcxaW9PM3FzR0djZHFrd3hQbFR4dVpSYUhjdHdDMEptYzNuLXBmcGk4b0RtVzZrb0JEaEhjZ01Wd3VZQ0JISy1fVHdSMmFKeUYxNUNPRWYwbXY3OGdIZkZoYkR6UmdxWXN2RnF1c0NabXAwUFpxWUs4UDFxa2dnMi1FN0xSOEF3X2xEYm0xV0tBNk05ZkJOcHhZV29rc25HdVpYeXIwc2I1UldkUTIyVEhFV3RTYVlqWDJ3?oc=5"
+      },
+      {
+        "title": "攻撃者がAI生成と疑われるPowerShellスクリプトを使用しActive Directoryをマッピング",
+        "content": "攻撃者がAIによって生成されたとみられるPowerShellスクリプトを悪用し、Active Directoryの偵察を行った。これはAIがサイバー攻撃に利用される新たな脅威を示唆している。",
+        "source": "Google News",
+        "published_at": "2026-07-13",
+        "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPUi0yOFVBaXJlZUtLYjdEaUdVc3gxMVVtZVRfeU40cWRaXzRpUk9qUWw5eUo1cjEtZWIzMFFnX2hjWUJRbmxPWlZwUVV1bzNkUEw4SkhZTE9EdnMwcEs5NUItbm1XME9IWHFIcUhoZFU4cldRRXI1cHUzY01uclkzZw?oc=5"
+      },
+      {
+        "title": "テスラのAI5、2nmクラスノードでサムスンファウンドリがテープアウト — TSMCでのテープアウトから数ヶ月後、まもなく生産開始",
+        "content": "テスラが自社開発AIチップ「AI5」の2nmクラスノード版をサムスンファウンドリでテープアウトした。これは、AI処理能力の飛躍的向上と、半導体製造における競争激化を示す重要な進展である。",
+        "source": "Google News",
+        "published_at": "2026-07-14",
+        "url": "https://news.google.com/rss/articles/CBMihwJBVV95cUxOYThpU0wtX2FSbF9UNlhKdk1pSkN4cG5GdDF2YzMxcTlWUGJhM1VKTVEwakpmOGt2LUowdm9kanFDNndJdTBxaFk1Sk9oU3BhX09wVENfeEtDcjNaLWpQcU1IOFRjUUNrcXdza3lveWRCSzdrWS1DbTFETTdpbmh6NnZRVEN2d2s4UU9sTnczQUxUbFprTnNJUERvelJhZUkySkp3SURpck5xRExLX1NZLTM2UGxOLXJaZ2ZTcG8tUlB5VkxlZFRMdFdrUjFuOVRCZzhQOHQwSGI3U2w4dEJmamRYNEJVd2tzbVV3cVE1MG84TlJGTUZ5eDdlZGN0Z3FRbFpfTlZraw?oc=5"
+      },
+      {
+        "title": "ZhipuがオープンソースAIを発表、40億ドルの株式売却で株価上昇",
+        "content": "中国のAI企業Zhipuが新たなオープンソースAIモデルを発表した。これは、AI技術の民主化と競争を促進し、同社の市場評価を高める重要な動きであり、業界に大きな影響を与える。",
+        "source": "Google News",
+        "published_at": "2026-07-14",
+        "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPWjA3T3FDY0RlRzZISklxWUdLdzk1WVR4WkZ0TXpPbThhUDVVTVhEcWw3WG1pWTM5Q3J0RTNFXzRJMEMtc3J4YnRCVDA2MFdXc0RtUTB2VFVhY0tKMldmOVhXOUVqLURidXg2MXJPRVJkX2Jtc25TM3FoR2o5OEhRT0M2clhVYlpHT1B0UUNpTTlKREZQZXZF?oc=5"
+      },
+      {
+        "title": "中国、大規模モデルのリスクを規制当局が標的とする中、AI安全ベンチマークに取り組む",
+        "content": "中国が大規模AIモデルのリスクに対応するため、AI安全ベンチマークの開発を進めている。これは、AIの安全性とアライメントに関する国際的な議論に影響を与え、今後の規制動向を左右する可能性がある。",
+        "source": "Google News",
+        "published_at": "2026-07-13",
+        "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOQUg0NjVyQVZEZGxqeTRwcHkxZWF1WjlIZElEMDJZX3ZZaklMdGl5NjAyUU5JMVhBWV9MaDZIT2M2cjBrTjJsLW5MQ0ZYc3c2ZGhwR2gzclpGcVF3QUlUQnFHcDNNdENtX1RoUk9va0tCZWVDNDZoXzRfXzJ1VGRKcE5XWENUaXRtQUNKUXhoYnp3cnJoOWFfRHNRYjFPVjlqXzY2UGNFTHlCazRhMFHSAa4BQVVfeXFMUE9ZS19qLW5ITGtZZllpV1J4TVYtQkNTWWFCbE90M3dkcTJlbndXYlFLSVRxazZEZTQ4NUJYQzhLTEpmUTJ2YW42a29Wd2xxRmJhcEJhMFIwalptOUhFMUc4ak5tUWdLSlR2Q2k1U3RLOF9rQnJWTXVYNUNzMlZLZ3NBcXpwdE1VTUV1MzA1NEVYVFE2NHctZmVjc1g5a2hCZlYyaFNWcGhHZHJqYW53?oc=5"
+      },
+      {
+        "title": "テックリーダーとエコノミストが労働者保護のためのAIガードレールを要求",
+        "content": "テクノロジー業界のリーダーやエコノミストが、AIが労働市場に与える影響を考慮し、労働者を保護するためのAI規制の枠組み（ガードレール）の導入を求めている。これは、AIの社会的影響への対応を促す。",
+        "source": "Google News",
+        "published_at": "2026-07-14",
+        "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOTm1SV0pON3l6LXdmSzBhWEpoYjFudnN6YkhjR05WNnpCaldmTC11VlN1WGYzbnljenk2T0lhQWhnTVctc1BSeFNNck1GekV4X1NFOUNyVmNFeGN6b1BMOVk2N0RQNnVGZ2lvSHhVU1Bhd2RLS0pnSFp1cndkYmJrSG1STzBZaU5YZ041cnk1VjEzVl9Ed092NS10Q1BOZmtuajFyQ3ljQS1ycHA5S1B6QkV0VEREdWc?oc=5"
+      },
+      {
+        "title": "イスラエル、ヘルスケア分野で初のAI規制サンドボックスを開始",
+        "content": "イスラエルがヘルスケア分野におけるAI技術の安全かつ責任ある開発を促進するため、初の規制サンドボックスを立ち上げた。これにより、新技術の迅速な導入と規制のバランスが図られる。",
+        "source": "Google News",
+        "published_at": "2026-07-13",
+        "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOODNYdkJuQmJscjdsS0NvTmJkOUxBaTg0bl83SUhHdWV0S2RVdmZkbzJYamVSRW1EdzFCaTN6M0FZUUNRMDdPQmdqbTkyb2NiTW5vWExvTmRyWEFsWUZfZDlZZVM0ejAyU2hKZ3JWN3gxZnVqTVZLbUNHZmhiWjE3NUhvQmR3REI4eGNfN3dsT2FUX0wxbkw4d2xnRnM5R05Ed3B3aURuZ0dEUk13NVdlcFBFVl9jclNwSjhMMldxcFRXMnZtR3NGQg?oc=5"
+      },
+      {
+        "title": "軍事AI時代の民間人保護",
+        "content": "軍事AIの進化に伴い、紛争における民間人保護の重要性が増している。AI兵器の倫理的・法的側面に関する国際的な議論が活発化しており、安全保障上の課題となっている。",
+        "source": "Google News",
+        "published_at": "2026-07-13",
+        "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNV0NJa2NCSEo3Z21nTW5QdXV2dmhxU3dVd1pHdURPdnZTd1VuRUlJUEN0aURvUlpfU0VPUkN6c2hVQTZ4YzhNdFNaOGJaTmdMYTRxMDAySzg4NmhTOWUwVE5ReFpHNlVIdmxwLVFHV3RvSXhibWlNbTBWS1NHLXdmZUItWQ?oc=5"
+      },
+      {
+        "title": "インドラ・グループ、AENORから人工知能の責任ある利用に関する認証をスペイン企業として初めて取得",
+        "content": "スペインのインドラ・グループが、AENORからAIの責任ある利用に関する認証を国内企業として初めて取得した。これは、AIの倫理的かつ安全な開発・導入に向けた重要な一歩である。",
+        "source": "Google News",
+        "published_at": "2026-07-14",
+        "url": "https://news.google.com/rss/articles/CBMirAJBVV95cUxNbW5WOGFMTDB2VEsyYm9FRF9YN3ZLbnVaSWY5U3NfcW1WVWRrTC13eWZxUkY1MkVKQkxrOHk3Q0hXSlZ2ekxaMFh5OWxLc1NIcDFyWXZoa2FDb0ZUeWlVV3RRVXgxRU53LWJSRXJpZklxTl93dlYxdVBjZWZxTHI5U2lpaHlkZzdLY3FCTjdjWEdGMlB3ZW1iLXVRTXlRdHhjNGZJQ3pBXzh5eWI2amk5ME95YjFERFhpVmw2VklQNXBLTl9TV2dXZXhOYUU1TlJEZHZYM2FkZldMSHZ4TFJrSmozOTZlenlhVjl6bDJscFlLRGg5X0lmeDM2bkVVTU9yQmlLcm43dG5DQ2psWVZodER5SnNfenRqUmtpUDM3TXBSZVNtLTBtSnljRjnSAbICQVVfeXFMTUlHeDlrT19ZdFJsSVNoN3hEbTBIcncweVJ1MFlEXzYxdndsT2pZUEZ3Um16ZGVjRUp1TVhxN2FiVFJ6ZmdNVjdnSWFtbDluQzZqMGpHV2FZV1lBa1lFRlkwX2pGT3J6dmwzQU1zRnVMa3ZXbHZWbHF2RWw1NHFPemVySm1HYzlxTXliX2h0bEJJUkl4ZHRSRXRaa3JRZTQ0R3lmZmhDOUk0ZFFncXNTVHFwRTNvdDd4cFpDSEptOWNMOHVaMzc0NW5VX19XN3ljNFRwRVNpXzZhRVpDdk0wcE5aUXdUQ1V4RjU3bW9tWjVGWmx2d2dXcGQyenZ2SThiYWxNSHNpM1N5SnNTWDUxOXhZUVpiQWdSUmF3RkFxV2lJNjFBSXRBbjVWOTFlSUFWQUt3?oc=5"
+      }
+    ],
+    "daily_summary": "本日のAIニュースは、Google CloudのAIサプライチェーン保護ツール発表やAndroid Automotive OSへのAI統合など、技術の社会実装と製品・サービスへの組み込みが深化する一方で、安全性とガバナンスに関する議論が活発化していることを示した。Microsoftのサティア・ナデラCEOはプロプライエタリモデルの危険性を警告し、AppleとOpenAIの企業秘密訴訟は情報管理の重要性を浮き彫りにした。各国・地域でAI規制の具体化が進み、専門家はAIの経済的影響や雇用への脅威に対し、労働者保護のガードレールを要求している。AIインフラの電力需要増大による環境負荷やインフレへの影響、サイバー攻撃へのAI悪用事例も報告され、技術の負の側面への対策が急務である。グローバルではAnthropicの市場戦略や中国のAI安全ベンチマークへの取り組みなど、国際的な競争と協調の動きが加速している。"
+  },
+  {
     "date": "2026-07-13",
     "articles": [
       {
@@ -115,13 +310,6 @@
         "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOVE1pSEhsMXRXQVk3dzRKR21jNk1RTzA3WTlVUU5qSGNHSzJPdFNLZ0Y0VDdlQ0loenJMZm5ULUQ4OUdyc1A5cVVtSExXUXE2azg0MTJxZ1dBSWVNOW5YVFd5bl9nQ2xOTThRODR3dGU5WG5RS3N5Z0RTczh0ZkhVWklHZmU5SzF4LXNWOTVhbm1UVncxRWc?oc=5"
       },
       {
-        "title": "イリノイ州のAI規制、独立した安全審査が鍵に",
-        "content": "イリノイ州の人工知能規制において、独立した安全審査が重要な要素となる可能性が指摘された。これにより、AIシステムの信頼性と安全性の確保が目指される。",
-        "source": "Google News",
-        "published_at": "2026-07-13",
-        "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOTnhSUmV1ZFFKMGVvZlduLVAxQWpCc2I3b0hnM3dEOUM4dm40TUEtaUFqTXpQRWk2YUZQY0ZRcnFha3hyVTRrTExRbTBieFQwVVBKWDNuZkpvN0UtY1kwZ2JCcGhvRGZ3clhWWWg1c082NEhpTFpSeWVuQ29mTGZ1ZG1RTnZEWFFadnBPMUpMblFtS3gycnBwTUlwWm9KRGpaYnJGaU4xVlJMcmZp?oc=5"
-      },
-      {
         "title": "リーヴス州知事がミシシッピ州のAIガイドを発表",
         "content": "ミシシッピ州知事が州の人工知能ガイドを公開した。これは州内でのAI技術の責任ある利用を促進し、ガバナンスの枠組みを提供するものと見られる。",
         "source": "Google News",
@@ -175,13 +363,6 @@
         "source": "TechCrunch",
         "published_at": "2026-07-10",
         "url": "https://techcrunch.com/2026/07/09/fidji-simo-steps-down-from-openais-no-2-role"
-      },
-      {
-        "title": "Meta、Instagramの物議を醸したAI機能を批判を受け削除",
-        "content": "MetaがInstagramで導入したAI機能に対し、ユーザーからの強い反発を受け、当該機能を削除した。同社は、意図した創造的ツールとしての役割を果たせず、ユーザーのフィードバックを尊重したと説明している。",
-        "source": "TechCrunch",
-        "published_at": "2026-07-11",
-        "url": "https://techcrunch.com/2026/07/10/meta-removes-controversial-ai-feature-on-instagram-after-backlash"
       },
       {
         "title": "Hugging Face CEO、企業がAIを「借りる」時代は終わったと語る",
@@ -526,13 +707,6 @@
         "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQU2lYVmp1OHRsUDB1M3VLb1RQSWhzT29qdzhya3JKdFhFSk5NSHlSam9WaDJLcXIxU0Q0VEQ1Ti03SDgtQTRUMmQtVmRCbVA3aE0yX2xxSnNDYXhBQkhmV3JmbU11bFhWSTVIYUpwXzhublpVeVlmMlBYS0Z0RjJ1NFRJdkhxMWJCamhpU0lKLUtoOXdPaEFhQWFHVDZDVy1NZ252Y1lZZkVHT19QZk1YRzVUYmVwc3lMV084?oc=5"
       },
       {
-        "title": "KTern.AI、Amazon Bedrock AgentCoreを活用しSAP向けエージェントAIを構築",
-        "content": "KTern.AIがAmazon Bedrock AgentCoreを利用し、SAPシステム向けの高度なエージェントAIソリューションを開発した。これにより、SAP環境での業務自動化とインテリジェントな意思決定支援が強化される。",
-        "source": "Google News",
-        "published_at": "2026-07-11",
-        "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOc0ZBbWdwb0JoNWxLZlpGZF96S0JHeklnOEJYNXpPb1NadHBVX1JmMkszdGxiNHkzVndYZlRCYS1SelZVS2F5dzMta2lsYXlZTFVJTVdnRTNIM0pTbFktVWttOWVPa1VCcWxaOW10XzdMY3Bzb3ktamxzR1BFNkpXaFcxWjJOWDJtbUdCZms3T1o4ZUdkRnNIdlRjYUxKV0tjWHN2am9Eb3hmT2tIeldZRHN3?oc=5"
-      },
-      {
         "title": "AWS SageMaker、Unslothを活用した量子化モデルのデプロイをサポート",
         "content": "Amazon SageMaker AIが、Unslothライブラリを用いて量子化されたモデルのデプロイをサポートすると発表した。これにより、リソース効率の高いAIモデルをSageMaker上で容易に運用できるようになる。",
         "source": "Google News",
@@ -796,13 +970,6 @@
         "url": "https://cloud.google.com/blog/topics/developers-practitioners/google-cloud-labs-accelerate-ai-with-cloud-run/"
       },
       {
-        "title": "Google Cloud、AIエージェントでソフトウェア定義車両のセキュリティを強化",
-        "content": "Google CloudとValtechは、AIとエージェントを統合したソフトウェア定義車両（SDV）向けのコネクテッドカープラットフォーム「Nexus SDV」を発表した。リアルタイムのテレメトリーから洞察を生成し、最大1億台のデバイスを管理可能で、Android Automotive OSと深く統合されている。",
-        "source": "Google Cloud",
-        "published_at": "2026-07-07",
-        "url": "https://cloud.google.com/blog/products/identity-security/shift-into-high-gear-with-agents-securing-the-software-defined-vehicle/"
-      },
-      {
         "title": "Hugging FaceモデルがFoundry Managed Computeで利用可能に",
         "content": "Hugging Faceは、MicrosoftのFoundry Managed Compute上でHugging Faceモデルが利用可能になったことを発表した。これにより、開発者はHugging Faceの豊富なモデルライブラリを、スケーラブルで管理されたコンピューティング環境で効率的にデプロイ・実行できるようになる。",
         "source": "Hugging Face",
@@ -892,13 +1059,6 @@
         "source": "Google News",
         "published_at": "2026-07-08",
         "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1EVzFQdElLSnRTbUUxajFya0ZYeTZxT20zdnZQdXM1N0xHdUR2bk9zQjExNUpVR1p4bm9iUTNreC1nVk42bmtUc19SLS1KbXVuR2QzUDFwNA?oc=5"
-      },
-      {
-        "title": "AWS、Amazon SageMaker AIとMLflowを用いた差別的MLモデルの監視機能を提供",
-        "content": "Amazon Web Services (AWS)は、Amazon SageMaker AIとMLflowを統合し、差別的MLモデルの監視機能を提供した。これにより、開発者はモデルの性能、ドリフト、バイアスなどを継続的に監視し、本番環境でのモデルの信頼性と公平性を維持できるようになる。",
-        "source": "Google News",
-        "published_at": "2026-07-08",
-        "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNcUctbFlyTEtNRkExNTlJbHdMelFvUmY5MGcwQVh6M1dDUGFtR1lxMjRlNFoxVkM0WXBicFJTQllvTzRsdmN2WEZIZTZITXN6OHFoSjZ5MEZhWUFYTVJEX2NnMWRPSHNQamFYNkw4dHRTSGRWNXl5aTJMUE0wV1Q1VV9vQ2F3amItdEhnZEtJNHdPOFJRNFRGOTVlaGJ4c2JMY2VaZ0syaHNrQ1Zfa3BWNXRVVHQyUURMUnVFUw?oc=5"
       },
       {
         "title": "GSA、AI規制草案の初期変更を評価するも、さらなる作業が必要と指摘",
