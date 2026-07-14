@@ -1,5 +1,277 @@
 [
   {
+    "date": "2026-07-15",
+    "articles": [
+      {
+        "title": "AIエージェント時代におけるAI投資の管理方法",
+        "content": "企業がAIエージェント時代にAI投資を管理し、有用な作業量を測定し、効率を向上させ、高価値ワークフローを拡張する方法について解説している。",
+        "source": "OpenAI News",
+        "published_at": "2026-07-14",
+        "url": "https://openai.com/index/managing-ai-investments-in-agentic-era"
+      },
+      {
+        "title": "データサイエンスチームがChatGPT Workをどのように活用するか",
+        "content": "データサイエンスチームがChatGPT Workを活用し、根本原因分析、影響評価、KPIメモ、分析範囲設定、ダッシュボード仕様などを実際の業務入力から構築する方法を示している。",
+        "source": "OpenAI News",
+        "published_at": "2026-07-14",
+        "url": "https://openai.com/academy/codex-for-work/how-data-science-teams-use-codex"
+      },
+      {
+        "title": "Google Cloud上で大規模に展開されるClaude: エンタープライズ向けに構築されたフロンティアAI",
+        "content": "AnthropicのフロンティアAIモデルClaudeがGoogle Cloud上で利用可能になった。企業はマネージドインフラ、グローバル展開、セキュリティ、データ主権制御を活用し、Claudeを本番環境で効率的に運用できる。",
+        "source": "Google Cloud",
+        "published_at": "2026-07-15",
+        "url": "https://cloud.google.com/blog/products/ai-machine-learning/claude-at-scale-on-google-cloud-frontier-ai-built-for-enterprise-production"
+      },
+      {
+        "title": "Google TensorとPixelでオンデバイスAIの次世代を切り開く",
+        "content": "GoogleはI/O Connect Indiaで、カスタムTensor SoCとTPUを搭載したPixel 10シリーズ向けに、100%プライベートなオンデバイスAIを発表した。軽量なGemma 4 E2Bモデルがデバイス上で動作し、オフラインでのマルチモーダル機能を実現する。",
+        "source": "Google Developers",
+        "published_at": "2026-07-13",
+        "url": "https://developers.googleblog.com/unlocking-the-next-era-of-on-device-ai-with-google-tensor-and-pixel"
+      },
+      {
+        "title": "Codexがサブエージェントプロンプトの暗号化を開始",
+        "content": "OpenAIのコーディングアシスタントCodexが、サブエージェントへのプロンプトの暗号化を開始した。これにより、AIエージェント間の通信におけるセキュリティとプライバシーが強化される。",
+        "source": "Hacker News",
+        "published_at": "2026-07-14",
+        "url": "https://github.com/openai/codex/issues/28058"
+      },
+      {
+        "title": "AppleがiOS 27パブリックベータで新しいSiri AIを一般公開",
+        "content": "AppleがiOS 27のパブリックベータ版をリリースし、刷新されたAI搭載Siriを一般ユーザーが早期に利用できるようになった。これにより、iPhoneユーザーはAIアシスタントの新機能を体験できる。",
+        "source": "TechCrunch",
+        "published_at": "2026-07-15",
+        "url": "https://techcrunch.com/2026/07/14/apple-opens-its-new-siri-ai-to-everyone-with-the-ios-27-public-beta"
+      },
+      {
+        "title": "ニューヨーク州がデータセンター建設の一時停止を課す初の州に",
+        "content": "ニューヨーク州が、AIによるデータセンター建設ブームが電力コスト、水資源、地方自治に影響を与えるとして、新規データセンターの承認を一時停止する初の州となった。",
+        "source": "Hacker News",
+        "published_at": "2026-07-14",
+        "url": "https://www.reuters.com/world/new-york-becomes-first-state-impose-data-center-moratorium-2026-07-14"
+      },
+      {
+        "title": "Demis Hassabis氏がAIを安全に活用する計画を提唱",
+        "content": "DeepMindのCEOであるDemis Hassabis氏が、フロンティアAIを規制するための独立した標準化団体を設立する計画を提唱した。これは、AIの安全性とアライメントを確保するための重要な動きである。",
+        "source": "Hacker News",
+        "published_at": "2026-07-14",
+        "url": "https://twitter.com/demishassabis/status/2076957440109625718"
+      },
+      {
+        "title": "非NvidiaハードウェアでCUDAを実行するための代替手段",
+        "content": "Nvidia以外のハードウェアでCUDAワークロードを実行するための代替ソリューションが登場している。これは、AIインフラにおけるNvidiaの独占状態を緩和し、多様なハードウェア選択肢を提供する可能性を秘めている。",
+        "source": "Hacker News",
+        "published_at": "2026-07-14",
+        "url": "https://www.hpcwire.com/2026/07/09/spectral-compute-aims-to-set-cuda-free-will-it-succeed"
+      },
+      {
+        "title": "Googleが主要出版社からAI学習に関する新たな訴訟に直面",
+        "content": "Hachette、Cengage、Elsevierなどの主要出版社が、Googleが著作権で保護された作品を無許可でAI学習に利用したとして、新たな訴訟を提起した。",
+        "source": "TechCrunch",
+        "published_at": "2026-07-15",
+        "url": "https://techcrunch.com/2026/07/14/google-faces-another-ai-training-lawsuit-from-major-publishers"
+      },
+      {
+        "title": "MetaのAdam Mosseri氏、AIトークン予算がエンジニアごとに上限設定される可能性を示唆",
+        "content": "Instagram責任者のAdam Mosseri氏が、企業はAIトークン費用を給与のように管理する必要があり、エンジニアごとにAIツール利用の上限が設定される可能性があると述べた。",
+        "source": "TechCrunch",
+        "published_at": "2026-07-15",
+        "url": "https://techcrunch.com/2026/07/14/metas-adam-mosseri-says-ai-token-budgets-could-soon-be-capped-per-engineer"
+      },
+      {
+        "title": "ReflectionがNebiusと10億ドルの計算資源契約を締結",
+        "content": "オープンソースAI技術を開発するReflection AIが、Nebiusと10億ドル規模の計算資源提供契約を結んだ。これは、AI開発における大規模なインフラ投資の動きを示している。",
+        "source": "TechCrunch",
+        "published_at": "2026-07-14",
+        "url": "https://techcrunch.com/2026/07/14/reflection-inks-1b-compute-deal-with-nebius"
+      },
+      {
+        "title": "Googleが2026年IDC MarketScapeのワールドワイド基盤モデルソフトウェア部門でリーダーに選出",
+        "content": "GoogleがIDC MarketScapeの基盤モデルソフトウェア部門でリーダーに選ばれたことを発表した。これは、Googleのフロンティア研究をセキュアな本番環境向けシステムに転換するアプローチが評価された結果である。",
+        "source": "Google Cloud",
+        "published_at": "2026-07-15",
+        "url": "https://cloud.google.com/blog/products/ai-machine-learning/google-named-a-leader-in-idc-marketscape"
+      },
+      {
+        "title": "Bonsai 27B: スマートフォンで動作する27Bクラスのモデル",
+        "content": "Bonsai 27Bは、スマートフォン上で動作可能な270億パラメータクラスのAIモデルである。これにより、エッジデバイスでの高度なAI処理が実現され、オフライン環境での利用やプライバシー保護に貢献する。",
+        "source": "Hacker News",
+        "published_at": "2026-07-15",
+        "url": "https://prismml.com/news/bonsai-27b"
+      },
+      {
+        "title": "Hinge創業者が新たなAI出会い系サービスOvertone構築のため1800万ドルを調達",
+        "content": "出会い系アプリHingeの創業者が、AIを活用した音声・オーディオ主導の新しい出会い系サービス「Overtone」を構築するため、1800万ドルの資金を調達した。",
+        "source": "TechCrunch",
+        "published_at": "2026-07-15",
+        "url": "https://techcrunch.com/2026/07/14/the-founder-of-hinge-raised-18m-to-build-a-new-ai-dating-service-overtone"
+      },
+      {
+        "title": "真のAI競争はもはやフロンティアではない可能性",
+        "content": "Hugging FaceのCEOは、企業がコスト、アクセシビリティ、所有権の観点からオープンモデルを求める傾向が強まっており、AI競争の焦点がフロンティアモデルからオープンモデルへと移行している可能性を指摘した。",
+        "source": "TechCrunch",
+        "published_at": "2026-07-14",
+        "url": "https://techcrunch.com/2026/07/14/the-real-ai-race-may-no-longer-be-at-the-frontier-open-models-hugging-face"
+      },
+      {
+        "title": "数百人の専門家がAIの影響に今すぐ備えるよう警告",
+        "content": "ノーベル賞受賞者を含む200人以上の経済学者や技術リーダーが、AIの経済的影響と潜在的脅威に対し、世界が今すぐ準備する必要があると警告した。これはAIの広範な社会的影響と規制の必要性を示唆する。",
+        "source": "Google News",
+        "published_at": "2026-07-14",
+        "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNUWJMRWdrYXVZRVpyU1VfUDdPRU5ZQ0s2WGltTmVPV2FGWXlyYjZOMDB3Sm52aEU5RmhVS1BNYmg0Umh3Qmc2TDhTQnBtNVlyNHJzUVFQWE1JRzNNR2FvVktFa1o3SVRfWTZSRS1iZGdudHpIcGxZLWNiaFJQLXdGR25hcnVmeFliWEFhZVpwbDZRTHNKRnZQVWoxcVNCZ2tEVlBPcU1VMUZYYlVBTTB30gG0AUFVX3lxTE5VWlVQc0t3QTVkS01mZmlueDJYZXFaSTJNVFR0NWllOEttUmlOQlc3QVY3Q0sxTnNkSVJuaXdpNkttRjdTd3FhX21SNFg0UVdnOEZjTlRqZmVGSzhIdXphZlFwYnlxaDBrN2lhU0lWaEN0aFhsUHVmSnNtdjl5WnFYcXpKQ010bEdXc3BXajhQOGxKZnNfLVpPT2xLLV9DS25vNW4yaWNIRTlrcUgzZmFBenBCZA?oc=5"
+      },
+      {
+        "title": "連邦AIエージェント法案：AIを装った消費者保護か？",
+        "content": "連邦AIエージェント法案が提案されており、AIエージェントの利用における消費者保護の側面が議論されている。これはAIエージェントの普及に伴う新たな法的・倫理的課題への対応を示す。",
+        "source": "Google News",
+        "published_at": "2026-07-15",
+        "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQaG1LWndxY2tGMlU2bjhZTG9HNUlpS3pzakFTdk1YQnpaQWZYaGtTTVFuRXFKV2d6bjBwOEk1Wm9HRk9ScnRMM2J2UVRlckdTZEFOZ1ZSQlRMdWhXT0hHQUFLQXZjYl80dUJmMFVMSHRTdjlYbHk1ZXJtZkc0ZjV2NnVpQVh5SkJfV3I3bVdiQzk1d0ltVV95SXRzRlBDbG5aZlIwaTl5bkE?oc=5"
+      },
+      {
+        "title": "AIが医療イノベーションを推進する中、国連機関が共同戦略ガイドラインを発表",
+        "content": "AIが医療分野のイノベーションを推進する中、国連機関が共同で戦略的ガイドラインを発表した。これは医療AIの倫理的かつ安全な利用を促進するための国際的な取り組みである。",
+        "source": "Google News",
+        "published_at": "2026-07-15",
+        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1icDdDdVV0Mjl5UUp2TGJSTDhlSFQ2SzZVYnFVUUxySjQ2Vy0tR1FkZ2tmaVZ2QUhBUnVFTHF6NEY3ek9mXzdCRk9mc0duTUVJUUdHVHl2dElQcGg2ZzJyNzc5Rm9zeGlpUTRQVFpId1A?oc=5"
+      },
+      {
+        "title": "Strands AgentsとAmazon Bedrockによるマルチエージェント社会知能",
+        "content": "Amazon Web Services (AWS) がStrands AgentsとAmazon Bedrockを活用したマルチエージェント社会知能について発表した。これはAWSのインフラ上で高度なAIエージェントシステムを構築する新たな可能性を示す。",
+        "source": "Google News",
+        "published_at": "2026-07-15",
+        "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNYjdXYWg0RlEwYTNmVE5BQmJQeHBqVWU0dGhSUjZCc3lFYVQ4U2c4NjU2WnNlTFFtdkNwYUY2bWpIUDEwb3FBdVVmNTdqNkt1TkU1SzFrTDZ3TkEyUTB5enRxM2I3dnJLd0dhZUhCbWgweU5UUXRFR3hqdEp5X1NvMWlIVVhNT0dkUVhSQVVaQ3B5Z3l0WXQ5VEgtcHlsZzRfZGxGSVl2ODdFRmF1ZExlckoxMDA3cW1j?oc=5"
+      },
+      {
+        "title": "Metaの従業員がAIを用いたレイオフにおける差別を主張し提訴",
+        "content": "Metaの従業員が、AIを利用したレイオフにおいて差別があったとして同社を提訴した。これはAIが雇用に与える影響と、その公平性・倫理的側面に関する重要な法的問題提起である。",
+        "source": "Google News",
+        "published_at": "2026-07-15",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE04VnktaEt1RXM4RlZLRDMyRUNZdV96M2RiY0s0cnhxakJJejhJb0hTUDg5bU9weDdpMGl5VE9QOFpvWnNUUGVkS3V1UWtTQ3hPbWUwWTNyeXhoUE1DaVNkU21LSmdJdmliWnh1LdIBckFVX3lxTE9nUzhfX0VGSFREZC1mbGl1WEtHNjlOTXoxYVJaQ1NjaExtdFgwZTJMQ1JIa0lTU1RER3U2NHZRUzU3aGFYNzh1QjBabWNvM2FOeEV1UGZ6ZWZBSUtzdlk2QjhJdUk3QjlCMU80N0hiemV3QQ?oc=5"
+      },
+      {
+        "title": "Spotify、ChatGPTのような音楽アシスタントでAI推進を拡大",
+        "content": "Spotifyは、プレミアム会員向けにAIを活用した会話型新機能を展開する。これにより、ユーザーはアプリとチャットを通じて音楽、ポッドキャスト、オーディオブックなどを発見できるようになり、パーソナライズされた体験が強化される。",
+        "source": "TechCrunch",
+        "published_at": "2026-07-14",
+        "url": "https://techcrunch.com/2026/07/14/spotify-expands-its-ai-push-with-a-chatgpt-like-music-assistant"
+      },
+      {
+        "title": "Superhumanの新しい自動下書き機能はAI返信を好むようにさせる",
+        "content": "Superhumanの最新AIメール下書き機能は、これまでのものより説得力がある。テストではほとんど編集なしで返信が生成され、AIによるメール作成支援の精度が大幅に向上したことを示している。",
+        "source": "TechCrunch",
+        "published_at": "2026-07-14",
+        "url": "https://techcrunch.com/2026/07/14/superhumans-new-auto-draft-feature-almost-makes-me-like-ai-replies"
+      },
+      {
+        "title": "AIの脅威に対処するためには国際協力が必要とイングランド銀行総裁が発言",
+        "content": "イングランド銀行総裁は、AIがもたらす脅威に対処するためには国際的な協力が不可欠であると述べた。これはAI規制の枠組み構築において、国際的な連携が求められていることを示唆する。",
+        "source": "Google News",
+        "published_at": "2026-07-15",
+        "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNWTlEaDdzRHhpRnBCanZiTGhuOXM0azhyNnY3bmtWTC1LUFJ0LVd6MVRTaC03RFhwdDBjbDlfX0FZRDNUNU02OFdhWjQ1ZEVuMHBRMnZLeHEyTFdnTWkta1NxV2xNcU9WMGI3US1uN04zY3pWWGxVS0ZSbW5heGZHRWdUN2lIUHNaZmNJeE5aNWpLbXhyQXMtNHQ3WmhFZlk0UUlpMTFJZnpMUlVqSE1mdDFBSDlacFRCQXQ2QWhLR0MxWWNJbnc?oc=5"
+      },
+      {
+        "title": "ティム・スコット上院議員、データセンターと人工知能についてウォーシュ氏から意見聴取を希望",
+        "content": "ティム・スコット上院議員は、データセンターと人工知能に関する議論のため、ウォーシュ氏からの意見聴取を希望している。これはAIインフラと関連する政策議論が活発化していることを示す。",
+        "source": "Google News",
+        "published_at": "2026-07-14",
+        "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPSlh2WmJLLTRGM1ZnSVJGMHpRdGtla0RtWFFpT25oQjZCZGtzOEF6azVBZE5DRlBHRmN2MURPNUFSeGxWaWRRelhRZi1qUVVnYWJrMWRpMGZsZE16Z24tX3FNZXNlUXp0cEVMR2ZHMjdwNEN2WGtaczM5MlIwWDdQQnBqbUE3eVFMMGZtNFl0Nm9IOXVQT0ZKby11d9IBoAFBVV95cUxQQ0pWekY2cjlNR3NPU3dXWXdhMTZjQTZhU3RGOE5JVlp6dk80Z01VdDk1ODFfNUphNWU0ZURxOUlyd092ZTJCXzdpek9qRUNtUS0yZURDQ2Z1VzhUWDJYSmJzTVA4NEc3cS1ZQ0RtdjJXcllUbjVfMi1FemU5NFFZT3IzNGY3Mzdpek1sR1RUQ0w0MGpWUE5YdHpvVWN3dUJQ?oc=5"
+      },
+      {
+        "title": "キーエスキ上院議員、医療における人工知能利用に関する調査委員会に任命",
+        "content": "キーエスキ上院議員が、医療における人工知能の利用に関する調査委員会に任命された。これは医療AIの導入と規制に関する政策議論が具体的に進められていることを示唆する。",
+        "source": "Google News",
+        "published_at": "2026-07-15",
+        "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPYVFWSkZZcm8tM1hKaE5wV0drTjBEendhdm5veEwxYWdDalZfbGN0MVpDcUtOVFhnYm9KMU9FSnlzNGtYMlNpWEUyLXpiU2VQZ01CZWpUVnJ2VHgxZzl3QzIxUFBiSXlYOWVhRDc3Z3prTDFHTDk4RjVRb2JqS283dkNvUHM3bFpjN3pWTE51RVc4QXZtR1c1ajJaRV9nbDltOEtzNGlJSHNxU0ZaVkQxSzVlWmxvbEJNLTM5THBVcTJRdE15M2hzbm1HSGNiMlE?oc=5"
+      },
+      {
+        "title": "カリフォルニア州、SDSU主導で全国初のAIリテラシーイニシアチブを開始",
+        "content": "カリフォルニア州がサンディエゴ州立大学（SDSU）の主導で、全国初となるAIリテラシー向上イニシアチブを開始した。これはAI技術の普及に伴う社会全体のAI理解促進を目指す重要な取り組みである。",
+        "source": "Google News",
+        "published_at": "2026-07-15",
+        "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNY3JBT3RJbENuZ1pRVGIxeWFqb2IxZlk5bl9oOFlDNENEUUdkYTJjVEJUTXNiTWl1b0FzU1ZVZW4xN25uTkFGMlhJQmhQY0h2em5HWC1qOU43N3NtaGpyRVh4a1N6Q2g1Z1FxN2JBZzVjTnIydW54NnhwVHVySVlkS0UyeWs2a0I2b0xoZ0lkLW11dk1xWUo1ZjIyQVdSQjhMc2FKNjczc29GakdNVFNGMHFtcV83cFVk?oc=5"
+      },
+      {
+        "title": "ScienceSoftのAWS上に構築されたHIPAA準拠AI音声スケジューラー",
+        "content": "ScienceSoftがAWS上に構築したHIPAA準拠のAI音声スケジューラーを発表した。これは医療分野におけるAI活用において、データプライバシーとセキュリティ規制への対応が重要であることを示す。",
+        "source": "Google News",
+        "published_at": "2026-07-15",
+        "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNdmNJOUxmeUEySEY0NVd6bGRoczN3d2NnTHFraDF3djJUbWFqZE5DdUpkbWZ1ZmY1b2RqVW9oenUtTU1KbmJIanpHLUFpSVVPVDZISURobUVxaXJ6SmxkQi0zeGgwcFM5Z1VLeHdaMU5WOGtPZUE2RDY2dXJkZm1BemctazJpSm9Mckt6N194UTNBUFBMclFiSXhWV3ZLNVh3YWNFVUdCQ3ZWUFE?oc=5"
+      },
+      {
+        "title": "ビデオ生成スタートアップPixVerseが4億3900万ドルを調達、評価額は20億ドル超に急上昇",
+        "content": "ビデオ生成AIスタートアップのPixVerseが4億3900万ドルの資金調達を実施し、評価額は20億ドルを超えた。同社はこの資金でワールドモデルの提供を拡大し、世界中の顧客にリーチすることを目指す。",
+        "source": "TechCrunch",
+        "published_at": "2026-07-14",
+        "url": "https://techcrunch.com/2026/07/13/video-generation-startup-pixverse-raises-439m-valuation-soars-past-2b"
+      },
+      {
+        "title": "Hermesエージェント開発のNous Research、15億ドル評価額で新たな資金調達交渉中",
+        "content": "AIエージェント開発企業Nous Researchが、15億ドルの評価額で少なくとも7500万ドルの新たな資金調達交渉を進めている。これはAIエージェント分野への投資が活発であることを示している。",
+        "source": "TechCrunch",
+        "published_at": "2026-07-14",
+        "url": "https://techcrunch.com/2026/07/13/hermes-agent-maker-nous-research-in-talks-for-new-funding-at-1-5b-valuation"
+      },
+      {
+        "title": "フロンティアAI、輸出規制、アフリカがすべきこと",
+        "content": "大西洋評議会は、フロンティアAIの輸出規制と、それがアフリカ諸国に与える影響について議論した。AI技術の国際的な管理と、新興国におけるAI開発の機会確保の重要性が強調された。",
+        "source": "Google News",
+        "published_at": "2026-07-15",
+        "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQVTd4cml1bTR6bDV4T2Q0UzRCQkFFY3pDYVNkWExkOVlNRXZrNl9FU3R1T2J5NklOMkQ0VTNXU2dScEE1SUhqRHd1ZU1FTk1GcUdUOGhFWGxZQlhCMDRjM2ZSV2VfZGlNLWZxMWNwRW01eEo0bEZYMWp3ZjZ2eHVRbWZwalJWb1VQeVpmcmN3YjhCZVNJVndxTHRQUzlIbl9vVW5EZ2hpWkpWdVhkbWVEeXRfWXkxOHZJQ1hJSWFTMktMSGZYdVFnQg?oc=5"
+      },
+      {
+        "title": "バチカン、ノーベル賞受賞者や専門家を招き人工知能のセキュリティリスクを議論",
+        "content": "バチカンは、ノーベル賞受賞者やAI専門家を招集し、人工知能のセキュリティリスクについて議論した。AIの安全性と倫理的な開発に関する国際的な対話の必要性が示された。",
+        "source": "Google News",
+        "published_at": "2026-07-14",
+        "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPZDdub05qaHFOZ3E0RzR4SzI3TVMtSU9oQ01LUmpINHlMdzBhLU1ER3g2YUZTVFBhNUc3T3lXWWdjdkg0UzlVTGJoRnVSTHlBR3ZpMDlwS2Z1eDlldWdSMnQ5eU5LbXV2ZmZIeDI4alhKTUNQSG9KcW9DWE5DX2o0VTZCMi1rd1Vwb2JmNV9RajRrNVM3dkNselRSTjY4RUV3U3RmczloTnptcHdPX2YtODVYZUtoZVlOUVF3dEtHSElqd9IBxwFBVV95cUxNQnEzME5QOTZYbjZvQXZyT0s0X25xWEw3RFgtZ1ZPSklNaHpPcVYtSFpiX2JiNEpXTUhQd3RPMW1DZ0VlU3JVcjNpYlhSMHo1MkRfal9sWUVGNzFDcmRkbTB6T3R0elZxUENNd0g2c2dnN3Q2SkxGcXRpOFZQXzZuR2ZCV3NCQXE3a3B3WkVDRTI2ZjVTbHplcGFUWWpLUDdTLVJVRXd0Q1czamd6Z25yTkVLRUR4Z1FZR19kRFJCZHZySmJETUtj?oc=5"
+      },
+      {
+        "title": "ニューヨーク州、エネルギー・気候リスクを考慮し大規模データセンター建設を1年間停止",
+        "content": "ニューヨーク州は、エネルギー消費と気候変動への影響を考慮し、大規模データセンターの新規建設を1年間停止すると発表した。AIインフラの拡大における環境規制の重要性が浮上した。",
+        "source": "Google News",
+        "published_at": "2026-07-15",
+        "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOY2hvOVR3X29JeEVOOXg4bEVGdlZYT1B1VFA3NC16TzF2TWhWbEZzLXREZ0V0MzltN1BxZ0doSDB0ZGRKdEctS21YdlI5LTNkSlpqc1F1R0txRjV5WjRCdE5zNVhlbnhQdFYwRmw4dmhBQi1SZFN6MVExUHRtb0hmN1NSM0dya1EtRVlsQmxuWU1jZHhmWThiOG5JbDVwWklVczJIZ1JIdVRnaXB0ZEZOZk1tZmlTRzRVN3ppZ01fY0o3b2o5S1M2c1ZwdEVZZDlpekZ5TjIzQlRxdU5zd0pSS1E3bw?oc=5"
+      },
+      {
+        "title": "州が人工知能製品・サービスへの売上税課税で誤りを犯す8つの方法",
+        "content": "EINプレスワイヤーは、米国各州がAI製品・サービスに売上税を課す際に犯しがちな8つの誤りを指摘した。AI関連の税制が未整備であり、明確な規制の必要性が示唆された。",
+        "source": "Google News",
+        "published_at": "2026-07-14",
+        "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNaWJJUGdVUW1HN3dOaUhMU2lVcDJZNmx4MEh1OGE3Q1g5RXVxUjlkbm9MVHNuQWlvSGFqZmlIRXcyWXJQaV9oelRobTQ3d0hwVkNtdkNwYzFtR3E1eDFfNXdBTEVkcWpGRjJ2bXlYY3JrMkwxYU03ZWNUcUNpVXk2aV9jRl81aUkzRGVGMTdRVDBxRE91TkJJaWZBRHc0dTNNUkNlMGhiQUlEaHN1N2V6VG10TDFRdUFOVXlITXplY3Rzd0NGeDFkeVVNMEhZZw?oc=5"
+      },
+      {
+        "title": "Nucs AIとSegmed、セラノスティクス向けAI検証プラットフォームを構築へ",
+        "content": "Nucs AIとSegmedは、セラノスティクス（診断と治療を組み合わせた医療）分野向けにAI検証プラットフォームを共同で構築すると発表した。医療AIの信頼性と安全性を確保する基盤技術の進展を示す。",
+        "source": "Google News",
+        "published_at": "2026-07-15",
+        "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQTGxQcktqRHpQU1VlcnpPa0t3MTk3U3ljOTBvbldkVVJJZlRQSnRLdkNNaVMtc2JlelRGUUs4dU9EWGF0ZTdKQ29tbUtMYzdoaVlaX1ItS3BnT2hyeTlYeGEyVWZ5QUpwSms3b3A4NkNmem9MdTVjand5VWNvZlRudmowQzdkc1VRYnFoeWY1aXQ0cS1WRUJQODE3cmJsNFZqREctblhvQTVvdnl6Q1lGVzI1bXR0bWFkbktSZTNpWV96UDJBYXJMZ2IxQ016SXhZZHIyUjhfV0NrbjEtb0RTSVdR?oc=5"
+      },
+      {
+        "title": "Google DeepMind責任者がフロンティアAIモデルのテスト機関設立を提唱",
+        "content": "Google DeepMindの責任者が、フロンティアAIモデルの安全性評価を目的とした米国主導の独立機関設立を呼びかけた。AIの急速な進化に伴うリスク管理と、国際的な安全基準確立に向けた重要な提言である。",
+        "source": "Google News",
+        "published_at": "2026-07-15",
+        "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNTTdCZ3FKNWVQOGpwb2ttQjRWUUc3NENRbDJUVkd5NXZJTkxOMnlKV3Z2UWZmX3BEeGktZzd5dVA0M2tQd1Bha3ZJTWp2bW9hVkpmWUt0NTRNOFVoVHI5dzkyNXpIU21TTmR4UkpObUthZ1RXRUV2LVpDUXNTWm5uNEc5Z2lIQ2JMUlIzanljWkJzMHk0MmZuTFdPUWN6YlJ1WlBDVE5rOFM1WDk3VXl4R21CS3hYa0FBY0s3T3VJb3hqaExqX1FHUFpETWM?oc=5"
+      },
+      {
+        "title": "DeepSeekが70億ドル調達後、新たな資金調達ラウンドを検討",
+        "content": "AI企業DeepSeekが70億ドルの資金調達を完了し、さらなる資金調達ラウンドを検討中である。これは同社のAI開発と市場拡大に向けた積極的な動きであり、AI業界における投資熱の高さと成長期待を反映している。",
+        "source": "Google News",
+        "published_at": "2026-07-15",
+        "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOckpKcUtqcnZiOGc0YlQ1S2tJenVuekdjSjZxUWppOW9FT1o3ZUk4MTJmOVZnOFFCZFcza3NaaUx3M1R4TFVSc0VfNlktd2l3QWQzYW1RcG5qSUVZcktHLVU4eXlndTMwQnFsZnRyT3pJcjB3VHhVSXVzQVAtSzZzakt3TmVwRFlkdy1xeHJaWDRjUGhCM3k3TnU5Sl9yczZHMkRsSjNzTzZyRGM4TVlaMWFrNWI5aDlxaXc?oc=5"
+      },
+      {
+        "title": "Amazon Bedrockを活用したBluesightのAIエージェントソリューション構築",
+        "content": "BluesightがAmazon Bedrockを利用し、エージェント型AIソリューションを構築した。これはAWSのAIインフラが実ビジネスで活用され、特定のタスクを自動化するAIエージェント開発を加速させていることを示す事例だ。",
+        "source": "Google News",
+        "published_at": "2026-07-14",
+        "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOYi1BVHd0Z0lVNkxMeDFTaWMycldub1dlc05VMWhjM3AzandNR3poZkVJeTdCXzVjLUdXR2kwdHE1ckV4NVlIeWpoLUlBS3dFNG1KQ3RydDd5MVhCbzM0UW1DRDd6WVVuQUduVUVQRGxKeUtsdDd1QWlBX3hoZ0xBZlNqWFhPeGdfdUtRVS1UM241RUpzTFdTMWFCZUxHdElUR2FBbERiYW1sZ2VZRUdtZQ?oc=5"
+      }
+    ],
+    "daily_summary": "今日のAIニュースは、AIエージェントの進化と企業での実用化加速が顕著だ。Google CloudやAWS Bedrock上でフロンティアAIが展開され、データサイエンスやコーディング支援など業務活用が進む一方、Google PixelやBonsai 27Bに見られるオンデバイスAIもプライバシーとオフライン利用を重視し着実に進展している。しかし、この急速な発展は倫理、安全性、規制に関する懸念を一層高めており、DeepMindのハサビス氏やイングランド銀行総裁は、AIの安全性確保に向けた独立機関設立や国際協力の必要性を訴えた。専門家からも社会的影響への準備が警告され、ニューヨーク州のデータセンター建設一時停止やMetaでのAIレイオフ差別訴訟は、AIの実社会への影響を示唆する。Googleが著作権侵害で訴えられ、企業がAIトークン費用管理の必要性を指摘されるなど、法的・経済的課題も顕著だ。一方でPixVerseやNous Researchへの大規模投資が続きAI市場は活況を呈する。AI競争の焦点がフロンティアモデルからオープンモデルへ移行する可能性も指摘され、多様なAI技術の発展と社会実装が進む中で、そのガバナンスと持続可能性が喫緊の課題となっている。"
+  },
+  {
     "date": "2026-07-14",
     "articles": [
       {
@@ -71,13 +343,6 @@
         "source": "Google News",
         "published_at": "2026-07-14",
         "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNYThYclBjamhlY3VjM0w3YzJJUUZKZnZySGhhU1J4VWNJWFF6YnJGcDMwOTE5REtZbXBJNDR6M0l5cjg5X25HbHNKZzRZZEV4UE1mZ1M5eWhsZGVtRlptRUtZbmtFTEQ2ZUs1VDRWV1FVRExsX2dOdGRiX2JTYmIySXNXWWwzcnIzRXNlS1l3S01Jb3lxQ1NNc0UyTkxybFNlWExNY1FOdTh6TFVES0VKV1hfMHlZZXZPZGI1QzZVNE5LUFlt?oc=5"
-      },
-      {
-        "title": "Amazon BedrockでBluesightのAgentic AIソリューションを構築",
-        "content": "AWSの公式ブログが、Amazon Bedrockを活用してBluesightがエージェントAIソリューションを構築した事例を紹介した。これにより、企業がBedrockを用いて高度なAIエージェントを開発する可能性が示された。",
-        "source": "Google News",
-        "published_at": "2026-07-14",
-        "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOYi1BVHd0Z0lVNkxMeDFTaWMycldub1dlc05VMWhjM3AzandNR3poZkVJeTdCXzVjLUdXR2kwdHE1ckV4NVlIeWpoLUlBS3dFNG1KQ3RydDd5MVhCbzM0UW1DRDd6WVVuQUduVUVQRGxKeUtsdDd1QWlBX3hoZ0xBZlNqWFhPeGdfdUtRVS1UM241RUpzTFdTMWFCZUxHdElUR2FBbERiYW1sZ2VZRUdtZQ?oc=5"
       },
       {
         "title": "AIエージェントがロボットの重要な訓練データ取得を助ける仮想プレイグラウンドを生成",
@@ -363,13 +628,6 @@
         "source": "TechCrunch",
         "published_at": "2026-07-10",
         "url": "https://techcrunch.com/2026/07/09/fidji-simo-steps-down-from-openais-no-2-role"
-      },
-      {
-        "title": "Hugging Face CEO、企業がAIを「借りる」時代は終わったと語る",
-        "content": "Hugging FaceのCEOは、企業がAIモデルを「借りる」のではなく、オープンソースAIを活用して自社で構築する傾向が強まっていると指摘した。これはAI開発の民主化と企業戦略の変化を示唆している。",
-        "source": "TechCrunch",
-        "published_at": "2026-07-10",
-        "url": "https://techcrunch.com/2026/07/10/hugging-faces-ceo-on-why-companies-are-done-renting-their-ai"
       },
       {
         "title": "AIエージェントスタートアップが1億ドルの資金調達を自社AIエージェントに実行させる",
