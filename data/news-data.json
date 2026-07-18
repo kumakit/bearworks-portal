@@ -1,5 +1,207 @@
 [
   {
+    "date": "2026-07-19",
+    "articles": [
+      {
+        "title": "AI時代のスコアカード",
+        "content": "OpenAIのCFOがAIのROIを測定する実用的なスコアカードを発表した。有用な作業、成功タスクあたりのコスト、信頼性、計算リソースのROIを指標とし、AI導入のビジネス価値を明確化する。",
+        "source": "OpenAI News",
+        "published_at": "2026-07-17",
+        "url": "https://openai.com/index/a-scorecard-for-the-ai-age"
+      },
+      {
+        "title": "Gemini Enterprise Agent Platformで構築する13のハンズオンデモ",
+        "content": "Google Cloudは、Gemini Enterprise Agent Platform上でAIエージェントを構築するための13のデモを公開した。Agents CLIを主要コーディングエージェントにインストールすることで、ADKとAgent Platformのエキスパートスキルが利用可能になる。",
+        "source": "Google Cloud",
+        "published_at": "2026-07-18",
+        "url": "https://cloud.google.com/blog/products/ai-machine-learning/13-demos-on-gemini-enterprise-agent-platform"
+      },
+      {
+        "title": "AIトークノミクスガイド: トークン効率的なソフトウェアエンジニアリングのための11の原則",
+        "content": "Google Cloudは、AIコーディングアシスタントのトークン消費を最適化するための11の原則を解説した。Gemini 3.5 Flashの活用やSKILL.mdファイルによるスキル再利用など、効率的なソフトウェアエンジニアリングを促進する。",
+        "source": "Google Cloud",
+        "published_at": "2026-07-17",
+        "url": "https://cloud.google.com/blog/topics/developers-practitioners/guide-to-ai-tokenomics-eleven-principles-for-token-efficient-software-engineering"
+      },
+      {
+        "title": "列レベルのセキュリティを強化: BigQueryでIAMデータガバナンスタグを使用する",
+        "content": "Google Cloudは、BigQueryにおける列レベルのセキュリティを強化するため、IAMデータガバナンスタグのプレビューを開始した。これは、スケーラブルで堅牢なアクセス制御管理を可能にし、データ保護を強化する。",
+        "source": "Google Cloud",
+        "published_at": "2026-07-18",
+        "url": "https://cloud.google.com/blog/products/data-analytics/level-up-your-column-level-security-using-iam-data-governance-tags-in-bigquery"
+      },
+      {
+        "title": "SlackにおけるCursorの改善",
+        "content": "コーディングアシスタント「Cursor」は、Slack連携機能の改善を発表した。これにより、開発者はSlack内でよりスムーズにCursorの機能を利用できるようになり、生産性向上が期待される。",
+        "source": "Cursor Blog",
+        "published_at": "2026-07-17",
+        "url": "https://cursor.com/changelog/slack-improvements"
+      },
+      {
+        "title": "Claude CodeがMacを制御するための設定方法、ステップバイステップガイド",
+        "content": "Claude CodeがMacを制御するための詳細なセットアップガイドが公開された。これにより、ユーザーはClaude Codeを自身のMac環境に統合し、AIによるコード生成やタスク自動化をより容易に実現できる。",
+        "source": "Hacker News",
+        "published_at": "2026-07-19",
+        "url": "https://ykdojo.github.io/claude-controls-mac"
+      },
+      {
+        "title": "GPT-5.6がプロンプトを使用して凸最適化における30年のギャップを埋めた",
+        "content": "GPT-5.6がプロンプトの活用により、凸最適化分野における30年来の未解決課題を解決したと報じられた。これは、フロンティアAIモデルの高度な問題解決能力を示す画期的な進展である。",
+        "source": "Hacker News",
+        "published_at": "2026-07-18",
+        "url": "https://old.reddit.com/r/math/comments/1uxj3cy/after_openais_cdc_proof_announcement_gpt56_used_a"
+      },
+      {
+        "title": "NP困難問題におけるFable 5対GPT-5.6 Sol: /goalは役立つか？",
+        "content": "Fable 5とGPT-5.6がNP困難問題に取り組んだ結果が報告された。GPT-5.6の性能が注目されており、AIモデルが複雑な計算問題に対してどのようにアプローチし、解決に貢献できるかを示唆する。",
+        "source": "Hacker News",
+        "published_at": "2026-07-18",
+        "url": "https://charlesazam.com/blog/fable-5-gpt-5-6-sol-goal"
+      },
+      {
+        "title": "Kimi: 脅威か、それとも厄介者か？",
+        "content": "中国のMoonshot AIがKimiモデルの新バージョンをリリースした。この発表は、中国のAI技術の進化を示す一方で、「完全なAI共産主義」といった潜在的な影響について懸念を引き起こしている。",
+        "source": "TechCrunch",
+        "published_at": "2026-07-19",
+        "url": "https://techcrunch.com/2026/07/18/kimi-threat-or-menace"
+      },
+      {
+        "title": "NVIDIA NeMo Automodelと🤗 Diffusersでビデオおよび画像モデルを大規模にファインチューニング",
+        "content": "Hugging FaceとNVIDIAは、NVIDIA NeMo AutomodelとHugging Face Diffusersを組み合わせることで、ビデオおよび画像モデルの大規模なファインチューニングが可能になったと発表した。これにより、AIモデル開発の効率が向上する。",
+        "source": "Hugging Face",
+        "published_at": "2026-07-18",
+        "url": "https://huggingface.co/blog/nvidia/scale-diffusers-finetuning-nemo-automodel"
+      },
+      {
+        "title": "最初のGPU投資家が4億ドルの取引で推論チップに目を向ける理由",
+        "content": "GPU投資家が推論チップへの投資を強化し、4億ドルの取引が成立した。これは、AIインフラ投資の焦点がトレーニング用GPUから推論用チップへと移行していることを示唆し、次世代AIインフラの動向を反映している。",
+        "source": "TechCrunch",
+        "published_at": "2026-07-17",
+        "url": "https://techcrunch.com/2026/07/17/why-the-first-gpu-financiers-are-turning-to-inference-chips-in-a-400-million-deal"
+      },
+      {
+        "title": "AI駆動のメモリ不足がインドのスマートフォン市場を揺るがす",
+        "content": "AIブームがインドのスマートフォン市場にメモリ不足を引き起こしている。このAI駆動のメモリ需要急増は、消費者向け電子機器の価格、需要、企業戦略を再形成し、市場に大きな影響を与えている。",
+        "source": "TechCrunch",
+        "published_at": "2026-07-18",
+        "url": "https://techcrunch.com/2026/07/17/ai-driven-memory-crunch-jolts-indias-smartphone-market"
+      },
+      {
+        "title": "PatreonはAIボットにスクレイピングを求めず、ブロックを開始",
+        "content": "Patreonは、AIによるコンテンツスクレイピング対策を強化し、robots.txtに頼るのではなく、Cloudflareと連携してAIボットを積極的にブロックする方針に転換した。これはAIと著作権保護における新たな動きである。",
+        "source": "TechCrunch",
+        "published_at": "2026-07-18",
+        "url": "https://techcrunch.com/2026/07/17/patreon-stops-asking-ai-bots-not-to-scrape-and-starts-blocking-them"
+      },
+      {
+        "title": "習近平、中国を新たなグローバルAI秩序のリーダーとして売り込み、米国の優位性に挑戦 - ロイター",
+        "content": "習近平国家主席は、中国を新たなグローバルAI秩序のリーダーとして位置づけ、米国の優位性に挑戦する姿勢を示した。これは、AIの国際的な規制やアライメントに関する中国の主導権確立への動きである。",
+        "source": "Google News",
+        "published_at": "2026-07-17",
+        "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQZVpoVTlwUHY0LXNXd19nbFlNWVZoWDdQeVVFSi1ISkZzYVI1YUlzQTR6OXd3XzNhWDhsaTRkdnByczNqMlE4bm1JTHhyaEk2VXhrUDRFdmVjdHN3RW9FZU1OTW5aMnMzTmk1VW5sMUNGTkhYYVc1LUN5bUJJWkNBdUJFSU0wNUZyMDdtZklkRkJPLXBTRlhHQmZ1S1dQSVdTZ3l4OC13TE5aVWNBSUZfeHpfRVRwTG9hdzFKWkdVa2RfaVoxeWpr?oc=5"
+      },
+      {
+        "title": "習近平国家主席、米国に対抗するオープンでアクセス可能な中国製AIを推進",
+        "content": "中国の習近平国家主席が、米国に対抗するため、オープンでアクセスしやすい中国製AIの推進を表明した。これは、AI分野における国際的な影響力拡大と、発展途上国への技術支援を目的としている。",
+        "source": "Google News",
+        "published_at": "2026-07-19",
+        "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxOZTJyNFhlQWRmZWRETmtWcnZERWlEdkZzSm5SLXdGam5ydHdQcmx0bzgzQU5NS0Y1Rm1nNzBuUGNDalVLS3JNSGp4OUpkY0R0LXMtQzV6U1hURE1QSF83bVctZ3gwd2tvaXVQZVRfZEVuOXlzaXB4Z0xqMExZOFUyUXhZRnE0MGVrTEd0UzVLZzVLTTRUWE9WellIUEVfaGY4clAwdzlfalZXVjAySlpuT1BoTFE4ZTJiZGlfcV9IdkRQSEpjYVlBTG5kajFHc0szbkVfeTdibkpucG1KWHpibzJyVGRPYjFpaW9xNnhsOFBrMmpON3Z6akw1YTRBTjJYOFE?oc=5"
+      },
+      {
+        "title": "グテーレス国連事務総長、AIは「一部の権力者」ではなく「全人類」によって形成されるべきと発言",
+        "content": "グテーレス国連事務総長は、AIの発展が少数の権力者に独占されることなく、全人類の利益のために形成されるべきだと強調した。これは、AIの公平な開発と利用に関する国際的な議論を促すものだ。",
+        "source": "Google News",
+        "published_at": "2026-07-17",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE90ZmtpdEdJek9jcFc5ckwyYUhybVNaZ2dseFYtRmxWcEtyNHg5UDNWVWZndWdsVUpySUYwTnA1SG10UjRnbzlvQ3VXNjlJa09yTHZBWUNmTQ?oc=5"
+      },
+      {
+        "title": "政府はAI利用前に身分証明を要求できるか？",
+        "content": "AI利用における身分証明の義務化について、政府の規制動向が注目されている。これは、AIの悪用防止とプライバシー保護のバランスを巡る重要な議論であり、今後のAI規制の方向性に影響を与える可能性がある。",
+        "source": "Google News",
+        "published_at": "2026-07-18",
+        "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQOG5OREdPWkZoMWR6RnlITFQ3SXAtN2E5LW5KRWdTM0xNZXFXSGZFSFlsdjduVTBZMDlwQjlwcG95ZERTcjByR21tQ01BRVdtaUdXU2xJYjJiZDlZbnFJVndZR3h4SWJSN2YzdHFueDFNODBKSUxEWUI0RzlaWlVaV2h4UnJ2OG9oWkY0?oc=5"
+      },
+      {
+        "title": "ジョージアと中国、人工知能開発に関する共同作業部会を設立",
+        "content": "ジョージアと中国がAI開発に関する共同作業部会を設立した。これは、両国間の技術協力強化と、AI分野における国際的な連携を深める動きであり、今後のAI技術の発展に寄与する可能性がある。",
+        "source": "Google News",
+        "published_at": "2026-07-18",
+        "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPdXdOUnBfQ1ZxOXJJQ3NBel85OXctUWFMWWl0d1pvYzJ2MmpJWmdkV0JqbzUxQUcwLVB1STBRekRKUHh2R1FLNVFoVmVJRHNmbUF6WGlRWlExV3lTd29XZ3dhWGt2X2t3RTktSzJXSkN1NWM1QTVITXhKQWdlSHZLdG5YaXlQczctaWlMby16eTZxdXllVVAxQ0JVVmlyTVR0dV9iQmJxc1E5ZzkzSDlWaHBOTThUTkJ2Y1VsR0xn0gHDAUFVX3lxTE5vdXJneFhzOVA1WGhJQV9wSnNjMVk1VEdpMldpYUxqTFVOWmwxSjA5aWt1Q3ViU2k3akJMLXJNcEEycFRrVHdGUV9YWkpIR2dVZU1OY1pYMURCSzJjRVU2VFZNQzJtaUszWFRaMTY5QnJJczdvR3QtTkRxenp1TXN2aEt2WkZsaWpMY1FQR2RpLUgxb05sWExwelJnREk4Y1JQYXRXTl9yOHNtSGhJb21RV3NWMDBPbFR1ZkNpQS1GZ0Y3dw?oc=5"
+      },
+      {
+        "title": "バーミンガム住民、全国的な抗議活動の一環としてAIデータセンターに抗議",
+        "content": "バーミンガムの住民が、AIデータセンター建設に反対する全国的な抗議活動に参加した。これは、AIインフラの拡大に伴う環境負荷や地域社会への影響に対する懸念が高まっていることを示している。",
+        "source": "Google News",
+        "published_at": "2026-07-19",
+        "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPR0NPcU10djZhenNZeXV5V0ozd3EyWFFmUDJjeUdwd1BqMld4UzFoNzBWQ2pRcldlbnVlb2tLUGd2Qy10M1NDMzg5XzF0Z0xMdjE2VGNzazQyTTRyaUxIMWZFT3kxdTRLM1BLMmVKZEFfYXhtRzBGZmp5Wkpvdmw2U2RpdGJnd0lEQVZQX3h5WGp6WDA5R0xpSFNaT0t2QlFEU1R0Y2JaVWYwMEZXejhveW80X1VoNWRhdzRKTk9XekNMaE1O?oc=5"
+      },
+      {
+        "title": "AI大手Anthropic、教師向け新AIをデトロイトの教室に導入",
+        "content": "AI大手Anthropicが、教師向けの新しい人工知能をデトロイトの教室に導入する。これは、教育分野におけるAIの活用を推進し、教師の業務効率化と生徒の学習体験向上を目指すもので、Anthropicの社会実装戦略の一環である。",
+        "source": "Google News",
+        "published_at": "2026-07-18",
+        "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOaExwZW9pYjRBcXNiWEFDanhpMUIyTERFOW1TMEVrdS1qM185RVVIN3g0a2lIY21TYmNyd2d4OEEybXpnT2YtQnhEWnhIZ0Jtbjd0NTVSN2NmWXByRFNzWS11cFhDNDdlUTU4V1BCTjdCaWJ5eGtSR2JKdzF2N2R5UW1fY3Y4bno4dXJneG91R2pPRE8zLXdkck80OHFHNHZKa2UwaHQ5cVV0b3hCbUhqb1B4RmROTUxPcTFn?oc=5"
+      },
+      {
+        "title": "中国のMoonshot AIがKimiモデルを発表、米国のリードを脅かす",
+        "content": "中国のAI企業Moonshot AIが新たなフロンティアモデル「Kimi」を発表した。これは大規模言語モデル分野における中国企業の技術的進歩と、米国の優位性に対する挑戦を明確に示すものである。",
+        "source": "Google News",
+        "published_at": "2026-07-18",
+        "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5UYkVrd05BamRNRHcyZ19xN1FyaklNdVBYUXlFcTQ4dGhjYWdrb0Z1LWxhdnV0VWVmOU9rNnVjQUpIZHQ5SmdCZDd2MDVNQk5rR2NSM2x4QkVhNVp2SVhJcF9jZGdmQjlJTnhTdmlOdGotbzZ0X3pFMTVwVQ?oc=5"
+      },
+      {
+        "title": "習近平国家主席が上海のAI会議で演説、AIガバナンスにおける中国のビジョンを提示",
+        "content": "習近平国家主席は2026年世界人工知能会議で演説し、AIの国際協力とグローバルガバナンスに関する中国のビジョンを表明した。これはAI分野における中国の国際的な影響力強化を示す。",
+        "source": "Google News",
+        "published_at": "2026-07-17",
+        "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNWnctTVo4ak1JSzduTnpMT0xCdDVhbHMySFlFSUZCb3d0TVdvdEJVT2MxR3FiTmcxZG03RXNVXzFHMC1KLXk3c3h2RzRvU0FaTEozbllpTlFhdUZjYjdFZUtUeG9qNWoxcXlqWloyX0swUVpsWS1FS2tXZWZNSzkxVWh0Vlhfa1ZYQ3B2UDI2ZUdCdldFMlgybTRPa1JwTjN3WUIyNFJjUGxnQUw1ejlCQmp4S1QtdWxkSnktRTRGeGR5eU80bTI2N29n?oc=5"
+      },
+      {
+        "title": "Metaが声のトーン分析による気分検出技術の特許を取得",
+        "content": "Metaは、声のトーンを継続的に分析してユーザーの気分を検出するAI技術の特許を取得した。これはMetaが感情認識AI分野での研究開発を進め、将来的な製品への応用を目指していることを示唆する。",
+        "source": "Google News",
+        "published_at": "2026-07-18",
+        "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPSFh0REVteXBXd0Jtdk4zTHY0V182eVdnRXhUQ0JkN1BseEZIUXdfLUQ1QUFyWGRLb0tLSkRybU1QQVFNM3ZoRkE4dmVVUTJnbnJiZ0d0RU5VVXdkRF94QzNxR2RZR0tsU2N2aFFWU1pBSk00ZGxjY2FLMW95Y1pJcWJLOWljN1QxakNVYXBVS3FiUnN6alJzbDZfTUY?oc=5"
+      },
+      {
+        "title": "データセンタープロジェクトに対する世界的な反発が増加",
+        "content": "AIの急速な発展を支えるデータセンターの建設プロジェクトに対し、世界各地で環境や資源消費を巡る反発が高まっている。これはAIインフラ拡大における新たな課題を示唆する。",
+        "source": "Google News",
+        "published_at": "2026-07-19",
+        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9Tc1JkaWJKUWx4aXg0MHRBWUpLUm5jLWVkc1RQYlZjWVFlRW5WRmw1T203cWpBay1QZV8wTjdPdTE5TGduWndkbUNNOGZORGFoVXBiZGRnc1dVS0xmbzU2NkFKaHBzWEhMc0F3Q2tnMlZ5Y1d1TUE?oc=5"
+      },
+      {
+        "title": "ジュネーブ・デジタルウィークでAIに関する国際協力推進をEUが提唱",
+        "content": "EUはジュネーブ・デジタルウィークにおいて、AIの国際的な協力体制構築を推進する姿勢を示した。これはAI技術の倫理的かつ安全な発展に向けたグローバルな枠組み作りに貢献する動きである。",
+        "source": "Google News",
+        "published_at": "2026-07-17",
+        "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNUDBLdS1lM01YVEJ6eXlpakxZZEExMHk1azhJYkhseDZpdkJyTERvTmdqMnRPZXppOGtwQmN5eXpsRnlLQ2ZWbmdTOG03VjRHMXZSbjNLdGw5SEdQc0lDLTFiNnc2cmNyazBFTUtDNGhpdy1yZGNaMEJFMEY1ZS1oWUtWdGI2Q1BrOVpiOVhGTk96N25qclZ0ZUJyeDgwZFJNNFRuRHE4M3VRQ2pUd29kS1drVVVwa0pBclFTX3Nlb1g4VnAtYTJj?oc=5"
+      },
+      {
+        "title": "AIと核兵器に関する新たな国際倫理を求めるローマ宣言",
+        "content": "ローマ宣言は、人工知能と核兵器の関連性について新たなグローバル倫理の確立を求めた。これはAIの軍事利用におけるリスクと、国際的な安全保障への影響に対する懸念の高まりを反映している。",
+        "source": "Google News",
+        "published_at": "2026-07-17",
+        "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNM3cyT3FEQ0FZMXNJczdwal9xQ05qb25RR2t5OW5NalNCTUc2bTFwWFpMbThad3BIQ3pnS0NzeW5ZamZIeE4zZkFTTmxfSGZCQ3FMM0ZLYWJlTFNjczhDcUF1Tm9Oc1FnVjk2Tk5EZ05EV0NJQ1J0cjVlbXA4eFhqcDAySWZUNVdnT3k4ZHp5Y055MUc4QTZDRHNHWEdxQ3FGMTM5T3JvNjVBSng3YU5GNjRpX1Y4czYwRjl3aThfWjhadkFxN0E?oc=5"
+      },
+      {
+        "title": "イリノイ州が人工知能安全対策法を制定",
+        "content": "イリノイ州は、AI技術の安全な利用を確保するための「人工知能安全対策法」を制定した。これはAIの倫理的かつ責任ある開発と展開を促進する州レベルの規制強化の動きである。",
+        "source": "Google News",
+        "published_at": "2026-07-18",
+        "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxObXRoNFA2NGtCTlRTRlp0ZnBubDJYMkdWOEpaUWVYYXRPSDR6dV9oYWRCNVV1c2FoUS1LaEplUnBndDNEdHlfZm04YzdnRHBQdDFFck9Md2o4V00tdDVlb011anZrZ0ZOenAyYVFBa3BzSXpLcE1JRGZmTnFQLVlxUlUyVFRvR3N0TTJXZk4zUU5JMktnWUZZ0gGcAUFVX3lxTE54MkxNTU5PY3B4Yl9LTUxDbzB5aUVFaUJZQmFFNTRDSklrTVVwbnpGY3JiZmVCZUFVdWxhNTAxYnpTRjRDX0NCLXBZLXFXLV9rNFJiVzBLQm96NHpVcXQ4eWs1LUZ2OUhTa01tcDFacl9uRjNEOWxXQmtWcDRSNVZ5RDBxWHp0bE1QaUdZT0UxYkJVcl9hU2ZseTdzbQ?oc=5"
+      },
+      {
+        "title": "ウォーノック議員、連邦準備制度理事会議長にAI政策実施を要請",
+        "content": "ウォーノック議員は、連邦準備制度理事会議長に対し、テクノロジー幹部だけでなく全米国民を保護するAI政策の実施を強く求めた。これはAIの社会的影響に対する政府の対応を促す動きである。",
+        "source": "Google News",
+        "published_at": "2026-07-17",
+        "url": "https://news.google.com/rss/articles/CBMikAJBVV95cUxQLS1XLWp0azJVa2NPVkNHdnJXbTRhX051RkNXY0h0MTRJS3FMV0JiSDE2MTJIaFA2cS1qd2twVE0xcU9YZHJYdnpObWdUb3B4b2lWZEl2TnVibGFFMEQwTVIxYk9ZaF9HUE91eVRuSE1MMVh4NEVVdnZqZlRtZDBwZjMzbFVJdzVYUDREOS1tTzJpMGFuVE02RjBBN2tYRkRrUVFUUzdvVVVLeDRrcVp5YTFWWFVpTUFyLWo2V01XRXgtLXota3kzaDRTYnZpU1BhejlTZGlybzJXNlRXa1VCYldDWjdkLUpMaTRRckhTREpQTlRRM3BSWHZTYlBnMTdycE5EWlBvNlFqTzFzQ1J5NA?oc=5"
+      }
+    ],
+    "daily_summary": "AI技術は実務への浸透と効率化を加速させている。OpenAIはAIのROI測定指標を提示し、Google Cloudは開発者向けにエージェント構築デモやトークン効率化原則を公開した。GPT-5.6が難問を解決するなど、フロンティアモデルの能力向上も著しい。一方、中国は習近平国家主席の主導でAI分野での国際的リーダーシップを強化し、米国に対抗する姿勢を鮮明にしている。これに対し、国連事務総長はAIが一部の権力者ではなく全人類のために形成されるべきだと訴え、EUも国際協力を提唱するなど、AIガバナンスを巡る国際的な議論が活発化している。また、AIインフラの拡大に伴うデータセンターへの反発や、インドでのメモリ不足など、資源と環境への影響も顕在化している。PatreonがAIボットのスクレイピングをブロックするなど、著作権保護の動きも進む。AIの進化が加速する中で、その実用化と同時に、国際的な競争、倫理、ガバナンス、そして社会・環境への影響が重要な課題として浮上している一日であった。"
+  },
+  {
     "date": "2026-07-15",
     "articles": [
       {
@@ -524,13 +726,6 @@
         "source": "Google News",
         "published_at": "2026-07-13",
         "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQbEZlQS1pZzFLTzdRYkFocHlJRnduYWlKdGRESmJqZjB3ZGEzMUpORFZUZXhabXN1d2ZVWGJDTjJFdE9iM0FLMVljOXFNbGNrNFhLWlNWejRfcUV1bDNVZ1FlenlBQkVUdFkxdTc0SzVUeGNvaVpCWjJwMDZzaGt6a2NCb9IBiAFBVV95cUxOX0JBbDEtOUJGcjFwQXcxVmJNdXVqOFRodU1nbUR4M2hJQjlwNC1lSkZwcnI4NFo2a0Zjak1laFhfVDZBZ1lVeGZNRF9fNjU3SGxoUXRsdzBGTlVzOHFlUnFCLUl3VnJtLXZBdFpSQzdXS3VtcUtqQ2tDdUdzNDNlcXlGcV84WDZ5?oc=5"
-      },
-      {
-        "title": "データセンターが州知事選の争点に浮上",
-        "content": "AIの需要増大に伴い、データセンターの建設と運営が環境負荷や電力消費の観点から州知事選の主要な争点となっている。これは、AIインフラの拡大が地域社会に与える影響への関心が高まっていることを示している。",
-        "source": "Google News",
-        "published_at": "2026-07-13",
-        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOemctVThXM0VBVDFyM25taXQ0RDdFc2NzVjM0cnhmYnBWYWpjaFJZX2lZczFaZTdwWWlzZURXM1g1dkcyODY4bVpGY2pyRWxza053RU4yVEgxZ0R6eEh6VW9VcVM0SEtvc21zdVJsak84S0hnQUpHTmkyaUdzNVJ3SzFGdWROSnJjdU1uc3dkdDM1VS1CbzJZTXdYR2E2Vlo5U2fSAacBQVVfeXFMTUhuMGpuaVBPeGZyZDZUWGFiN0dWLWxOZW1oN3A4OVpIWFpLMkVXaTd6TjhiTDJOcDhGZVpGSlZKajNCa0liOUJ2SEtkSU9VcG5CR0xUb3Y4SFZlYWljUmJjajJaQWUwbFV2NWVDWU5FNGR2YnVaR2xCSWRhWVNDSnVRUnNKNnBiakpzYmo2c3JnbE1pOVVwQURMdjNqQlRLOHVhcDNGcFE?oc=5"
       },
       {
         "title": "AIは研究キャリアを促進するが、探求されるアイデアの範囲を狭める：研究",
