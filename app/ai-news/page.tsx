@@ -16,6 +16,7 @@ interface Article {
   source: string;
   published_at?: string;
   url?: string;
+  category?: string;
 }
 
 interface NewsGroup {
@@ -144,13 +145,15 @@ export default async function AiNewsPage() {
                             <span className="text-zinc-800 group-hover:text-green-700 font-semibold transition-colors font-sans break-words text-sm sm:text-base leading-snug">
                               {article.title}
                             </span>
-                            <span className="sm:hidden text-[10px] text-zinc-400 font-mono font-medium">
-                              {article.source}{article.published_at && ` • ${article.published_at.substring(5)}`}
+                            <span className="sm:hidden text-[10px] text-zinc-400 font-mono font-medium flex flex-wrap items-center gap-1 mt-1">
+                              <span className="px-1.5 py-0.5 bg-green-100 text-green-800 rounded-md font-sans">{article.category ?? "その他"}</span>
+                              <span>{article.source}{article.published_at && ` • ${article.published_at.substring(5)}`}</span>
                             </span>
                           </div>
                         </div>
-                        <span className="hidden sm:inline text-xs text-zinc-400 shrink-0 select-none font-mono font-medium mt-0.5">
-                          {article.source}{article.published_at && ` • ${article.published_at.substring(5)}`}
+                        <span className="hidden sm:flex text-xs text-zinc-400 shrink-0 select-none font-mono font-medium mt-0.5 flex-wrap items-center gap-2 text-right justify-end">
+                          <span className="px-1.5 py-0.5 bg-green-100 text-green-800 rounded-md font-sans">{article.category ?? "その他"}</span>
+                          <span>{article.source}{article.published_at && ` • ${article.published_at.substring(5)}`}</span>
                         </span>
                       </summary>
                       <div className="mt-3 pt-3 border-t border-gray-100 text-sm text-zinc-650 font-sans leading-relaxed pl-6 space-y-3 bg-[#F0FDF4]/30 rounded-xl p-4 border border-[#F0FDF4]/80">
@@ -186,7 +189,7 @@ export default async function AiNewsPage() {
       {/* Footer */}
       <footer className="text-center text-xs text-gray-300 py-4 font-sans select-none">
         <p>
-          Data collected by N100PC • Summaries by Gemini API • Total {totalArticles} news items
+          Data collected by OCI • Summaries by Gemini API • Total {totalArticles} news items
         </p>
       </footer>
     </main>
