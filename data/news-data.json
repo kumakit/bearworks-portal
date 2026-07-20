@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-07-20",
+    "daily_summary": "本日のAIニュースは、中国のMoonshot AIが開発した「Kimi」が米国の最先端モデルに肉薄する性能を示して市場を揺るがす一方、中国国内の厳格な情報統制による実用性の制限や思想的懸念といった「光と影」を浮き彫りにしています。また、過熱したAI相場の調整や、NVIDIAの日本での提携、Appleの訴訟がOpenAIに与える影響などビジネス面の地殻変動が続く中、クリストファー・ノーラン監督によるAIの潜在的リスクへの警告や、誰もが無料で使える共通基盤を目指す「Current AI」の取り組みなど、技術の急速な進化に伴う倫理的課題や多角的な開発競争が世界規模で進行していることを示しています。",
+    "articles": [
+      {
+        "title": "中国のムーンショットAIとは、なぜ世界の株式市場を揺るがすのか",
+        "content": "中国のAIスタートアップであるMoonshot AIが開発した、長文処理能力に優れたAIチャットボット「Kimi」が大きな注目を集めています。この技術的進歩や成長への期待から、関連する企業の株価が急騰するなど世界の株式市場に影響を及ぼしています。同社の急速な台頭の背景と、市場への波及効果について解説しています。",
+        "source": "Google News",
+        "published_at": "2026-07-20",
+        "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9CYXdsMGEzWEtPWERrbmpQcVdlLWxFYzM0N09SRUtYX2RSUU1oMXpCM2d5dGo0djh1N2FodWk5QzgybWgwM1A4MnNVTTY0b0FCaWxkYUJRVk5mQ21sVmdtRXpWenVIcVpsUkgyaDU4SU9vR1dndHdF?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "中国AI「Kimi」の衝撃、米専門家は「アンソロピック最新型と僅差」と評価",
+        "content": "中国のスタートアップMoonshot AIが開発したAI「Kimi」が、米国の専門家から高い評価を受けています。専門家は、Kimiの性能が米アンソロピックの最新モデルと僅差であると指摘しています。この技術向上は、グローバルなAI開発競争における中国企業の急速な台頭を示しています。",
+        "source": "Google News",
+        "published_at": "2026-07-20",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5YM21qbkdJbDB6RFF1UDFOSFR3ODZMOW03RW1YNktQWmxxME9IdkxWRlJHNV8xemx0UDg1Z3l3UGwzQm02REZwaTRvX1M3anFNd1VfODNIdy1QQjJBRVFEZUVVbjRkRkxZMXVWUQ?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "中国AI企業、米アンソロピックとオープンAIの最先端に近い「Kimi K3」を公開",
+        "content": "中国のAIスタートアップであるMoonshot AIが、米アンソロピックやオープンAIの最先端モデルに匹敵する性能を持つ新型AIモデル「Kimi K3」を公開しました。このモデルは高度な推論能力を備えており、中国のAI技術が急速に進化していることを示しています。米国の輸出規制に直面する中でも、中国国内で独自に高度なモデル開発が進んでいる例として注目を集めています。",
+        "source": "Google News",
+        "published_at": "2026-07-20",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQd2JPOGU2QWdxRmgwQ2JaOU52RTBkQU1UNjYzUndqRVdRS2xLMjJwZTByM3huMjh5VUZrOFlWd1gzUjlxVHdrZkhNbF9RV2h1OUdQZFpMcHZYZTctNHZHQXc3TkZmZ29zQ1NVVVE3OE51TDhGemhIU3BaVkdDOGl6TktlLVBBT2VDaUE1LVJR?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "「中国のAIはほとんど役に立ちません」 “AI先進国”の皮を被った管理社会、中国の金融マンが語る深すぎる絶望",
+        "content": "中国は「AI先進国」として宣伝されていますが、実際には厳格な情報統制や検閲などの管理社会システムがAIの発展を阻害しています。現地の金融関係者によると、政治的制約やデータの偏りにより、実務においてはAIがほとんど役に立たないのが現状です。技術革新が国家の過剰な管理によって制限されている実態が指摘されています。",
+        "source": "Google News",
+        "published_at": "2026-07-20",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1QTXNweEE4cXlWZS16R0M5a1VYdVpUbU5ZN2ZDZEpLN2pfYlF2a1dQeVRsbEc4bmQzUmR6cTFQVDg3RHkxYjFEcHpWcDhnYWdDOHpwb3d3?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "過熱AI相場「期待修正」でマネー逆流 膨らんだ投機、調整に時間",
+        "content": "AI市場への過度な期待から急膨張した投機マネーが逆流し、株式相場での調整局面が続いています。急激な株価上昇に対する期待の修正が行われており、適正な水準に落ち着くまでには時間がかかる見通しです。",
+        "source": "Google News",
+        "published_at": "2026-07-20",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5qemYwQlI3THpRLThIUGNhY2tuTEFZRU9KZzRjUU54T2JrUGdSbS1VZEt1ckFiSTMzT2hUU01OeEtjam5MUjUwVlpYQkJsd1cyZE8yekd2cVNPS2daaVl1bzVJOGJxa044QnRlVw?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "ジェンスン・フアン氏の来日後に注目すべき動き",
+        "content": "NVIDIAのCEOであるジェンスン・フアン氏が、日本のテクノロジーエコシステム全体に広がる多数の提携合意を携えて東京を後にしました。この来日により、日本の半導体やAI産業における今後の具体的な展開に注目が集まっています。日本市場における同社の広範な合意がもたらす今後の影響が注視されます。",
+        "source": "TechCrunch",
+        "published_at": "2026-07-20",
+        "url": "https://techcrunch.com/2026/07/19/what-to-watch-for-after-jensen-huangs-japan-visit/",
+        "category": "事業・投資"
+      },
+      {
+        "title": "Appleの訴訟はOpenAIのハードウェア計画を阻害するのか？",
+        "content": "ポッドキャスト「Equity」の最新エピソードでは、Appleによる訴訟が、OpenAIが計画しているハードウェア分野への参入や株式公開に影を落とすことになるかどうかを議論しています。この訴訟が、大いに注目されているOpenAIの今後の事業戦略に与える影響について分析しています。",
+        "source": "TechCrunch",
+        "published_at": "2026-07-20",
+        "url": "https://techcrunch.com/2026/07/19/can-an-apple-lawsuit-derail-openais-hardware-plans/",
+        "category": "事業・投資"
+      },
+      {
+        "title": "映画監督クリストファー・ノーラン氏、AIを明らかな「トロイの木馬」と警鐘を鳴らす",
+        "content": "映画監督のクリストファー・ノーラン氏は、急速に普及するAI技術を「トロイの木馬」に例え、その危険性について言及しました。同氏は「中にギリシャ人が隠れていることは誰もが知っている」と述べ、技術の背後にあるリスクを看過すべきではないと指摘しています。この発言は、AIがもたらす社会やクリエイティブ業界への潜在的な脅威に対する強い懸念を示したものです。",
+        "source": "TechCrunch",
+        "published_at": "2026-07-20",
+        "url": "https://techcrunch.com/2026/07/19/odyssey-director-christopher-nolan-calls-ai-an-obvious-trojan-horse/",
+        "category": "政策・安全"
+      },
+      {
+        "title": "非営利団体Current AI、誰もが無料で利用できる「AIのワールド・ワイド・ウェブ」の構築を急ぐ",
+        "content": "あらゆる文化を置き去りにしないAIの構築を目指す非営利団体「Current AI」が、デバイスやAIチャットなどの分野で目覚ましい進歩を遂げています。同団体は、すべての人が無料でアクセスできる「AIのワールド・ワイド・ウェブ」のような共通基盤の実現に向けて開発を加速させています。",
+        "source": "TechCrunch",
+        "published_at": "2026-07-20",
+        "url": "https://techcrunch.com/2026/07/19/nonprofit-current-ai-is-racing-to-build-the-world-wide-web-of-ai-free-for-all/",
+        "category": "その他"
+      },
+      {
+        "title": "Kimi：脅威か、それとも有害な存在か？",
+        "content": "中国のMoonshot AI社が今週、自社のAIモデル「Kimi」の新バージョンをリリースしたことで、「完全なAI共産主義」への懸念が沸き起こっています。この技術の急速な進化は、業界内で新たな警戒感を生み出しています。",
+        "source": "TechCrunch",
+        "published_at": "2026-07-20",
+        "url": "https://techcrunch.com/2026/07/18/kimi-threat-or-menace/",
+        "category": "モデル・研究"
+      }
+    ]
+  },
+  {
     "date": "2026-07-19",
     "articles": [
       {
