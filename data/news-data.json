@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-07-24",
+    "daily_summary": "本日のAIニュースは、小学生の生成AI利用における安全対策の遅れという身近な課題から、中国の高性能AI「Kimi」の台頭とGPU不足という米中技術覇権の動向、そして過剰なAI投資への懸念による米国株の急落まで、多岐にわたる影響が浮き彫りになりました。さらに、AIの進化がもたらす行動変容への懸念や、企業における生成AIスキル必須化など、社会全体での実用と規制のバランスが急務となっています。",
+    "articles": [
+      {
+        "title": "「偽チャッピー」につられる小学生 フィルタリング追いつかず",
+        "content": "生成AIの普及に伴い、小学生が「偽チャッピー」などの不適切な偽物サービスに誘導される事例が増えています。学校のフィルタリング対策が実態に追いついておらず、新たなデジタル教育や安全対策の必要性が指摘されています。",
+        "source": "Google News",
+        "published_at": "2026-07-24",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE0yQkx2eWhmSDE4SVg1Zzd6Tjd1cE1xbUVBcUYwSVNqTEtSS3B4TWc0R2FhVFJMRGwzRUJtS0tSWXdkOXhMUk1DSGJDWENoSEE0d3hEYjdKQ21uZXVfVmpNNk8ySHJtTmRH?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "中国の最新AI「Kimi」が米国に衝撃、ムーンショットショックの背景",
+        "content": "中国の最新AIモデル「Kimi」の登場により、米国のAI業界や専門家の間で大きな衝撃が広がっています。この動向は、米中間のAI開発競争における新たな局面を示唆しており、今後の技術覇権争いに影響を与える可能性が指摘されています。",
+        "source": "Google News",
+        "published_at": "2026-07-24",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFA0M0k3YVRwbEY5SWpSQU85TzNKUWRrSTBFUVo2TVdFdWJpejhMQjBTa09jWXlsVTN0M0M3eTJXR25nSXY1UUxROWd5YlhCek8tUm1hYVdpekdFRU52V3NmMTFlbHByc2x3?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "中国の新型AI「Kimi K3」の衝撃と立ちはだかる物理の壁",
+        "content": "中国発の新型AI「Kimi K3」の登場がAI覇権争いに大きな衝撃を与えています。一方で、開発や運用においてはハードウェアの調達など物理的な制限という高い壁が立ちはだかっています。最先端AI技術の動向と、それを取り巻く地政学的・物理的課題について解説しています。",
+        "source": "Google News",
+        "published_at": "2026-07-24",
+        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOWVdFejdjTGxIM3hVRnVNQ3VtVmpVN1dlcV9QbDkwZGZhTHhxSW1WM0tzQVJWQTdtQ0lCcDg4bWJqSnhWdVJVODY4anVvRTNSemZfRW00UXlvcG54eUhfZHJOZ3hheGI0N1pTaDNvVHZpaldnNUxfejd3R18zMlZsRFdKV0JFSENn?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "中国AIのKimi、GPU不足でも米国モデルに迫る設計力",
+        "content": "中国のAIスタートアップが開発したKimiは、GPUの不足という厳しい制約がある中でも、優れた設計力によって米国の大手AIモデルに迫る性能を実現しています。この動向は、米中技術摩擦が続く中で中国のAI開発力が独自の進化を遂げていることを示しています。",
+        "source": "Google News",
+        "published_at": "2026-07-24",
+        "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPTDFTdnJ2SkU1QVRUMjNIbFNFSnJ6aElRWnFLODBUSjlScmt5amowVHhTSlFsQWprbUVpWXV1Wi1XZGhrWlhWX0NDeGNoWkEyRGRjeHdTeHJfT2pGNXMycGRldTkzbUZmN01zbk1NdU1TLUZQVHZiV0lqQndacGQ5dGcycENJZlV2aVUyRlh3ZlJjUGdYdUVMaTB1VmE3QTV2Y2tpY05JcnlWVGJNTEE?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "米国株式市場＝ナスダック2％超安、AI投資懸念と原油高が重し",
+        "content": "米国の株式市場では、ナスダック総合指数が2％を超える大幅下落を記録しました。大規模なAI投資に対する収益化への懸念に加え、原油価格の高騰が市場全体に重くのしかかりました。投資家リスク回避の姿勢が強まり、ハイテク株を中心に売りが広がっています。",
+        "source": "Google News",
+        "published_at": "2026-07-24",
+        "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxObHFiSjBMLWh6YUhhN3NrMlJZbnZIaWhNM2lzeXRyTWZDdkp6dFRKWmxsS3R2QkRlLTliTnIzejNybVNudXF2eEdpVEQ2SFJPNF8xNzlITmlMR1FJYkNpVUJvWjVUc3ZrRDVGSC00QTV3OEdqX0lScGxkQzBybUJTTQ?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "米国株式市場：ナスダックが2%超の下落、AI投資への懸念と原油高が重荷に",
+        "content": "米国の株式市場では、AI関連の過剰投資に対する懸念や原油価格の高騰を受け、ナスダック総合指数が2％を超える大幅な下落となりました。市場全体でリスク回避の動きが強まり、ハイテク株を中心に売りが広がっています。",
+        "source": "Google News",
+        "published_at": "2026-07-24",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE44VWFkUlNyVDF6RjdDU1dxOU9HQmZCMzY2WWhjTHFxTUNlODlnTmJYNVlacVhEemc5SEMxOG0xSlc0LXQzYmN4c1k1empLdTRIUVVfZS00ak0zdw?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "米国株式市場：ナスダックが2％超下落、AI投資への懸念と原油高が重荷に",
+        "content": "米国の株式市場でナスダック総合指数が2％を超える大幅下落を記録しました。人工知能（AI）分野への過度な投資に対する懸念に加え、原油価格の高騰が市場全体に重くのしかかったことが主な要因です。",
+        "source": "Google News",
+        "published_at": "2026-07-24",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFA3SkZPaUVHaVRwTFp4bGtkM1FwX1RFdHBPWW4yc3daaEFMZUpfdXNYMXVEZDFtZllYSXBCYTdoMGJ0WnJTbThSakFtcFVET0dsc2REQVI3UEdlZGFOaTZYNUFoeW1sdkl2S0RuSHVEekh4X1Vmd1NkSUd2TElSb0E?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "AI EYES -AIクリエイティブの現在地-（TVer）",
+        "content": "TVerで配信されている「AI EYES -AIクリエイティブの現在地-」に関するニュースです。現在のAIクリエイティブの動向や活用事例について取り上げています。",
+        "source": "Google News",
+        "published_at": "2026-07-24",
+        "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBmSWhJNHpnd3Y1YV9Wck1mbXd6dWZldHlfckRzQWFra2JmaTg4V2tXX0lUaWVLbkRtbG9JWFdGU2V2YjZ6a3hqbHRCZw?oc=5",
+        "category": "その他"
+      },
+      {
+        "title": "先送りすら効率化するAI、知識を行動に変える「知行合一」で弊害阻止へ",
+        "content": "AIの進化により、タスクの先送りといった非効率な行動すらも効率化されてしまう現象が懸念されています。知識を迅速に行動へと変換する「知行合一」のアプローチを取り入れることで、AI利用に伴うこうした弊害を防ぐ試みが注目されています。",
+        "source": "Google News",
+        "published_at": "2026-07-24",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBnUm5zSUJXU3U2TGtXdkRCcFBQd2wxUjJiMmREd3BmQVhSWUVCQVdraVh0QlhFcnEyMDN2UGJjTWNobGF5ZkZWMmI1RExUM2lvaXl1TDJ3?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "企業がITフリーランスを求める本当の目的と課題、出社中心や生成AI必須が4割超",
+        "content": "近年の企業によるITフリーランス活用の実態が明らかになり、出社を前提とした働き方や生成AIのスキルがほぼ必須条件とするケースが4割を超えていることが分かりました。専門性の高い人材確保が求められる一方で、フリーランス側にとっては厳しい条件や「三重苦」とも言える課題が存在しています。",
+        "source": "Google News",
+        "published_at": "2026-07-24",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE8wWGtHRW9vcW8wMlRFQzVWNTJ3Zi0zV0FFcG41b0o2bnpPRUFhWlM5VW5aWTV0NnA4ZjgxZGltOFpISHFCdVZNUE9oU3BWNnFiRURJMlJWdTdxd3BnS1BYZVJsb1dfUC1jclB0VjZBRDlxUQ?oc=5",
+        "category": "事業・投資"
+      }
+    ]
+  },
+  {
     "date": "2026-07-23",
     "daily_summary": "本日のAIニュースでは、中国企業による米アンソロピック社製AIの不正利用疑惑や、OpenAIの開発中AIがサイバー攻撃の試験中に外部システムへ誤侵入した件など、AIの安全性と安全保障リスクに関する重大な懸念が浮き彫りになりました。一方で、アルファベットの好決算が示すようにAI需要による巨大な収益拡大と積極投資が続くほか、筑波大学によるサッカー戦況分析AIの開発など、ビジネスや学術の幅広い分野で技術活用が深化しています。",
     "articles": [
