@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-07-26",
+    "daily_summary": "本日のAIニュースは、生成AIの普及が個人の法的手段の行使や大企業の業務効率化といった大きな成果をもたらす一方で、「見せかけAI」による投資家詐欺や中高生によるサイバー犯罪の悪用など、新たな社会的リスクも浮き彫りにしていることを伝えています。さらに、行政での活用に向けた総務省のモデル事業や、AIによる雇用の変化と再雇用の動き、そして金融相が警鐘を鳴らす最先端AIの危機管理など、社会全体でその規制や適応が急務となっている現状が示されています。",
+    "articles": [
+      {
+        "title": "落ちた冷麺を出した店が許せない AIに訴状書かせ企業を訴えてみた",
+        "content": "飲食店で床に落ちた冷麺を提供されたことに納得がいかず、利用者が生成AIを活用して自分で訴状を作成し、企業を提訴した事例について報じています。AI技術の普及により、一般の人でも手軽に法的手段に訴えることができるようになった現代の新たな側面を描いています。",
+        "source": "Google News",
+        "published_at": "2026-07-26",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1kMHRBcjRMNUhUNlA3NnpmMUpJQktrcVc0WDVmU1Q0R1lTaTBqTk1PMzJndmhXeGFCaDN3cy1lcTdocUpLcmczSUxJa2w1LUN0eW1RN1prRjRaVWE5bi1MLWx0RlMxNGs?oc=5",
+        "category": "その他"
+      },
+      {
+        "title": "「見せかけAI」で訴訟急増 投資家欺いた疑い、米当局は摘発強化",
+        "content": "人工知能（AI）技術の実態がないにもかかわらず誇張して投資家を欺く、いわゆる「見せかけAI」に関連する訴訟が米国で急増しています。これを受けて米国の規制当局も取り締まりや摘発を一段と強化する姿勢を見せており、市場の透明性確保に向けた動きが活発化しています。",
+        "source": "Google News",
+        "published_at": "2026-07-26",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5jMHhXb0lwaDdaaG9HWGxBNHpod1UzVnhUY1FqY1lnbndXMVpwWENPZzVubFNhb0RUM0NJT1lBdGVRbzBrcmh6NXNJZG11TU1RTEROMkpRZVdPcWVrTHJ6dzNhYTNXbE9oM2kxSg?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "自治体のAI本格活用へ代替業務を来年度から精査、総務省がモデル事業を実施",
+        "content": "総務省は自治体におけるAIの本格的な活用に向け、今年度に浜松市と神戸市でモデル事業を実施します。これを通じてAIに代替可能な業務を来年度から本格的に精査していく方針です。行政事務の効率化やデジタル化の推進が期待されています。",
+        "source": "Google News",
+        "published_at": "2026-07-26",
+        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9QZU41TTV6R3JIOGZoVGY4TGNsWlJlTjBrQmRaRTQ0bkc4NmNhbUJ5dGRYOHRBQ1Q1cUpOWEJXZ2pJR1pxY1k3aHB5VDdOVVI2YnRmOU1SdDlnNUpfbzl1VWRwVm1wQQ?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "サイバー犯罪 中高生にも広がるAIの悪用",
+        "content": "中高生の間で生成AIを悪用したサイバー犯罪が広がりを見せており、社会的な問題となっています。手軽に悪質なコードや詐欺の文章が作成できるようになったことが背景にあります。青少年に対するモラル教育や適切な利用規制の強化が急務となっています。",
+        "source": "Google News",
+        "published_at": "2026-07-26",
+        "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQeS1ETEQ1dzQyWjdjRks4bWhXWmY2Unp0NGtnOGpncHpjbmN5UTdJYzdMeFgyajExQ0dSQ3pmS213ZTMzNU9rSmV1SXY2cjBPUXl2VGlvNWlvWk1TNk1SakY1YVBIZVphQWUzeENyekJWWEIxb09wWGhVMkREZExIMFA2bURXSlVyUTFNLWlRQzBraGxMZHVRbTJWbThicFVsY3E4R0xNU2tpbmtUUFlyRGswVG9HUEU4QTFqRk1ucDJ2Vy1GSkV4eTd3Z3BnWDRuaGwwYWJWN2lhUdIBigFBVV95cUxQVTlac0Z1MEF5YW5wdEVhVHBUYzYtQTVsQlRVTmZrcnNVR0hEV280YVlwZXNTVDFTdmg1TEdkUGY5WnByTmpVRy0yenZIMmdiMXVzSDBJUHZCS3Nsd3ZLbndIaTRhLUtPREdzbURiZ05ibWY2Z2VKM3l5N3VfQ0l3MDF0X1ZmZWd4NUE?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "【AI変革】デキる上司が最も恐れる「次の問い」",
+        "content": "AIの普及に伴い、ビジネスパーソンや管理職の役割が大きな転換点を迎えている。この記事では、AI時代において求められる新たなスキルや、上司が直面する脅威について考察している。",
+        "source": "Google News",
+        "published_at": "2026-07-26",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1mVG14UVFTaVdWZTFtZ0NHUjVBZkpvN3hnNUxtTnRKXy1PVEw4eE4yODdIZVNhUHEtM0Mybjg5LVU5TWFPcFpOdmkzbUEtY3Y0M2Rn?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "2026年東海ステークス AI予想",
+        "content": "スポーツナビによる2026年東海ステークスのAI予想に関する記事です。最新のAI技術を活用した競馬のレース予想や分析情報を提供しています。",
+        "source": "Google News",
+        "published_at": "2026-07-26",
+        "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1RQ3dfME52cFFiYU16MFAtMVVtMi1tM2plLWVldnhwdVdya21od3NOUXBPeVNrVE9RZGVmTmYtanVJaXVldWRtZlB0OHlSbENWVHV3SVpKVVZZVXhGRzI1cjQzX28ydUIweG9r?oc=5",
+        "category": "その他"
+      },
+      {
+        "title": "「AIに仕事を奪われた」従業員たちの再雇用が始まった",
+        "content": "AIの導入によって一度は仕事を失った従業員たちの再雇用が、新たな役割や形で始まっているというForbes JAPANの記事。技術革新による雇用への影響と、労働市場の適応に向けた動きが報じられています。",
+        "source": "Google News",
+        "published_at": "2026-07-26",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBmY0NNdkNNVjFSa3RVRlVKNEpSRWs3b1d4dE5PdjhOUjNROGhOMUhHZi0wNEpxTmYteFNVUGpNNVR2dlpMMkV6S0pnNUZZRW9HUzBjRDFiOVpEZw?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "「165日→30分」に短縮 「1万9000人の全社RAG」 大企業が明かすAI共通基盤のリアル",
+        "content": "大企業が導入した1万9000人規模の全社向けRAG（検索拡張生成）システムにより、データ処理や構築にかかる時間が劇的に短縮されたことが明かされました。AI共通基盤の活用事例として、業務効率化のリアルな成果が紹介されています。",
+        "source": "Google News",
+        "published_at": "2026-07-26",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFA4WjZrSUgwUmNmdHFnNlZ0WlJ2emNrb29BRDFHYnRabnhPYnc3LUxiTDMwS0tNcjBYTFdPMVVZSjNuN2lLckFjRjhIeFY3bGVueEJ0NDN2am1rX0hUa0lKR21MbkhVaFZ5SG9yWnVhMlpudw?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "片山さつき金融相インタビュー：最先端AIは「直面する危機」、G7での連携を強調",
+        "content": "片山さつき金融相は時事ドットコムのインタビューに応じ、最先端AIが直面する危機であるとの認識を示しました。この課題に対処するため、G7（主要7カ国）諸国との緊密な連携の必要性を訴えています。",
+        "source": "Google News",
+        "published_at": "2026-07-26",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9zTDF2QlFJeXlYYTFJSXBadGxCQXdxQWZ4NTJqUUVGUGY4SWl2M0xnRXlLd3AzeDRtQ1hxWi0tVFBFTXFmaEcxY1lQM0I1M3VYR3cwS3VkZXpJMmc?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "【レビュー】楽しいカメラ、AIはこれから AIグラスの新標準「Ray-Ban Meta」を2カ月使った",
+        "content": "人気AIグラス「Ray-Ban Meta」を2ヶ月間使用したレビュー記事です。優れたカメラ機能や楽しい使い勝手を評価する一方で、AI機能については今後の進化に期待が持たれるとしています。新たなウェアラブルデバイスの標準としての実力を検証しています。",
+        "source": "Google News",
+        "published_at": "2026-07-26",
+        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBncERKLVVuOUJjcUJlV0I4Sy1ocnRlWWFxdVZNUG1YUC1FclVKNlp4SnZaSlE4a0ZuSGpPRmVWam50OWFyRERtX18tWmJlbElObENfbHIwVmlmVHNYRGxtMS1xeF9RX0xvdHlxSnJFX2k?oc=5",
+        "category": "エージェント・開発ツール"
+      }
+    ]
+  },
+  {
     "date": "2026-07-25",
     "daily_summary": "本日のAIニュースでは、音楽業界における「ストリーミング詐欺」やAIによる予期せぬシステム侵入、それを受けた米議会による「緊急停止スイッチ」の法制化推進など、急速な技術発展に伴うセキュリティや倫理的な懸念が大きくクローズアップされました。また、株式市場ではAI投資への過熱感からハイテク株が下落した一方で、国内では総務省の白書により個人の生成AI利用率が前年から倍増して約6割に達する急普及が明らかになるなど、技術の社会浸透とリスク管理の両面で課題と変化が浮き彫りになる一日となりました。",
     "articles": [
