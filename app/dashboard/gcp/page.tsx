@@ -4,12 +4,42 @@ export const runtime = "edge";
 
 import React, { useState, useEffect } from "react";
 import { AlertTriangle, TrendingUp, Sparkles, CreditCard } from "lucide-react";
-import { DashboardData, formatJPY, formatNumber, normalizeDashboardData } from "../lib/dashboardUtils";
+import { DashboardData, GoogleBillingCredit, formatJPY, normalizeDashboardData } from "../lib/dashboardUtils";
 import { DetailPageLayout } from "../components/DetailPageLayout";
 import { GCPCharts } from "../components/GCPCharts";
 import { MetricCard } from "../components/MetricCard";
 
 const DASHBOARD_API_URL = "/api/dashboard-data";
+
+const creditStatusLabels = {
+  AVAILABLE: "利用可能",
+  USED: "消費済み",
+  EXPIRED: "期限切れ",
+  UNKNOWN: "データ不明",
+} as const;
+
+const creditStatusClasses = {
+  AVAILABLE: "text-emerald-600 bg-emerald-500",
+  USED: "text-slate-500 bg-slate-400",
+  EXPIRED: "text-amber-600 bg-amber-500",
+  UNKNOWN: "text-red-600 bg-red-500",
+} as const;
+
+function compareCredits(a: GoogleBillingCredit, b: GoogleBillingCredit) {
+  const statusOrder = { AVAILABLE: 0, UNKNOWN: 1, USED: 2, EXPIRED: 3 } as const;
+  return statusOrder[a.status] - statusOrder[b.status]
+    || a.endDate.localeCompare(b.endDate)
+    || a.startDate.localeCompare(b.startDate)
+    || a.id.localeCompare(b.id);
+}
+
+function formatCreditDate(date: string) {
+  if (!date) return "不明";
+  const parsed = new Date(`${date}T00:00:00Z`);
+  return Number.isNaN(parsed.getTime())
+    ? date
+    : parsed.toLocaleDateString("ja-JP", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" });
+}
 
 // 動的モックデータの生成 (GCP用)
 function getMockGcpData(): DashboardData {
@@ -167,40 +197,14 @@ export default function GCPCostsPage() {
   const currentMonthTotal = googleBilling.currentMonthTotalJPY;
   const forecast = (currentMonthTotal / Math.max(1, today)) * daysInMonth;
 
-  // 残りクレジット枠 (繰越クレジットがある場合は加算)
-  const carryover = googleBilling.carryoverCreditJPY || 0;
-  const remainingCredit = Math.max(0, googleBilling.limitJPY - googleBilling.currentMonthTotalJPY) + carryover;
-  const totalBudget = googleBilling.limitJPY + carryover;
-  const remainingPercent = totalBudget > 0 ? (remainingCredit / totalBudget) * 100 : 0;
-
-  // クレジットの定義と残高の動的割り当て
-  // 期限が遠いもの（終了日の遅いもの）から順番に満額を差し引き、余りを最も期限が近いもの（2027年2月18日）に割り当てる
-  const rawCredits = [
-    { name: "Google Developer Program premium benefit", originalValue: 1594.00, startDate: "2026年6月6日", endDate: "2027年6月6日", key: "6-6" },
-    { name: "Google Developer Program premium benefit", originalValue: 1596.00, startDate: "2026年5月17日", endDate: "2027年5月17日", key: "5-17" },
-    { name: "Google Developer Program premium benefit", originalValue: 1566.00, startDate: "2026年3月20日", endDate: "2027年3月20日", key: "3-20" },
-    { name: "Google Developer Program premium benefit", originalValue: 1566.00, startDate: "2026年3月20日", endDate: "2027年2月18日", key: "2-18" },
-  ];
-
-  let pool = remainingCredit;
-  const creditsList = rawCredits.map((c) => {
-    const allocated = Math.max(0, Math.min(c.originalValue, pool));
-    pool -= allocated;
-    const remPercent = c.originalValue > 0 ? (allocated / c.originalValue) * 100 : 0;
-    return {
-      ...c,
-      remainingValue: allocated,
-      remainingPercent: remPercent,
-      status: allocated > 0 ? "利用可能" : "消費済み",
-    };
-  });
-
-  const displayCredits = [
-    creditsList.find(c => c.key === "5-17")!,
-    creditsList.find(c => c.key === "6-6")!,
-    creditsList.find(c => c.key === "3-20")!,
-    creditsList.find(c => c.key === "2-18")!,
-  ].filter(Boolean);
+  // クレジットの残高・内訳はデータ生成側の照合結果のみを表示する。
+  const displayCredits = [...(googleBilling.credits || [])].sort(compareCredits);
+  const hasCreditData = Array.isArray(googleBilling.credits);
+  const remainingCredit = googleBilling.creditRemainingTotalJPY;
+  const creditOriginalTotal = googleBilling.creditOriginalTotalJPY;
+  const remainingPercent = remainingCredit !== null && remainingCredit !== undefined && creditOriginalTotal && creditOriginalTotal > 0
+    ? (remainingCredit / creditOriginalTotal) * 100
+    : null;
 
   return (
     <DetailPageLayout
@@ -248,10 +252,10 @@ export default function GCPCostsPage() {
 
         <MetricCard
           title="⏳ クレジット残高"
-          value={formatJPY(remainingCredit)}
-          description={carryover > 0
-            ? `総クレジット枠 ${formatJPY(totalBudget)} に対する残高 (繰越 ¥${carryover.toLocaleString("ja-JP")} 含む)`
-            : `月間予算 ${formatJPY(googleBilling.limitJPY)} に占める余剰枠`
+          value={remainingCredit === null || remainingCredit === undefined ? "不明" : formatJPY(remainingCredit)}
+          description={hasCreditData
+            ? `実クレジット残高（元金合計 ${creditOriginalTotal === null || creditOriginalTotal === undefined ? "不明" : formatJPY(creditOriginalTotal)}）`
+            : "クレジット明細が未提供のため、残高は表示しません"
           }
           icon={<CreditCard size={20} />}
           theme="google"
@@ -259,14 +263,14 @@ export default function GCPCostsPage() {
           <div className="w-full mt-2">
             <div className="flex justify-between items-center mb-1 text-[10px] font-bold text-muted">
               <span>クレジット残量比率</span>
-              <span className={remainingPercent < 20 ? "text-red-500 font-black animate-pulse" : "text-purple-500 font-black"}>
-                {remainingPercent.toFixed(1)}%
+              <span className={remainingPercent !== null && remainingPercent < 20 ? "text-red-500 font-black animate-pulse" : "text-purple-500 font-black"}>
+                {remainingPercent === null ? "不明" : `${remainingPercent.toFixed(1)}%`}
               </span>
             </div>
             <div className="w-full bg-purple-50 rounded-full h-2 overflow-hidden border border-purple-100/30">
               <div
                 className="bg-gradient-to-r from-blue-500 to-purple-600 h-full rounded-full transition-all duration-500"
-                style={{ width: `${Math.min(remainingPercent, 100)}%` }}
+                style={{ width: `${Math.min(remainingPercent || 0, 100)}%` }}
               />
             </div>
           </div>
@@ -286,7 +290,7 @@ export default function GCPCostsPage() {
         <div>
           <h3 className="text-sm font-bold tracking-wider text-muted mb-1">🎁 発行済みクレジット一覧</h3>
           <p className="text-[10px] text-muted font-medium">
-            有効な Google Developer Program 特典クレジットの内訳 (総残高と動的連動)
+            データ生成側で照合した実クレジットの内訳
           </p>
         </div>
 
@@ -304,15 +308,15 @@ export default function GCPCostsPage() {
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-50/50">
-              {displayCredits.map((item, idx) => (
-                <tr key={idx} className="hover:bg-gray-50/20 transition-colors font-medium">
+              {displayCredits.map((item) => (
+                <tr key={item.id} className="hover:bg-gray-50/20 transition-colors font-medium">
                   <td className="py-3.5 px-4 text-primary font-bold">
                     {item.name}
                   </td>
                   <td className="py-3.5 px-4">
-                    <div className="flex items-center gap-1.5 text-emerald-600 font-extrabold">
-                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-                      <span>{item.status}</span>
+                    <div className={`flex items-center gap-1.5 font-extrabold ${creditStatusClasses[item.status].split(" ")[0]}`}>
+                      <span className={`w-1.5 h-1.5 rounded-full ${creditStatusClasses[item.status].split(" ")[1]}`} />
+                      <span>{creditStatusLabels[item.status]}</span>
                     </div>
                   </td>
                   <td className="py-3.5 px-4">
@@ -320,24 +324,30 @@ export default function GCPCostsPage() {
                       <div className="w-16 bg-purple-50 rounded-full h-1.5 overflow-hidden border border-purple-100/10">
                         <div
                           className="bg-gradient-to-r from-blue-400 to-purple-600 h-full rounded-full"
-                          style={{ width: `${item.remainingPercent}%` }}
+                          style={{ width: `${Math.min(item.remainingPercent || 0, 100)}%` }}
                         />
                       </div>
                       <span className="font-extrabold text-[10px] text-purple-600 w-8">
-                        {Math.round(item.remainingPercent)}%
+                        {item.remainingPercent === null ? "不明" : `${Math.round(item.remainingPercent)}%`}
                       </span>
                     </div>
                   </td>
                   <td className="py-3.5 px-4 text-primary font-bold">
-                    ¥{item.remainingValue.toLocaleString("ja-JP", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                    {item.remainingValueJPY === null ? "不明" : formatJPY(item.remainingValueJPY)}
                   </td>
                   <td className="py-3.5 px-4 text-muted font-semibold">
-                    ¥{item.originalValue.toLocaleString("ja-JP", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                    {formatJPY(item.originalValueJPY)}
                   </td>
-                  <td className="py-3.5 px-4 text-muted">{item.startDate}</td>
-                  <td className="py-3.5 px-4 text-muted">{item.endDate}</td>
+                  <td className="py-3.5 px-4 text-muted">{formatCreditDate(item.startDate)}</td>
+                  <td className="py-3.5 px-4 text-muted">{formatCreditDate(item.endDate)}</td>
                 </tr>
               ))}
+              {hasCreditData && displayCredits.length === 0 && (
+                <tr><td className="py-6 px-4 text-muted" colSpan={7}>対象のクレジットはありません。</td></tr>
+              )}
+              {!hasCreditData && (
+                <tr><td className="py-6 px-4 text-amber-700" colSpan={7}>クレジット明細を取得できません。推定残高は表示しません。</td></tr>
+              )}
             </tbody>
           </table>
         </div>
