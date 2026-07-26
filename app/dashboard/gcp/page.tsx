@@ -198,7 +198,9 @@ export default function GCPCostsPage() {
   const forecast = (currentMonthTotal / Math.max(1, today)) * daysInMonth;
 
   // クレジットの残高・内訳はデータ生成側の照合結果のみを表示する。
-  const displayCredits = [...(googleBilling.credits || [])].sort(compareCredits);
+  const displayCredits = (googleBilling.credits || [])
+    .filter((credit) => credit.remainingValueJPY === null || credit.remainingValueJPY > 0)
+    .sort(compareCredits);
   const hasCreditData = Array.isArray(googleBilling.credits);
   const remainingCredit = googleBilling.creditRemainingTotalJPY;
   const creditOriginalTotal = googleBilling.creditOriginalTotalJPY;
