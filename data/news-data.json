@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-07-27",
+    "daily_summary": "本日のAIニュースは、総務省による自治体への導入支援や実証実験が進む一方で、安全性を重視した開発の模索や、約3人に1人が買い物にAIを利用するなど日常生活への浸透が浮き彫りとなりました。また、AI分野における日本の大学の世界的ポジションや、プログラミングよりも「業界知識」が重視される新時代のキャリア像が語られる一方、AI依存による思考力の低下や人間関係への悪影響、さらには過剰な設備投資に対する投資家の警戒感や株価下落のメカニズムといった、技術革新の裏にある深刻な課題やリスクも同時に突きつけられる一日となりました。",
+    "articles": [
+      {
+        "title": "自治体のAI本格活用 総務省後押し",
+        "content": "総務省が地方自治体による生成AIなどの本格的な活用を後押しする方針を固めました。行政サービスの効率化や業務負担の軽減を目指し、導入に向けた支援が進められます。",
+        "source": "Google News",
+        "published_at": "2026-07-27",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE41NDBXOEk1b1FKYVJEaFVPTUJNQ2k0UWNNM2xvazZyaTVCSW9pNEY3aEc4M3I3enpGcWpZOFZGLTBPSEMxa1czaUMtMlRUZUg1?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "オープンAIとの決別 アンソロピック創業者ダリオ・アモデイが「安全なAI」の重要性を信じた決断",
+        "content": "アンソロピックの創業者であるダリオ・アモデイが、オープンAIを離れて独自の道を歩み始めた理由と背景について解説しています。彼はAI開発において「安全性」を最優先事項に据えることの重要性を強く信じており、その信念に基づいた決断が詳しく描かれています。",
+        "source": "Google News",
+        "published_at": "2026-07-27",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9IN0Q2SFh5YlI0SzhhMWJXUnJSZ3AxNlVXaWxNTjNIX3FmMklrR3QwdVlncEZCUWRkdXFSc3FNRWwyRjljSEctZDRabFFzSHZJampiTWxR?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "「そりゃ人には敵わないわ…」みどりの窓口で生成AIの実証実験、提案された「最適ルート」で見えた本格導入の壁",
+        "content": "JRのみどりの窓口で行われた生成AIの実証実験に関する記事です。AIが提案した「最適ルート」の検証を通じて、現場への本格導入に向けた課題や人間の対応力との違いが浮き彫りになっています。",
+        "source": "Google News",
+        "published_at": "2026-07-27",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE80aXpNZWR4Q3c0Yy11Q19ac2RBZFZwQWNrbW1nVmJSNUM2NFRIRU4xSW5tUmNudVpwYTFCc0NjNjF0WGV0di1tUUNhemvSAU9BVV95cUxOMEQ3WlJRX0w3RVBTc3c2emFIaWpnejY1VDNwdURtU0NfelhLYUl3NXhRb0NjYkdmTV9VY1RNcTNGZzFiajJFQ1NRcmduQXg4?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "約3人に1人が「AIに買い物を相談」 最も多く利用するシーンは？",
+        "content": "約3人に1人の消費者が買い物の際にAIへ相談しているという調査結果が発表されました。日常の様々なショッピングシーンにおいて、AIアシスタントの活用が徐々に広がりを見せていることが示されています。",
+        "source": "Google News",
+        "published_at": "2026-07-27",
+        "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPYnZjNi0tMnJJNTdfQ3dWT0ZFdF9ocTZUZ01rSmNaaGthcGN3T01BbE9pN1daeFJlMjBkWkJIcEIybUtndDFCVkVtUWVHYml2Y2FEMWJjdUNOQTFYRTJCYnotTE9tSGF5QndvdmJaTmhYN3pENDJ1bkNvQy1LUGczQzRGT29UdFNjMjBTUVNCVTdJZTE4UUF30gGcAUFVX3lxTE1ENG1waXY2YVNUWndhZmJNNEFqSEgxQnE0dXFBZmNSTkhXSEhKQ3ZCQlNVWTg2dHNqajByQjVETnAtcVZuM2JJM2JyMXlqY2xpMWlGVXRMSFZfVUMwQ0lnUUVOZmFCYVVUdUx6T2YybW9EaG8yWDhERzJNRmo1c3FDS2d6Y0hBQ2ZITXdjTFVXWk40YmM4ZUNKa0lXWg?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "東大でも早慶でもない…｢AI分野｣の世界の大学ランキングで唯一100位内に入った日本の大学の名前",
+        "content": "AI分野における世界の大学ランキングにおいて、東京大学や早慶などの名門を抑え、日本から唯一100位以内にランクインした大学に関する記事です。日本のAI研究の現状や世界におけるポジションについて解説しています。",
+        "source": "Google News",
+        "published_at": "2026-07-27",
+        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBtUmhtSERHTEpWQkhOSmF5cTJ2X2Q4M1VtekNKVXpRRjM4ZS1Td3lRdDBkakhMblo4Mk5pMjNMR213eFNTVG5OdzA2M1BrcmdCcGh1ZWhtbmI?oc=5",
+        "category": "その他"
+      },
+      {
+        "title": "プログラミング不要で年収アップ、AI時代の新職業の武器は「業界知識」",
+        "content": "AIの普及に伴い、プログラミングスキルではなく深い業界知識を持つ人材が新たな職業で重宝されるようになっています。AI時代においては、専門的な業界への理解がキャリアアップや年収向上のための強力な武器になると指摘されています。",
+        "source": "Google News",
+        "published_at": "2026-07-27",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5iWGxDR0FvQ0pyQW5NQzRrbllCQW5HRjNnZVVoYmpLSFNVVDRsMF9PcFQ4dEk5QXZFTkV3MUdIVW5jT2p5M1ZGeEgxM084YlVCQnBZRGlmd1NaQQ?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "「AIの答えが全然頭に入らない人」が急増している理由とは",
+        "content": "AIが生成した回答をそのまま受け取ることで、自分で考える力が低下し、情報を自分の言葉で説明できなくなる人が増えています。AI時代において知識を定着させるためには、単なる情報のインプットではなく、主体的に思考して言語化する能力が不可欠です。",
+        "source": "Google News",
+        "published_at": "2026-07-27",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9zNVNLRU9YbGRRQklEeXJfNWhNQjVFWVZDd0JUeFE4dGh0YkZZdXBPTWFRUFp1ZEtVXzQxTHg1eFdOQ2hyamxwazVpLWE1eXhITkRDUkF5MGR2VkU?oc=5",
+        "category": "その他"
+      },
+      {
+        "title": "AI新世紀：人間関係はAIで「サル化」する ゴリラ学者・山極寿一氏の警鐘",
+        "content": "ゴリラ学者の山極寿一氏が、AIの普及によって人間の関係性が退化する危険性について毎日新聞で警鐘を鳴らしています。AIとの対話に依存することで、他者との深い共感や社会的絆が損なわれる懸念が示されています。技術の進展がもたらす人間社会のあり方について、改めて考察を促す内容となっています。",
+        "source": "Google News",
+        "published_at": "2026-07-27",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1rV3hEdC1WQWNXTDByRDNSdzVxVDhBUERPTGlFVVlQZS1fNC1IMjFSRUl2a0F2bTlKWC0tOFNMVU5hQTQzNERSY0E3VmdqSS1fWXN4QzM0cmRsTmt0VkhObzlnYlJEVmlG?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "「AIの冬」に身構える投資家、設備投資に関する暗黙の了解が崩壊",
+        "content": "AIブームを牽引してきた大規模な設備投資を巡る暗黙の了解が崩れつつあり、投資家の間に「AIの冬」への警戒感が広がっています。過剰投資に対する懸念や市場の構造変化が、今後のAI関連ビジネスや資金の流れに大きな影響を与えようとしています。",
+        "source": "Google News",
+        "published_at": "2026-07-27",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE8xa0Zvc1dka2FUTnRjZjAtbXdIY3E1WkJpb1lXNnpPSXR6LXY1c0RvenNhZVZOc1JmTURfMmZEbmo4QzJ6bHpRRzNXUTZTWFZhc0h1X01zbnpsV2hscE95ZmdMQldZYzQ?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "AI革命が本物でも、株価が下がってしまう理由を知っておこう",
+        "content": "この記事では、AI技術の革新が本物であるにもかかわらず、関連企業の株価が下落してしまうメカニズムについて解説しています。市場の過度な期待や投資サイクルの影響など、株価変動の背景にある経済的要因が分かりやすく説明されています。",
+        "source": "Google News",
+        "published_at": "2026-07-27",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5RWDB4czBZS0g3NVd6YU1samV2THZuWVZOQzNsWlc1Tk5uVm82Q0VPYnN4UlotQm9ZTndsNVd6cjcweEYtYVdIUmJhdkLSAU9BVV95cUxNRlNRYnNPV25NS0twaVZuX29BbUJWN3ljdFg0OUh0MkJoSk94bm82X3FxazhvMmtraGdtdjVFV21jWmwzb2hjb0JmRzZhQkRV?oc=5",
+        "category": "事業・投資"
+      }
+    ]
+  },
+  {
     "date": "2026-07-26",
     "daily_summary": "本日のAIニュースは、生成AIの普及が個人の法的手段の行使や大企業の業務効率化といった大きな成果をもたらす一方で、「見せかけAI」による投資家詐欺や中高生によるサイバー犯罪の悪用など、新たな社会的リスクも浮き彫りにしていることを伝えています。さらに、行政での活用に向けた総務省のモデル事業や、AIによる雇用の変化と再雇用の動き、そして金融相が警鐘を鳴らす最先端AIの危機管理など、社会全体でその規制や適応が急務となっている現状が示されています。",
     "articles": [
