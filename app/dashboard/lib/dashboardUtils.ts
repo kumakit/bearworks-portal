@@ -15,12 +15,38 @@ export interface ProjectBilling {
   costJPY: number;
 }
 
+export type GoogleBillingCreditStatus = "AVAILABLE" | "USED" | "EXPIRED" | "UNKNOWN";
+
+/** データ生成側で照合・計算されたプロモーションクレジットの明細。 */
+export interface GoogleBillingCredit {
+  /** 公開して問題ない内部キー。Cloud Billing の完全な ID は入れない。 */
+  id: string;
+  name: string;
+  originalValueJPY: number;
+  remainingValueJPY: number | null;
+  usedValueJPY: number | null;
+  remainingPercent: number | null;
+  startDate: string;
+  endDate: string;
+  status: GoogleBillingCreditStatus;
+  lastCalculatedAt: string | null;
+}
+
 export interface GoogleBilling {
   limitJPY: number;
   currentMonthTotalJPY: number;
   usagePercent: number;
   projects: ProjectBilling[];
   modelCosts: { [key: string]: number }; // e.g. { "Gemini 1.5 Pro": 381.3 }
+  /** 月間予算はクレジット残高と別の概念として保持する。 */
+  monthlyBudgetJPY?: number;
+  creditOriginalTotalJPY?: number | null;
+  creditRemainingTotalJPY?: number | null;
+  creditUsedTotalJPY?: number | null;
+  credits?: GoogleBillingCredit[];
+  creditDataStatus?: "AVAILABLE" | "PARTIAL" | "UNKNOWN" | "ERROR";
+  creditLastCalculatedAt?: string | null;
+  /** @deprecated 旧データとの互換用。クレジット残高の表示には利用しない。 */
   carryoverCreditJPY?: number;
 }
 
@@ -228,6 +254,29 @@ export function normalizeDashboardData(data: any): DashboardData {
         }
       });
       billing.modelCosts = modelCostsJPY;
+    }
+    // 新形式がない旧データでは空配列にせず、未取得として扱う。
+    // これにより画面が月間予算や推定値をクレジット残高として誤表示しない。
+    if (Array.isArray(billing.credits)) {
+      billing.credits = billing.credits
+        .filter((credit: any) => credit && typeof credit.id === "string" && credit.id.length > 0)
+        .map((credit: any) => ({
+          id: credit.id,
+          name: typeof credit.name === "string" ? credit.name : "名称不明のクレジット",
+          originalValueJPY: Number.isFinite(credit.originalValueJPY) ? credit.originalValueJPY : 0,
+          remainingValueJPY: Number.isFinite(credit.remainingValueJPY) ? credit.remainingValueJPY : null,
+          usedValueJPY: Number.isFinite(credit.usedValueJPY) ? credit.usedValueJPY : null,
+          remainingPercent: Number.isFinite(credit.remainingPercent) ? credit.remainingPercent : null,
+          startDate: typeof credit.startDate === "string" ? credit.startDate : "",
+          endDate: typeof credit.endDate === "string" ? credit.endDate : "",
+          status: ["AVAILABLE", "USED", "EXPIRED", "UNKNOWN"].includes(credit.status)
+            ? credit.status
+            : "UNKNOWN",
+          lastCalculatedAt: typeof credit.lastCalculatedAt === "string" ? credit.lastCalculatedAt : null,
+        }));
+    } else {
+      billing.credits = undefined;
+      billing.creditDataStatus = billing.creditDataStatus || "UNKNOWN";
     }
     // usagePercent
     if (billing.limitJPY && billing.currentMonthTotalJPY) {
