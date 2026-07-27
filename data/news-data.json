@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-07-28",
+    "daily_summary": "本日のAIニュースは、飲食店でのユニークなメニュー開発やAIとの婚姻といった人間社会への浸透をはじめ、アンソロピック社の安全重視の姿勢や内部解明の挑戦といった技術の深化、エヌビディアによる大型出資や国策AIプロジェクト、さらにはAI格差による企業の将来予測や株式市場への警戒感まで、技術、倫理、経済の多様な側面からAIの存在感がますます高まっている現状を伝えています。",
+    "articles": [
+      {
+        "title": "AIと考案した絶品バーガーで人気店に",
+        "content": "人工知能（AI）を活用して考案したオリジナルバーガーが話題となり、人気店となった店舗の取り組みを紹介しています。AIの提案を取り入れることで、これまでにないユニークなメニュー開発や話題性づくりに成功しました。",
+        "source": "Google News",
+        "published_at": "2026-07-28",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE41VVZaQnA1YWZ0ZGtzRW56bm1PNlY0dmk1TEFTbmwzQTJQQjF4ZHZGcTk5WU5RNHFjdXBYc2lZZ1VLcUY5cjE2Z0FUZVlBdmdF?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "アンソロピック、オープン型AIに賛同せず孤立 安全思想の譲れぬ一線",
+        "content": "AI開発企業アンソロピックが、オープンソース型のAIモデル推進に対して安全性の観点から同調せず、業界内で孤立を深めているという記事です。同社は厳格な安全思想を掲げており、規制やオープン化を巡る議論において独自のスタンスを貫いています。",
+        "source": "Google News",
+        "published_at": "2026-07-28",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBGdUJBT3htRzFobGZYNmNMazBDYVlncUZZSFlHbXJKTUtuS05xX1JwSkQzYVh4V3N5RllyZ2xZTkk1dmpPbkd6ZEl4U2Q1bkdBbXVrWHBfZkh3UklPWDRleUw4enVObGI2QWU5ZA?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "「思考注入実験」でAIの頭の中を理解する アンソロピックの挑戦",
+        "content": "米アンソロピック社が取り組む、AIの内部メカニズムを解明するための「思考注入実験」に関する記事です。AIの意思決定プロセスや思考の仕組みを理解することで、より安全で信頼性の高い技術開発を目指す同社の挑戦を取り上げています。",
+        "source": "Google News",
+        "published_at": "2026-07-28",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5aZDdVMHdwWWk0VU5kTWxlQXZaZTJaSjR6UXVSMFF0Rm1DUEI2T3RRRDBCVldDZ21EdThfT2V5cXhNbkI0WEVJZ2N4Z1l3UTViLUg3RXdrWVdUN01Ed0psUjQ4T0xtemxJS2xBNw?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "著名クリエーターの",
+        "content": "著名なクリエーターの思考や作風をAIに学習させ、その表現手法を再現する試みについて報じています。クリエイティブ分野におけるAIの活用方法や、それに伴う影響について考察しています。",
+        "source": "Google News",
+        "published_at": "2026-07-28",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE54Y3NxS19hYTBiTEp6Szg4S0ZIOEdVVXRaWUNpemF6U1BMXzFqazdrSjY1M3JOV0xfSXBkMXdWaE5qR2c4aTg3Yy1VcEpCalNacEozWEp3?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "業績、株価、賃金、就職… 5年後の業界地図 AI格差で序列激変!?",
+        "content": "AIの活用度合い格差によって、5年後の企業の業績や株価、賃金、就職状況などの業界地図が激変すると予測されています。AI戦略の成否が企業の命運を分ける時代において、各業界の序列がどのように塗り替えられるのかが注目されています。",
+        "source": "Google News",
+        "published_at": "2026-07-28",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBpTHh5UXFuY3dJMUlxRzRFb1llUXhEcDRkMjd6Y1JCRmM3aXNxN1J0SEF0QWxZQmJadDFoN3otXzg5LXdiUzYxUmRhaFBsc3BPRmlCOUJLbzZMODMtQVE?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "AIのプロポーズを受けて結婚した女性、急激に進化するAIと深まる関係について語る",
+        "content": "対話型生成AIで作ったキャラクターからプロを受け、実際に結婚した女性の話題を取り上げています。急激に進化するAI技術と人間の間に生まれる新たな関係性のあり方について報じています。",
+        "source": "Google News",
+        "published_at": "2026-07-28",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5Hd2g3X013X2s3S05CbEJkT2VOblczZ2NWOWdWb2xNclRGN0MwSTRnVi1uX01wcGlRcFIwTmxqRnh2RkJNMWp1M0htb3JFMXVXcU1HTHFLTQ?oc=5",
+        "category": "その他"
+      },
+      {
+        "title": "米エヌビディア、新興AI企業SSIに50億ドル出資へ",
+        "content": "米エヌビディアが、新興AI企業であるSSIへ50億ドル規模の出資を行う方向で調整に入ったことが関係者の話で明らかになりました。この投資により、エヌビディアはAI分野における競争力をさらに強化する狙いがあるとみられています。今後の両社の協業やAI開発の動向に注目が集まっています。",
+        "source": "Google News",
+        "published_at": "2026-07-28",
+        "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQQXZSenFkVlB5c3o4RUE3VnFhNjRyYUQ1cmFXQWtWRFlPMWZkQUJ2djU5LVdEamdCbzJyVHBwd1FZbkhBLW9uNE83djFjcDZRamtpbFY5S3B3UjFFbWNHMkprYno3WWpYREJsNFZQcEFTdkFrNlU1ZGF4ZDFpcS1jNEt30gGHAUFVX3lxTFBwSVJkSWlFcGRtZXRMVENCZjN5NldTQnVGb09wai1EYURudnpLRUxicjRBZG5qak9EZXVxSkpYNnRGUGJYS1JjME5paFBybnY3Ykh1VnkyQ01JT0M1MlptQll6NmpFUTczanY2blFfOVo5d21xQkpvM29WclNPckFWYzMyeU9vdw?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "米エヌビディア、新興AI企業SSIに50億ドル出資へ＝関係筋",
+        "content": "米エヌビディアが、新興AI企業のSSI（Safe Superintelligence）に対して50億ドルの出資を行う方向で調整に入ったことが関係者の話で明らかになりました。この大規模な投資は、AI分野におけるエヌビディアのさらなる影響力強化とエコシステムの拡大を狙うものとみられています。両社による今後の提携や技術開発の動向に注目が集まっています。",
+        "source": "Google News",
+        "published_at": "2026-07-28",
+        "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFB5Q1E2cThtUHdRNEhYSTk2QzZxMnhRR1FLY1IwdWp0UXkxNEVQNHFSRWdvM3dDaDVQUXdSXzRyMFBKd1ppUVVlc0QwY0tRYjJ5WjJOaFdXMk5qRmR6bDRvZU5vbllyMmxiZmtmazlJTWdoSXJEbXhyVw?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "国産AI「ノエトラ」5つの疑問 国が1兆円、NVIDIAの役割",
+        "content": "日本経済新聞が報じた、国が1兆円を投じる国産AIプロジェクト「ノエトラ」に関する5つの疑問点を解説する記事です。NVIDIAの役割やプロジェクトの全貌について分かりやすくまとめています。",
+        "source": "Google News",
+        "published_at": "2026-07-28",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPREVqdTN0R2ZBdTN2Yi1pNmtVTC1tX3hKUENxRFZRRlc4T2t2dFVjZ3dCREZfRndXLWlQS0hKR0VnMXBWcDNHQVRNekhhVzBDd251U0lLalE2QWRFa3ItMGYxY1BKZWFGTzE1MW9UblhPUzR1akI0Wm5sUlZKamlETXFnN25XWjA?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "決算ウイークは「AI株急落」に警戒？…いまの株式市場では「好材料」が「下落要因」となるかもしれない",
+        "content": "現在の株式市場では、企業の決算発表において好材料が発表されても、それが逆に株価の下落要因となるリスクが警戒されています。特にAI関連株においては、決算ウィーク中の値動きに十分な注意が必要です。",
+        "source": "Google News",
+        "published_at": "2026-07-28",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9ZcHlsejQ3c1EwLXcwbl9IZG5qX0I2WWVEVDFiQmVOTnBpZ3RXT2E2MVlZZC1tbTRZT1hySHpIeHZ6YXV6QWRpY1hWU2cyeEM0QWwzdndna202dw?oc=5",
+        "category": "事業・投資"
+      }
+    ]
+  },
+  {
     "date": "2026-07-27",
     "daily_summary": "本日のAIニュースは、総務省による自治体への導入支援や実証実験が進む一方で、安全性を重視した開発の模索や、約3人に1人が買い物にAIを利用するなど日常生活への浸透が浮き彫りとなりました。また、AI分野における日本の大学の世界的ポジションや、プログラミングよりも「業界知識」が重視される新時代のキャリア像が語られる一方、AI依存による思考力の低下や人間関係への悪影響、さらには過剰な設備投資に対する投資家の警戒感や株価下落のメカニズムといった、技術革新の裏にある深刻な課題やリスクも同時に突きつけられる一日となりました。",
     "articles": [
