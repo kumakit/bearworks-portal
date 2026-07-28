@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-07-29",
+    "daily_summary": "本日のAIニュースでは、生成AIの浸透に伴う人間関係や教育、行政のあり方の変化といった社会的適応が進む一方で、巨額投資による経済的インパクトや信用リスク、さらにはAI要約を悪用した新たな詐欺手口や企業の導入失敗といった課題が浮き彫りになっています。また、ポストスマホ時代の覇権争いやフィジカルAIへの期待など、技術革新が産業や国際経済の勢力図に大きな影響を与えていることが示されています。",
+    "articles": [
+      {
+        "title": "「生成AIは友人」の増加と諸外国との認識の違い：令和8年版情報通信白書",
+        "content": "令和8年版情報通信白書の発表により、生成AIを「友人」と捉える割合が増加していることが明らかになった。諸外国との認識の違いは、生成AIの利用率の差が主な理由であると分析されている。今後は利用拡大に伴う様々な問題への対応が重要視されている。",
+        "source": "Google News",
+        "published_at": "2026-07-29",
+        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPY3hqcmhQS3g5TldXN1djZ05SNVloV0hoUUlRSVAxczZrczZCWTlWZmo0R2d3SW1vSEs3TFdUN3RrYTV4UFpzdTd1dUh5UFQ4TWxQVlhsS1l0YTNwbEd6dXVVQ19UeDJtTVl4NWhvZXpIekNwQ0Vpb2RuQWxLcXdTQ1FxcDhLSGtf?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "AI新世紀：AI時代に子どもが身につけるべき能力は チームみらい・安野氏",
+        "content": "毎日新聞のインタビュー記事において、チームみらいの安野氏がAI時代の子どもの教育について語っています。急速に進化するAI技術に向き合う中で、子どもたちが身につくべき重要な能力や思考法について言及されています。",
+        "source": "Google News",
+        "published_at": "2026-07-29",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5BOU55NWlZT1JEc0U2b2lTdkZ3TDZmbFMtVlVIOGNOaGVGY2d5ZFBxdlg5MFU1dlNZOXRpaWdBS0wxb0lvVHFuR3g0WTllVmRLT1VJXy1zeWNVTHpzRWRITWRQc3NOSm9G?oc=5",
+        "category": "その他"
+      },
+      {
+        "title": "巨額AI投資、恩恵はどの国に 米国でインフレ圧力・韓国は成長4倍",
+        "content": "世界的な巨額のAI投資が各国経済に与える影響についての分析記事です。米国ではインフレ圧力が懸念される一方、韓国ではAI関連の恩恵により高い経済成長が見込まれています。AIブームがもたらす恩恵の偏在と各国への経済的インパクトを報じています。",
+        "source": "Google News",
+        "published_at": "2026-07-29",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1PX1pGQ0w5MWVwMXd1RTA3akVXakdaTlI0SHc4ZEFtN0Y4WjhWY2RLZkNOQ190bGdrSUxTb1NsT1kxRkxGVzQ3eHFKS2hNWkdsR1R0c29aU2lodkRiLXlPdDNOcUFvb243MHUxUg?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "ジョブズ氏の「熱核戦争」再び、アップル対オープンAI訴訟にみる「ポストスマホ」の覇権争い",
+        "content": "アップルとオープンAIの間で浮上した訴訟は、スティーブ・ジョブズ氏がかつて言及した「熱核戦争」の再来を思わせる展開となっています。これは単なる法的紛争にとどまらず、次世代の「ポストスマートフォン」時代における主導権を巡る激しい覇権争いです。両社の動向は今後のAIおよびIT業界の勢力図に大きな影響を与える可能性があります。",
+        "source": "Google News",
+        "published_at": "2026-07-29",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE4wTDR4OWpJbVNCTk1iNXZXSnBaVmVZY08tRWpZRkpXNmJRSDZ1MVIyNDM1T2lTWnlsX0thbm5scGNiR3VhV2psWFNPQXM0SUI2RXRfTzV3?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "VoCを学びに成長し続けるAIコンタクトセンターが一段上のCXを導く",
+        "content": "顧客の声（VoC）を学習データとして活用し、継続的に進化するAIコンタクトセンターの可能性について解説しています。高度なAIの導入により、顧客体験（CX）をさらに向上させるアプローチが紹介されています。",
+        "source": "Google News",
+        "published_at": "2026-07-29",
+        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE54VjhZU2VXanNpcXJRbmxCZG8yczhsVjhfYncwbWdtcGVzWmlOMWVscVQ0SjljV3lUVjlsNTdESTBxS2NZb2JIbVh5Tl83YjlNU3hudnRDaHlCRHctTGttODROZ1dfdFFjeW5Xdl8zdlhMMjkwY0E?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "ＡＩ投資懸念、主要信用リスクに 米イラン交戦も＝フィッチ",
+        "content": "格付け会社のフィッチは、過度なAI投資に対する懸念が主要な信用リスクになると指摘しました。米イラン間の交戦リスクなども含め、経済や企業の信用力への影響が警戒されています。",
+        "source": "Google News",
+        "published_at": "2026-07-29",
+        "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQTHpCZ2lmWksyaDlkRk52SVFzeUhfLTlXQVA5WmFhZ3VYd29GaHBuSzQ4WWNxQjVwXzV6SmpGU2ptVTlJSTllOXBNaEFWemNpcFlJZ204THlkU242enVCNGFOcHdZaUw5MUU5a1NEVUVtSzU0VVljcmJtdkZPVHowdw?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "AI時代の国家公務員のあり方検討へ有識者会議 政府",
+        "content": "政府は、生成AIの普及などAI時代における国家公務員のあり方を検討するための有識者会議を立ち上げることとしました。行政の効率化や質の向上に向けて、AIの活用方法やそれに伴う課題について議論が進められます。",
+        "source": "Google News",
+        "published_at": "2026-07-29",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBUSEhMM0EzNkpQclpYT3l6N3dYNlNfRGh1WmN2Uy1EdGxVTVNyc3M4SmQwSmU5Ymx5eUx4R0lsQV94Vm1jaUIwYWpXRmFmLTdEalVadWZqb1lPcl9HNmJn?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "やっぱり｢フィジカルAI｣は日本の",
+        "content": "四季報オンラインの記事では、フィジカルAIが日本の産業において新たな救世主となる可能性について報じられています。ロボット工学や実世界データとAIの融合が、国内経済やものづくりにどのような変革をもたらすかが注目されています。",
+        "source": "Google News",
+        "published_at": "2026-07-29",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5Wbms5TF9zSHJ3dlBZZF9COVpPbFdYbXRMalFkekxraXA5Ri03Y01XTlJvSkEzdWVMTjJBTnNnOGN5a3N6cmlFRWtWbFRjTksyek9BMzMyZw?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "検索結果に「詐欺ではありません」と表示させる詐欺手口、警視庁が注意喚起 AI要約も餌食に",
+        "content": "検索結果でユーザーを信用させるために「詐欺ではありません」と虚偽の表示を行う新たな詐欺手口について、警視庁が注意を喚起しました。生成AIによる要約機能も悪用されており、被害の拡大が懸念されています。",
+        "source": "Google News",
+        "published_at": "2026-07-29",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5FSnJDaWJld09nTG82MnN0WGhoLWxIaUVIUV8wVnF5V2dZR2t0TGN1UkRybWZoVmx4OUgzVVc3WE9pNFFId2ttYnRVZXpma05jNHJXekJvNWRIVWIyX2liTWF2Mkt0SFVCS2c?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "生成AI導入の95％が失敗する理由、「30年前の研究」が示す落とし穴",
+        "content": "多くの企業で生成AIの導入が失敗に終わる背景には、30年前の組織論や情報技術の研究に見られる共通の落とし穴が存在します。最新の技術を導入しても、古い組織構造やプロセスのままでは期待された成果を上げることが難しいと指摘されています。企業がAI活用を成功させるためには、技術面だけでなく組織的な変革が不可欠です。",
+        "source": "Google News",
+        "published_at": "2026-07-29",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9VT2g3RUlUUmFmTmlIbVpJWnJiOTJBXzBhdlF6Y2ZYRnZFQk9OLTB6M3M5WHI0UGNOSWRvYnFTUzExNnZnWnk5WGVFTi1wOUdPOFJDaXYtOVVQZw?oc=5",
+        "category": "事業・投資"
+      }
+    ]
+  },
+  {
     "date": "2026-07-28",
     "daily_summary": "本日のAIニュースは、飲食店でのユニークなメニュー開発やAIとの婚姻といった人間社会への浸透をはじめ、アンソロピック社の安全重視の姿勢や内部解明の挑戦といった技術の深化、エヌビディアによる大型出資や国策AIプロジェクト、さらにはAI格差による企業の将来予測や株式市場への警戒感まで、技術、倫理、経済の多様な側面からAIの存在感がますます高まっている現状を伝えています。",
     "articles": [
