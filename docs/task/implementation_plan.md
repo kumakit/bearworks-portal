@@ -18,15 +18,19 @@ AdSense の広告配信用スクリプトをサイト全体のルートレイア
 - `C:\Users\kumat\dev\bearworks-portal\app\layout.tsx` が `NEXT_PUBLIC_ADSENSE_CLIENT_ID` の存在時に AdSense script を全ルートへSSR出力している。
 - `/ai-news` と `/weather` はnoindexだが、noindexは広告掲載範囲を制御しない。
 - 統計学習ページはトップページと `C:\Users\kumat\dev\bearworks-portal\app\toukei` 以下にまとまっている。
-- Next.js App Router の Route Group はURLへグループ名を含めないため、公開URLを保ったまま共通レイアウトを限定適用できる。
+- Next.js App Router の Route Group はURLへグループ名を含めないため、公開URLを保ったまま複数root layoutへ分離できる。
+- 単一root配下のnested layoutだけでは、広告ページから非広告ページへのsoft navigation後に読み込み済みAdSense実行環境が残る可能性がある。
 
 ## 変更方針
 
-1. `C:\Users\kumat\dev\bearworks-portal\app\layout.tsx` から広告scriptの直接出力と不要になった `<head>` を外す。
-2. `C:\Users\kumat\dev\bearworks-portal\app\(monetized)\layout.tsx` を追加し、環境変数がある場合だけAdSense scriptをSSR出力する。
-3. `C:\Users\kumat\dev\bearworks-portal\app\page.tsx` を `C:\Users\kumat\dev\bearworks-portal\app\(monetized)\page.tsx` へ移動する。
-4. `C:\Users\kumat\dev\bearworks-portal\app\toukei` を `C:\Users\kumat\dev\bearworks-portal\app\(monetized)\toukei` へ移動する。
-5. Route Group はURLセグメントにならないため、`/` と `/toukei/**` のURL、リンク、sitemap項目を維持する。
+1. `C:\Users\kumat\dev\bearworks-portal\app\layout.tsx` を共通root layoutとして使う構成を廃止する。
+2. `C:\Users\kumat\dev\bearworks-portal\app\(monetized)\layout.tsx` と `C:\Users\kumat\dev\bearworks-portal\app\(non-monetized)\layout.tsx` をそれぞれroot layoutとして追加する。境界間の遷移をNext.js仕様上のfull page loadにし、広告実行環境をブラウザ文書単位で分離する。
+3. 共通metadata、Inter font、body classを `C:\Users\kumat\dev\bearworks-portal\app\root-layout-config.ts` へ抽出し、両root layoutから利用する。`globals.css` も両root layoutで読み込む。
+4. `C:\Users\kumat\dev\bearworks-portal\components\AdSenseScript.tsx` を追加し、`NEXT_PUBLIC_ADSENSE_CLIENT_ID` がある場合だけ既存のnative `<script>` をSSR出力する。
+5. `C:\Users\kumat\dev\bearworks-portal\app\page.tsx` と `C:\Users\kumat\dev\bearworks-portal\app\toukei` subtreeを `(monetized)` 配下へ移す。各正常pageから `AdSenseScript` を描画し、動的slugページでは `notFound()` 判定後のreturnだけに含める。
+6. `about`、`ai-news`、`contact`、`dashboard`、`privacy`、`weather` の各page subtreeを `(non-monetized)` 配下へ移す。`app/api`、metadata route、共通module/componentsはroute group外に維持する。
+7. `C:\Users\kumat\dev\bearworks-portal\app\site-content.ts` の統計データimportを移動後パスへ更新し、生成するsitemap URL値自体は変えない。
+8. Route GroupはURLセグメントにならないため、既存の公開URLを維持する。
 
 ## 広告対象
 
@@ -64,37 +68,43 @@ AdSense の広告配信用スクリプトをサイト全体のルートレイア
 
 ## データフロー
 
-1. Next.jsがリクエストURLを解決する。
-2. `/` と `/toukei/**` だけが `(monetized)` レイアウトを通る。
-3. `NEXT_PUBLIC_ADSENSE_CLIENT_ID` が設定されているときだけ、そのレイアウトがpublisher ID付きscriptをHTMLへ出力する。
-4. その他のルートはroot layoutのみを通り、AdSense scriptを出力しない。
-5. `public/ads.txt` は既存publisher IDのまま静的配信する。
+1. Next.jsがリクエストURLを広告rootまたは非広告rootへ解決する。
+2. `/` と `/toukei/**` の正常pageだけが `AdSenseScript` を描画する。動的slugが存在しない場合は `notFound()` が先に終了するためscriptを描画しない。
+3. `NEXT_PUBLIC_ADSENSE_CLIENT_ID` がbuild時に設定されているときだけ、publisher ID付きnative scriptを対象pageのSSR HTMLへ出力する。
+4. 非広告rootのpageはAdSense componentを参照せず、HTMLへscriptを出力しない。
+5. 広告rootと非広告root間のクライアント操作はfull page loadになり、前の文書でロードされたAdSense実行環境を引き継がない。
+6. `public/ads.txt` は既存publisher IDのまま静的配信する。
 
 ## QA
 
 ### 静的確認
 
-- ルートレイアウトに `adsbygoogle` / `NEXT_PUBLIC_ADSENSE_CLIENT_ID` が残っていない。
-- 広告専用レイアウト以外にAdSense scriptがない。
+- root layoutに `adsbygoogle` / `NEXT_PUBLIC_ADSENSE_CLIENT_ID` がない。
+- AdSense scriptは共通componentと広告対象の正常pageだけから参照される。
 - `public/ads.txt` のpublisher IDが `pub-9560028085973137` である。
-- `app/site-content.ts`、`app/sitemap.ts`、`app/robots.ts`、各ページmetadata/noindexに意図しない差分がない。
+- `app/site-content.ts` は移動後import以外のURL集合に差分がなく、`app/sitemap.ts`、`app/robots.ts`、各ページmetadata/noindexに意図しない差分がない。
 
 ### ビルドとHTTP確認
 
-1. `npm run build`
-2. 検証用に `NEXT_PUBLIC_ADSENSE_CLIENT_ID=ca-pub-9560028085973137` を設定して本番サーバーを起動する。
-3. 広告対象URLがHTTP 200で、HTMLに `pagead2.googlesyndication.com/pagead/js/adsbygoogle.js` と `ca-pub-9560028085973137` を含むことを確認する。
-4. `/ai-news`、`/weather`、`/dashboard`、`/contact`、`/privacy`、`/about` が期待するHTTP応答を返し、HTMLに上記script URLとpublisher IDを含まないことを確認する。
-5. `/ads.txt` がHTTP 200で、publisher IDとDIRECT行を返すことを確認する。
-6. `/sitemap.xml` と `/robots.txt` がHTTP 200で、既存方針に回帰がないことを確認する。
+1. build前に検証用 `NEXT_PUBLIC_ADSENSE_CLIENT_ID=ca-pub-9560028085973137` を設定する。
+2. `npm run build`
+3. `npm run pages:build`
+4. 同じbuild時環境変数を使って本番サーバーを起動する。
+5. 広告対象URLがHTTP 200で、HTMLのnative script `src` に `pagead2.googlesyndication.com/pagead/js/adsbygoogle.js` と `ca-pub-9560028085973137` を含むことを確認する。
+6. `/ai-news`、`/weather`、`/dashboard`、`/contact`、`/privacy`、`/about` が期待するHTTP応答を返し、HTMLに上記script URLとpublisher IDを含まないことを確認する。
+7. `/toukei/guides/not-found-for-qa`、`/toukei/problems/not-found-for-qa`、任意404が404を返し、HTMLにAdSense scriptを含まないことを確認する。
+8. `/ads.txt` がHTTP 200で、publisher IDとDIRECT行を返すことを確認する。
+9. `/sitemap.xml` のURL集合、`/robots.txt` のallow/disallow、代表URLのtitle/description/robots metaを変更前の期待値と比較する。`/ai-news` と `/weather` は `noindex,nofollow` を確認する。
+10. ブラウザで「対象→対象」「非対象→対象」「対象→非対象」「戻る・進む」を確認し、対象文書だけにscriptが1個あり、非対象文書では0個で、root境界間がfull page loadになることを確認する。
 
 `/dashboard` はCloudflare Accessで本番保護される別境界を持つため、ローカルQAではページ生成と広告script非出力だけを確認し、本番Access設定の変更は行わない。
 
 ## リスクと対策
 
 - Route Group移動によるルート重複: ビルドで検出し、同一URLを提供する別pageがないことを確認する。
-- 相対import破損: `toukei` subtreeは一括移動して内部相対関係を保ち、ビルドで確認する。
-- scriptがクライアント遷移時に重複する可能性: レイアウト境界に1回だけ置き、ページ単位では重複配置しない。
+- 相対import破損: subtreeは一括移動して内部相対関係を保ち、外部からの `site-content.ts` importだけを明示更新してビルド確認する。
+- scriptの残留・重複: 広告/非広告を別rootにして境界間をfull reloadにし、正常page内の共通componentを各pageで1回だけ描画する。ブラウザ遷移行列でも確認する。
+- 複数root間の共通設定ドリフト: metadata/font/body classを共通module化する。
 - 環境変数未設定時の誤配信: 既存どおり条件付き出力を維持する。
 
 ## LM Studio利用規律
@@ -105,8 +115,14 @@ AdSense の広告配信用スクリプトをサイト全体のルートレイア
 
 ## 完了条件
 
-- 広告対象と非対象がRoute Groupで明確に分離されている。
-- 対象ページだけがpublisher ID付きAdSense scriptを出力する。
-- 非対象ページにAdSense scriptが出力されない。
-- 公開URL、ビルド、HTTP、metadata、noindex、sitemap、robots、ads.txtに回帰がない。
+- 広告対象と非対象が別root layoutで明確に分離されている。
+- 対象の正常pageだけがpublisher ID付きnative AdSense scriptをSSR出力する。
+- 非対象pageと404にAdSense scriptが出力されず、対象から非対象への遷移後にも広告実行環境が残らない。
+- 公開URL、通常build、Cloudflare build、HTTP、metadata、noindex、sitemap、robots、ads.txtに回帰がない。
 - 実装後レビューの重大指摘が解消されている。
+
+## 参照した公式仕様
+
+- Next.js 14 Pages and Layouts: https://nextjs.org/docs/14/app/building-your-application/routing/pages-and-layouts
+- Next.js 14 Route Groups: https://nextjs.org/docs/14/app/building-your-application/routing/route-groups
+- Next.js 14 Script Optimization: https://nextjs.org/docs/14/app/building-your-application/optimizing/scripts

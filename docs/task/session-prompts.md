@@ -18,10 +18,12 @@ LM Studio MCPが利用可能な場合も読み取り専用で1件ずつ使い、
 
 必須要件:
 
-- `C:\Users\kumat\dev\bearworks-portal\app\layout.tsx` からAdSense scriptを外す。
-- `C:\Users\kumat\dev\bearworks-portal\app\(monetized)\layout.tsx` に条件付きAdSense scriptを置く。
-- トップページと `app\toukei` subtreeを `(monetized)` 配下へ移し、`/` と `/toukei/**` の公開URLを維持する。
-- `/ai-news`、`/weather`、`/dashboard`、`/api`、`/contact`、`/privacy`、`/about` を広告対象にしない。
+- top-level `app\layout.tsx` を廃止し、`app\(monetized)\layout.tsx` と `app\(non-monetized)\layout.tsx` をそれぞれroot layoutにする。
+- metadata、Inter font、body classを共通module化し、両rootに同じ設定を適用する。
+- `components\AdSenseScript.tsx` を追加し、環境変数がある場合だけ既存native scriptをSSR出力する。
+- トップページと `app\toukei` subtreeを `(monetized)` 配下へ移し、正常pageからAdSense componentを1回だけ描画する。動的slugでは `notFound()` 判定後のreturnだけに置く。
+- `/ai-news`、`/weather`、`/dashboard`、`/contact`、`/privacy`、`/about` のpage subtreeを `(non-monetized)` 配下へ移す。`/api` はroute group外のままにする。
+- `app\site-content.ts` の統計データimportを移動後パスへ更新し、sitemapのURL値は変えない。
 - sitemap、robots、metadata、noindex、ads.txtを目的なく変更しない。
 - Phase 3-1以降のコンテンツ追加や運営者情報変更を行わない。
 
@@ -38,10 +40,10 @@ LM Studio MCPが利用可能な場合も読み取り専用で1件ずつ使い、
 次を重点確認してください。
 
 - AdSense scriptが対象ページだけにSSR出力されるか
-- 非対象ページや404へ漏れないか
+- 非対象ページや統計ページ配下の404へ漏れないか
 - Route Group移動で公開URL・相対import・metadata・noindex・sitemap・robotsに回帰がないか
 - publisher IDとads.txtが一致するか
-- クライアント遷移でscriptの残留・重複・再読込に問題がないか
+- 複数root境界のfull page loadにより、クライアント操作後もscriptの残留・重複がないか
 - QA結果が受け入れ条件を十分に証明するか
 
 重大度、根拠ファイル、必要な修正、残余リスクを明記してください。
