@@ -20,8 +20,8 @@ LM Studio MCPが利用可能な場合も読み取り専用で1件ずつ使い、
 
 - top-level `app\layout.tsx` を廃止し、`app\(monetized)\layout.tsx` と `app\(non-monetized)\layout.tsx` をそれぞれroot layoutにする。
 - metadata、Inter font、body classを共通module化し、両rootに同じ設定を適用する。
-- `components\AdSenseScript.tsx` を追加し、環境変数がある場合だけ既存native scriptをSSR出力する。
-- トップページと `app\toukei` subtreeを `(monetized)` 配下へ移し、正常pageからAdSense componentを1回だけ描画する。動的slugでは `notFound()` 判定後のreturnだけに置く。
+- `(monetized)` root layoutで `next/script` の `strategy="beforeInteractive"` を使い、環境変数がある場合だけAdSense codeをheadへ出力する。
+- トップページと `app\toukei` subtreeを `(monetized)` 配下へ移す。
 - `/ai-news`、`/weather`、`/dashboard`、`/contact`、`/privacy`、`/about` のpage subtreeを `(non-monetized)` 配下へ移す。`/api` はroute group外のままにする。
 - `app\site-content.ts` の統計データimportを移動後パスへ更新し、sitemapのURL値は変えない。
 - sitemap、robots、metadata、noindex、ads.txtを目的なく変更しない。
@@ -39,7 +39,7 @@ LM Studio MCPが利用可能な場合も読み取り専用で1件ずつ使い、
 
 次を重点確認してください。
 
-- AdSense scriptが対象ページだけにSSR出力されるか
+- AdSense scriptが対象ページのheadだけにSSR出力されるか
 - 非対象ページや統計ページ配下の404へ漏れないか
 - Route Group移動で公開URL・相対import・metadata・noindex・sitemap・robotsに回帰がないか
 - publisher IDとads.txtが一致するか

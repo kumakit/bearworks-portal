@@ -26,8 +26,8 @@ AdSense の広告配信用スクリプトをサイト全体のルートレイア
 1. `C:\Users\kumat\dev\bearworks-portal\app\layout.tsx` を共通root layoutとして使う構成を廃止する。
 2. `C:\Users\kumat\dev\bearworks-portal\app\(monetized)\layout.tsx` と `C:\Users\kumat\dev\bearworks-portal\app\(non-monetized)\layout.tsx` をそれぞれroot layoutとして追加する。境界間の遷移をNext.js仕様上のfull page loadにし、広告実行環境をブラウザ文書単位で分離する。
 3. 共通metadata、Inter font、body classを `C:\Users\kumat\dev\bearworks-portal\app\root-layout-config.ts` へ抽出し、両root layoutから利用する。`globals.css` も両root layoutで読み込む。
-4. `C:\Users\kumat\dev\bearworks-portal\components\AdSenseScript.tsx` を追加し、`NEXT_PUBLIC_ADSENSE_CLIENT_ID` がある場合だけ既存のnative `<script>` をSSR出力する。
-5. `C:\Users\kumat\dev\bearworks-portal\app\page.tsx` と `C:\Users\kumat\dev\bearworks-portal\app\toukei` subtreeを `(monetized)` 配下へ移す。各正常pageから `AdSenseScript` を描画し、動的slugページでは `notFound()` 判定後のreturnだけに含める。
+4. `C:\Users\kumat\dev\bearworks-portal\app\(monetized)\layout.tsx` で `next/script` の `beforeInteractive` を使い、`NEXT_PUBLIC_ADSENSE_CLIENT_ID` がある場合だけAdSense codeをheadへ注入する。Google公式のhead配置とNext.js公式のscript lifecycleを両立する。
+5. `C:\Users\kumat\dev\bearworks-portal\app\page.tsx` と `C:\Users\kumat\dev\bearworks-portal\app\toukei` subtreeを `(monetized)` 配下へ移す。
 6. `about`、`ai-news`、`contact`、`dashboard`、`privacy`、`weather` の各page subtreeを `(non-monetized)` 配下へ移す。`app/api`、metadata route、共通module/componentsはroute group外に維持する。
 7. `C:\Users\kumat\dev\bearworks-portal\app\site-content.ts` の統計データimportを移動後パスへ更新し、生成するsitemap URL値自体は変えない。
 8. Route GroupはURLセグメントにならないため、既存の公開URLを維持する。
@@ -69,8 +69,8 @@ AdSense の広告配信用スクリプトをサイト全体のルートレイア
 ## データフロー
 
 1. Next.jsがリクエストURLを広告rootまたは非広告rootへ解決する。
-2. `/` と `/toukei/**` の正常pageだけが `AdSenseScript` を描画する。動的slugが存在しない場合は `notFound()` が先に終了するためscriptを描画しない。
-3. `NEXT_PUBLIC_ADSENSE_CLIENT_ID` がbuild時に設定されているときだけ、publisher ID付きnative scriptを対象pageのSSR HTMLへ出力する。
+2. `/` と `/toukei/**` の正常pageだけが広告rootを通り、`beforeInteractive` script情報をheadへSSR出力する。Next.js 14.2.3の本番buildでは、存在しない動的slugと任意404のHTMLに広告script情報が出ないことを実測確認する。
+3. `NEXT_PUBLIC_ADSENSE_CLIENT_ID` がbuild時に設定されているときだけ、publisher ID付きAdSense codeを対象pageのheadへ出力する。
 4. 非広告rootのpageはAdSense componentを参照せず、HTMLへscriptを出力しない。
 5. 広告rootと非広告root間のクライアント操作はfull page loadになり、前の文書でロードされたAdSense実行環境を引き継がない。
 6. `public/ads.txt` は既存publisher IDのまま静的配信する。
@@ -80,7 +80,7 @@ AdSense の広告配信用スクリプトをサイト全体のルートレイア
 ### 静的確認
 
 - root layoutに `adsbygoogle` / `NEXT_PUBLIC_ADSENSE_CLIENT_ID` がない。
-- AdSense scriptは共通componentと広告対象の正常pageだけから参照される。
+- AdSense scriptは広告root layoutだけから参照され、`strategy="beforeInteractive"` が指定されている。
 - `public/ads.txt` のpublisher IDが `pub-9560028085973137` である。
 - `app/site-content.ts` は移動後import以外のURL集合に差分がなく、`app/sitemap.ts`、`app/robots.ts`、各ページmetadata/noindexに意図しない差分がない。
 
@@ -90,7 +90,7 @@ AdSense の広告配信用スクリプトをサイト全体のルートレイア
 2. `npm run build`
 3. `npm run pages:build`
 4. 同じbuild時環境変数を使って本番サーバーを起動する。
-5. 広告対象URLがHTTP 200で、HTMLのnative script `src` に `pagead2.googlesyndication.com/pagead/js/adsbygoogle.js` と `ca-pub-9560028085973137` を含むことを確認する。
+5. 広告対象URLがHTTP 200で、head内のNext.js script queueに `pagead2.googlesyndication.com/pagead/js/adsbygoogle.js` と `ca-pub-9560028085973137` を含むことを確認する。実ブラウザではhead内の外部script DOM、Network、重複数を確認する。
 6. `/ai-news`、`/weather`、`/dashboard`、`/contact`、`/privacy`、`/about` が期待するHTTP応答を返し、HTMLに上記script URLとpublisher IDを含まないことを確認する。
 7. `/toukei/guides/not-found-for-qa`、`/toukei/problems/not-found-for-qa`、任意404が404を返し、HTMLにAdSense scriptを含まないことを確認する。
 8. `/ads.txt` がHTTP 200で、publisher IDとDIRECT行を返すことを確認する。
@@ -103,7 +103,7 @@ AdSense の広告配信用スクリプトをサイト全体のルートレイア
 
 - Route Group移動によるルート重複: ビルドで検出し、同一URLを提供する別pageがないことを確認する。
 - 相対import破損: subtreeは一括移動して内部相対関係を保ち、外部からの `site-content.ts` importだけを明示更新してビルド確認する。
-- scriptの残留・重複: 広告/非広告を別rootにして境界間をfull reloadにし、正常page内の共通componentを各pageで1回だけ描画する。ブラウザ遷移行列でも確認する。
+- scriptの残留・重複: 広告/非広告を別rootにして境界間をfull reloadにし、広告rootの `beforeInteractive` scriptを1回だけ描画する。ブラウザ遷移行列でも確認する。
 - 複数root間の共通設定ドリフト: metadata/font/body classを共通module化する。
 - 環境変数未設定時の誤配信: 既存どおり条件付き出力を維持する。
 
@@ -116,7 +116,7 @@ AdSense の広告配信用スクリプトをサイト全体のルートレイア
 ## 完了条件
 
 - 広告対象と非対象が別root layoutで明確に分離されている。
-- 対象の正常pageだけがpublisher ID付きnative AdSense scriptをSSR出力する。
+- 対象の正常pageだけがpublisher ID付きAdSense codeをheadへSSR出力する。
 - 非対象pageと404にAdSense scriptが出力されず、対象から非対象への遷移後にも広告実行環境が残らない。
 - 公開URL、通常build、Cloudflare build、HTTP、metadata、noindex、sitemap、robots、ads.txtに回帰がない。
 - 実装後レビューの重大指摘が解消されている。
@@ -126,3 +126,4 @@ AdSense の広告配信用スクリプトをサイト全体のルートレイア
 - Next.js 14 Pages and Layouts: https://nextjs.org/docs/14/app/building-your-application/routing/pages-and-layouts
 - Next.js 14 Route Groups: https://nextjs.org/docs/14/app/building-your-application/routing/route-groups
 - Next.js 14 Script Optimization: https://nextjs.org/docs/14/app/building-your-application/optimizing/scripts
+- Google AdSense code placement: https://support.google.com/adsense/answer/9274516
