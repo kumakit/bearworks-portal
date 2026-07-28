@@ -24,16 +24,18 @@ AdSense配信範囲を分離した複数root layout構成を維持したまま�
 ## 変更方針
 
 1. `next` と `eslint-config-next` を15.5.21へ更新する。React 18はNext.js 15.5.21のpeer範囲内なので本タスクでは維持する。
-2. `@cloudflare/next-on-pages` を削除し、`@opennextjs/cloudflare@1.20.2` と互換Wranglerを導入する。
+2. `@cloudflare/next-on-pages` を削除し、`@opennextjs/cloudflare@1.20.2` と `wrangler@4.114.0` を導入する。Next、eslint-config、OpenNext、Wrangler、lockfileを同一変更単位で更新し、peer warningがないことを確認する。
 3. `next.config.mjs` の `setupDevPlatform()` を `initOpenNextCloudflareForDev()` へ置き換える。
 4. `open-next.config.ts` を追加し、まず外部R2/D1を必要としない最小構成にする。永続ISR cacheは本サイトの現行要件にないため追加しない。
 5. `wrangler.jsonc` にWorker entrypoint、static assets、`nodejs_compat`、`global_fetch_strictly_public`、observabilityを定義する。既存カスタムドメインへの切替はローカル実装と分離し、route設定やdeployは行わない。
 6. `package.json` に `cf:build`、`preview`、`deploy`、`upload`、`cf-typegen` を追加し、`pages:build` を削除する。`deploy` と `upload` はコマンド定義だけ行い、本タスクでは実行しない。
 7. すべての `export const runtime = "edge"` を削除し、Next.js Node.js Runtimeへ統一する。
-8. `.open-next/`、`.dev.vars*`、生成型をGit管理対象外にし、秘密値を含まない `.dev.vars.example` を追加する。
-9. `public/_headers` に `/_next/static/*` のimmutable cache headerを追加する。
-10. Next.js 15の型検査でdynamic routeの `params` がPromiseを要求する場合は、URLや生成内容を変えず型とawaitだけを更新する。
-11. READMEをCloudflare Workers/OpenNext構成とローカル検証コマンドへ更新する。
+8. `.open-next/`、`.dev.vars*`、生成型をGit管理対象外にし、変数名とダミー値だけを含む `.dev.vars.example` を追加する。生成型がないclean checkoutでも通常buildとWorkers buildが成功する構成にする。
+9. `public/_headers` に `/_next/static/*` のimmutable cache headerを追加する。この設定はstatic assets限定とし、SSR/APIのcache/security headerは個別HTTP検査で確認する。
+10. Next.js 15対応として、2つのdynamic slug pageと `generateMetadata` を `params: Promise<{ slug: string }>` / `await params` へ必ず変更する。
+11. `/api/dashboard-data` のupstream fetchへ10秒のtimeoutを追加し、timeoutを含む失敗時にgeneric errorだけを返すfail-closed動作を維持する。
+12. Linuxのclean checkoutでWorkers buildを再現するbuild-only GitHub Actions workflowを追加する。deploy、secret、Cloudflare認証は含めない。
+13. READMEをCloudflare Workers/OpenNext構成とローカル・Linux CI検証コマンドへ更新する。
 
 ## 維持する境界
 
@@ -45,14 +47,15 @@ AdSense配信範囲を分離した複数root layout構成を維持したまま�
 
 ## QA
 
-1. `npm install` 後に依存グラフとlockfileを確認する。
+1. clean checkout相当で `npm ci` を実行し、peer warningなし、生成型なしで依存解決できることを確認する。
 2. `npm run build` でNext.js 15のlint/type/buildを確認する。
-3. `npm run cf:build` で `.open-next/worker.js` と `.open-next/assets` を生成する。
-4. `wrangler deploy --dry-run` 相当でWorker bundle、互換フラグ、圧縮後サイズを確認し、外部deployが発生しないことを確認する。
-5. `npm run preview` をローカルWorker runtimeで起動し、対象・非対象・404・metadata・ads.txt・sitemap・robotsのHTTP行列を再確認する。
-6. `DASHBOARD_API_TOKEN` 未設定の `/api/dashboard-data` がfail-closedし、非GETが405であることを確認する。
-7. 最終版を実ブラウザで確認し、AdSense scriptの対象/非対象、対象間遷移、root境界、戻る・進む、Network、console errorを確認する。
-8. WindowsでOpenNext buildが非対応の場合は同一処理をLinux環境またはCIで実行し、Windows固有失敗と実装失敗を分離する。
+3. `NEXT_PUBLIC_ADSENSE_CLIENT_ID` なしと検証用publisher IDありの各buildを実行する。値は必ず `npm run cf:build` の前に設定する。
+4. `npm run cf:build` で `.open-next/worker.js` と `.open-next/assets` を生成する。
+5. `wrangler deploy --dry-run` 相当でWorker bundle、互換フラグ、圧縮後サイズを確認し、外部deployが発生しないことを確認する。
+6. `npm run preview` をローカルWorker runtimeで起動し、URL/status、title、description、canonical、robots/noindex、sitemap、robots.txt、ads.txt、静的asset、画像、dashboard 3ページ、dynamic slug正常系/404を移行前の期待値と比較する。
+7. `/api/dashboard-data` について、token未設定、Access header未設定、upstream 4xx/5xx/timeout、非GETを検査し、fail-closed、generic error、`Cache-Control: no-store`、405、token/headerのレスポンス・ログ非露出を確認する。実tokenを使う正常200、実Access policy、実upstream到達性は本番切替前の別受け入れとする。
+8. publisher IDあり/なしの各成果物でAdSense対象・非対象・404を確認し、最終版を実ブラウザで対象間遷移、root境界、戻る・進む、Network、console errorまで確認する。
+9. OpenNext公式のWindows非対応を前提に、Linux clean checkoutまたはCIで `npm ci`、通常build、Workers build、dry-run、preview HTTP/API確認を必須完了条件とする。Windowsだけの成功・失敗では完了扱いにしない。
 
 ## 非目標
 
@@ -78,7 +81,8 @@ AdSense配信範囲を分離した複数root layout構成を維持したまま�
 - `next-on-pages` の依存・script・設定・Edge Runtime指定が残っていない。
 - Next.js 15通常buildとOpenNext Workers buildが成功する。
 - Worker bundleのdry-runが成功し、サイズを確認できる。
-- Workers previewで主要route、API security、AdSense境界、metadata関連の回帰がない。
+- Linux clean checkoutのWorkers build・dry-run・previewが成功する。
+- Workers previewで主要route、API failure path、AdSense境界、metadata関連の回帰がない。
 - 実ブラウザ最終QAが成功する。
 - 実装後レビューの重大指摘が解消される。
 

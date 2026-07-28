@@ -20,12 +20,14 @@ LM Studio MCPが利用可能な場合も読み取り専用で1件ずつ使い、
 
 - Next.js / eslint-config-nextを15.5.21へ更新し、React 18は維持する。
 - `@cloudflare/next-on-pages`、`pages:build`、`setupDevPlatform()` を削除する。
-- `@opennextjs/cloudflare@1.20.2` と互換Wranglerを導入する。
+- `@opennextjs/cloudflare@1.20.2` と `wrangler@4.114.0` を導入し、peer warningを残さない。
 - `next.config.mjs` で `initOpenNextCloudflareForDev()` を呼ぶ。
 - `open-next.config.ts`、`wrangler.jsonc`、`.dev.vars.example`、`public/_headers` を追加する。
 - すべての `export const runtime = "edge"` を削除する。
 - `.open-next`、`.dev.vars`、生成型をignoreする。
-- Next.js 15の型エラーは挙動を変えない最小変更で修正する。
+- 2つのdynamic slug pageと `generateMetadata` を `params: Promise<{ slug: string }>` / `await params` へ変更する。
+- dashboard upstream fetchへ10秒timeoutを追加し、失敗時は秘密値やupstream bodyを返さない。
+- Linux clean checkout用のbuild-only GitHub Actions workflowを追加する。Cloudflare認証やdeployは含めない。
 - READMEをWorkers/OpenNext構成へ更新する。
 - AdSense対象、公開URL、metadata、noindex、sitemap、robots、ads.txt、dashboard APIのsecurity boundaryを変更しない。
 - Cloudflare deploy/upload、DNS、custom domain、Pages削除、Git/GitHub操作を行わない。
