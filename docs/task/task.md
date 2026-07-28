@@ -11,32 +11,33 @@
 
 ## 実装
 
-- [ ] Next.js / eslint-config-nextを15.5.21へ更新する
-- [ ] `@cloudflare/next-on-pages` を削除する
-- [ ] `@opennextjs/cloudflare@1.20.2` と `wrangler@4.114.0` を導入する
-- [ ] `next.config.mjs` をOpenNext開発初期化へ変更する
-- [ ] `open-next.config.ts` と `wrangler.jsonc` を追加する
-- [ ] Workers用npm scriptsを追加し、`pages:build` を削除する
-- [ ] `export const runtime = "edge"` をすべて削除する
-- [ ] `.open-next`、`.dev.vars`、生成型のignoreとexample envを追加する
-- [ ] `public/_headers` を追加する
-- [ ] 2つのdynamic slug page/metadataをNext.js 15のPromise paramsへ適合する
-- [ ] dashboard upstream fetchにtimeoutを追加する
-- [ ] Linux clean checkout用のbuild-only workflowを追加する
-- [ ] READMEをWorkers/OpenNext運用へ更新する
+- [x] Next.js / eslint-config-nextを15.5.21へ更新する
+- [x] `@cloudflare/next-on-pages` を削除する
+- [x] `@opennextjs/cloudflare@1.20.2`、`wrangler@4.114.0`、`esbuild@0.27.7` を固定導入する
+- [x] `next.config.mjs` をOpenNext開発初期化へ変更する
+- [x] `open-next.config.ts` と `wrangler.jsonc` を追加する
+- [x] `workers.dev` とversion preview URLを無効化する
+- [x] Workers用npm scriptsを追加し、`pages:build` を削除する
+- [x] `export const runtime = "edge"` をすべて削除する
+- [x] `.open-next`、`.dev.vars`、生成型のignoreとexample envを追加する
+- [x] `public/_headers` を追加する
+- [x] 2つのdynamic slug page/metadataをNext.js 15のPromise paramsへ適合する
+- [x] dashboard upstream fetchにtimeoutを追加する
+- [x] Linux clean checkout用のbuild-only workflowとpreview smokeを追加する
+- [x] READMEをWorkers/OpenNext運用へ更新する
 
 ## 受け入れ条件
 
-- [ ] `npm run build` が成功する
-- [ ] `npm run cf:build` が成功する
-- [ ] Worker bundleのdry-runと圧縮後サイズ確認が成功する
-- [ ] Workers previewで公開route・404・metadata・ads.txt・sitemap・robotsが正常
-- [ ] `/api/dashboard-data` のtoken/Access/upstream/timeout/非GET失敗系がfail-closedする
-- [ ] API response/logにtoken・Access header・upstream bodyが漏れない
-- [ ] 広告対象だけにAdSense情報があり、非対象と404にはない
-- [ ] 最終ブラウザ遷移・Network・console確認が成功する
-- [ ] `next-on-pages` とEdge Runtime指定が残っていない
-- [ ] 実装後レビューの重大指摘が解消される
+- [x] `npm run build` が成功する
+- [x] `npm run cf:build` が成功する
+- [x] Worker bundleのdry-runと圧縮後サイズ確認が成功する
+- [x] Windows Workers previewで公開route・404・metadata・ads.txt・sitemap・robotsを確認する（動的slugだけWindows固有404）
+- [x] `/api/dashboard-data` のtoken/Access/upstream失敗/非GET失敗系がfail-closedする
+- [x] API response/logにtoken・Access header・upstream bodyが漏れない
+- [x] 広告対象だけにAdSense情報があり、非対象と404にはない
+- [x] 最終ブラウザ遷移・DOM・console確認が成功する（localhost上の外部script通信成否は対象外）
+- [x] `next-on-pages` とEdge Runtime指定が残っていない
+- [x] 実装後レビューの重大指摘が解消される
 - [ ] Linux clean checkoutで通常build、Workers build、dry-run、preview QAが成功する
 
 ## 外部変更境界

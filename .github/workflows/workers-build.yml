@@ -1,0 +1,118 @@
+name: Workers build
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      NEXT_PUBLIC_ADSENSE_CLIENT_ID: ca-pub-0000000000000000
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Next.js
+        run: npm run build
+
+      - name: Build Workers bundle
+        run: npm run cf:build
+
+      - name: Validate Workers bundle
+        run: npx wrangler deploy --dry-run
+
+      - name: Verify Workers preview routes
+        shell: bash
+        env:
+          DASHBOARD_API_TOKEN: local-ci-token
+        run: |
+          cat > .dev.vars <<'EOF'
+          NEXTJS_ENV=development
+          DASHBOARD_API_TOKEN=local-ci-token
+          EOF
+
+          npx opennextjs-cloudflare preview --port 8788 > /tmp/workers-preview.log 2>&1 &
+          preview_pid=$!
+          cleanup() {
+            kill "$preview_pid" 2>/dev/null || true
+          }
+          trap cleanup EXIT
+
+          preview_ready=false
+          for attempt in {1..30}; do
+            if curl --silent --output /dev/null http://127.0.0.1:8788/; then
+              preview_ready=true
+              break
+            fi
+            if ! kill -0 "$preview_pid" 2>/dev/null; then
+              cat /tmp/workers-preview.log
+              exit 1
+            fi
+            sleep 1
+          done
+          if [ "$preview_ready" != true ]; then
+            echo 'Workers preview did not become ready within 30 seconds'
+            cat /tmp/workers-preview.log
+            exit 1
+          fi
+
+          assert_status() {
+            expected=$1
+            path=$2
+            actual=$(curl --silent --output /tmp/response-body --write-out '%{http_code}' "http://127.0.0.1:8788${path}")
+            if [ "$actual" != "$expected" ]; then
+              echo "Expected ${path} to return ${expected}, got ${actual}"
+              cat /tmp/response-body
+              cat /tmp/workers-preview.log
+              exit 1
+            fi
+          }
+
+          assert_status 200 /
+          grep --quiet 'ca-pub-0000000000000000' /tmp/response-body
+          assert_status 200 /toukei
+          grep --quiet 'ca-pub-0000000000000000' /tmp/response-body
+          assert_status 200 /toukei/guides/learning-roadmap
+          grep --quiet 'ca-pub-0000000000000000' /tmp/response-body
+          assert_status 200 /toukei/problems/confidence-interval
+          grep --quiet 'ca-pub-0000000000000000' /tmp/response-body
+          assert_status 200 /about
+          if grep --quiet 'ca-pub-0000000000000000' /tmp/response-body; then
+            echo 'AdSense client ID was found on /about'
+            exit 1
+          fi
+          assert_status 200 /ads.txt
+          assert_status 200 /robots.txt
+          assert_status 200 /sitemap.xml
+          assert_status 404 /route-that-does-not-exist
+          if grep --quiet 'ca-pub-0000000000000000' /tmp/response-body; then
+            echo 'AdSense client ID was found on a 404 response'
+            exit 1
+          fi
+
+          api_status=$(curl --silent --dump-header /tmp/api-headers --output /tmp/api-body --write-out '%{http_code}' http://127.0.0.1:8788/api/dashboard-data)
+          test "$api_status" = 401
+          grep --ignore-case --quiet '^cache-control: no-store' /tmp/api-headers
+          if grep --quiet 'local-ci-token' /tmp/api-body; then
+            echo 'Dashboard token leaked into the API response'
+            exit 1
+          fi
+
+          method_status=$(curl --silent --request POST --dump-header /tmp/method-headers --output /tmp/method-body --write-out '%{http_code}' http://127.0.0.1:8788/api/dashboard-data)
+          test "$method_status" = 405
+          grep --ignore-case --quiet '^cache-control: no-store' /tmp/method-headers

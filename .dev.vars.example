@@ -1,0 +1,8 @@
+# Public build-time identifier. Replace with the publisher ID used for local QA.
+NEXT_PUBLIC_ADSENSE_CLIENT_ID=ca-pub-0000000000000000
+
+# Load development-oriented Next.js environment files during local preview.
+NEXTJS_ENV=development
+
+# Local-only credential for the dashboard upstream API.
+DASHBOARD_API_TOKEN=replace-with-local-dashboard-token

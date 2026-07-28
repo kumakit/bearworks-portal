@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
-export const runtime = "edge";
-
 export const metadata: Metadata = {
   title: "パーソナル天気ダッシュボード | bearworks.uk",
   robots: {

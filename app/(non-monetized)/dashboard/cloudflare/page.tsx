@@ -1,7 +1,5 @@
 "use client";
 
-export const runtime = "edge";
-
 import React, { useState, useEffect } from "react";
 import { AlertTriangle, Zap, Globe, ShieldAlert } from "lucide-react";
 import { DashboardData, normalizeDashboardData } from "../lib/dashboardUtils";

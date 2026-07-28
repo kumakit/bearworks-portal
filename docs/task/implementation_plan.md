@@ -24,17 +24,17 @@ AdSense配信範囲を分離した複数root layout構成を維持したまま�
 ## 変更方針
 
 1. `next` と `eslint-config-next` を15.5.21へ更新する。React 18はNext.js 15.5.21のpeer範囲内なので本タスクでは維持する。
-2. `@cloudflare/next-on-pages` を削除し、`@opennextjs/cloudflare@1.20.2` と `wrangler@4.114.0` を導入する。Next、eslint-config、OpenNext、Wrangler、lockfileを同一変更単位で更新し、peer warningがないことを確認する。
+2. `@cloudflare/next-on-pages` を削除し、`@opennextjs/cloudflare@1.20.2` と `wrangler@4.114.0` を導入する。OpenNext 1.20.2がruntimeで直接importするため `esbuild@0.27.7` も明示依存として固定する。Next、eslint-config、OpenNext、Wrangler、esbuild、lockfileを同一変更単位で更新し、peer warningがないことを確認する。
 3. `next.config.mjs` の `setupDevPlatform()` を `initOpenNextCloudflareForDev()` へ置き換える。
 4. `open-next.config.ts` を追加し、まず外部R2/D1を必要としない最小構成にする。永続ISR cacheは本サイトの現行要件にないため追加しない。
-5. `wrangler.jsonc` にWorker entrypoint、static assets、`nodejs_compat`、`global_fetch_strictly_public`、observabilityを定義する。既存カスタムドメインへの切替はローカル実装と分離し、route設定やdeployは行わない。
+5. `wrangler.jsonc` にWorker entrypoint、static assets、`nodejs_compat`、`global_fetch_strictly_public`、observabilityを定義する。`workers_dev` と `preview_urls` は明示的に無効化し、Access対象外の公開入口を作らない。既存カスタムドメインへの切替はローカル実装と分離し、route設定やdeployは行わない。
 6. `package.json` に `cf:build`、`preview`、`deploy`、`upload`、`cf-typegen` を追加し、`pages:build` を削除する。`deploy` と `upload` はコマンド定義だけ行い、本タスクでは実行しない。
 7. すべての `export const runtime = "edge"` を削除し、Next.js Node.js Runtimeへ統一する。
 8. `.open-next/`、`.dev.vars*`、生成型をGit管理対象外にし、変数名とダミー値だけを含む `.dev.vars.example` を追加する。生成型がないclean checkoutでも通常buildとWorkers buildが成功する構成にする。
 9. `public/_headers` に `/_next/static/*` のimmutable cache headerを追加する。この設定はstatic assets限定とし、SSR/APIのcache/security headerは個別HTTP検査で確認する。
 10. Next.js 15対応として、2つのdynamic slug pageと `generateMetadata` を `params: Promise<{ slug: string }>` / `await params` へ必ず変更する。
 11. `/api/dashboard-data` のupstream fetchへ10秒のtimeoutを追加し、timeoutを含む失敗時にgeneric errorだけを返すfail-closed動作を維持する。
-12. Linuxのclean checkoutでWorkers buildを再現するbuild-only GitHub Actions workflowを追加する。deploy、secret、Cloudflare認証は含めない。
+12. Linuxのclean checkoutでWorkers buildを再現するbuild-only GitHub Actions workflowを追加する。Workers previewを起動して公開route、動的slug、404、AdSense境界、API failure pathも検査する。deploy、実secret、Cloudflare認証は含めない。
 13. READMEをCloudflare Workers/OpenNext構成とローカル・Linux CI検証コマンドへ更新する。
 
 ## 維持する境界
@@ -44,6 +44,7 @@ AdSense配信範囲を分離した複数root layout構成を維持したまま�
 - `/api/dashboard-data` のtoken必須、production時のCloudflare Access header必須、no-store、405制御を維持する。
 - 公開URL、metadata、canonical、noindex、sitemap、robots、ads.txtを変更しない。
 - Cloudflare Accessの管理画面設定、DNS、custom domain、Pages project削除は行わない。
+- Access適用済みcustom domain routeを設定するまで `workers.dev` とversion preview URLは公開しない。
 
 ## QA
 

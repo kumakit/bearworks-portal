@@ -24,13 +24,14 @@ export function generateStaticParams() {
 }
 
 interface PageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
-export function generateMetadata({ params }: PageProps) {
-  const guide = guides.find((g) => g.slug === params.slug);
+export async function generateMetadata({ params }: PageProps) {
+  const { slug } = await params;
+  const guide = guides.find((g) => g.slug === slug);
   if (!guide) return {};
 
   return {
@@ -42,8 +43,9 @@ export function generateMetadata({ params }: PageProps) {
   };
 }
 
-export default function GuideDetailPage({ params }: PageProps) {
-  const guide = guides.find((g) => g.slug === params.slug);
+export default async function GuideDetailPage({ params }: PageProps) {
+  const { slug } = await params;
+  const guide = guides.find((g) => g.slug === slug);
   if (!guide) {
     notFound();
   }

@@ -1,7 +1,5 @@
 "use client";
 
-export const runtime = "edge";
-
 import React, { useState, useEffect } from "react";
 import { AlertTriangle, TrendingUp, Sparkles, CreditCard } from "lucide-react";
 import { DashboardData, GoogleBillingCredit, formatJPY, normalizeDashboardData } from "../lib/dashboardUtils";

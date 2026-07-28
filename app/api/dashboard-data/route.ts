@@ -1,8 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 
-export const runtime = "edge";
-
 const TARGET_API_URL = "https://apps.bearworks.uk/api/dashboard/data.json";
+const UPSTREAM_TIMEOUT_MS = 10_000;
 
 // キャッシュ無効化のための共通ヘッダー
 const NO_CACHE_HEADERS = {
@@ -29,10 +28,10 @@ export async function GET(request: NextRequest) {
     );
   }
 
-  // 2. 多層防御 (Defense in Depth): 
-  // 本番環境（Cloudflare Pagesの本番デプロイ）では、Cloudflare Access経由であることを保証するため
-  // JWTアサーションヘッダー (cf-access-jwt-assertion) の存在を強制します。
-  // これにより、Cloudflare Accessの設定漏れやバイパスがあっても、未認証リクエストを確実に遮断します。
+  // 2. 多層防御 (Defense in Depth):
+  // 本番ではCloudflare Accessを適用したcustom domainだけを公開し、
+  // workers.devとversion preview URLはwrangler.jsoncで無効化する。
+  // このヘッダー確認はAccess通過の補助条件であり、JWTの署名検証そのものではない。
   const isProduction = process.env.NODE_ENV === "production";
   if (isProduction) {
     const cfAccessJwt = request.headers.get("cf-access-jwt-assertion");
@@ -58,6 +57,7 @@ export async function GET(request: NextRequest) {
         "X-Dashboard-Token": token,
       },
       cache: "no-store",
+      signal: AbortSignal.timeout(UPSTREAM_TIMEOUT_MS),
     });
 
     if (!res.ok) {
@@ -72,8 +72,11 @@ export async function GET(request: NextRequest) {
         ...NO_CACHE_HEADERS,
       },
     });
-  } catch (error: any) {
-    console.error("Error proxying dashboard data:", error);
+  } catch (error: unknown) {
+    console.error(
+      "Error proxying dashboard data.",
+      error instanceof Error ? error.name : "UnknownError"
+    );
     return new NextResponse(
       JSON.stringify({ error: "Failed to retrieve dashboard data." }),
       {

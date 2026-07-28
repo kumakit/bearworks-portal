@@ -25,13 +25,14 @@ export function generateStaticParams() {
 }
 
 interface PageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
-export function generateMetadata({ params }: PageProps) {
-  const problem = problems.find((p) => p.slug === params.slug);
+export async function generateMetadata({ params }: PageProps) {
+  const { slug } = await params;
+  const problem = problems.find((p) => p.slug === slug);
   if (!problem) return {};
 
   return {
@@ -43,8 +44,9 @@ export function generateMetadata({ params }: PageProps) {
   };
 }
 
-export default function ProblemDetailPage({ params }: PageProps) {
-  const problem = problems.find((p) => p.slug === params.slug);
+export default async function ProblemDetailPage({ params }: PageProps) {
+  const { slug } = await params;
+  const problem = problems.find((p) => p.slug === slug);
   if (!problem) {
     notFound();
   }
