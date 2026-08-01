@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-08-02",
+    "daily_summary": "本日のAIニュースは、AIを活用したChromeの長年の脆弱性発見やテスラの新型音声AI搭載といった技術的進展の一方で、中国製AI「Kimi K3」の台頭と米中間の激化する覇権争いや軍事利用の懸念が浮き彫りになりました。また、医療現場やビジネスでのAI活用への期待が高まる中、脳科学者やタレントからの「AIへの過度な依存に対する警鐘」も鳴らされ、技術の急速な進化と安全保障、そして人間とAIの望ましい関わり方について改めて考えさせられる一日となりました。",
+    "articles": [
+      {
+        "title": "Chromeに13年超潜む脆弱性をAIが発見",
+        "content": "Google Chromeにおいて13年以上もの間発見されずに潜んでいた脆弱性が、AIを活用した分析によって新たに発見されました。AI技術の進化により、従来の人間による検査では見逃されがちだった長期間未解決のセキュリティリスクを特定できるようになっています。この発見は、ソフトウェアの安全性向上や今後の脆弱性調査におけるAIの有用性を示しています。",
+        "source": "Google News",
+        "published_at": "2026-08-02",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9vdnZjT2ZNYmhGSWUzT2FjTHVDUXlTSE5fV2h0Y1pRLVg2N0plVmx3M0hoejNBMTBMZ3FKVGlfUTdOXzZfdlZqUUZxWGt5QnZY?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "中国AI「Kimi」、コスパに強みタイパに弱み 応答時間は米Fableの2倍",
+        "content": "中国のAI「Kimi」はコストパフォーマンスに優れる一方で、応答時間が米Fableの2倍かかるなどタイムパフォーマンス面での課題が指摘されています。性能面と速度のバランスが今後の普及の鍵となります。",
+        "source": "Google News",
+        "published_at": "2026-08-02",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1SU0hfbXpCSmVRNjJucXFNM2FzaWY4Z0YzQUphTlFXaHZxel90NWwxalkzVEFfQzYzNnAtaFJrb2VaWWlZUWRld1ZMREdYZ2tvWUpHRVIxYmJ0aHV3a0JlRU52Q0Z4cXFiYW1uMA?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "中国AI『Kimi K3』がGPT超えで米AI株が急落、米中覇権争いの行方",
+        "content": "中国の新しいAIモデル『Kimi K3』が一部の性能でGPTを超えたとされ、米国のAI関連株が急落しました。米中間の覇権争いが激化する中、サイバー攻撃の防御に中国製AIが利用されるなどの事態も発生しています。研究者からは中国の技術的躍進に対する驚きの声が上がっています。",
+        "source": "Google News",
+        "published_at": "2026-08-02",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1YZzdBb3djd2VwSlNzTlcyX0ZuRVN2dmdzV29kS3F3YzB5blZtaUJvRS1TeUtZUDUzaExxWDdOYjN6cHNaMk13QmdKODR5TTEtTnJDN0s5QzVINk02OWV5VjZwbHZCWWVRbUd1cUduSDNxc3JKVDIzVWY0ZGFrT0k?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "中国軍関連機関、米AIモデルを蒸留し防衛能力向上図る",
+        "content": "中国軍に関連する研究機関が、米国のオープンソースAIモデルを活用して独自の防衛システムへ応用する「蒸留」の取り組みを行っていることがロイターの報道で明らかになりました。AI技術の軍事利用に関する安全保障上の懸念や、米中間の技術競争への影響がさらに高まっています。",
+        "source": "Google News",
+        "published_at": "2026-08-02",
+        "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5aOWE4RmNuMjQ2QWoxVHM1cW9WX2NQRnQ2aXQ4Q05mVTZ5S2RRY0VNTHdoNHlSNG9ab2JKbVBkeWtFRHVYYkZ6eWZKZWU0NkdLZG1hUV9xZ2paQVhwZE5BRUxpWFJadVZhOG9NbG02aDNPZGkySDFsd0lB?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "「陥没呼吸ではないですか？」生成AIの指摘をきっかけに小児科を受診した事例と医師の見解",
+        "content": "生成AIに症状の可能性を指摘されたことをきっかけに、保護者が小児科を受診したニュースです。医師は、自己判断に頼りすぎず、心配なことがあれば医療機関を受診することが正しい選択であると述べています。",
+        "source": "Google News",
+        "published_at": "2026-08-02",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBYSTI5U1R6X2E1UHdVbTNCMzVQTm93MmdmbklVNjJyZ0VtZjZkZmRaYThKMG92RmJZeHV2cW1mWG1uVEpKRUctdEc3Ykw1RVN3cGZMZW9oTzBiY0NoWG5JQVlWcEEwRTJlMVU2WWd3?oc=5",
+        "category": "その他"
+      },
+      {
+        "title": "脳科学者・池谷裕二氏「20代から30代前半はAIに頼るな」",
+        "content": "脳科学者の池谷裕二氏が、20代から30代前半の若者層に向けてAIに過度に頼らないよう警鐘を鳴らしています。この時期は自らの頭で思考し経験を積むことが重要であるという見解が示されています。",
+        "source": "Google News",
+        "published_at": "2026-08-02",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE93UGZJS1pJVEVCd3BEeHlEdDJqeWJOX3JsWVF2VVl5dkNYa2tmNW5iSk92ZTQ4S0kzcVNiYm1lYXVWZkhYYXNrWFFEa3NBZldpaUlFNXdaWDl5R3RWVnVtTGJiRno3b2M4dDJ1dnhKb0JTUVhWeUJtQnUwdjFpOWM?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "テスラ、話すAI搭載…運転・機器操作をサポート",
+        "content": "テスラは、運転や車両の機器操作を音声でサポートする新しいAI機能を搭載しました。自然な対話を通じてドライバーの利便性と安全性を向上させることを目指しています。",
+        "source": "Google News",
+        "published_at": "2026-08-02",
+        "url": "https://news.google.com/rss/articles/CBMiQkFVX3lxTE05UERtemRQb2RGVFNzQ0FrTWZiMHNnVG1kU2hwSE9lUHBXYzdQRGZQQVRCUllSZk5mN1hjRW1DTUVfQQ?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "田中みな実　AIに頼る人に危機感「自分の都合のいいようにお話しするようになっちゃうのかな」",
+        "content": "タレントの田中みな実が、AIに過度に頼ることに対して危機感を表明した。AIが人間の都合の良いようにばかり話すようになるのではないかと懸念を示している。現代社会におけるAIとの向き合い方について一石を投じる内容となっている。",
+        "source": "Google News",
+        "published_at": "2026-08-02",
+        "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOZTFYR2p4MXhqQWVJQnJtekRIanpQTnlUTkc4UWU2SzlHNXhnZ0ZhQU5QSGlfb2FSb2VWRGFOSk1ydXI3TVhhdWFfaWoyeVR1ajhVcWhXWmtYa0hGTEZfYkhiNUpCSThQbm9lR0JIeHRTMDZiZFAzQWhSTmhLWTdxMHpmNVh4YXl0aUhoWFh5Z1EwbHd1T2Uw0gGcAUFVX3lxTE10eDIwWVo3Szh6MC16UV9GVWpua0F4RVpBM3RUdExzT3BfUnRKWVlIVUpuWGh5QmdkZGNZMHV5UWpkb29MRFpLTG1RUF9Fa2xUWm5Xb2JUTjg1b1JDT290Ti0wLWE3NTNnTVRMbDdHa2FoMjA5eW9PRTZYaHlDQjQtWnBnazk5dHBZVFhPdUNHSUktM1NhNkFTczFVMg?oc=5",
+        "category": "その他"
+      },
+      {
+        "title": "最近のAIはなぜ賢く感じるのか？進化の裏側をマンガで解説",
+        "content": "近年のAIが非常に賢く感じられる理由について、その進化を支える仕組みをマンガ形式で分かりやすく解説しています。第2話となる今回は、AIの高度な処理能力の背景にある技術的な要素を取り上げています。",
+        "source": "Google News",
+        "published_at": "2026-08-02",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBpdjdka1Z2NFhNQjFsTHhzN2s1LTlMV293dG4zcEpMLWV0RkdiV3AtNGFhZldUb293VGxVX1IyNHlETkxOcUhnMTB3WDRWQmU4Z1E?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "「Excel好き」では進化できない、「Excel/CSVでデータ連携」が残る今、AIをどう使うか",
+        "content": "多くの現場で現在も残るExcelやCSVによるデータ連携の課題について解説しています。このような状況において、業務効率化や進化のためにAIをどのように活用すべきかそのアプローチを考察しています。",
+        "source": "Google News",
+        "published_at": "2026-08-02",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1WSXlNaG42SkVUVHF4Y2ltQmF2YlAyb0g5d0ZfTE5aQjlTWi02cEJBQmp5TU1wUTNkbE1HbmNCZXo1VWhxSXhBT2hZcHlSVXBIWWN1N0dPMlItUTE2NXRWSjZ5cUxhaEJpSkNyY1VJRGpOdw?oc=5",
+        "category": "エージェント・開発ツール"
+      }
+    ]
+  },
+  {
     "date": "2026-08-01",
     "daily_summary": "本日のAIニュースは、Anthropicの不正侵入被害や「Claude」の安全性評価試験でのサイバー攻撃、EUによる生成AIの監督強化など、セキュリティやリスク管理に関する重大な課題が浮き彫りになりました。一方で、OpenAIの大幅な利用料金引き下げによる価格競争の激化や、アマゾンの好決算によるAI投資への懸念緩和といった市場・ビジネスの動きに加え、AI時代の半導体需要や長期的な経済成長に関する分析など、技術と経済の両面で激しい変化と規制の波が押し寄せる一日となりました。",
     "articles": [
