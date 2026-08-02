@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-08-03",
+    "daily_summary": "本日のAIニュースは、EUによるAI規制法と識別表示の義務化や高額制裁金の導入といった法整備・ガバナンスの強化が主要な話題となったほか、生成AIの悪用による事件や現場のOJT負担増といった課題が浮き彫りになりました。一方で、住友商事やMUFGによる巨大テック企業との提携、防衛省のクラウド・AI活用などビジネスや行政における戦略的な動きが進んでおり、さらに超知能AIがもたらす人類絶滅リスクへの懸念や、株式市場におけるAI・半導体関連株の動向にも高い関心が寄せられるなど、技術の急速な普及に伴う規制、リスク、そして新たなビジネスチャンスが交錯する一日となりました。",
+    "articles": [
+      {
+        "title": "EU AI規制法で透明性確保を義務化",
+        "content": "欧州連合（EU）のAI規制法において、人工知能の透明性確保が新たに義務化されました。これにより、開発企業や提供者はAIシステムの動作やデータに関する詳細な情報の開示が求められることになります。AI技術の安全かつ信頼性の高い利用に向けた重要な一歩となります。",
+        "source": "Google News",
+        "published_at": "2026-08-03",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBURlJqRUU3SnQwN19XVHNVWUo2NHhtRFR5ZGZxWFd2Q0NuMFpSaFJBLXZFbHBXRWdUMkpWbjgwOF9GeThldTZIWElmVHRoRjln?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "EU、AIサービスで透明性確保",
+        "content": "欧州連合（EU）は、AIサービスにおける透明性を確保するための新たな取り組みや規制を進めています。これにより、利用者がAIの動作や判断根拠をより理解しやすくなることが期待されます。",
+        "source": "Google News",
+        "published_at": "2026-08-03",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1WZTQ2QTNzaVVrTEFhTVEwN0NXaW1FLTRGRnlBSnA1dldwS3doZG5wQ3loUWNEYkFHQTRPckdQNkthaUdpTlFRNG9mX0ZMMXV1SjJ2UGZxN0xLakE?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "AI生成の画像や動画にEUが識別表示を義務化、違反には高額制裁金",
+        "content": "EUは、AIによって生成された画像や動画に対して識別できる表示を義務付ける方針を固めた。この規制に違反した場合は、最大27億円または年間売上高の3%という高額な制裁金が課されることとなる。AIの透明性を高め、フェイクニュースなどの悪用を防ぐ狙いがある。",
+        "source": "Google News",
+        "published_at": "2026-08-03",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5mME1LamFwQlBiby1jSUs2dHdKZE5JdFNlNi1qSWRyQXJZSVRRNDlDUVZQallZS0RDaENySGtIUTRDZ183cWZzRUFTV3ZSNHdRS3B3SXZZODZ4MERzaVNEdUZEcEw?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "超知能AIが高める人類絶滅リスク 開発競争を止めるため何ができる",
+        "content": "この記事では、超知能AIがもたらす人類の絶滅リスクについて警鐘を鳴らしています。過熱する開発競争に歯止めをかけるための具体的な対策や議論について考察しています。",
+        "source": "Google News",
+        "published_at": "2026-08-03",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE11N3Ztb2kwU0t4TVhqX2FtbFdVQlhUa3FPZWFGSnZzaGRLLUlnUEtNWVVwM25TQUp3eXI1WWR6R0U4YnJnVXdxZFdpeF8tUWF1Wm1mSGxxeGh6bEtCQl8zUVA0czl6ZWM?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "生成AIで体操着姿のわいせつ少女画像作成、容疑の会社員を逮捕…300枚作成し一部SNSに投稿",
+        "content": "生成AIを使用して体操着姿のわいせつな少女の画像を作成したとして、会社員の男が逮捕されました。男は約300枚の画像を作成し、その一部をSNSに投稿していたとされています。生成AIの悪用による犯罪行為として、警察が捜査を進めています。",
+        "source": "Google News",
+        "published_at": "2026-08-03",
+        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBGdWhIa3FzckRVNnl3REF6YjRlYmItMGs0QWZqZndpekpfaE1GZzFMWC1GUFpsN0dQS3RSeHhYRFZVTXFwUXY2bFBiZDk4TFB2aTI5X1lzMWtpeExTbzkyOGI5RnF3dw?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "住友商事のデジタル・AI戦略：AI普及を商機にSCSKの成長を加速",
+        "content": "住友商事は、AIの普及を大きな商機と捉え、グループのSCSKを通じたデジタル・IT事業の成長を加速させています。商社の強みを活かした多様な事業展開が注目を集めています。",
+        "source": "Google News",
+        "published_at": "2026-08-03",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBUM1Z4enVveUVQNXRDTDRrSmdUdHNUYjVrWGYzVUIyXzB3MWxzSzZwR2dqcE01cExmUWxhR1M3TW1nQjFlRHNkVzBiajlBLWNsaDN4TDdKS3hsYlBkN0tURFAzU0taQWc2a0ZfY1JBSTM2V3JWcGRZVkZxNURZQjg?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "MUFG、「後出し」のデジタル経済圏 グーグル・オープンAIと240兆円囲い込み",
+        "content": "三菱UFJフィナンシャル・グループ（MUFG）が、グーグルやオープンAIなどの巨大テック企業と連携し、巨大なデジタル経済圏の構築に向けて動き出しました。独自の強みを活かした戦略で、日本の巨大な金融・経済圏の囲い込みを目指しています。今後の動向が注目されます。",
+        "source": "Google News",
+        "published_at": "2026-08-03",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9DN1p2d1VWbGxMVUl6V3B5TEN1eVgyNkhWUWZCSXhBR0s4Vlh2bE1BWXdWbi1GUTNnTk5yaHNfOEIxbWxpRDNTYTcyQnFkckpZNWxrc1k2QmNpYk1XYVVRNzVDTi0ybU0?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "防衛機密、クラウドで運用へ AI活用を本格化―移行準備、来年度着手",
+        "content": "防衛省は防衛機密をクラウド上で運用し、AIの活用を本格化させる方針を固めました。来年度から移行に向けた準備に着手します。これにより、先端技術の導入やデータ分析の迅速化を図る狙いがあります。",
+        "source": "Google News",
+        "published_at": "2026-08-03",
+        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE8wMmpaaWxpbjNYTV9JUFk3YlBrbkdyN19KZFVxRVhZd1JCZHNMVmJsOXhwWGNjNk9Wd19GUUFlODdNS015c2ZtdUd2T0VLOHdzS2VSV0RIa0xYeE5GZjFhT2FPZw?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "「AI活用する新人増えてOJT負担増」 複数の調査で露呈した現場の苦悩：重要なのは「AIに代替されにくい本質的な自走力」",
+        "content": "AIを活用する新人が増加する一方で、OJTを担当する現場の負担が増えていることが複数の調査で明らかになりました。AIの普及が進む現代において、今後は代替されにくい本質的な自走力を養うことが重要視されています。",
+        "source": "Google News",
+        "published_at": "2026-08-03",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBaVUNkZXN0dHFBMUxkU0JPbDF1T3JBV3BSYVVybVRPdDFXLVVEdG1NMlUwa1RDLXpFZkU1SzM0a0M3ZXVkc2JUODNYamVRNGhqcks2c1RYd1RGbDkxNVJZcmVsVHFXZVp1Tm1zdXRVbFBRdw?oc=5",
+        "category": "その他"
+      },
+      {
+        "title": "国内株式市場見通し：AI・半導体株のリバウンド持続性が焦点に",
+        "content": "週末にかけて急反発を見せた国内のAI・半導体関連株について、そのリバウンドの勢いが今週も持続するかどうかが市場の大きな焦点となっています。投資家の間では今後の値動きや相場全体への波及効果に注目が集まっています。",
+        "source": "Google News",
+        "published_at": "2026-08-03",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBmN2JDWENwekZ5Q0paZDhHcnQxbTNLSjRlTXRUWGswRXA2VUpoVVg4TWRpM1lNaldGNDBsUHU3NGZsMFR4QW5EaG9BQ3ZOR1prbkFxRHhKQ1RNTkNFOTRmQw?oc=5",
+        "category": "事業・投資"
+      }
+    ]
+  },
+  {
     "date": "2026-08-02",
     "daily_summary": "本日のAIニュースは、AIを活用したChromeの長年の脆弱性発見やテスラの新型音声AI搭載といった技術的進展の一方で、中国製AI「Kimi K3」の台頭と米中間の激化する覇権争いや軍事利用の懸念が浮き彫りになりました。また、医療現場やビジネスでのAI活用への期待が高まる中、脳科学者やタレントからの「AIへの過度な依存に対する警鐘」も鳴らされ、技術の急速な進化と安全保障、そして人間とAIの望ましい関わり方について改めて考えさせられる一日となりました。",
     "articles": [
