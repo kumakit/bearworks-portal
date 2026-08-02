@@ -10,13 +10,15 @@ Phase 3-0で実装済みのAdSense掲載範囲分離とCloudflare Workers/OpenNe
 - 対象repo: `C:\Users\kumat\dev\bearworks-portal`
 - 対象branch: `codex/issue-344-phase3-ads-scope`
 - 実装baseline: `a8c376d1e880af1e80c3c213b7558d4fd377e8cd`
-- ローカルHEAD: `b67e18bbaf27d0c783edabec4739941c31c07f0c`（本番移行計画。remote branchより1 commit先行）
+- Gate 0反映commit: `4b4dd6c`（Sonnetレビュー、staging、runbook、API/CI強化）
+- Gate 1 merge commit: `f38da71`（`origin/main` のAIニュース更新5件を通常merge）
 - `origin/main`: `cbbc77a0c99457c13350b47793782e160c3f269b`
 - 分岐点: `2f3831315f05d25baf6b25c52567b4093a25a559`
 - feature作成後のmain変更: `data/news-data.json` のAIニュース更新5件のみ
-- feature branchはpush済み。PR、Linux CI、Workers deploy、custom domain切替は未実施
+- feature branchは実装baseline `a8c376d` までpush済み。Gate 0以降のlocal commit、PR、Linux CI、Workers deploy、route切替は未実施
 - 公開 `bearworks.uk` は従来のCloudflare Pages版を継続配信中
 - Sonnet手動計画レビューは2026-08-02に条件付き承認。採否と原文は `docs/history/20260802_issue#344_plan_review.md` に保存
+- `npm audit --omit=dev` はNext.js同梱PostCSS/Sharp経由のhigh 3件を報告。自動提案のNext.js 9 downgradeや未対応overrideは行わず、production切替前に再評価する
 
 既存の実装計画とローカルQAは次を参照する。
 
@@ -118,12 +120,13 @@ Windows OpenNext previewのdynamic slug 404は既知の環境差であり、Linu
 ### Gate 6: production cutover
 
 1. 現行PagesのURL、project、DNS/CNAME、直前正常応答を記録する。
-2. production Workerをrouteなし・公開入口なしでdeployし、version、secret、Access policyを再確認する。
-3. rollback操作者、開始時刻、判断基準を再確認する。
-4. 既存Pages DNSを維持したままWorkers Route `bearworks.uk/*` を有効化する。Custom Domainは使わない。
-5. 5分以内にsmoke testを開始し、10分以内にHTTPS、主要route、dynamic slug、404、AdSense境界、API、metadata、robots、sitemapを検証する。
-6. 重大失敗または10分以内に完了できない場合はWorkers Routeを削除しPagesへ戻す。
-7. 24時間以上の観測期間中はPages project、custom domain、DNSを維持する。
+2. production依存のsecurity advisoryを再確認し、未解消highがあればruntime到達性とrisk acceptanceを明示する。未評価のまま進めない。
+3. production Workerをrouteなし・公開入口なしでdeployし、version、secret、Access policyを再確認する。
+4. rollback操作者、開始時刻、判断基準を再確認する。
+5. 既存Pages DNSを維持したままWorkers Route `bearworks.uk/*` を有効化する。Custom Domainは使わない。
+6. 5分以内にsmoke testを開始し、10分以内にHTTPS、主要route、dynamic slug、404、AdSense境界、API、metadata、robots、sitemapを検証する。
+7. 重大失敗または10分以内に完了できない場合はWorkers Routeを削除しPagesへ戻す。
+8. 24時間以上の観測期間中はPages project、custom domain、DNSを維持する。
 
 ### Gate 7: 安定確認とPages停止
 

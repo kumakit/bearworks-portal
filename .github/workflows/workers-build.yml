@@ -34,7 +34,7 @@ jobs:
         run: npm run cf:build
 
       - name: Validate Workers bundle
-        run: npx wrangler deploy --dry-run
+        run: npx wrangler deploy --dry-run --env=""
 
       - name: Verify Workers preview routes
         shell: bash

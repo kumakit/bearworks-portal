@@ -25,19 +25,23 @@
 ## main同期
 
 - [x] remote mainの最新HEADを再確認（`cbbc77a0c99457c13350b47793782e160c3f269b`）
-- [ ] `origin/main` を通常merge
-- [ ] `data/news-data.json` の構文、重複、記事スキーマを確認
-- [ ] `/ai-news` の最新日付と表示回帰を確認
+- [x] `origin/main` を通常merge（`f38da71`、競合なし）
+- [x] `data/news-data.json` の構文、日付・URL重複、記事スキーマを確認
+- [x] `/ai-news` の最新日 `2026-08-02` とHTTP 200を確認
 
 ## ローカル検証
 
-- [ ] `npm ci`
-- [ ] `npm run build`
-- [ ] `npm run cf:build`
-- [ ] `npx wrangler deploy --dry-run`
-- [ ] `git diff --check`
-- [ ] secret、生成物、想定外変更の非混入
-- [ ] AdSense境界とdashboard API failure pathの再確認
+- [x] `npm ci`
+- [x] `npm run build`
+- [x] `npm run cf:build`
+- [x] `npx wrangler deploy --dry-run --env=""`
+- [x] `npx wrangler deploy --dry-run --env staging`
+- [x] `git diff --check`
+- [x] secret、生成物、想定外変更の非混入
+- [x] AdSense境界とdashboard API 401/405/no-storeの再確認
+- [x] OpenNext previewでstatic assetのimmutable Cache-Controlを確認
+- [x] `npm audit --omit=dev` を実行
+- [ ] production切替前にNext.js同梱PostCSS/Sharpのhigh 3件を再評価
 
 ## GitHub / Linux CI
 

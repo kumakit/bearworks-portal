@@ -68,12 +68,14 @@ Cloudflare dashboardで次を記録する。
 
 ### production Workerを非公開状態で準備
 
+`npm audit --omit=dev` と関連advisoryを再確認する。未解消highがある場合はruntime到達性、公式修正版、risk acceptanceを記録し、未評価のままdeployしない。
+
 ```powershell
-npx wrangler secret put DASHBOARD_API_TOKEN
+npx wrangler secret put DASHBOARD_API_TOKEN --env=""
 npm run cf:build
-npx wrangler deploy
-npx wrangler deployments list
-npx wrangler secret list
+npx wrangler deploy --env=""
+npx wrangler deployments list --env=""
+npx wrangler secret list --env=""
 ```
 
 top-level設定にはroute/custom domainがなく、`workers_dev` とpreview URLも無効のため、この時点では公開経路を追加しない。
@@ -114,8 +116,8 @@ Route削除で復帰しない場合のみ、cutover前に記録したDNS/Pages c
 Routeを維持したまま直前Worker versionへ戻す場合に限り、deployment IDを確認して実行する。
 
 ```powershell
-npx wrangler deployments list
-npx wrangler rollback <DEPLOYMENT_ID>
+npx wrangler deployments list --env=""
+npx wrangler rollback <DEPLOYMENT_ID> --env=""
 ```
 
 Access迂回、漏洩、DNS/TLS障害ではversion rollbackを選ばず、Workers Route削除でPagesへ戻す。secret漏洩時はRoute削除後に該当secretを無効化・再登録する。
