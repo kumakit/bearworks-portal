@@ -13,13 +13,18 @@
 
 - [x] issue固有の本番移行計画を作成
 - [x] Sonnet/Gemini Pro向け `plan-review-request.md` を作成
-- [/] ユーザーが手動計画レビューを実行
-- [ ] レビュー結果をhistoryへ保存
-- [ ] 指摘の採否を決定し計画へ反映
+- [x] ユーザーが手動計画レビューを実行
+- [x] レビュー結果をhistoryへ保存
+- [x] 指摘の採否を決定し計画へ反映
+- [x] dashboard APIの `NODE_ENV` 依存を廃止し全環境でAccess headerを必須化
+- [x] `wrangler.jsonc` にAccess先行型の `env.staging` を定義
+- [x] productionをWorkers Routeで切り替えるcutover/rollback runbookを作成
+- [x] LunaへSonnet指摘とGate別修正時期の独立監査を委譲
+- [x] Linux CIへstatic asset header、ads.txt内容、一時ファイルcleanupを反映
 
 ## main同期
 
-- [ ] remote mainの最新HEADを再確認
+- [x] remote mainの最新HEADを再確認（`cbbc77a0c99457c13350b47793782e160c3f269b`）
 - [ ] `origin/main` を通常merge
 - [ ] `data/news-data.json` の構文、重複、記事スキーマを確認
 - [ ] `/ai-news` の最新日付と表示回帰を確認
@@ -46,7 +51,8 @@
 
 ## Workers staging
 
-- [ ] staging方式を手動レビューで確定
+- [x] staging方式を `env.staging` / `bearworks-portal-staging` / `staging.bearworks.uk` に確定
+- [ ] hostname全体のAccess ApplicationをCloudflare上で確認
 - [ ] Access policyを先に設定
 - [ ] staging Worker/environmentとsecretを設定
 - [ ] staging custom domain、DNS、証明書、routeを確認
@@ -56,7 +62,8 @@
 
 - [ ] cutover前のPages正常状態を記録
 - [ ] production Worker version、secret、Access、routeを再確認
-- [ ] rollback操作と判断基準を再確認
+- [x] rollback操作と判断基準をrunbookへ書面化
+- [ ] cutover直前にrollback操作者と判断基準を再確認
 - [ ] ユーザーの本番切替承認を得る
 - [ ] Workers custom domain/routeを有効化
 - [ ] 公開route、API、AdSense、metadata、robots、sitemapを検証

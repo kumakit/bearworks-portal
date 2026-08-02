@@ -9,12 +9,14 @@ Phase 3-0で実装済みのAdSense掲載範囲分離とCloudflare Workers/OpenNe
 - Issue: `kumakit/mission-control#344`（open、`Status: In Progress`）
 - 対象repo: `C:\Users\kumat\dev\bearworks-portal`
 - 対象branch: `codex/issue-344-phase3-ads-scope`
-- feature HEAD: `a8c376d1e880af1e80c3c213b7558d4fd377e8cd`
+- 実装baseline: `a8c376d1e880af1e80c3c213b7558d4fd377e8cd`
+- ローカルHEAD: `b67e18bbaf27d0c783edabec4739941c31c07f0c`（本番移行計画。remote branchより1 commit先行）
 - `origin/main`: `cbbc77a0c99457c13350b47793782e160c3f269b`
 - 分岐点: `2f3831315f05d25baf6b25c52567b4093a25a559`
 - feature作成後のmain変更: `data/news-data.json` のAIニュース更新5件のみ
 - feature branchはpush済み。PR、Linux CI、Workers deploy、custom domain切替は未実施
 - 公開 `bearworks.uk` は従来のCloudflare Pages版を継続配信中
+- Sonnet手動計画レビューは2026-08-02に条件付き承認。採否と原文は `docs/history/20260802_issue#344_plan_review.md` に保存
 
 既存の実装計画とローカルQAは次を参照する。
 
@@ -25,7 +27,6 @@ Phase 3-0で実装済みのAdSense掲載範囲分離とCloudflare Workers/OpenNe
 
 ## 非目標
 
-- 手動計画レビュー完了前のbranch同期、push、PR作成、workflow実行
 - Linux CI成功前のWorkers deploy
 - Access適用前の公開Worker endpoint作成
 - 同一操作でのPages停止とWorkers切替
@@ -48,17 +49,16 @@ Phase 3-0で実装済みのAdSense掲載範囲分離とCloudflare Workers/OpenNe
 
 ### Gate 0: 手動計画レビュー
 
-`plan-review-request.md` をSonnetまたはGemini Proへ渡し、次を確定する。
+2026-08-02にSonnetレビューを完了し、Gate 1〜4は着手可、Gate 5〜6は追加条件付きで承認された。
 
-- Workers staging入口の作り方
-- Cloudflare Accessを適用する順序と対象hostname/path
-- Worker secretの登録・更新・rollback方法
-- custom domain routeと既存Pagesの競合回避
-- DNS、証明書、TTL、route優先順位
-- Pagesへ戻す具体的操作
-- 公開QA、観測時間、rollback判断基準
+- stagingは `env.staging` / `bearworks-portal-staging` / `staging.bearworks.uk` を使用する。
+- staging hostname全体へCloudflare Accessを先に設定し、secretを `--env staging` で分離する。
+- dashboard APIは `NODE_ENV` に依存せず、全環境でAccess headerを必須にする。
+- productionは既存Pages DNSを残し、Workers Route `bearworks.uk/*` を前段へ追加する。
+- rollbackはWorkers Route削除でPagesへ戻す。Custom Domain移行やDNS自動復帰は前提にしない。
+- 5分以内にsmoke testを開始し、10分以内に完了できなければrollbackする。
 
-レビュー結果を `docs/history/YYYYMMDD_issue#344_plan_review.md` に記録し、指摘を反映するまでGate 1へ進まない。
+具体的な操作は `cutover-runbook.md` を正本とする。
 
 ### Gate 1: 最新mainの取り込み
 
@@ -104,24 +104,26 @@ Windows OpenNext previewのdynamic slug 404は既知の環境差であり、Linu
 
 ### Gate 5: Workers staging
 
-手動レビューで承認された方式に従い、Accessで保護したstaging hostnameを使用する。候補は専用の `staging` environment / Worker名 / custom domainであり、production root routeはまだ設定しない。
+`env.staging`、Worker `bearworks-portal-staging`、Custom Domain `staging.bearworks.uk` を使用する。production routeはまだ設定しない。
 
 - staging用Workerとproduction用Worker/環境を混同しない
-- staging用secretを登録する
-- Access policyを先に有効化する
+- `staging.bearworks.uk/*` 全体のAccess policyをdeployより先に有効化する
+- staging用secretを `wrangler secret put DASHBOARD_API_TOKEN --env staging` で登録する
 - route・DNS・証明書を確認する
 - 主要route、dynamic slug、404、AdSense境界、API正常/失敗、metadata、robots、sitemapを実環境で確認する
+- `_headers` によるstatic assetのCache-Controlを実測する
+- canonical、metadataBase、robots、sitemapが意図的にproduction URLを指すことを確認する
 - Worker logにtoken、JWT、upstream bodyがないことを確認する
 
 ### Gate 6: production cutover
 
-1. 現行PagesのURL、設定、直前正常応答を記録する。
-2. production Worker version、secret、Access policy、route候補を再確認する。
-3. rollback担当操作と判断基準を再確認する。
-4. `bearworks.uk` のWorkers route/custom domainを有効化する。
-5. HTTPS、主要route、dynamic slug、404、AdSense境界、API、metadata、robots、sitemapを即時検証する。
-6. 重大失敗時はWorkers routeを解除しPagesへ戻す。
-7. 観測期間中はPagesを維持する。
+1. 現行PagesのURL、project、DNS/CNAME、直前正常応答を記録する。
+2. production Workerをrouteなし・公開入口なしでdeployし、version、secret、Access policyを再確認する。
+3. rollback操作者、開始時刻、判断基準を再確認する。
+4. 既存Pages DNSを維持したままWorkers Route `bearworks.uk/*` を有効化する。Custom Domainは使わない。
+5. 5分以内にsmoke testを開始し、10分以内にHTTPS、主要route、dynamic slug、404、AdSense境界、API、metadata、robots、sitemapを検証する。
+6. 重大失敗または10分以内に完了できない場合はWorkers Routeを削除しPagesへ戻す。
+7. 24時間以上の観測期間中はPages project、custom domain、DNSを維持する。
 
 ### Gate 7: 安定確認とPages停止
 
@@ -129,15 +131,16 @@ Windows OpenNext previewのdynamic slug 404は既知の環境差であり、Linu
 
 ## Rollback条件
 
-次のいずれかを検出した場合は切替を中止またはPagesへ戻す。
+次のいずれかを検出した場合は切替を中止またはPagesへ戻す。詳細は `cutover-runbook.md` に従う。
 
-- root/主要route/dynamic slugの5xxまたは意図しない404
-- Cloudflare Accessの迂回またはdashboardデータ露出
-- dashboard API secret、JWT、upstream bodyの漏出
-- AdSenseが非対象routeまたは404へ出力される
+- root/主要route/dynamic slugの5xxが連続3回または30秒以上継続
+- 意図しない404、Cloudflare Accessの迂回、dashboardデータ露出を1件検出
+- dashboard API secret、JWT、upstream bodyの漏出を1件検出
+- AdSenseが非対象routeまたは404へ1件でも出力される
 - canonical、robots/noindex、sitemap、ads.txtの重大回帰
 - Worker bundle/runtime errorの継続
-- route/DNS/証明書の不整合
+- route/DNS/証明書の不整合を1件検出
+- cutover開始から10分以内にsmoke testを完了できない
 
 ## 完了条件
 

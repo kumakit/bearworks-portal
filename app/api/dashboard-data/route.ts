@@ -29,25 +29,23 @@ export async function GET(request: NextRequest) {
   }
 
   // 2. 多層防御 (Defense in Depth):
-  // 本番ではCloudflare Accessを適用したcustom domainだけを公開し、
-  // workers.devとversion preview URLはwrangler.jsoncで無効化する。
+  // Cloudflare Accessを適用したhostnameだけを公開し、workers.devとversion
+  // preview URLはwrangler.jsoncで無効化する。環境名にかかわらず同じ条件を
+  // 適用し、stagingで認証境界が弱くならないようにする。
   // このヘッダー確認はAccess通過の補助条件であり、JWTの署名検証そのものではない。
-  const isProduction = process.env.NODE_ENV === "production";
-  if (isProduction) {
-    const cfAccessJwt = request.headers.get("cf-access-jwt-assertion");
-    if (!cfAccessJwt) {
-      console.warn("Unauthorized request: Missing cf-access-jwt-assertion header.");
-      return new NextResponse(
-        JSON.stringify({ error: "Unauthorized: Access restricted to authenticated sessions." }),
-        {
-          status: 401,
-          headers: {
-            "Content-Type": "application/json",
-            ...NO_CACHE_HEADERS,
-          },
-        }
-      );
-    }
+  const cfAccessJwt = request.headers.get("cf-access-jwt-assertion");
+  if (!cfAccessJwt) {
+    console.warn("Unauthorized request: Missing cf-access-jwt-assertion header.");
+    return new NextResponse(
+      JSON.stringify({ error: "Unauthorized: Access restricted to authenticated sessions." }),
+      {
+        status: 401,
+        headers: {
+          "Content-Type": "application/json",
+          ...NO_CACHE_HEADERS,
+        },
+      }
+    );
   }
 
   try {

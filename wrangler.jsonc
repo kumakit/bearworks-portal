@@ -15,5 +15,16 @@
   },
   "observability": {
     "enabled": true
+  },
+  "env": {
+    "staging": {
+      "name": "bearworks-portal-staging",
+      "routes": [
+        {
+          "pattern": "staging.bearworks.uk",
+          "custom_domain": true
+        }
+      ]
+    }
   }
 }

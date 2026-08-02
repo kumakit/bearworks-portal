@@ -50,6 +50,9 @@ jobs:
           preview_pid=$!
           cleanup() {
             kill "$preview_pid" 2>/dev/null || true
+            rm -f .dev.vars /tmp/workers-preview.log /tmp/response-body \
+              /tmp/asset-headers /tmp/asset-body /tmp/api-headers /tmp/api-body \
+              /tmp/method-headers /tmp/method-body
           }
           trap cleanup EXIT
 
@@ -85,6 +88,11 @@ jobs:
 
           assert_status 200 /
           grep --quiet 'ca-pub-0000000000000000' /tmp/response-body
+          asset_path=$(grep --only-matching '/_next/static/[^"? ]*' /tmp/response-body | head -n 1)
+          test -n "$asset_path"
+          asset_status=$(curl --silent --dump-header /tmp/asset-headers --output /tmp/asset-body --write-out '%{http_code}' "http://127.0.0.1:8788${asset_path}")
+          test "$asset_status" = 200
+          grep --ignore-case --quiet '^cache-control: public, max-age=31536000, immutable' /tmp/asset-headers
           assert_status 200 /toukei
           grep --quiet 'ca-pub-0000000000000000' /tmp/response-body
           assert_status 200 /toukei/guides/learning-roadmap
@@ -97,6 +105,7 @@ jobs:
             exit 1
           fi
           assert_status 200 /ads.txt
+          grep --fixed-strings --line-regexp --quiet 'google.com, pub-9560028085973137, DIRECT, f08c47fec0942fa0' /tmp/response-body
           assert_status 200 /robots.txt
           assert_status 200 /sitemap.xml
           assert_status 404 /route-that-does-not-exist
