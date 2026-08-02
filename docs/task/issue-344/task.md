@@ -45,13 +45,14 @@
 
 ## GitHub / Linux CI
 
-- [ ] push前にユーザーの明示承認を得る
-- [ ] feature branchをpush
-- [ ] main向けPRを作成
-- [ ] Linux workflowを実行
-- [ ] dynamic guide/problemが200
-- [ ] route、404、AdSense、API smokeが成功
-- [ ] Actions logと結果を記録
+- [x] push前にユーザーの明示承認を得る
+- [x] feature branchをpush
+- [x] main向けDraft PR #4を作成
+- [x] Linux workflowを実行
+- [x] OpenNext SSG cache未設定によるdynamic slug 404を修正
+- [x] dynamic guide/problemの有効slugが2回とも200、無効slugが404
+- [x] route、404、AdSense、API smokeが成功
+- [x] Actions run `30752064048` の成功結果を記録
 
 ## Workers staging
 
@@ -76,6 +77,6 @@
 
 ## 完了報告
 
-- [ ] walkthroughへLuna担当、検証、未検証事項を記録
+- [x] walkthroughへLuna担当、検証、未検証事項を記録
 - [ ] Issue #344へ結果をコメント
 - [ ] Phase 3-0の完了条件を満たした場合のみ完了扱いにする

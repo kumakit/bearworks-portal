@@ -64,13 +64,35 @@ Lunaはファイル編集、commit、push、GitHub更新、deployを行ってい
 
 npmの自動fix提案はNext.js 9.3.3へのmajor downgradeであり不適切なため実行していない。Next.js 15.5.22も同じPostCSS指定とSharp `^0.34.3` のため、未検証overrideも行っていない。production cutover前にadvisory、runtime到達性、公式修正版を再確認し、未評価のまま進めない。
 
+## Linux CIとOpenNext SSG修正
+
+branchをpushしてDraft PR #4を作成した。最初のLinux clean-checkout Actions run `30751272134` では、Next.js build、OpenNext build、Wrangler dry-runまでは成功したが、Workers previewの `/toukei/guides/learning-roadmap` が404となった。
+
+OpenNext公式Issue #695と現行のSSG cache構成を照合し、`generateStaticParams()` で生成したページをWorkers Static Assetsから読み出すincremental cacheが未設定であることを原因と判断した。`open-next.config.ts` へ次を追加した。
+
+- `static-assets-incremental-cache`
+- `enableCacheInterception: true`
+
+repo内にISR、時間ベース再検証、`revalidatePath`、`revalidateTag` の利用がないため、再検証をサポートしない読み取り専用cacheで要件を満たす。将来ISRを導入する場合はR2、Queue、Tag Cacheを含む構成へ見直す。
+
+Luna task `019fc2ae-34be-7151-ac8d-26355f135c26` にこの判断を読み取り専用で再監査させ、採用可、リスク中、Linux clean-checkout必須との判定を得た。司令塔Codexは依存解決、全差分、ローカルbuild、dry-run、preview routeを独立に確認した。
+
+再発防止としてLinux CIへ次を追加した。
+
+- 有効なguide/problem slugを2回取得し、cache interception後も200であること
+- 無効なguide/problem slugが404であること
+- 無効slugの404にAdSense client IDが含まれないこと
+
+修正commit `0cd431d` をpush後、Actions run `30752064048` は1分50秒で成功した。Next.js build、OpenNext build、Wrangler dry-run、Workers previewのroute、AdSense境界、static asset header、dashboard API 401/405/no-storeがすべて通過した。
+
+外部のCloudflare Pages checkは失敗したままだが、これは削除済みのPages build commandを参照する旧Pages連携であり、GitHub ActionsのWorkers buildとは分離した。既存production Pagesの停止・削除、本番Workers deploy、route変更は行っていない。
+
 ## 未実施
 
-- branchの追加commit push
-- PR作成とLinux CI
+- Issue #344への今回のpush・Linux CI結果コメント
 - Cloudflare Access/DNS/secretの画面確認
 - staging deployと受け入れ
 - production Worker deploy、Workers Route追加、公開QA
 - Pages停止・削除
 
-次のゲートは、ユーザーの明示承認後のpushとPR作成、およびLinux CIである。
+次のゲートはCloudflare Accessを先行設定したstaging deployと受け入れであり、本番切替には改めてユーザー承認が必要である。
