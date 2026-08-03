@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-08-04",
+    "daily_summary": "本日のAIニュースは、中国アリババによる米有力モデルに迫る高性能かつ低価格な新AIの公開や、三菱電機による工場自動化AIの提供など、産業・経済面での大きな動きが目立ちました。一方で、生成AIの普及に伴う卒業アルバム等の顔写真が悪用されたわいせつ画像の急増が深刻な社会問題として浮き彫りになっており、技術の進化と市場拡大の一方で、倫理的な対策や法規制の強化が急務となっています。",
+    "articles": [
+      {
+        "title": "中国アリババ、「米国勢に迫る性能」のAI公開 料金は半分以下",
+        "content": "中国のアリババが米国の主要なAIに匹敵する性能を持ちながら、利用料金を大幅に抑えた新しいAIモデルを公開しました。低価格な高性能AIの登場により、世界のAI市場における価格競争がさらに激化することが予想されます。",
+        "source": "Google News",
+        "published_at": "2026-08-04",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9NWVhRWXd5QnF4cmRsbWt0SklQRFU3SGpwY19xeVV6a0dES0N2VW9wamw0UGdURURQaGYzSmNnZ1ZwNjJQaTZhMVd3ZkpSMDY3UU0tZlZ1TWlXQ2E5aFJXOXBhMy03bWRRakhOdA?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "中国アリババが最新AI 「世界トップグループ」",
+        "content": "中国のアリババグループが最新の人工知能（AI）を発表し、性能が世界トップグループの水準に達していることが報じられました。同社のAI技術力向上は、グローバルなAI開発競争にさらなる影響を与える可能性があります。",
+        "source": "Google News",
+        "published_at": "2026-08-04",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE14emJUWkMyaTJud1BNWTFXMGlKWDNMS2xaZl9saU8wSndBcUc2MGNJeXdZNU9NS05nMkdCZVVCYzZSa0RqSFZoSXh1dXlUVEMwNDFRaDZ1NzFZWTljbTRwVTQ2RDRaMEJ0QXY3ckE3V1FwQ2o5dGFHWXlHeWRtNnc?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "アリババ、高性能AIモデル公開 規模でムーンショットに肉薄",
+        "content": "中国のアリババが新たな高性能AIモデルを公開し、その規模が最先端モデルに匹敵するレベルに達していることが報じられています。今回の発表は、世界のAI開発競争において中国企業のプレゼンスがさらに高まる可能性を示唆しています。今後の技術的な詳細や市場への影響に注目が集まっています。",
+        "source": "Google News",
+        "published_at": "2026-08-04",
+        "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE8wb2tTWnprSkNRdnluOVBMRl9hdkxvLUthd2MxaXowZDhRcVJ0dWJMcVlaOGFpRFB0alR0LXBBNXdKZ0lYVFkwbG9xdU1CYU81UExKWk1GRjBSTlg1LTAxZkkyb1VITlZCUldXNnVnUXFtWWV0RlRacg?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "「AIの意識を発見」は本当か、アンソロピックのJ空間が示したこと、示していないこと",
+        "content": "この記事では、アンソロピックのAIモデルにおける「J空間」の研究結果について解説しています。AIに意識が存在するのかという疑問に対し、今回の発見が具体的に何を証明し、何を示していないのかを多角的に検証しています。",
+        "source": "Google News",
+        "published_at": "2026-08-04",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFB3TzJSUXVsTGM5V0daNmZMNWp1MUhHLXpZWFM1dmUwbkxNcnZMeVg5YnhCaDVZbmN2QU40ZjM1R2MwTXk3eEJmdWxsWWwwRVBBY2ZuT2F3?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "工場自動化AI 三菱電機提供へ",
+        "content": "三菱電機が工場自動化に向けたAI技術の提供を予定していることが報じられました。製造現場の効率化やスマート化を推進する取り組みとして注目されています。",
+        "source": "Google News",
+        "published_at": "2026-08-04",
+        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBfcVBEYmtUUVZIS2xpSkN0S2xSRksxcW9wZGQ5Y194WGxHTlFDWjZVZ08tLVVYSkh2TXVreDh4M2JoV0JNX3ZabV90aGwwZ1hOZ08wV1ZSaEV1MXp4dWF2aHpHdzk3bV9UTWRIaTVSLWg?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "僕がAI時代の「教育」に全振りする理由",
+        "content": "ビジョナルの南氏が、AIが急激に進化する時代においてなぜ「教育」分野に注力するのかその理由を語っています。変化の激しい未来を生き抜くために不可欠な人材育成のあり方や、個人の学びの重要性について言及されています。",
+        "source": "Google News",
+        "published_at": "2026-08-04",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5zVWZ1bVhpZG1PQzZNa2IwRFJWcTZtYkk1RHllNE12NWpPVVBhLTFGZEtnczBHZmY2V3RYZWJGcXpqdFBiRkp4a3YtRGVrdl9faG1B?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "卒アルの顔写真がわいせつ画像に AI普及で「作りたい放題」の実態",
+        "content": "生成AIの普及により、卒業アルバムの顔写真が悪用されてわいせつな画像が勝手に作られる被害が深刻化しています。技術の進歩に伴い、誰もが簡単に画像を作成できるようになったことで、プライバシー侵害や悪用の防止に向けた早急な対策が求められています。",
+        "source": "Google News",
+        "published_at": "2026-08-04",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBKc2Y4WFlJSU9BalFGdDZvNkpYSEtZem0yR0xrY3k5dWpWM2Z1MXdWUkVpSmhRTW82eFpLY285d2lZbTctNW9lc0p5dDZaa1BHS1g0Q09DN2pNV0pfeFhrZWJJbVBBemc?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "AI性的画像、上半期は123件 警察庁、昨年同期から倍増",
+        "content": "警察庁の発表によると、2024年上半期のAIによる性的画像の摘発や認知件数が123件に達し、昨年の同じ時期から倍増したことが明らかになりました。生成AIの普及に伴い、ディープフェイクなどの悪質な利用が増加傾向にあり、警察当局が取り締まりを強化しています。",
+        "source": "Google News",
+        "published_at": "2026-08-04",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE00TnMxZjJlMXZucFEzQllldS1GUFFrVFY4Xy0tbFNudFlGVURhQzN2OHdKQlJ3SGRDLWtEQkg2RUtTTlQ1RTY0RDFDcU5teVpPV0hMVks4TDBsNThqd1BYZXFmdHM4VFcyTDlBUFE2YkNpUGZyNW5BMTRXZ3dmdFE?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "レバレッジにやられた、24歳「AIノストラダムス」の没落",
+        "content": "過剰なレバレッジ取引によって、若いAI関連の投資家が大きな経済的打撃を受けたニュースです。市場の急変動が個人の投資成果や業界に与える影響について報じています。",
+        "source": "Google News",
+        "published_at": "2026-08-04",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9fM2t6cjFzMGUxeHdsZ2ZoZVllV1F0cmcxZzdhcWhSV3gwdDgzdFZncko0dm9oMTJmeFI4cGJld2UxS09iamZieTlqQmRLR1IwWEVFcWNnbmZZRmpoZXp5UzFjRGFGajA5YmFINnhtanUtMGNuMUNzcTEtclVRRnc?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "【日本株】AIが予測する将来の日経平均株価 - マネクリ",
+        "content": "この記事では、人工知能（AI）を活用して将来の日経平均株価を予測する手法やその展望について解説しています。マネクリが提供する投資関連の最新情報として、AI分析に基づく日本株の動向に注目しています。",
+        "source": "Google News",
+        "published_at": "2026-08-04",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBPRFpVQnZoUXJ6c081Wmt1dWVBd1hiMXZjNlNITUl1OTlVaHdYVDhhTW1LRHY1T1UyTDBDeU1sZVp2Q2xiOWIyaDd5STJYaXMxdVFMbtIBV0FVX3lxTE9MRjViSE93aEVMZEh4b2Q5eC1qVmRORlhzbzh6NlZieDNGUGExeWRRR3MtRVhBa3hnX0N5bS1HWmx0SHNud2RLRVo1WGJTLXVad1h3VjF0VQ?oc=5",
+        "category": "事業・投資"
+      }
+    ]
+  },
+  {
     "date": "2026-08-03",
     "daily_summary": "本日のAIニュースは、EUによるAI規制法と識別表示の義務化や高額制裁金の導入といった法整備・ガバナンスの強化が主要な話題となったほか、生成AIの悪用による事件や現場のOJT負担増といった課題が浮き彫りになりました。一方で、住友商事やMUFGによる巨大テック企業との提携、防衛省のクラウド・AI活用などビジネスや行政における戦略的な動きが進んでおり、さらに超知能AIがもたらす人類絶滅リスクへの懸念や、株式市場におけるAI・半導体関連株の動向にも高い関心が寄せられるなど、技術の急速な普及に伴う規制、リスク、そして新たなビジネスチャンスが交錯する一日となりました。",
     "articles": [
