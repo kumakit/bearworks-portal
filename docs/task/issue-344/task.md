@@ -53,7 +53,8 @@
 - [x] dynamic guide/problemの有効slugが2回とも200、無効slugが404
 - [x] route、404、AdSense、API smokeが成功
 - [x] Actions run `30752064048` の成功結果を記録
-- [ ] header iconの直接配信とIMAGES binding警告非発生をLinux CIで確認
+- [x] header iconの直接配信とIMAGES binding警告非発生をLinux CIで確認
+- [x] Actions run `30859325094` の成功結果を記録
 
 ## Workers staging
 

@@ -112,4 +112,4 @@ Luna task `019fc2ae-34be-7151-ac8d-26355f135c26` へ、`next/image` 利用箇所
 - `/icon.png` が200かつ `image/png` である
 - preview logに `env.IMAGES binding is not defined` が出ない
 
-修正後、`npm run build`、`npm run cf:build`、production/staging両方のWrangler dry-runに成功した。Next/OpenNext生成物でも直接 `/icon.png` を参照し、`/_next/image` を使用しないことを確認した。stagingの再deployと実環境でのwarning消失確認は、Linux CI成功後の次ゲートとして未実施である。
+修正後、`npm run build`、`npm run cf:build`、production/staging両方のWrangler dry-runに成功した。Next/OpenNext生成物でも直接 `/icon.png` を参照し、`/_next/image` を使用しないことを確認した。commit `7e7662a` に対するLinux clean-checkout Actions run `30859325094` も1分43秒で成功し、追加したicon直接配信とpreview warning非発生の回帰検査を通過した。stagingの再deployと実環境でのwarning消失確認は次ゲートとして未実施である。
