@@ -53,15 +53,19 @@
 - [x] dynamic guide/problemの有効slugが2回とも200、無効slugが404
 - [x] route、404、AdSense、API smokeが成功
 - [x] Actions run `30752064048` の成功結果を記録
+- [ ] header iconの直接配信とIMAGES binding警告非発生をLinux CIで確認
 
 ## Workers staging
 
 - [x] staging方式を `env.staging` / `bearworks-portal-staging` / `staging.bearworks.uk` に確定
-- [ ] hostname全体のAccess ApplicationをCloudflare上で確認
-- [ ] Access policyを先に設定
-- [ ] staging Worker/environmentとsecretを設定
-- [ ] staging custom domain、DNS、証明書、routeを確認
-- [ ] staging公開QAとlog非露出確認
+- [x] hostname全体のAccess ApplicationをCloudflare上で確認
+- [x] Access policyを先に設定
+- [x] staging Worker/environmentとsecretを設定
+- [x] staging custom domain、DNS、証明書、routeを確認
+- [x] 初回staging公開QAとlog非露出確認（Worker errors 0、secret/JWT/upstream本文なし）
+- [x] `env.IMAGES binding is not defined` の原因をheader iconの最適化経路と特定
+- [x] 課金bindingを増やさずiconを `unoptimized` 化しLinux CI回帰検査を追加
+- [ ] 修正版をstagingへ再deployし、`/_next/image` とbinding warningが消えたことを確認
 
 ## Production cutover
 

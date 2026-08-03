@@ -96,3 +96,20 @@ Luna task `019fc2ae-34be-7151-ac8d-26355f135c26` にこの判断を読み取り�
 - Pages停止・削除
 
 次のゲートはCloudflare Accessを先行設定したstaging deployと受け入れであり、本番切替には改めてユーザー承認が必要である。
+
+## 2026-08-04 staging初回受け入れとIMAGES warning修正
+
+Cloudflare Accessをhostname全体へ先行設定し、`bearworks-portal-staging` を `staging.bearworks.uk` へdeployした。確認時のWorker versionは `7422e1a4-9d1b-4284-8905-5ef9011ac0a6`。dashboard API用secretはbinding名だけを確認し、値は表示・記録していない。
+
+Access経由のstaging受け入れでは、公開route、AdSense境界、dashboard API、Worker observabilityを確認した。Worker errorsは0で、secret、Access JWT、upstream本文のlog非露出も確認した。一方、header iconのリクエストごとに `env.IMAGES binding is not defined` が記録された。画像自体はOpenNextのfallbackで表示されるが、Cloudflare Images bindingは設定されていなかった。
+
+Luna task `019fc2ae-34be-7151-ac8d-26355f135c26` へ、`next/image` 利用箇所、OpenNext fallback、課金を伴わない最小修正、Linux CI回帰条件を読み取り専用で監査させた。repo内の `next/image` はheader iconの1箇所だけで、静的な `public/icon.png` にはcomponent単位の `unoptimized` が適切との判定を得た。Lunaはファイル編集、Git操作、deploy、外部サービス更新を行っていない。
+
+司令塔Codexは `components/PublicSiteHeader.tsx` のiconだけを `unoptimized` 化し、Linux CIへ次の回帰検査を追加した。
+
+- root HTMLが `src="/icon.png"` を直接参照する
+- root HTMLに `/_next/image` が含まれない
+- `/icon.png` が200かつ `image/png` である
+- preview logに `env.IMAGES binding is not defined` が出ない
+
+修正後、`npm run build`、`npm run cf:build`、production/staging両方のWrangler dry-runに成功した。Next/OpenNext生成物でも直接 `/icon.png` を参照し、`/_next/image` を使用しないことを確認した。stagingの再deployと実環境でのwarning消失確認は、Linux CI成功後の次ゲートとして未実施である。
