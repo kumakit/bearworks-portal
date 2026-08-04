@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-08-05",
+    "daily_summary": "本日のAIニュースは、日米の防衛分野におけるAI統合運用や対中半導体規制といった地政学的・安全保障の動きが注目される一方、大企業の設備投資拡大やAMDの好業績、機械関連株の再評価など、旺盛なAI需要が経済・市場を強く牽引している様子を示しています。また、高所得層におけるキャリア形成へのAI活用が進むほか、『ライザのアトリエ』を題材にしたAIチャットRPGの事前登録開始など、個人のライフスタイルやエンターテインメント領域へのAIの浸透も鮮明になっています。",
+    "articles": [
+      {
+        "title": "自衛隊指揮に米国AI複数導入、日米で統合運用 中枢は日系サカナAI案",
+        "content": "自衛隊の指揮システムに複数の米国製AIが導入され、日米で統合運用される方針であることが報じられました。そのシステムの中枢には、日系スタートアップであるサカナAIの技術が提案されています。防衛分野における日米のAI活用と技術協力の動向として注目されます。",
+        "source": "Google News",
+        "published_at": "2026-08-05",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE03S2pjTUEzdGhOZWVWak5IOU1NS05mOVY0eXR6ZDlmWmtCV0QwVjhiSGQzdDFCdFdaWGtxTjB0UEV6UjQwdG9tc3BTTEdWaFJXRkJPTENldHBTdDlJOXZlazhxSlFjMWRuRHNIUA?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "米国製AI半導体の対中迂回輸出を遮断、NVIDIAがアジア顧客半減 管理された依存の深層",
+        "content": "米国政府の規制強化に伴い、NVIDIAは対中迂回輸出の遮断に向けた厳しい対策を講じている。その結果、アジア地域における顧客数が半減するなど、サプライチェーンや市場構造に大きな影響を与えている。この記事では、管理された依存関係の深層とその背景にある地政学的な要因を解説する。",
+        "source": "Google News",
+        "published_at": "2026-08-05",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFAwUjJ2WUxBc2ZZUEtOakJuVmt2TzZmQUQzMEo3TWhBRzVNUXBGR0ZqWDNuXzk0eVFGTERKSEVhRUpZM01rQjNxRHFGVm42VWNpdHhHWkZR?oc=5",
+        "category": "インフラ・半導体"
+      },
+      {
+        "title": "年収800万円以上の6割弱がAIで自己分析",
+        "content": "日経BPの調査によると、年収800万円以上の層の6割弱が自己分析にAIを活用していることが明らかになりました。高所得層の間で、キャリア形成や転職活動におけるAIツールの利用が急速に広がっていることを示しています。",
+        "source": "Google News",
+        "published_at": "2026-08-05",
+        "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1HVW9oU0gyVG1wOGctWWdkQkdLdWJuQ1NQeVFPOHdPMHNwMl9Ld1BWRUhLUG9WQ0M4a2FTOUQySzBXQWlid0NTZGRtQTlnc3FlM2FMVER3OWVFNkt3WkRBNXlQTE13RWxxdGpEdzRJcnp0UXFtMVVFbG9HSVM?oc=5",
+        "category": "その他"
+      },
+      {
+        "title": "大企業の設備投資19.7%増 AI、データセンター押し上げ 政投銀調査",
+        "content": "日本政策投資銀行の調査によると、大企業の設備投資が19.7%増加しました。生成AIやデータセンター関連の需要が全体の投資を力強く押し上げています。デジタル化とインフラ強化に向けた企業の積極的な姿勢が鮮明になっています。",
+        "source": "Google News",
+        "published_at": "2026-08-05",
+        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9lMTUwUFRHSXhfOXJYbjVQdHlhcTlVWmJwaXY1TnFXSjRBbUNMdHpqQmh4dElqaW9GWi14QkpsZGNKeXpiOWpBUUZEZm9MTXdMMlpmRV9ibEloSmNPeXQ5N3Zycw?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "米AMD、第3四半期売上高見通しが予想超え AIデータセンター需要が追い風",
+        "content": "米AMDが発表した第3四半期の売上高見通しが市場予想を上回った。AI向けデータセンターの強い需要が業績を牽引している。半導体市場における同社の成長期待が高まっている。",
+        "source": "Google News",
+        "published_at": "2026-08-05",
+        "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9NcGRYZ0Vacnh6VkhXRzZaYWE1NVIyZ2tYRW5BRFZoTzd1MTNUa0xZQVBaVEU5WlZ0SjF5aHBGTGdmc2RXbGNqLVJEWHVDOWxwQzFyb1F2TnJZZnh2QndtYUphMGtVSmItMDBBeTgyRUZ1N2NzbklzRA?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "米国とイランの戦争でAIデータセンターも攻撃…「現代戦の新たな標的に」",
+        "content": "米国とイランの紛争において、人工知能（AI）のデータセンターが攻撃の標的となったことが報じられました。これは、現代の戦争におけるインフラの脆弱性と、AI関連施設が新たな軍事的標的になり得るリスクを示唆しています。",
+        "source": "Google News",
+        "published_at": "2026-08-05",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFAtRjdRc01UOGhsX3NsLWJFX21ZNmQxV0V3TDdjRDhJT3gtQjhHeWNjODdkVmZKaUczYjNwaHllU1QxRHRrZnRoTWowemtLN3VTMGhSM3h4MkJJRHR3Ri0xWElZWU9yQmFITTdJd2t6Q2lSQ1pmak5WTGViWU4zZTA?oc=5",
+        "category": "インフラ・半導体"
+      },
+      {
+        "title": "SpiralAI、コーエーテクモゲームスのライセンスを受けた『RyzaChat』の事前登録を8月4日より開始",
+        "content": "SpiralAI株式会社は、コーエーテクモゲームスよりライセンスを受けたフリーシナリオ型のAIチャット形式RPG『RyzaChat:AIライザと創るあなただけのひと夏の夢物語』の事前登録を8月4日に開始すると発表した。プレイヤーはAI化されたライザと自由に会話を楽しみながら、オリジナルの物語を体験することができる。ゲームと生成AI技術を組み合わせた新しいエンターテインメントとして注目を集めている。",
+        "source": "Google News",
+        "published_at": "2026-08-05",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFAyZS1PdEIzbnlKc2hKUXRvUUlRTTVPRlpZdW9PMTg2N0lPN1lBVGRIRE5IQkdUcUxldGMwbWZ4U19MNW1EYVBZbXdxMFgzMlcxVWhnS0tfSjZvdkdnQnMzcl9DODd5LTZqV2c?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "『ライザのアトリエ』のフリーシナリオ型AIチャットRPGが8月に配信決定",
+        "content": "人気ゲーム『ライザのアトリエ』を題材にしたフリーシナリオ型のAIチャットRPGが8月に配信される。プレイヤーはライザとの自由な会話を通じて物語を展開させ、自分だけのひと夏の冒険を楽しむことができる。",
+        "source": "Google News",
+        "published_at": "2026-08-05",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1ZWl9sdmZoSUNJakJweVBPaUpCaEEya0tYMHhWSDBleDV6VV8zYy1ycHJFTlpvSkdlY1dZUjNaNUxQNmNRSFdISFp0RlN0Nm5hOHJ2N2w3VQ?oc=5",
+        "category": "その他"
+      },
+      {
+        "title": "『ライザのアトリエ』AIチャットアプリ先行プレイ感想。「告白」にも「手つなぎお願い」にも向き合ってくれる、ひと夏の青春会話",
+        "content": "人気ゲーム『ライザのアトリエ』のキャラクターと会話できるAIチャットアプリの先行プレイ感想が報じられています。プレイヤーの様々な要望や告白、手つなぎといった甘いやり取りにも自然に向き合ってくれる仕様となっています。作品のファンにとって、キャラクターとの親密なコミュニケーションを楽しめる新しい青春体験を提供します。",
+        "source": "Google News",
+        "published_at": "2026-08-05",
+        "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE8zMWFiRGNqamxVeWtIdVZiaUFiaDQyTU5POVBnTmhPcFZVb01hbGhiNE84alNpRlNLNHdJUzMtaVY3c3JRSXRtQUJYMktUN0MzRFJYX0xENkhEQ3pzVjNCNXk1TFdXbnBsZnJSbUV5d2U3MFpRZ2ZsXw?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "AI需要が追い風、設備投資拡大で「機械」関連株に台頭する再評価の潮流",
+        "content": "AI需要の拡大に伴う設備投資の活発化により、機械関連株に再びスポットライトが当たっています。市場では関連企業の業績向上に対する期待が高まっており、新たな投資テーマとしての再評価が進んでいます。今後も旺盛な需要が続くことで、相場全体の牽引役となることが期待されています。",
+        "source": "Google News",
+        "published_at": "2026-08-05",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9UOWV4T2FPT2JvclpLX2hSMXNXcDQtMnhTMV95MW1tcTBiSE5fQjdMSngzUGFuSVhaNWF3QXpoSXJwNGNqdmlsbnlvaXJzY1FxQnJBckhxUUZKUGVVN0xQcA?oc=5",
+        "category": "事業・投資"
+      }
+    ]
+  },
+  {
     "date": "2026-08-04",
     "daily_summary": "本日のAIニュースは、中国アリババによる米有力モデルに迫る高性能かつ低価格な新AIの公開や、三菱電機による工場自動化AIの提供など、産業・経済面での大きな動きが目立ちました。一方で、生成AIの普及に伴う卒業アルバム等の顔写真が悪用されたわいせつ画像の急増が深刻な社会問題として浮き彫りになっており、技術の進化と市場拡大の一方で、倫理的な対策や法規制の強化が急務となっています。",
     "articles": [
