@@ -152,3 +152,5 @@ Issue #344の最新状態とbranchを再確認し、Luna task `019fc2ae-34be-715
 ローカルでは公開AdSense IDをprocess環境だけへ設定し、`npm run build`、`npm run cf:build`、production/staging両方のWrangler dry-run、`git diff --check` に成功した。sandbox内のOpenNext/Wrangler初回実行はWindowsのディレクトリアクセス拒否とWrangler log作成EPERMで停止したが、同じコマンドの権限付き再実行は成功したため、アプリ・設定の失敗ではない。Linux clean-checkout CIを最終判定にする。
 
 `npm audit --omit=dev` はhigh 4件を報告した。内訳は直接依存のNano ID 3系、Next.js 15.5.21同梱PostCSS、Sharpである。監査の自動fixは一部でNext.js 16.3.0へのbreaking changeを含むため実行していない。本番切替判断ではruntime到達性と公式修正版を再確認する。production deploy、route、Pages、DNS、staging、Issue、PR metadataは変更していない。
+
+main同期と検証記録を含むHEAD `bc16db0` を通常pushし、Draft PR #4の `pull_request` synchronizeでLinux clean-checkout Actions run `31260322740` を起動した。runは1分51秒で成功し、`npm ci`、Next.js build、OpenNext Workers bundle、Wrangler bundle検証、Workers preview route回帰検査がすべて通過した。`actions/checkout@v4` と `actions/setup-node@v4` のNode.js 20 deprecation annotationが1件あるが、job失敗ではなく将来のActions runtime更新事項として分離する。

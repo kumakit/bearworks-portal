@@ -59,7 +59,8 @@
 - [x] header iconの直接配信とIMAGES binding警告非発生をLinux CIで確認
 - [x] Actions run `30859325094` の成功結果を記録
 - [x] 最新HEAD `0d2560a` のActions run `30859487822` 成功を確認
-- [ ] main再同期後の最新HEADでLinux clean-checkout Actionsを再実行
+- [x] main再同期後のHEAD `bc16db0` でLinux clean-checkout Actions run `31260322740` 成功を確認
+- [ ] CI結果記録後のdocs-only最新HEADでLinux clean-checkout Actionsを再確認
 
 ## Workers staging
 
