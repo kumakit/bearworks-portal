@@ -113,3 +113,22 @@ Luna task `019fc2ae-34be-7151-ac8d-26355f135c26` へ、`next/image` 利用箇所
 - preview logに `env.IMAGES binding is not defined` が出ない
 
 修正後、`npm run build`、`npm run cf:build`、production/staging両方のWrangler dry-runに成功した。Next/OpenNext生成物でも直接 `/icon.png` を参照し、`/_next/image` を使用しないことを確認した。commit `7e7662a` に対するLinux clean-checkout Actions run `30859325094` も1分43秒で成功し、追加したicon直接配信とpreview warning非発生の回帰検査を通過した。stagingの再deployと実環境でのwarning消失確認は次ゲートとして未実施である。
+
+## 2026-08-08 staging再deployと受け入れ
+
+作業再開時にIssue #344、Draft PR #4、branch、Cloudflare認証、DNS、Access 302、staging secret binding名を再確認した。Luna task `019fc2ae-34be-7151-ac8d-26355f135c26` へ再deploy後のAccess、画像経路、API、AdSense、log、rollback条件を読み取り専用で再監査させ、HEAD `0d2560a` のstaging再deployはGO、実環境受け入れ完了まではproduction NO-GOとの判定を得た。
+
+公開AdSense IDをbuild時だけ設定して `npm run cf:build` を実行し、OpenNext bundleとstaging dry-runを再確認した。`bearworks-portal-staging` だけを再deployし、custom domainは `staging.bearworks.uk` のまま、新version `bc471f8f-69e5-4564-9907-bb49c8be52d1` へ100%切り替わった。production Worker `bearworks-portal` は存在せず、既存 `https://bearworks.uk/` はHTTP 200を維持している。
+
+認証済みstagingで次を確認した。
+
+- root header iconは `src="/icon.png"`、`/_next/image` 利用0件
+- rootと `/toukei`、有効guide/problemはAdSense scriptあり
+- `/about`、一般404、無効guide/problemはAdSense scriptなし
+- 有効dynamic slugは正しいtitle/h1、無効slugは404
+- dashboardが実データを表示し、Worker log上の `/api/dashboard-data` は200
+- 未認証アクセスはAccessへ302、認証済みrequestのAccess JWT/cookie/emailはtail上でREDACTED
+
+新versionのtail 9イベントを集計し、IMAGES binding warning 0、exception 0、non-ok outcome 0、5xx 0、`DASHBOARD_API_TOKEN` 文字列0、Bearer文字列0を確認した。旧versionのeventは0件だった。ブラウザconsoleには既知のRecharts width/height warningが1件残るが、IMAGES binding修正とは無関係で、dashboard表示とAPI成功を妨げていない。採取した一時logは確認後に削除し、QA用tailプロセスもすべて停止した。
+
+再開時のfetchで `origin/main` は `d26b232` まで進んでおり、前回基準 `cbbc77a` 以降の6commitはすべて `data/news-data.json` のAIニュース更新だった。production cutover前に通常merge、Linux clean-checkout CI、依存監査の再評価を行う。今回、production route、Pages、DNS、Issue、PR、remote branchは変更していない。

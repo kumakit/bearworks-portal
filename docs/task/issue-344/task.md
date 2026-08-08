@@ -28,6 +28,7 @@
 - [x] `origin/main` を通常merge（`f38da71`、競合なし）
 - [x] `data/news-data.json` の構文、日付・URL重複、記事スキーマを確認
 - [x] `/ai-news` の最新日 `2026-08-02` とHTTP 200を確認
+- [ ] production cutover前に `origin/main` の後続AIニュース6commit（latest `d26b232`）を再同期
 
 ## ローカル検証
 
@@ -55,6 +56,7 @@
 - [x] Actions run `30752064048` の成功結果を記録
 - [x] header iconの直接配信とIMAGES binding警告非発生をLinux CIで確認
 - [x] Actions run `30859325094` の成功結果を記録
+- [x] 最新HEAD `0d2560a` のActions run `30859487822` 成功を確認
 
 ## Workers staging
 
@@ -66,7 +68,12 @@
 - [x] 初回staging公開QAとlog非露出確認（Worker errors 0、secret/JWT/upstream本文なし）
 - [x] `env.IMAGES binding is not defined` の原因をheader iconの最適化経路と特定
 - [x] 課金bindingを増やさずiconを `unoptimized` 化しLinux CI回帰検査を追加
-- [ ] 修正版をstagingへ再deployし、`/_next/image` とbinding warningが消えたことを確認
+- [x] 修正版をstagingへ再deploy（version `bc471f8f-69e5-4564-9907-bb49c8be52d1`）
+- [x] rootが直接 `/icon.png` を参照し、`/_next/image` が0件であることを認証済みブラウザで確認
+- [x] 公開route、dynamic slug、404、AdSense掲載・非掲載境界を認証済みstagingで確認
+- [x] dashboardと `/api/dashboard-data` の正常200を確認
+- [x] 新versionのWorker logでIMAGES warning、exception、non-ok、5xx、秘密値露出が0件
+- [x] Access JWTがlogでREDACTED、未認証アクセスが302であることを確認
 
 ## Production cutover
 
