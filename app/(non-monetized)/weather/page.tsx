@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import { WeatherData, getRelativeTime } from "./lib/weatherUtils";
 import WeatherSummary from "./components/WeatherSummary";
 import LocationCard from "./components/LocationCard";
@@ -151,7 +152,7 @@ export default function WeatherPage() {
       {/* Header */}
       <header className="flex items-center justify-between flex-wrap gap-3">
         <div className="flex items-center gap-3">
-          <a
+          <Link
             href="/"
             className="flex items-center gap-1.5 text-sm text-gray-400 hover:text-gray-600 transition-colors"
           >
@@ -169,7 +170,7 @@ export default function WeatherPage() {
               <path d="m15 18-6-6 6-6" />
             </svg>
             bearworks.uk
-          </a>
+          </Link>
         </div>
         <div className="flex items-center gap-2">
           <span className="text-xs text-gray-400">

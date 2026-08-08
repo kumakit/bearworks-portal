@@ -156,3 +156,34 @@ Issue #344の最新状態とbranchを再確認し、Luna task `019fc2ae-34be-715
 main同期と検証記録を含むHEAD `bc16db0` を通常pushし、Draft PR #4の `pull_request` synchronizeでLinux clean-checkout Actions run `31260322740` を起動した。runは1分51秒で成功し、`npm ci`、Next.js build、OpenNext Workers bundle、Wrangler bundle検証、Workers preview route回帰検査がすべて通過した。`actions/checkout@v4` と `actions/setup-node@v4` のNode.js 20 deprecation annotationが1件あるが、job失敗ではなく将来のActions runtime更新事項として分離する。
 
 このCI結果だけを記録したdocs-only HEAD `3228cde` でもActions run `31260451402` が1分46秒で成功し、同じLinux clean-checkout検査を完走した。
+
+## 2026-08-09 Next.js 16.3依存修正
+
+production cutover前の依存監査high 4件を解消するため、Next.jsを15.5.21から16.3.0へ更新した。Luna task `019fc2ae-34be-7151-ac8d-26355f135c26` へ、削除API、async request API、OpenNext互換性、動的route、CI検証範囲の読み取り専用監査を委譲した。Lunaはファイル編集、Git/GitHub操作、deploy、Cloudflare操作を行っていない。
+
+司令塔Codexは公式Next.js 16移行ガイド、npm package metadata、repo内コードを再確認し、次の最小範囲を採用した。
+
+- `next`: 15.5.21から16.3.0
+- `eslint-config-next`: 15.5.21から16.3.0
+- `eslint`: 8系から9.39.5
+- 削除された `next lint` を `eslint .` と `eslint.config.mjs` へ移行
+- 内部root link 3箇所を `next/link` へ移行
+- Next 16で新規検出された既存のeffect内state更新はwarningとして可視化し、dashboardの非同期処理変更は別変更へ分離
+- `next build` がlintを実行しないため、Linux workflowへ明示的lint stepを追加
+- Next 16が必須更新した `tsconfig.json` の `jsx: react-jsx` と `.next/dev/types/**/*.ts` を採用
+
+React 18.2以上はNext 16.3.0のpeer範囲内で、現行buildも成功した。今回の目的はproduction依存high 4件の解消とNext 16.3移行であるため、React 19へのmajor更新は同時に含めていない。OpenNext 1.20.2はNext `>=16.2.11` をpeer範囲に含むため維持した。
+
+ローカル検証結果:
+
+- Node.js 24.14.1 / npm 11.11.0で `npm ci` 成功
+- `npm run lint` 成功（error 0、既存warning 4）
+- Next.js 16.3.0 Turbopack build成功（31 static/SSG pages、dashboard API dynamic）
+- OpenNext 1.20.2 Workers bundle生成成功
+- production/staging両方のWrangler dry-run成功（gzip 1573.51 KiB）
+- Nano ID 3.3.18、PostCSS 8.5.23、Sharp 0.35.3へ解決
+- `npm audit --omit=dev` は0件
+- 全依存監査はdev-onlyでlow 1、moderate 2、high 2が残る。Wrangler/miniflare/undici、esbuild、build tooling経路であり、production runtime依存0件と分離して記録した
+- `git diff --check` はerrorなし
+
+WindowsのOpenNext runtimeは引き続き非完全互換である。Next 16.3更新後のAdSense境界、dynamic slug 2回取得、404、API 401/405/no-store、static asset header、IMAGES warning非発生は、push承認後のLinux clean-checkout CIを最終判定とする。この作業ではpush、Issue/PR更新、deploy、Cloudflare、production route、Pages、DNSを変更していない。

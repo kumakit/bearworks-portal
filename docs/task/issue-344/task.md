@@ -44,7 +44,11 @@
 - [x] OpenNext previewでstatic assetのimmutable Cache-Controlを確認
 - [x] `npm audit --omit=dev` を実行
 - [x] production切替前に依存監査を再実行（high 4件: Nano ID、Next.js同梱PostCSS、Sharp）
-- [ ] high 4件のruntime到達性と公式修正版を本番切替判断へ反映
+- [x] Next.js 16.3.0へ更新し、Nano ID 3.3.18、PostCSS 8.5.23、Sharp 0.35.3へ解決
+- [x] `npm audit --omit=dev` でproduction依存0件を確認
+- [x] `next lint` をESLint 9 CLI / flat configへ移行し、既存内部linkを`next/link`へ修正
+- [x] Next 16.3で `npm ci`、lint、Turbopack build、OpenNext build、production/staging dry-runを確認
+- [ ] Next 16.3更新後のLinux clean-checkout CIを実行
 
 ## GitHub / Linux CI
 
@@ -61,6 +65,7 @@
 - [x] 最新HEAD `0d2560a` のActions run `30859487822` 成功を確認
 - [x] main再同期後のHEAD `bc16db0` でLinux clean-checkout Actions run `31260322740` 成功を確認
 - [x] CI結果記録後のdocs-only HEAD `3228cde` でActions run `31260451402` 成功を確認
+- [ ] Next 16.3更新commitをpushし、明示的lint stepを含むLinux CIを確認
 
 ## Workers staging
 

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { promises as fs } from "fs";
 import path from "path";
 
@@ -51,7 +52,7 @@ export default async function AiNewsPage() {
       {/* Header */}
       <header className="flex items-center justify-between flex-wrap gap-3 select-none">
         <div className="flex items-center gap-3">
-          <a
+          <Link
             href="/"
             className="flex items-center gap-1.5 text-sm text-gray-400 hover:text-gray-600 transition-colors"
           >
@@ -69,7 +70,7 @@ export default async function AiNewsPage() {
               <path d="m15 18-6-6 6-6" />
             </svg>
             bearworks.uk
-          </a>
+          </Link>
         </div>
         {sortedGroups[0] && (
           <div className="flex items-center gap-2">

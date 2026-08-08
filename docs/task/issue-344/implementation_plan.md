@@ -18,7 +18,7 @@ Phase 3-0で実装済みのAdSense掲載範囲分離とCloudflare Workers/OpenNe
 - feature branchは実装baseline `a8c376d` までpush済み。Gate 0以降のlocal commit、PR、Linux CI、Workers deploy、route切替は未実施
 - 公開 `bearworks.uk` は従来のCloudflare Pages版を継続配信中
 - Sonnet手動計画レビューは2026-08-02に条件付き承認。採否と原文は `docs/history/20260802_issue#344_plan_review.md` に保存
-- `npm audit --omit=dev` はNext.js同梱PostCSS/Sharp経由のhigh 3件を報告。自動提案のNext.js 9 downgradeや未対応overrideは行わず、production切替前に再評価する
+- Next.js 15.5.21のproduction依存監査はNano ID、同梱PostCSS、Sharp経由のhigh 4件を報告した。2026-08-09にNext.js 16.3.0へ更新し、ローカルの `npm audit --omit=dev` は0件となった。新しいLinux clean-checkout CIはpush承認後に実行する
 
 既存の実装計画とローカルQAは次を参照する。
 
@@ -82,6 +82,15 @@ Phase 3-0で実装済みのAdSense掲載範囲分離とCloudflare Workers/OpenNe
 - dashboard APIの500/401/405/no-store/秘密値非露出
 
 Windows OpenNext previewのdynamic slug 404は既知の環境差であり、Linux CIを最終判定とする。
+
+#### 2026-08-09 Next.js 16.3依存修正
+
+- `next` と `eslint-config-next` を16.3.0へ更新し、削除された `next lint` をESLint 9 CLIとflat configへ移行する。
+- Next 16で既定となるTurbopackを使用し、OpenNext 1.20.2の宣言済み対応範囲 `>=16.2.11` 内で検証する。
+- React 18はNext 16.3.0のpeer範囲内であり、今回の依存修正ではReact major更新を分離する。
+- `next build` がlintを実行しなくなったため、Linux workflowへ明示的な `npm run lint` stepを追加する。
+- ローカルでは `npm ci`、lint、Next build、OpenNext build、production/staging dry-run、production依存監査0件を確認する。
+- 全依存監査に残るdev-onlyのadvisoryはproduction bundleと分離し、Wrangler/esbuild更新を別変更として評価する。
 
 ### Gate 3: branch更新とPR
 

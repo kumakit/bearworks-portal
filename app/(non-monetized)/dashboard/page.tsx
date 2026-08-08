@@ -198,7 +198,7 @@ export default function DashboardPage() {
     <main className="max-w-5xl w-full mx-auto px-4 py-6 flex flex-col gap-6">
       {/* Top Navigation Backlink */}
       <header className="flex items-center justify-between flex-wrap gap-3">
-        <a
+        <Link
           href="/"
           className="flex items-center gap-1.5 text-xs font-bold text-muted hover:text-primary transition-colors tracking-wide"
         >
@@ -216,7 +216,7 @@ export default function DashboardPage() {
             <path d="m15 18-6-6 6-6" />
           </svg>
           BEARWORKS.UK
-        </a>
+        </Link>
 
         <div className="flex items-center gap-3">
           <span className="text-[10px] bg-purple-50 border border-purple-100 text-purple-600 px-2 py-0.5 rounded-full font-bold tracking-wider">
