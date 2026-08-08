@@ -12,6 +12,7 @@ export default function PublicSiteHeader() {
             width={24}
             height={24}
             className="rounded-full"
+            unoptimized
             priority
           />
           <span>bearworks.uk</span>

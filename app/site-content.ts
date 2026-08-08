@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
-import { guides } from "./toukei/guides/guide-data";
-import { problems } from "./toukei/problems/problem-data";
+import { guides } from "./(monetized)/toukei/guides/guide-data";
+import { problems } from "./(monetized)/toukei/problems/problem-data";
 
 type SitemapEntry = Omit<MetadataRoute.Sitemap[number], "url"> & {
   pathname: string;
