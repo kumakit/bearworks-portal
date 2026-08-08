@@ -154,3 +154,5 @@ Issue #344の最新状態とbranchを再確認し、Luna task `019fc2ae-34be-715
 `npm audit --omit=dev` はhigh 4件を報告した。内訳は直接依存のNano ID 3系、Next.js 15.5.21同梱PostCSS、Sharpである。監査の自動fixは一部でNext.js 16.3.0へのbreaking changeを含むため実行していない。本番切替判断ではruntime到達性と公式修正版を再確認する。production deploy、route、Pages、DNS、staging、Issue、PR metadataは変更していない。
 
 main同期と検証記録を含むHEAD `bc16db0` を通常pushし、Draft PR #4の `pull_request` synchronizeでLinux clean-checkout Actions run `31260322740` を起動した。runは1分51秒で成功し、`npm ci`、Next.js build、OpenNext Workers bundle、Wrangler bundle検証、Workers preview route回帰検査がすべて通過した。`actions/checkout@v4` と `actions/setup-node@v4` のNode.js 20 deprecation annotationが1件あるが、job失敗ではなく将来のActions runtime更新事項として分離する。
+
+このCI結果だけを記録したdocs-only HEAD `3228cde` でもActions run `31260451402` が1分46秒で成功し、同じLinux clean-checkout検査を完走した。
