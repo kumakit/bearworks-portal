@@ -132,3 +132,23 @@ Luna task `019fc2ae-34be-7151-ac8d-26355f135c26` へ、`next/image` 利用箇所
 新versionのtail 9イベントを集計し、IMAGES binding warning 0、exception 0、non-ok outcome 0、5xx 0、`DASHBOARD_API_TOKEN` 文字列0、Bearer文字列0を確認した。旧versionのeventは0件だった。ブラウザconsoleには既知のRecharts width/height warningが1件残るが、IMAGES binding修正とは無関係で、dashboard表示とAPI成功を妨げていない。採取した一時logは確認後に削除し、QA用tailプロセスもすべて停止した。
 
 再開時のfetchで `origin/main` は `d26b232` まで進んでおり、前回基準 `cbbc77a` 以降の6commitはすべて `data/news-data.json` のAIニュース更新だった。production cutover前に通常merge、Linux clean-checkout CI、依存監査の再評価を行う。今回、production route、Pages、DNS、Issue、PR、remote branchは変更していない。
+
+## 2026-08-08 main再同期とcutover前検証
+
+Issue #344の最新状態とbranchを再確認し、Luna task `019fc2ae-34be-7151-ac8d-26355f135c26` へ `origin/main` 同期の競合、AIニュースJSON、AdSense・Access・Workers境界への影響を読み取り専用で監査させた。Lunaは通常mergeをGOと判定し、ファイル編集、Git/GitHub操作、deploy、Cloudflare操作を行っていない。
+
+`cbbc77a` 以降のmain側6commitが `data/news-data.json` だけを変更し、feature側は同ファイルを変更していないことを司令塔Codexが再確認した。`git merge --no-ff origin/main` を実行し、merge commit `2206e3a` を作成した。競合、rebase、force pushはない。
+
+再同期後のJSONは次のとおり検証した。
+
+- 43日分、546記事、最新日 `2026-08-08`
+- 日付降順、日付重複なし
+- URLのある464記事はすべてHTTP(S)形式、URL重複なし
+- 追加日 `2026-08-03` から `2026-08-08` は6日・60記事
+- 追加分は各日10記事で、title、content、source、published_at、url、categoryがすべて存在
+- 追加分のpublished_atは所属日付と一致
+- 旧記事に存在する任意fieldの省略は、`NewsGroup` / `Article` の型定義上許容されるため変更していない
+
+ローカルでは公開AdSense IDをprocess環境だけへ設定し、`npm run build`、`npm run cf:build`、production/staging両方のWrangler dry-run、`git diff --check` に成功した。sandbox内のOpenNext/Wrangler初回実行はWindowsのディレクトリアクセス拒否とWrangler log作成EPERMで停止したが、同じコマンドの権限付き再実行は成功したため、アプリ・設定の失敗ではない。Linux clean-checkout CIを最終判定にする。
+
+`npm audit --omit=dev` はhigh 4件を報告した。内訳は直接依存のNano ID 3系、Next.js 15.5.21同梱PostCSS、Sharpである。監査の自動fixは一部でNext.js 16.3.0へのbreaking changeを含むため実行していない。本番切替判断ではruntime到達性と公式修正版を再確認する。production deploy、route、Pages、DNS、staging、Issue、PR metadataは変更していない。

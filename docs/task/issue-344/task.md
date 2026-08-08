@@ -28,7 +28,8 @@
 - [x] `origin/main` を通常merge（`f38da71`、競合なし）
 - [x] `data/news-data.json` の構文、日付・URL重複、記事スキーマを確認
 - [x] `/ai-news` の最新日 `2026-08-02` とHTTP 200を確認
-- [ ] production cutover前に `origin/main` の後続AIニュース6commit（latest `d26b232`）を再同期
+- [x] production cutover前に `origin/main` の後続AIニュース6commit（latest `d26b232`）を通常merge（`2206e3a`、競合なし）
+- [x] 再同期後のJSONを43日・546記事、最新日 `2026-08-08`、追加6日・60記事として検証
 
 ## ローカル検証
 
@@ -42,7 +43,8 @@
 - [x] AdSense境界とdashboard API 401/405/no-storeの再確認
 - [x] OpenNext previewでstatic assetのimmutable Cache-Controlを確認
 - [x] `npm audit --omit=dev` を実行
-- [ ] production切替前にNext.js同梱PostCSS/Sharpのhigh 3件を再評価
+- [x] production切替前に依存監査を再実行（high 4件: Nano ID、Next.js同梱PostCSS、Sharp）
+- [ ] high 4件のruntime到達性と公式修正版を本番切替判断へ反映
 
 ## GitHub / Linux CI
 
@@ -57,6 +59,7 @@
 - [x] header iconの直接配信とIMAGES binding警告非発生をLinux CIで確認
 - [x] Actions run `30859325094` の成功結果を記録
 - [x] 最新HEAD `0d2560a` のActions run `30859487822` 成功を確認
+- [ ] main再同期後の最新HEADでLinux clean-checkout Actionsを再実行
 
 ## Workers staging
 
