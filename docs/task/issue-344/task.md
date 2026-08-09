@@ -86,6 +86,11 @@
 - [x] dashboardと `/api/dashboard-data` の正常200を確認
 - [x] 新versionのWorker logでIMAGES warning、exception、non-ok、5xx、秘密値露出が0件
 - [x] Access JWTがlogでREDACTED、未認証アクセスが302であることを確認
+- [x] Next.js 16.3 bundleをstaging dry-run後、`bearworks-portal-staging` のみに再deploy
+- [x] Next.js 16.3版でroot、dashboard、dashboard APIの未認証アクセスがAccessへ302となることを再確認
+- [x] 認証済みのroot、toukei、dynamic guide/problem、404、about、AIニュース、dashboard、weatherを再確認
+- [x] Next.js 16.3版でAdSense掲載境界、icon直接配信、fresh tabのroute遷移を再確認
+- [ ] Next.js 16.3版のWorker tailでIMAGES warning、exception、5xx、秘密値非露出を再確認（tailイベント未取得）
 
 ## Production cutover
 

@@ -202,3 +202,23 @@ Next 16.3更新、Linux CI拡張、最新main同期、検証記録を含むHEAD 
 - icon直接配信、static asset immutable header、dashboard API 401/405/no-store、token非露出、IMAGES warning非発生を確認
 
 annotationはGitHub Actions v4のNode.js 20 runtime非推奨と、既存の統計ページ内 `<img>` warningの2件で、job failureではない。CI成功はproduction cutover承認ではなく、Next 16.3移行のLinux build/preview gate通過として扱う。
+
+## 2026-08-09 Next.js 16.3 staging再deployと受け入れ
+
+Next.js 16.3更新後のstaging実環境ゲートを進めた。Luna task `019fc2ae-34be-7151-ac8d-26355f135c26` へ、staging設定、Access、secret binding、検証route、rollback条件を読み取り専用で再監査させた。Lunaはstaging限定deployを条件付きGO、productionをNO-GOと判定し、ファイル編集、Git/GitHub操作、deploy、Cloudflare操作は行っていない。
+
+司令塔Codexはsecret値を取得せずbindingの存在だけを確認した。deploy前の未認証HTTP確認ではroot、`/dashboard`、`/api/dashboard-data` がCloudflare Accessへ302となり、staging hostname全体の保護を確認した。公開AdSense IDはprocess環境だけへ設定し、Next.js 16.3 / OpenNext 1.20.2のbundleを再生成した。staging dry-run成功後、`bearworks-portal-staging` だけを再deployした。既存staging versionをrollback基準として保持し、production Worker、production route、Pages、DNS、Issue、PRは変更していない。
+
+認証済みstagingで次を確認した。
+
+- root、`/toukei`、有効guide/problemは正しいtitle/h1を表示し、AdSense scriptあり
+- 有効guide/problemは同一slugを2回取得して正常表示、無効slugは404かつAdSense scriptなし
+- `/about`、`/ai-news`、`/dashboard`、`/weather`、`/contact`、`/privacy` は正常表示かつAdSense scriptなし
+- `/ai-news` は最新日 `2026-08-09` を表示
+- dashboardはloadingやfallbackに留まらず実データ画面まで表示
+- rootは `/icon.png` を直接参照し、`/_next/image` を使用しない
+- fresh tabでroot、dashboard、dynamic guide、about、weatherを再確認し、deploy切替時に旧tabで一度発生したRSC payload失敗は再現しなかった
+
+fresh tabのconsoleには既知のRecharts width/height warningと、外部weather API失敗時にmock fallbackを使った記録が残った。どちらも画面表示を妨げていないが、weather実データ経路は別の運用確認事項として残す。ブラウザ側のブロッカーにより `/ads.txt`、`/robots.txt`、`/sitemap.xml` の直接navigationは確認できなかったため、最終HEADのLinux clean-checkout Actions run `31296262750` で通過した内容・status検査を根拠とした。
+
+Worker tailは2回起動して主要routeへrequestを発生させたが、今回のセッションではイベントを取得できなかった。そのため、Next.js 16.3版についてIMAGES warning、exception、5xx、secret・Access情報非露出のlog検査は未確認であり、production cutover前の残ゲートとする。Access bypass、5xx、主要画面不成立は観測されなかったためstagingはrollbackせず維持するが、productionは引き続きNO-GOである。
