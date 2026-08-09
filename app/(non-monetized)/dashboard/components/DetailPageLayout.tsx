@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "next/link";
+import Link from "@/components/InternalLink";
 import { RefreshCw, Clock, ArrowRight } from "lucide-react";
 import { getRelativeTime } from "../lib/dashboardUtils";
 

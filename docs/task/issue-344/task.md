@@ -90,7 +90,13 @@
 - [x] Next.js 16.3版でroot、dashboard、dashboard APIの未認証アクセスがAccessへ302となることを再確認
 - [x] 認証済みのroot、toukei、dynamic guide/problem、404、about、AIニュース、dashboard、weatherを再確認
 - [x] Next.js 16.3版でAdSense掲載境界、icon直接配信、fresh tabのroute遷移を再確認
-- [ ] Next.js 16.3版のWorker tailでIMAGES warning、exception、5xx、秘密値非露出を再確認（tailイベント未取得）
+- [x] Next.js 16.3版で内部LinkのRSC prefetchがFree Worker枠を超過したことをCloudflare metrics/Observabilityで特定
+- [x] 前回QAで残したroot/dashboardのstaging tabを閉じ、上限リセット後の再発源を停止
+- [x] 全内部Linkを共通component経由にし、自動prefetchを既定無効化
+- [x] lint、Next build、OpenNext build、staging dry-run、生成RSCの `prefetch:false` をローカル確認
+- [ ] prefetch抑制版をLinux clean-checkout CIで確認
+- [ ] Cloudflare request枠リセット後、prefetch抑制版をstagingへdeployして無操作10分のrequest収束を確認
+- [ ] Next.js 16.3版のWorker tail/ObservabilityでIMAGES warning、exception、5xx、秘密値非露出を再確認（現versionは枠超過で観測不能）
 
 ## Production cutover
 

@@ -222,3 +222,23 @@ Next.js 16.3更新後のstaging実環境ゲートを進めた。Luna task `019fc
 fresh tabのconsoleには既知のRecharts width/height warningと、外部weather API失敗時にmock fallbackを使った記録が残った。どちらも画面表示を妨げていないが、weather実データ経路は別の運用確認事項として残す。ブラウザ側のブロッカーにより `/ads.txt`、`/robots.txt`、`/sitemap.xml` の直接navigationは確認できなかったため、最終HEADのLinux clean-checkout Actions run `31296262750` で通過した内容・status検査を根拠とした。
 
 Worker tailは2回起動して主要routeへrequestを発生させたが、今回のセッションではイベントを取得できなかった。そのため、Next.js 16.3版についてIMAGES warning、exception、5xx、secret・Access情報非露出のlog検査は未確認であり、production cutover前の残ゲートとする。Access bypass、5xx、主要画面不成立は観測されなかったためstagingはrollbackせず維持するが、productionは引き続きNO-GOである。
+
+## 2026-08-09 Next.js 16 RSC prefetch増幅の検出と抑制
+
+Linux CI成功後にWorker tailを再試行したところ、認証済みstagingはアプリ画面ではなくCloudflareのplan limit画面を返した。未認証の単発HTTP確認はAccessへ302となる一方、認証済みrequestはWorker到達前に停止されるため、Wrangler tailにはイベントが出なかった。
+
+Cloudflare管理画面を設定変更なしで読み取り確認し、Free planのaccount-wide request枠が `487,177 / 100,000`、staging Worker単体が約487k invocation・約481k asset requestとなっていることを確認した。新staging versionのメトリクスはinvocation error 0、asset 4xx/5xx 0だったが、request rateは約180 req/sまで増加していた。これは機能成功ではなく、可用性と利用量の重大な回帰として扱う。
+
+Workers Observabilityは日次イベント上限超過により1% samplingへ縮退していた。取得済みイベントではroot、`/toukei`、`/toukei/guides`、`/toukei/problems`、`/dashboard/gcp`、`/dashboard/cloudflare` への `?_rsc=` GETが短時間に反復し、error eventは `Network connection lost.` だった。secret、JWT、Bearer、IMAGES binding warningは表示中のsampleにはなかったが、全量観測ではないため非露出・warningなしの最終証明には使用しない。
+
+開いたままの前回QA tabを確認すると、rootとdashboardの2tabが残っており、Observabilityの2系統のRSC request集合と一致した。両tabを閉じ、上限リセット後に同じclientが自動prefetchを再開しないよう停止した。Cloudflare plan、billing、Worker、Access、DNS、domain、deploy設定は変更していない。
+
+repo内には `router.prefetch`、`router.refresh`、timer/polling loopがなく、反復routeはviewport内の `next/link` 集合と一致した。Next.js 16はnavigation/prefetch方式を変更し、公式移行ガイドでも個々のprefetch requestが増える場合があるとしている。公式のresource使用量抑制手段である `prefetch={false}` を全内部Linkの既定値とする `components/InternalLink.tsx` を追加し、既存Link importをこの共通componentへ置き換えた。クリック時のclient-side navigationは維持し、自動RSC prefetchだけを停止する。
+
+再発防止としてLinux workflowへ次を追加した。
+
+- `next/link` の直接importを `components/InternalLink.tsx` だけに限定
+- 共通componentの `prefetch = false` とNextLinkへのprop伝播を検査
+- Next build生成RSC payloadに `"prefetch":false` が含まれることを検査
+
+ローカルではESLint error 0（既存warning 4）、Next.js 16.3 Turbopack build、OpenNext 1.20.2 bundle、staging Wrangler dry-runに成功した。生成RSC payloadでも全内部Linkの `prefetch:false` を確認した。production cutoverはNO-GOのままであり、次はLinux clean-checkout CI、Cloudflare日次枠リセット後のstaging deploy、単一tab・無操作10分でRSC requestが収束すること、tail/Observabilityの秘密値非露出とruntime warning非発生を確認する。

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
+import Link from "@/components/InternalLink";
 import { WeatherData, getRelativeTime } from "./lib/weatherUtils";
 import WeatherSummary from "./components/WeatherSummary";
 import LocationCard from "./components/LocationCard";

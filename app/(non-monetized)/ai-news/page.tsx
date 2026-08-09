@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/InternalLink";
 import { promises as fs } from "fs";
 import path from "path";
 

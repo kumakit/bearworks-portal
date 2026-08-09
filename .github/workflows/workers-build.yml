@@ -33,6 +33,15 @@ jobs:
       - name: Build Next.js
         run: npm run build
 
+      - name: Verify internal link prefetch policy
+        shell: bash
+        run: |
+          direct_imports=$(git grep -l 'from "next/link"' -- '*.tsx')
+          test "$direct_imports" = "components/InternalLink.tsx"
+          grep --fixed-strings --quiet 'prefetch = false' components/InternalLink.tsx
+          grep --fixed-strings --quiet '<NextLink prefetch={prefetch}' components/InternalLink.tsx
+          grep --recursive --fixed-strings --quiet '"prefetch":false' .next/server/app
+
       - name: Build Workers bundle
         run: npm run cf:build
 

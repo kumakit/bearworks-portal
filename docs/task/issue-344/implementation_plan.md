@@ -91,6 +91,8 @@ Windows OpenNext previewのdynamic slug 404は既知の環境差であり、Linu
 - `next build` がlintを実行しなくなったため、Linux workflowへ明示的な `npm run lint` stepを追加する。
 - ローカルでは `npm ci`、lint、Next build、OpenNext build、production/staging dry-run、production依存監査0件を確認する。
 - 全依存監査に残るdev-onlyのadvisoryはproduction bundleと分離し、Wrangler/esbuild更新を別変更として評価する。
+- Next 16のnavigation/prefetch変更によるWorker request増幅を防ぐため、内部Linkは共通component経由で `prefetch={false}` を既定とする。クリック時のclient-side navigationは維持し、自動RSC prefetchだけを停止する。
+- Linux workflowで `next/link` の直接importが共通component以外へ再導入されないことと、生成RSC payloadに `"prefetch":false` が含まれることを確認する。
 
 ### Gate 3: branch更新とPR
 
@@ -125,6 +127,8 @@ Windows OpenNext previewのdynamic slug 404は既知の環境差であり、Linu
 - `_headers` によるstatic assetのCache-Controlを実測する
 - canonical、metadataBase、robots、sitemapが意図的にproduction URLを指すことを確認する
 - Worker logにtoken、JWT、upstream bodyがないことを確認する
+- 単一の認証済みブラウザでrootとdashboardを各1tabだけ開き、無操作10分のRSC requestが初期取得後に収束することを確認する
+- Worker request使用量、invocation rate、asset requestをdeploy前baselineから比較し、持続的なRSC増幅またはFree枠到達を検出した場合は即時停止する
 
 ### Gate 6: production cutover
 
