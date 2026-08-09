@@ -191,3 +191,14 @@ WindowsのOpenNext runtimeは引き続き非完全互換である。Next 16.3更
 push前にLunaへcommit `95ff273` とLinux workflowを再監査させ、package/peer整合とpush readinessはGO、Linux CI未実行のためproductionはNO-GOとの判定を得た。司令塔Codexは指摘を実workflowと照合し、今回Linkを変更した `/ai-news`、`/dashboard`、`/weather` のHTTP 200とAdSense非掲載、ならびにstaging設定のWrangler dry-runをLinux workflowへ追加した。認証済みdashboard API 200はsecretと実Accessを必要とするためCIへ持ち込まず、staging実環境の別ゲートとして維持する。
 
 push直前のfetchで `origin/main` が `1f40644` へ進んでいることを検出した。追加1commitは `data/news-data.json` のAIニュース更新だけで、Next 16変更とは非重複だった。JSONを44日・556記事、最新日 `2026-08-09`、日付重複0として検証し、rebaseやforce pushを使わず通常merge `4b2dcd1` で取り込んだ。最新main込みのNext 16.3 Turbopack buildは31ページを正常生成した。
+
+Next 16.3更新、Linux CI拡張、最新main同期、検証記録を含むHEAD `eff46bf` を既存branchへ通常pushした。Draft PR #4の `pull_request` synchronizeでLinux clean-checkout Actions run `31296166925` が起動し、1分15秒で成功した。
+
+- Node.js 22で `npm ci` とESLint flat config lintに成功
+- Next.js 16.3.0 Turbopack buildとOpenNext 1.20.2 bundle生成に成功
+- production/staging両方のWrangler dry-runに成功
+- root、dynamic guide/problem、無効slug、404、ads.txt、robots、sitemapを確認
+- `/about`、`/ai-news`、`/dashboard`、`/weather` の200とAdSense非掲載を確認
+- icon直接配信、static asset immutable header、dashboard API 401/405/no-store、token非露出、IMAGES warning非発生を確認
+
+annotationはGitHub Actions v4のNode.js 20 runtime非推奨と、既存の統計ページ内 `<img>` warningの2件で、job failureではない。CI成功はproduction cutover承認ではなく、Next 16.3移行のLinux build/preview gate通過として扱う。

@@ -51,7 +51,7 @@
 - [x] `next lint` をESLint 9 CLI / flat configへ移行し、既存内部linkを`next/link`へ修正
 - [x] Next 16.3で `npm ci`、lint、Turbopack build、OpenNext build、production/staging dry-runを確認
 - [x] Linux workflowへstaging dry-runと `/ai-news`・`/dashboard`・`/weather` の200/AdSense非掲載回帰を追加
-- [ ] Next 16.3更新後のLinux clean-checkout CIを実行
+- [x] Next 16.3更新後のLinux clean-checkout Actions run `31296166925` が成功
 
 ## GitHub / Linux CI
 
@@ -68,7 +68,7 @@
 - [x] 最新HEAD `0d2560a` のActions run `30859487822` 成功を確認
 - [x] main再同期後のHEAD `bc16db0` でLinux clean-checkout Actions run `31260322740` 成功を確認
 - [x] CI結果記録後のdocs-only HEAD `3228cde` でActions run `31260451402` 成功を確認
-- [ ] Next 16.3更新commitをpushし、明示的lint stepを含むLinux CIを確認
+- [x] Next 16.3更新HEAD `eff46bf` をpushし、明示的lint stepを含むLinux CIを確認
 
 ## Workers staging
 
