@@ -39,6 +39,9 @@ jobs:
       - name: Validate Workers bundle
         run: npx wrangler deploy --dry-run --env=""
 
+      - name: Validate staging Workers bundle
+        run: npx wrangler deploy --dry-run --env staging
+
       - name: Verify Workers preview routes
         shell: bash
         env:
@@ -89,6 +92,15 @@ jobs:
             fi
           }
 
+          assert_no_ads() {
+            path=$1
+            assert_status 200 "$path"
+            if grep --quiet 'ca-pub-0000000000000000' /tmp/response-body; then
+              echo "AdSense client ID was found on ${path}"
+              exit 1
+            fi
+          }
+
           assert_status 200 /
           grep --quiet 'ca-pub-0000000000000000' /tmp/response-body
           grep --fixed-strings --quiet 'src="/icon.png"' /tmp/response-body
@@ -124,11 +136,10 @@ jobs:
             echo 'AdSense client ID was found on an invalid problem response'
             exit 1
           fi
-          assert_status 200 /about
-          if grep --quiet 'ca-pub-0000000000000000' /tmp/response-body; then
-            echo 'AdSense client ID was found on /about'
-            exit 1
-          fi
+          assert_no_ads /about
+          assert_no_ads /ai-news
+          assert_no_ads /dashboard
+          assert_no_ads /weather
           assert_status 200 /ads.txt
           grep --fixed-strings --line-regexp --quiet 'google.com, pub-9560028085973137, DIRECT, f08c47fec0942fa0' /tmp/response-body
           assert_status 200 /robots.txt

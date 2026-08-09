@@ -48,6 +48,7 @@
 - [x] `npm audit --omit=dev` でproduction依存0件を確認
 - [x] `next lint` をESLint 9 CLI / flat configへ移行し、既存内部linkを`next/link`へ修正
 - [x] Next 16.3で `npm ci`、lint、Turbopack build、OpenNext build、production/staging dry-runを確認
+- [x] Linux workflowへstaging dry-runと `/ai-news`・`/dashboard`・`/weather` の200/AdSense非掲載回帰を追加
 - [ ] Next 16.3更新後のLinux clean-checkout CIを実行
 
 ## GitHub / Linux CI
