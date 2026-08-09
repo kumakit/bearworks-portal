@@ -242,3 +242,7 @@ repo内には `router.prefetch`、`router.refresh`、timer/polling loopがなく
 - Next build生成RSC payloadに `"prefetch":false` が含まれることを検査
 
 ローカルではESLint error 0（既存warning 4）、Next.js 16.3 Turbopack build、OpenNext 1.20.2 bundle、staging Wrangler dry-runに成功した。生成RSC payloadでも全内部Linkの `prefetch:false` を確認した。production cutoverはNO-GOのままであり、次はLinux clean-checkout CI、Cloudflare日次枠リセット後のstaging deploy、単一tab・無操作10分でRSC requestが収束すること、tail/Observabilityの秘密値非露出とruntime warning非発生を確認する。
+
+commit `468206e` を既存feature branchへ通常pushし、Draft PR #4のsynchronizeでLinux clean-checkout Actions run `31311829518` を実行した。runは1分14秒で成功し、`npm ci`、ESLint、Next.js 16.3 build、internal Link prefetch policy、OpenNext bundle、production/staging dry-run、Workers preview route回帰をすべて通過した。
+
+新しいpolicy stepでは、`next/link` の直接importが共通componentだけであること、`prefetch = false` の既定値とprop伝播、生成RSC payloadの `"prefetch":false` を確認した。annotationはActions v4のNode.js 20 runtime非推奨と、既存の統計ページ内 `<img>` warningの2件で、今回のprefetch抑制失敗ではない。CI成功はquota reset後のstaging runtime受け入れやproduction cutover承認を代替しない。

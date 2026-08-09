@@ -94,7 +94,7 @@
 - [x] 前回QAで残したroot/dashboardのstaging tabを閉じ、上限リセット後の再発源を停止
 - [x] 全内部Linkを共通component経由にし、自動prefetchを既定無効化
 - [x] lint、Next build、OpenNext build、staging dry-run、生成RSCの `prefetch:false` をローカル確認
-- [ ] prefetch抑制版をLinux clean-checkout CIで確認
+- [x] prefetch抑制版をLinux clean-checkout Actions run `31311829518` で確認
 - [ ] Cloudflare request枠リセット後、prefetch抑制版をstagingへdeployして無操作10分のrequest収束を確認
 - [ ] Next.js 16.3版のWorker tail/ObservabilityでIMAGES warning、exception、5xx、秘密値非露出を再確認（現versionは枠超過で観測不能）
 
