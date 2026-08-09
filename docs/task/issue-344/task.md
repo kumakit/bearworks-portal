@@ -30,6 +30,8 @@
 - [x] `/ai-news` の最新日 `2026-08-02` とHTTP 200を確認
 - [x] production cutover前に `origin/main` の後続AIニュース6commit（latest `d26b232`）を通常merge（`2206e3a`、競合なし）
 - [x] 再同期後のJSONを43日・546記事、最新日 `2026-08-08`、追加6日・60記事として検証
+- [x] Next 16 Linux CI前に `origin/main` のAIニュース更新1commit（`1f40644`）を通常merge（`4b2dcd1`、競合なし）
+- [x] 最新JSONを44日・556記事、最新日 `2026-08-09`、日付重複0として検証
 
 ## ローカル検証
 

@@ -189,3 +189,5 @@ React 18.2以上はNext 16.3.0のpeer範囲内で、現行buildも成功した�
 WindowsのOpenNext runtimeは引き続き非完全互換である。Next 16.3更新後のAdSense境界、dynamic slug 2回取得、404、API 401/405/no-store、static asset header、IMAGES warning非発生は、push承認後のLinux clean-checkout CIを最終判定とする。この作業ではpush、Issue/PR更新、deploy、Cloudflare、production route、Pages、DNSを変更していない。
 
 push前にLunaへcommit `95ff273` とLinux workflowを再監査させ、package/peer整合とpush readinessはGO、Linux CI未実行のためproductionはNO-GOとの判定を得た。司令塔Codexは指摘を実workflowと照合し、今回Linkを変更した `/ai-news`、`/dashboard`、`/weather` のHTTP 200とAdSense非掲載、ならびにstaging設定のWrangler dry-runをLinux workflowへ追加した。認証済みdashboard API 200はsecretと実Accessを必要とするためCIへ持ち込まず、staging実環境の別ゲートとして維持する。
+
+push直前のfetchで `origin/main` が `1f40644` へ進んでいることを検出した。追加1commitは `data/news-data.json` のAIニュース更新だけで、Next 16変更とは非重複だった。JSONを44日・556記事、最新日 `2026-08-09`、日付重複0として検証し、rebaseやforce pushを使わず通常merge `4b2dcd1` で取り込んだ。最新main込みのNext 16.3 Turbopack buildは31ページを正常生成した。
