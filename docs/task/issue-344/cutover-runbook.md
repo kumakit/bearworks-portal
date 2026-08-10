@@ -24,6 +24,8 @@
 
 実値は対話入力し、shell履歴やログへ展開しない。
 
+既存tokenの有効性は、公開 `apps.bearworks.uk` への単独curl結果だけで判定しない。Cloudflare edgeのpolicyで403となる場合があるため、認証済みstagingのdashboard API成功と、必要時はOCI origin自身からHostを固定したstatus-only localhost照合を組み合わせる。response body/headerとtoken実値は表示・保存せず、候補が複数またはorigin-localで200以外ならsecret登録を中止する。
+
 ```powershell
 npx wrangler secret put DASHBOARD_API_TOKEN --env staging
 npm run cf:build
@@ -67,6 +69,8 @@ Cloudflare dashboardで次を記録する。
 - rollback操作者とcutover開始時刻。
 
 ### production Workerを非公開状態で準備
+
+cutover対象branchは直前に `origin/main` と同期し、そのHEADをpushしたLinux clean-checkout CIが成功していることを確認する。同期後にHEADが変わった場合は、同じHEADからproduction Workerをrouteなしで再build・再deployし、deploymentとsecret binding名を再確認する。branch、CI、production Workerのいずれかが異なるHEADを指す状態ではRouteを追加しない。
 
 `npm audit --omit=dev` と関連advisoryを再確認する。未解消highがある場合はruntime到達性、公式修正版、risk acceptanceを記録し、未評価のままdeployしない。
 

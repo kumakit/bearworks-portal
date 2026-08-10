@@ -274,3 +274,73 @@ staging Observability受け入れ記録を含むHEAD `011fa45` をfeature branch
 Cloudflare dashboardではproduction Workers Routeが未設定で、既存Accessのself-hosted applicationが `/dashboard` と `/api/dashboard-data` を保護していることを読み取り確認した。Wranglerでもproduction Workerは未作成のため、production secret bindingはまだ登録・確認できない。既存Pages、DNS、Access policy、production Worker、secret、routeには変更を加えていない。
 
 Lunaの独立監査と司令塔Codexの再検証はいずれも、`011fa45` のpush scopeはGO、production cutoverはNO-GOで一致した。次の安全な順序は、別途本番変更承認後にproduction Workerをrouteなしでdeployし、version・secret binding・Access・rollback担当を再確認した後、さらにroute追加の実行条件を満たしてから `bearworks.uk/*` を接続することである。
+
+## 2026-08-10 production Workerの非公開初回deploy
+
+ユーザーの「次に進んで」を、前段で明示したproduction Workerのroute未接続deploy承認として扱った。Issue #344、runbook、branch `codex/issue-344-phase3-ads-scope`、HEAD `3b2233e`、Cloudflare認証、production設定を再確認し、Lunaへno-route deploy、secret登録順序、route追加停止条件の読み取り専用監査を委譲した。Lunaと司令塔Codexはいずれも、top-level production設定にroute/custom domainがなく、`workers_dev: false`、`preview_urls: false` のため、初回deploy単体は既存Pages、DNS、Accessへ公開経路を追加しないと判定した。
+
+deploy前に `npm ci`、ESLint（error 0、既存warning 4）、公開publisher IDをbuild時だけ設定したNext.js 16.3 / OpenNext 1.20.2 build、production Wrangler dry-runを実行した。bundleはgzip 1574.22 KiB、production依存の `npm audit --omit=dev` は0件だった。`origin/main` はAIニュースJSONだけを変更する1commit進んでいるため、公開route接続前に通常merge、push、Linux CIを再実行する残ゲートとして分離した。
+
+`bearworks-portal` をproduction top-level設定で初回deployし、Cloudflareが配信targetなしと報告したこと、versionが100%有効であることを確認した。deploy後も公開 `bearworks.uk` はHTTP 200を維持し、既存Pages、DNS、Access policy、Workers Routeは変更していない。
+
+production secret一覧は空だった。以前作成した一時ファイルの候補値を実値非表示で上流APIへ照合したが403となり、有効性を確認できなかったため登録していない。別候補の推測、secret値の表示、tracked fileへの保存は行っていない。production Workerは公開入口がないまま維持し、有効な既存tokenを安全に再取得・照合して `DASHBOARD_API_TOKEN` の名前だけを確認できるまでWorkers Route追加を禁止する。
+
+## 2026-08-10 既存token再取得経路の確認
+
+ユーザーのOracle Cloudログイン完了後、Cloud Shellから対象インスタンスを1台に限定し、OCI Run Commandの経路を秘密値を含まない固定文字列だけで検証した。Run Command作成要求は受理されたが、対象インスタンスのOracle Cloud AgentにRun Command pluginが存在せず、実行状態は受理済みのまま進まなかった。未実行コマンドはキャンセルし、token取得、上流照合、production secret登録は行っていない。
+
+Cloudflare側は名前だけを再確認し、staging Workerには `DASHBOARD_API_TOKEN` が存在し、production Workerのsecret一覧は空のままだった。production設定は引き続きrouteなし、`workers_dev: false`、`preview_urls: false` であり、Pages、DNS、Access、Workers Routeに変更はない。
+
+Lunaの読み取り専用監査は、status-onlyの上流照合に成功した後だけproduction secretを登録し、登録後は名前と新versionだけを確認してroute追加へ進まない条件付きGOと判定した。既存値を安全に取得できる経路が未確立のため、production secret登録とroute追加はNO-GOを維持する。
+
+## 2026-08-10 一時暗号化exportの実行と撤去
+
+ユーザーの明示承認後、staging hostname全体の未認証アクセスがCloudflare Accessへ302となることを再確認した。Windowsユーザー専用ACLの一時ディレクトリへ3072-bit RSA鍵ペアを生成し、OAEP/SHA-256の固定文字列round-tripに成功した。秘密鍵はrepo、Worker、ブラウザへ渡さず、一時endpointには公開鍵だけを含めた。ESLintはerror 0、既存warning 4で、Next.js 16.3 / OpenNext 1.20.2 buildは一時dynamic routeを含めて成功した。
+
+一時endpointを `bearworks-portal-staging` のみにdeployしたが、認証済みブラウザから暗号文URLへ移動する操作がクライアント側の安全制御で遮断された。暗号文、平文token、上流response本文は取得していない。URL名変更による再試行は安全制御の迂回に該当するため実行せず、一時routeをsourceから削除してclean bundleを再build・stagingへdeployした。
+
+clean buildのroute一覧に一時endpointが含まれないこと、repo内に一時公開鍵・route文字列が残っていないこと、一時鍵ディレクトリを削除したことを確認した。production Worker、production secret、Workers Route、DNS、Access、Pages、Git/GitHubには変更していない。stagingへの一時deployと撤去deployだけが外部変更であり、production secret登録とroute追加は引き続きNO-GOである。
+
+## 2026-08-10 OCI SSH鍵fingerprint照合
+
+ユーザーの明示承認後、Windowsユーザープロファイル内のOCI秘密鍵候補について、本文を表示せず公開fingerprintだけを算出した。2026-05-03の2ファイルは同一鍵でOCI instanceの登録公開鍵と一致し、2025-06-09の鍵は不一致だった。対象instanceは稼働中の1台に限定し、public IPは値を表示せずhashで固定した。
+
+`apps.bearworks.uk` はCloudflare proxyのためDNS解決先がOCI public IPと一致せず、ローカルPCからOCI public IPのSSH port 22にも到達できなかった。一方、OCI Cloud Shellから同じ対象のport 22には到達できた。Cloud Shellへ一致鍵をGUI uploadする操作はfile chooserが応答せず、秘密鍵は送信されなかった。
+
+暗号化してCloud Shellへ一致鍵を転送する案は、SSH接続承認とは別の秘密鍵外部送信承認が必要なため実行していない。作成済みのCloud Shell転送鍵、ローカル接続先暗号化鍵、接続先一時ファイルは削除した。SSH接続、token抽出、上流照合、production secret登録は未実施であり、route追加はNO-GOを維持する。
+
+## 2026-08-10 fingerprint一致鍵の暗号化転送と読み取りSSH
+
+ユーザーの秘密鍵外部送信に対する明示承認後、Cloud Shell内で3072-bit RSA一時転送鍵を生成し、fingerprint一致済みの秘密鍵をAES-256-CBCで暗号化、IVと暗号文へHMAC-SHA-256を付与し、AES/HMAC鍵だけをRSA-OAEP/SHA-256で包んで転送した。Cloud ShellではRSA包みを解除し、HMAC一致を先に確認した後だけ復号した。復号鍵と全中間ファイルをowner-onlyのmode 600とし、鍵本文とfingerprint値は画面、repo、tracked fileへ出していない。
+
+OCIから対象instanceのpublic IPを値非表示で再取得し、Cloud Shellから取得したhost keyを一時known_hostsへ固定した。Ubuntu用ユーザー、BatchMode、IdentitiesOnly、StrictHostKeyChecking、固定known_hostsを指定した読み取りSSH認証に成功した。リモート設定は変更せず、nginx内の対象token設定が1箇所であることだけを先に確認し、値はSSH標準出力をowner-only一時ファイルへ直接redirectして取得した。
+
+一時取得値はmode 600、非空、空白なしだったが、本文とresponse headerを捨てるstatus-only照合で `apps.bearworks.uk/api/dashboard/data.json` が403を返した。有効性を確認できないためproduction `DASHBOARD_API_TOKEN` は登録せず、Cloudflare Worker、route、DNS、Access、Pagesには変更を加えていない。Cloud Shell上の復号秘密鍵、転送鍵、暗号封筒、MAC入力、known_hosts、一時tokenを明示対象で削除し、`/tmp` のIssue #344一時ファイル残数0とローカル一時export残数0を確認した。production secret登録とroute追加はNO-GOを維持する。
+
+## 2026-08-10 公開経路403とorigin tokenの切り分け
+
+公開経路の403だけでtoken失効と判断しないため、認証済みの新規browser tabでstaging dashboardと現行Pages dashboardを再読込した。stagingは手動更新後も、Pagesは初回読込後もdashboardデータを正常表示し、両環境の既存secretと上流originの組合せが現在も機能していることを確認した。画面の運用データ値は記録していない。
+
+`bearworks-apps` のtracked `nginx/nginx.conf` は実値ではなくplaceholderを保持しており、live tokenはGit外管理だった。前回と同じ暗号化・owner-only・固定known_hostsの手順で読み取りSSHを再確立し、`/etc/nginx/nginx.conf`、`sites-enabled`、`conf.d` 内のtoken候補を値非表示で列挙した。候補は1つだけで、OCI host自身のlocalhost HTTPS originへHostとtoken headerをメモリ内で渡すstatus-only照合では200だった。response body、response header、token値は表示・保存していない。
+
+この結果から、Cloud Shellから公開 `apps.bearworks.uk` へ送った際の403はtoken失効の証拠ではなく、Cloudflare edgeを通る外向き経路で拒否されたものと判断した。具体的なedge policy名は未確認であり、推測で変更しない。production secret登録、上流token変更、Workers Route追加は行わず、診断用の転送鍵、復号鍵、暗号封筒、known_hostsを削除してCloud Shell一時ファイル残数0を確認した。次は別承認後、同じ有効候補を値非表示の暗号化経路でproduction Worker secretへ登録し、binding名だけを確認する。
+
+## 2026-08-10 production secret登録
+
+ユーザーのproduction secret登録に対する明示承認後、Lunaへproduction top-level環境、secret putによる新version作成、route非変更、値非露出、登録後確認、cleanupの読み取り専用最終監査を委譲した。Lunaは `npx wrangler secret put DASHBOARD_API_TOKEN --env=""` のみを実行する条件付きGO、Workers Route追加とproduction cutover全体はNO-GO継続と判定した。司令塔Codexもtop-level `bearworks-portal` にroute/custom domainがなく、`workers_dev: false`、`preview_urls: false`、stagingが別環境・別Workerであることを再確認した。
+
+origin-localで200となる唯一の既存tokenを、前段と同じ暗号化・owner-only・固定known_hostsの手順でOCIから取得した。tokenはCloud ShellとWindowsの一時ファイル間をRSA-OAEP/SHA-256暗号文として搬送し、平文をterminal、command line、environment、repo、Git、ログへ出していない。Windows一時領域は継承を外して現在ユーザーSIDだけへ権限を付与し、Wranglerのredirect済みstdinへ値を渡した。
+
+production top-levelへ `DASHBOARD_API_TOKEN` を1回だけ登録し、Wrangler終了code 0、binding名の存在、新しいdeploymentの存在を確認した。secret putが新versionを作成するため、追加のbuildやdeployは行っていない。確認出力にtoken値が含まれないことを機械的に確認した。登録後も公開rootは200、未認証dashboardはCloudflare Accessへ302で、Workers Route、DNS、Access、Pages、stagingには変更を加えていない。
+
+Cloud Shellの転送鍵、復号鍵、token、暗号封筒、known_hosts、公開鍵中間ファイルを削除し、一時ファイル残数0を確認した。Windows側もtokenと一時秘密鍵を上書き後、検証済みの一時ディレクトリだけを削除した。次のWorkers Route追加は別の本番切替承認、rollback操作者確認、直前preflightが完了するまでNO-GOを維持する。
+
+## 2026-08-10 Workers Route追加直前preflight
+
+Route追加を実行せず、Lunaの独立監査と司令塔Codexのlive再検証を行った。production Workerは有効なdeploymentを持ち、`DASHBOARD_API_TOKEN` のbinding名が存在する。production Workers Routeは0件で、Worker側設定もroute/custom domainなし、`workers_dev: false`、`preview_urls: false` を維持していた。secret値、deployment ID、Cloudflare内部IDは記録していない。
+
+既存Pagesではroot、toukei、dynamic guide/problem、AIニュース、weather、about、contact、privacy、ads.txt、robots、sitemapが200、不存在dynamic guideが404だった。未認証dashboardとdashboard APIはCloudflare Accessへ302かつno-storeで、Access Applicationの保護先が `/dashboard` と `/api/dashboard-data` の2件であることをdashboard上でも確認した。Pages projectとcustom domainの公開元は維持され、Route、DNS、Access、Pages設定は変更していない。
+
+現在のfeature branch HEADはremote branchと一致し、そのHEADに対するLinux clean-checkout buildは成功、production依存のauditは0件だった。旧Pages build commandを参照するCloudflare Pages checkは従来どおり失敗しているが、Workers用Linux buildとは分離されている。一方、`origin/main` はAIニュースデータ更新の1commitだけ先行しており、routeなしでdeploy済みのproduction Workerにも未反映である。
+
+このためGit/CI、Worker/secret、Pages baseline、Accessは個別には条件付きGOだが、production cutover全体はNO-GOとした。次の順序は、最新mainの通常取り込み、feature branch push、同一HEADのLinux CI、同一HEADからのrouteなしproduction再deploy、rollback操作者と10分判定の再確認、Workers Route追加の別承認である。

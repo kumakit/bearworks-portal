@@ -101,7 +101,18 @@
 ## Production cutover
 
 - [x] cutover前のPages正常状態を記録
-- [ ] production Workerをrouteなしでdeployし、versionとsecret bindingを確認
+- [x] production Workerをrouteなしでdeployし、versionと配信targetなしを確認
+- [x] Oracle CloudのRun Command経路を固定文字列で確認し、対象Agentにpluginがないため未実行コマンドをキャンセル
+- [x] stagingにsecret名が存在し、production secret一覧が空であることを値非表示で再確認
+- [x] 一時暗号化exportをstagingへdeployし、ブラウザ安全制御で取得を中止後、clean版再deployと一時鍵削除を完了
+- [x] OCI秘密鍵候補の公開fingerprintを照合し、2026-05-03鍵の一致とCloud ShellからのSSH到達性を確認
+- [x] 明示承認後、一致鍵を暗号化してCloud Shellへ一時転送し、host key固定後に読み取りSSH接続
+- [x] リモート既存tokenを値非表示で一時取得し、status-only照合が403のため全一時ファイルを削除
+- [x] staging/Pagesの正常取得とorigin-local 200を確認し、公開経路403がtoken失効の証拠ではないことを切り分け
+- [x] production secret bindingを登録し、名前と新deploymentだけを確認
+- [x] Route追加直前preflightでPages主要route、Access 2境界、production Worker/secret、Workers Route未設定を再確認
+- [ ] 最新 `origin/main` のAIニュース更新をbranchへ取り込み、push後のLinux CIを再確認
+- [ ] main同期後の同一HEADからproduction Workerをrouteなしで再deployし、deploymentとsecret binding名を再確認
 - [x] production Accessの保護境界とWorkers Route未設定を読み取り確認
 - [x] rollback操作と判断基準をrunbookへ書面化
 - [ ] cutover直前にrollback操作者と判断基準を再確認
