@@ -95,8 +95,8 @@
 - [x] 全内部Linkを共通component経由にし、自動prefetchを既定無効化
 - [x] lint、Next build、OpenNext build、staging dry-run、生成RSCの `prefetch:false` をローカル確認
 - [x] prefetch抑制版をLinux clean-checkout Actions run `31311829518` で確認
-- [ ] Cloudflare request枠リセット後、prefetch抑制版をstagingへdeployして無操作10分のrequest収束を確認
-- [ ] Next.js 16.3版のWorker tail/ObservabilityでIMAGES warning、exception、5xx、秘密値非露出を再確認（現versionは枠超過で観測不能）
+- [x] Cloudflare request枠リセット後、prefetch抑制版をstagingへdeployし、単一root tab・無操作11分7秒で追加requestイベントが発生しないことを確認
+- [ ] Next.js 16.3版のWorker tail/ObservabilityでIMAGES warning、exception、5xx、秘密値非露出を再確認（tailのerrorおよび11分観測は0件。Observabilityのevent取得を残す）
 
 ## Production cutover
 

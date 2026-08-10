@@ -246,3 +246,13 @@ repo内には `router.prefetch`、`router.refresh`、timer/polling loopがなく
 commit `468206e` を既存feature branchへ通常pushし、Draft PR #4のsynchronizeでLinux clean-checkout Actions run `31311829518` を実行した。runは1分14秒で成功し、`npm ci`、ESLint、Next.js 16.3 build、internal Link prefetch policy、OpenNext bundle、production/staging dry-run、Workers preview route回帰をすべて通過した。
 
 新しいpolicy stepでは、`next/link` の直接importが共通componentだけであること、`prefetch = false` の既定値とprop伝播、生成RSC payloadの `"prefetch":false` を確認した。annotationはActions v4のNode.js 20 runtime非推奨と、既存の統計ページ内 `<img>` warningの2件で、今回のprefetch抑制失敗ではない。CI成功はquota reset後のstaging runtime受け入れやproduction cutover承認を代替しない。
+
+## 2026-08-10 request枠回復後のstaging再deployとアイドル観測
+
+Cloudflare Access認証後の `staging.bearworks.uk` がplan limit画面ではなくアプリrootを返すことを確認し、日次request枠の遮断が解消したと判断した。commit `761dea7` をfeature branchへpushし、Draft PR #4で起動したLinux clean-checkout Actions run `31387999437` は、prefetch policyを含む全stepに成功した。
+
+staging secretは名前の存在だけを確認して値を取得せず、`wrangler deploy --dry-run --env staging`、Next.js 16.3 / OpenNext 1.20.2 buildを通した。続いて `--env staging` を明示して `bearworks-portal-staging` のみにdeployした。production Worker、route、DNS、Pages、Access policy、billing設定は変更していない。
+
+認証済みrootを単一tabで再読込し、11分7秒無操作で保持した。Worker tailには観測開始後の追加requestイベント、error、反復 `?_rsc=` requestが出ず、root画面も観測終了時まで正常だった。観測開始前のCloudflare Access OAuth遷移で発生したbrowser consoleの中断記録は、stagingアプリruntimeのerrorとは分離した。
+
+runtime smokeではroot、AIニュース、weather、有効guideの表示と無効guideの404を確認し、smoke中のWorker errorは0件だった。dashboardはページ到達とtitleまでを確認し、非公開データ本文は読み取っていない。tailに通常event自体が出なかったため、Observability eventでのIMAGES warning、exception、5xx、secret/JWT/Bearer非露出の再確認は残ゲートとする。RSC prefetch増幅の再発は確認されなかったが、production cutoverは引き続きNO-GOである。
