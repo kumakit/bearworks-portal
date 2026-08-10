@@ -256,3 +256,9 @@ staging secretは名前の存在だけを確認して値を取得せず、`wrang
 認証済みrootを単一tabで再読込し、11分7秒無操作で保持した。Worker tailには観測開始後の追加requestイベント、error、反復 `?_rsc=` requestが出ず、root画面も観測終了時まで正常だった。観測開始前のCloudflare Access OAuth遷移で発生したbrowser consoleの中断記録は、stagingアプリruntimeのerrorとは分離した。
 
 runtime smokeではroot、AIニュース、weather、有効guideの表示と無効guideの404を確認し、smoke中のWorker errorは0件だった。dashboardはページ到達とtitleまでを確認し、非公開データ本文は読み取っていない。tailに通常event自体が出なかったため、Observability eventでのIMAGES warning、exception、5xx、secret/JWT/Bearer非露出の再確認は残ゲートとする。RSC prefetch増幅の再発は確認されなかったが、production cutoverは引き続きNO-GOである。
+
+その後Cloudflare Worker Observabilityの通常eventを読み取り確認した。1時間表示ではRSC反復群と唯一の `Network connection lost.` errorが新version切替直前に集中し、切替後はrootの単発requestと実施済みsmoke routeだけだった。Worker概要の直近24時間metricsもinvocationが前日比96.74%減、error 0を示した。
+
+直近15分へ絞ると、dashboard、AIニュース、weather、有効guide、無効guide、favicon、rootの7件がSuccess、Errors 0だった。表示event内の `?_rsc=`、IMAGES warning、exception、`Network connection lost.`、secret、JWT、Bearer、Authorizationはいずれも0件で、prefetch抑制版への切替後にRSC増幅とruntime errorは再発していない。秘密値そのものは取得・表示していない。これによりstagingのprefetch回帰ゲートは完了とするが、production Pages baseline、production Worker/secret/Access/route preflight、rollback再確認、ユーザー承認は未完了のためproduction cutoverはNO-GOを維持する。
+
+staging受け入れ記録commit `7afb66d` はfeature branchへ通常pushし、Draft PR #4で起動したLinux clean-checkout Actions run `31389639132` も全stepに成功した。

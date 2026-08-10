@@ -96,7 +96,7 @@
 - [x] lint、Next build、OpenNext build、staging dry-run、生成RSCの `prefetch:false` をローカル確認
 - [x] prefetch抑制版をLinux clean-checkout Actions run `31311829518` で確認
 - [x] Cloudflare request枠リセット後、prefetch抑制版をstagingへdeployし、単一root tab・無操作11分7秒で追加requestイベントが発生しないことを確認
-- [ ] Next.js 16.3版のWorker tail/ObservabilityでIMAGES warning、exception、5xx、秘密値非露出を再確認（tailのerrorおよび11分観測は0件。Observabilityのevent取得を残す）
+- [x] Next.js 16.3版のWorker Observability直近15分でsmoke 7件Success、Errors 0、`?_rsc=` 0、IMAGES warning・exception・秘密値関連語の表示0件を確認
 
 ## Production cutover
 
