@@ -113,7 +113,7 @@
 - [x] production secret bindingを登録し、名前と新deploymentだけを確認
 - [x] Route追加直前preflightでPages主要route、Access 2境界、production Worker/secret、Workers Route未設定を再確認
 - [x] 最新 `origin/main` のAIニュース更新をbranchへ取り込み、push後のLinux CIを再確認
-- [ ] main同期後の同一HEADからproduction Workerをrouteなしで再deployし、deploymentとsecret binding名を再確認
+- [x] main同期後の同一HEADからproduction Workerをrouteなしで再deployし、deploymentとsecret binding名を再確認
 - [x] production Accessの保護境界とWorkers Route未設定を読み取り確認
 - [x] rollback操作と判断基準をrunbookへ書面化
 - [ ] cutover直前にrollback操作者と判断基準を再確認

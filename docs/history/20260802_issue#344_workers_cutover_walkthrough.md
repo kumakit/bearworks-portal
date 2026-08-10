@@ -354,3 +354,13 @@ Route追加を実行せず、Lunaの独立監査と司令塔Codexのlive再検�
 feature branchを通常pushし、remote branchがHEAD `5fe9a34` と一致することを確認した。そのHEADで起動したDraft PR #4のLinux clean-checkout Actions run `31400619152` は、dependency install、lint、Next.js build、internal Link prefetch policy、OpenNext Workers bundle、production/staging validation、Workers preview route検査の全stepに成功した。旧Pages build commandを参照するCloudflare Pages checkは引き続き別系統であり、本Linux Workers buildの成功とは分離する。
 
 main同期とLinux CIゲートは完了した。production cutoverは、同一HEADからproduction Workerをrouteなしで再deployし、deploymentとsecret binding名を確認するまでNO-GOを維持する。Route、DNS、Access、Pages、production Worker、secretには変更を加えていない。
+
+## 2026-08-11 最新HEADのproduction routeなし再deploy
+
+ユーザーの「次へお願い」を、直前に明示した最新HEADからのproduction Worker routeなし再deploy承認として扱った。cleanなbranch HEAD `8d66bd9`、remote一致、最終Linux clean-checkout CI成功、production依存audit 0件を再確認した。Lunaはtop-level `bearworks-portal`、staging分離、production route/custom domainなし、`workers_dev: false`、`preview_urls: false`、secret binding保持、公開AdSense IDのbuild時設定を条件にrouteなし再deployをGO、Route追加をNO-GOと判定した。
+
+ローカルprocessとenv fileに `NEXT_PUBLIC_ADSENSE_CLIENT_ID` がなかったため、`public/ads.txt` の公開publisher行からproduction client IDをbuild process内だけで導出し、値を表示・保存せずOpenNext buildへ渡した。初回buildはWindows sandboxの設定ファイル読取権限で失敗したが、同じ処理を権限付きで再実行して成功した。生成bundleはproduction IDを含み、CI用dummy IDを含まないこと、secret値をbuild環境へ渡していないことを確認した。Wrangler production dry-runも成功し、bindingは静的assetsだけ、production route指定は0件だった。
+
+同じbundleをtop-level `bearworks-portal` へdeployした。新しいdeploymentが追加され、Wranglerは配信targetなしと報告した。追加のbuild、secret put、staging deployは行っていない。deploy後も `DASHBOARD_API_TOKEN` のbinding名が存在し、Cloudflare dashboard上のproduction Workers Routeは0件だった。deployment ID、secret値、Cloudflare内部IDは記録していない。
+
+公開 `bearworks.uk` rootは200を維持し、未認証dashboardとdashboard APIはCloudflare Accessへ302かつno-storeを維持した。既存Pages、DNS、Access、Workers Route、stagingには変更を加えていない。次のWorkers Route追加は、rollback操作者と10分判定の再確認および別の本番切替承認までNO-GOとする。
