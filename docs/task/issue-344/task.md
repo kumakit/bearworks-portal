@@ -116,8 +116,15 @@
 - [x] main同期後の同一HEADからproduction Workerをrouteなしで再deployし、deploymentとsecret binding名を再確認
 - [x] production Accessの保護境界とWorkers Route未設定を読み取り確認
 - [x] rollback操作と判断基準をrunbookへ書面化
-- [ ] cutover直前にrollback操作者と判断基準を再確認
-- [ ] ユーザーの本番切替承認を得る
+- [x] cutover直前にrollback操作者と判断基準を再確認
+- [x] ユーザーの初回本番切替承認を得る
+- [x] 初回Workers Route追加後、404広告境界違反を検知してRoute削除でPagesへrollback
+- [x] Observabilityで一般404がproduction Workerへ到達していたことを確認
+- [x] 複数root layout用の広告なし `global-not-found` と一般AdSense検出CIを実装
+- [x] 修正版OpenNext previewで対象routeだけ広告あり、無効slug・一般404・非対象routeは広告なしを確認
+- [ ] 修正をcommit・pushし、同一HEADのLinux clean-checkout CIを確認
+- [ ] 同一HEADからproduction Workerをrouteなしで再deploy
+- [ ] ユーザーの再試行承認を得る
 - [ ] Workers custom domain/routeを有効化
 - [ ] 公開route、API、AdSense、metadata、robots、sitemapを検証
 - [ ] 観測期間を完了

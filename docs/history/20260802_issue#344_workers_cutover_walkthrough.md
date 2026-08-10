@@ -364,3 +364,13 @@ main同期とLinux CIゲートは完了した。production cutoverは、同一HE
 同じbundleをtop-level `bearworks-portal` へdeployした。新しいdeploymentが追加され、Wranglerは配信targetなしと報告した。追加のbuild、secret put、staging deployは行っていない。deploy後も `DASHBOARD_API_TOKEN` のbinding名が存在し、Cloudflare dashboard上のproduction Workers Routeは0件だった。deployment ID、secret値、Cloudflare内部IDは記録していない。
 
 公開 `bearworks.uk` rootは200を維持し、未認証dashboardとdashboard APIはCloudflare Accessへ302かつno-storeを維持した。既存Pages、DNS、Access、Workers Route、stagingには変更を加えていない。次のWorkers Route追加は、rollback操作者と10分判定の再確認および別の本番切替承認までNO-GOとする。
+
+## 2026-08-11 production Route初回切替・rollback・404修正
+
+ユーザーの本番切替承認後、Cloudflare dashboardでproduction Workerだけを対象に `bearworks.uk/*` のWorkers Routeを追加した。DNS、Pages project/custom domain、Access、stagingは変更していない。追加直後のsmokeではroot、toukei、有効guide/problem、about、AIニュース、weather、ads.txt、robots、sitemapのstatusと、dashboard/APIのAccess保護は期待どおりだったが、一般404の本文にAdSense識別子を検知した。runbookの即時rollback条件に該当するため、追加したRouteだけを削除した。
+
+Route削除後はCloudflare上でRoute 0件を確認し、公開root/toukeiが200、一般404が404、dashboard/APIがAccessへ302、ads.txtが200へ戻ったことを時間を分けて2回確認した。既存Pagesの一般404にもAdSenseがあるため、当初はPages応答またはRoute伝播前の可能性を残したが、production Worker Observabilityには切替時間帯の一般404を含む7件の成功eventが記録されていた。一般404はproduction Workerで実行され404を返しており、Route伝播前の誤判定ではなくWorker版の広告境界違反と確定した。event詳細の個人情報、内部ID、request識別子は記録していない。
+
+アプリは広告対象と非対象で複数root layoutを使用している一方、全体の未一致URL用ページがなかった。Next.js 16の複数root layout向け `global-not-found` を有効にし、広告scriptを含まない完全HTMLの404を追加した。Linux workflowの非広告判定もCI用dummy IDだけでなく、AdSense script URL、`adsbygoogle`、任意の数値publisher IDを検出する一般判定へ変更し、`/contact` と `/privacy` も明示検査へ追加した。LunaはWorker invocationでの応答元判定、404先行smoke、一般AdSense検出の追加を推奨し、司令塔Codexが実ログ・公式仕様・生成物で再検証して採用した。
+
+ESLintはerror 0（既存warning 4）、Next.js 16.3 production buildとOpenNext 1.20.2 buildは成功した。公開ID相当のdummy値をbuild process内だけへ渡したOpenNext previewでは、rootと有効guideが200かつ広告あり、無効guide/problemと一般404が404かつ広告なし、aboutが200かつ広告なしとなった。生成されたNext/OpenNextの404 artifactにもAdSense識別子がない。Routeは0件のままで、修正のcommit、push、Linux CI、production routeなし再deploy、Route再試行は未実施である。

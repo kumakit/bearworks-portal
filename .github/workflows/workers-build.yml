@@ -101,10 +101,16 @@ jobs:
             fi
           }
 
+          contains_ads() {
+            grep --extended-regexp --quiet \
+              'pagead2\.googlesyndication\.com|adsbygoogle|ca-pub-[0-9]+' \
+              /tmp/response-body
+          }
+
           assert_no_ads() {
             path=$1
             assert_status 200 "$path"
-            if grep --quiet 'ca-pub-0000000000000000' /tmp/response-body; then
+            if contains_ads; then
               echo "AdSense client ID was found on ${path}"
               exit 1
             fi
@@ -132,7 +138,7 @@ jobs:
           assert_status 200 /toukei/guides/learning-roadmap
           grep --quiet 'ca-pub-0000000000000000' /tmp/response-body
           assert_status 404 /toukei/guides/__invalid__
-          if grep --quiet 'ca-pub-0000000000000000' /tmp/response-body; then
+          if contains_ads; then
             echo 'AdSense client ID was found on an invalid guide response'
             exit 1
           fi
@@ -141,20 +147,22 @@ jobs:
           assert_status 200 /toukei/problems/confidence-interval
           grep --quiet 'ca-pub-0000000000000000' /tmp/response-body
           assert_status 404 /toukei/problems/__invalid__
-          if grep --quiet 'ca-pub-0000000000000000' /tmp/response-body; then
+          if contains_ads; then
             echo 'AdSense client ID was found on an invalid problem response'
             exit 1
           fi
           assert_no_ads /about
           assert_no_ads /ai-news
+          assert_no_ads /contact
           assert_no_ads /dashboard
+          assert_no_ads /privacy
           assert_no_ads /weather
           assert_status 200 /ads.txt
           grep --fixed-strings --line-regexp --quiet 'google.com, pub-9560028085973137, DIRECT, f08c47fec0942fa0' /tmp/response-body
           assert_status 200 /robots.txt
           assert_status 200 /sitemap.xml
           assert_status 404 /route-that-does-not-exist
-          if grep --quiet 'ca-pub-0000000000000000' /tmp/response-body; then
+          if contains_ads; then
             echo 'AdSense client ID was found on a 404 response'
             exit 1
           fi
