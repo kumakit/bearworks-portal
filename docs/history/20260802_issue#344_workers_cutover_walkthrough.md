@@ -344,3 +344,13 @@ Route追加を実行せず、Lunaの独立監査と司令塔Codexのlive再検�
 現在のfeature branch HEADはremote branchと一致し、そのHEADに対するLinux clean-checkout buildは成功、production依存のauditは0件だった。旧Pages build commandを参照するCloudflare Pages checkは従来どおり失敗しているが、Workers用Linux buildとは分離されている。一方、`origin/main` はAIニュースデータ更新の1commitだけ先行しており、routeなしでdeploy済みのproduction Workerにも未反映である。
 
 このためGit/CI、Worker/secret、Pages baseline、Accessは個別には条件付きGOだが、production cutover全体はNO-GOとした。次の順序は、最新mainの通常取り込み、feature branch push、同一HEADのLinux CI、同一HEADからのrouteなしproduction再deploy、rollback操作者と10分判定の再確認、Workers Route追加の別承認である。
+
+## 2026-08-10 最新main同期とLinux CI
+
+ユーザーの明示承認後、production secret・Route直前preflight・同期ゲートの作業記録3ファイルだけをcommitした。続いて最新 `origin/main` を通常mergeし、先行していたAIニュース更新1commitを取り込んだ。mergeは競合なしで、merge commitの実質差分は `data/news-data.json` だけだった。rebase、force-push、Cloudflare操作は行っていない。
+
+取り込み後のJSONは最新日10記事について必須項目、所属日付、最新日内URL重複、過去日とのURL重複がないことを確認した。`git diff --check`、ESLint（error 0、既存warning 4）、Next.js 16.3 buildも成功した。Lunaの独立監査は、docsをmerge commitへ混ぜず、mainのAIニュースJSONだけを通常mergeし、Linux clean-checkout CI成功をpush gateとする条件でGOと判定した。
+
+feature branchを通常pushし、remote branchがHEAD `5fe9a34` と一致することを確認した。そのHEADで起動したDraft PR #4のLinux clean-checkout Actions run `31400619152` は、dependency install、lint、Next.js build、internal Link prefetch policy、OpenNext Workers bundle、production/staging validation、Workers preview route検査の全stepに成功した。旧Pages build commandを参照するCloudflare Pages checkは引き続き別系統であり、本Linux Workers buildの成功とは分離する。
+
+main同期とLinux CIゲートは完了した。production cutoverは、同一HEADからproduction Workerをrouteなしで再deployし、deploymentとsecret binding名を確認するまでNO-GOを維持する。Route、DNS、Access、Pages、production Worker、secretには変更を加えていない。

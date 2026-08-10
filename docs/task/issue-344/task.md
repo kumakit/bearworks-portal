@@ -69,6 +69,7 @@
 - [x] main再同期後のHEAD `bc16db0` でLinux clean-checkout Actions run `31260322740` 成功を確認
 - [x] CI結果記録後のdocs-only HEAD `3228cde` でActions run `31260451402` 成功を確認
 - [x] Next 16.3更新HEAD `eff46bf` をpushし、明示的lint stepを含むLinux CIを確認
+- [x] 最新main同期HEAD `5fe9a34` のLinux clean-checkout Actions run `31400619152` で全step成功を確認
 
 ## Workers staging
 
@@ -111,7 +112,7 @@
 - [x] staging/Pagesの正常取得とorigin-local 200を確認し、公開経路403がtoken失効の証拠ではないことを切り分け
 - [x] production secret bindingを登録し、名前と新deploymentだけを確認
 - [x] Route追加直前preflightでPages主要route、Access 2境界、production Worker/secret、Workers Route未設定を再確認
-- [ ] 最新 `origin/main` のAIニュース更新をbranchへ取り込み、push後のLinux CIを再確認
+- [x] 最新 `origin/main` のAIニュース更新をbranchへ取り込み、push後のLinux CIを再確認
 - [ ] main同期後の同一HEADからproduction Workerをrouteなしで再deployし、deploymentとsecret binding名を再確認
 - [x] production Accessの保護境界とWorkers Route未設定を読み取り確認
 - [x] rollback操作と判断基準をrunbookへ書面化
