@@ -100,8 +100,9 @@
 
 ## Production cutover
 
-- [ ] cutover前のPages正常状態を記録
-- [ ] production Worker version、secret、Access、routeを再確認
+- [x] cutover前のPages正常状態を記録
+- [ ] production Workerをrouteなしでdeployし、versionとsecret bindingを確認
+- [x] production Accessの保護境界とWorkers Route未設定を読み取り確認
 - [x] rollback操作と判断基準をrunbookへ書面化
 - [ ] cutover直前にrollback操作者と判断基準を再確認
 - [ ] ユーザーの本番切替承認を得る

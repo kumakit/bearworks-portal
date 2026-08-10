@@ -262,3 +262,15 @@ runtime smokeではroot、AIニュース、weather、有効guideの表示と無�
 直近15分へ絞ると、dashboard、AIニュース、weather、有効guide、無効guide、favicon、rootの7件がSuccess、Errors 0だった。表示event内の `?_rsc=`、IMAGES warning、exception、`Network connection lost.`、secret、JWT、Bearer、Authorizationはいずれも0件で、prefetch抑制版への切替後にRSC増幅とruntime errorは再発していない。秘密値そのものは取得・表示していない。これによりstagingのprefetch回帰ゲートは完了とするが、production Pages baseline、production Worker/secret/Access/route preflight、rollback再確認、ユーザー承認は未完了のためproduction cutoverはNO-GOを維持する。
 
 staging受け入れ記録commit `7afb66d` はfeature branchへ通常pushし、Draft PR #4で起動したLinux clean-checkout Actions run `31389639132` も全stepに成功した。
+
+## 2026-08-10 production cutover事前確認
+
+staging Observability受け入れ記録を含むHEAD `011fa45` をfeature branchへ通常pushした。GitHub上のbranch HEADが同じcommitを指すことを確認し、Draft PR #4のsynchronizeで起動したLinux clean-checkout Actions run `31390194200` は、ESLint、Next.js 16.3 build、internal Link prefetch policy、OpenNext Workers bundle、production/staging bundle、Workers preview routeの全stepに成功した。
+
+既存production Pagesを切替前baselineとして読み取り確認した。root、AIニュース、weather、有効guideは200、無効guideは404、dashboardとdashboard APIはCloudflare Accessへ302かつ `Cache-Control: no-store` だった。`ads.txt`、`robots.txt`、`sitemap.xml` は200で、publisher行、production sitemap参照、production originを確認した。秘密値、Access token、内部IDは取得・記録していない。
+
+現行PagesのHTMLは、rootと `/toukei` 系だけでなく、AIニュース、weather、contact、privacy、無効guideの404を含む確認対象すべてでAdSense scriptを出力していた。これはcutover後の期待状態ではなく、Workers版で非対象routeと404からscriptが消えることを確認するための差分baselineとして記録する。
+
+Cloudflare dashboardではproduction Workers Routeが未設定で、既存Accessのself-hosted applicationが `/dashboard` と `/api/dashboard-data` を保護していることを読み取り確認した。Wranglerでもproduction Workerは未作成のため、production secret bindingはまだ登録・確認できない。既存Pages、DNS、Access policy、production Worker、secret、routeには変更を加えていない。
+
+Lunaの独立監査と司令塔Codexの再検証はいずれも、`011fa45` のpush scopeはGO、production cutoverはNO-GOで一致した。次の安全な順序は、別途本番変更承認後にproduction Workerをrouteなしでdeployし、version・secret binding・Access・rollback担当を再確認した後、さらにroute追加の実行条件を満たしてから `bearworks.uk/*` を接続することである。
