@@ -373,4 +373,6 @@ Route削除後はCloudflare上でRoute 0件を確認し、公開root/toukeiが20
 
 アプリは広告対象と非対象で複数root layoutを使用している一方、全体の未一致URL用ページがなかった。Next.js 16の複数root layout向け `global-not-found` を有効にし、広告scriptを含まない完全HTMLの404を追加した。Linux workflowの非広告判定もCI用dummy IDだけでなく、AdSense script URL、`adsbygoogle`、任意の数値publisher IDを検出する一般判定へ変更し、`/contact` と `/privacy` も明示検査へ追加した。LunaはWorker invocationでの応答元判定、404先行smoke、一般AdSense検出の追加を推奨し、司令塔Codexが実ログ・公式仕様・生成物で再検証して採用した。
 
-ESLintはerror 0（既存warning 4）、Next.js 16.3 production buildとOpenNext 1.20.2 buildは成功した。公開ID相当のdummy値をbuild process内だけへ渡したOpenNext previewでは、rootと有効guideが200かつ広告あり、無効guide/problemと一般404が404かつ広告なし、aboutが200かつ広告なしとなった。生成されたNext/OpenNextの404 artifactにもAdSense識別子がない。Routeは0件のままで、修正のcommit、push、Linux CI、production routeなし再deploy、Route再試行は未実施である。
+ESLintはerror 0（既存warning 4）、Next.js 16.3 production buildとOpenNext 1.20.2 buildは成功した。公開ID相当のdummy値をbuild process内だけへ渡したOpenNext previewでは、rootと有効guideが200かつ広告あり、無効guide/problemと一般404が404かつ広告なし、aboutが200かつ広告なしとなった。生成されたNext/OpenNextの404 artifactにもAdSense識別子がない。
+
+404境界修正commit `f9383a2` をfeature branchへpushし、remote branchが同じcommitを指すことを確認した。同一HEADで起動したLinux clean-checkout Actions run `31407228833` は、dependency install、lint、Next.js build、OpenNext Workers build、production/staging Wrangler validation、Workers preview route検査の全stepに成功した。preview検査には対象routeの広告掲載、無効guide/problemと一般404・about・AIニュース・contact・dashboard・privacy・weatherの広告非掲載、API 401/405/no-store、static asset、ads.txt、robots、sitemap、IMAGES warning非発生が含まれる。Routeは0件のままで、production routeなし再deployとRoute再試行は未実施である。
