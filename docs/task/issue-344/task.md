@@ -129,10 +129,10 @@
 - [x] 公開route、API、AdSense、metadata、robots、sitemapを検証
 - [x] ユーザー承認により観測期間を約16時間30分へ短縮し、18:00 JSTフルsmokeを完了
 - [x] production Worker Observabilityの最終再確認
-- [ ] 別途承認後にPagesを停止
+- [x] 別途承認後、Pages project・既存deployment・custom domain・DNSを保持してGit連携を切断し、自動deployを停止
 
 ## 完了報告
 
 - [x] walkthroughへLuna担当、検証、未検証事項を記録
-- [ ] Issue #344へ結果をコメント
-- [ ] Phase 3-0の完了条件を満たした場合のみ完了扱いにする
+- [x] Issue #344へ最終結果とrollback手順をコメント
+- [x] Phase 3-0の完了条件を確認し、完了扱いにする
