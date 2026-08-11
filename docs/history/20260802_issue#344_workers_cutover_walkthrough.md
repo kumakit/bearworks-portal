@@ -376,3 +376,27 @@ Route削除後はCloudflare上でRoute 0件を確認し、公開root/toukeiが20
 ESLintはerror 0（既存warning 4）、Next.js 16.3 production buildとOpenNext 1.20.2 buildは成功した。公開ID相当のdummy値をbuild process内だけへ渡したOpenNext previewでは、rootと有効guideが200かつ広告あり、無効guide/problemと一般404が404かつ広告なし、aboutが200かつ広告なしとなった。生成されたNext/OpenNextの404 artifactにもAdSense識別子がない。
 
 404境界修正commit `f9383a2` をfeature branchへpushし、remote branchが同じcommitを指すことを確認した。同一HEADで起動したLinux clean-checkout Actions run `31407228833` は、dependency install、lint、Next.js build、OpenNext Workers build、production/staging Wrangler validation、Workers preview route検査の全stepに成功した。preview検査には対象routeの広告掲載、無効guide/problemと一般404・about・AIニュース・contact・dashboard・privacy・weatherの広告非掲載、API 401/405/no-store、static asset、ads.txt、robots、sitemap、IMAGES warning非発生が含まれる。Routeは0件のままで、production routeなし再deployとRoute再試行は未実施である。
+
+## 2026-08-11 production Route再試行・公開QA成功
+
+ユーザーの再試行承認後、branch HEAD `9c8630b` がremoteと一致してcleanであり、同一HEADのLinux clean-checkout Actions run `31407569715` が全step成功であることを再確認した。直前ゲートで同一HEADからrouteなしproduction再deploy、production secret binding名、Pages/Access baselineを確認済みで、Cloudflare上のWorkers Routeが0件であることも再確認した。LunaにはRoute追加前条件、404先行smoke、即時rollback条件、Pages/DNS/Access/staging非変更境界を読み取り専用で再監査させた。Lunaが未更新のtask記録を根拠にNO-GOとした点は、司令塔Codexが同一実行内のGitHub、Cloudflare、公開HTTP証跡で各条件の実充足を再確認してからRoute追加可と判断した。
+
+Cloudflare dashboardでproduction Worker `bearworks-portal` だけを対象にWorkers Route `bearworks.uk/*` を1件追加した。Custom Domain、DNS、Pages project/custom domain、Access、stagingは変更していない。追加から3分5秒で404先行smokeを開始し、無効guide、無効problem、一般404がすべて404かつ一般AdSense識別子なしであることを確認した。
+
+続けてroot、toukei、有効guide/problemが200かつAdSenseあり、about、AIニュース、contact、privacy、weatherが200かつAdSenseなしであることを確認した。`ads.txt`、`robots.txt`、`sitemap.xml` は200で内容条件を満たした。未認証dashboardとdashboard APIはCloudflare Accessへ302かつ `Cache-Control: no-store` を維持した。TLS、主要route status、広告境界、Access境界にrollback条件は発生せず、公開QAはRoute追加から4分12秒で完了した。
+
+production Worker Observabilityには今回の404先行smokeと主要route検査が記録され、23件Success、Errors 0だった。これにより応答元がproduction Workerであることを確認した。秘密値、Access token、内部Cloudflare ID、request識別子は取得・記録していない。QA後もRoute一覧は `bearworks.uk/*` から `bearworks-portal` への1件だけで、Routeを稼働状態に維持した。次のゲートは24時間以上の観測であり、Pages停止は別途承認まで実行しない。
+
+## 2026-08-11 production 24時間観測開始
+
+ユーザーの継続承認後、01:36 JSTに観測開始baselineを取得した。rootとtoukeiは200かつAdSenseあり、一般404は404かつAdSenseなし、aboutとprivacyは200かつAdSenseなし、未認証dashboardとdashboard APIはCloudflare Accessへ302、`ads.txt` は200で、全項目が合格した。直前の公開QAでproduction Worker Observabilityが23件Success、Errors 0であったことを観測開始時のWorker log baselineとした。観測開始時のbrowser制御セッションにはCloudflare tabが残っていなかったため、Observabilityの再読取は未実施として公開HTTP結果と分離した。
+
+Lunaへ24時間の確認項目、即時rollback条件、完了判定、自動チェックの非変更境界を読み取り専用で監査させた。監査結果を反映し、このCodex taskへ約4時間ごと、24時間経過後まで合計6回戻るheartbeatを設定した。各回は公開HTTP、AdSense境界、Accessを読み取り確認し、利用可能な認証済みセッションがある場合だけObservabilityを閲覧する。自動チェックからRoute、DNS、Access、Pages、staging、secret、deploy、cacheを変更せず、異常時はrollback推奨を報告するだけとした。Pages停止は引き続き別途承認までNO-GOである。
+
+## 2026-08-11 18:00 JST 短縮観測ゲート完了
+
+ユーザー承認により、当初の24時間観測を2026-08-11 18:00 JSTまでの約16時間30分へ短縮した。18:01 JSTに最終フルsmokeを実施し、17件すべてが合格した。root、toukei、有効guide/problemは200かつAdSenseあり、一般404と無効guide/problemは404かつAdSenseなし、about、AIニュース、contact、privacy、weatherは200かつAdSenseなしだった。`ads.txt`、`robots.txt`、`sitemap.xml` は200で内容条件を満たし、未認証dashboardとdashboard APIはCloudflare Accessへ302かつ `Cache-Control: no-store` を維持した。最大応答時間は587msで、5xx、意図しない404、広告境界違反、Access迂回、TLS異常、秘密情報露出は検出しなかった。
+
+最終確認時のbrowser制御セッションにCloudflare管理画面の認証済みtabがなかったため、production Worker Observabilityの再読取は実施していない。このため、18:00時点のWorker log上のruntime exception、5xx、異常なRSC/request増加は未確認事項として公開HTTP結果と分離する。公開確認上はrollback条件がなく、Workers Routeのrollbackは推奨しない。確認中にRoute、DNS、Access、Pages、staging、secret、deploy、cacheを変更せず、完了した自動観測を削除した。これはユーザー承認による短縮観測ゲートの完了であり、24時間観測を実施したという記録ではない。Pages停止は引き続き別途承認までNO-GOである。
+
+その後のユーザー継続指示でCloudflare管理画面を開くと既存ログインセッションを安全に利用できたため、設定を変更せずproduction Workerのメトリクスを再確認した。表示中のWorker概要は呼び出し719件、Errors 0で、error chartの表示データにも非0値はなかった。2026-08-09に検出した約487k invocation規模の増幅と比べて異常なrequest増加はなく、画面上にruntime exceptionまたは5xxを示す表示もなかった。`?_rsc` のquery別内訳までは取得していないため、その点だけは直接確認ではなくaggregate metricsからの判定とする。秘密値、内部Cloudflare ID、request識別子は取得・記録していない。これによりproduction Worker Observabilityの最終再確認も合格とし、Pages停止だけを次の独立承認ゲートとして残す。
