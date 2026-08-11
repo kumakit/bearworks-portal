@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import Link from "@/components/InternalLink";
 
 export default function PublicSiteHeader() {
   return (
@@ -12,6 +12,7 @@ export default function PublicSiteHeader() {
             width={24}
             height={24}
             className="rounded-full"
+            unoptimized
             priority
           />
           <span>bearworks.uk</span>

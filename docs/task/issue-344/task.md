@@ -1,0 +1,138 @@
+# Issue #344 Workers/OpenNext 本番移行タスク
+
+## 再開確認
+
+- [x] Issue #344の最新body、comments、state、labels、assignees、milestone、更新日時、URLを取得
+- [x] Issueへ `Status: In Progress` を反映
+- [x] 対象repoと司令塔repoのbranch、HEAD、dirty状態を確認
+- [x] feature branchと最新mainの差分を確認
+- [x] Lunaへmain同期・Linux CI・本番切替論点の読み取り専用監査を委譲
+- [x] 司令塔側でLuna結果を再検証
+
+## 手動計画レビュー
+
+- [x] issue固有の本番移行計画を作成
+- [x] Sonnet/Gemini Pro向け `plan-review-request.md` を作成
+- [x] ユーザーが手動計画レビューを実行
+- [x] レビュー結果をhistoryへ保存
+- [x] 指摘の採否を決定し計画へ反映
+- [x] dashboard APIの `NODE_ENV` 依存を廃止し全環境でAccess headerを必須化
+- [x] `wrangler.jsonc` にAccess先行型の `env.staging` を定義
+- [x] productionをWorkers Routeで切り替えるcutover/rollback runbookを作成
+- [x] LunaへSonnet指摘とGate別修正時期の独立監査を委譲
+- [x] Linux CIへstatic asset header、ads.txt内容、一時ファイルcleanupを反映
+
+## main同期
+
+- [x] remote mainの最新HEADを再確認（`cbbc77a0c99457c13350b47793782e160c3f269b`）
+- [x] `origin/main` を通常merge（`f38da71`、競合なし）
+- [x] `data/news-data.json` の構文、日付・URL重複、記事スキーマを確認
+- [x] `/ai-news` の最新日 `2026-08-02` とHTTP 200を確認
+- [x] production cutover前に `origin/main` の後続AIニュース6commit（latest `d26b232`）を通常merge（`2206e3a`、競合なし）
+- [x] 再同期後のJSONを43日・546記事、最新日 `2026-08-08`、追加6日・60記事として検証
+- [x] Next 16 Linux CI前に `origin/main` のAIニュース更新1commit（`1f40644`）を通常merge（`4b2dcd1`、競合なし）
+- [x] 最新JSONを44日・556記事、最新日 `2026-08-09`、日付重複0として検証
+
+## ローカル検証
+
+- [x] `npm ci`
+- [x] `npm run build`
+- [x] `npm run cf:build`
+- [x] `npx wrangler deploy --dry-run --env=""`
+- [x] `npx wrangler deploy --dry-run --env staging`
+- [x] `git diff --check`
+- [x] secret、生成物、想定外変更の非混入
+- [x] AdSense境界とdashboard API 401/405/no-storeの再確認
+- [x] OpenNext previewでstatic assetのimmutable Cache-Controlを確認
+- [x] `npm audit --omit=dev` を実行
+- [x] production切替前に依存監査を再実行（high 4件: Nano ID、Next.js同梱PostCSS、Sharp）
+- [x] Next.js 16.3.0へ更新し、Nano ID 3.3.18、PostCSS 8.5.23、Sharp 0.35.3へ解決
+- [x] `npm audit --omit=dev` でproduction依存0件を確認
+- [x] `next lint` をESLint 9 CLI / flat configへ移行し、既存内部linkを`next/link`へ修正
+- [x] Next 16.3で `npm ci`、lint、Turbopack build、OpenNext build、production/staging dry-runを確認
+- [x] Linux workflowへstaging dry-runと `/ai-news`・`/dashboard`・`/weather` の200/AdSense非掲載回帰を追加
+- [x] Next 16.3更新後のLinux clean-checkout Actions run `31296166925` が成功
+
+## GitHub / Linux CI
+
+- [x] push前にユーザーの明示承認を得る
+- [x] feature branchをpush
+- [x] main向けDraft PR #4を作成
+- [x] Linux workflowを実行
+- [x] OpenNext SSG cache未設定によるdynamic slug 404を修正
+- [x] dynamic guide/problemの有効slugが2回とも200、無効slugが404
+- [x] route、404、AdSense、API smokeが成功
+- [x] Actions run `30752064048` の成功結果を記録
+- [x] header iconの直接配信とIMAGES binding警告非発生をLinux CIで確認
+- [x] Actions run `30859325094` の成功結果を記録
+- [x] 最新HEAD `0d2560a` のActions run `30859487822` 成功を確認
+- [x] main再同期後のHEAD `bc16db0` でLinux clean-checkout Actions run `31260322740` 成功を確認
+- [x] CI結果記録後のdocs-only HEAD `3228cde` でActions run `31260451402` 成功を確認
+- [x] Next 16.3更新HEAD `eff46bf` をpushし、明示的lint stepを含むLinux CIを確認
+- [x] 最新main同期HEAD `5fe9a34` のLinux clean-checkout Actions run `31400619152` で全step成功を確認
+
+## Workers staging
+
+- [x] staging方式を `env.staging` / `bearworks-portal-staging` / `staging.bearworks.uk` に確定
+- [x] hostname全体のAccess ApplicationをCloudflare上で確認
+- [x] Access policyを先に設定
+- [x] staging Worker/environmentとsecretを設定
+- [x] staging custom domain、DNS、証明書、routeを確認
+- [x] 初回staging公開QAとlog非露出確認（Worker errors 0、secret/JWT/upstream本文なし）
+- [x] `env.IMAGES binding is not defined` の原因をheader iconの最適化経路と特定
+- [x] 課金bindingを増やさずiconを `unoptimized` 化しLinux CI回帰検査を追加
+- [x] 修正版をstagingへ再deploy（version `bc471f8f-69e5-4564-9907-bb49c8be52d1`）
+- [x] rootが直接 `/icon.png` を参照し、`/_next/image` が0件であることを認証済みブラウザで確認
+- [x] 公開route、dynamic slug、404、AdSense掲載・非掲載境界を認証済みstagingで確認
+- [x] dashboardと `/api/dashboard-data` の正常200を確認
+- [x] 新versionのWorker logでIMAGES warning、exception、non-ok、5xx、秘密値露出が0件
+- [x] Access JWTがlogでREDACTED、未認証アクセスが302であることを確認
+- [x] Next.js 16.3 bundleをstaging dry-run後、`bearworks-portal-staging` のみに再deploy
+- [x] Next.js 16.3版でroot、dashboard、dashboard APIの未認証アクセスがAccessへ302となることを再確認
+- [x] 認証済みのroot、toukei、dynamic guide/problem、404、about、AIニュース、dashboard、weatherを再確認
+- [x] Next.js 16.3版でAdSense掲載境界、icon直接配信、fresh tabのroute遷移を再確認
+- [x] Next.js 16.3版で内部LinkのRSC prefetchがFree Worker枠を超過したことをCloudflare metrics/Observabilityで特定
+- [x] 前回QAで残したroot/dashboardのstaging tabを閉じ、上限リセット後の再発源を停止
+- [x] 全内部Linkを共通component経由にし、自動prefetchを既定無効化
+- [x] lint、Next build、OpenNext build、staging dry-run、生成RSCの `prefetch:false` をローカル確認
+- [x] prefetch抑制版をLinux clean-checkout Actions run `31311829518` で確認
+- [x] Cloudflare request枠リセット後、prefetch抑制版をstagingへdeployし、単一root tab・無操作11分7秒で追加requestイベントが発生しないことを確認
+- [x] Next.js 16.3版のWorker Observability直近15分でsmoke 7件Success、Errors 0、`?_rsc=` 0、IMAGES warning・exception・秘密値関連語の表示0件を確認
+
+## Production cutover
+
+- [x] cutover前のPages正常状態を記録
+- [x] production Workerをrouteなしでdeployし、versionと配信targetなしを確認
+- [x] Oracle CloudのRun Command経路を固定文字列で確認し、対象Agentにpluginがないため未実行コマンドをキャンセル
+- [x] stagingにsecret名が存在し、production secret一覧が空であることを値非表示で再確認
+- [x] 一時暗号化exportをstagingへdeployし、ブラウザ安全制御で取得を中止後、clean版再deployと一時鍵削除を完了
+- [x] OCI秘密鍵候補の公開fingerprintを照合し、2026-05-03鍵の一致とCloud ShellからのSSH到達性を確認
+- [x] 明示承認後、一致鍵を暗号化してCloud Shellへ一時転送し、host key固定後に読み取りSSH接続
+- [x] リモート既存tokenを値非表示で一時取得し、status-only照合が403のため全一時ファイルを削除
+- [x] staging/Pagesの正常取得とorigin-local 200を確認し、公開経路403がtoken失効の証拠ではないことを切り分け
+- [x] production secret bindingを登録し、名前と新deploymentだけを確認
+- [x] Route追加直前preflightでPages主要route、Access 2境界、production Worker/secret、Workers Route未設定を再確認
+- [x] 最新 `origin/main` のAIニュース更新をbranchへ取り込み、push後のLinux CIを再確認
+- [x] main同期後の同一HEADからproduction Workerをrouteなしで再deployし、deploymentとsecret binding名を再確認
+- [x] production Accessの保護境界とWorkers Route未設定を読み取り確認
+- [x] rollback操作と判断基準をrunbookへ書面化
+- [x] cutover直前にrollback操作者と判断基準を再確認
+- [x] ユーザーの初回本番切替承認を得る
+- [x] 初回Workers Route追加後、404広告境界違反を検知してRoute削除でPagesへrollback
+- [x] Observabilityで一般404がproduction Workerへ到達していたことを確認
+- [x] 複数root layout用の広告なし `global-not-found` と一般AdSense検出CIを実装
+- [x] 修正版OpenNext previewで対象routeだけ広告あり、無効slug・一般404・非対象routeは広告なしを確認
+- [x] 修正をcommit・pushし、同一HEADのLinux clean-checkout CIを確認
+- [x] 同一HEADからproduction Workerをrouteなしで再deploy
+- [x] ユーザーの再試行承認を得る
+- [x] Workers Route `bearworks.uk/*` をproduction Workerへ有効化
+- [x] 公開route、API、AdSense、metadata、robots、sitemapを検証
+- [x] ユーザー承認により観測期間を約16時間30分へ短縮し、18:00 JSTフルsmokeを完了
+- [x] production Worker Observabilityの最終再確認
+- [ ] 別途承認後にPagesを停止
+
+## 完了報告
+
+- [x] walkthroughへLuna担当、検証、未検証事項を記録
+- [ ] Issue #344へ結果をコメント
+- [ ] Phase 3-0の完了条件を満たした場合のみ完了扱いにする

@@ -1,0 +1,402 @@
+# Issue #344 Workers/OpenNext移行再開 walkthrough
+
+## 対象
+
+- Issue: `kumakit/mission-control#344`
+- repo: `C:\Users\kumat\dev\bearworks-portal`
+- branch: `codex/issue-344-phase3-ads-scope`
+- 実施日: 2026-08-02
+
+## 計画レビュー反映
+
+Sonnetの条件付き承認を `20260802_issue#344_plan_review.md` に保存し、司令塔Codexが実ファイルとCloudflare公式仕様で採否を判断した。
+
+- stagingは `env.staging` / `bearworks-portal-staging` / `staging.bearworks.uk` とした。
+- staging hostname全体へのCloudflare Accessをdeploy前提条件とした。
+- dashboard APIは `NODE_ENV` に依存せず、全環境でAccess headerを必須にした。
+- productionはWorkers Custom DomainへDNS移行せず、既存Pages DNSの前段へWorkers Routeを追加する方針へ変更した。
+- Route削除でPagesへ戻すcutover/rollback runbookと、10分の判断期限を作成した。
+- 現行Workers Static Assetsは `_headers` をサポートするため、削除せず実レスポンスを検証対象とした。
+
+## Luna担当
+
+Luna task `019fc2ae-34be-7151-ac8d-26355f135c26` へSonnet P1/P2、Wrangler環境継承、API環境判定、CI cleanup、`ads.txt`、`_headers`、canonicalを読み取り専用で監査させた。
+
+Lunaの指摘を受け、CIへ次を追加した。
+
+- hashed static assetの200とimmutable `Cache-Control`
+- `ads.txt` のproduction publisher行
+- preview終了時の `.dev.vars` と `/tmp` 一時ファイルcleanup
+
+Lunaはファイル編集、commit、push、GitHub更新、deployを行っていない。採否と差分は司令塔Codexが再確認した。
+
+## main同期
+
+- fetch後の `origin/main`: `cbbc77a0c99457c13350b47793782e160c3f269b`
+- 分岐後の5コミットは `data/news-data.json` だけを変更
+- `git merge --no-ff origin/main` を実行し、merge commit `f38da71` を作成
+- 競合なし、rebase/force pushなし
+- JSONは37日分、486記事、日付重複なし、提供URL重複なし、最新日 `2026-08-02`
+
+## ローカル検証
+
+成功:
+
+- `npm ci`
+- `npm run build`（Next.js 15.5.21、32 static pages）
+- `npm run cf:build`（OpenNext 1.20.2、Windows非完全互換warningのみ）
+- `npx wrangler deploy --dry-run --env=""`
+- `npx wrangler deploy --dry-run --env staging`
+- production Next serverでroot 200、dynamic guide 200、不存在route 404、`/ai-news` 200・最新日表示
+- rootだけAdSenseあり、`/about` と404にAdSenseなし
+- `/ads.txt` のpublisher ID、dashboard API 401/405/no-store、token非露出
+- OpenNext previewでhashed CSS 200、`Cache-Control: public, max-age=31536000, immutable`
+- workflow YAML parse、`git diff --check`
+
+検証用 `.env.local` はdummy publisher IDだけを入れたgitignored一時ファイルとして使用し、検証後に削除した。previewの3100/8788 listenerも停止済み。
+
+## 依存監査
+
+`npm audit --omit=dev` はhigh 3件を報告した。
+
+- Next.js 15.5.21内部のPostCSS 8.4.31
+- optional Sharp 0.34.5
+
+npmの自動fix提案はNext.js 9.3.3へのmajor downgradeであり不適切なため実行していない。Next.js 15.5.22も同じPostCSS指定とSharp `^0.34.3` のため、未検証overrideも行っていない。production cutover前にadvisory、runtime到達性、公式修正版を再確認し、未評価のまま進めない。
+
+## Linux CIとOpenNext SSG修正
+
+branchをpushしてDraft PR #4を作成した。最初のLinux clean-checkout Actions run `30751272134` では、Next.js build、OpenNext build、Wrangler dry-runまでは成功したが、Workers previewの `/toukei/guides/learning-roadmap` が404となった。
+
+OpenNext公式Issue #695と現行のSSG cache構成を照合し、`generateStaticParams()` で生成したページをWorkers Static Assetsから読み出すincremental cacheが未設定であることを原因と判断した。`open-next.config.ts` へ次を追加した。
+
+- `static-assets-incremental-cache`
+- `enableCacheInterception: true`
+
+repo内にISR、時間ベース再検証、`revalidatePath`、`revalidateTag` の利用がないため、再検証をサポートしない読み取り専用cacheで要件を満たす。将来ISRを導入する場合はR2、Queue、Tag Cacheを含む構成へ見直す。
+
+Luna task `019fc2ae-34be-7151-ac8d-26355f135c26` にこの判断を読み取り専用で再監査させ、採用可、リスク中、Linux clean-checkout必須との判定を得た。司令塔Codexは依存解決、全差分、ローカルbuild、dry-run、preview routeを独立に確認した。
+
+再発防止としてLinux CIへ次を追加した。
+
+- 有効なguide/problem slugを2回取得し、cache interception後も200であること
+- 無効なguide/problem slugが404であること
+- 無効slugの404にAdSense client IDが含まれないこと
+
+修正commit `0cd431d` をpush後、Actions run `30752064048` は1分50秒で成功した。Next.js build、OpenNext build、Wrangler dry-run、Workers previewのroute、AdSense境界、static asset header、dashboard API 401/405/no-storeがすべて通過した。
+
+外部のCloudflare Pages checkは失敗したままだが、これは削除済みのPages build commandを参照する旧Pages連携であり、GitHub ActionsのWorkers buildとは分離した。既存production Pagesの停止・削除、本番Workers deploy、route変更は行っていない。
+
+## 未実施
+
+- Issue #344への今回のpush・Linux CI結果コメント
+- Cloudflare Access/DNS/secretの画面確認
+- staging deployと受け入れ
+- production Worker deploy、Workers Route追加、公開QA
+- Pages停止・削除
+
+次のゲートはCloudflare Accessを先行設定したstaging deployと受け入れであり、本番切替には改めてユーザー承認が必要である。
+
+## 2026-08-04 staging初回受け入れとIMAGES warning修正
+
+Cloudflare Accessをhostname全体へ先行設定し、`bearworks-portal-staging` を `staging.bearworks.uk` へdeployした。確認時のWorker versionは `7422e1a4-9d1b-4284-8905-5ef9011ac0a6`。dashboard API用secretはbinding名だけを確認し、値は表示・記録していない。
+
+Access経由のstaging受け入れでは、公開route、AdSense境界、dashboard API、Worker observabilityを確認した。Worker errorsは0で、secret、Access JWT、upstream本文のlog非露出も確認した。一方、header iconのリクエストごとに `env.IMAGES binding is not defined` が記録された。画像自体はOpenNextのfallbackで表示されるが、Cloudflare Images bindingは設定されていなかった。
+
+Luna task `019fc2ae-34be-7151-ac8d-26355f135c26` へ、`next/image` 利用箇所、OpenNext fallback、課金を伴わない最小修正、Linux CI回帰条件を読み取り専用で監査させた。repo内の `next/image` はheader iconの1箇所だけで、静的な `public/icon.png` にはcomponent単位の `unoptimized` が適切との判定を得た。Lunaはファイル編集、Git操作、deploy、外部サービス更新を行っていない。
+
+司令塔Codexは `components/PublicSiteHeader.tsx` のiconだけを `unoptimized` 化し、Linux CIへ次の回帰検査を追加した。
+
+- root HTMLが `src="/icon.png"` を直接参照する
+- root HTMLに `/_next/image` が含まれない
+- `/icon.png` が200かつ `image/png` である
+- preview logに `env.IMAGES binding is not defined` が出ない
+
+修正後、`npm run build`、`npm run cf:build`、production/staging両方のWrangler dry-runに成功した。Next/OpenNext生成物でも直接 `/icon.png` を参照し、`/_next/image` を使用しないことを確認した。commit `7e7662a` に対するLinux clean-checkout Actions run `30859325094` も1分43秒で成功し、追加したicon直接配信とpreview warning非発生の回帰検査を通過した。stagingの再deployと実環境でのwarning消失確認は次ゲートとして未実施である。
+
+## 2026-08-08 staging再deployと受け入れ
+
+作業再開時にIssue #344、Draft PR #4、branch、Cloudflare認証、DNS、Access 302、staging secret binding名を再確認した。Luna task `019fc2ae-34be-7151-ac8d-26355f135c26` へ再deploy後のAccess、画像経路、API、AdSense、log、rollback条件を読み取り専用で再監査させ、HEAD `0d2560a` のstaging再deployはGO、実環境受け入れ完了まではproduction NO-GOとの判定を得た。
+
+公開AdSense IDをbuild時だけ設定して `npm run cf:build` を実行し、OpenNext bundleとstaging dry-runを再確認した。`bearworks-portal-staging` だけを再deployし、custom domainは `staging.bearworks.uk` のまま、新version `bc471f8f-69e5-4564-9907-bb49c8be52d1` へ100%切り替わった。production Worker `bearworks-portal` は存在せず、既存 `https://bearworks.uk/` はHTTP 200を維持している。
+
+認証済みstagingで次を確認した。
+
+- root header iconは `src="/icon.png"`、`/_next/image` 利用0件
+- rootと `/toukei`、有効guide/problemはAdSense scriptあり
+- `/about`、一般404、無効guide/problemはAdSense scriptなし
+- 有効dynamic slugは正しいtitle/h1、無効slugは404
+- dashboardが実データを表示し、Worker log上の `/api/dashboard-data` は200
+- 未認証アクセスはAccessへ302、認証済みrequestのAccess JWT/cookie/emailはtail上でREDACTED
+
+新versionのtail 9イベントを集計し、IMAGES binding warning 0、exception 0、non-ok outcome 0、5xx 0、`DASHBOARD_API_TOKEN` 文字列0、Bearer文字列0を確認した。旧versionのeventは0件だった。ブラウザconsoleには既知のRecharts width/height warningが1件残るが、IMAGES binding修正とは無関係で、dashboard表示とAPI成功を妨げていない。採取した一時logは確認後に削除し、QA用tailプロセスもすべて停止した。
+
+再開時のfetchで `origin/main` は `d26b232` まで進んでおり、前回基準 `cbbc77a` 以降の6commitはすべて `data/news-data.json` のAIニュース更新だった。production cutover前に通常merge、Linux clean-checkout CI、依存監査の再評価を行う。今回、production route、Pages、DNS、Issue、PR、remote branchは変更していない。
+
+## 2026-08-08 main再同期とcutover前検証
+
+Issue #344の最新状態とbranchを再確認し、Luna task `019fc2ae-34be-7151-ac8d-26355f135c26` へ `origin/main` 同期の競合、AIニュースJSON、AdSense・Access・Workers境界への影響を読み取り専用で監査させた。Lunaは通常mergeをGOと判定し、ファイル編集、Git/GitHub操作、deploy、Cloudflare操作を行っていない。
+
+`cbbc77a` 以降のmain側6commitが `data/news-data.json` だけを変更し、feature側は同ファイルを変更していないことを司令塔Codexが再確認した。`git merge --no-ff origin/main` を実行し、merge commit `2206e3a` を作成した。競合、rebase、force pushはない。
+
+再同期後のJSONは次のとおり検証した。
+
+- 43日分、546記事、最新日 `2026-08-08`
+- 日付降順、日付重複なし
+- URLのある464記事はすべてHTTP(S)形式、URL重複なし
+- 追加日 `2026-08-03` から `2026-08-08` は6日・60記事
+- 追加分は各日10記事で、title、content、source、published_at、url、categoryがすべて存在
+- 追加分のpublished_atは所属日付と一致
+- 旧記事に存在する任意fieldの省略は、`NewsGroup` / `Article` の型定義上許容されるため変更していない
+
+ローカルでは公開AdSense IDをprocess環境だけへ設定し、`npm run build`、`npm run cf:build`、production/staging両方のWrangler dry-run、`git diff --check` に成功した。sandbox内のOpenNext/Wrangler初回実行はWindowsのディレクトリアクセス拒否とWrangler log作成EPERMで停止したが、同じコマンドの権限付き再実行は成功したため、アプリ・設定の失敗ではない。Linux clean-checkout CIを最終判定にする。
+
+`npm audit --omit=dev` はhigh 4件を報告した。内訳は直接依存のNano ID 3系、Next.js 15.5.21同梱PostCSS、Sharpである。監査の自動fixは一部でNext.js 16.3.0へのbreaking changeを含むため実行していない。本番切替判断ではruntime到達性と公式修正版を再確認する。production deploy、route、Pages、DNS、staging、Issue、PR metadataは変更していない。
+
+main同期と検証記録を含むHEAD `bc16db0` を通常pushし、Draft PR #4の `pull_request` synchronizeでLinux clean-checkout Actions run `31260322740` を起動した。runは1分51秒で成功し、`npm ci`、Next.js build、OpenNext Workers bundle、Wrangler bundle検証、Workers preview route回帰検査がすべて通過した。`actions/checkout@v4` と `actions/setup-node@v4` のNode.js 20 deprecation annotationが1件あるが、job失敗ではなく将来のActions runtime更新事項として分離する。
+
+このCI結果だけを記録したdocs-only HEAD `3228cde` でもActions run `31260451402` が1分46秒で成功し、同じLinux clean-checkout検査を完走した。
+
+## 2026-08-09 Next.js 16.3依存修正
+
+production cutover前の依存監査high 4件を解消するため、Next.jsを15.5.21から16.3.0へ更新した。Luna task `019fc2ae-34be-7151-ac8d-26355f135c26` へ、削除API、async request API、OpenNext互換性、動的route、CI検証範囲の読み取り専用監査を委譲した。Lunaはファイル編集、Git/GitHub操作、deploy、Cloudflare操作を行っていない。
+
+司令塔Codexは公式Next.js 16移行ガイド、npm package metadata、repo内コードを再確認し、次の最小範囲を採用した。
+
+- `next`: 15.5.21から16.3.0
+- `eslint-config-next`: 15.5.21から16.3.0
+- `eslint`: 8系から9.39.5
+- 削除された `next lint` を `eslint .` と `eslint.config.mjs` へ移行
+- 内部root link 3箇所を `next/link` へ移行
+- Next 16で新規検出された既存のeffect内state更新はwarningとして可視化し、dashboardの非同期処理変更は別変更へ分離
+- `next build` がlintを実行しないため、Linux workflowへ明示的lint stepを追加
+- Next 16が必須更新した `tsconfig.json` の `jsx: react-jsx` と `.next/dev/types/**/*.ts` を採用
+
+React 18.2以上はNext 16.3.0のpeer範囲内で、現行buildも成功した。今回の目的はproduction依存high 4件の解消とNext 16.3移行であるため、React 19へのmajor更新は同時に含めていない。OpenNext 1.20.2はNext `>=16.2.11` をpeer範囲に含むため維持した。
+
+ローカル検証結果:
+
+- Node.js 24.14.1 / npm 11.11.0で `npm ci` 成功
+- `npm run lint` 成功（error 0、既存warning 4）
+- Next.js 16.3.0 Turbopack build成功（31 static/SSG pages、dashboard API dynamic）
+- OpenNext 1.20.2 Workers bundle生成成功
+- production/staging両方のWrangler dry-run成功（gzip 1573.51 KiB）
+- Nano ID 3.3.18、PostCSS 8.5.23、Sharp 0.35.3へ解決
+- `npm audit --omit=dev` は0件
+- 全依存監査はdev-onlyでlow 1、moderate 2、high 2が残る。Wrangler/miniflare/undici、esbuild、build tooling経路であり、production runtime依存0件と分離して記録した
+- `git diff --check` はerrorなし
+
+WindowsのOpenNext runtimeは引き続き非完全互換である。Next 16.3更新後のAdSense境界、dynamic slug 2回取得、404、API 401/405/no-store、static asset header、IMAGES warning非発生は、push承認後のLinux clean-checkout CIを最終判定とする。この作業ではpush、Issue/PR更新、deploy、Cloudflare、production route、Pages、DNSを変更していない。
+
+push前にLunaへcommit `95ff273` とLinux workflowを再監査させ、package/peer整合とpush readinessはGO、Linux CI未実行のためproductionはNO-GOとの判定を得た。司令塔Codexは指摘を実workflowと照合し、今回Linkを変更した `/ai-news`、`/dashboard`、`/weather` のHTTP 200とAdSense非掲載、ならびにstaging設定のWrangler dry-runをLinux workflowへ追加した。認証済みdashboard API 200はsecretと実Accessを必要とするためCIへ持ち込まず、staging実環境の別ゲートとして維持する。
+
+push直前のfetchで `origin/main` が `1f40644` へ進んでいることを検出した。追加1commitは `data/news-data.json` のAIニュース更新だけで、Next 16変更とは非重複だった。JSONを44日・556記事、最新日 `2026-08-09`、日付重複0として検証し、rebaseやforce pushを使わず通常merge `4b2dcd1` で取り込んだ。最新main込みのNext 16.3 Turbopack buildは31ページを正常生成した。
+
+Next 16.3更新、Linux CI拡張、最新main同期、検証記録を含むHEAD `eff46bf` を既存branchへ通常pushした。Draft PR #4の `pull_request` synchronizeでLinux clean-checkout Actions run `31296166925` が起動し、1分15秒で成功した。
+
+- Node.js 22で `npm ci` とESLint flat config lintに成功
+- Next.js 16.3.0 Turbopack buildとOpenNext 1.20.2 bundle生成に成功
+- production/staging両方のWrangler dry-runに成功
+- root、dynamic guide/problem、無効slug、404、ads.txt、robots、sitemapを確認
+- `/about`、`/ai-news`、`/dashboard`、`/weather` の200とAdSense非掲載を確認
+- icon直接配信、static asset immutable header、dashboard API 401/405/no-store、token非露出、IMAGES warning非発生を確認
+
+annotationはGitHub Actions v4のNode.js 20 runtime非推奨と、既存の統計ページ内 `<img>` warningの2件で、job failureではない。CI成功はproduction cutover承認ではなく、Next 16.3移行のLinux build/preview gate通過として扱う。
+
+## 2026-08-09 Next.js 16.3 staging再deployと受け入れ
+
+Next.js 16.3更新後のstaging実環境ゲートを進めた。Luna task `019fc2ae-34be-7151-ac8d-26355f135c26` へ、staging設定、Access、secret binding、検証route、rollback条件を読み取り専用で再監査させた。Lunaはstaging限定deployを条件付きGO、productionをNO-GOと判定し、ファイル編集、Git/GitHub操作、deploy、Cloudflare操作は行っていない。
+
+司令塔Codexはsecret値を取得せずbindingの存在だけを確認した。deploy前の未認証HTTP確認ではroot、`/dashboard`、`/api/dashboard-data` がCloudflare Accessへ302となり、staging hostname全体の保護を確認した。公開AdSense IDはprocess環境だけへ設定し、Next.js 16.3 / OpenNext 1.20.2のbundleを再生成した。staging dry-run成功後、`bearworks-portal-staging` だけを再deployした。既存staging versionをrollback基準として保持し、production Worker、production route、Pages、DNS、Issue、PRは変更していない。
+
+認証済みstagingで次を確認した。
+
+- root、`/toukei`、有効guide/problemは正しいtitle/h1を表示し、AdSense scriptあり
+- 有効guide/problemは同一slugを2回取得して正常表示、無効slugは404かつAdSense scriptなし
+- `/about`、`/ai-news`、`/dashboard`、`/weather`、`/contact`、`/privacy` は正常表示かつAdSense scriptなし
+- `/ai-news` は最新日 `2026-08-09` を表示
+- dashboardはloadingやfallbackに留まらず実データ画面まで表示
+- rootは `/icon.png` を直接参照し、`/_next/image` を使用しない
+- fresh tabでroot、dashboard、dynamic guide、about、weatherを再確認し、deploy切替時に旧tabで一度発生したRSC payload失敗は再現しなかった
+
+fresh tabのconsoleには既知のRecharts width/height warningと、外部weather API失敗時にmock fallbackを使った記録が残った。どちらも画面表示を妨げていないが、weather実データ経路は別の運用確認事項として残す。ブラウザ側のブロッカーにより `/ads.txt`、`/robots.txt`、`/sitemap.xml` の直接navigationは確認できなかったため、最終HEADのLinux clean-checkout Actions run `31296262750` で通過した内容・status検査を根拠とした。
+
+Worker tailは2回起動して主要routeへrequestを発生させたが、今回のセッションではイベントを取得できなかった。そのため、Next.js 16.3版についてIMAGES warning、exception、5xx、secret・Access情報非露出のlog検査は未確認であり、production cutover前の残ゲートとする。Access bypass、5xx、主要画面不成立は観測されなかったためstagingはrollbackせず維持するが、productionは引き続きNO-GOである。
+
+## 2026-08-09 Next.js 16 RSC prefetch増幅の検出と抑制
+
+Linux CI成功後にWorker tailを再試行したところ、認証済みstagingはアプリ画面ではなくCloudflareのplan limit画面を返した。未認証の単発HTTP確認はAccessへ302となる一方、認証済みrequestはWorker到達前に停止されるため、Wrangler tailにはイベントが出なかった。
+
+Cloudflare管理画面を設定変更なしで読み取り確認し、Free planのaccount-wide request枠が `487,177 / 100,000`、staging Worker単体が約487k invocation・約481k asset requestとなっていることを確認した。新staging versionのメトリクスはinvocation error 0、asset 4xx/5xx 0だったが、request rateは約180 req/sまで増加していた。これは機能成功ではなく、可用性と利用量の重大な回帰として扱う。
+
+Workers Observabilityは日次イベント上限超過により1% samplingへ縮退していた。取得済みイベントではroot、`/toukei`、`/toukei/guides`、`/toukei/problems`、`/dashboard/gcp`、`/dashboard/cloudflare` への `?_rsc=` GETが短時間に反復し、error eventは `Network connection lost.` だった。secret、JWT、Bearer、IMAGES binding warningは表示中のsampleにはなかったが、全量観測ではないため非露出・warningなしの最終証明には使用しない。
+
+開いたままの前回QA tabを確認すると、rootとdashboardの2tabが残っており、Observabilityの2系統のRSC request集合と一致した。両tabを閉じ、上限リセット後に同じclientが自動prefetchを再開しないよう停止した。Cloudflare plan、billing、Worker、Access、DNS、domain、deploy設定は変更していない。
+
+repo内には `router.prefetch`、`router.refresh`、timer/polling loopがなく、反復routeはviewport内の `next/link` 集合と一致した。Next.js 16はnavigation/prefetch方式を変更し、公式移行ガイドでも個々のprefetch requestが増える場合があるとしている。公式のresource使用量抑制手段である `prefetch={false}` を全内部Linkの既定値とする `components/InternalLink.tsx` を追加し、既存Link importをこの共通componentへ置き換えた。クリック時のclient-side navigationは維持し、自動RSC prefetchだけを停止する。
+
+再発防止としてLinux workflowへ次を追加した。
+
+- `next/link` の直接importを `components/InternalLink.tsx` だけに限定
+- 共通componentの `prefetch = false` とNextLinkへのprop伝播を検査
+- Next build生成RSC payloadに `"prefetch":false` が含まれることを検査
+
+ローカルではESLint error 0（既存warning 4）、Next.js 16.3 Turbopack build、OpenNext 1.20.2 bundle、staging Wrangler dry-runに成功した。生成RSC payloadでも全内部Linkの `prefetch:false` を確認した。production cutoverはNO-GOのままであり、次はLinux clean-checkout CI、Cloudflare日次枠リセット後のstaging deploy、単一tab・無操作10分でRSC requestが収束すること、tail/Observabilityの秘密値非露出とruntime warning非発生を確認する。
+
+commit `468206e` を既存feature branchへ通常pushし、Draft PR #4のsynchronizeでLinux clean-checkout Actions run `31311829518` を実行した。runは1分14秒で成功し、`npm ci`、ESLint、Next.js 16.3 build、internal Link prefetch policy、OpenNext bundle、production/staging dry-run、Workers preview route回帰をすべて通過した。
+
+新しいpolicy stepでは、`next/link` の直接importが共通componentだけであること、`prefetch = false` の既定値とprop伝播、生成RSC payloadの `"prefetch":false` を確認した。annotationはActions v4のNode.js 20 runtime非推奨と、既存の統計ページ内 `<img>` warningの2件で、今回のprefetch抑制失敗ではない。CI成功はquota reset後のstaging runtime受け入れやproduction cutover承認を代替しない。
+
+## 2026-08-10 request枠回復後のstaging再deployとアイドル観測
+
+Cloudflare Access認証後の `staging.bearworks.uk` がplan limit画面ではなくアプリrootを返すことを確認し、日次request枠の遮断が解消したと判断した。commit `761dea7` をfeature branchへpushし、Draft PR #4で起動したLinux clean-checkout Actions run `31387999437` は、prefetch policyを含む全stepに成功した。
+
+staging secretは名前の存在だけを確認して値を取得せず、`wrangler deploy --dry-run --env staging`、Next.js 16.3 / OpenNext 1.20.2 buildを通した。続いて `--env staging` を明示して `bearworks-portal-staging` のみにdeployした。production Worker、route、DNS、Pages、Access policy、billing設定は変更していない。
+
+認証済みrootを単一tabで再読込し、11分7秒無操作で保持した。Worker tailには観測開始後の追加requestイベント、error、反復 `?_rsc=` requestが出ず、root画面も観測終了時まで正常だった。観測開始前のCloudflare Access OAuth遷移で発生したbrowser consoleの中断記録は、stagingアプリruntimeのerrorとは分離した。
+
+runtime smokeではroot、AIニュース、weather、有効guideの表示と無効guideの404を確認し、smoke中のWorker errorは0件だった。dashboardはページ到達とtitleまでを確認し、非公開データ本文は読み取っていない。tailに通常event自体が出なかったため、Observability eventでのIMAGES warning、exception、5xx、secret/JWT/Bearer非露出の再確認は残ゲートとする。RSC prefetch増幅の再発は確認されなかったが、production cutoverは引き続きNO-GOである。
+
+その後Cloudflare Worker Observabilityの通常eventを読み取り確認した。1時間表示ではRSC反復群と唯一の `Network connection lost.` errorが新version切替直前に集中し、切替後はrootの単発requestと実施済みsmoke routeだけだった。Worker概要の直近24時間metricsもinvocationが前日比96.74%減、error 0を示した。
+
+直近15分へ絞ると、dashboard、AIニュース、weather、有効guide、無効guide、favicon、rootの7件がSuccess、Errors 0だった。表示event内の `?_rsc=`、IMAGES warning、exception、`Network connection lost.`、secret、JWT、Bearer、Authorizationはいずれも0件で、prefetch抑制版への切替後にRSC増幅とruntime errorは再発していない。秘密値そのものは取得・表示していない。これによりstagingのprefetch回帰ゲートは完了とするが、production Pages baseline、production Worker/secret/Access/route preflight、rollback再確認、ユーザー承認は未完了のためproduction cutoverはNO-GOを維持する。
+
+staging受け入れ記録commit `7afb66d` はfeature branchへ通常pushし、Draft PR #4で起動したLinux clean-checkout Actions run `31389639132` も全stepに成功した。
+
+## 2026-08-10 production cutover事前確認
+
+staging Observability受け入れ記録を含むHEAD `011fa45` をfeature branchへ通常pushした。GitHub上のbranch HEADが同じcommitを指すことを確認し、Draft PR #4のsynchronizeで起動したLinux clean-checkout Actions run `31390194200` は、ESLint、Next.js 16.3 build、internal Link prefetch policy、OpenNext Workers bundle、production/staging bundle、Workers preview routeの全stepに成功した。
+
+既存production Pagesを切替前baselineとして読み取り確認した。root、AIニュース、weather、有効guideは200、無効guideは404、dashboardとdashboard APIはCloudflare Accessへ302かつ `Cache-Control: no-store` だった。`ads.txt`、`robots.txt`、`sitemap.xml` は200で、publisher行、production sitemap参照、production originを確認した。秘密値、Access token、内部IDは取得・記録していない。
+
+現行PagesのHTMLは、rootと `/toukei` 系だけでなく、AIニュース、weather、contact、privacy、無効guideの404を含む確認対象すべてでAdSense scriptを出力していた。これはcutover後の期待状態ではなく、Workers版で非対象routeと404からscriptが消えることを確認するための差分baselineとして記録する。
+
+Cloudflare dashboardではproduction Workers Routeが未設定で、既存Accessのself-hosted applicationが `/dashboard` と `/api/dashboard-data` を保護していることを読み取り確認した。Wranglerでもproduction Workerは未作成のため、production secret bindingはまだ登録・確認できない。既存Pages、DNS、Access policy、production Worker、secret、routeには変更を加えていない。
+
+Lunaの独立監査と司令塔Codexの再検証はいずれも、`011fa45` のpush scopeはGO、production cutoverはNO-GOで一致した。次の安全な順序は、別途本番変更承認後にproduction Workerをrouteなしでdeployし、version・secret binding・Access・rollback担当を再確認した後、さらにroute追加の実行条件を満たしてから `bearworks.uk/*` を接続することである。
+
+## 2026-08-10 production Workerの非公開初回deploy
+
+ユーザーの「次に進んで」を、前段で明示したproduction Workerのroute未接続deploy承認として扱った。Issue #344、runbook、branch `codex/issue-344-phase3-ads-scope`、HEAD `3b2233e`、Cloudflare認証、production設定を再確認し、Lunaへno-route deploy、secret登録順序、route追加停止条件の読み取り専用監査を委譲した。Lunaと司令塔Codexはいずれも、top-level production設定にroute/custom domainがなく、`workers_dev: false`、`preview_urls: false` のため、初回deploy単体は既存Pages、DNS、Accessへ公開経路を追加しないと判定した。
+
+deploy前に `npm ci`、ESLint（error 0、既存warning 4）、公開publisher IDをbuild時だけ設定したNext.js 16.3 / OpenNext 1.20.2 build、production Wrangler dry-runを実行した。bundleはgzip 1574.22 KiB、production依存の `npm audit --omit=dev` は0件だった。`origin/main` はAIニュースJSONだけを変更する1commit進んでいるため、公開route接続前に通常merge、push、Linux CIを再実行する残ゲートとして分離した。
+
+`bearworks-portal` をproduction top-level設定で初回deployし、Cloudflareが配信targetなしと報告したこと、versionが100%有効であることを確認した。deploy後も公開 `bearworks.uk` はHTTP 200を維持し、既存Pages、DNS、Access policy、Workers Routeは変更していない。
+
+production secret一覧は空だった。以前作成した一時ファイルの候補値を実値非表示で上流APIへ照合したが403となり、有効性を確認できなかったため登録していない。別候補の推測、secret値の表示、tracked fileへの保存は行っていない。production Workerは公開入口がないまま維持し、有効な既存tokenを安全に再取得・照合して `DASHBOARD_API_TOKEN` の名前だけを確認できるまでWorkers Route追加を禁止する。
+
+## 2026-08-10 既存token再取得経路の確認
+
+ユーザーのOracle Cloudログイン完了後、Cloud Shellから対象インスタンスを1台に限定し、OCI Run Commandの経路を秘密値を含まない固定文字列だけで検証した。Run Command作成要求は受理されたが、対象インスタンスのOracle Cloud AgentにRun Command pluginが存在せず、実行状態は受理済みのまま進まなかった。未実行コマンドはキャンセルし、token取得、上流照合、production secret登録は行っていない。
+
+Cloudflare側は名前だけを再確認し、staging Workerには `DASHBOARD_API_TOKEN` が存在し、production Workerのsecret一覧は空のままだった。production設定は引き続きrouteなし、`workers_dev: false`、`preview_urls: false` であり、Pages、DNS、Access、Workers Routeに変更はない。
+
+Lunaの読み取り専用監査は、status-onlyの上流照合に成功した後だけproduction secretを登録し、登録後は名前と新versionだけを確認してroute追加へ進まない条件付きGOと判定した。既存値を安全に取得できる経路が未確立のため、production secret登録とroute追加はNO-GOを維持する。
+
+## 2026-08-10 一時暗号化exportの実行と撤去
+
+ユーザーの明示承認後、staging hostname全体の未認証アクセスがCloudflare Accessへ302となることを再確認した。Windowsユーザー専用ACLの一時ディレクトリへ3072-bit RSA鍵ペアを生成し、OAEP/SHA-256の固定文字列round-tripに成功した。秘密鍵はrepo、Worker、ブラウザへ渡さず、一時endpointには公開鍵だけを含めた。ESLintはerror 0、既存warning 4で、Next.js 16.3 / OpenNext 1.20.2 buildは一時dynamic routeを含めて成功した。
+
+一時endpointを `bearworks-portal-staging` のみにdeployしたが、認証済みブラウザから暗号文URLへ移動する操作がクライアント側の安全制御で遮断された。暗号文、平文token、上流response本文は取得していない。URL名変更による再試行は安全制御の迂回に該当するため実行せず、一時routeをsourceから削除してclean bundleを再build・stagingへdeployした。
+
+clean buildのroute一覧に一時endpointが含まれないこと、repo内に一時公開鍵・route文字列が残っていないこと、一時鍵ディレクトリを削除したことを確認した。production Worker、production secret、Workers Route、DNS、Access、Pages、Git/GitHubには変更していない。stagingへの一時deployと撤去deployだけが外部変更であり、production secret登録とroute追加は引き続きNO-GOである。
+
+## 2026-08-10 OCI SSH鍵fingerprint照合
+
+ユーザーの明示承認後、Windowsユーザープロファイル内のOCI秘密鍵候補について、本文を表示せず公開fingerprintだけを算出した。2026-05-03の2ファイルは同一鍵でOCI instanceの登録公開鍵と一致し、2025-06-09の鍵は不一致だった。対象instanceは稼働中の1台に限定し、public IPは値を表示せずhashで固定した。
+
+`apps.bearworks.uk` はCloudflare proxyのためDNS解決先がOCI public IPと一致せず、ローカルPCからOCI public IPのSSH port 22にも到達できなかった。一方、OCI Cloud Shellから同じ対象のport 22には到達できた。Cloud Shellへ一致鍵をGUI uploadする操作はfile chooserが応答せず、秘密鍵は送信されなかった。
+
+暗号化してCloud Shellへ一致鍵を転送する案は、SSH接続承認とは別の秘密鍵外部送信承認が必要なため実行していない。作成済みのCloud Shell転送鍵、ローカル接続先暗号化鍵、接続先一時ファイルは削除した。SSH接続、token抽出、上流照合、production secret登録は未実施であり、route追加はNO-GOを維持する。
+
+## 2026-08-10 fingerprint一致鍵の暗号化転送と読み取りSSH
+
+ユーザーの秘密鍵外部送信に対する明示承認後、Cloud Shell内で3072-bit RSA一時転送鍵を生成し、fingerprint一致済みの秘密鍵をAES-256-CBCで暗号化、IVと暗号文へHMAC-SHA-256を付与し、AES/HMAC鍵だけをRSA-OAEP/SHA-256で包んで転送した。Cloud ShellではRSA包みを解除し、HMAC一致を先に確認した後だけ復号した。復号鍵と全中間ファイルをowner-onlyのmode 600とし、鍵本文とfingerprint値は画面、repo、tracked fileへ出していない。
+
+OCIから対象instanceのpublic IPを値非表示で再取得し、Cloud Shellから取得したhost keyを一時known_hostsへ固定した。Ubuntu用ユーザー、BatchMode、IdentitiesOnly、StrictHostKeyChecking、固定known_hostsを指定した読み取りSSH認証に成功した。リモート設定は変更せず、nginx内の対象token設定が1箇所であることだけを先に確認し、値はSSH標準出力をowner-only一時ファイルへ直接redirectして取得した。
+
+一時取得値はmode 600、非空、空白なしだったが、本文とresponse headerを捨てるstatus-only照合で `apps.bearworks.uk/api/dashboard/data.json` が403を返した。有効性を確認できないためproduction `DASHBOARD_API_TOKEN` は登録せず、Cloudflare Worker、route、DNS、Access、Pagesには変更を加えていない。Cloud Shell上の復号秘密鍵、転送鍵、暗号封筒、MAC入力、known_hosts、一時tokenを明示対象で削除し、`/tmp` のIssue #344一時ファイル残数0とローカル一時export残数0を確認した。production secret登録とroute追加はNO-GOを維持する。
+
+## 2026-08-10 公開経路403とorigin tokenの切り分け
+
+公開経路の403だけでtoken失効と判断しないため、認証済みの新規browser tabでstaging dashboardと現行Pages dashboardを再読込した。stagingは手動更新後も、Pagesは初回読込後もdashboardデータを正常表示し、両環境の既存secretと上流originの組合せが現在も機能していることを確認した。画面の運用データ値は記録していない。
+
+`bearworks-apps` のtracked `nginx/nginx.conf` は実値ではなくplaceholderを保持しており、live tokenはGit外管理だった。前回と同じ暗号化・owner-only・固定known_hostsの手順で読み取りSSHを再確立し、`/etc/nginx/nginx.conf`、`sites-enabled`、`conf.d` 内のtoken候補を値非表示で列挙した。候補は1つだけで、OCI host自身のlocalhost HTTPS originへHostとtoken headerをメモリ内で渡すstatus-only照合では200だった。response body、response header、token値は表示・保存していない。
+
+この結果から、Cloud Shellから公開 `apps.bearworks.uk` へ送った際の403はtoken失効の証拠ではなく、Cloudflare edgeを通る外向き経路で拒否されたものと判断した。具体的なedge policy名は未確認であり、推測で変更しない。production secret登録、上流token変更、Workers Route追加は行わず、診断用の転送鍵、復号鍵、暗号封筒、known_hostsを削除してCloud Shell一時ファイル残数0を確認した。次は別承認後、同じ有効候補を値非表示の暗号化経路でproduction Worker secretへ登録し、binding名だけを確認する。
+
+## 2026-08-10 production secret登録
+
+ユーザーのproduction secret登録に対する明示承認後、Lunaへproduction top-level環境、secret putによる新version作成、route非変更、値非露出、登録後確認、cleanupの読み取り専用最終監査を委譲した。Lunaは `npx wrangler secret put DASHBOARD_API_TOKEN --env=""` のみを実行する条件付きGO、Workers Route追加とproduction cutover全体はNO-GO継続と判定した。司令塔Codexもtop-level `bearworks-portal` にroute/custom domainがなく、`workers_dev: false`、`preview_urls: false`、stagingが別環境・別Workerであることを再確認した。
+
+origin-localで200となる唯一の既存tokenを、前段と同じ暗号化・owner-only・固定known_hostsの手順でOCIから取得した。tokenはCloud ShellとWindowsの一時ファイル間をRSA-OAEP/SHA-256暗号文として搬送し、平文をterminal、command line、environment、repo、Git、ログへ出していない。Windows一時領域は継承を外して現在ユーザーSIDだけへ権限を付与し、Wranglerのredirect済みstdinへ値を渡した。
+
+production top-levelへ `DASHBOARD_API_TOKEN` を1回だけ登録し、Wrangler終了code 0、binding名の存在、新しいdeploymentの存在を確認した。secret putが新versionを作成するため、追加のbuildやdeployは行っていない。確認出力にtoken値が含まれないことを機械的に確認した。登録後も公開rootは200、未認証dashboardはCloudflare Accessへ302で、Workers Route、DNS、Access、Pages、stagingには変更を加えていない。
+
+Cloud Shellの転送鍵、復号鍵、token、暗号封筒、known_hosts、公開鍵中間ファイルを削除し、一時ファイル残数0を確認した。Windows側もtokenと一時秘密鍵を上書き後、検証済みの一時ディレクトリだけを削除した。次のWorkers Route追加は別の本番切替承認、rollback操作者確認、直前preflightが完了するまでNO-GOを維持する。
+
+## 2026-08-10 Workers Route追加直前preflight
+
+Route追加を実行せず、Lunaの独立監査と司令塔Codexのlive再検証を行った。production Workerは有効なdeploymentを持ち、`DASHBOARD_API_TOKEN` のbinding名が存在する。production Workers Routeは0件で、Worker側設定もroute/custom domainなし、`workers_dev: false`、`preview_urls: false` を維持していた。secret値、deployment ID、Cloudflare内部IDは記録していない。
+
+既存Pagesではroot、toukei、dynamic guide/problem、AIニュース、weather、about、contact、privacy、ads.txt、robots、sitemapが200、不存在dynamic guideが404だった。未認証dashboardとdashboard APIはCloudflare Accessへ302かつno-storeで、Access Applicationの保護先が `/dashboard` と `/api/dashboard-data` の2件であることをdashboard上でも確認した。Pages projectとcustom domainの公開元は維持され、Route、DNS、Access、Pages設定は変更していない。
+
+現在のfeature branch HEADはremote branchと一致し、そのHEADに対するLinux clean-checkout buildは成功、production依存のauditは0件だった。旧Pages build commandを参照するCloudflare Pages checkは従来どおり失敗しているが、Workers用Linux buildとは分離されている。一方、`origin/main` はAIニュースデータ更新の1commitだけ先行しており、routeなしでdeploy済みのproduction Workerにも未反映である。
+
+このためGit/CI、Worker/secret、Pages baseline、Accessは個別には条件付きGOだが、production cutover全体はNO-GOとした。次の順序は、最新mainの通常取り込み、feature branch push、同一HEADのLinux CI、同一HEADからのrouteなしproduction再deploy、rollback操作者と10分判定の再確認、Workers Route追加の別承認である。
+
+## 2026-08-10 最新main同期とLinux CI
+
+ユーザーの明示承認後、production secret・Route直前preflight・同期ゲートの作業記録3ファイルだけをcommitした。続いて最新 `origin/main` を通常mergeし、先行していたAIニュース更新1commitを取り込んだ。mergeは競合なしで、merge commitの実質差分は `data/news-data.json` だけだった。rebase、force-push、Cloudflare操作は行っていない。
+
+取り込み後のJSONは最新日10記事について必須項目、所属日付、最新日内URL重複、過去日とのURL重複がないことを確認した。`git diff --check`、ESLint（error 0、既存warning 4）、Next.js 16.3 buildも成功した。Lunaの独立監査は、docsをmerge commitへ混ぜず、mainのAIニュースJSONだけを通常mergeし、Linux clean-checkout CI成功をpush gateとする条件でGOと判定した。
+
+feature branchを通常pushし、remote branchがHEAD `5fe9a34` と一致することを確認した。そのHEADで起動したDraft PR #4のLinux clean-checkout Actions run `31400619152` は、dependency install、lint、Next.js build、internal Link prefetch policy、OpenNext Workers bundle、production/staging validation、Workers preview route検査の全stepに成功した。旧Pages build commandを参照するCloudflare Pages checkは引き続き別系統であり、本Linux Workers buildの成功とは分離する。
+
+main同期とLinux CIゲートは完了した。production cutoverは、同一HEADからproduction Workerをrouteなしで再deployし、deploymentとsecret binding名を確認するまでNO-GOを維持する。Route、DNS、Access、Pages、production Worker、secretには変更を加えていない。
+
+## 2026-08-11 最新HEADのproduction routeなし再deploy
+
+ユーザーの「次へお願い」を、直前に明示した最新HEADからのproduction Worker routeなし再deploy承認として扱った。cleanなbranch HEAD `8d66bd9`、remote一致、最終Linux clean-checkout CI成功、production依存audit 0件を再確認した。Lunaはtop-level `bearworks-portal`、staging分離、production route/custom domainなし、`workers_dev: false`、`preview_urls: false`、secret binding保持、公開AdSense IDのbuild時設定を条件にrouteなし再deployをGO、Route追加をNO-GOと判定した。
+
+ローカルprocessとenv fileに `NEXT_PUBLIC_ADSENSE_CLIENT_ID` がなかったため、`public/ads.txt` の公開publisher行からproduction client IDをbuild process内だけで導出し、値を表示・保存せずOpenNext buildへ渡した。初回buildはWindows sandboxの設定ファイル読取権限で失敗したが、同じ処理を権限付きで再実行して成功した。生成bundleはproduction IDを含み、CI用dummy IDを含まないこと、secret値をbuild環境へ渡していないことを確認した。Wrangler production dry-runも成功し、bindingは静的assetsだけ、production route指定は0件だった。
+
+同じbundleをtop-level `bearworks-portal` へdeployした。新しいdeploymentが追加され、Wranglerは配信targetなしと報告した。追加のbuild、secret put、staging deployは行っていない。deploy後も `DASHBOARD_API_TOKEN` のbinding名が存在し、Cloudflare dashboard上のproduction Workers Routeは0件だった。deployment ID、secret値、Cloudflare内部IDは記録していない。
+
+公開 `bearworks.uk` rootは200を維持し、未認証dashboardとdashboard APIはCloudflare Accessへ302かつno-storeを維持した。既存Pages、DNS、Access、Workers Route、stagingには変更を加えていない。次のWorkers Route追加は、rollback操作者と10分判定の再確認および別の本番切替承認までNO-GOとする。
+
+## 2026-08-11 production Route初回切替・rollback・404修正
+
+ユーザーの本番切替承認後、Cloudflare dashboardでproduction Workerだけを対象に `bearworks.uk/*` のWorkers Routeを追加した。DNS、Pages project/custom domain、Access、stagingは変更していない。追加直後のsmokeではroot、toukei、有効guide/problem、about、AIニュース、weather、ads.txt、robots、sitemapのstatusと、dashboard/APIのAccess保護は期待どおりだったが、一般404の本文にAdSense識別子を検知した。runbookの即時rollback条件に該当するため、追加したRouteだけを削除した。
+
+Route削除後はCloudflare上でRoute 0件を確認し、公開root/toukeiが200、一般404が404、dashboard/APIがAccessへ302、ads.txtが200へ戻ったことを時間を分けて2回確認した。既存Pagesの一般404にもAdSenseがあるため、当初はPages応答またはRoute伝播前の可能性を残したが、production Worker Observabilityには切替時間帯の一般404を含む7件の成功eventが記録されていた。一般404はproduction Workerで実行され404を返しており、Route伝播前の誤判定ではなくWorker版の広告境界違反と確定した。event詳細の個人情報、内部ID、request識別子は記録していない。
+
+アプリは広告対象と非対象で複数root layoutを使用している一方、全体の未一致URL用ページがなかった。Next.js 16の複数root layout向け `global-not-found` を有効にし、広告scriptを含まない完全HTMLの404を追加した。Linux workflowの非広告判定もCI用dummy IDだけでなく、AdSense script URL、`adsbygoogle`、任意の数値publisher IDを検出する一般判定へ変更し、`/contact` と `/privacy` も明示検査へ追加した。LunaはWorker invocationでの応答元判定、404先行smoke、一般AdSense検出の追加を推奨し、司令塔Codexが実ログ・公式仕様・生成物で再検証して採用した。
+
+ESLintはerror 0（既存warning 4）、Next.js 16.3 production buildとOpenNext 1.20.2 buildは成功した。公開ID相当のdummy値をbuild process内だけへ渡したOpenNext previewでは、rootと有効guideが200かつ広告あり、無効guide/problemと一般404が404かつ広告なし、aboutが200かつ広告なしとなった。生成されたNext/OpenNextの404 artifactにもAdSense識別子がない。
+
+404境界修正commit `f9383a2` をfeature branchへpushし、remote branchが同じcommitを指すことを確認した。同一HEADで起動したLinux clean-checkout Actions run `31407228833` は、dependency install、lint、Next.js build、OpenNext Workers build、production/staging Wrangler validation、Workers preview route検査の全stepに成功した。preview検査には対象routeの広告掲載、無効guide/problemと一般404・about・AIニュース・contact・dashboard・privacy・weatherの広告非掲載、API 401/405/no-store、static asset、ads.txt、robots、sitemap、IMAGES warning非発生が含まれる。Routeは0件のままで、production routeなし再deployとRoute再試行は未実施である。
+
+## 2026-08-11 production Route再試行・公開QA成功
+
+ユーザーの再試行承認後、branch HEAD `9c8630b` がremoteと一致してcleanであり、同一HEADのLinux clean-checkout Actions run `31407569715` が全step成功であることを再確認した。直前ゲートで同一HEADからrouteなしproduction再deploy、production secret binding名、Pages/Access baselineを確認済みで、Cloudflare上のWorkers Routeが0件であることも再確認した。LunaにはRoute追加前条件、404先行smoke、即時rollback条件、Pages/DNS/Access/staging非変更境界を読み取り専用で再監査させた。Lunaが未更新のtask記録を根拠にNO-GOとした点は、司令塔Codexが同一実行内のGitHub、Cloudflare、公開HTTP証跡で各条件の実充足を再確認してからRoute追加可と判断した。
+
+Cloudflare dashboardでproduction Worker `bearworks-portal` だけを対象にWorkers Route `bearworks.uk/*` を1件追加した。Custom Domain、DNS、Pages project/custom domain、Access、stagingは変更していない。追加から3分5秒で404先行smokeを開始し、無効guide、無効problem、一般404がすべて404かつ一般AdSense識別子なしであることを確認した。
+
+続けてroot、toukei、有効guide/problemが200かつAdSenseあり、about、AIニュース、contact、privacy、weatherが200かつAdSenseなしであることを確認した。`ads.txt`、`robots.txt`、`sitemap.xml` は200で内容条件を満たした。未認証dashboardとdashboard APIはCloudflare Accessへ302かつ `Cache-Control: no-store` を維持した。TLS、主要route status、広告境界、Access境界にrollback条件は発生せず、公開QAはRoute追加から4分12秒で完了した。
+
+production Worker Observabilityには今回の404先行smokeと主要route検査が記録され、23件Success、Errors 0だった。これにより応答元がproduction Workerであることを確認した。秘密値、Access token、内部Cloudflare ID、request識別子は取得・記録していない。QA後もRoute一覧は `bearworks.uk/*` から `bearworks-portal` への1件だけで、Routeを稼働状態に維持した。次のゲートは24時間以上の観測であり、Pages停止は別途承認まで実行しない。
+
+## 2026-08-11 production 24時間観測開始
+
+ユーザーの継続承認後、01:36 JSTに観測開始baselineを取得した。rootとtoukeiは200かつAdSenseあり、一般404は404かつAdSenseなし、aboutとprivacyは200かつAdSenseなし、未認証dashboardとdashboard APIはCloudflare Accessへ302、`ads.txt` は200で、全項目が合格した。直前の公開QAでproduction Worker Observabilityが23件Success、Errors 0であったことを観測開始時のWorker log baselineとした。観測開始時のbrowser制御セッションにはCloudflare tabが残っていなかったため、Observabilityの再読取は未実施として公開HTTP結果と分離した。
+
+Lunaへ24時間の確認項目、即時rollback条件、完了判定、自動チェックの非変更境界を読み取り専用で監査させた。監査結果を反映し、このCodex taskへ約4時間ごと、24時間経過後まで合計6回戻るheartbeatを設定した。各回は公開HTTP、AdSense境界、Accessを読み取り確認し、利用可能な認証済みセッションがある場合だけObservabilityを閲覧する。自動チェックからRoute、DNS、Access、Pages、staging、secret、deploy、cacheを変更せず、異常時はrollback推奨を報告するだけとした。Pages停止は引き続き別途承認までNO-GOである。
+
+## 2026-08-11 18:00 JST 短縮観測ゲート完了
+
+ユーザー承認により、当初の24時間観測を2026-08-11 18:00 JSTまでの約16時間30分へ短縮した。18:01 JSTに最終フルsmokeを実施し、17件すべてが合格した。root、toukei、有効guide/problemは200かつAdSenseあり、一般404と無効guide/problemは404かつAdSenseなし、about、AIニュース、contact、privacy、weatherは200かつAdSenseなしだった。`ads.txt`、`robots.txt`、`sitemap.xml` は200で内容条件を満たし、未認証dashboardとdashboard APIはCloudflare Accessへ302かつ `Cache-Control: no-store` を維持した。最大応答時間は587msで、5xx、意図しない404、広告境界違反、Access迂回、TLS異常、秘密情報露出は検出しなかった。
+
+最終確認時のbrowser制御セッションにCloudflare管理画面の認証済みtabがなかったため、production Worker Observabilityの再読取は実施していない。このため、18:00時点のWorker log上のruntime exception、5xx、異常なRSC/request増加は未確認事項として公開HTTP結果と分離する。公開確認上はrollback条件がなく、Workers Routeのrollbackは推奨しない。確認中にRoute、DNS、Access、Pages、staging、secret、deploy、cacheを変更せず、完了した自動観測を削除した。これはユーザー承認による短縮観測ゲートの完了であり、24時間観測を実施したという記録ではない。Pages停止は引き続き別途承認までNO-GOである。
+
+その後のユーザー継続指示でCloudflare管理画面を開くと既存ログインセッションを安全に利用できたため、設定を変更せずproduction Workerのメトリクスを再確認した。表示中のWorker概要は呼び出し719件、Errors 0で、error chartの表示データにも非0値はなかった。2026-08-09に検出した約487k invocation規模の増幅と比べて異常なrequest増加はなく、画面上にruntime exceptionまたは5xxを示す表示もなかった。`?_rsc` のquery別内訳までは取得していないため、その点だけは直接確認ではなくaggregate metricsからの判定とする。秘密値、内部Cloudflare ID、request識別子は取得・記録していない。これによりproduction Worker Observabilityの最終再確認も合格とし、Pages停止だけを次の独立承認ゲートとして残す。

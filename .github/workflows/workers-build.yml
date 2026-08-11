@@ -1,0 +1,186 @@
+name: Workers build
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      NEXT_PUBLIC_ADSENSE_CLIENT_ID: ca-pub-0000000000000000
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Build Next.js
+        run: npm run build
+
+      - name: Verify internal link prefetch policy
+        shell: bash
+        run: |
+          direct_imports=$(git grep -l 'from "next/link"' -- '*.tsx')
+          test "$direct_imports" = "components/InternalLink.tsx"
+          grep --fixed-strings --quiet 'prefetch = false' components/InternalLink.tsx
+          grep --fixed-strings --quiet '<NextLink prefetch={prefetch}' components/InternalLink.tsx
+          grep --recursive --fixed-strings --quiet '"prefetch":false' .next/server/app
+
+      - name: Build Workers bundle
+        run: npm run cf:build
+
+      - name: Validate Workers bundle
+        run: npx wrangler deploy --dry-run --env=""
+
+      - name: Validate staging Workers bundle
+        run: npx wrangler deploy --dry-run --env staging
+
+      - name: Verify Workers preview routes
+        shell: bash
+        env:
+          DASHBOARD_API_TOKEN: local-ci-token
+        run: |
+          cat > .dev.vars <<'EOF'
+          NEXTJS_ENV=development
+          DASHBOARD_API_TOKEN=local-ci-token
+          EOF
+
+          npx opennextjs-cloudflare preview --port 8788 > /tmp/workers-preview.log 2>&1 &
+          preview_pid=$!
+          cleanup() {
+            kill "$preview_pid" 2>/dev/null || true
+            rm -f .dev.vars /tmp/workers-preview.log /tmp/response-body \
+              /tmp/asset-headers /tmp/asset-body /tmp/api-headers /tmp/api-body \
+              /tmp/icon-headers /tmp/icon-body /tmp/method-headers /tmp/method-body
+          }
+          trap cleanup EXIT
+
+          preview_ready=false
+          for attempt in {1..30}; do
+            if curl --silent --output /dev/null http://127.0.0.1:8788/; then
+              preview_ready=true
+              break
+            fi
+            if ! kill -0 "$preview_pid" 2>/dev/null; then
+              cat /tmp/workers-preview.log
+              exit 1
+            fi
+            sleep 1
+          done
+          if [ "$preview_ready" != true ]; then
+            echo 'Workers preview did not become ready within 30 seconds'
+            cat /tmp/workers-preview.log
+            exit 1
+          fi
+
+          assert_status() {
+            expected=$1
+            path=$2
+            actual=$(curl --silent --output /tmp/response-body --write-out '%{http_code}' "http://127.0.0.1:8788${path}")
+            if [ "$actual" != "$expected" ]; then
+              echo "Expected ${path} to return ${expected}, got ${actual}"
+              cat /tmp/response-body
+              cat /tmp/workers-preview.log
+              exit 1
+            fi
+          }
+
+          contains_ads() {
+            grep --extended-regexp --quiet \
+              'pagead2\.googlesyndication\.com|adsbygoogle|ca-pub-[0-9]+' \
+              /tmp/response-body
+          }
+
+          assert_no_ads() {
+            path=$1
+            assert_status 200 "$path"
+            if contains_ads; then
+              echo "AdSense client ID was found on ${path}"
+              exit 1
+            fi
+          }
+
+          assert_status 200 /
+          grep --quiet 'ca-pub-0000000000000000' /tmp/response-body
+          grep --fixed-strings --quiet 'src="/icon.png"' /tmp/response-body
+          if grep --fixed-strings --quiet '/_next/image' /tmp/response-body; then
+            echo 'Public site icon unexpectedly uses the image optimization endpoint'
+            exit 1
+          fi
+          icon_status=$(curl --silent --dump-header /tmp/icon-headers --output /tmp/icon-body --write-out '%{http_code}' http://127.0.0.1:8788/icon.png)
+          test "$icon_status" = 200
+          grep --ignore-case --quiet '^content-type: image/png' /tmp/icon-headers
+          asset_path=$(grep --only-matching '/_next/static/[^"? ]*' /tmp/response-body | head -n 1)
+          test -n "$asset_path"
+          asset_status=$(curl --silent --dump-header /tmp/asset-headers --output /tmp/asset-body --write-out '%{http_code}' "http://127.0.0.1:8788${asset_path}")
+          test "$asset_status" = 200
+          grep --ignore-case --quiet '^cache-control: public, max-age=31536000, immutable' /tmp/asset-headers
+          assert_status 200 /toukei
+          grep --quiet 'ca-pub-0000000000000000' /tmp/response-body
+          assert_status 200 /toukei/guides/learning-roadmap
+          grep --quiet 'ca-pub-0000000000000000' /tmp/response-body
+          assert_status 200 /toukei/guides/learning-roadmap
+          grep --quiet 'ca-pub-0000000000000000' /tmp/response-body
+          assert_status 404 /toukei/guides/__invalid__
+          if contains_ads; then
+            echo 'AdSense client ID was found on an invalid guide response'
+            exit 1
+          fi
+          assert_status 200 /toukei/problems/confidence-interval
+          grep --quiet 'ca-pub-0000000000000000' /tmp/response-body
+          assert_status 200 /toukei/problems/confidence-interval
+          grep --quiet 'ca-pub-0000000000000000' /tmp/response-body
+          assert_status 404 /toukei/problems/__invalid__
+          if contains_ads; then
+            echo 'AdSense client ID was found on an invalid problem response'
+            exit 1
+          fi
+          assert_no_ads /about
+          assert_no_ads /ai-news
+          assert_no_ads /contact
+          assert_no_ads /dashboard
+          assert_no_ads /privacy
+          assert_no_ads /weather
+          assert_status 200 /ads.txt
+          grep --fixed-strings --line-regexp --quiet 'google.com, pub-9560028085973137, DIRECT, f08c47fec0942fa0' /tmp/response-body
+          assert_status 200 /robots.txt
+          assert_status 200 /sitemap.xml
+          assert_status 404 /route-that-does-not-exist
+          if contains_ads; then
+            echo 'AdSense client ID was found on a 404 response'
+            exit 1
+          fi
+
+          api_status=$(curl --silent --dump-header /tmp/api-headers --output /tmp/api-body --write-out '%{http_code}' http://127.0.0.1:8788/api/dashboard-data)
+          test "$api_status" = 401
+          grep --ignore-case --quiet '^cache-control: no-store' /tmp/api-headers
+          if grep --quiet 'local-ci-token' /tmp/api-body; then
+            echo 'Dashboard token leaked into the API response'
+            exit 1
+          fi
+
+          method_status=$(curl --silent --request POST --dump-header /tmp/method-headers --output /tmp/method-body --write-out '%{http_code}' http://127.0.0.1:8788/api/dashboard-data)
+          test "$method_status" = 405
+          grep --ignore-case --quiet '^cache-control: no-store' /tmp/method-headers
+
+          if grep --fixed-strings --quiet 'env.IMAGES binding is not defined' /tmp/workers-preview.log; then
+            echo 'Unexpected Cloudflare Images binding warning'
+            cat /tmp/workers-preview.log
+            exit 1
+          fi
