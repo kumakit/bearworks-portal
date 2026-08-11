@@ -400,3 +400,13 @@ Lunaへ24時間の確認項目、即時rollback条件、完了判定、自動チ
 最終確認時のbrowser制御セッションにCloudflare管理画面の認証済みtabがなかったため、production Worker Observabilityの再読取は実施していない。このため、18:00時点のWorker log上のruntime exception、5xx、異常なRSC/request増加は未確認事項として公開HTTP結果と分離する。公開確認上はrollback条件がなく、Workers Routeのrollbackは推奨しない。確認中にRoute、DNS、Access、Pages、staging、secret、deploy、cacheを変更せず、完了した自動観測を削除した。これはユーザー承認による短縮観測ゲートの完了であり、24時間観測を実施したという記録ではない。Pages停止は引き続き別途承認までNO-GOである。
 
 その後のユーザー継続指示でCloudflare管理画面を開くと既存ログインセッションを安全に利用できたため、設定を変更せずproduction Workerのメトリクスを再確認した。表示中のWorker概要は呼び出し719件、Errors 0で、error chartの表示データにも非0値はなかった。2026-08-09に検出した約487k invocation規模の増幅と比べて異常なrequest増加はなく、画面上にruntime exceptionまたは5xxを示す表示もなかった。`?_rsc` のquery別内訳までは取得していないため、その点だけは直接確認ではなくaggregate metricsからの判定とする。秘密値、内部Cloudflare ID、request識別子は取得・記録していない。これによりproduction Worker Observabilityの最終再確認も合格とし、Pages停止だけを次の独立承認ゲートとして残す。
+
+## 2026-08-11 main反映・Pages自動deploy停止・最終smoke
+
+短縮観測結果を記録したcommit `a7004b8` をfeature branchへpushし、同一HEADのLinux clean-checkout Workers buildが全step成功したことを確認した。Draft PR #4をReadyへ変更し、履歴を保持する通常mergeでmainへ取り込んだ。Workers buildではdependency install、lint、Next.js build、prefetch policy、OpenNext build、production/staging validation、preview route検査が成功した。既知のActions runtime非推奨通知と既存の画像最適化warningは、今回のcutoverを妨げるerrorではない。
+
+ユーザーがPages停止を明示承認した後、Cloudflare Pages projectは削除せず、Git repository連携だけを切断した。これにより今後のpushによるPages自動deployを停止した。Pages project、既存deployment、custom domain、DNSは保持し、custom domainがActiveであることを確認した。切断後も保持した直接fallbackのrootとaboutはHTTPS 200で、緊急時のrollback先として利用できる。必要になればGit repository連携は再接続できる。
+
+19:21 JSTにPages停止後のproduction最終smokeを実施し、17件すべてが合格した。root、toukei、有効guide/problemは200かつAdSenseあり、一般404と無効guide/problemは404かつAdSenseなし、about、AIニュース、contact、privacy、weatherは200かつAdSenseなしだった。`ads.txt`、`robots.txt`、`sitemap.xml` は200で内容条件を満たし、未認証dashboardとdashboard APIはCloudflare Accessへ302かつ `Cache-Control: no-store` を維持した。最大応答時間は750msで、5xx、意図しない404、広告境界違反、Access迂回、TLS異常、秘密情報露出は検出しなかった。
+
+最終smoke後のproduction Worker概要は呼び出し808件、Errors 0で、短縮観測終了時からの増加も確認操作に見合う範囲だった。Workers Routeは稼働を維持し、rollbackは推奨しない。Pages project削除、custom domain削除、DNS変更、Access変更、secret変更、staging変更、cache purgeは行っていない。秘密値とCloudflare内部IDは取得・記録していない。本記録のmain取り込み後、Issue #344へ最終結果とrollback手順を報告し、Phase 3-0完了としてcloseする。
