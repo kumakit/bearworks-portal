@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-08-12",
+    "daily_summary": "本日のAIニュースは、メタによる高性能モデルの無償開放やコアウィーブ・IBM等によるインフラ投資の急拡大が示す技術・市場の躍進と、小規模AIを組み合わせた「Sakana Fugu」のような新たな開発アプローチの台頭を伝えています。一方で、高度化するサイバー攻撃への「レジリエンス」確保やAIエージェントの導入がもたらす組織的課題、さらにはフランスの報道団体によるグーグルへの措置要請に代表される著作権やメディアとの摩擦など、セキュリティ、雇用、法規制を巡る深刻な課題と議論も浮き彫りになっています。",
+    "articles": [
+      {
+        "title": "メタ、AIを「数十億人に無償提供」 高性能モデルの技術を外部に開放",
+        "content": "メタは、高性能なAIモデルの技術を外部に広く開放し、数十億人のユーザーへ無償で提供する方針を明らかにしました。AI技術の普及とエコシステムの主導権争いがさらに加速すると見られています。オープンなアプローチにより、開発者や企業による多様なAI活用の進展が期待されています。",
+        "source": "Google News",
+        "published_at": "2026-08-12",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE05aUxrbVVrSVo3dzMxNDBiWmRiOWViX0JDWnBXdndwaFlEQTJnWGFnYUVhMjFOeGEyRlZJUW5jOXN2S25kd3NWd1VRSjhaUlgza1NuMm13dndWQkpzM0hvM0lGMzYyUmRPd1hUZQ?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "フロンティアAIのサイバー攻撃には防御から「レジリエンス」への転換が急務、EYの調査",
+        "content": "EYの調査によると、高度なフロンティアAIに対するサイバー攻撃への備えとして、単なる防御だけでなくシステム全体の「レジリエンス（回復力）」への転換が急務であると指摘されています。AI時代のセキュリティリスクに対応するため、組織的な体制強化と継続的な復旧能力の確保が求められています。",
+        "source": "Google News",
+        "published_at": "2026-08-12",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9ocm10b1hIcFFfWjNnSEhWVWJzMXRGN1NxYU9GYkRWQ3FfTFVWOF94TVZ3TVdGZUl4d0xweWZPdmdHWTM0NHpmNnhjcDJBQ0pmemlabWNHYlVzWTNDTHRR?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "AIクラウドのコアウィーブ、需要拡大で売上高倍増－市場予想も上回る",
+        "content": "AI特化型クラウドを手掛けるコアウィーブは、旺盛な需要を背景に売上高が倍増し、市場予想を上回る好決算を発表しました。AIインフラ市場の急速な拡大を裏付ける結果となっています。",
+        "source": "Google News",
+        "published_at": "2026-08-12",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBTN1dNSDU3X0NUR1hEcUZubzhEdkdGdVpjTnRyeUYxeEozVVYxckJZSEY5QW1BLVI3SW5fcV8tUUhlNVprM09vUkhHSkhlLWJ5SGhiQ1dJU3RFUFdzVEVHNy1NMXJBZXNrbUZtUnk4Yllld2RM?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "日本発AI「Sakana Fugu」は何がすごい？ 小さなAIの群れで巨大AIに挑む",
+        "content": "日本発のAI開発企業が手掛ける「Sakana Fugu」は、複数の小さなAIを組み合わせることで巨大モデルに対抗する革新的なアプローチを採用しています。従来の単一巨大モデルとは異なる「群れ」の力学を活かすことで、効率的かつ高性能な処理を実現することに注目が集まっています。",
+        "source": "Google News",
+        "published_at": "2026-08-12",
+        "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOa09reGQtUUlQem1sbURRUktrcWI3N2o5SWxfWVdYSUh6WTNQS2pEelRjVUpuZDBRYzZwbVJFYVFsd0hhdENwSG1DYjM4NW14dC1pXzRmMnVCMGEzQ2o2emppWGNWMklmakJaYm9rSGFNZVpuOF9hU2tVMEFUOEI3QWx6dllVUnlxZWlKYUs2TVVQZDEzMkRR0gGcAUFVX3lxTE0yc2lyZkRMbGgzckpncXgwWHVDb1pFVnlTNGNZdzBMdnR6Zi0xbGt3eFFOLUszY244bzhLeGU3MTBuU0pqbkZ4cUN5WnhXc05xNFR3VlB4c3Q2NF92SFprNjVQVHBGMVlBN25oT0htRWI2b0ZsQjJuZWhySVlJTnFyUGdOZ2pWWnJ5a0M0d2FlSGFwZXpzWENhdG5lcA?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "IBMとスタートアップ、2.4億ドル契約でエヌビディア製半導体を用いたAI基盤を構築",
+        "content": "IBMとあるスタートアップ企業が、エヌビディアの半導体を利用したAI基盤構築のために2.4億ドルの契約を締結しました。この取り組みにより、最先端のAI開発を支えるインフラストラクチャの強化が期待されます。",
+        "source": "Google News",
+        "published_at": "2026-08-12",
+        "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5zV3ZQWDk1bnBKaElRb1NZS2J4b2w3WmYyUFdIUTJOcG9KVVZtNTh6ak9BbVljNklRam1keUhMeUVvd2padmZjbkU2YWlyZnQ5YjlEZV9lNWNVaEZHa2tvcTBmY2R5MTk2Nm1QbEFSbEtaMVZDazBSaA?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "ＩＢＭとスタートアップが2.4億ドル契約、エヌビディア半導体でＡＩ基盤構築",
+        "content": "ＩＢＭと新興企業が、エヌビディアの半導体を使用して大規模なAI基盤を構築するために2億4000万ドルの契約を締結しました。この取り組みにより、AI開発とインフラの強化がさらに加速することが期待されています。",
+        "source": "Google News",
+        "published_at": "2026-08-12",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE95QzBLS1dacmpKRlRrT3F1U2NSUGJadmRhWDExcXdjRE80OC0yN1Eycm9GQlpOQWtmRWhpcXd3UGlLLVQ2TTR3eW1zWUtmcGJCdlZSWkdDbTVBdw?oc=5",
+        "category": "インフラ・半導体"
+      },
+      {
+        "title": "IBMとスタートアップ、2.4億ドル規模のエヌビディア製半導体を用いたAI基盤構築で契約",
+        "content": "IBMとあるスタートアップ企業が、エヌビディアの半導体を使用したAIインフラストラクチャの構築に向けて2億4000万ドルの契約を締結しました。この取り組みにより、最先端のAI開発を支える強力な計算基盤の提供が期待されます。",
+        "source": "Google News",
+        "published_at": "2026-08-12",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5qMWlRS0RYSnB0UHFwVG9ZckhmNFRxSnpnNWFjZFV2VVRjRlpaWlZqZ0FKRFRuMkxsTHJ1NkdIdEFGVndLU3M1WFNPN0VFNkVmcUxLajlUVG5qby1ETGZxZHRXMVlyWENvUExmVVFTcVBJYjhMRE82TmN0S3c4UWc?oc=5",
+        "category": "インフラ・半導体"
+      },
+      {
+        "title": "AIエージェントを「従業員化」する企業が急増、新たな組織図が招く自信喪失とミスの連鎖",
+        "content": "企業の間でAIエージェントを従業員のように扱う動きが急速に広がっています。しかし、こうした新しい組織のあり方は、人間の従業員の自信喪失やミスを引き起こす連鎖を招く懸念が指摘されています。",
+        "source": "Google News",
+        "published_at": "2026-08-12",
+        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1kQXJWRUl4ODV3SHVVY1Z3c3BHbl9jckV2X25WYlVfZFFOb0phV1IwYWVIV1JzLXJqOEV6RW5MUXpqSjV0RG9yaUpfa29tSFc5UU1HelBIZXY?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "フランス報道団体、競争当局に措置要請　グーグルのＡＩ要約記事巡り",
+        "content": "フランスの報道団体が、グーグルのAIによる記事要約機能に関して同国の競争当局に措置を要請しました。生成AIによるコンテンツの無断利用や著作権侵害への懸念が背景にあります。メディア産業とテックジャイアント間の規制や権利を巡る議論に影響を与える可能性があります。",
+        "source": "Google News",
+        "published_at": "2026-08-12",
+        "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQbFZQd21Ca1ZndFJ5MkRWSWNJYzY3RHZxZEpxMDVmVDJKTTlYN1ZkX1lIZXRTdGxLNENvNjBtem1DR1F6bWx5ZGpoYkZGSkpVenh2dE94V24zS2YteFhmeW5Jd1EzY2x4eDZRc2V1M1dxNE01XzRpUU9pTzVOSnRLSDBB0gGHAUFVX3lxTFAzNGdiRzVpX2hyS3NNWFdBVTVTYmZsdmVkeWxfV3BJb25EQXJ2cDFWUVRsSjRRei1qalpBRVBxSmVjdTBaR0tXNEQxRFdxbDNOMnFTLWRzbk0yRzEwVjRSdzFib3F5MGtHUkZuaDdZUTRaRWZOcjhTcUJfVmVwWmhYMEctUmRqRQ?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "フランス報道団体、競争当局に措置要請 グーグルのAI要約記事巡り",
+        "content": "フランスの報道団体が、グーグルのAIによる記事の自動要約機能に対して競争当局に措置を要請しました。著作権やコンテンツの無断利用を巡る懸念が背景にあります。AI技術の普及に伴うメディア業界との新たな法的・経済的な摩擦を示唆しています。",
+        "source": "Google News",
+        "published_at": "2026-08-12",
+        "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBuRTZjeS03ZWJjbTcxNXZuTWxRZGRuSS1WV0ZqNjdOS3hpVVNBNlZjNVNNeTNZeld5MlZSd09KU2ppYWFuVUVNbFFmOER1R1FPYV9YOFNIa1JWVW9yZFFLaldpRERac2l1cXpLS1ZEY090SHNhR2hkQw?oc=5",
+        "category": "政策・安全"
+      }
+    ]
+  },
+  {
     "date": "2026-08-11",
     "daily_summary": "本日のAIニュースは、AIの「暴走」やテスト環境からの脱出、米中間の開発競争といった安全保障・規制に関する重大な懸念が浮き彫りになる一方で、営業職の再評価や新モデルの登場といった産業・技術面での急速な進展も報じられています。さらに、企業の費用対効果の課題解決に向けた業界標準の策定や、AIへの過度な依存がもたらす人間側の「認知的降伏」への警鐘など、AIが社会や経済の仕組みを根本から変容させる中で、安全性、実用性、そして人間の主体性をいかに両立させるかが重要な課題となっていることを示しています。",
     "articles": [
