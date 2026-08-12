@@ -2,7 +2,7 @@
 
 ## Outcome
 
-The Portal implementation is locally ready for review. Commit, push, Linux CI, Workers deployment, public acceptance, and Issue updates remain separate gates.
+The Portal article is published and accepted in production. The implementation branch and `main` contain commit `75f94901118db807bee8afb3489ae230d27f6c0c`, Linux clean-checkout CI passed, Workers deployment completed, and the public route passed HTTP plus desktop/mobile browser acceptance.
 
 ## Data handoff
 
@@ -33,21 +33,38 @@ All five preregistered hypotheses are `supported` with publication permission `c
 
 ## Verification
 
-- `npm run validate:hachioji-climate`: pass
-- `npm run lint`: pass with four pre-existing warnings and no errors
-- `npm run build`: pass; route generated as static content
-- `npm run cf:build`: pass on Windows with the upstream compatibility warning
-- `npx wrangler deploy --dry-run --env=""`: pass
-- `npx wrangler deploy --dry-run --env staging`: pass
-- Browser desktop: title, H1-H5 cards, 4-row table, source app link, canonical, and full bundle hash present; no page-level horizontal overflow
-- Browser mobile (390 x 844): no page-level horizontal overflow; comparison table scrolls inside its own container
+### Local
 
-## Commit and remaining gates
+- `npm run validate:hachioji-climate`: pass.
+- `npm run lint`: pass with four pre-existing warnings and no errors.
+- `npm run build`: pass; route generated as static content.
+- `npm run cf:build`: pass on Windows with the upstream compatibility warning.
+- `npx wrangler deploy --dry-run --env=""`: pass.
+- `npx wrangler deploy --dry-run --env staging`: pass.
 
-The Portal diff was reviewed and approved for commit. This commit contains only the 15 Issue #372 Portal files.
+### GitHub and Linux
 
-1. Approve and push the Issue branch.
-2. Pass Linux clean-checkout Workers CI.
-3. Approve Workers deployment and complete public desktop/mobile acceptance.
-4. Resolve or explicitly accept the Issue completion criterion about an unexpected result.
-5. Separately approve the Issue comment, status change, and close.
+- Portal implementation commit: `75f94901118db807bee8afb3489ae230d27f6c0c`.
+- Issue branch push: pass; the remote branch matched the local commit.
+- Linux clean-checkout Workers CI: pass in [run 31603872907](https://github.com/kumakit/bearworks-portal/actions/runs/31603872907).
+- The existing GitHub Pages workflow also completed successfully after the `main` push in [run 31605003965](https://github.com/kumakit/bearworks-portal/actions/runs/31605003965). Its legacy Jekyll output is separate from the production Workers route.
+
+### Production
+
+- Apps source application: <https://apps.bearworks.uk/Hachioji_Climate>.
+- Portal article: <https://bearworks.uk/labs/hachioji-climate>.
+- Article, canonical, full bundle hash, sitemap entry, robots.txt, and ads.txt: pass.
+- AdSense boundary: present on the home and article routes; absent from the tested non-monetized and invalid routes.
+- Dashboard API baseline: Cloudflare Access sign-in HTML returned; protected data was not exposed.
+- Browser desktop: title, H1-H5 cards, 4-row table, source app link, canonical, and full bundle hash present; no page-level horizontal overflow.
+- Browser mobile (390 x 844): no page-level horizontal overflow; comparison table scrolls inside its own container.
+
+### Search Console
+
+Google Search Console URL Inspection was checked on 2026-08-12. At that time the article URL was not registered in Google, was not known to Google, had not been crawled, and had no detected referring sitemap. The public sitemap already contains the article URL. An indexing request was accepted into Google's priority crawl queue; later indexing confirmation is separated into [`kumakit/mission-control#376`](https://github.com/kumakit/mission-control/issues/376).
+
+## Completion decision
+
+The user explicitly accepted the completion interpretation on 2026-08-12: no contradiction is invented among preregistered H1-H5, while the broader initial expectation about Hachioji being the coldest place in Tama is treated as the unexpected finding and discussed with the Ome comparison. The remaining publication, verification, and external-approval gates are complete.
+
+Issue #372 is ready for a final result comment and closure as completed.

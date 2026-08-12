@@ -24,8 +24,11 @@
 ## External gates
 
 - [x] Approve and commit the Portal diff.
-- [ ] Approve and push the Portal branch.
-- [ ] Pass Linux clean-checkout CI.
-- [ ] Approve Workers deployment and verify the public route.
-- [ ] Resolve the Issue completion criterion about an unexpected result.
-- [ ] Approve the Issue comment/status/close operations.
+- [x] Approve and push the Portal branch.
+- [x] Pass Linux clean-checkout CI.
+- [x] Approve Workers deployment and verify the public route.
+- [x] Confirm the production route on desktop and mobile.
+- [x] Check the article URL in Google Search Console.
+- [x] Request indexing and create follow-up Issue `kumakit/mission-control#376`.
+- [x] Resolve the Issue completion criterion about an unexpected result.
+- [x] Approve the Issue comment/status/close operations.

@@ -32,4 +32,6 @@ The approved cross-repository plan and five hypotheses are maintained in `kumaki
 
 ## Open completion condition
 
-The Issue wording that requires at least one result contrary to expectation conflicts with the production bundle, where H1-H5 are all supported. Do not fabricate a contradiction. Gate 5 implementation can proceed, but Issue completion remains blocked until the criterion is amended or explicitly accepted.
+Resolved on 2026-08-12 by explicit user acceptance of the final closeout interpretation. The production bundle supports all five preregistered hypotheses, so the article does not fabricate a contradiction. It instead records the broader initial expectation that Hachioji is the coldest place in Tama and explains why the four-station comparison does not support it: Ome has more winter days.
+
+This distinction satisfies the completion criterion without changing the preregistered results. Search Console was also checked after publication; the URL was not yet known to Google, had not been crawled or indexed, and had no detected referring sitemap at the time of inspection. An indexing request was accepted into Google's priority crawl queue, and follow-up Issue [`kumakit/mission-control#376`](https://github.com/kumakit/mission-control/issues/376) tracks the later indexing check.
