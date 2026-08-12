@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-08-13",
+    "daily_summary": "本日のAIニュースは、ゲーム内への自然なAI実装や米株式市場を支える好決算といった技術の進化と成長期待が伝えられる一方で、米中対立に揺れるAI企業の独立や、インテルの巨額増資によるAI半導体への投資強化など、産業・国際面の動きが活発化しています。さらに、生成AIで加工された被災者写真の偽画像がSNSで拡散し当事者が憤りを表明する問題や、人材業界トップがAIの進化を「地殻変動」と称して危機感を露わにし経営戦略の転換を表明するなど、技術の悪用に対する深刻な懸念や、社会・経済全体における急激な構造変化への対応が喫緊の課題となっていることが浮き彫りになりました。",
+    "articles": [
+      {
+        "title": "「よく聞こえなかったデスら」――『ドラクエ』に“AIキャラ”登場、世界観を守るために張り巡らせた創意工夫",
+        "content": "人気ゲーム『ドラゴンクエスト』シリーズにAIキャラクターが登場し、話題となっています。ゲームの世界観やキャラクターの個性を損なわないように、様々な創意工夫が施されています。AI技術をエンターテインメントに自然に組み込むための興味深い取り組み事例です。",
+        "source": "Google News",
+        "published_at": "2026-08-13",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFB0d3FoR1FkZXFGR2JweGpfcEd5MXFLbTV0WkNvWHpabm4wSFpDQ2VEdTFqRVFzXzk4WXRMOFljNzZ1UXUxeW5INnJ1dE1nNXNXNndmZVdkMjBWRmNSRzA5WDR1Q0U4Nl9RNWZBVTdaZXVOZw?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "中国系AIマナス、米メタから独立＝政府が買収認めず",
+        "content": "中国系のAI企業であるマナスが、米メタからの独立を発表しました。これは米国政府が買収を認めなかったためです。米中間の技術競争や規制の影響を示す動きとなっています。",
+        "source": "Google News",
+        "published_at": "2026-08-13",
+        "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5VS3o1MWtZV1BBMkNxdGhCOWFkS1lCQ255SDJRTnh6QmZOa1VxQmtWWDVCbF81ek5LYUNKS0RMSUllWjNaWW0tWlAyN0FHNU5yZWZWb1ZUa2Y2NEdkTkpaVHdQSnlyZk1KVDVWTVNwcGlZSXEwb0tSTXNlaGvSAYIBQVVfeXFMTkRySVNBWW15SS1uWV9nc3FLVlpMVVlGcWFRMDNwVFdMYWVqazhpQm9FTXdYWDdhaWFzSWJ2czh2RWlkNXlNV3VBMVFGcmd4MGNrLUZtT2VnaXQ3V0R4ek5BNFpWRzJpd2hfdjgtLUs5aGl3VmFwQmxvS1phRnppMGlVZw?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "中国発AIのManus、Metaから独立 中国政府が買収に反発",
+        "content": "中国発のAIであるManusがMetaから独立することが明らかになりました。この動きの背景には、中国政府による買収への強い反発が存在しています。今後のAI市場および国際関係への影響が注目されています。",
+        "source": "Google News",
+        "published_at": "2026-08-13",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE13VHNUb085V3Bobnd6OGFPeWZ3YnhVaEQ2b0Fkcy0xWU1aTE1kQzFVYWIzdUpGNTBtVmNLbFFTdDRLSURreE5ESlk1ZG1mSTFsakZHSmJCendscnRoR0doWUFuWGUzbXR2YUlSUw?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "中国AI企業、米メタから独立へ",
+        "content": "中国のAI企業が米メタ社からの独立を進めているというニュースです。この動きは、両国間の技術的な結びつきやAI開発の動向に影響を与える可能性があります。",
+        "source": "Google News",
+        "published_at": "2026-08-13",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1iemF4MEpINGx0UEE5WHVTYmZndTF1bGUtc0RLZXBncmMwOVczLTM1eFoyZkdFaTFydVlwQ25ObjVXb21vUDVDS1dBd1VQZktkNDVKUUhXVEk0MDBYaFE?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "米国株式市場：S&P・ナスダック反発、AI関連企業の好決算受け",
+        "content": "米国株式市場では、AI関連企業の好決算を受けてS&P総合500種とナスダック総合が反発しました。人工知能分野の強い成長期待が投資家心理を支える形となりました。",
+        "source": "Google News",
+        "published_at": "2026-08-13",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFB1cmhJS19MOXo5SGJvTzZGUEg1cmFnMFQ1OXBfdzdmUUM5M3NOOTF6SHBySnowVzlYNGpyWFMycXlNQWc3ZkU1ZmZiREpOV0RrRm5DM01TNV9sYWcyQ1doNzFZZ2tMb3NEcnY0WlB6eGNHV1VQQUxINExfNE05YkE?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "米国株式市場：Ｓ＆Ｐ・ナスダック反発、ＡＩ関連企業の好決算受け",
+        "content": "米国の株式市場でS&P総合500種とナスダック総合が反発しました。これはAI関連企業の好決算が市場で好感されたためです。投資家心理が改善し、主要株価指数の押し上げにつながりました。",
+        "source": "Google News",
+        "published_at": "2026-08-13",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBoMlMxMUhJQWhFUVRzQmtTQnRyX1AxdFk3aWk4UGZjOVFKb0R2YURFQUpvM3hGSjdvNWpUYVVqbGxQeGhxcmFBNVlrVWRPTFBKVDhGNlNGUmtNQQ?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "｢AIの進化は地殻変動！｣人材のパーソルHD･和田CEOが語る危機感･･･売り上げ膨張を追わず収益力重視する新戦略の真意",
+        "content": "パーソルホールディングスの和田CEOは、AIの進化を地殻変動にたとえ、人材業界における強い危機感を表明しました。今後は売り上げの規模拡大を追うのではなく、収益力を重視する新たな経営戦略へシフトする方針を示しています。AI時代における企業の生き残りと持続的な成長に向けた、同社の舵取りに注目が集まっています。",
+        "source": "Google News",
+        "published_at": "2026-08-13",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFAzTzJ0cWtjdE9yZ0tDQzVyVUlvYWt5RXV4d2o2SlRYV2ZuMjB3TUhkNjBKTHlqeEpKeWU4MWNZcDhkNjF1UWNPdzU5NlJKcE13eHc?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "米インテルが2.4兆円規模の増資を公募、AI向け設備投資を強化へ",
+        "content": "米インテルがAI分野への設備投資を強化するため、2兆4000億円規模の大型増資を実施することを発表しました。この資金調達により、半導体製造能力の拡大とAI向け開発の加速を目指します。市場における同社の競争力回復に向けた重要な財務戦略として注目されています。",
+        "source": "Google News",
+        "published_at": "2026-08-13",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5OZFoxSTNJalVIaUxIeDJaX1RrY2NvaUFLY2xEYmtSZl85bmNpeHoyZU1BZFRnakxMaHhQR1Vuak1HdzRKYTNiN2F0OUZHYVlsanRjWm8zRndJVHZheXc?oc=5",
+        "category": "インフラ・半導体"
+      },
+      {
+        "title": "毎日新聞掲載の被災者写真が生成AIで加工された疑い、SNSで拡散し波紋",
+        "content": "毎日新聞が掲載した被災者の写真が生成AIで加工されたのではないかと指摘され、SNS上で偽画像として拡散する問題が発生しました。被災地の実情が歪められているとの批判や懸念の声が上がっており、情報の真偽やAI技術の悪用に対する警戒感が強まっています。",
+        "source": "Google News",
+        "published_at": "2026-08-13",
+        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1adG1zZDNJcF9oeFNLbHM4eVNNd3U4N0tpcXBUNWNOUk16blpLZG9hdmg2RWM1em1sakg2N0JJd2pIWXRabXJlUmZiNHowS1BvN0xla2gtNnNMamFNY0dQa1Nib1B3QQ?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "被災男性のAI加工画像が拡散し、当事者が憤りを表明",
+        "content": "被災した男性の写真を無断でAI加工した画像がネット上で拡散され、当事者が強い憤りを抱いているというニュースです。生成AI技術の悪用によるフェイク画像の拡散や、個人の尊厳を傷つける問題について警鐘を鳴らしています。",
+        "source": "Google News",
+        "published_at": "2026-08-13",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1GeVptZGg2N0k5Z3ExYVZpTDA4MWFyaGtMVEpibHA1VXZleVU3R2FaWFRiUWJLdlVTU3BFT1dTWGVPeFRDa3ZSekxVRGJGN254?oc=5",
+        "category": "政策・安全"
+      }
+    ]
+  },
+  {
     "date": "2026-08-12",
     "daily_summary": "本日のAIニュースは、メタによる高性能モデルの無償開放やコアウィーブ・IBM等によるインフラ投資の急拡大が示す技術・市場の躍進と、小規模AIを組み合わせた「Sakana Fugu」のような新たな開発アプローチの台頭を伝えています。一方で、高度化するサイバー攻撃への「レジリエンス」確保やAIエージェントの導入がもたらす組織的課題、さらにはフランスの報道団体によるグーグルへの措置要請に代表される著作権やメディアとの摩擦など、セキュリティ、雇用、法規制を巡る深刻な課題と議論も浮き彫りになっています。",
     "articles": [
