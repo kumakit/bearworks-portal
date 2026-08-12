@@ -1,0 +1,2 @@
+app/(monetized)/labs/hachioji-climate/data/*.json text eol=lf
+scripts/validate-hachioji-climate-bundle.mjs text eol=lf

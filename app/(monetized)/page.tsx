@@ -150,6 +150,9 @@ export default function Home() {
       <section className="py-6 border-t border-gray-100">
         <h3 className="text-xs font-bold tracking-wider text-muted uppercase mb-4">その他の制作物</h3>
         <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted">
+          <Link href="/labs/hachioji-climate" className="hover:text-primary transition-colors">
+            八王子の気候を一次データで検証
+          </Link>
           <a href="https://docs.bearworks.uk/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
             Data Science Docs (MkDocs)
           </a>

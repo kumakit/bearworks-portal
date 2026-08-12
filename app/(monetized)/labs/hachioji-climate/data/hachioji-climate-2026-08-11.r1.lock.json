@@ -1,0 +1,10 @@
+{
+  "lock_schema_version": "1.0.0",
+  "bundle_file": "hachioji-climate-2026-08-11.r1.json",
+  "bundle_version": "2026-08-11.r1",
+  "bundle_schema_version": "1.0.0",
+  "bundle_byte_size": 405549,
+  "bundle_sha256": "8992cb17df3dabb3f56b359c097dbb817e4a744e40f43a502ae2896fb9c817dd",
+  "apps_repository": "kumakit/bearworks-apps",
+  "apps_production_commit": "6d543851a69833d01999975d85b20d94340c9fab"
+}

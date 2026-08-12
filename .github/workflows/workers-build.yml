@@ -27,6 +27,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Validate Hachioji climate publication bundle
+        run: npm run validate:hachioji-climate
+
       - name: Lint
         run: npm run lint
 
@@ -146,6 +149,16 @@ jobs:
           grep --quiet 'ca-pub-0000000000000000' /tmp/response-body
           assert_status 200 /toukei/problems/confidence-interval
           grep --quiet 'ca-pub-0000000000000000' /tmp/response-body
+          assert_status 200 /labs/hachioji-climate
+          grep --quiet 'ca-pub-0000000000000000' /tmp/response-body
+          grep --fixed-strings --quiet '八王子は本当に' /tmp/response-body
+          grep --fixed-strings --quiet '8992cb17df3dabb3f56b359c097dbb817e4a744e40f43a502ae2896fb9c817dd' /tmp/response-body
+          grep --fixed-strings --quiet 'https://bearworks.uk/labs/hachioji-climate' /tmp/response-body
+          assert_status 404 /labs/__invalid__
+          if contains_ads; then
+            echo 'AdSense client ID was found on an invalid labs response'
+            exit 1
+          fi
           assert_status 404 /toukei/problems/__invalid__
           if contains_ads; then
             echo 'AdSense client ID was found on an invalid problem response'
@@ -161,6 +174,7 @@ jobs:
           grep --fixed-strings --line-regexp --quiet 'google.com, pub-9560028085973137, DIRECT, f08c47fec0942fa0' /tmp/response-body
           assert_status 200 /robots.txt
           assert_status 200 /sitemap.xml
+          grep --fixed-strings --quiet 'https://bearworks.uk/labs/hachioji-climate' /tmp/response-body
           assert_status 404 /route-that-does-not-exist
           if contains_ads; then
             echo 'AdSense client ID was found on a 404 response'

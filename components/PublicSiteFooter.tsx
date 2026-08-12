@@ -26,6 +26,11 @@ export default function PublicSiteFooter() {
             </Link>
           </li>
           <li>
+            <Link href="/labs/hachioji-climate" className="hover:text-primary transition-colors">
+              一次データ分析
+            </Link>
+          </li>
+          <li>
             <Link href="/toukei#question-policy" className="hover:text-primary transition-colors">
               問題作成方針
             </Link>
