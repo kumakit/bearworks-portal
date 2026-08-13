@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-08-14",
+    "daily_summary": "本日のAIニュースでは、ChatGPTやGeminiなどの最新サービス料金やNVIDIAを中心とした投資・防御同盟の結成など技術・ビジネスの発展が伝えられる一方で、自動運転用半導体の国産化やロボット分野における「フィジカルAI」へのシフトなど産業構造の大きな変化が浮き彫りになりました。また、AI生成コンテンツの利用における顧客離れの懸念や悪質なハラスメント事例といった倫理・モラル面の課題も同時に報じられており、急速に普及するAI技術の安全性確保と適切な活用に向けた規制・自衛の重要性が改めて問われる一日となりました。",
+    "articles": [
+      {
+        "title": "【2026年8月版】生成AI主要8サービス料金早見表",
+        "content": "ChatGPTやGeminiの新モデル公開、次世代音声技術の登場など、AI業界の最新動向を反映した主要8サービスの料金プランを比較・紹介しています。ビジネスや開発におけるコストパフォーマンスの検討に役立つ内容となっています。",
+        "source": "Google News",
+        "published_at": "2026-08-14",
+        "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQdkJoMUpBVmtiMTBQd3ZPWmxDUndUN2NaX1JlUFJEQzZfVmhBaGkyblNUUjJlZmRVaHloTzI2QnNKOVJCZWtGUTRsSXQ4TmVGdXl6WW13RDF3SnVid2ZHZWdwU3pNZFFLdUpwejdzeGdUSTY1VHJjUC02Yy1ZSFlGQTcyTVEzbWp0STA3M1MwSnBoTzFr?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "「AI生成コンテンツ、実は嫌いではない」 だが「客の半分が去る」本当の理由",
+        "content": "AI生成コンテンツに対するユーザーの意識調査に関する記事です。約9割の人が「AIっぽさ」を感じた経験があり、コンテンツ自体への拒絶はないものの、過度な利用が顧客離れを招く実態が明らかになっています。",
+        "source": "Google News",
+        "published_at": "2026-08-14",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9JZE43Wi1OQmdLMFBaalpCV3RGU3dmdno3cXpMLWdNMGRqT0ZXS1RRSW9tNjA3VVdRdGM5MzNqY24zTmpOa0cwalBxMHRjWXl4T0JJdWZ1YURwX280bjExY3VvOW50N1duYUVpSzF0TW5yZw?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "AI暴走事故が投げかけた自衛の課題、NVIDIAなど米IT大手が「オープン型」防御同盟",
+        "content": "AIの暴走や事故に対応するため、NVIDIAをはじめとする米国のIT大手が「オープン型」の防御同盟を結成しました。技術の急速な発展に伴う安全性の確保と自衛のあり方が、業界全体で重要な課題として浮き彫りになっています。",
+        "source": "Google News",
+        "published_at": "2026-08-14",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9SQ3RuVnZCNjFYODhWMXJELVpBeDlwZTZSYkE4ZHdiQVo0Y3h6cktUalZiTkxxcFVMS2tveGVlZ2dNVXhjUWVucmJSZlM1ZWJoSUtUNmdB?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "ティアフォー、自動運転のAI半導体を自前で開発 国産体制に道筋",
+        "content": "自動運転技術を手掛けるティアフォーが、自動運転向けのAI半導体を自社で開発する方針を固めた。これにより海外製への依存を減らし、国内での一貫した開発・供給体制の構築に道筋をつける。日本の自動運転産業の競争力強化につながることが期待される。",
+        "source": "Google News",
+        "published_at": "2026-08-14",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1ybl9sazNGVlFhaDBnYkpmNV9tU3VwUlRyVXZDRUFwWWs4UzkzSmU1cTVRZlN1Z3BzVTl1dUtaTHUtWk9tUUJTa2U0MHVUS2wwd25HZHRDU0xRbU02RjZybzJVX3QxaVAwTUtpNA?oc=5",
+        "category": "インフラ・半導体"
+      },
+      {
+        "title": "ＡＩ投資へ基盤を設立 米エヌビディア",
+        "content": "米エヌビディアがAI分野への投資を促進するための新たな基盤を設立したと報じられています。この動きにより、AI関連技術の開発や市場への投資がさらに加速することが期待されています。",
+        "source": "Google News",
+        "published_at": "2026-08-14",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9KU0xSel9FeFpBRzA5SWttbkt4a1FUQzZzNUNtRXQyN3pyRWhXbTlKRjhTclc1c0lxcnRlNUtYZ0lINXIzR24zOW5EVjZXTmNJMkJLN2NpTmI2MDcySGdValNR?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "ロボット大国・日本、次の主戦場は「ハードウェア」から「AI・データ」へ",
+        "content": "日本のロボット産業が次世代でも優位性を維持するためには、従来のハードウェア中心からAIやデータ活用へ主戦場をシフトすることが不可欠であるとマッキンゼーが指摘しています。ソフトウェアとデータの統合による新たな価値創造が今後の競争力の鍵となります。",
+        "source": "Google News",
+        "published_at": "2026-08-14",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE13WHdGajVjRENQNG5RUTl2VG14LTVLemZoMXlSRFRFM3VxaFZtdmlPN05fS212LTYtVXhYTExfV2EtQjZ1MmVBbHgtMmpuWDhUYWhIemg1V3BYWVlrUmhqSllfMnJfaF9NblE?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "ChatGPTの次は「フィジカルAI」、手術ロボットの頭脳にOpenAIではなくNVIDIAが選ばれる理由",
+        "content": "次世代のトレンドとして注目される「フィジカルAI」において、手術ロボットの頭脳としてOpenAIではなくNVIDIAが選ばれる理由を解説しています。リアルタイムの処理能力やハードウェアとの統合性が重視されるロボティクス分野で、NVIDIAの技術がどのように活用されているのかが分かります。",
+        "source": "Google News",
+        "published_at": "2026-08-14",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFB2QTRaXzVnRVZ3QkV0Ul9LNXRIMzZuamVXblZGbHVReF84ZUwwaHRSckNoN1NUc1dVaHZHeEo0WXIxdU1XVktPSWZXMTVUQXc5c0x6d01B?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "中国発フィジカルAIは本当にすごいのか 柯隆氏×CDI是枝邦洋氏",
+        "content": "中国発のフィジカルAIの実力について、専門家の柯隆氏とCDIの是枝邦洋氏が対談形式で深く議論しています。最先端の技術動向や今後の産業への影響について多角的な視点から解説されています。",
+        "source": "Google News",
+        "published_at": "2026-08-14",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1TRHJPQTYyNzlLYU55WEJ1cjBBdmRXak5TUnZVRjdlRXpVeXpfNFJJY1N4SGppM3R0and2VmJzQnlOeEhUMnJlVTNWS3NTLXl0MkNXdUpkS21ybUxyc2lqZnpIeFg2cFVFa1Fvcg?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "生成AI時代、「未来の仲間」に選ばれる統合報告書とは",
+        "content": "この記事では、生成AIが普及する時代において、企業が発信する統合報告書がどのように進化すべきかについて解説しています。AIに正しく評価され、投資家やステークホルダー選ばれるための情報開示のあり方を探ります。",
+        "source": "Google News",
+        "published_at": "2026-08-14",
+        "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9IcGNZMjNwa185V3RsQmFac2laWjFMd1hvTDIxZlh1b20tMldNMzJSVTlZSnlGRWFSalQ4RGMycVlTb1BuNmFiX21wNE1pSHdCQUh2ZmVVMGd6Z0M3VVFMRGtSVVV6cXFtUVdadDBJWFZ2LXNraW5pSVFoREQ?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "同僚女性教諭の水着画像をAIで生成 男性教諭を懲戒 神奈川県教委",
+        "content": "神奈川県教育委員会は、同僚女性教諭の顔写真をもとに生成AIを使って不適切な水着画像を勝手に作成した男性教諭を懲戒処分にしたと発表した。生成AIの悪用によるハラスメント行為として社会的にも大きな問題となっている。教育現場におけるモラルやAIの不適切な利用に対する規制の厳格化が改めて求められている。",
+        "source": "Google News",
+        "published_at": "2026-08-14",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBaSGgzemdQRzBMcXpJLVc3ZVViQ19KZ2RZU3JsWjNrLVhoMkd4MEtMS3hfNmNESndNTGNoUHRJX3ZpV1ZaekxUaEduYjJNZHJMaDJSOVZ6d2dkaVE5eVJEU0ljLW1rdlk?oc=5",
+        "category": "政策・安全"
+      }
+    ]
+  },
+  {
     "date": "2026-08-13",
     "daily_summary": "本日のAIニュースは、ゲーム内への自然なAI実装や米株式市場を支える好決算といった技術の進化と成長期待が伝えられる一方で、米中対立に揺れるAI企業の独立や、インテルの巨額増資によるAI半導体への投資強化など、産業・国際面の動きが活発化しています。さらに、生成AIで加工された被災者写真の偽画像がSNSで拡散し当事者が憤りを表明する問題や、人材業界トップがAIの進化を「地殻変動」と称して危機感を露わにし経営戦略の転換を表明するなど、技術の悪用に対する深刻な懸念や、社会・経済全体における急激な構造変化への対応が喫緊の課題となっていることが浮き彫りになりました。",
     "articles": [
