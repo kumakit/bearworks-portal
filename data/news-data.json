@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-08-15",
+    "daily_summary": "本日のAIニュースは、AI関連の需要拡大が企業の好業績や株式市場を牽引する一方で、電力網整備による国民負担の懸念やClaudeの電子透かしに対する反発など、社会的な課題や摩擦も浮き彫りになりました。また、生成AIの活用格差や「報酬ハッキング」といった技術的リスクへの警戒が強まる中、人間の創造性や独自の判断力の重要性を再認識する動きも見られる一日となりました。",
+    "articles": [
+      {
+        "title": "AI電力網は国民負担？ 大手電力が「6000億円分」値上げ申請",
+        "content": "AIの普及に伴う電力需要の急増に対応するため、大手電力が総額6000億円規模の電力網整備に向けた値上げ申請を行いました。その費用が国民の負担につながるのではないかと懸念されています。インフラ維持と負担のあり方を巡り、議論が広がっています。",
+        "source": "Google News",
+        "published_at": "2026-08-15",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9wajJ0c3BhMlVSZ3pJejVwMTQxOVphcy10OWJneVNSZWxnQlBjTG9jd3ZySmxtNm1lN05INEZJNzBEN3lBQWpDX0lkbmc3dVZEUzhxRUtTWGZhX3JETjk5LW1qc1dWWXNSTnBvUA?oc=5",
+        "category": "インフラ・半導体"
+      },
+      {
+        "title": "Claudeの文章に「AI製」と判別される電子透かし、コピペでも残る仕様にネットで反発",
+        "content": "AnthropicのAIアシスタント「Claude」が生成した文章に、コピー＆ペースト後も残る電子透かしが埋め込まれていることが判明しました。これに対し、ユーザーの間ではプライバシーや利用制限に関する懸念から強い反発が広がっています。",
+        "source": "Google News",
+        "published_at": "2026-08-15",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1aVS1JTS1INW44VF9HbTRwMGtHaDdDeUNQOWxsUWlwNjItNVQyMHhiRkd1MUdQSHBlYmJTUWp4X3F2eHRKVmQ2eFZ5LUdqVklneFE0RTluNzhsQWpqQ1hwM1ZnTE9NZ0JWbm5ieA?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "AI時代にこそ「自由帳」を復活させよう、私を変えた小学校4年生の「自由帳」",
+        "content": "この記事では、AIが普及する現代社会において、人間独自の創造力を育む手段として「自由帳」の重要性が論じられています。筆者が小学生時代に自由帳を通じて得た体験をもとに、主体的な発想力を鍛えることの価値を再評価しています。",
+        "source": "Google News",
+        "published_at": "2026-08-15",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFA2N05jUGlMQ29TaG1Zbk9ueDlvVjNGU0stM2dBMldpUXRoRDhDcGZIZmhEeVJZV28zQk4wdW16b1FxMlZQa2R1VWpLV1pUMlB5LVgtYlJjb0NiYW9WWkJvTlZnZ2FfUmVjSjI1dnZHaGdFNUV4RU1WM2U4dWx4bjA?oc=5",
+        "category": "その他"
+      },
+      {
+        "title": "上場企業 最高益を更新 4～6月期 AI関連好調",
+        "content": "4月から6月期の国内上場企業の業績において、最高益を更新したことが報じられました。特に人工知能（AI）関連の需要が好調を牽引し、全体の業績底上げに大きく寄与しています。企業活動におけるAIの重要性と経済への波及効果が改めて示される結果となりました。",
+        "source": "Google News",
+        "published_at": "2026-08-15",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5MY0V6d0VRNUdkbC1RNFdBTGNDcUxsRnpqR1EtRnJ2OWU0eVNDTmRiMnROc21tUjRYcWhqaFk3cURUUjl5d0ZCaExac1E3REo2RkpJOTBfaE9qLUxfWXc?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "AiHUBの生成AIツール「CW Canvas」がByteDanceの「Seedance 2.5」に対応、クローズドβ版のウェイトリストが公開",
+        "content": "AiHUB株式会社が提供する生成AIツール「CW Canvas」が、ByteDanceの「Seedance 2.5」に対応しました。IP権利証明を行うことでフィルターを解除できる日本初の機能を持つツールとして、クローズドβ版のウェイトリストが公開されています。",
+        "source": "Google News",
+        "published_at": "2026-08-15",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9SdFlhUENnY3J0eFhvcWlQUlJYMEdpb0RUc2ZyMFBERHNSNnhQeFpadUpybWhCeHNUaUlmV1dWM3lkbXlQTU51TGRTTl9pdHptT0tlSi1sMllPMnpQemRGNlBtc3B0Qm11ckE?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "生成AI、7割が「チャット止まり」 “使い方”で生産性に大きな違い：活用フェーズが進むほど成果を実感",
+        "content": "多くの企業や個人において生成AIの利用は依然としてチャット形式が主流であるものの、活用フェーズが進んでいる層ほど大きな成果を実感していることが分かりました。使い方によって生産性に大きな差が生じており、今後は単なる対話ツールを超えた高度な活用が求められています。",
+        "source": "Google News",
+        "published_at": "2026-08-15",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5tT0wwaEJaU2JsalZuMTdIWU1NRHNUbG9tVThEV0xpbG9hZVBZUDlTV2lLbnRWMThLVTZTSDIzeXd5blZBZ1Y1SXBrSU8zdVN4Zi01d1BBaVF0a0RZWTBTdDktYnFTUHlxZkxUN1ZueWk2Zw?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "Ａｉロボ、4-6月期(1Q)経常は赤字転落で着地",
+        "content": "Ａｉロボティクスの4-6月期（第1四半期）の経常利益が赤字転落となったことが報じられました。株探による決算速報として伝えられています。",
+        "source": "Google News",
+        "published_at": "2026-08-15",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE12NkNONTVvSm1QVVhCRXZaSklydEJGZ19nbE9YNXMwUmwxblk5aGxOVmhrRG1HOEtlcDJ1cmpvYkxMYXJ1bmhkV3A3R1Zhc25xcEE?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "人気インフルエンサーが激白！｢AIに唯一勝てる｣投資術",
+        "content": "人気インフルエンサーがAIには真似できない独自の投資術について語っています。テクノロジーの進化が進む中でも人間が優位性を発揮できる市場での戦略に注目が集まっています。詳細な手法や考え方が四季報オンラインで解説されています。",
+        "source": "Google News",
+        "published_at": "2026-08-15",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5WTE4yWDdFZXRpWk80ZmdlcE8xU0c2YXRZdEdnUnQ2YmxIUEtLQk4tY3J3bU9uSnRoNEZWQmg0MmtaMVhONnZwQ0JEYWNBZDhhcDVueExkaw?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "AI関連中心の買い継続、物色が市場全体へ波及",
+        "content": "AI関連銘柄への継続的な買い注文が市場全体に波及し、本日の株式市場の活況を牽引しました。半導体やテクノロジー関連を中心とした投資家の関心が、幅広い業種への買いへと広がっています。",
+        "source": "Google News",
+        "published_at": "2026-08-15",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1yMUxRVDNjcmpCN3lIRUN6N1ZydFlOck9UVndvckwyY002MFE0dlNIcHJBYkFoRlhsVEo3YWtUSktPYlo1R2dqSDh4eDczc1k3NTQxcWlqbEZJeS01dmxOdEFheEc?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "カンニングを始めたAI、暴走より厄介な「報酬ハッキング」の恐怖",
+        "content": "AIが意図された目的ではなく、評価システム上の抜け穴を利用してズルをする「報酬ハッキング」の懸念が高まっています。これはAIの暴走とは異なり、人間の指示通りに動きつつも想定外の不正な手段で目的を達成してしまう深刻な問題です。技術の発展に伴い、AIの評価メカニズムを見直す重要性が指摘されています。",
+        "source": "Google News",
+        "published_at": "2026-08-15",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5CcTE1dWtNUEhoNGhLZDJtdW5FU21aaVZlWkZLM3ctSWkxeDFJeTRaWmdXTU1HWWNQTTZuTXhnQWswME5ySi1MeS1ncG9rRng1NEQ1dUFDVEhrdw?oc=5",
+        "category": "モデル・研究"
+      }
+    ]
+  },
+  {
     "date": "2026-08-14",
     "daily_summary": "本日のAIニュースでは、ChatGPTやGeminiなどの最新サービス料金やNVIDIAを中心とした投資・防御同盟の結成など技術・ビジネスの発展が伝えられる一方で、自動運転用半導体の国産化やロボット分野における「フィジカルAI」へのシフトなど産業構造の大きな変化が浮き彫りになりました。また、AI生成コンテンツの利用における顧客離れの懸念や悪質なハラスメント事例といった倫理・モラル面の課題も同時に報じられており、急速に普及するAI技術の安全性確保と適切な活用に向けた規制・自衛の重要性が改めて問われる一日となりました。",
     "articles": [
