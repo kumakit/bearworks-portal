@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-08-17",
+    "daily_summary": "本日のAIニュースでは、OpenAIの幹部退社や米国の少年による衝撃的なAI相談殺人事件など、組織の混乱や倫理的課題が浮き彫りになる一方、エージェントAIを見据えた半導体競争やAIメガネの普及、船舶向け自律航行AIの海外展開など技術の社会実装が加速しています。さらに、インドによる大規模なAI人材育成やAI小説の急増による文学賞の存続危機など、教育・文化・経済の各分野においてAIがもたらす影響と変革が世界規模で大きな議論を呼んでいます。",
+    "articles": [
+      {
+        "title": "オープンAIで経営幹部が相次ぎ退社、新規株式公開を前に危険信号",
+        "content": "OpenAIにおいて経営幹部が相次いで退社しており、わずか半年前に入社した中心人物も含まれていることが報じられました。将来的な新規株式公開を控える中での相次ぐ退社劇は、社内の混乱を示す危険信号として注目されています。",
+        "source": "Google News",
+        "published_at": "2026-08-17",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1rM21pRnZwcW5kcF9GeFh6dFRXZWx0MnRVNzltWkplRTg3Sm0tU3N2ZHhGQTVWeEwtZ21NRVppZUtrQUxYZGZ1OTFVTFFyOGhS?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "AI小説が文学賞に殺到 増える選考コスト、公募新人賞は存続できるか",
+        "content": "生成AIによって作成された小説が各種文学賞に大量に投稿されており、審査員の選考負担やコストが急増しています。人間による公平な審査や新人発掘の場として機能してきた公募新人賞の今後の存続が問われています。",
+        "source": "Google News",
+        "published_at": "2026-08-17",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE90VGR4WjMwSC1DOEdqMDF4TFU1TWxWQjJqNFI5Y3hhSlRhLWpUeXhDN2RWTk9ERWRUMEJSR28zZzE5N3RRMFBLdmJla2hrMjBlTVYxYk1nVTRQSWlteHc0eVdiWHZJdzFQS3BJdQ?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "船舶向け自律航行AIの市場開拓…エイトノット、東南アジアで調査",
+        "content": "エイトノットは、船舶向けの自律航行AIの市場開拓を目指し、東南アジアでの現地調査を開始しました。小型船舶の自動化技術に対する需要を探り、海外展開を加速させる狙いがあります。",
+        "source": "Google News",
+        "published_at": "2026-08-17",
+        "url": "https://news.google.com/rss/articles/CBMiQkFVX3lxTE9LNm1GalFxbGZLdjFURlhQR2ZVU0dHRXVUd0R0Ymt6ZW9hZk1nVlB4Y2tqWDdoWWNRRU9tMDlxb1JJQQ?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "【COMPUTEX 2026：半導体関連産業編】エージェントAIの本格化を見据えたハード競争、米Qualcommやキオクシアらが攻勢",
+        "content": "COMPUTEX 2026の半導体関連産業特集では、エージェントAIの本格的な普及を見据えたハードウェアの競争が取り上げられています。米Qualcommやキオクシアなどの主要企業が次世代技術で攻勢を強めており、市場の動向が注目されています。",
+        "source": "Google News",
+        "published_at": "2026-08-17",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5OalJjbm5MTHJVaFFmcGNsekxSSWJjVTl1Um8yWUlKZU5ROGJEc1k4YzY5S1dOSUxfeGVFcjlTY2lra0VCc2VNTTBfeEVjaUNncGl3akE2VFdZcVY3SE1F?oc=5",
+        "category": "インフラ・半導体"
+      },
+      {
+        "title": "日本で人気急上昇中の「AIメガネ」を手がけるユニコーン企業の野望とは",
+        "content": "近年、日本国内でも人気を集めている「AIメガネ」について解説した記事です。独自の技術と戦略を持つユニコーン企業が描く未来のビジョンや、市場における野望に迫っています。",
+        "source": "Google News",
+        "published_at": "2026-08-17",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFA1S2RmRnFhYVhPUVNFYTVKaHNNUUdLaUJqeWRQaS0tX0FHc2RvOTBEdkstMHFXNFFnbFRxRkVEcDhRdHp1Q1p6bnlvaVRfQ0o1dzZZ?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "少年、AIに相談し母と弟殺害か 米の17歳を殺人罪で訴追",
+        "content": "アメリカで17歳の少年がAIチャットボットに相談を持ちかけた末に母親と弟を殺害した疑いで殺人罪に訴追されました。AIの利用が犯罪や精神状態に与える影響について社会的議論を呼んでいます。",
+        "source": "Google News",
+        "published_at": "2026-08-17",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBVM1lYVkhzVm5KY2NNWHBQOXhHMzZ2Mnc4MTBIUE54WjRGZFNHNjZCNmhVRVRLY2NZektXTHhkbHN2S285aVRrWXVkN1lEMTJjM0EweDQyV2ZvWlBLYkNwaVRqWVVGMGRJ?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "ＡＩ相談、母と弟殺害か 米少年",
+        "content": "アメリカの少年がAIとの相談を経て、母親と弟を殺害した疑いが持たれている事件に関する報道です。AI技術の普及と精神的影響、または犯罪への関与に関する社会的な懸念を示しています。",
+        "source": "Google News",
+        "published_at": "2026-08-17",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9mTExMZERHdHFzQ2E3MEpoVFF4TnFEbU9SbWoyVElaWEhiYzROYTYyVXYxQU9JS2JrSmFWVnBZVE5nWjdpWWxHUkh6bUxWUG4xRG55cVptclVPVzkwdEJiSA?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "米ボストンの17歳少年、事件前にAIに相談し母と弟を殺害か",
+        "content": "米国・ボストンにて、17歳の少年が母親と弟を殺害した事件の前に、人工知能（AI）に相談していた疑惑が浮上しました。この事件はAI技術が人々の心理や行動に与える影響について、社会的および倫理的な議論を巻き起こしています。",
+        "source": "Google News",
+        "published_at": "2026-08-17",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE0wZ1FLYmV2ZkdNTmtDUkNjWjk0ajBoZEpfVHdBNk1xalZ0Q2k5VW5VQmRfY1MyR1FybzJoZzU1WnJONng3T0w1SVd4cG1QYWFTckZNSEVSWkpsLUVSb3c?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "インドの若者１０００万人にＡＩ技能訓練、無料の「オンライン予備校」も提供…独立記念日に首相表明",
+        "content": "インドのモディ首相は独立記念日の演説で、国の未来を担う若者1,000万人を対象にAIの技能訓練を実施する方針を表明しました。あわせて、無料のオンライン予備校なども提供し、AI人材の育成とデジタル経済の発展を国家主導で急ピッチで進める構えです。",
+        "source": "Google News",
+        "published_at": "2026-08-17",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBjNXE1QWdxQldsNkxiakNOazdfZG9zZWU0bVhPZ0dvOVhlclRxQWIxNi1WbjRYV2pyNzVmVXhodGlfRnlHSGVDSEYzazA5SldOQWVpcEtfaHRwNXhqVmd3Nm1B?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "AI分野の世界大学ランキングで日本の大学の現状と順位が明らかに",
+        "content": "AI分野における世界の大学ランキングにおいて、日本の大学で唯一100位以内に入った大学に関する記事です。東大や早慶ではなく意外な大学がランクインしており、日本のAI研究における立ち位置や教育機関の動向が注目されています。",
+        "source": "Google News",
+        "published_at": "2026-08-17",
+        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE94M19EVjRMQ055cVluOGVsckJJNmE1OGV0ajVFM3dYaXdNUTFzUC1FX0tCR2hiS0NkTGpNR1FRdEVkdmhkR1BGR3luZ3huNTIxWXR2aVhoYWw?oc=5",
+        "category": "モデル・研究"
+      }
+    ]
+  },
+  {
     "date": "2026-08-16",
     "daily_summary": "本日のAIニュースは、トランプ政権による米中分断を促す地政学的な圧力や、オープンAIの「スキーミング」といった安全性・倫理的課題が浮き彫りになる一方、メルカリの全社活用やソニー・TSMCの半導体連携、エンタメ分野での応用など産業利用も加速しています。さらに、株式市場ではAI・半導体セクターの動向に加え、他セクターへの資金シフトや投資戦略の多様化が議論されるなど、技術、規制、経済の多面的な広がりを見せています。",
     "articles": [
