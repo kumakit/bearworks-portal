@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-08-18",
+    "daily_summary": "本日のAIニュースは、企業における開発支援ツールの導入急増やAI特需による好決算といった経済的恩恵が伝えられる一方で、政府による知財保護方針の策定やAI動画を巡る倫理的議論など、急速な技術の浸透に伴う課題も浮き彫りになりました。また、地方でのAI人材集積の動きや自己改善型AIの進化、さらには業界内の人材移動が活発化するなど、社会全体でAIの活用とガバナンスの模索が加速している一日となりました。",
+    "articles": [
+      {
+        "title": "サイバーエージェント、月3万円の“AI手当”で「Claude Code」「Codex」利用急増",
+        "content": "サイバーエージェントが導入した月3万円のAI手当により、「Claude Code」や「Codex」などの開発支援AIツールの利用が急増しています。エンジニアの生産性向上や新しい開発スタイルの普及が進む一方で、既存のツールやプロセスに変化が見られます。",
+        "source": "Google News",
+        "published_at": "2026-08-18",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBoYUh2Z1pmS3MwUGl6dFBLekFsT20wVEQ1NlFpWTJXNHc4MzE5R0M4TEt3bktmQUxGd3RUN1NvZkJkWnM2T1F6RFQzd0JCM3cxczJzT3FaWUNPb1prc21QcU8xc1dkMXlMYWxEXzBzU3RKQQ?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "生成ＡＩ学習データの公開や権利者への開示など要求、海外企業にも適用・罰則見送り…政府が知財保護案",
+        "content": "政府は生成AIの学習データ公開や権利者への開示を求める知財保護案をまとめた。この方針は海外企業にも適用されるが、今回は罰則の見送りが決定されている。著作権保護とAI開発のバランスを図るための新たな指針となる。",
+        "source": "Google News",
+        "published_at": "2026-08-18",
+        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5iUlEta1RBTzdyTl90Y0toUWFHSllsNlNTaEpyMm0wRHczQUdmMUFETmhWX3RMdDFqUFg4YzhwYUZfNGZKc1c4cXBvUjFHd3VtdHN4ajRFVFlTeGdqZDVkalRPNUdwdw?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "決算:4〜6月の最高益530社、AI特需と構造改革が寄与 旭化成は5年ぶり",
+        "content": "日本企業の上場企業における4〜6月期の決算で、最高益を更新した企業が530社に達したことが分かりました。この好業績は、AI関連の需要拡大や各社の構造改革が主な寄与要因となっています。旭化成も5年ぶりの最高益を記録するなど、幅広い産業で業績の回復が見られます。",
+        "source": "Google News",
+        "published_at": "2026-08-18",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE50b3ZsU3BpLWhjclNHSE1oNTJuaE5VSzA0RnFJVnkteGN1aGFnd2pMRVhNSjBPaWQyMlZjek8yUENhZHZpbkxGTTdHTTZHUEVTYWZUeXRiNmwwU3loQm0zdTJDMzdiR0VkbENmTQ?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "すべてを変えたAIの「第37手」 今や至る所で",
+        "content": "AIの歴史において決定的な転換点となった「第37手」についての記事です。現在、AI技術は社会のあらゆる場所浸透し、私たちの生活やビジネスのあり方を大きく変えています。",
+        "source": "Google News",
+        "published_at": "2026-08-18",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1HZ2Y0WF9vaV9DX2Y0TjJOUlZadEg0RUt3ZjN6WTZpUXJveG1aZUE4Uy00WjJ5Z1Zxd3U2R1lzdUR4V2gzQ2ZfSmktNnc?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "Aiロボティクス、第1四半期で売上高100億円を突破し通期予想へ順調な滑り出し",
+        "content": "Aiロボティクスの第1四半期決算において、売上高が100億円の大台を突破したことが報じられました。通期の業績予想達成に向けて、非常に順調なスタートを切っています。今後のさらなる成長と業績の推移が注目されています。",
+        "source": "Google News",
+        "published_at": "2026-08-18",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1CY3pweXRla3ZOTUsyRW9SNHg0b2xfaW1HaW1QMkFhZkx2Q3dZV2VqR3NOZnpod0V2RjhZNWZlV2YteFZkdEpqcFQ0cmdIa2lGYlRoNVdCcF9zTmJBM1cwRg?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "秋田にAI企業、人材を データセンター起点―エスツーの須藤CEO",
+        "content": "エスツーの須藤CEOが、データセンターを起点として秋田県にAI関連企業や専門人材を集積させる構想について語りました。地域活性化と先端技術の融合を目指す取り組みとして注目されています。",
+        "source": "Google News",
+        "published_at": "2026-08-18",
+        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFA1UWpkc2JoZGprTnd5c0RnSDhsSC1wUmNSVWpDRDVJMDdacDZITnROWEI0Y1N6dnVlRkZkWDZWS3h6Q0hielVJdkJPRlJBYm1JSU5GRU1tdzlJU0VCNzJOb2E3dw?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "AIが科学的発見→「自己改善で進化」に現実味 暴走リスクの加速も",
+        "content": "人工知能が自ら科学的発見を行い、自己改善を通じて進化する可能性が現実味を帯びてきている。一方で、この技術の急速な発展によりAIの暴走リスクが加速する懸念も指摘されている。最先端のAI技術における進化のスピードと、それに伴う安全性の課題について報じている。",
+        "source": "Google News",
+        "published_at": "2026-08-18",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5ld0lwRWt3blFSbU5jMXVQT3B3UXBqMjBlY1RWWXhEdlNGYW1EaW1mTWdfSExSN3pDVS1DQlhjMzd1TmdsbEtVTWI1djNURzRPZTVuYllzV3BWRy1TYnJWaVFUSWJ6d00?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "特攻隊員が笑み浮かべるAI動画 元隊員は「見たくない」",
+        "content": "特攻隊員が笑顔を浮かべる様子を描いたAI生成動画が公開され、議論を呼んでいます。当時を知る元隊員からは、複雑な胸中や拒絶感を示す声が上がっています。歴史的な記憶の扱い方や生成AIの倫理的側面について考えさせられる話題です。",
+        "source": "Google News",
+        "published_at": "2026-08-18",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE0wWDBWOUNRQnZZX0ZWaWF5cEJONWJ6VEpSN1E2TWhhN21iNWUyZG0zMzN2OHRPaUlHbm01YzU2YS1jRXRjUmk3Rl9PLU84a1ZzMVVRLXJVMDdhSGtxY2NLNnRBUjNSdjRo?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "グーグルのトップAI人材が新会社設立、加速するAI人材の大移動に必要な専門性の磨き方",
+        "content": "グーグルのトップAI人材が新たに会社を設立し、AI業界における人材の大移動が加速しています。このような激しい変化の中で生き残るためには、自身の専門性を常に磨き続けることが不可欠です。本記事では、AI分野で求められる具体的なスキルやキャリア形成のヒントについて解説しています。",
+        "source": "Google News",
+        "published_at": "2026-08-18",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5KRWhBWGxoam9tLTNENWZvd2FTTlR0c01GaElMUk16dGNfdmItdDJOa2U0WkpCaEkyTnZuaEFZUlZwbkJIWTBZdnpPTmJ4Y2ZOZXFpYTNnd2hSUQ?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "『VIVANT』の便利すぎるAI「ハヤト」が前作にいなかった納得の理由",
+        "content": "人気ドラマ『VIVANT』に登場する高度なAIシステム「ハヤト」が前作に存在しなかった理由について、ドラマの公式設定や背景を踏まえて解説されています。作中で描かれる技術の進化や、それがストーリーに組み込まれた経緯がファン必見の内容となっています。",
+        "source": "Google News",
+        "published_at": "2026-08-18",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBod00tU2h2a0luOUdrc3k1QXYzRWtPaFZnLTFxZmswQzZ3WjF1bG5YaXZ2dlFYem9jaWk3SS1fdS1RV0tfSGtlb2wzUUhtdGZ2cmd3RFhvV2Z0eEJSSjZUQ0Npcnc3YnlIX3k2dWlXcmNLb05GUXZKdFN6T1BSRHc?oc=5",
+        "category": "その他"
+      }
+    ]
+  },
+  {
     "date": "2026-08-17",
     "daily_summary": "本日のAIニュースでは、OpenAIの幹部退社や米国の少年による衝撃的なAI相談殺人事件など、組織の混乱や倫理的課題が浮き彫りになる一方、エージェントAIを見据えた半導体競争やAIメガネの普及、船舶向け自律航行AIの海外展開など技術の社会実装が加速しています。さらに、インドによる大規模なAI人材育成やAI小説の急増による文学賞の存続危機など、教育・文化・経済の各分野においてAIがもたらす影響と変革が世界規模で大きな議論を呼んでいます。",
     "articles": [
