@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-08-19",
+    "daily_summary": "本日のAIニュースでは、政府による知財保護・学習データ開示の原則案策定や、オープンAIの開発減速・安全性見直しといったガバナンス強化の動きが報じられた一方、米国の女性労働者における雇用の懸念や、急速なAI開発・投資集中に伴うバブル崩壊リスク、米中対立の激化など、技術の急進がもたらす社会的・経済的なリスクや課題も浮き彫りになりました。",
+    "articles": [
+      {
+        "title": "AI事業者向け政府知財保護案が判明",
+        "content": "政府によるAI事業者向けの知財保護案の全貌が明らかになりました。AI開発における著作権や知的財産の取り扱いに関する新たな指針を示すものとみられています。今後のAI産業の発展と権利保護のバランスに注目が集まっています。",
+        "source": "Google News",
+        "published_at": "2026-08-19",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFAzMG9YYURZVkR2RkxlQjcxclUtdkZtNFFtZW4yQTZob0YzV2syb2xYcnB3enEwNDBUZ200aElQT2lCSmpZNE1MbVVpemhQNFZ0?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "AI学習データ開示促す 事業者向け原則案 法的拘束力なし",
+        "content": "政府はAIの学習データの開示を事業者に促すための原則案をまとめた。この原則案に法的拘束力はないが、透明性の向上が期待されている。事業者における自主的な取り組みを通じて、AI開発の健全な発展を目指すものとなっている。",
+        "source": "Google News",
+        "published_at": "2026-08-19",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5BMDZMdUVoZjljRnNJUkNReGVMS21XYkxrTWtJUmVkX1VZUEl3Y1JBYUJSY0NCWlhvbW5aSy1oTnZHRTRZVHNLN3V1MDNhdThzOURMMkRxcW53UlU3cXc?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "AIに脅かされる米国の労働者、86%が女性 「産休育休で解雇」の疑念",
+        "content": "米国においてAIの導入や自動化に伴う人員削減の対象となった労働者の86%が女性であることが報じられました。その背景には、産休や育休を取得した従業員が不当に解雇されているのではないかという深刻な疑念が存在しています。女性労働者のキャリアや雇用機会に対するAIの影響と企業の姿勢が議論を呼んでいます。",
+        "source": "Google News",
+        "published_at": "2026-08-19",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5BM0l3LUhIY2pabjRGenVzN3U2OXJpcy1YcnVFMDNhLThWaG1ieDhQZWkzSjNHYm53VUZ0d25PczZDaTA1Y1pTcUhuMHV0dG8yR3lCRUVVN3BrQTFmSE9BRDFoWXlwa05QUVoyZA?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "ＡＩモデル開発を減速、オープンＡＩ 「暴走」受け試験体制など見直し",
+        "content": "オープンAIは、AIモデルの開発速度を一時的に減速させる方針を固めた。これは「暴走」に対する懸念を受けたもので、安全性を確認するための試験体制などの見直しを行う。",
+        "source": "Google News",
+        "published_at": "2026-08-19",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE52eGd3NGtZN2dCd0tYMmEzdE9rWXFvSDhvR3NKZUI0Sjhpc29HLVdoZ3d3ZGRHTnA2WHpGRWFKcEhJQ0FTY2plejdGRjVXVlhYdW1WX1dqb3A4THRiYWRsZnl4UUs3REU2eEU0b0NjRUkxRVVrRzFiZ3Y0VmlKNTA?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "オープンAI〈暴走ハッキング〉で浮上した破滅的危機の予兆…安全無視で疾走するAI開発､人類の奢りが大敵",
+        "content": "オープンAIの開発現場における安全性の軽視や、AI暴走の危機に関する懸念が報じられています。急速なAI開発が進む一方で、倫理的リスクや将来的な破滅的危機に対する警鐘が鳴らされています。",
+        "source": "Google News",
+        "published_at": "2026-08-19",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5JeGtqQWtOOWtWeVh3eEUyR1UyRTR6SEN0VlVxV2hjS3lwZTF3cVMwOVhuZGJVUDdJLWZRYmRpREFkeU9uMUNqWE44ZzhUdmRjU2JHQjdjbUVmLUxJTzRZ?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "「モデル蒸留」を巡り激化する米中AI対立、資金難に挑む米国産オープン型開発の行方",
+        "content": "米中間のAI開発競争において、他モデルの出力を利用して効率的に学習する「モデル蒸留」が新たな争点となっている。潤沢な資金を持つ中国勢に対し、資金難に直面する米国のオープン型AI開発がどのようなアプローチで対抗していくのか、その行方が注目されている。",
+        "source": "Google News",
+        "published_at": "2026-08-19",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5RcllwNnZYczRobDF5SHhDZnpPdnViVUF2UVFEN1V3a2MyQTJ6T1RHLWV6RGpULXJzTVpLOWMyUTNhMXRxWHVkclN5TkQzM01CU0dtQkN3?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "日米ソフトウエア株に資金回帰 NEC半年ぶり高値圏、AI代替懸念和らぐ",
+        "content": "日米のソフトウエア関連株に資金が回帰しており、NECの株価も半年ぶりの高値圏にある。人工知能（AI）による事業代替の懸念が和らいだことが背景にある。株式市場でソフトウエア企業の成長期待が改めて見直されている。",
+        "source": "Google News",
+        "published_at": "2026-08-19",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE51bHhnSkhKRFFGcHZJRl9IUHBfamNzOW1RRDk4OTVlR0NxZ282dHdxcGhQX2hEaS1GYkFQb1p4b2xhaTRGaWY5SDh6M0N1NkxndkM3UFVGWl9SdzNfUlZLaDgzNnZ1Y2hjTzN3bA?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "エミン・ユルマズ氏「AIバブルが『リーマン型崩壊』に至る懸念」",
+        "content": "エコノミストのエミン・ユルマズ氏が、現在のAIブームが過熱し、将来的にリーマンショック型の大規模な市場崩壊につながるリスクについて警鐘を鳴らしています。過大な期待と投資の急増に対する市場の警戒感が示されています。",
+        "source": "Google News",
+        "published_at": "2026-08-19",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5fSVZOdTJ6Y3VfSkU5RXBJbUFQWVF3N0RwaXhVaWdlSUl2TkRhRkxReS1nWERSZjEyOWVZVU1fZXE4QkxoZjVuV1VKMzJKalJ0VDI1RWxTNmJjODMzZXNlNFVsZTU4NEw0X3pvYQ?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "明日の株式相場に向けて＝AI・半導体一極集中が発するSOSシグナル",
+        "content": "AIや半導体関連銘柄への一極集中が続く株式市場において、その偏りが発する危険信号について解説しています。過度な集中投資のリスクや、今後の相場展開への影響に警鐘を鳴らす内容となっています。",
+        "source": "Google News",
+        "published_at": "2026-08-19",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9WM1BIcUU1LUZXN1B4QWVQRFpSUUVLYlVNVnlXU1JKMURVWlY0b012TWZTbUVIQ1huSHNtOTU2VUVPZ1JGbVdkaEY1bm5pdU13R1RuT2dMZ1NqQmNsYVh6bA?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "『ライザのアトリエ』AIチャットRPG『RyzaChat:AI』が配信延期、想定以上の反響でサーバー強化へ",
+        "content": "『ライザのアトリエ』を題材にしたAIチャットRPG『RyzaChat:AI』の配信延期が発表された。予想を大きく上回る反響があったため、快適なプレイ環境を提供するためのサーバー強化が実施される。ファミ通が報じた。",
+        "source": "Google News",
+        "published_at": "2026-08-19",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1TcjM3UXZjTTN2ZmdzTXFLVi14cXdaOV8wbXo3NFJBbXhaN3RKNjZwTHBOcVF4c09mODNzLWR2OFFYNHBnRG1vNHJRZ2JsOW4yVHozVDlJWQ?oc=5",
+        "category": "エージェント・開発ツール"
+      }
+    ]
+  },
+  {
     "date": "2026-08-18",
     "daily_summary": "本日のAIニュースは、企業における開発支援ツールの導入急増やAI特需による好決算といった経済的恩恵が伝えられる一方で、政府による知財保護方針の策定やAI動画を巡る倫理的議論など、急速な技術の浸透に伴う課題も浮き彫りになりました。また、地方でのAI人材集積の動きや自己改善型AIの進化、さらには業界内の人材移動が活発化するなど、社会全体でAIの活用とガバナンスの模索が加速している一日となりました。",
     "articles": [
