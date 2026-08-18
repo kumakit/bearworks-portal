@@ -4,7 +4,7 @@
 
 Phase 3-2 のローカル実装と検証を完了した。統計ガイド8件、オリジナル例題5件、八王子気候分析に、執筆・検算または内容確認・最終公開確認、AI利用、人による確認、公開証跡、更新・訂正履歴、誤りの連絡先を共通形式で表示する。
 
-この記録の時点では commit、push、Linux CI、deploy、GitHub Issue更新を行っていない。公開版の受け入れ完了を示す記録ではない。
+実装commit `f078c67457b4eb8201da855ac9693fb7d27d191c` をbranchへpushし、Linux clean-checkout CIまで完了した。deploy、公開環境QA、GitHub Issue更新は行っていないため、公開版の受け入れ完了を示す記録ではない。
 
 ## 実装範囲
 
@@ -44,16 +44,24 @@ Lunaへ最終差分を読み取り専用で委譲した。LunaはIssue要件5項
 - `/about`: 広告なしを確認。
 - 既存の公開証跡リンク: 未認証HTTPで到達可能なことを確認。
 
+## GitHubとLinux CI
+
+- 実装commit: `f078c67457b4eb8201da855ac9693fb7d27d191c`。
+- branch: `codex/issue-344-phase3-2-transparency`。push後にlocalとremoteのcommit一致を確認した。
+- `Workers build` は `pull_request` または `workflow_dispatch` で起動するため、branchを指定して手動実行した。deployは含まない。
+- Linux clean-checkout CI: [run 32149672686](https://github.com/kumakit/bearworks-portal/actions/runs/32149672686) pass（1分20秒）。
+- `npm ci`、bundle検証、lint、Next.js build、内部リンクprefetch検査、OpenNext Workers build、production/staging dry-run、Workers route/API smokeがすべて成功した。
+- annotationはGitHub ActionsのNode.js 20非推奨予告と既存の `<img>` lint warningであり、Phase 3-2の失敗ではない。
+
 ## 未検証・外部ゲート
 
-- 本walkthroughのGitHub `main` URLは、commit・push・取り込み前のため現時点では404になる。公開前に必ず解消する。
+- 本walkthroughのGitHub `main` URLは、branchがまだ`main`へ取り込まれていないため現時点では404になる。公開前に必ず解消する。
 - アプリ内ブラウザーの接続が実行環境の信頼パス制限で停止したため、今回のローカルdesktop/mobile目視確認は未完了。公開routeで改めて確認する。
-- commitとpushはユーザーの個別承認後に行う。
-- Linux clean-checkout CIはpush後に確認する。
+- PR作成とmergeは未実施。
 - staging / production deployは別の明示承認後に行う。
 - 公開routeのdesktop/mobile、リンク到達性、広告境界はdeploy後に再確認する。
 - GitHub Issueコメント、status更新、closeは別の明示承認後に行う。
 
 ## 現在の判定
 
-ローカル実装はcommit前レビュー可能な状態である。本番公開の判定は、上記の外部ゲートがすべて完了するまで保留する。
+実装branchはLinux CIを通過し、PR・merge判断へ進める状態である。本番公開の判定は、上記の外部ゲートがすべて完了するまで保留する。

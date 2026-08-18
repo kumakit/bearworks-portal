@@ -48,8 +48,9 @@
 ## External gates
 
 - [x] commit前のユーザー承認
-- [ ] push前のユーザー承認
-- [ ] Linux clean-checkout CI
+- [x] push前のユーザー承認とremote commit一致
+- [x] Linux clean-checkout CI（Workers build run 32149672686）
+- [ ] PR作成・merge前のユーザー承認
 - [ ] staging / production deploy前のユーザー承認
 - [ ] 公開routeのdesktop/mobile QA
 - [ ] Issueコメント・status更新・close前のユーザー承認
