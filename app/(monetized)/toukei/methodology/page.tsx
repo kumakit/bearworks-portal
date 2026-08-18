@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "@/components/InternalLink";
 import PublicSiteHeader from "@/components/PublicSiteHeader";
 import PublicSiteFooter from "@/components/PublicSiteFooter";
-import { ArrowLeft, ShieldCheck, HelpCircle, FileText, CheckCircle2, History, User } from "lucide-react";
+import { ArrowLeft, Bot, ShieldCheck, HelpCircle, FileText, CheckCircle2, History, User } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "編集・作問方針 | bearworks.uk",
@@ -117,11 +117,35 @@ export default function MethodologyPage() {
 
           <section className="group">
             <h2 className="text-xl font-bold mb-4 text-primary flex items-center gap-2">
+              <Bot className="text-accent-purple" size={22} />
+              5. AIと人の役割
+            </h2>
+            <div className="grid gap-4 md:grid-cols-2">
+              <div className="rounded-2xl border border-purple-100 bg-purple-50/50 p-5">
+                <h3 className="font-bold text-primary mb-2">AIを使用する工程</h3>
+                <p className="text-sm leading-relaxed">
+                  構成案の整理、実装補助、文章表現の点検、レビュー補助にAIを使用する場合があります。AIの出力を、そのまま問題、正解、計算結果、解説として公開することはありません。
+                </p>
+              </div>
+              <div className="rounded-2xl border border-green-100 bg-green-50/50 p-5">
+                <h3 className="font-bold text-primary mb-2">人が確認する工程</h3>
+                <p className="text-sm leading-relaxed">
+                  運営者が題材と説明範囲を決め、公式情報との照合、数値・数式の再計算、問題文と結論の整合確認、公開可否の最終判断を行います。
+                </p>
+              </div>
+            </div>
+            <p className="mt-3">
+              各ガイド・例題には、執筆、検算・内容確認、最終公開確認の担当と、そのコンテンツに対応するコード・検証記録を表示します。
+            </p>
+          </section>
+
+          <section className="group">
+            <h2 className="text-xl font-bold mb-4 text-primary flex items-center gap-2">
               <History className="text-accent-yellow" size={22} />
-              5. 訂正と更新履歴
+              6. 訂正と更新履歴
             </h2>
             <p className="mb-3">
-              問題の不備や解説の誤字・誤りについてご連絡をいただいた場合、速やかに再検証を行い、必要に応じて修正します。修正を行った場合は、その履歴を日付とともに本ページまたは各該当ページに記録します。
+              問題の不備や解説の誤字・誤りについてご連絡をいただいた場合、速やかに再検証を行い、必要に応じて修正します。個別コンテンツの初版・更新・訂正は各該当ページに、確認方法全体の変更は本ページに記録します。
             </p>
             <p className="mb-4">
               ご指摘や誤りのお問い合わせは、<Link href="/contact" className="text-accent-purple font-bold hover:underline">お問い合わせページ</Link> よりご連絡をお願いいたします。
@@ -133,6 +157,10 @@ export default function MethodologyPage() {
                   <span className="text-muted/80">2026年7月12日</span>
                   <span className="text-primary font-sans font-medium">編集・作問方針を公開</span>
                 </li>
+                <li className="flex gap-4">
+                  <span className="text-muted/80">2026年8月18日</span>
+                  <span className="text-primary font-sans font-medium">AI利用、人による最終確認、個別ページの制作・検証情報を明文化</span>
+                </li>
               </ul>
             </div>
           </section>
@@ -140,7 +168,7 @@ export default function MethodologyPage() {
           <section className="group">
             <h2 className="text-xl font-bold mb-4 text-primary flex items-center gap-2">
               <User className="text-accent-blue" size={22} />
-              6. 運営者情報
+              7. 運営者情報
             </h2>
             <div className="bg-gray-50 border border-gray-100 rounded-2xl p-5 text-sm space-y-2">
               <p>

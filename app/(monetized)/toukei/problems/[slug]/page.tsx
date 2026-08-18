@@ -7,10 +7,10 @@ import {
   ExternalLink,
   Lightbulb,
   AlertTriangle,
-  MessageSquare,
   ChevronRight,
   BookOpen,
 } from "lucide-react";
+import ContentProvenance from "@/components/ContentProvenance";
 import PublicSiteHeader from "@/components/PublicSiteHeader";
 import PublicSiteFooter from "@/components/PublicSiteFooter";
 import { problems } from "../problem-data";
@@ -249,24 +249,7 @@ export default async function ProblemDetailPage({ params }: PageProps) {
           </div>
         </section>
 
-        {/* Contact Form */}
-        <section className="mb-8 pt-6 border-t border-gray-100">
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-            <div>
-              <h2 className="text-sm font-bold text-primary mb-1">解説のフィードバック</h2>
-              <p className="text-xs text-muted leading-relaxed">
-                解説の誤りや分かりにくい点についてのフィードバックは、お問い合わせフォームよりお寄せください。
-              </p>
-            </div>
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white px-4 py-2 text-xs font-bold text-primary hover:bg-gray-50 transition-colors shrink-0"
-            >
-              <MessageSquare size={14} />
-              お問い合わせ
-            </Link>
-          </div>
-        </section>
+        <ContentProvenance provenance={problem.provenance} />
 
         {/* Related Guides */}
         {relatedGuides.length > 0 && (

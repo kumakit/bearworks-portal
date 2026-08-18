@@ -1,3 +1,6 @@
+import type { ContentProvenance } from "@/lib/content-provenance";
+import { toukeiGuideProvenance } from "@/lib/content-provenance";
+
 export interface Reference {
   title: string;
   url: string;
@@ -36,6 +39,7 @@ export interface Guide {
   publishedAt: string;
   reviewedAt: string;
   author: string;
+  provenance: ContentProvenance;
   references: Reference[];
   sections: Section[];
   commonMistakes: CommonMistake[];
@@ -52,6 +56,7 @@ export const guides: Guide[] = [
     publishedAt: "2026-07-11",
     reviewedAt: "2026-07-11",
     author: "kuma / bearworks.uk",
+    provenance: toukeiGuideProvenance,
     references: [
       { title: "統計検定2級公式ページ", url: "https://www.toukei-kentei.jp/grade/grade2/" },
       { title: "公式テキスト・問題集案内", url: "https://www.toukei-kentei.jp/preparation/books/" }
@@ -87,6 +92,7 @@ export const guides: Guide[] = [
     publishedAt: "2026-07-11",
     reviewedAt: "2026-07-11",
     author: "kuma / bearworks.uk",
+    provenance: toukeiGuideProvenance,
     references: [
       { title: "統計検定2級公式ページ", url: "https://www.toukei-kentei.jp/grade/grade2/" },
       { title: "公式テキスト・問題集案内", url: "https://www.toukei-kentei.jp/preparation/books/" }
@@ -125,6 +131,7 @@ export const guides: Guide[] = [
     publishedAt: "2026-07-11",
     reviewedAt: "2026-07-11",
     author: "kuma / bearworks.uk",
+    provenance: toukeiGuideProvenance,
     references: [
       { title: "統計検定2級公式ページ", url: "https://www.toukei-kentei.jp/grade/grade2/" },
       { title: "公式テキスト・問題集案内", url: "https://www.toukei-kentei.jp/preparation/books/" }
@@ -163,6 +170,7 @@ export const guides: Guide[] = [
     publishedAt: "2026-07-11",
     reviewedAt: "2026-07-11",
     author: "kuma / bearworks.uk",
+    provenance: toukeiGuideProvenance,
     references: [
       { title: "統計検定2級公式ページ", url: "https://www.toukei-kentei.jp/grade/grade2/" },
       { title: "公式テキスト・問題集案内", url: "https://www.toukei-kentei.jp/preparation/books/" }
@@ -201,6 +209,7 @@ export const guides: Guide[] = [
     publishedAt: "2026-07-11",
     reviewedAt: "2026-07-11",
     author: "kuma / bearworks.uk",
+    provenance: toukeiGuideProvenance,
     references: [
       { title: "統計検定2級公式ページ", url: "https://www.toukei-kentei.jp/grade/grade2/" },
       { title: "公式テキスト・問題集案内", url: "https://www.toukei-kentei.jp/preparation/books/" }
@@ -239,6 +248,7 @@ export const guides: Guide[] = [
     publishedAt: "2026-07-11",
     reviewedAt: "2026-07-11",
     author: "kuma / bearworks.uk",
+    provenance: toukeiGuideProvenance,
     references: [
       { title: "統計検定2級公式ページ", url: "https://www.toukei-kentei.jp/grade/grade2/" },
       { title: "公式テキスト・問題集案内", url: "https://www.toukei-kentei.jp/preparation/books/" }
@@ -277,6 +287,7 @@ export const guides: Guide[] = [
     publishedAt: "2026-07-11",
     reviewedAt: "2026-07-11",
     author: "kuma / bearworks.uk",
+    provenance: toukeiGuideProvenance,
     references: [
       { title: "統計検定2級公式ページ", url: "https://www.toukei-kentei.jp/grade/grade2/" },
       { title: "公式テキスト・問題集案内", url: "https://www.toukei-kentei.jp/preparation/books/" }
@@ -315,6 +326,7 @@ export const guides: Guide[] = [
     publishedAt: "2026-07-11",
     reviewedAt: "2026-07-11",
     author: "kuma / bearworks.uk",
+    provenance: toukeiGuideProvenance,
     references: [
       { title: "統計検定2級公式ページ", url: "https://www.toukei-kentei.jp/grade/grade2/" },
       { title: "公式テキスト・問題集案内", url: "https://www.toukei-kentei.jp/preparation/books/" }
