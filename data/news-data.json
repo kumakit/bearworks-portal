@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-08-20",
+    "daily_summary": "本日のAIニュースでは、生成AIの悪用による政治的な「なりすまし」や偽情報の拡散といった倫理的・社会的な問題が浮き彫りになる一方で、神戸大学の実験で見られた人間の意思決定へのAIの影響や、企業・自治体における業務効率化の進展など、AIが社会に与える光と影の両面が改めて示される一日となりました。",
+    "articles": [
+      {
+        "title": "AIで性暴力被害や出産を語る架空の女性を作成した男性党員が反省",
+        "content": "人工知能技術を用いて性暴力被害や出産に関する体験を語る架空の女性を作成した男性党員が、自身の行為について「非常に軽率だった」と反省の意を示しました。生成AIの不適切な利用や倫理的な問題について議論が広がっています。",
+        "source": "Google News",
+        "published_at": "2026-08-20",
+        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQeTRHOUxLSXp1VzRuSWlaNXZ6bTBBN2V0WHhPa1d1b1c3TlBRY3dYOGVPc0IyY2FHSkNDRDAzR0MtUG5OcDI1dGthbEJYMVcxeWlhVDkwRGdpOVJiOGFNUWp5NGdWZEtGVVprRjFHakRFVFJWV2pRREZDY3RqcE1tU3lTcGllSy0x?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "生成AI画像で“架空の女性”に成り済まし政治投稿か、立憲栃木県連の男性党員と一部報道",
+        "content": "立憲民主党栃木県連の男性党員が、生成AIで作った架空の女性画像を用いて政治的な投稿を行っていたと一部メディアで報じられました。ネット上でのなりすましや世論誘導の手法として、生成AIの悪用に対する懸念が広がっています。この問題は政治活動における倫理や透明性をめぐる議論を呼んでいます。",
+        "source": "Google News",
+        "published_at": "2026-08-20",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9BNlp3SFJBWWhNVTJVYkNIUlR4VFhYYXBab21pVHZNNzM5OGdBTXRwVXNxYi1Ja3ZZelFfcmFON1dsNktBc1d2Mzh5U2swU3BEcks1aDI4cm9IMElob1VSb04zbDFiTTBZOXc?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "架空女性に成り済まし政治投稿、AI作成か 立民栃木県連の党員男性",
+        "content": "立憲民主党栃木県連の党員男性が、架空の女性に成り済まして政治に関する投稿を行っていたことが判明しました。生成AIが利用されて作成された可能性が指摘されています。",
+        "source": "Google News",
+        "published_at": "2026-08-20",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1yZTNheVVOdE9sWVdkOHZ2eEhzWklRXzNfb0dJb2hyZERITXVUVXNuYkgtZ1VFSXdab0lLQlRVSThnWUV2WThUSDhUVU1qNU0xcDhMU1F1dnBOZzQ?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "道徳問う「トロッコ問題」、AIの反論で3割が判断覆す 神戸大が実験",
+        "content": "神戸大学の実験により、AIが人間の道徳的判断に対して反論を行った際、約3割の人が自身の判断を覆したことが明らかになりました。この結果は、人間の意思決定プロセスにおけるAIの影響力の大きさと、倫理的な議論におけるAIの活用可能性を示唆しています。",
+        "source": "Google News",
+        "published_at": "2026-08-20",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9mdUJ1cnY5V1VWSEJpTExNcVRTLVQzVWd6N3ozNnVCVUY3UDVWa1BJMVIxLTJZZHBES2Q3VlFuM0lXVmU0N1BXSnotNzNkZEE3NWFzVjd5akRpWk1TQ3lnQVN5LWhrOFB5T2lkZw?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "静岡県・鈴木知事が自ら「AI統括責任者」に就任、トップダウンで進めるAI戦略とは",
+        "content": "静岡県の鈴木知事が自ら「AI統括責任者」に就任し、トップダウン形式で行政におけるAI戦略を推進している。自治体業務の効率化や地域課題の解決に向けた積極的な取り組みとして注目を集めている。",
+        "source": "Google News",
+        "published_at": "2026-08-20",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1mYnY1NjgwUGFvUGVrc2sxbkY0cXltMmI1aGgxeTdQbXRZQ1dKU0E4X2hMV0cydm9XYkRnSzFLNDRpRlpRMjBTUnNhRGxEYVphUjBqb1pB?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "トラスコ中山、AIを活用した人事異動システムで98％の効率化",
+        "content": "トラスコ中山は、AI技術を活用した新しい人事異動システムの導入により、業務効率を98%向上させることに成功しました。このシステムにより、従来は多大な時間を要していた適材適所の人員配置や異動プロセスの自動化・最適化が図られています。",
+        "source": "Google News",
+        "published_at": "2026-08-20",
+        "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBKSHBqMWpPMlI1V3JYT1ROZUtPZTVxalE5TWVzRjBCOTFKbVNUV29Bc1p2RFJ5YnVHcmVtcVlwdGk3REVLREF5U2VoZmpFMXFLRk9ibzRBR3hEeEhoUGpscVVFMnVwNFFtZTB4WXBJaU5UWFNPSmc5eGJHWjY?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "AI導入88％の裏で迫るロックインのわな 情シスが守るべき4つの防衛線：地政学リスクと規制を回避するために",
+        "content": "企業のAI導入が進む一方で、特定ベンダーへの依存やロックインのリスクが大きな課題となっています。この記事では、情報システム部門が地政学リスクや規制を回避しつつ組織を守るための4つの防衛線を解説しています。IT環境の健全性を維持するための重要な戦略が示されています。",
+        "source": "Google News",
+        "published_at": "2026-08-20",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE15WXpwRTF0T2xLMWVreFI2VEpISy1feXhjRXNNOHpseG00cklaZW9HX0VXdEg1NjlDNjZWRng4OGl5MkJkMjhDekZJLWRqTmhMak16eVNwNUZTUk16Vl90NkJqTm1UUUlLSkxsMg?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "【注意】AI使ったディープフェイク、SNSで被災者装い送金呼びかけも ウソ情報にダマされないために",
+        "content": "SNS上でAI技術を利用したディープフェイクを悪用し、被災者を装って送金を呼びかける偽情報が確認されています。不審な投稿や真偽不明の情報に対して注意が必要です。",
+        "source": "Google News",
+        "published_at": "2026-08-20",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOLWczN1BsVnJXVG5rb2xJcHdjX1VHTmJNb0NZbXZOSTBHRF9oZG41cm44UWE3c0VuYzQ5QzNUemxBQVBLYzZlTHRWMzhzQ3Z6bUtGMFp3OVFwZU9RS3NRUzVmTlZDMVFUOU9uVjNyMHZEdXd4dDF0Q0ZGaC1XQ1ZROEtTaWJhX0U?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "AI研究者が警告する「人類滅亡」 SFと笑えない、予測超えた現実",
+        "content": "AIの急速な発展に伴い、一部のAI研究者から人類の存亡に関わるリスクへの強い警告が発せられています。もはやSF小説の中の空想ではなく、技術の進化速度が人間の予測を超えている現実について報じています。",
+        "source": "Google News",
+        "published_at": "2026-08-20",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5iSHBCZTVLbVB4UEFJTXBUWWJETC1jM2luR24wUHhuY3NwX25pV0E1dndSNTF6eG9PanlNWi12cWRvSGU4clRVcXlubXpyMzNUQmZnSHg5bXM4RlpwbE5wUWJhY1NkQVk?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "ラピダスが取引先でもPBR0.5倍台、AI関連の「出世株」候補",
+        "content": "ラピダスの取引先企業の中でPBRが0.5倍台にとどまる銘柄が注目を集めています。半導体関連の需要拡大を背景に、AI関連の「出世株」としての期待が高まっています。今後の業績拡大や市場での評価向上に投資家の視線が注がれています。",
+        "source": "Google News",
+        "published_at": "2026-08-20",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBGQXRVanpPUjdheEwyODY2eEV1V3hVYVVXdkVlaXBPcU02c1FKUkhfeXhrSmhMTTZlYlNvY29HNHZxYzAwVmZLektRMk9lM1h2ck1xYVpwRQ?oc=5",
+        "category": "事業・投資"
+      }
+    ]
+  },
+  {
     "date": "2026-08-19",
     "daily_summary": "本日のAIニュースでは、政府による知財保護・学習データ開示の原則案策定や、オープンAIの開発減速・安全性見直しといったガバナンス強化の動きが報じられた一方、米国の女性労働者における雇用の懸念や、急速なAI開発・投資集中に伴うバブル崩壊リスク、米中対立の激化など、技術の急進がもたらす社会的・経済的なリスクや課題も浮き彫りになりました。",
     "articles": [
