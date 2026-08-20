@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-08-21",
+    "daily_summary": "本日のAIニュースでは、日本政府や経産省による国産AI・半導体基盤への大規模な投資や実証開始が報じられる一方、ティアフォーとAstemoによる自動運転分野での開発提携など産業応力が加速しています。他方で、米国の安全テスト枠組みを巡る業界の分断や、AI企業による古書の大量裁断・学習をめぐる著作権・法的課題、AI特需による台湾の歴史的成長と経済リスク、さらに企業に対する一過性の特需からの脱却を促す社説など、技術革新の光と影が浮き彫りになる一日となりました。",
+    "articles": [
+      {
+        "title": "国産AIシステムの実証始動 政府",
+        "content": "日本政府主導による国産AIシステムの実証実験がいよいよ開始されました。これにより国内のAI技術の発展や、安全保障上の強靭化が期待されています。",
+        "source": "Google News",
+        "published_at": "2026-08-21",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1LQmVWUXpuMzlEWklDc1BhS21FSkxoTHZzcXZYNWtDQk5abGRxS1pXUklnUHRjTmZ1T1BtNm1EVTVLSjQ0ekZHeXBiNjFsalRO?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "ティアフォーとAstemo、自動運転向けAI開発基盤を共同構築",
+        "content": "ティアフォーとAstemoが、自動運転向けのAI開発基盤を共同で構築することを発表しました。両社の技術を持ち寄り、自動運転システムの開発効率化と高度化を目指します。今後の自動運転技術の普及に向けた重要な提携となります。",
+        "source": "Google News",
+        "published_at": "2026-08-21",
+        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9lRTM1QmJmTTFVN2o4RmxTXzRsSDFVcFNFbExnV2xodngxQ2VOdVdXck9IOG4zU2tOVDRmOEluMG13SFpHQ1lBcE5jSXNXSmctVnQtUGhZU0xVSnRNQkRrVUY0ejBJLVViODEzZHRyTQ?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "米ホワイトハウスがAI安全テストの枠組み提示、オープン型除外で深まる業界分断",
+        "content": "米ホワイトハウスがAI安全テストの新たな枠組みを提示しましたが、オープンソース型のAIが対象から除外されたことで業界内の分断が深まっています。この政策は今後のAI開発の規制や標準化に大きな影響を与える可能性があります。",
+        "source": "Google News",
+        "published_at": "2026-08-21",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9zTDE4ZndESlplQ2E4TlNwZ1YxZG83bXhMOVd3dV9ZSzBMejhJcXhWRDJiY3h2YXNjemNDN3VxZDNJamNPdjNFbU42bFlJNUN1V3ljRGpn?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "AI特需で台湾経済が40年ぶり「11％成長」へ！イラン危機とインフレが生む意外な死角とは",
+        "content": "AI需要の急拡大により、台湾経済が約40年ぶりとなる11％もの歴史的成長を記録する見込みです。しかしその裏では、中東情勢の緊迫化や世界的なインフレが新たなリスクとして影を落としています。半導体産業を中心とする強靭な成長と、地政学的リスクによる不確実性が並存する現状が解説されています。",
+        "source": "Google News",
+        "published_at": "2026-08-21",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9NY0d5ZHdOMG5iSHFjYzVCY1oxTzV2OEZyU0M1NElmWGxneGxybTlfSFZFWXNfM1VHQmxGMXJGYmVVRHZsQ2szdHVzOWLSAU9BVV95cUxPNGpNNWF2QldlczZkT3AyVkw5MXhPNXRIVHRNckhpNWdBMno4MzdNb0NjVEFxRTNCbkNPS05SMlRpYVUtOXlwTmJfbE11amRr?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "AIで作ったモデルの画像と酷似で裁判に 著作権は認められる？",
+        "content": "AIで生成したモデル画像と酷似した画像が使用されたことをめぐり、著作権の有無が争われる裁判が大阪府で注目を集めています。AI生成物の法的保護や著作権侵害の判断基準に関わる重要な事例となっています。",
+        "source": "Google News",
+        "published_at": "2026-08-21",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFByS1ZLbjJUZXFHc2QwLWJYSTBOdjV0d3pLYUJhTkFONW5NaU9BWXE1YWtvZzBmV0N0bjE0WHl2TFFDOHlOTHJVaGtSLWtaQmdneTVQVnd6eWJpRGkxcmkwQnp2SDhSNlk?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "なぜAnthropicなどAI企業は、古書を買い集め裁断し処分しているのか",
+        "content": "AnthropicなどのAI企業が、大規模言語モデルの学習データを確保するために古書を大量に買い集め、裁断して処分している背景について解説しています。著作権で保護された書籍を効率的にスキャンしてAIに読み込ませるための一連のプロセスが、法的な議論や倫理的な課題を呼んでいます。",
+        "source": "Google News",
+        "published_at": "2026-08-21",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5ZX1A3MmJUb0JtcTM5cGI0TWtmYWN4cTR5OWh5dnBxQ3U3ZTFDVmE3ckxKMUl5VEJOQ0ZFc29NRmtEbUtJcVBsVmlXSXpNTndDemlhX0VWSjB2dw?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "Cornelius AIと身体性。小山田圭吾が語る『Refractions』",
+        "content": "ミュージシャンの小山田圭吾（Cornelius）が、新作『Refractions』についてAIや身体性をテーマに語ったインタビュー記事です。音楽制作におけるテクノロジーの活用や自身の表現手法の変遷について言及しています。",
+        "source": "Google News",
+        "published_at": "2026-08-21",
+        "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9yYU1KX25OZ1ZnbmlESXhCdTBPWU0yQ3QzTjdYMzVrMGZhQmNyWi0teEJPN1FTTHBTSVRERmNBb1RqWDVxbWxvMFFLOV96RTJIUU1LQVJUdDE4ckd4OGM4Y2hHQ3JCM1EtVGhUYzJPZWd6aW1ROWpKWFJEbw?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "経産省、7.7兆円を要求へ AIや半導体に重点―27年度予算",
+        "content": "経済産業省が2027年度予算の概算要求に向けて、AIや半導体分野に重点を置いた大規模な予算を要求する方針を固めました。先端技術の国内基盤強化と産業競争力の向上を目指すものです。今後の予算編成の行方が注目されます。",
+        "source": "Google News",
+        "published_at": "2026-08-21",
+        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE44MVFXWnNORW9XSlFtaXFxc1FFNWdUalZOQXFVMFBRNHZzY3VxRXVOdGluN3oxeVZGUE9aNzFwU1BoalBXX1pfTDBZVUxScHdObmxOQU1VRjdfdnlFSVN0TWJFSQ?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "［社説］企業はAI特需に頼らぬ成長戦略を描け",
+        "content": "日本経済新聞の社説において、企業は一時のAI特需だけに依存するのではなく、持続的な成長に向けた新たな戦略を構築する必要があると指摘されています。技術の導入にとどまらず、本質的な価値創造につながるビジネスモデルの確立が求められています。",
+        "source": "Google News",
+        "published_at": "2026-08-21",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBqWlRMSjNXU0ZrYThVVDhFRnU1aGM0SC1NdHhlWmRKaXkwZUZOZTFSYmtpT2pleFc2anRGNzZ0STJSOExPNDBzbXctN2FwSG42U2lZRHFSTWVlaUJKSHZ1OGtaM1lkaVVzV3VFYQ?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "AIラリー急転で表舞台に、出遅れ「シクリカルバリュー」銘柄リスト",
+        "content": "AI関連銘柄の相場が急転換する中で、市場で注目を集める出遅れのシクリカルバリュー銘柄が特集されています。景気敏感株や割安株としての特性を持つこれらの銘柄群が、今後の投資対象としてリストアップされています。",
+        "source": "Google News",
+        "published_at": "2026-08-21",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9Rd2JhOEJJRlB2SFp6Rlo2OUh3ek5ZMmZTcTljV04ybXU0SVRUb0hFSjRjeW5Xa09feFVOVWJnejh1MGtxUFdYSVBvajZNNkxMcERaNWJwcVBxN2lMRFZrOQ?oc=5",
+        "category": "事業・投資"
+      }
+    ]
+  },
+  {
     "date": "2026-08-20",
     "daily_summary": "本日のAIニュースでは、生成AIの悪用による政治的な「なりすまし」や偽情報の拡散といった倫理的・社会的な問題が浮き彫りになる一方で、神戸大学の実験で見られた人間の意思決定へのAIの影響や、企業・自治体における業務効率化の進展など、AIが社会に与える光と影の両面が改めて示される一日となりました。",
     "articles": [
