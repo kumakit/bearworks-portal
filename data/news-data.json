@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-08-22",
+    "daily_summary": "本日のAIニュースでは、タイ政府による500万人規模のAI無償提供やKDDIによる国内AI新興企業の米進出支援など、国家および企業レベルでのAI活用・普及の動きが目立ちました。また、FANZAによる成人向けAI制作サービスの開始やサイバーエージェントの「AIXデザイナー」の定義など、クリエイティブ分野へのAI浸透が進む一方で、株式市場ではAI関連と非AI関連の二極化や日本経済への影響が局所的である点などが報じられ、社会全体への波及と課題が浮き彫りになる一日となりました。",
+    "articles": [
+      {
+        "title": "FANZAで「成人向けAIコンテンツ制作サービス」開始 8月24日から先行体験",
+        "content": "FANZAは成人向けのAIコンテンツ制作サービスの開始を発表し、8月24日より先行体験を実施する。AI技術を活用した新しいアダルトコンテンツの制作・展開として注目を集めている。",
+        "source": "Google News",
+        "published_at": "2026-08-22",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFA2TFk0TzZrdFZMeW1GX0Q0Q1pHZjBiM3ZibzJRUlZVUHVwWjljZmhJYlllTU1yaW5zS3ExWTM0SWs4dVVSeG43VjVxekJFVnNtak83bVdRR1J4b2NpRzgzdEhnbGt4Z1UwdnpSUw?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "タイ政府、500万人にAI無料提供 利用料肩代わり、登録相次ぐ",
+        "content": "タイ政府は国民500万人を対象にAIの無料提供を開始しました。政府が利用料を肩代わりする取り組みであり、多くの登録者が殺到しています。",
+        "source": "Google News",
+        "published_at": "2026-08-22",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBfdGo0cGhmNjhiRGN3T3lkbDJzVjRQTWlMS0poRHZZaUlDNFRUaW9HcmRlbHF0T1YyZTFPOTJobDZiZExVSXJzZG1NOFJ1dTVCSlJTUjktbDhlOVllRm5kYWhlMjRuQWZmSnVVVlVrTDFRLUJkWEZUajNwQmhza1U?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "タイ政府、500万人に高度AI提供へ",
+        "content": "タイ政府が国民500万人を対象に高度な人工知能（AI）サービスを提供することを発表しました。AI技術の普及と活用を国家レベルで推進し、国民のデジタルスキルの向上を目指す取り組みです。",
+        "source": "Google News",
+        "published_at": "2026-08-22",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBzaS1lUjdDaWk3SzZ4N183U3lWY2pmR2gtS3VZWXRXeFhOdEhmYWVKRVRNU0pZNUZ4dWVMbDk1UGRZMmR0bGlaVVNjUHVtc19TaWdiWUVCbC1FbS0zaHc?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "アジアや欧州でAI無償提供 狙うスキル底上げ、タイは500万人に",
+        "content": "アジアや欧州において、AI技術の無償提供を通じたスキルの底上げの動きが広がっています。タイでは500万人を対象としたAI教育や人材育成が進められており、各国の産業競争力強化が期待されています。",
+        "source": "Google News",
+        "published_at": "2026-08-22",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBfWWFIWEpNN1hiTU1lNGU1bFVmSjZYTnVBMUVqZklRYmJETmoteXVCMWw4cjNLV2RaNk1SNzlncGFtNG9NQk1WMzhGelFkMjFsM2FocnhXUWozNjFmVE40UVNUYl9zaTQ?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "【朱鷺S】AI予想 タガノアラリア 実績ある7F戦で躍動",
+        "content": "スポーツニッポンによる朱鷺ステークスのAI予想に関するニュース記事です。AIは実績のある7F戦でのタガノアラリアの活躍を予想しています。詳細なレース展望やAIの分析結果が報じられています。",
+        "source": "Google News",
+        "published_at": "2026-08-22",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBQMk1yekcxeUs1SjdTeHI3TXpvaWtJQXNIQzUyWVJfa3NURFIwZlkwUTZOV0F3Uk5vNDdWMm1hSTkxd3ZsY1JUUG54ZGFkWWVxZGh0SVRmQkVQMkQtME0yWU80ZjAxWDgyZDRDazRzR1RscktuWDZCaTNHTUhjenc?oc=5",
+        "category": "その他"
+      },
+      {
+        "title": "AI新興企業 米進出を支援 KDDI",
+        "content": "KDDIが日本のAI新興企業による米国市場への進出支援を開始しました。現地でのビジネス展開やパートナーシップ構築を後押しし、国内企業のグローバル展開を加速させる狙いがあります。",
+        "source": "Google News",
+        "published_at": "2026-08-22",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5sYUp3cTZMT2tVOHk5RWRkbWd2dWhVOE1VN2pKWnRPQ29XZFFITFFnYlI4cUFoa3JtN0dSNnpoY1c5TWdIcVhyTGhJUXdGNU9DWThlYUN0Q1h3X2N6UFE?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "AI時代に何を読む? 新たな可能性を探るために リロン編集部から",
+        "content": "朝日新聞リロン編集部が、AI時代における読書の意義や新たな可能性について探求する記事を公開しました。テクノロジーが急速に進化する現代において、私たちが本から得るべき知識や価値について考察しています。",
+        "source": "Google News",
+        "published_at": "2026-08-22",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE8zTkFBODV2NlZlejlQUHZwb3BWMXRIZm14NGtLRnd6VVV5Z1I3R0R0QWIwTXJ4OHVxREVOQ0ZiZloxeTdZSUxKeE4zVDl2ZzVvcmpNTnM1RDBSM2FZRDRpWnYwbTA1VFk?oc=5",
+        "category": "その他"
+      },
+      {
+        "title": "AI時代の新たなデザイナー像「AIXデザイナー」を定義",
+        "content": "サイバーエージェントは、AI時代における新たなデザイナー像として「AIXデザイナー」の定義を発表しました。AI技術の進化に伴い変化するデザインの役割や、求められるスキルセットについて解説しています。AIを活用したクリエイティブの可能性を広げる新しい職種像として注目されます。",
+        "source": "Google News",
+        "published_at": "2026-08-22",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFB0cE1nbzBCajJ3SUdFVjBDclY4ZG9ySS1DVGZyVjJjSHJsSzlFVjVRdk5YRk50bEdoaXFlNFlZSG1tRlp4MFJOR0VKQlNFbHYya1hPdm95RWliTXJfZkE?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "AIか非AIか、悩む投資家 双方で二極化進む「4象限相場」に",
+        "content": "株式市場において、AI関連銘柄と非AI関連銘柄の双方が二極化する「4象限相場」が進行しています。投資家はどこに資金を投じるべきか難しい選択を迫られています。日本経済新聞がこの市場の動向と投資家の悩みを報じています。",
+        "source": "Google News",
+        "published_at": "2026-08-22",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBTTHAyRWpkMXBlREJUUGhqM3dPdzlxVUpUaTBJaHVONUVVYU9sX3AteV9wS3IxMGt1OWxmLUI5RzZVOFB6ejlrN3N3T2E3UXMtbDVXOWdjWTFlM1dNczZwcVJ4TER4b1FPYVI3TA?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "AIの日本経済への影響は局所的!?「株価指数」や大企業偏在が映し出す“AIブーム”の実像",
+        "content": "現在のAIブームが日本経済全体に与えている影響は局所的であり、株価指数や大企業への偏在として表れていることが指摘されています。AI技術の導入や恩恵が一部の企業やセクターに偏っている実態が浮き彫りになっています。",
+        "source": "Google News",
+        "published_at": "2026-08-22",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5zeHFtZWJlcm5odzJ3eUhIMHNlSjR0ZlBiQUJKdHRUOUFucUNjazlwSWd0TkRDTjlROUxjNUoxcElLcGpoNG5JellTQ3PSAU9BVV95cUxPNF9kOHVpZTRHaFZMTzBKbEQzSk9jdG90el81emwyR3FmeDZjRHU1Y085bElQZENQR0pBUjNlT3VEVHp3WXUtVEVzX20zOU1r?oc=5",
+        "category": "事業・投資"
+      }
+    ]
+  },
+  {
     "date": "2026-08-21",
     "daily_summary": "本日のAIニュースでは、日本政府や経産省による国産AI・半導体基盤への大規模な投資や実証開始が報じられる一方、ティアフォーとAstemoによる自動運転分野での開発提携など産業応力が加速しています。他方で、米国の安全テスト枠組みを巡る業界の分断や、AI企業による古書の大量裁断・学習をめぐる著作権・法的課題、AI特需による台湾の歴史的成長と経済リスク、さらに企業に対する一過性の特需からの脱却を促す社説など、技術革新の光と影が浮き彫りになる一日となりました。",
     "articles": [
