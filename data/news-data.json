@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-08-23",
+    "daily_summary": "本日のAIニュースは、企業のブランド姿勢や倫理観が問われる炎上・悪用事例（「ほんだし」のプロモーションや立憲党員の架空アカウント投稿）がある一方で、Googleの電力インフラ戦略や秋田の巨大データセンター建設など技術を支える基盤整備が進む様子が報じられています。また、松任谷由実さんの心境の変化や被爆者との対話といったクリエイティブ・社会的活用の模索、国際的な規制の必要性、さらにはAI時代におけるキャリアや新たなエンターテインメントサービスの展開など、技術の急速な浸透に伴う光と影が多角的に浮き彫りとなった一日となりました。",
+    "articles": [
+      {
+        "title": "「ほんだし」炎上の本質 消費者が怒ったのは「AIの使用」ではなく「自社商品への愛のなさ」だ",
+        "content": "「ほんだし」のプロモーションが炎上した件について、消費者の怒りの原因はAI技術の利用そのものではなく、自社や商品に対する愛着や敬意の欠如にあったと分析しています。企業がコンテンツを制作する際、効率化だけでなくブランドへの理解や誠実さが求められる教訓となっています。",
+        "source": "Google News",
+        "published_at": "2026-08-23",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBDcTktT1JIbUw1OUM5ZEFveVZRa19hN09MbU0wOUp4R2I2bnBCWFFHMjIydnoyamtrRmlPdjNyZl9CcGlGNndWUUtCN2ZrSmxuNjNnaldQaG9WbmxnSTVOV29KY2dzS3FMVVRSX1BhRmZEYS1GY21HaHRGS0VTTm8?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "GoogleはAI競争に負けたのか 「最強のAI」ではなく「AIの“電力網”」を選ぶ賭け",
+        "content": "Googleが単なる「最強のAI」の開発競争にとどまらず、AI時代のインフラ基盤となる「電力網」の構築に注力している戦略について報じています。莫大な電力消費が見込まれるAI市場において、エネルギー供給の主導権を握ることで長期的な優位性を確保しようとする同社の新たな賭けに迫っています。",
+        "source": "Google News",
+        "published_at": "2026-08-23",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1LSTVueXluMnAtQzBRWTdTYm5idUZDY3ZMeV9sTUpVYUZJeFl3eDFmRi00NWZxeWRFR1lfYWRqdWdMWUlSWmVCelFWcFBLMGprXzR6ZmlwdENsdW91ZEN4c084Yzg2Z09oOUZ6NjVBQWdsdw?oc=5",
+        "category": "インフラ・半導体"
+      },
+      {
+        "title": "松任谷由実さんが語るAIの怖さ 1年前の「確信」が揺らいだ理由",
+        "content": "歌手の松任谷由実さんが生成AIに対する恐怖感や、1年前から心境が変化した理由について語っています。急速な技術の進化がクリエイターの心にどのような影響を与えているのかに焦点を当てた記事です。",
+        "source": "Google News",
+        "published_at": "2026-08-23",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE95X1FjOFhoNXNweGFsaElqUFh6bi1nOUhhczFTYXN1TF90NzJ6cXR5bUhtUGFNeG54REpsQjUtTGhTSHUzUGJlYndWanAwR2FudkJNT21XUXMwMVphcTUwTEc2T0pITGM?oc=5",
+        "category": "その他"
+      },
+      {
+        "title": "ＡＩの「暴走」 国際的な規制の強化策を急げ",
+        "content": "急速に進展する人工知能（AI）の暴走を防ぐため、国際的な規制の強化を急ぐ必要性が指摘されています。AI技術の急速な普及に伴い、安全性確保とリスク管理に向けたグローバルな枠組み作りが求められています。",
+        "source": "Google News",
+        "published_at": "2026-08-23",
+        "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNSm5YWFZOMUFTZUtiMHI1UVVvTHZvdkNOMlRHM0VvbzNFQWRLZGRzVmtRM2VLdC00WHVzM3R0clpWNlRscEdXTHUtSDRCbmJkU1dIWVNsMTVNUlczbGE2WTBKTDdjMlAxZk5wZUx6bWt5N1JPU3cwaDlTRVpSVEhsV2N5U1nSAYoBQVVfeXFMUEZDNXBTbVRtOWlNVTJxX3NXWjNfdm1DNkhMMGM0SFo0UVFkLXk5NEs3eTdWNEZwRWtQc3VXY3h0VU5zS2swdnhXbHJraEhaRUdoVFAxZEpUSjlnRU8tcC1ERk9PN1Y3RGJ0ZmpRdk9CTWVJWWg3UDA3Zy1nOFloTnB2M0F1bDU4TFZ3?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "福岡県：AIを活用して被爆者と「対話」、平和のまちミュージアムで体験会を開催",
+        "content": "福岡県の平和のまちミュージアムにて、AI技術を活用して被爆者と対話できる体験会が実施されました。戦争体験者の高齢化が進む中、AIを通じて戦時の記憶を未来へ継承する新たな試みとして注目されています。",
+        "source": "Google News",
+        "published_at": "2026-08-23",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1LWG5keTlraDhEdzJ1Q0ZSVDg2SUZXVEx1VWFxYWpTM0lXaTZHbUtMYXB4eXRTOEQ4VXNIOUdPSWdVR19SdkdMWC1hZ0JqU3lsY0NfTXJn?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "秋田で日本最大級のAIデータセンター ビットグリットの向縄嘉律哉氏",
+        "content": "秋田県において日本最大級となるAIデータセンターの建設計画が進行しています。ビットグリットの向縄嘉律哉氏がその取り組みについて日本経済新聞の取材で語りました。最先端のAI技術を支えるインフラの整備として注目を集めています。",
+        "source": "Google News",
+        "published_at": "2026-08-23",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5uckVZM1lCa0ZyRlByc2kwckJDQk5fOXNHMGwxa2NyTjhGQ1V2RUIteHk2WWpDYmhERl9IT0dnc2ZIU2FvZDk0RmJGUlRrWHdKVW5VazFsQ29hckRob3NseGtYbG1TZHA4REJXMA?oc=5",
+        "category": "インフラ・半導体"
+      },
+      {
+        "title": "最新『業界地図』発売！AIがもたらす業界の地殻変動とは？",
+        "content": "四季報オンラインから最新の『業界地図』が発売され、人工知能（AI）技術が各業界にどのような構造変化をもたらしているのかが解説されています。AIの浸透によって加速する企業の動向や、今後のビジネス環境への影響について注目が集まっています。",
+        "source": "Google News",
+        "published_at": "2026-08-23",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9nQUlmcUlDaGx4Y3JwS2NWbmx5SUgtcFdUbWNRVHdhUzZ4RlhlSVhsN0xvdWE0ZjRUeHJrNktVckxmS2NMdTZhc0dJYUFvMGNCQkN3UHo1VQ?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "立憲党員が架空女性の政治活動をXに投稿 AIで作成 党「民主主義ゆがめる」",
+        "content": "立憲民主党の党員が、AIで作成した架空の女性の政治活動に関する虚偽の内容をXに投稿していたことが判明しました。党側はこの行為について「民主主義をゆがめるものだ」と厳しく批判しています。SNSにおける生成AIの悪用や情報発信の倫理について、大きな問題提起となっています。",
+        "source": "Google News",
+        "published_at": "2026-08-23",
+        "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBjX0tWelV1NUZxaUhoVjN5OXo4YXdqcko3S2xUQXdBaVAwTk5KWXR1RmxIemVjU1Fqc0dyUG9SdUpLT014VS1JYXppclZVUjBVTC1SLUx0QnFoTFhpdVlESjFfZWRPVDRsY05ON2s4WGEwejg?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "年収7360万円も狙える、AI時代でも「経験が報われる」10職種 米国",
+        "content": "米国のForbes JAPAN誌が、AIの急速な発展が進む現代においても、これまでの経験と専門知識がしっかりと高収入に結びつく10の職種を紹介しています。技術が進化する中でも価値を発揮し続ける仕事やキャリアの方向性について詳しく解説されています。",
+        "source": "Google News",
+        "published_at": "2026-08-23",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE0tYmk2U0c1dUV4OTBidGxzZXVOcWhQYzBmWFZEc05VZ09zOW93c1QwUzh2bWFieTFYRzNxT1Rjam1WTXhwM2pHWmZXSXVYMVJwQjFVdmlta1FTUQ?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "FANZA、成人向けAIコンテンツを作成・公開できる新サービス「スタジオ」の先行体験を24日より開始",
+        "content": "FANZAは、ユーザーが成人向けのAIコンテンツを自ら作成し、公開できる新しいサービス「スタジオ」の先行体験を24日から開始すると発表しました。最先端のAI技術を活用することで、クリエイターやファンが手軽に独自のコンテンツ制作を楽しめる環境を提供します。本サービスの展開により、アダルトエンターテインメント業界におけるAIの活用と新たな表現の形に注目が集まっています。",
+        "source": "Google News",
+        "published_at": "2026-08-23",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBrNndVNjhLRDJhbW4tSERyQzhtZjN2LXBIWnVJdXdCVEpDbnV2Z252X2c3ZGhiWTJxcEtKWEdtd3BlaE9hMWFjeXVtWGF6cGQzLXc?oc=5",
+        "category": "エージェント・開発ツール"
+      }
+    ]
+  },
+  {
     "date": "2026-08-22",
     "daily_summary": "本日のAIニュースでは、タイ政府による500万人規模のAI無償提供やKDDIによる国内AI新興企業の米進出支援など、国家および企業レベルでのAI活用・普及の動きが目立ちました。また、FANZAによる成人向けAI制作サービスの開始やサイバーエージェントの「AIXデザイナー」の定義など、クリエイティブ分野へのAI浸透が進む一方で、株式市場ではAI関連と非AI関連の二極化や日本経済への影響が局所的である点などが報じられ、社会全体への波及と課題が浮き彫りになる一日となりました。",
     "articles": [
