@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-08-24",
+    "daily_summary": "本日のAIニュースは、AI検索におけるレディットの影響力拡大や、AI普及に伴うデータセンター向けガスタービンやエヌビディア製サーバーの需要急増など、インフラや市場の大きな変化が目立ちました。同時に、AI関連のセキュリティリスクやその対策、米国でのAIエンジニアの記録的な求人急増など、活用拡大の裏で高まる課題や人材獲得競争の激化も浮き彫りになっています。",
+    "articles": [
+      {
+        "title": "AI検索で掲示板「レディット」が重要に ブランドは攻略に苦戦",
+        "content": "AI検索エンジンにおいてオンライン掲示板レディットの影響力が急激に高まっています。AIの回答にレディットの投稿が頻繁に引用されるようになる一方で、ブランド企業は自社の評判管理やマーケティング戦略の適応に苦戦しています。",
+        "source": "Google News",
+        "published_at": "2026-08-24",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE8xSVVta2prQ0lfdFFEaWFmTHNGVXFpUUh0UjFzcFZWQTRwVE5ZREp5RDFtLWEtWmwzZXpSbzl0ejJXQmtXRGxldl8ySGQ?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "富山発のクマAI監視システムが全国拡大、北陸電力などが開発",
+        "content": "富山発祥のクマ監視AIシステムが、全国へ展開されることになりました。北陸電力などが共同で開発を進めており、被害防止のための新たなアラートシステムとして期待されています。",
+        "source": "Google News",
+        "published_at": "2026-08-24",
+        "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPQ1BwR2F1dnhkT29ZY0U4azdRQThoaWQ0Rm1kSWZjSkQ5UlpMSzQ2ZHhPcjNEMTZscm5OVVp6SEdJdEkwR1UwUjFnc2ZvSThZTmwyV21ocVZxRExVRy1tTjJMdkw3YkJ6VlB4WWlCY1lOdG5MdFpBSVBkVzlmTExQcXhGRdIBiAFBVV95cUxOS0pneUhRUWZZZVRsZ3RYbFVVN1BQZnQtTGFFMUpFb0xkM2FlamdjNWhYSEdGdU9UUzQ4X1lvUjJFLTBncFJNVl8waXhzMXR6VmdUcElkekpZSDlWOUtqQUVKX2RNUUxxcS03ZnJFWWplUk5oeDNBeTR3cktCMkliN3pyOVcwVjJQ?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "ソフトウェアに組み込むAIモデルのセキュリティ管理基盤、ジーグラビティが販売",
+        "content": "ジーグラビティは、ソフトウェアに組み込まれるAIモデルのセキュリティを総合的に管理するための新しい基盤の販売を開始しました。この基盤により、企業はAIの脆弱性やリスクを効率的に把握し、安全な運用を行うことが可能になります。",
+        "source": "Google News",
+        "published_at": "2026-08-24",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5ndzQ1QU1zeWdJLS1aLVh1ODBVQ3hxand2aWxka1VEQXlPSGw2dkdqZWxkMjdjaVpvSkdBNkRCRGV3TUtDaWdOUVVDSG9GZlNIUGQ1U1BIWmlBTWtjQ0FN?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "世界最大セキュリティイベント「Black Hat」で注目されたAI時代の新たなサイバー脅威",
+        "content": "世界最大のセキュリティイベント「Black Hat」において、AIの暴走だけでなく、それに続く新たなサイバー脅威への懸念が浮き彫りになりました。ハッカーのオフ会を発祥とする同イベントでは、急速に進化するAI技術を悪用した攻撃手法や、その防御策について活発な議論が行われています。専門家らは、企業や社会全体がより高度なセキュリティ対策を講じる必要性を強く訴えています。",
+        "source": "Google News",
+        "published_at": "2026-08-24",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBzZnE0UVNpOGtPaHQtbk5kMHpsX1Qzc2FOUy1BVnBieTZ3c01nVWhKYVNxYXNaWGI0LVN4SUxjN3lpcUExWHZfYXh4TkhZbEhJMEp4ZlNlc3NmX2p6bUdmalVxVkt5cW94dVVGakkxOVJ3b1paTEFMSjhGR0ZMT0U?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "AIに「100％丸投げ」は禁物 セキュリティ運用は繰り返し作業から始める：IBMの専門家が示す「AIに最初に任せる仕事」とは",
+        "content": "IBMの専門家が、セキュリティ運用の現場においてAIに最初に任せるべき仕事について解説しています。AIへの全面的な依存は避け、まずはルーティンワークなどの繰り返し作業から段階的に活用を始めることが重要であると示唆されています。",
+        "source": "Google News",
+        "published_at": "2026-08-24",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9XOHkxcHRUV19RcjJxZ2JiRWJZXzN4ZjdYZXkxWnRFT3lzMnhIZ3lWNllGQ3BrRDdUWXJiQ0FvbEE3cTU3Z0xaQ0lETEpFVzF5aC1EMlNfWXowVHFPOVFuYU9CR3RqdTdlR0pleg?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "AIデータセンター新設で注目の｢ガスタービン関連｣12銘柄",
+        "content": "AIの普及に伴うデータセンターの新設ラッシュにより、電力需要が急増しています。これに対応するための電源として、ガスタービン関連の銘柄が市場で大きな注目を集めています。この記事では、関連する有望な12の銘柄について詳しく解説しています。",
+        "source": "Google News",
+        "published_at": "2026-08-24",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1zLWNYQ3FhUG53dENiWmc4RkFjd3doUUJDWnhOWVhSYlBuaHBSS2g1ZmdNZS0tTDFSdndUNkdURjVRbzZIRUhaeHRvUDFIRXhXNjJyZFFlcw?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "Anthropic、AIの活用方法を学べる「Claude Academy」を公開",
+        "content": "Anthropic社は、AIアシスタント「Claude」の効果的な活用方法を体系的に学べる教育プログラム「Claude Academy」を公開しました。ユーザーは実践的なスキルやプロンプトのテクニックを無料で習得することができます。",
+        "source": "Google News",
+        "published_at": "2026-08-24",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1nNm1NcXdlZTd1djNmWVRLTGZwRU5tU0RxUF9sMkRuc3FjY2FzOXNyWkFzR09weXFHenp4QzJEako5bmRqVlhnWGhLc1pveGl3azB3N1pKbG1wQlk?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "米国のAIエンジニア求人が255％急増、平均年収は1800万円に到達",
+        "content": "米国におけるAIエンジニアの求人件数が前年比で255％もの急増を見せていることが報じられました。それに伴い、専門人材の平均年収は1800万円に達しています。人工知能分野の人材獲得競争がますます激化している現状を示しています。",
+        "source": "Google News",
+        "published_at": "2026-08-24",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1DZGNFMUxYVEV3V2R6U2hWQkRES011X3AwbmM2d1JNV2hSRmMzRWtUTlJjNmxFdmprYjFCNW1QS3RFc2dQcmpJdXNSQ3FxcnFBaHBidUR5U0FxQQ?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "エヌビディア、AI半導体搭載サーバーを値上げへ－15%超えるケースも",
+        "content": "エヌビディアはAI半導体を搭載したサーバーの価格を引き上げる方針を固めました。次世代チップの需要が高まる中、一部のケースでは値上げ幅が15%を超える見込みです。この価格改定は、AIインフラ市場における同社の強い価格決定力を改めて示すものとなっています。",
+        "source": "Google News",
+        "published_at": "2026-08-24",
+        "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9IR05pZUZIZ2xPZmdrZUxGMHhCT2lSdGlWaHpoRlBzb1JTNTZBc3ZkMGlYZDl6V0I0bmEwZlBzcWtZUFhtODNpVl9uOHhFa2E2YkZNSXA0SmVtSHFfMmdqQVdYbkZMa21yVE1nMm41VHY5eEYtLUtZ?oc=5",
+        "category": "インフラ・半導体"
+      },
+      {
+        "title": "AIパソコンDGX Sparkを使ってみよう、基本は「普通」のLinuxパソコン",
+        "content": "AIパソコン「DGX Spark」の基本性能や使い方について解説した記事です。見た目や基本操作は通常のLinuxパソコンと変わらない点が特徴として紹介されています。",
+        "source": "Google News",
+        "published_at": "2026-08-24",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5FWjVUZ2pFekl5Nmt6dGNlTmlxdGlFZFBGOHFPQ3lBTlZsU3NMZ3hTTDZCUHVsRVdldlpsNzlnUlVfVThWd0hkZjhyZGUzU0R2T0xJQS1qSEJtYmM1enViNjVLS0ZsVTExMHhScg?oc=5",
+        "category": "インフラ・半導体"
+      }
+    ]
+  },
+  {
     "date": "2026-08-23",
     "daily_summary": "本日のAIニュースは、企業のブランド姿勢や倫理観が問われる炎上・悪用事例（「ほんだし」のプロモーションや立憲党員の架空アカウント投稿）がある一方で、Googleの電力インフラ戦略や秋田の巨大データセンター建設など技術を支える基盤整備が進む様子が報じられています。また、松任谷由実さんの心境の変化や被爆者との対話といったクリエイティブ・社会的活用の模索、国際的な規制の必要性、さらにはAI時代におけるキャリアや新たなエンターテインメントサービスの展開など、技術の急速な浸透に伴う光と影が多角的に浮き彫りとなった一日となりました。",
     "articles": [
