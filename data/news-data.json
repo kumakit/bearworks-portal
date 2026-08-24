@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-08-25",
+    "daily_summary": "本日のAIニュースは、銀行業界での採用減や巨額投資によるインフレ懸念など経済・市場への影響が目立つ一方、日本企業の投資対効果の低さや知的財産保護の課題が浮き彫りになりました。また、世界的な「脱AI相場」の兆しやシステムのエラーといった過熱感やリスクに対する懸念が示される一方で、途上国向けの「スモールAI」やバスの転倒防止など、安全確保や持続可能な発展に向けた実用的な活用の模索も進んでいます。",
+    "articles": [
+      {
+        "title": "銀行の27年度新卒採用5年ぶり減 AIで業務効率化、売り手市場に転機",
+        "content": "銀行業界における2027年度の新卒採用数が5年ぶりに減少することが報じられました。背景には生成AIの導入などによる業務効率化が進んでいることが挙げられ、長らく続いた採用の売り手市場に転機が訪れています。",
+        "source": "Google News",
+        "published_at": "2026-08-25",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBpZU5VVHF6aUQycm9NWW54azE1UVNXWjFKX0dlU3F4Rjg2NzV3clFWY1B0X2NqcFlxZmRQclFjYzZnckRhbWs1ZndnNS1TbEI4MHQyYndjeEM3eDJKcVZoZVg3V0h6ZVFCVUY4eQ?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "焦点：米ＡＩ関連社債の発行急増、上乗せ利回り拡大し消化不良の兆しも",
+        "content": "米国でAI関連企業による社債発行が急増している。しかし、上乗せ利回りが拡大しており、市場では一部に消化不良の兆しも見え始めている。",
+        "source": "Google News",
+        "published_at": "2026-08-25",
+        "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPYzE2bmFKQzlBRUlJcEVVYk1NelRRbHBOOTl5U2RBS19idlNnR1FSaEZXTDI2UUZ4NUJXUUJSLWFMYmFXcXJycGZuOGRFYV84WnBCSmU3cERaTlRsTFJ2YTBvRlFtV0N3TjJmeXZ2b3lIenpnUHVrenJZUXdEaU9DRQ?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "世界のAI投資、2026年に159兆円規模へ 米国では物価上昇の一因に",
+        "content": "2026年の世界のAI投資額が159兆円規模に達するという試算が発表されました。こうした急激なAI関連の投資拡大が、米国内における物価上昇の一因になっていると報じられています。",
+        "source": "Google News",
+        "published_at": "2026-08-25",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9TM05oNEgzZWtaTmlEcC1DM25rNHlIdGdFX0U1YnY3M0szeUdWWWZlTXVwOVQ5NjJINGd4VFhJdjhnaW1QMFV4b2o4Q3VDaDZtemF2SkllSktSamhHbWc?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "日本企業のAI投資「成果あり」はわずか13％ アクセンチュアが指摘する“人任せ”の限界：調査で見えた「世界との差」",
+        "content": "アクセンチュアの調査によると、日本企業でAI投資に明確な成果が出ていると答えた割合はわずか13％にとどまり、世界との差が浮き彫りになりました。AI活用をベンダーや現場任せにしている「人任せ」の姿勢が、成果を出せない大きな原因であると指摘されています。日本企業がAI導入で価値を創出するためには、経営層の明確な戦略と主体的な取り組みが不可欠です。",
+        "source": "Google News",
+        "published_at": "2026-08-25",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9qcFd2QWR2NzJRRjFxWm5yOGhiclowUlF2X05iSzRzcnlocEUxWU5hT3FBVHctUjJ0LWQzOF9lQXEwaERPdHhKczczRHhZVHo0eS1qMWhxTVBYcy1KY25lMGd1TzJ2aU1oZ2pra1UwejhYZw?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "社説：ＡＩ基本原則 これで知的財産を守れるのか",
+        "content": "読売新聞の社説において、政府が策定を進めるAI基本原則について、クリエイターや企業の知的財産が十分に保護されるかという懸念が取り上げられています。AI開発における著作権侵害やデータ利用の透明性確保に向けた、より実効性のあるルールの必要性が指摘されています。",
+        "source": "Google News",
+        "published_at": "2026-08-25",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5UdlV1eWRBRk1MYndDRHVkeHJ1YWFZdTUyMFFKYVM0MzUwTzVPdmhTbnZDOXZoSUZ2MkVlNkRDUXJnV0lfSnJNdWxpdGs5YVBraWk5eTZYdGVsQWJDYXVMaVdPR0xtdVE?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "途上国経済に差す「AIの光」、陰に潜む「依存の罠」 世界銀行リポートが提示した「スモールAI」という解答",
+        "content": "世界銀行のリポートによると、途上国におけるAI活用には経済発展の可能性と外部依存のリスクが混在しています。この課題に対する解答として、過度な依存を防ぎつつ自立的な成長を促す「スモールAI」の重要性が提示されています。発展途上の地域における持続可能な技術適用のあり方について議論がなされています。",
+        "source": "Google News",
+        "published_at": "2026-08-25",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9hQ2xMN1BJQXg4ZC1heTV1RGFlbWthZGE4cTR0QkdDel9fazBMQ0ZfQnlVNk5vMU1xNExQNDkzeHc2cnNnRVRhczFhNUJLbzhESzhRN3RR?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "AIでバス車内の転倒防止　走行中に「倒れそうな乗客」検知したら注意喚起　都バスなどで実証実験",
+        "content": "都営バスなどで、AIを活用して走行中の車内でバランスを崩した乗客を自動検知し、注意喚起を行う実証実験が開始されました。転倒事故の防止と安全な運行の実現を目指します。",
+        "source": "Google News",
+        "published_at": "2026-08-25",
+        "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNQURvdkdtT3hxb19KRTA3cVJZd056VENVQm5VUVJWZUxkYnBLOFMzMGs5RlZmMXppOTlZb3dBb1k1NWt5bmdnM29QVTA3MlFPNG4xU2pSbFl1ekdWY2ZUcFI0Z05zeDl0WldqcFgtX1VmbnRJYlBMYlJmd05RUjN3R2Eyc2pFSS11cl9uVUJHaWUweU1fS3lvYzZtem5RcEotVzl6bGtOQUZSSDF1NUhwZ21MTWdVY1A0RURFSDRTOUhFOUZYQ2JXedIBeEFVX3lxTE43eEF6X3FEdHEyQ1FwZG83YTdoYkYtQ3hVMms4THFPWHF6Ykg0b0tGQ2JrTkR2Z2JHZWNGaGxhWldfbUFaSXF2V3BLeml5V2VrbExtTjJUX1lqMWplYmxJa2ZlVUtyVnpQNm16bVBFcmduWEVJZ1ZXag?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "天才哲学者マルクス・ガブリエルの未来予測「AI時代、人間は動物に回帰します」",
+        "content": "哲学者マルクス・ガブリエル氏がAI時代における人間の未来について独自の予測を展開しています。技術の発展がもたらす変化の中で、人間の本質や生き方がどのように変容していくのかについて議論されています。",
+        "source": "Google News",
+        "published_at": "2026-08-25",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBDTVhVMENjczREdmVDUXpVRkxUOEVtZ0ozTGpsTXdXdTNla2VSZnk3SE4xYlRsMGgxWHNLUGw4bGhOb3hHVlI3N2l2UnpuOVlnZkNieUFGY2FOQQ?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "米国で進む「脱AI相場」の流れ…株価が前週比2.3倍に急騰した「米・バイオ医薬品銘柄」の正体",
+        "content": "米国市場においてAI関連銘柄から資金が離れる「脱AI相場」の動きが加速しています。その中で、ある米国のバイオ医薬品銘柄の株価が前週比2.3倍へと急騰し、市場の注目を集めています。この記事では、その急騰の背景にある詳細や、投資動向の変化について解説しています。",
+        "source": "Google News",
+        "published_at": "2026-08-25",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBTNFBuNVhkMzBNblNMUnl3UHhjYVROcGpOZEtYSjdTUlR4T0hSSVJBLW9XMFE4TjhleUo0UjJVdzYySGZTTzJuOHRmYnUxbEZBRzNScHMyNG9aUQ?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "AI「Grok」が一時暴走、意味不明な回答を連発",
+        "content": "xAIが開発する対話型AI「Grok」が一時的にシステムのエラーにより暴走し、意味不明な回答を連続して出力する事態が発生しました。ユーザーの間で一時混乱を招いたものの、現在は対応が進められています。",
+        "source": "Google News",
+        "published_at": "2026-08-25",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1xOVdUbEZ3S1Bwa1VOTXVJbDVFM1BzVzdOOWxYVWIxOTdPUUVBbWh5S1dPeEk3NkMtb2RXWEcwZlVlTk05b25IYW9nRWNXTWhqZkRmQkpxRExGOE9za2dlZDVGR2EtcGZBNkNQTDlRR01jc1JBU2V2OExtbmZyczg?oc=5",
+        "category": "モデル・研究"
+      }
+    ]
+  },
+  {
     "date": "2026-08-24",
     "daily_summary": "本日のAIニュースは、AI検索におけるレディットの影響力拡大や、AI普及に伴うデータセンター向けガスタービンやエヌビディア製サーバーの需要急増など、インフラや市場の大きな変化が目立ちました。同時に、AI関連のセキュリティリスクやその対策、米国でのAIエンジニアの記録的な求人急増など、活用拡大の裏で高まる課題や人材獲得競争の激化も浮き彫りになっています。",
     "articles": [
