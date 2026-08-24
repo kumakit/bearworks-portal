@@ -7,9 +7,9 @@ import {
   ExternalLink,
   Lightbulb,
   AlertTriangle,
-  MessageSquare,
   Target,
 } from "lucide-react";
+import ContentProvenance from "@/components/ContentProvenance";
 import PublicSiteHeader from "@/components/PublicSiteHeader";
 import PublicSiteFooter from "@/components/PublicSiteFooter";
 import { guides } from "../guide-data";
@@ -211,24 +211,7 @@ export default async function GuideDetailPage({ params }: PageProps) {
           </section>
         )}
 
-        {/* Contact Navigation */}
-        <section className="mb-8 pt-6 border-t border-gray-100">
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-            <div>
-              <h2 className="text-sm font-bold text-primary mb-1">内容の誤りやフィードバックについて</h2>
-              <p className="text-xs text-muted leading-relaxed">
-                解説に誤りがある場合やご意見がある場合は、お問い合わせフォームよりご指摘いただけますと幸いです。
-              </p>
-            </div>
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white px-4 py-2 text-xs font-bold text-primary hover:bg-gray-50 transition-colors shrink-0"
-            >
-              <MessageSquare size={14} />
-              お問い合わせ
-            </Link>
-          </div>
-        </section>
+        <ContentProvenance provenance={guide.provenance} />
 
         {/* Related Guides */}
         {relatedGuideObjects.length > 0 && (

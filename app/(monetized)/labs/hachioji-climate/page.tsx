@@ -11,8 +11,10 @@ import {
   ThermometerSun,
 } from "lucide-react";
 import Link from "@/components/InternalLink";
+import ContentProvenance from "@/components/ContentProvenance";
 import PublicSiteFooter from "@/components/PublicSiteFooter";
 import PublicSiteHeader from "@/components/PublicSiteHeader";
+import { hachiojiClimateProvenance } from "@/lib/content-provenance";
 import {
   climateBundle,
   climateLock,
@@ -244,7 +246,7 @@ export default function HachiojiClimatePage() {
               <h3 className="font-bold text-primary">一次情報と実装</h3>
               <div className="mt-3 flex flex-col items-start gap-3 text-sm font-bold">
                 <a href={climateBundle.attribution.source_url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-accent-purple hover:underline">気象庁 過去の気象データ・ダウンロード <ArrowUpRight size={14} /></a>
-                <a href={`https://github.com/kumakit/bearworks-apps/tree/${climateLock.apps_production_commit}/streamlit/hachioji_climate`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-accent-purple hover:underline">分析コードとデータ契約 <ArrowUpRight size={14} /></a>
+                <a href="https://github.com/kumakit/bearworks-portal/blob/main/scripts/validate-hachioji-climate-bundle.mjs" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-accent-purple hover:underline">公開bundleの検証コード <ArrowUpRight size={14} /></a>
                 <a href="https://apps.bearworks.uk/Hachioji_Climate" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-accent-purple hover:underline">操作できる分析アプリ <ArrowUpRight size={14} /></a>
               </div>
             </div>
@@ -254,25 +256,13 @@ export default function HachiojiClimatePage() {
           </p>
         </section>
 
-        <section className="grid gap-6 md:grid-cols-2">
-          <div className="rounded-[2rem] border border-gray-100 bg-white p-7">
-            <h2 className="text-xl font-bold text-primary">AIと人の役割</h2>
-            <p className="mt-4 text-sm leading-relaxed text-muted">
-              AIは仮説・分析手順の整理、実装補助、文章の推敲、レビューに使用しました。人が気象庁データを取得し、公式画面との照合、独立計算、品質判断、公開内容の最終確認を行っています。専門家による査読ではありません。
-            </p>
-          </div>
-          <div className="rounded-[2rem] border border-gray-100 bg-white p-7">
-            <h2 className="text-xl font-bold text-primary">対象外と限界</h2>
-            <p className="mt-4 text-sm leading-relaxed text-muted">
-              降雪・積雪は今回の対象外です。観測地点の移設や測器変更を含む均質性の境界があるため、1990〜2025年を一本の連続トレンドとして扱いません。結果は4観測地点の定義済み指標に限られます。
-            </p>
-          </div>
-        </section>
+        <ContentProvenance provenance={hachiojiClimateProvenance} />
 
-        <section className="px-2 py-4 text-sm text-muted">
-          <h2 className="font-bold text-primary">更新履歴</h2>
-          <p className="mt-2">2026-08-12：初版公開用記事を作成（bundle {climateBundle.bundle_version}）。</p>
-          <p className="mt-2">誤りや再検証のご連絡は <Link href="/contact" className="font-bold text-accent-purple hover:underline">お問い合わせページ</Link> からお願いします。</p>
+        <section className="rounded-[2rem] border border-gray-100 bg-white p-7">
+          <h2 className="text-xl font-bold text-primary">対象外と限界</h2>
+          <p className="mt-4 text-sm leading-relaxed text-muted">
+            降雪・積雪は今回の対象外です。観測地点の移設や測器変更を含む均質性の境界があるため、1990〜2025年を一本の連続トレンドとして扱いません。結果は4観測地点の定義済み指標に限られます。
+          </p>
         </section>
       </article>
       <PublicSiteFooter />

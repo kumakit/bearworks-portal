@@ -44,14 +44,14 @@ export default function AboutPage() {
             <Code2 className="text-accent-blue mb-3" size={24} />
             <h2 className="font-bold text-primary mb-2">運営者</h2>
             <p className="text-sm text-muted leading-relaxed">
-              kuma。データ分析、Web アプリ開発、学習支援ツールの設計に関心があります。
+              kuma。統計学習ツールの設計・運営と、公開データを用いた分析・可視化を個人開発として実践しています。
             </p>
           </div>
           <div className="rounded-3xl border border-gray-100 bg-gray-50 p-5">
             <Database className="text-accent-green mb-3" size={24} />
             <h2 className="font-bold text-primary mb-2">主な領域</h2>
             <p className="text-sm text-muted leading-relaxed">
-              統計学習、データサイエンス、可視化、AI を使った小規模な業務改善。
+              統計学習、データの取得・前処理・検算・可視化、Web アプリ開発、AI を使った小規模な業務改善。
             </p>
           </div>
           <div className="rounded-3xl border border-gray-100 bg-gray-50 p-5">
@@ -74,6 +74,28 @@ export default function AboutPage() {
               学習分析、チートシート、暗記カードを組み合わせ、
               試験対策の進み具合を確認しながら学べる構成にしています。
             </p>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-bold text-primary mb-3">
+              公開している実践
+            </h2>
+            <p className="mb-3">
+              学習ツールの提供に加え、公的な実データを取得し、前処理、品質確認、計算、可視化、文章化までを追跡できる分析も公開しています。八王子気候分析では、気象庁の日別観測値を使い、4地点の暑さ・寒さ・日較差を比較しました。
+            </p>
+            <div className="flex flex-wrap gap-3 text-sm font-bold">
+              <Link href="/labs/hachioji-climate" className="text-accent-purple hover:underline">
+                八王子気候分析を読む
+              </Link>
+              <a
+                href="https://github.com/kumakit"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-accent-blue hover:underline"
+              >
+                GitHubで公開コードを見る
+              </a>
+            </div>
           </section>
 
           <section id="operating-policy">
@@ -110,6 +132,18 @@ export default function AboutPage() {
               問題や説明は、日々の学習でつまずきやすい点を見直しながら改善しています。
               本番試験の出題内容を保証するものではありませんが、
               反復演習と弱点把握の補助として使えることを重視しています。
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-bold text-primary mb-3">
+              AIと人の役割
+            </h2>
+            <p className="mb-3">
+              AIは、構成案の整理、実装補助、文章表現の点検、レビュー補助に使用する場合があります。AIの出力だけで問題の正解、分析結果、公開可否を決めることはありません。
+            </p>
+            <p>
+              運営者が参照資料や一次データを確認し、数値・数式の再計算、データ品質の判断、本文と結論の整合確認、最終公開判断を行います。各ガイド・例題・分析記事では、制作担当と確認工程、公開できる検証記録を個別に表示します。
             </p>
           </section>
 

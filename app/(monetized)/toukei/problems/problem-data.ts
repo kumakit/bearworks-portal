@@ -1,4 +1,6 @@
 import type { GuideSlug } from "../guides/guide-data";
+import type { ContentProvenance } from "@/lib/content-provenance";
+import { toukeiProblemProvenance } from "@/lib/content-provenance";
 
 export interface Reference {
   title: string;
@@ -37,6 +39,7 @@ export interface Problem {
   publishedAt: string;
   reviewedAt: string;
   references: Reference[];
+  provenance: ContentProvenance;
 }
 
 export const problems: Problem[] = [
@@ -88,6 +91,7 @@ export const problems: Problem[] = [
     author: "kuma / bearworks.uk",
     publishedAt: "2026-07-12",
     reviewedAt: "2026-07-12",
+    provenance: toukeiProblemProvenance,
     references: [
       { title: "統計検定2級公式ページ", url: "https://www.toukei-kentei.jp/grade/grade2/" },
       { title: "公式テキスト・問題集案内", url: "https://www.toukei-kentei.jp/preparation/books/" }
@@ -142,6 +146,7 @@ export const problems: Problem[] = [
     author: "kuma / bearworks.uk",
     publishedAt: "2026-07-12",
     reviewedAt: "2026-07-12",
+    provenance: toukeiProblemProvenance,
     references: [
       { title: "統計検定2級公式ページ", url: "https://www.toukei-kentei.jp/grade/grade2/" },
       { title: "公式テキスト・問題集案内", url: "https://www.toukei-kentei.jp/preparation/books/" }
@@ -203,6 +208,7 @@ export const problems: Problem[] = [
     author: "kuma / bearworks.uk",
     publishedAt: "2026-07-12",
     reviewedAt: "2026-07-12",
+    provenance: toukeiProblemProvenance,
     references: [
       { title: "統計検定2級公式ページ", url: "https://www.toukei-kentei.jp/grade/grade2/" },
       { title: "公式テキスト・問題集案内", url: "https://www.toukei-kentei.jp/preparation/books/" }
@@ -256,6 +262,7 @@ export const problems: Problem[] = [
     author: "kuma / bearworks.uk",
     publishedAt: "2026-07-12",
     reviewedAt: "2026-07-12",
+    provenance: toukeiProblemProvenance,
     references: [
       { title: "統計検定2級公式ページ", url: "https://www.toukei-kentei.jp/grade/grade2/" },
       { title: "公式テキスト・問題集案内", url: "https://www.toukei-kentei.jp/preparation/books/" }
@@ -308,6 +315,7 @@ export const problems: Problem[] = [
     author: "kuma / bearworks.uk",
     publishedAt: "2026-07-12",
     reviewedAt: "2026-07-12",
+    provenance: toukeiProblemProvenance,
     references: [
       { title: "統計検定2級公式ページ", url: "https://www.toukei-kentei.jp/grade/grade2/" },
       { title: "公式テキスト・問題集案内", url: "https://www.toukei-kentei.jp/preparation/books/" }
