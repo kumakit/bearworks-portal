@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-08-26",
+    "daily_summary": "本日のAIニュースは、政府による学習データの開示や知財保護のルール作りといった法的・倫理的課題への対応が急務となる一方、宇宙空間でのAI半導体活用やロボットの器用な作業といったハードウェア面の大きな進化が報じられました。また、コールセンターでの商機拡大やメンタルケアにおける注意喚起、さらにはエンジニア教育における基礎思考力の重要性など、AI技術の急激な普及に伴う社会的な影響と適正利用に向けた多角的な動きが浮き彫りになっています。",
+    "articles": [
+      {
+        "title": "AI学習データ開示促す 政府、知財保護で基本指針",
+        "content": "日本政府は人工知能（AI）の学習データの開示を促すため、知的財産保護に関する基本指針をまとめた。クリエイターや企業の権利を守りつつ、透明性の高いAI開発環境を整備することを目指している。",
+        "source": "Google News",
+        "published_at": "2026-08-26",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBRcUN3YzZ3c3NfVVdMWWFvNXR2M2dGM1c0U1B1Sm94LVJlcE10MmdCSUY0YXRUd0Q0S1ZWSnF6aFVrTUdxa0dDWUNBT1RwLXRRN0lxYkRKV0hwRTVxRjVRR2JTcWNqYUYxVERpc2xIZVo4dXlmT0tNeGV2OS1peHc?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "AI学習データ開示、企業に対応促す 政府が知財保護原則を策定",
+        "content": "政府は人工知能（AI）の学習データ開示を巡り、企業に対応を促すための知財保護原則を策定しました。AI開発における著作権や知的財産の保護を強化しつつ、適正なデータの利用環境を整える方針です。",
+        "source": "Google News",
+        "published_at": "2026-08-26",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBhT3pNRHVieVBNSWtWTU04TmpUWEFNQkprVV9EQlpRaHhvM3dPckI3aDlWczdlVFljbDFGN0lrNEVVRUhYNl9nbE9iYnJwbUV6N0tBZ2VTMVBOVWduS2pNVms1S1c5TktocWFhVw?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "AI新世紀：ポケモンも悟空も学習？ AI「ただ乗り」懸念にルール、課題は",
+        "content": "人工知能の学習データにキャラクターや著作物が無断で利用される「ただ乗り」懸念について報じています。クリエイターの権利を守るための新たなルール作りが進む中、その実効性や課題について詳しく解説しています。",
+        "source": "Google News",
+        "published_at": "2026-08-26",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFB5clpKckxLaU5aS0p1aHlQTEg4OVBWNTBma3hPQzZHWU5VX1JfUTMxVE9sR1A4SmNDOGhuZHVkS0dLellUVmhIYUNkX3RJRzBNOG9MMUxDb3gtcmZCRFU1WldCU3FSRUQx?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "AIメンタルケア 開発者が促す注意",
+        "content": "AIを活用したメンタルケアサービスに関して、その利用における注意点を開発者が呼びかけています。技術の利便性が高まる一方で、過度な依存や適切な専門的判断の欠如リスクに対する懸念が示されています。AIメンタルヘルスケアの普及に伴い、安全な利用と倫理的な配慮の重要性が高まっています。",
+        "source": "Google News",
+        "published_at": "2026-08-26",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1nalI3c0FvRTdiYXpYXzE4TUNPMEs2SjFFYnotSWhUS1dibmQ1M0hpdzBwNHdXdG0xOXVMdEdWaDhrdFprZEo3RjZFcEtvU0l4?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "中国「ロボット五輪」が示すフィジカルAIのインパクト、「速く走る」だけではなく「ケーブルを挿す」が重要な理由",
+        "content": "中国で開催されたロボット大会を通じて、フィジカルAIの進化とその実用的なインパクトが浮き彫りになりました。単に移動速度を競うだけでなく、ケーブルを的確に挿すといった器用な作業の遂行こそが、今後の産業応用において極めて重要であると指摘されています。",
+        "source": "Google News",
+        "published_at": "2026-08-26",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE0zc242b2tfb1c0Y05ITng4UW5MN2w1WDZVbDZzdG9BQ3hsb0tMRjFhR0RtcHhXcm8yYlltNlB3YW9TRUwweDN5cDdHQ0FQcUs0cGJUdDdR?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "生成AIの学習もこなすDGX Spark、雑誌記事を学ばせて実際に書かせてみた",
+        "content": "生成AIの学習をこなす「DGX Spark」を活用し、実際に雑誌の記事を学習させて文章を生成させる検証が行われました。そのパフォーマンスや実用性について、具体的な成果が紹介されています。",
+        "source": "Google News",
+        "published_at": "2026-08-26",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1IeUVBLV9iV2hQLTlTalZsek9SaDJqR3pUVzNGZFRob1FMNy1UTVBPVlBBZHd5UHlYeEZCZk1NSVFwOGJ3R2Z6Q3ZzNzA2R0Y5OXktU2dPZnZFa0xDc0ZJQmhCRUNLdThkYXljNQ?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "Javaの重鎮が説く若手育成 「AIは二の次」でいい理由：「まず1時間、自分で考える」",
+        "content": "Javaの有識者が若手エンジニアの育成について言及し、AIの活用よりもまず自力で1時間考えることの重要性を説いています。基礎的な思考力や問題解決能力を養うことが、長期的なエンジニアとしての成長につながるという指摘です。ITmediaによるインタビュー記事で詳しく語られています。",
+        "source": "Google News",
+        "published_at": "2026-08-26",
+        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9rU2dGMkRIcElHS0lwX1R4ZWQzNUVvR0VxRWpSSmNjc3NRRE83VnRLTDhkaGZCM0FPdVhvalJqT2tIdGVtaXRBQklKNDllczBROG0tOXRlaWkxMVFBUlVvUnczdmpfaDh5emdyc0hScEU?oc=5",
+        "category": "その他"
+      },
+      {
+        "title": "生成AIで大転換期！商機急増で注目の「コールセンターAI」関連株",
+        "content": "生成AIの普及により、コールセンター業界は大転換期を迎えています。業務効率化や顧客対応の高度化に伴い、商機が急増している関連銘柄に市場の注目が集まっています。",
+        "source": "Google News",
+        "published_at": "2026-08-26",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBwWnhyRE5PVi1YaDRpUWRFdE4wLTVkX2htdnoyNnZTSWVKaF82dTdMeml3UW5Qb1hDX1NqYkNFOE9CSm1GekZBa2hnMjNadk1YaklKN29WcTJfNXBNTDBTUg?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "AI時代に必要なのは？未来を読む叡智 オードリー・タンの言葉",
+        "content": "NHKニュースにおいて、AI時代における未来を読む叡智についてオードリー・タン氏の言葉が紹介されています。急速に進化するテクノロジーと社会の中で人間が持つべき視点や考え方について語られています。",
+        "source": "Google News",
+        "published_at": "2026-08-26",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9uRDdZTWZQN2doZ2phcm5OaFUxR0tUU1FsYzcwVHpoNUNmeHJTY3phSlBTc280WWxWSmYxR01VdXRwZC1fUnlmTDFzM29xZml5WDctb3NXbkg1dUp5T0xv?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "NVIDIA、スペースXの宇宙データ衛星にAI半導体 27年打ち上げ",
+        "content": "NVIDIAのAI半導体をスペースXの宇宙データ衛星に搭載し、2027年に打ち上げられる予定であることが報じられました。宇宙空間での高度なAI処理が可能になり、新たなデータ通信や解析サービスの展開が期待されています。",
+        "source": "Google News",
+        "published_at": "2026-08-26",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE4ySkVzSHM4WTdlZUt5NnV0ZTZ6TVd1UlRXTnpPRVJfRGNZckRIblY2c3dWWTlsYUpITEIzQVZkZmNJV01OelBYYlFxR08tTEdlM2tzbVA5MkFwWVIzNE1mM1VFVTUwZTVPOVRoag?oc=5",
+        "category": "インフラ・半導体"
+      }
+    ]
+  },
+  {
     "date": "2026-08-25",
     "daily_summary": "本日のAIニュースは、銀行業界での採用減や巨額投資によるインフレ懸念など経済・市場への影響が目立つ一方、日本企業の投資対効果の低さや知的財産保護の課題が浮き彫りになりました。また、世界的な「脱AI相場」の兆しやシステムのエラーといった過熱感やリスクに対する懸念が示される一方で、途上国向けの「スモールAI」やバスの転倒防止など、安全確保や持続可能な発展に向けた実用的な活用の模索も進んでいます。",
     "articles": [
