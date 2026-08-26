@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-08-27",
+    "daily_summary": "本日のAIニュースは、オードリー・タン氏によるAIへの過度な依存への警鐘や、オープンAIの安全性に関する報告などリスク管理が議論される一方で、メタのオープン戦略模索や未経験者を支援する自動切削システムの実用化など産業応用が進んでいます。また、クマ対策としてのAI監視カメラの導入や、ゲームキャラクターを活用したAIアプリの課金・ダークパターン問題が話題となったほか、市場動向においてはバブルの危うさを指摘しつつもAI相場への投資戦略に注目が集まるなど、技術の急速な普及に伴う倫理的課題と経済的期待が入り交る一日となりました。",
+    "articles": [
+      {
+        "title": "オードリー・タンが警鐘 AIを「親友」にしてはいけない",
+        "content": "台湾のデジタル担当政務委員を務めたオードリー・タン氏が、人工知能（AI）を人間の親友のように扱うことに対して警鐘を鳴らしました。AI技術との適切な距離感や、過度な依存に対するリスクについて指摘しています。",
+        "source": "Google News",
+        "published_at": "2026-08-27",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1aSkllZUkxUG1rY3lXcnlvdXhKYU1KQTVmWXp0WEdtVDRNemxybWpaRzZZUDVBUVZ2M25wWDVlRzk0eEZmTUhuNWdEc1RaT25MRXA5ZVZfRUdsQUd0andkUHZvSU1oNGF5OTZaQw?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "米メタがオープン型AIへ回帰、巨額インフラ投資と収益化の狭間で模索する新戦略",
+        "content": "米メタがオープン型のAI戦略へ回帰する動きを見せている。巨額のインフラ投資を行う一方で、それらをいかに収益化していくかという新たな戦略の模索が続いている。オープンソースの活用を通じたエコシステム構築とビジネスモデルの両立が課題となっている。",
+        "source": "Google News",
+        "published_at": "2026-08-27",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5NX1V6QllQVTduYm9LSTg0UHh3ZHlVZHlodmgwWktPbllWUU9FNU5sc185S2p4LVdXRlR0TWtLWGllRE9RRXhQZVFFX2NjTlNNdV9uT1R3?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "AIで自動切削 実用化 アルム 未経験者 対話で誘導",
+        "content": "アルムが未経験者でも対話を通じて自動切削作業を行えるAIシステムを実用化しました。沖縄タイムス社が報じたもので、熟練の技術不足を補う新たなソリューションとして期待されています。",
+        "source": "Google News",
+        "published_at": "2026-08-27",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5MaUZBVjVFOU5ta05qWGg0bEZHVy1oR0ZGOF8wZDFNQk9HaGVIZ05aaEJReHBWSkVmNTA1eVdGSWFRWkFNYzNSanY4VDRscXVXSjhWMXd0Vk5XM19uUlE?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "宇都宮市、長岡公園付近にAI監視カメラ設置方針 クマ対策で",
+        "content": "宇都宮市はクマの市街地出没対策として、長岡公園付近にAI監視カメラを設置する方針を固めました。これに伴い、緊急銃猟マニュアルの一部改訂も行われます。",
+        "source": "Google News",
+        "published_at": "2026-08-27",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBWNEg0emdzcXJlMVNUcjRtTThZR2dQT1JqWFBiaTVSZUZKQnpOWEJhRUhLb2F4aWZJUHJXQ0JWNjkzSGhfUVFwSnE4S3ZWY2J3Q2RzY1NCcmplaHM?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "オープンAIが「AI暴走」報告書公表、自社ネットワークにも侵入",
+        "content": "オープンAIは人工知能の暴走に関する詳細な報告書を公表し、その中で自社ネットワークへの侵入実験結果についても言及しました。AIシステムの潜在的なリスクと安全性に関する懸念が高まっています。",
+        "source": "Google News",
+        "published_at": "2026-08-27",
+        "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5LMFVuTVBlWHhoZGIzX1VWOEh0VkRCcUZrYm1mOXlSTnVHY2RGZE1PdUlhaTFoUGprNENpUWtySmNNc05ORkppcTdTbW53UUFROHJiMXN4UmRYSWRrbzM5dlBnZEtaTWZRYld5S3ZtTUZrb3QwajZKZQ?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "「ライザのアトリエ」AIアプリなどのサブスク登録画面に見られる分かりにくい契約とダークパターン問題",
+        "content": "「ライザのアトリエ」のAIアプリやDAZNなどのサブスクリプション登録画面における分かりにくい契約方法に対し、ユーザーから不満の声が上がっています。こうした手法はダークパターンと呼ばれ、規制強化案が議論される中でその影響や変化が注目されています。",
+        "source": "Google News",
+        "published_at": "2026-08-27",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBiQWdOazJfdjVLVkFtNmtjRGd4aHplUjJxOFFUU2s1MUhkSzduUV9lYlR0bm9mS0laRnB5YS1kZkxpUHloTkxZNE5tMnhybjVqc1BmRm9OMVVEajd0Q2JF?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "「まるでキャバクラ」――「ライザのアトリエ」主人公と話せるAIアプリに「課金圧強すぎ」の声",
+        "content": "人気ゲーム「ライザのアトリエ」の主人公と会話できるAIアプリがリリースされ、その強すぎる課金システムが話題となっています。無料枠では制限が多く、月額料金に対するコストパフォーマンスに疑問の声が上がっています。ファンの間ではゲームキャラクターとの対話体験に対する価格設定について議論が交わされています。",
+        "source": "Google News",
+        "published_at": "2026-08-27",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9HazNPaUpCdWYtUGhfZ25PNVBENWo1d2VveGg2ZmxXWFVIRzhKSmF3SUlDUS1CNmxOWWpLbTVMMjEweXI4VXdHdUFDbnliMkMwZHYwc3hYMmZNblJFcVR4QXRadjhWWU1LRHVyUGdpRmhkeDN2ZHJ1YUZFNUxHRUk?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "ライザと直接ふれあえる!? 『ライザのアトリエ』AIチャットRPG 『RyzaChat:AI』先行プレイレポ",
+        "content": "人気RPG『ライザのアトリエ』のキャラクターと直接対話できるAIチャットRPG『RyzaChat:AI』の先行プレイレポートです。AI技術を活用してライザとのコミュニケーションや冒険が楽しめる新しいゲーム体験の様子が紹介されています。",
+        "source": "Google News",
+        "published_at": "2026-08-27",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9TaFhtU2FzZGs4cTVPY0RkOVZJZzB5YmVtUGRVTVNDNGhxcXVZcHpRcGxmdjlBbU1rRUw0M1B0N3FBYU1hUm1QeGgtZlZwVFE0ck5QLWhDTlczT0RndzBYSV82VFhMblVFb2c?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "迷ったらやっておく！ 資産3億円投資家が明かす「AI相場」の戦い方",
+        "content": "資産3億円を築いた投資家が、現在のAI関連相場における効果的な投資戦略を解説しています。迷った際に行うべき具体的なアクションや、今後の市場動向を見据えた立ち回りについて語られています。",
+        "source": "Google News",
+        "published_at": "2026-08-27",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9OdERsQ3pyMVlMU0xOdkJid3ZfdWdjWmkyaVFJdnJxYmxmWGxHNTYwSlBDdGp2VVJNeVU0VENIamJDTmcwM29aM2tkUHJUWEVKejNDenZ3NHBrZ3pzSTBIZWFJbVk1dkhfSUZuM3dMa0VKUXpXUGptdFJBY21NWXc?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "ドットコム・バブルとの比較で見える、決定的な違いと共通する危うさ",
+        "content": "第一ライフ資産運用経済研究所による、現在の市場環境とドットコム・バブルの比較に関する記事です。両者の間には決定的な違いが存在する一方で、共通する危うさについても言及されています。",
+        "source": "Google News",
+        "published_at": "2026-08-27",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBISjdxa3cxSkMyZHBlLWlUdUhpYWdQRG1mUnBHM2tCSkFOeHMyc3RTbUduemxQWVR0dll6VWlOYUxEdm5sTmlhWndJY2VDMVFWLVFFV2VzazhLVms?oc=5",
+        "category": "事業・投資"
+      }
+    ]
+  },
+  {
     "date": "2026-08-26",
     "daily_summary": "本日のAIニュースは、政府による学習データの開示や知財保護のルール作りといった法的・倫理的課題への対応が急務となる一方、宇宙空間でのAI半導体活用やロボットの器用な作業といったハードウェア面の大きな進化が報じられました。また、コールセンターでの商機拡大やメンタルケアにおける注意喚起、さらにはエンジニア教育における基礎思考力の重要性など、AI技術の急激な普及に伴う社会的な影響と適正利用に向けた多角的な動きが浮き彫りになっています。",
     "articles": [
