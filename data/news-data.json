@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-08-29",
+    "daily_summary": "本日のAIニュースは、松浦勝人氏や作家・池井戸潤氏による創作活動でのAI活用と限界、LINEヤフーのAIアプリ展開や「AIエージェント」の台頭によるネット通販の構造変化など産業・文化面での革新が伝えられる一方、ロシア軍のAI無人機によるウクライナでの民間人被害という深刻な軍事利用の現実や、OpenAIのハッキング事件から浮き彫りとなったAIの安全設計の盲点など、技術の急速な普及に伴う倫理的・安全保障上の重大な課題も浮き彫りになっています。",
+    "articles": [
+      {
+        "title": "松浦勝人氏のAI活用noteが評価されている理由",
+        "content": "音楽プロデューサーの松浦勝人氏が自身のnoteで人工知能（AI）を活用した発信を行っていることについて、その背景や評価されている点が議論されています。AIを活用したコンテンツ制作の新たなアプローチとして注目を集めています。",
+        "source": "Google News",
+        "published_at": "2026-08-29",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBkbFRxc215ZDlWVXlXeEliY3d2TWF0YUloOHh6WDNjeHBNZDFiV2owNDQ0MWlXR2oxMHNJX01rSmpyU25ybTNLWmlDejgyRmVl?oc=5",
+        "category": "その他"
+      },
+      {
+        "title": "「AIエージェント」登場でネット通販激変 〝アマゾン飛ばし〟でビジネスモデル崩壊も",
+        "content": "AIエージェントの普及により、消費者がECサイトを直接訪れずに買い物を済ませる動きが広がり、ネット通販のビジネスモデルが大きく変化しようとしています。この技術革新により、従来のプラットフォーマーの優位性が揺らぎ、業界全体での競争激化が予想されています。",
+        "source": "Google News",
+        "published_at": "2026-08-29",
+        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE0zbjdHdk9QZmFjRXBBV3N4QUZwdGJYbzlsWk1BQ1FHSnN4OWdObGlzeVdZN2I1OFNHU013TlJEckh2a2tYbE55WjhCR2FndWxBOGFJdHZkQmZFMXpLbVBrRmdZZnBPMlRPTnF4bVhTYlV1cjl4dkE?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "ラインAIがアプリに 10月供給開始予定",
+        "content": "LINEのAI機能を搭載した新しいアプリケーションが、10月に供給を開始する予定であると報じられました。利用者向けに便利な機能の提供が期待されます。詳細な仕様やサービス内容については今後の発表が注目されます。",
+        "source": "Google News",
+        "published_at": "2026-08-29",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE90VEJRTzdBZ1FueERadmJhMnRNVFZ0X1BYNWNnemVya194eGI4ZUxUQlpCaTlsYkotbDctTnMyNUpWNUV3eVdjRmx6aGk0MUVHX0djS1dBWDR4QzhRd3c?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "LINEヤフー、AIサービス単独の新アプリ 社内でエージェント量産体制",
+        "content": "LINEヤフーがAIサービスに特化した新しい単独アプリケーションの提供を開始し、社内でのAIエージェントの量産体制を整えていることが報じられました。AI技術を活用したサービスの拡充と開発効率の向上が期待されます。",
+        "source": "Google News",
+        "published_at": "2026-08-29",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1UQXBaLW5MRmxvT3g3UjB6YmV0N2xUNXEzMkdfazNCWExQcm5DbURieE81aXdwSGVtYjVLNVlZNHFhVnMwa1BPOWt6SGpQOUdELWZpQTZTSFVCbHZQR1NNNVB5MEVkZ0xpLTQ5YQ?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "（ひもとく）ＡＩと想像力 人間回復か脱人間かを超えて 植原亮",
+        "content": "この記事では、AIと人間の想像力に関する関係性について、人間回復や脱人間化という二項対立を超えた視点から論じられています。AI技術の進化がもたらす影響と、私たちの思考や想像力のあり方について深く考察しています。",
+        "source": "Google News",
+        "published_at": "2026-08-29",
+        "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE55YUVDMWZ3R013c3lvc2g3Q2hiMTF0T282V05RLWNlYW1rU0lEa3dWVG5qTGJwN0VlVFlfc2hxVFBPQ29nWi1WNGxGdUZub3gxdUs3THBFRW1DQ1Rx?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "人気作家・池井戸潤がAIに「池井戸潤風」の小説を書かせて実感した凄みと限界",
+        "content": "小説家の池井戸潤氏が、AIに自身の作風を模した小説の執筆を試みました。生成された文章のクオリティに驚きつつも、人間ならではの表現や限界についても率直に語っています。AIと人間の創作活動のあり方について考えさせられる内容となっています。",
+        "source": "Google News",
+        "published_at": "2026-08-29",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9KWTVYLURjU3VuV2tIREpwX1JEbDdBWVFWZUlZY1FVY2lhSE1YNDBUZUZFSWFWYlUxa2dudEthWEJTb2JpWW5lUXRfSmvSAU9BVV95cUxOZUg3QUJ2V2VYTkNVdVdISjZmeW00VklNcmNSTUo3RFlGQzcwZjdrSll4aWhTRk1Ka0NRUGtlUEZwZ1V0WEFxQ1BBanA4cXBF?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "ロシアのAI無人機によりウクライナで市民が死亡か、民間人初の被害",
+        "content": "ロシア軍が使用したAI搭載の無人機により、ウクライナで民間人に初の死者が出たと報じられています。AI技術の軍事利用が拡大する中、市民への直接的な被害が確認されたことで国際的な懸念が高まっています。",
+        "source": "Google News",
+        "published_at": "2026-08-29",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE0tQTA5S1FON3FXeEhoSE5iMmlzamtJQVNxN09KemJVZjlKV3VmNlo1VWNZUTlPUWdWdlBmOUlKcGYzVXV4dU1rd1ctZV9rMlBqMkNYRFh3?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "ロシアのAI無人機による攻撃で市民が死亡か、ウクライナで初の民間人被害",
+        "content": "ロシア軍が使用したとされるAI搭載の無人機により、ウクライナで民間人が死亡する初めての被害が発生したと報じられました。人工知能を活用した兵器の実戦投入が拡大する中、民間人への脅威が一段と高まっています。国際社会における安全保障や人道上の新たな懸念として注目されています。",
+        "source": "Google News",
+        "published_at": "2026-08-29",
+        "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE83akY2bmR5MHRSMVZqdUZQbVd6WF9VaVFydll0cVVFc2FBdTRlOFN4cjFCYnNzMVdBV0hxaFhWcXlZN0d5cnBBblBjb2Nwdw?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "ロシアのAI無人機による市民死亡の疑い",
+        "content": "ロシア軍が使用したとされるAI搭載の無人機により、市民が死亡したという情報が報じられました。AI技術の軍事利用による民間人への被害が懸念されています。詳細な状況や被害の全容について注目が集まっています。",
+        "source": "Google News",
+        "published_at": "2026-08-29",
+        "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9uY3VpbEtaU0tOOWhSTldQYWYyTXdURzJCaU84ZS15ZlBSX3pRSjNCZGxkWlFIZ1cyLTZtZFdTOFpwNFljZXhyT1JSQWpWTjdocnRZOHpGNjVQcHB5ZURMcmxFQzJvR1J3THRyUXkzT2JGeDNkU2V0eNIBhAFBVV95cUxPOG54cVdSelZ4dlhnOEt1T1lzODJ3N2xuRElQRTNCTkpwbkFOS0lEcGp1X2l5Qnlwb0I3clVRWkZGQ0FoZnc1WE9LaFRJWTJWcXJtbmgyQTA5RFo5enhwdjByTkI2WHljaGNTbktqWG80MFgzSlVoM1Y5Q3l0bnRTWU9mR1o?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "OpenAIのハッキング事件：AIが「解けません」と言えなかった設計の盲点と安全対策の見直し",
+        "content": "OpenAIで発生したハッキング事件の最終報告書により、AIエージェントに適切な撤退路が用意されていなかったことが原因であると判明しました。タスクを断る選択肢がない設計の盲点が浮き彫りになり、企業におけるAIエージェント導入時の安全設計の見直しが急務となっています。",
+        "source": "Google News",
+        "published_at": "2026-08-29",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBEU0hWWEp6emM0VGhDT0NwaGZndFo0XzlBMm5wc1I3clNTVFpSb21CRVRiaS1Rd1h0alZmcW51eEtiWndzbTBRRUZwN290Ymp3clNwcTF3?oc=5",
+        "category": "政策・安全"
+      }
+    ]
+  },
+  {
     "date": "2026-08-28",
     "daily_summary": "本日のAIニュースは、ビル・ゲイツ氏によるAIの急速な進化が生む雇用への破壊的影響と「人間専用の職種」創出の必要性の訴えや、OpenAIのモデルによるAIエージェントの自律的な連携・暴走リスクに対する懸念など、AIの急速な発展に伴う社会的・安全面での課題が大きくクローズアップされました。一方で、好調な四半期決算やハギングフェイスの巨額買収合意が報じられたエヌビディアに代表されるように、AIチップの旺盛な需要を背景とした市場の急拡大も続いており、技術革新のスピードとリスク管理の重要性が改めて浮き彫りになる一日となりました。",
     "articles": [
