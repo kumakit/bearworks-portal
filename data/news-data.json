@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-08-30",
+    "daily_summary": "本日のAIニュースは、政治やエンターテインメント、ウクライナ情勢といった幅広い分野での活用が進む一方、製造業や廃炉作業においてロボット制御などの「フィジカルAI」の実用化・企業連携が大きく前進したことが際立っています。さらに、エヌビディアの好決算や半導体から電子部品への特需拡大、日本企業の独自技術による挑戦など、産業の基盤を支えるハードウェアおよび投資市場の動向も活発に報じられています。",
+    "articles": [
+      {
+        "title": "高市首相が安野氏からAI指南を受けた狙い",
+        "content": "高市首相が安野氏からAIに関する指導を受けたニュースです。政治におけるAI活用やその背景にある狙いについて報じています。",
+        "source": "Google News",
+        "published_at": "2026-08-30",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5wZ3NGM2RONkthZC13aVFyTHoyamFITGhiMFA5NzFVVTZNajhwVU9QMGUyTTVGTlI4Z1VJZ2EtZnRfQW1WZmdJMzVnUHU3T3pX?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "成人向け映像に特化した生成AIプラットフォーム「Rogue Studio」、映画並みのクオリティを目指す",
+        "content": "成人向け映像の制作に特化した生成AIプラットフォーム「Rogue Studio」が発表され、映画並みの高品質な映像表現の実現を目指しています。AI技術の進化に伴い、エンターテインメント業界の多様な分野で生成AIの活用が進んでいます。",
+        "source": "Google News",
+        "published_at": "2026-08-30",
+        "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPWktyV1JnQ3pMd2U4cHN3TkV5NndyS2tsTFY4dlloVThhZm5FcVJqTEhZY2Jzb0hMblpuYUI3M0l4dkZrdkExeW82MEMxV0J0cjIya2loNnlYc3V1eUFjdTZWWEhqNUZrWU9UclpMZHZYYVpLZFk3Q3N5TWRYaXZWMWtB?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "ウクライナ侵攻：ロシアのAI無人機による民間人の死者か、沖縄タイムスが報道",
+        "content": "ウクライナ侵攻において、ロシア軍のAI搭載無人機による民間人の死者が出た可能性があると報じられています。AI技術の軍事利用による被害が拡大しており、民間人への影響が懸念されています。",
+        "source": "Google News",
+        "published_at": "2026-08-30",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9sTlk5Nlc5Ym43Tk5jNVZtckRVVVB0bW9yS2p6UFFNZWRqUG1GNW5LeU03SlBfZVFlTXRKUldzLWNkSzYxeDBHUWVZc0hPOGNiWTRLakoxTFdlbm9BOWc?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "トヨタやノリタケが駆ける「製造王国の道」 AIが工場の現場パートナー",
+        "content": "トヨタ自動車やノリタケなどの製造業が、工場の現場でAIを活用した取り組みを進めている。AIが人間のパートナーとして生産性向上や品質管理を支え、製造業のあり方を大きく変えつつある。日本のものづくりにおけるAI活用の最前線を報じている。",
+        "source": "Google News",
+        "published_at": "2026-08-30",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5VcnEySlUydmt6UGxWakRvQ0JHYVdJNkR4RGdEUWV2X2hqbE9HVWoxTjR6WkJSeDMtcTZIOTA4UGxuRGlUR3JFSW1qZjlEM1NxZkw0YzdRLTcwbFo0dnY2VXlKWWt4U0xOU2E3VA?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "フィジカルAI実用化へ企業連合 製造ロボ制御、京セラなど20社",
+        "content": "京セラなど約20社が参加する企業連合が、製造業向けロボットの制御を行うフィジカルAIの実用化に向けて発足しました。最先端のAI技術を物理的なロボットに組み込むことで、製造現場の自動化や効率化を一層推進することを目指しています。",
+        "source": "Google News",
+        "published_at": "2026-08-30",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE94eFdTYXI0OUdFZ045Q3NEMFQtWXBCMEJEMnR3WkRVSnBJSWtRazJNZkc2cURyTDBGcDVPNGdIa0xvd3FpbTE1aDZMNUpBcWFQSWpwTW51V1ZPTTJBZnBrdC1LTXZwSkZqQmRmMm9aOFcwN2RFb1p0TXpwamQwUUk?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "人型AIロボット「シナモン1」登場、フィジカルAIによる職人技の継承と担い手不足解消への挑戦",
+        "content": "東京都新宿区で自己紹介を行う人型AIロボット「シナモン1」が公開されました。深刻化する担い手不足の解決や職人技の継承に向け、フィジカルAIを活用したロボット開発が活発化しています。人型ロボットによる新たな産業への挑戦が注目を集めています。",
+        "source": "Google News",
+        "published_at": "2026-08-30",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9TVjJoNG9iYW1CODZOdkRsWm9tZ2NQb3VkYldpT2ZqQ1FfUVRvSE1lMVhlUVdYaUZ6VVloTzV5b3Q3NlZEUVhtcFRYNEZyTUhWOGVLZ1BFWQ?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "福島第1廃炉にフィジカルAI 国・東電、26年度内にも共同事業体",
+        "content": "国と東京電力は、福島第一原子力発電所の廃炉作業にフィジカルAIを導入するため、2026年度内にも共同事業体を立ち上げる方針を固めました。最先端技術を活用することで、危険を伴う作業の効率化と安全性の向上を目指します。",
+        "source": "Google News",
+        "published_at": "2026-08-30",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBnYUhWVFlnejFCVS1Ic3VNNEVDb0ZYeTd1dGtXVWxNNE9YNGdpWWxoNnVtdXREQlcwd01VMGxETXV6TkNsSl9WQ1VkZGh6cU9Za28tYThHSVhJODY4SkJZZVNvNlpTS0hWeDdHbA?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "サプライズ③ AIの波は半導体から｢電子部品｣へ､強気5銘柄 - 四季報オンライン",
+        "content": "AIの普及による需要の波が、従来の半導体分野から電子部品へと拡大しています。この記事では、その潮流の中で強気な見方が示されている注目すべき5つの銘柄を紹介しています。関連企業の今後の動向や投資戦略に関心を持つ投資家にとって有益な情報を提供しています。",
+        "source": "Google News",
+        "published_at": "2026-08-30",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9tNlBYVE0yR1RVNlg4S1Bma05iSW1nOWswNi05MzNURkRtSXZjak9FaDdIX05OUGlUekhTWnBva3RnZUh4dGdGeGwzT194d1pkR1VXYldPYw?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "ほぼ満額回答のエヌビディア決算：AI相場復活の死角は？",
+        "content": "エヌビディアの最新決算は市場の期待にほぼ応える好結果となりましたが、AI相場の本格的な復活に向けた懸念材料や死角についても分析されています。半導体市場や株価への影響について投資視点から解説されている記事です。",
+        "source": "Google News",
+        "published_at": "2026-08-30",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5JQ3gzcF9heHROMWs2M1g3MEk3Zm9hbHZuTmplMVdxTVpqemRxUDg4ZUtMWG1oWWM2ckNIWXM3enJHd3YwVmNnLWNhLU9ZelN0SlptVF9xMzVPQQ?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "エヌビディアの牙城を崩す！プリファードのAI半導体とは？／世界シェアトップ目指すキオクシアの超高速SSDとは？",
+        "content": "エヌビディアに対抗するPreferred Networksの独自AI半導体や、世界シェアトップを目指すキオクシアの超高速SSDについて、キーマンに直撃取材した番組の配信版です。日本のハードウェア企業が次世代のAIやデータ処理市場でどのように勝負を挑むのかを解説しています。",
+        "source": "Google News",
+        "published_at": "2026-08-30",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1wdURTRm81TjFuY0cwYm5GcGtZQm5YdlgweDBRTDQ3MmkyVEpkb2FoRHNnWS1YdTM1SFE4NlV5cDI2R0J0YUczbmZ5MERMTmVxSXA1dGpCbGpZZk5VbkdJ?oc=5",
+        "category": "インフラ・半導体"
+      }
+    ]
+  },
+  {
     "date": "2026-08-29",
     "daily_summary": "本日のAIニュースは、松浦勝人氏や作家・池井戸潤氏による創作活動でのAI活用と限界、LINEヤフーのAIアプリ展開や「AIエージェント」の台頭によるネット通販の構造変化など産業・文化面での革新が伝えられる一方、ロシア軍のAI無人機によるウクライナでの民間人被害という深刻な軍事利用の現実や、OpenAIのハッキング事件から浮き彫りとなったAIの安全設計の盲点など、技術の急速な普及に伴う倫理的・安全保障上の重大な課題も浮き彫りになっています。",
     "articles": [
