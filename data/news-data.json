@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-08-31",
+    "daily_summary": "本日のAIニュースは、FANZAの成人向けAIマンガ支援やAnthropicの著作権侵害提訴（ソニーG傘下など35社による提訴）、生成AIを用いた訴訟といったクリエイター・法的な権利に関する話題が相次ぐ一方、インフラの物理的制約（電力・水不足）やプラットフォーム依存のリスクなど、AIブームの持続可能性や事業継続性を揺るがす課題が浮き彫りになっています。",
+    "articles": [
+      {
+        "title": "「FANZAスタジオ」誕生へ、成人向けAIマンガに対するマンガ家の期待と葛藤",
+        "content": "FANZAが成人向けAIマンガ制作を支援する「FANZAスタジオ」の展開を発表しました。AIの活用により制作効率化が期待される一方で、表現の独自性や倫理観に違和感を覚えるマンガ家からも注目が集まっています。AI技術が成人向けコンテンツ市場に与える影響や、クリエイター側の受け止め方について議論が続けられています。",
+        "source": "Google News",
+        "published_at": "2026-08-31",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9FQ2k3UjlqMXg2LXdOcG9mMGl4MDJ1Vm41R0VVaFdEOGVhd0tQUDlva2ZONWo5VzBrZlpfNm9LVHhhTmFxWkNVSE1paWI0bTNIUzZVR3c2UnhiQnBiREhxODZXTlJIYlJOekE?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "「落ちた冷麺を出された」AIに訴状書かせて提訴 会社側は争う姿勢",
+        "content": "客が床に落ちた冷麺を提供されたとして、生成AIを活用して作成した訴状を用いてレストラン運営会社を提訴した。会社側は請求の棄却を求めて全面的に争う姿勢を示している。AIを利用した法的紛争の珍しい事例として注目されている。",
+        "source": "Google News",
+        "published_at": "2026-08-31",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5TNm0xdzMyNXBib1l0eGxqNTV2R1pCVllSZjZJSnZaaHhpQzZCYkFjc3E3VkhvVW5wUXBKRXN2cThXYno5YzQxWGlkVU10NXpMMF9URHJVcWY1dVNtbTRYdElTelBsZVROb0RVRnJxc1VzbVRwdk5GSFFGR3JQZnc?oc=5",
+        "category": "その他"
+      },
+      {
+        "title": "AI企業のキャッシュフローに「異変」、ブーム持続の鍵は設備投資よりもユーザー企業の業務再構築",
+        "content": "AI市場において企業のキャッシュフローに異変が生じており、ブームが持続するための鍵は莫大な設備投資ではなく、ユーザー企業自身による業務の再構築にあると指摘されています。AI技術の導入効果を最大化するためには、単なるインフラ増強を超えたビジネスプロセスの変革が急務となっています。",
+        "source": "Google News",
+        "published_at": "2026-08-31",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5kSUlDdHA5WkEydHhXNVJGZjJlMUpwRnh6TW1ydEM3OHpmZkdqeGh2QTlLZWpQdUt2N1J3YldaWkR1VElOQWtjWm5oV3nSAU9BVV95cUxPYmZVMnJIVWd0eVNxbHdndTgtdVlaSUFNUkFMZ0YtUVVqUXIta25rSm1HU1ZlVjhLUnZJUGp1VFo1OS0ySVdqa015Y1ZPMzI0?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "G20で米国が提案するAI規制抑制は投資をどう動かすか―半導体・データセンター・基盤モデルを巡る競争",
+        "content": "G20において米国が提案したAI規制の抑制方針が、今後の関連産業への投資にどのような影響を与えるかを解説しています。半導体、データセンター、そして基盤モデルの開発を巡る国際的な競争の行方について議論されています。",
+        "source": "Google News",
+        "published_at": "2026-08-31",
+        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPR3ZBM1lHd25pMzNkaEdLT2lsRWNPRWJSYVctdlBUYUtXS0UxajdHOU9XX2tiNlFEblpiYVFzVy1hOGt5ZmVlRU1QcjBTQXhxdmJfYnVDLVlvc3dfZFRxZjB2ckJWY2JNLXRzQlFSNDJHUnlzd2ZNLVY5R3VpeDc3Z3lhOFZyVlVD?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "米AI投資ブームは続くか？ 浮かんできた「電力と水」の制約という問題",
+        "content": "アメリカのAI投資ブームが継続するかどうかについて、インフラ面からの懸念が浮上しています。特に大規模なデータセンター稼働に伴う「電力と水」の不足という物理的制約が、今後の成長のボトルネックとして指摘されています。",
+        "source": "Google News",
+        "published_at": "2026-08-31",
+        "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQbE9EUWw1amFlT3I0ZFVURUIyaE1nM0NwLWk3b1ZVOGlMcmlPYzh2bmlIdmxvX0lvYmZoX3BIYWZtalVVV0RzdWlaYjNLQnhORWhLWDdEbVE1YUxuZ1lURDBBTEtaUTZvLXdxTmhVenZTNnZNSVpUNUI1UzEwSWxIbEdKTdIBf0FVX3lxTE9PY2dKSGhocVE5Y0RJQVd5SWxjWnFUdUQwX3pHWm9rc3Uyc1ROX3BKSmE4Y0tjNVFXN0RTQ3hxS3kyVXQxYXJtQTg5QUNDdHdpUDVtd2F0Tjh4VUdfSllCb29QNnV4TVVDbkl4ZnU3MUJvYWRtX0lINW9IT0NOdkk?oc=5",
+        "category": "インフラ・半導体"
+      },
+      {
+        "title": "今まで作れた「仕事専用AI」が作れない――ChatGPTの仕様変更が企業に突きつけた「依存」の代償",
+        "content": "ChatGPTの仕様変更により、企業がこれまで構築してきた仕事専用のAIが作成できなくなる事態が発生しています。この変化は、特定のプラットフォームに依存することのリスクと代償を企業に強く突きつけるものとなっています。",
+        "source": "Google News",
+        "published_at": "2026-08-31",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5RQlcwbnhaQ2dha1lTSFpXWHRXck04cG1nVkIxaWh6UlQ1STJ0Sl9EMGlOcXdMdmJvS2NJOWJlT0h6TzVYdXQwMUY5blQ5TGhIVjdOZDVn?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "マブチの標準化戦略や日立のフィジカルAI戦略、AIバブルへの警戒感に関するニュース",
+        "content": "マブチが標準化によって売上高最大化を目指す方針や、日立がフィジカルAI分野でのナンバーワンを掲げていることが報じられています。また、市場におけるAIバブルに対する警戒感についても言及されており、今後の動向が注目されています。",
+        "source": "Google News",
+        "published_at": "2026-08-31",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFA2RV9JX3RvbVBEWTlfZENrcFpYZEV5bjE1OV9CNWdiTFg0bGZrVkY5UkxpZExvU1JfeWZqcTluTjFveFVPUWJ6WW5OMnhWYzJrWXoxRlhwNUhIZC1hb0h2SHp2ZWRZNlU3cHc?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "Anthropic、機器とAI接続規格開発",
+        "content": "AnthropicがAIと各種機器を接続するための新しい標準規格の開発に取り組んでいることが報じられました。この取り組みにより、AIシステムの連携性が向上し、様々なデバイスでの活用が期待されます。",
+        "source": "Google News",
+        "published_at": "2026-08-31",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5laEZ1M01GLXVqNG9TWC0yWHJtX3VQVm1JaDRQUVJFRGFxN1pMSWIzbjJ3cVdwZDk3UHlzODhfcGU4M1V3dUp3UmVLZkN6Q3Ny?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "「数万曲を無断でAIに」ソニー傘下など35社、アンソロピック提訴",
+        "content": "ソニーグループの音楽会社やユニバーサルミュージックなど35社が、米AI企業のアンソロピックを著作権侵害で提訴しました。同社のAI開発において、数万曲の歌詞が無断で使用されたと主張しています。AIと著作権を巡る法的闘争の新たな動きとして注目されています。",
+        "source": "Google News",
+        "published_at": "2026-08-31",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFB1Z1VMb0ZzWG5yb2xFclp4cW0tSVYya1ZTaEtaMFRJUGNtdmo4RUZtU3N2d09uS3FsaVhmWEJBZVc0NkRpY0k3aXU0R3F2ZUt0ZXZFQVhyTmNvTTd0VmFSU0ZLTkNrQVg2enhfVHlKOGh3TzQ0Nm5KeUgteGFtSnM?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "ソニーG傘下の音楽出版などアンソロピック提訴 AIが楽曲を無断学習",
+        "content": "ソニーグループ傘下の音楽出版社などが、AI開発企業のアンソロピックを相手取り提訴しました。同社のAIが著作権のある楽曲を無断で学習に使用したことが訴えの理由となっています。AIによる著作物の無断学習をめぐる法的紛争として、今後の動向が注目されます。",
+        "source": "Google News",
+        "published_at": "2026-08-31",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9OUjh6WVFka0dSbWZMRG1NS19laEpPS1RYNkIza2tSWGRQSWhPd21iOWdvSzdXX2RQWk0tZjRjTnNNTmthZGtsSDd0R1FxY3V0M0hDeHN3VnV3OGhoYTNmb2ZpNnRaWU1Dd3lnYQ?oc=5",
+        "category": "その他"
+      }
+    ]
+  },
+  {
     "date": "2026-08-30",
     "daily_summary": "本日のAIニュースは、政治やエンターテインメント、ウクライナ情勢といった幅広い分野での活用が進む一方、製造業や廃炉作業においてロボット制御などの「フィジカルAI」の実用化・企業連携が大きく前進したことが際立っています。さらに、エヌビディアの好決算や半導体から電子部品への特需拡大、日本企業の独自技術による挑戦など、産業の基盤を支えるハードウェアおよび投資市場の動向も活発に報じられています。",
     "articles": [
