@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-09-01",
+    "daily_summary": "本日のAIニュースは、学校教育における学習指導要領へのAI記述の盛り込みや授業での活用が本格化する一方、教員養成やSaaSの自動更新に伴うガバナンスに課題が残る現状を示しています。産業界では、ロボットなどに応用される「フィジカルAI」の技術開発や企業連合の結成が加速する一方で、医療ロボット分野での国際競争における日本企業の遅れや、無断学習をめぐるソニーグループ等による米アンソロピック提訴といった著作権の法的紛争が浮き彫りになっており、教育・産業・法務の各領域でAIの急速な浸透に伴う適応と対策が急務となっています。",
+    "articles": [
+      {
+        "title": "全教科にAIの記述 学習指導要領改定に向け、文科省が素案",
+        "content": "文部科学省は次期学習指導要領の改定に向け、すべての教科においてAIに関する記述を盛り込む素案をまとめた。教育現場における生成AIなどの活用推進や、AIリテラシーの向上を図る狙いがある。今後の議論を経て正式な改定作業が進められる見通しである。",
+        "source": "Google News",
+        "published_at": "2026-09-01",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFA2aWltOTZEWUlYUDlidnBsVkQ5amNuV3FEY3R2X2RYc0Rzb0NqVDBuYXFBWjJfQVNSTi1qQ2ZZaEsxLS1kVThhRXdyNFJFb3pl?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "「AIはアシスタント」 積極活用する学校も 教員養成には課題",
+        "content": "学校教育現場において生成AIをアシスタントとして積極的に活用する動きが広がっています。一方で、教員の指導力向上や人材育成にはまだ多くの課題が残されています。今後の教育現場におけるAI活用と教員サポートのあり方が問われています。",
+        "source": "Google News",
+        "published_at": "2026-09-01",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBYV05MOHRqWEZIdlNzc0hiS2hYR3JLYU53UDRwZ2FPQk5MRHFjQkdIMl9MZzFJT0p2RmZWM01BdHpLTnVaU3J2ZXV2RVg5S0llVkM5MzYxckJ6MXBjZjJQMEdYR3VlNWR4?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "授業でAI活用 初明記 中教審 次期指導要領案に",
+        "content": "中央教育審議会による次期の学習指導要領案において、授業でのAI活用が初めて明記される方針となりました。教育現場における生成AIなどのテクノロジー利用に関する新たな基準や指針を示すものとして注目されています。今後の具体的な活用方法やガイドラインの策定が期待されます。",
+        "source": "Google News",
+        "published_at": "2026-09-01",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5MMjFVRmo4dHdDaThUNTZqeXRMUzdpNndfVUNXelAwVXNvdWtUaUJzRzBuSE5XcjVHMjQ1TUstN2ZrQkR6c1pJdkxveVRfc1RpRjdidlI2cVNmSHBnUVE?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "ソニー傘下など35社、数万曲の無断使用でAI企業のアンソロピックを提訴",
+        "content": "ソニーグループの音楽会社など35社が、AI開発企業のアンソロピックを相手取り、数万曲の楽曲データを無断でAIの学習に使用されたとして提訴しました。著作権侵害をめぐるAI企業とコンテンツホルダーの法的紛争として、国内外で大きな注目を集めています。",
+        "source": "Google News",
+        "published_at": "2026-09-01",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFB3eG5KdnRrVDJpd3JJVV9WZHVZSVc0RW43R1F0TFFNN1Fnby1MZ0tsT3NvbEEzZjJ1U1VYNWkta3VJQ0Y2R01ZXy1NMkFMQlE5Sm52S2FRVUhOVHlldC1lRGdnamNuV28?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "ソニーG傘下など35社、生成AIの無断学習で米アンソロピックを提訴",
+        "content": "ソニーグループ傘下の音楽出版社など35社が、数万曲の歌詞を無断で学習に使用されたとして、米AI開発企業のアンソロピックとそのCEOらを相手取り提訴しました。生成AIによる著作権侵害をめぐる新たな法的紛争として注目を集めています。",
+        "source": "Google News",
+        "published_at": "2026-09-01",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9BXy1ET2JpS0pKNHFuNnlSS0VHUW8wdTNHeld4Z3dRTzhXWkl1dmNfVS0wcTQxXzNxUlF4VmZqOVBmTnh5QUN0RThYck1wM3FPMVp2Y3E3QkpySEFzY2tRRTVLcW9adVhaeGpOTkxsamEtcWhyTVdxVzZsMERCbkU?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "京セラや神戸製鋼など20社、フィジカルAI実現へ連合 金沢のアルムと",
+        "content": "京セラや神戸製鋼所など約20社が、現実世界で動作するフィジカルAIの実現に向けて連合を結成しました。金沢市の医療テック企業であるアルムなどと連携し、産業分野でのAI活用や技術革新を共同で目指します。各社の強みを持ち寄り、ロボット制御やデータ利活用などの実用化を加速させる方針です。",
+        "source": "Google News",
+        "published_at": "2026-09-01",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBWN21kOUtUN21haHlCanJHUnp2ak5aLWRCTU02WDctNzd3bkVkY3pxcUZPeEo5d2tweUVmREVVTWZULTl6SXJvRzNfRFo0T2c1VkUxVno5TVctbkxucnhEQS04SExvRDBPUEM5Yw?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "リコー、フィジカルAI技術を開発＝動画から人の動き学習、ロボットに適用",
+        "content": "リコーは動画から人間の動きを学習し、ロボットに応用できる新しいフィジカルAI技術を開発しました。この技術により、ロボットはより自然で複雑な人間の動作を模倣できるようになります。製造やサービスなどの分野でのロボット活用の高度化が期待されます。",
+        "source": "Google News",
+        "published_at": "2026-09-01",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQbXNsTnB1cGJ6VF83TVh3RkZERklIV042ek9nQTdydTUzOXRCby1kLUpWQ0ZhN0pIVjZ3NzctVzdoeVVVa2FxTFhJQjNjM2ZfRXRGMjBZQzJKNFdrQXZWaTRUc09TQ3FlelhSQjZRM3hBU2M1UnhSbndKWUZnUXRjVXRuOVJ1TGs?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "オペ室に押し寄せるサブスクの波、手術ロボットは「フィジカルAI×データ囲い込み」が主流に、取り残される日本企業",
+        "content": "手術ロボット分野ではフィジカルAIとデータ囲い込みを組み合わせたビジネスモデルが世界的な主流となり、サブスクリプション化が進んでいます。この技術革新の波において、日本企業が取り残される危機感が指摘されています。医療機器市場における新たな競争環境への適応が急務となっています。",
+        "source": "Google News",
+        "published_at": "2026-09-01",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE8zOVVpOGVWWGQyREg5bWstTFh4RWRUdFlaRzFvZ1NTSFF5MTVwSVZQeXFUbGZMTVlvUlJCd0lIQzhIM0loS29NSG9BWUdjNkR0U3Y1MThn?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "SaaSの自動更新でAIリスク急増 情シスに問われる「機能単位」のガバナンス",
+        "content": "SaaSアプリケーションの自動更新により、知らないうちにAI機能が有効化されるリスクが急増しています。企業の情報システム部門には、アプリ全体ではなく機能単位での厳格なガバナンスと管理が求められています。意図しないAIの稼働を防ぐための対策が急務となっています。",
+        "source": "Google News",
+        "published_at": "2026-09-01",
+        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE4xUUlCRjlWcHZPWjVpVm9Ya2JUS25oY1JjelVBTmx3ZmlpTE5UUlpyNGdpekY2YVU4eWxvNmhnajVnSWhaakhjeHg2Rzh3b0E5UG03bWdCLXNOR0YtREpFYm4xOFRycklJSC1tVzZiX04?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "AI新世紀：AIを評価できなければ…サカナAI社長が語る日本が急ぐべきこと",
+        "content": "サカナAIの社長が毎日新聞のインタビューで、日本がAI分野で急ぐべき重要性について語りました。特にAIを適切に評価する能力の必要性が強調されており、日本の今後のAI戦略に警鐘を鳴らしています。",
+        "source": "Google News",
+        "published_at": "2026-09-01",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBJbnBUcG9VNk9uMjZiQzdCQmhVenYxQnZ6RWp2eHI1d1dyRHcwUEw4c0FDZ0hlN2lkTDAxTVZQTzBGUkZDc1F5ZlRLeHhndlNYUjJqR29KUmJvc0FBamEtVnphR1hyUmxP?oc=5",
+        "category": "事業・投資"
+      }
+    ]
+  },
+  {
     "date": "2026-08-31",
     "daily_summary": "本日のAIニュースは、FANZAの成人向けAIマンガ支援やAnthropicの著作権侵害提訴（ソニーG傘下など35社による提訴）、生成AIを用いた訴訟といったクリエイター・法的な権利に関する話題が相次ぐ一方、インフラの物理的制約（電力・水不足）やプラットフォーム依存のリスクなど、AIブームの持続可能性や事業継続性を揺るがす課題が浮き彫りになっています。",
     "articles": [
