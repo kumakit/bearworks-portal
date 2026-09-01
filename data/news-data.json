@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-09-02",
+    "daily_summary": "本日のAIニュースは、生成AI画像の違和感や査読におけるリスクといった技術の課題と向き合う動きが見られる一方で、マーケティング手法や開発体制、採用市場や金融業界におけるAIへの本格的な適応が進んでいることを伝えています。また、オープンソースコミュニティでの利用容認や、AIの進化がもたらす超知能のリスクと将来への備えなど、社会全体でAIの活用とガバナンスのバランスが模索されている一日となりました。",
+    "articles": [
+      {
+        "title": "生成AI画像はなぜ“キショい”のか 消費者が抱く違和感の正体 広報のプロが解説",
+        "content": "生成AIによって作成された画像に対して多くの消費者が抱く違和感の正体について、広報のプロが解説しています。技術的な不自然さや倫理的な課題が、見る人に不気味さや嫌悪感を与える原因として分析されています。",
+        "source": "Google News",
+        "published_at": "2026-09-02",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9HYnpPb0pvZEdXbjRxX2dQZWctRVVaaVpmQnNNY3U3OXBKa2FJUUdKZHZYdjkxUjRNeXlRT3NKcWNkS1IwUVdyOVhYZnRMSWNNX084cUFfVmhjc1R4bVQyWGJlbHc2T25TYnc?oc=5",
+        "category": "その他"
+      },
+      {
+        "title": "花王や森永「AIに選ばれるサイト」に チャット経由の買い物増に対応",
+        "content": "花王や森永などの企業が、AIチャットボット経由での買い物増加に対応するため、AIに選ばれやすいWebサイト作りを本格化させています。検索エンジンの進化や購買プロセスの変化に伴い、企業のデジタルマーケティング戦略が新たな局面を迎えています。",
+        "source": "Google News",
+        "published_at": "2026-09-02",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5GM1ZCTEtiT01uMXhkWHBpSkxYenpDeGY1VGVRZ1FpdGZUTFNFd0I3M1RlZUd4dUdkSzk4SUZmcXl3cmpfSUpPemJPaEhUQ1ItRGVFYVFHSDRGSk4zOGFSZGtQaG5Tdzc1dk8zQg?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "「論文の査読」に生成AI活用、時短のメリットと丸投げによる誤情報リスク",
+        "content": "論文の査読プロセスにおいて生成AIを活用することで大幅な時間短縮が可能になる一方、内容をすべてAIに依存すると架空の文献提示などの誤情報リスクが生じることが指摘されています。効率化の恩恵を受けるためには、人間の目で適切に内容を検証する姿勢が不可欠です。",
+        "source": "Google News",
+        "published_at": "2026-09-02",
+        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE91SDBNcE5UX2lCMTJKZ2hCSlY3UHAtLWNSY2c1V1Fsby1YMkFaRThPQlU1VWljTEs2U3ZFMTdCbmNwTGwyMFdjNW9WaVJnNTVxZ2VneU53Qnd6X0ZsS3ZxRk0tZDVkZw?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "グーグルのAI開発体制刷新、基礎研究から製品化重視へ舵",
+        "content": "グーグルはAI開発体制を大きく刷新し、これまでの基礎研究中心の方針から製品化を重視する方向へと舵を切りました。この組織変更により、最新のAI技術を迅速に市場へ投入し、競争力を強化することを目指しています。同社の今後の製品展開やサービス提供スピードに大きな影響を与える注目の動きです。",
+        "source": "Google News",
+        "published_at": "2026-09-02",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE05dWExNjVnUmRBaHZaTUM3MjZXZ0dHV3ZySlpoTkFlRVQtV2NacGc3c0FYTTlnMExGVXllbnJvSk9qZGlZTlJYS1QwVjhYQnR3bkVZcjhn?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "AI人材獲得競争が激化、企業に問われる「報酬以外の条件」とは",
+        "content": "AI人材を巡る獲得競争が激しさを増しており、企業には高待遇以外の魅力的な条件提示が求められています。専門人材を引き付けるためには、働きがいや最新技術に触れられる環境整備が不可欠です。報酬面だけでなく、企業のビジョンやカルチャーの提示が採用の成否を分ける鍵となります。",
+        "source": "Google News",
+        "published_at": "2026-09-02",
+        "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5LMVVPQUVfZEVTNm1pR1A5bHZhZHQ2R3BGRDdHRmF4Q1FPc1pjZUM4WXViZ2ZESlBsMlF1NHlMWHZiWTZOX29TZ3dzemNobVY3QjlxblZrZmRKMS0yMlZHODYtRjR5TVBWb2xBU0YwSmRJbGYyVTNJYThMN0U?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "【米国株動向】「ハイパースケーラー」とは？AIの次の10年を動かす巨大クラウド3銘柄：アマゾン、マイクロソフト、アルファベット",
+        "content": "この記事では、AIの普及に伴い今後の成長が期待される「ハイパースケーラー」と呼ばれる巨大クラウド企業3社（アマゾン、マイクロソフト、アルファベット）の動向について解説しています。AI市場を牽引するこれらの銘柄の投資機会や、今後のビジネスへの影響について分かりやすく紹介しています。",
+        "source": "Google News",
+        "published_at": "2026-09-02",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5ONGNNQlVsTUlEU0NDcnB2UmxZRzhvd2NsTzRDd0x4eG11VThrZ0xjV3pyV3Nya3pmLTBYd0JpNlVfaGt4MkNqckNYazh6OTRhVmJBYtIBV0FVX3lxTFBZZGpKQmZJTlhLWXo2RTE4c1BWYXR4eGktcFZlLXpYS0gyd3NWNXBiUE9NV1drTnZkUEg4VEdDUHFZeG1obm45Vzd1dmwwc19PZDZzQmMyWQ?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "AIハヤトの違和感は伏線か？『VIVANT』第16話の人間臭さの理由を考察",
+        "content": "人気ドラマ『VIVANT』に登場するAI「ハヤト」の妙な人間臭さについて、単なる説明役にとどまらない今後の展開の伏線ではないかと考察されています。AIの不自然な挙動が物語にどのような影響を与えるのか、視聴者の間で注目が集まっています。",
+        "source": "Google News",
+        "published_at": "2026-09-02",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE83UnJZLVZycTZoY3N1UXhFQ2h0cDZuM042T1JkZEVPRHFicVFkUjJVWTdhMnRlVkNSLXpoS1ZJblFKS1FsWkZ1d2JCNTZpNzYyQktzQ3AwOGFWaDdFWllKU3N1VDFhQ2VxcFBUVEtaVld2Wm5qbXZOa1NmSGh1cGs?oc=5",
+        "category": "その他"
+      },
+      {
+        "title": "Debian、「生成AIの責任ある使用」を容認へ",
+        "content": "Debianプロジェクトは、生成AIの責任ある使用を容認する方針へ舵を切りました。オープンソースコミュニティにおけるAIツールの活用とガイドラインの策定が進められています。これにより、今後の開発プロセスでのAI利用が正式に認められる方向となります。",
+        "source": "Google News",
+        "published_at": "2026-09-02",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1WNzdXeGRCMFVhOHQ3Sl9ORjdvcUl3MGQ2Q1lGSm5HVWRrVldxNTctRUF0WEQ0MjI1Rno0cTJRajhsakJTQ3QxSVZnNWFzRUxjVkJ1Z1FTMzBmWGgzV18yQQ?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "大手銀行が新卒採用を削減！AI時代に「淘汰される若手」「求められる若手」の違いとは？",
+        "content": "AIの普及に伴い、大手銀行が新卒採用の削減に動き出しています。従来の定型業務をこなすだけの若手が淘汰される一方で、今後はAIを活用して新たな価値を生み出す能力を持つ人材が求められるようになります。変化する労働市場において、若手ビジネスパーソンに求められるスキルやキャリア形成のあり方を解説しています。",
+        "source": "Google News",
+        "published_at": "2026-09-02",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE54ejVGb2EzbmdpWm5BckoyaTRkZ1pYekZnWlFaUDU5ekgxeE1oRmpaSmJlTGJfX3I5TVh1MTExX3NlRkJQeGhnZ05MX1Z3T21nRFZxV2V30gFPQVVfeXFMTmlvYm1XRGpybWdyM3V1M3ZRNW42REZvamhfY3V5cnd5ODl2QS1mQldKUzNhaEtQaG1hS0gwdzJ0NVB6eEZ4TmZLd3lRN1ZtYw?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "「超知能」AIに潜む三つのリスク 理論物理研究者が示す選択",
+        "content": "理論物理研究者が、急速に進化する「超知能」AIに潜む三つの重大なリスクについて指摘しています。人類が直面するこの脅威に対し、私たちがどのような選択をすべきか考察が示されています。AIの安全性や将来の発展における重要な課題を提起する内容となっています。",
+        "source": "Google News",
+        "published_at": "2026-09-02",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBCZUFwSndHajlsMTVvNWpXZDE3aF9HMlZvN0YxOXpyYVNYZVU2c3EyV3RPSjJkUHJrbnc0dG9WaGkyNWFwclVzNDc4TTNkVWpMRjg1dnVsNWJvQVVEQ1FvcFhFWnFuT3F6?oc=5",
+        "category": "政策・安全"
+      }
+    ]
+  },
+  {
     "date": "2026-09-01",
     "daily_summary": "本日のAIニュースは、学校教育における学習指導要領へのAI記述の盛り込みや授業での活用が本格化する一方、教員養成やSaaSの自動更新に伴うガバナンスに課題が残る現状を示しています。産業界では、ロボットなどに応用される「フィジカルAI」の技術開発や企業連合の結成が加速する一方で、医療ロボット分野での国際競争における日本企業の遅れや、無断学習をめぐるソニーグループ等による米アンソロピック提訴といった著作権の法的紛争が浮き彫りになっており、教育・産業・法務の各領域でAIの急速な浸透に伴う適応と対策が急務となっています。",
     "articles": [
