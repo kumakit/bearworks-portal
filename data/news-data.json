@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-09-03",
+    "daily_summary": "本日のAIニュースは、OpenAIの次期AI「Astra」や中国製AIの台頭といった先端技術の進化に加え、NECや三菱重工による防衛・サイバーセキュリティ分野でのAI活用が際立ちました。また、ビジネスパーソンの高い生成AI認知度を背景に、AI時代の教育改革のあり方や、ナスカの地上絵の解読といった学術研究へのAI応用など、社会の幅広い領域でAIの存在感と重要性が高まっていることを示す一日となりました。",
+    "articles": [
+      {
+        "title": "OpenAIの次期AI「Astra」投入が秒読み段階。セキュリティ能力「重大」",
+        "content": "OpenAIが開発を進める次期AI「Astra」のリリースが間近に迫っていることが報じられました。本モデルは高度なセキュリティ能力を備えており、AI業界において重大な影響を与える可能性が指摘されています。今後の展開やシステムへの統合に大きな注目が集まっています。",
+        "source": "Google News",
+        "published_at": "2026-09-03",
+        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1wT3QyN0tEOHdCdVdnd2VRZkF5cGFOWHRJaUhqTlBoMVpualRMTTNSSTB5aVlMRURaZjRWUFhZNkJEOFlnSzlwYy15WlVkdWtLMWNqaEFaNVZUdWJLeDRSQnI5NA?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "三菱重工とNEC、防衛ドローンで連携 AI指揮統制システムを国産化",
+        "content": "三菱重工とNECが防衛分野のドローン開発において連携することが報じられました。最先端のAIを活用した指揮統制システムの国産化を目指し、防衛力の強化を図ります。",
+        "source": "Google News",
+        "published_at": "2026-09-03",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFAyZm1GU282bEg4MHlPazZsQzczM1BHNVA1OXdSbXR5SmJpY1lGS3Mzc2FGaVRDbnpCZVpxWnBhOFptbEljdWt2d1RyOWRoeF9mYUM4Vm5xa1lTM3FYaDF1ZnBFcU80dU4tWExlTA?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "NEC、企業のネットワーク脆弱性対処で新サービス 先端AI活用",
+        "content": "NECは企業のネットワーク脆弱性への対処を支援する新サービスの提供を開始した。このサービスでは先端AIを活用することで、複雑化するサイバーセキュリティ上のリスクに対する迅速かつ的確な対応を実現する。企業の安全なITインフラ運用を強力にバックアップする狙いがある。",
+        "source": "Google News",
+        "published_at": "2026-09-03",
+        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBUOEg3QzF1QzkzdnBHSDQ2WHJGQURNT29iZV8teEdRNXA4THBPQlQ3WVVhN0tha2JzWm1jNVBLd3JkemVDbl9zcGw1N2ZTYTFqNFBzS1I1eTZocE5rUHA5YmEyN1d5Y1FnVEM3T2h6VUszUkppOHc?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "NEC、AIモデル「ミュトス」をサイバーセキュリティに活用 「Project Glasswing」に参画",
+        "content": "NECはサイバーセキュリティ分野の強化に向け、AIモデル「ミュトス」を活用する国際的な取り組み「Project Glasswing」への参画を発表しました。最先端のAI技術を駆使してサイバー脅威への対策を進め、セキュリティの向上を図ります。",
+        "source": "Google News",
+        "published_at": "2026-09-03",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1iX1dyMnhhQUdtdGdGWHlSLU5nRkdodGpwQU9CTG5CNF9PczlrdkstSFdoUzhWRFFGZ1pYc2R2ZjdtMHFabnRtV0xkUzl3TC1COWhkN181c2RZR1RSV3dxZWQ5aWxPM2ZJaEs1aA?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "中国製AIが急速に進化、米モデル級の性能でAPI料金は3分の1に",
+        "content": "中国製の人工知能モデルが急速に進化し、アメリカ製に匹敵する性能を持ちながらAPI料金は約3分の1という低価格を実現しています。一方で、企業がこれらの中国製AIを導入する際には、セキュリティやデータ管理に関するさまざまなリスクへの懸念も指摘されています。",
+        "source": "Google News",
+        "published_at": "2026-09-03",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5HeFNfcEFacGc5dEtseEpUUlRpUkl2UEJPTW84bFNFdzhFam1TSHo1RHhOd2VhNlI1Mkcta0UweTFDbUtJcVlTM1JDZlNER0R5VFRpZy1KcFlzZ2Nsd01zcUFJdk1nakcwQ3JyUlYzSHdYbXBaZi1EcUlrM0NXUmM?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "ビジネスパーソンの認知度調査：生成AIが1位、交通商社機能が最下位に",
+        "content": "日経クロステックによる最新の認知度調査の結果、生成AIが89%で1位を獲得しました。一方で、交通商社機能が最下位となっています。この調査は、最新のテクノロジーやビジネス用語に対するビジネスパーソンの意識を明らかにしています。",
+        "source": "Google News",
+        "published_at": "2026-09-03",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE04dlV1LXF2dmxiVlZBeURJalN6WEt1ZTlqZG9oaFFCbUFXR0VkVmJpWGVPd2haWkt5WG1NTFRjWnl3aEN5OE0tWnVLSWhTdmhQNENQOG1SeVpPYVdOajhTSTlpdVdKRHdjWDk4OQ?oc=5",
+        "category": "その他"
+      },
+      {
+        "title": "社説：新学習指導要領 ＡＩ時代に自ら考える大切さ",
+        "content": "読売新聞による新学習指導要領に関する社説。AIが急速に普及する時代において、自ら深く考える能力を育むことの重要性を論じています。",
+        "source": "Google News",
+        "published_at": "2026-09-03",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9Yc2ZjZThRYmFuMWpWSkx3cDR3NGRSdGQ5VjJQVkpQNUpMYjNMZGM0QmotR09ZWkZ5b3RMeUdSdjlQMmZXRVloQVUtTmlkUUdUbk0wYWdUdUpfN2RCR1g2dlNrNXFUX3M?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "生成AI時代の学びは?“学校に裁量”で多様な子を包摂へ",
+        "content": "生成AIが普及する時代における教育のあり方について、学校に裁量を持たせることで多様な子供たちを包摂する取り組みが議論されています。個々のニーズに応じた柔軟な学びの実現が期待されています。",
+        "source": "Google News",
+        "published_at": "2026-09-03",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5JbWVKYi01X0ZEYzBNTmN1aXUxWmpIb3JFTUR3aW96b2xualJEYXhtMjMtZDhPNEd3VTRMVjdUdEZxVlJnY2xfbTR2YUktemJlc0ZSeGZwSV9EZ0x5ZUk4?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "群馬の太田の一貫校 高等部に通信制新設 ＡＩ、ＳＮＳ学ぶコースなど",
+        "content": "群馬県太田市にある中高一貫校の高等部に、新たに通信制の課程が新設されることが決定しました。この通信制には、現代社会に欠かせないAIやSNSについて深く学ぶことができる専門コースなどが設置されます。地域における新しい教育の選択肢として注目を集めています。",
+        "source": "Google News",
+        "published_at": "2026-09-03",
+        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9iNGdZNmhuT3ZjVmJqSklBbDdtbnA3M2prSUtQdEtFa0tFY3NOQkcxNDlXZVJrWlQtOFp4N08yd1NFMHpfWmY4dzZUNGlqNGxYRWR0ZjdrbjQtaU51M3ZQSTVzTXVjWFprNS1JeWcwSWs?oc=5",
+        "category": "その他"
+      },
+      {
+        "title": "ギャラリー：ナスカの地上絵、研究100年 AIで続々と発見重ね「解読」へ 写真6点",
+        "content": "ナショナルジオグラフィック日本版による、ナスカの地上絵に関する特集記事です。AIを活用した調査により新たな地上絵が続々と発見されており、その解読に向けた研究が進められています。",
+        "source": "Google News",
+        "published_at": "2026-09-03",
+        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFB2YXJ6bTUwSUxaN1dhay10RTZvMG9STXJiMlc2X0FvWWZxd1ZLS1VjWVhlYnZDTEMzTm1lQ0NsZ29jSzAzNXNCYUdsQXM1NU45b3IzTkFaek1RR0FYNEpqQThsdw?oc=5",
+        "category": "モデル・研究"
+      }
+    ]
+  },
+  {
     "date": "2026-09-02",
     "daily_summary": "本日のAIニュースは、生成AI画像の違和感や査読におけるリスクといった技術の課題と向き合う動きが見られる一方で、マーケティング手法や開発体制、採用市場や金融業界におけるAIへの本格的な適応が進んでいることを伝えています。また、オープンソースコミュニティでの利用容認や、AIの進化がもたらす超知能のリスクと将来への備えなど、社会全体でAIの活用とガバナンスのバランスが模索されている一日となりました。",
     "articles": [
