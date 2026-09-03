@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-09-04",
+    "daily_summary": "本日のAIニュースでは、ニューヨーク市の小中学校における生成AIの1年間原則禁止という教育現場での慎重な動きの一方で、最高裁での民事裁判への活用検証や、NVIDIAの巨額買収による半導体需要の喚起、ナスカの地上絵のAI解読、さらにAIに物理的身体を与える開発キットの登場など、産業や研究の各分野でAIの活用と模索が急速に進んでいることが示されています。",
+    "articles": [
+      {
+        "title": "ニューヨーク市の小中学校でAIの原則禁止が決定",
+        "content": "ニューヨーク市教育局は、同市の小中学校において人工知能（AI）ツールを原則として禁止する方針を固めました。教育現場での不正行為防止や基礎的な学習能力への影響を懸念した措置とみられます。今後は各学校での具体的な運用方針や例外的な活用方法についても議論が進められる見通しです。",
+        "source": "Google News",
+        "published_at": "2026-09-04",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5qZTVCTW1DQ3VlcmJjZzZVNEtjd0I1VVc2eUNaYXpaQ015Wm5DcXVyUENSNG10N1BPd0QzR1YyNmhBbHhqc1hFUkVuLVNMN25j?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "ニューヨーク市、公立学校で生成ＡＩの利用を１年間原則禁止に",
+        "content": "ニューヨーク市は公立学校において生成AIの利用を1年間原則禁止することを決定しました。対象は2歳児から中学2年までで、あわせて電子機器の閲覧時間の制限も推奨されています。教育現場におけるAIの扱いや子供のスクリーンタイムに関する議論が広がっています。",
+        "source": "Google News",
+        "published_at": "2026-09-04",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1yR2R0Rm05VXpsczRnOERfZDRmMDgzWW5zOThWRC1xUm5aWXRzMXNhY3NGZWZlM1RmN25RZVQ4S29yUWJkUmxsWVJfWDhIeXd2Z1piU2NFUVNQWWJvU1BHMXl3?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "ニューヨーク州、小中学校でのAI利用を禁止 児童らの思考力低下を懸念",
+        "content": "ニューヨーク州の小中学校において、児童や生徒による生成AIの利用が禁止されました。子供たちの思考力や学習能力の低下を懸念した措置となっています。教育現場におけるAIの活用と規制を巡る議論に影響を与えそうです。",
+        "source": "Google News",
+        "published_at": "2026-09-04",
+        "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE02QzUwSUpwakZDY3h4UWw0Y1ZUdUhWem5xSjRBYVhUWDIzYTRjMmhOSUxFS0JacGJDak1YWU5qclpqSGZtc2E4SjBGRQ?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "ソフトバンクG、財務余力はAI相場に連動 1兆円社債の利率4日決定",
+        "content": "ソフトバンクグループが発行する総額1兆円規模の社債の利率が4日に決定される見通しです。同社の財務余力は現在のAI関連市場の動向に大きく影響受けており、市場の注目を集めています。",
+        "source": "Google News",
+        "published_at": "2026-09-04",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9uX0plYnVfYS1ITTQxRWhEYjRQRmdRNVN3LTdqTTZLN3RQa3dVUXVlT3J5cFhEbFAyQXJVM043clVEaExaaHdtSFRLRTVKUnU3NnppYzZEWjdWSmFQbi1QU3VjSkNvWENOa2JxWQ?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "民事裁判で生成AIをどう使えるか 最高裁が確定記録を使って検証へ",
+        "content": "最高裁判所は、民事裁判の業務効率化や支援に向けて生成AIの活用方法を検証する方針を固めました。過去の確定記録を使用し、実際の裁判実務において生成AIがどのように役立つかを多角的にテストします。",
+        "source": "Google News",
+        "published_at": "2026-09-04",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1JZ1lHWHdZUERxWHp3ZmVqdlo3dW0zbUhldzA2UlROcTVEeXNvWmJDRXBnTGc3NDhaVmpXd0tMUTQ1MFNLMXpYRG9zamZxZzdXaExDQ1d6Z0V4TkZYVGczeDJkbUZ2NUk?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "GDP、偏差値、AIの賢さ…なぜ「指標」は社会や人を動かすのか？",
+        "content": "この記事では、GDPや偏差値、AIの性能など、さまざまな「指標」がどのように社会や人々の行動に影響を与えるのかを考察しています。私たちが数値化された指標に依存する理由や、それがもたらす効果と課題について多角的な視点から解説されています。",
+        "source": "Google News",
+        "published_at": "2026-09-04",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1VWVNrLWRzdHVZZTRmZFNTNkc2UG96eDZXWFptV3RYMUI0eHNSckozUGN4RFJkU2pidzZUNFhhQWU5TExpVHVtVi1hZUPSAU9BVV95cUxPN0NUMXNZUlNfMXJ2MVZHSzZ4S0RIWTJISUZMRHc1Y2pQSkxtaHlyRXFGVG5wV3JUb2R3aldrd0VIWUpVRnRTSHJpa25TRHJZ?oc=5",
+        "category": "その他"
+      },
+      {
+        "title": "【落合陽一】AI時代にロジカルシンキングは無意味、エンジニアに必要な「本物」のスキルとは",
+        "content": "メディアアーティストの落合陽一氏が、AIが普及する現代において従来のロジカルシンキングの限界を指摘しています。エンジニアに対して、AIには代替できない実務で真に使える「本物」の価値で勝負することを求めています。",
+        "source": "Google News",
+        "published_at": "2026-09-04",
+        "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBqWG9QUTFuX0NtM3YtZGVlcTY1VFNJcS1DMDlzRVVnTnRnWllnSHlBVHFSQmcwVGREZ08xQXJEX05tbXloLTlrSw?oc=5",
+        "category": "その他"
+      },
+      {
+        "title": "ナスカの地上絵、研究100年 AIで続々と発見重ね「解読」へ",
+        "content": "ナショナルジオグラフィック日本版によるナスカの地上絵に関する記事です。研究開始から100年を迎える中、AIを活用した調査によって新たな地上絵が続々と発見されています。今後はこれらの発見を重ねることで、地上絵の本格的な解読に向けた進展が期待されています。",
+        "source": "Google News",
+        "published_at": "2026-09-04",
+        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE0tZEhscWdMbUp1ZVVtcGRIWUgxV0F0R1NyNVJaVEpIY3BNSjJvS3FTVjdIS2dHVUl3OVdLaWVvcWxiZFdRLTdJaTJiMk0tTkxrWEdYaTRRRFBoNTl6QUpxcWl6OA?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "AIエージェントに身体を与える卓上型開発キット「Palmimo DevKit」の先行販売が開始",
+        "content": "Jizaiは、AIエージェントに物理的な身体を与えるための卓上型開発キット「Palmimo DevKit」の先行販売を開始しました。このキットにより、AIとハードウェアを連携させた様々なアプリケーションの開発が可能になります。ロボティクスやAIエージェントの新たな活用方法として注目されています。",
+        "source": "Google News",
+        "published_at": "2026-09-04",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE84R3plZURUNXZTR1pWODItbGdYSVBxMkYyZjRUdXc2bl9kdGlVam0tZ3Q5QlhNcmRNX2ViS2doUWFhZ09jZTF0QmhIOC05anprU3pZWkF1THlMU1lnNVczNjkzLXA?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "NVIDIA、2兆円で米新興買収 多様なAI開発で半導体需要掘り起こし",
+        "content": "NVIDIAが約2兆円を投じてアメリカの新興企業を買収し、多様なAI開発を通じてさらなる半導体需要の喚起を図っています。この買収により、AIエコシステムの拡大と半導体市場における同社の優位性がさらに強まる見込みです。",
+        "source": "Google News",
+        "published_at": "2026-09-04",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE8tS3lfQVh0N19nUzNZR1FtcWRld2ZlWkRwc1JpRHJUNjFpUS1xMXpQQjlmX1g3ZU5iTjJ6T0hOaDJyc0xtOEhRWEcxNU9DUGx5SURRaXVRUkJ4ZHpQbEphOXhGNUo5d3dzay0ycg?oc=5",
+        "category": "事業・投資"
+      }
+    ]
+  },
+  {
     "date": "2026-09-03",
     "daily_summary": "本日のAIニュースは、OpenAIの次期AI「Astra」や中国製AIの台頭といった先端技術の進化に加え、NECや三菱重工による防衛・サイバーセキュリティ分野でのAI活用が際立ちました。また、ビジネスパーソンの高い生成AI認知度を背景に、AI時代の教育改革のあり方や、ナスカの地上絵の解読といった学術研究へのAI応用など、社会の幅広い領域でAIの存在感と重要性が高まっていることを示す一日となりました。",
     "articles": [
