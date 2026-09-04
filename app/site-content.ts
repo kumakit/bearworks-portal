@@ -33,7 +33,7 @@ const staticPaths: SitemapEntry[] = [
   },
   {
     pathname: "/toukei/problems",
-    lastModified: new Date("2026-07-12"),
+    lastModified: new Date("2026-09-04"),
     changeFrequency: "monthly",
     priority: 0.8,
   },

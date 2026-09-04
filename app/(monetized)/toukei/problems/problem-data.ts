@@ -1,6 +1,6 @@
 import type { GuideSlug } from "../guides/guide-data";
 import type { ContentProvenance } from "@/lib/content-provenance";
-import { toukeiProblemProvenance } from "@/lib/content-provenance";
+import { toukeiProblemProvenance, toukeiProblemBatch1Provenance } from "@/lib/content-provenance";
 
 export interface Reference {
   title: string;
@@ -31,6 +31,7 @@ export interface Problem {
   question: string;
   givenValues: { label: string; value: string }[];
   solutionSteps: SolutionStep[];
+  frequencyTable?: { caption: string; columns: string[]; rows: string[][] };
   finalAnswer: string;
   distractors: Distractor[];
   relatedGuideSlugs: GuideSlug[];
@@ -319,6 +320,272 @@ export const problems: Problem[] = [
     references: [
       { title: "統計検定2級公式ページ", url: "https://www.toukei-kentei.jp/grade/grade2/" },
       { title: "公式テキスト・問題集案内", url: "https://www.toukei-kentei.jp/preparation/books/" }
+    ]
+  },
+  {
+    slug: "linear-transformation",
+    title: "変量の線形変換に伴う平均値・分散・標準偏差の算出",
+    description: "一次変換 y = ax + b における平均・分散・標準偏差の変換公式を適用し、単位変換時の散布度の変化を正しく計算します。",
+    concepts: ["記述統計", "線形変換", "平均値", "分散", "標準偏差"],
+    question: "ある観測地点の1週間の日最高気温（摂氏 ℃）のデータ x について、平均値が 20.0℃、分散が 16.0 ℃²（標準偏差 4.0℃）でした。この気温データを華氏（℉）に変換した変量 y を考えます。摂氏 x と華氏 y の関係式が y = 1.8x + 32 で与えられるとき、華氏における最高気温 y の平均値 E(y)、分散 V(y)、および標準偏差 SD(y) を求めなさい。",
+    givenValues: [
+      { label: "摂氏の平均値 E(x)", value: "20.0 ℃" },
+      { label: "摂氏の分散 V(x)", value: "16.0 ℃²" },
+      { label: "摂氏の標準偏差 SD(x)", value: "4.0 ℃" },
+      { label: "変換式", value: "y = 1.8x + 32" }
+    ],
+    solutionSteps: [
+      {
+        label: "華氏の平均値 E(y) の計算",
+        expression: "E(y) = 1.8 * E(x) + 32 = 1.8 * 20.0 + 32 = 36.0 + 32 = 68.0 ℉",
+        description: "同じ7日間のデータを共通の一次式で換算するため、E(ax + b) = aE(x) + b を用います。ここでEは観測データの平均を表します。この関係に正規性や日ごとの独立性は不要で、分散も変換前後で同じ定義を用います。"
+      },
+      {
+        label: "華氏の分散 V(y) の計算",
+        expression: "V(y) = 1.8^2 * V(x) = 3.24 * 16.0 = 51.84 ℉²",
+        description: "分散の性質 V(ax + b) = a^2 * V(x) を適用します。定数の加算（+32）はデータの散布度に影響しないため無視されます。"
+      },
+      {
+        label: "華氏の標準偏差 SD(y) の計算",
+        expression: "SD(y) = |1.8| * SD(x) = 1.8 * 4.0 = 7.2 ℉ （または √51.84 = 7.2 ℉）",
+        description: "標準偏差の性質 SD(ax + b) = |a| * SD(x) を適用します。"
+      }
+    ],
+    finalAnswer: "華氏における平均値は 68.0 ℉、分散は 51.84 ℉²、標準偏差は 7.2 ℉ である。平均は換算式に従って移動し、ばらつきは標準偏差で1.8倍になる。+32はばらつきを変えない。",
+    distractors: [
+      {
+        value: "分散 V(y) = 83.84",
+        reason: "分散の計算にも定数 +32 を足してしまう誤り（3.24 * 16 + 32 = 83.84）。定数シフトは散布度を変えません。"
+      },
+      {
+        value: "分散 V(y) = 28.8",
+        reason: "分散の拡大率を a^2 ではなく a 倍にしてしまう誤り（1.8 * 16 = 28.8）。分散は二乗の次元を持ちます。"
+      }
+    ],
+    relatedGuideSlugs: ["learning-roadmap"],
+    appLinks: [
+      { title: "分野別ドリルで「記述統計」を演習する", url: "https://toukei.bearworks.uk/drill" }
+    ],
+    author: "kuma / bearworks.uk",
+    publishedAt: "2026-09-04",
+    reviewedAt: "2026-09-04",
+    provenance: toukeiProblemBatch1Provenance,
+    references: [
+      { title: "統計検定2級公式出題範囲", url: "https://www.toukei-kentei.jp/grade/grade2/" }
+    ]
+  },
+  {
+    slug: "bayes-theorem-screening",
+    title: "条件付き確率とベイズの定理による検査の陽性適中率の算出",
+    description: "有病率、感度、特異度から、検査で陽性と判定された受診者が実際に罹患している条件付き確率（事後確率）をベイズの定理を用いて導出します。",
+    concepts: ["確率", "条件付き確率", "ベイズの定理", "感度と特異度", "基準率の無視"],
+    question: "ある感染症の有病率が人口の 1.0%（0.01）である集団においてスクリーニング検査を実施します。この検査は、実際に感染している人が正しく陽性と判定される確率（感度）が 90.0%（0.90）、感染していない人が正しく陰性と判定される確率（特異度）が 95.0%（0.95）です。受診者はこの集団から無作為に選ばれ、感度・特異度はこの集団に適用できるとします。ある受診者が検査を受けたところ「陽性」と判定されました。この受診者が実際に感染している確率（陽性適中率）を求めなさい（百分率で表し、小数第2位を四捨五入して小数第1位まで求めよ）。",
+    givenValues: [
+      { label: "有病率 P(D)", value: "0.01 (1.0%)" },
+      { label: "非感染率 P(D^c)", value: "0.99 (99.0%)" },
+      { label: "感度 P(T^+ | D)", value: "0.90 (90.0%)" },
+      { label: "特異度 P(T^- | D^c)", value: "0.95 (95.0%)" },
+      { label: "偽陽性率 P(T^+ | D^c)", value: "0.05 (5.0%)" }
+    ],
+    solutionSteps: [
+      {
+        label: "陽性となる全確率 P(T^+) の計算",
+        expression: "P(T^+) = P(D)*P(T^+|D) + P(D^c)*P(T^+|D^c) = 0.01*0.90 + 0.99*0.05 = 0.0090 + 0.0495 = 0.0585",
+        description: "「実際に感染していて陽性になる確率」と「感染していないのに偽陽性になる確率」の和を全確率の公式で求めます。"
+      },
+      {
+        label: "ベイズの定理による陽性適中率 P(D | T^+) の算出",
+        expression: "P(D | T^+) = (P(D) * P(T^+|D)) / P(T^+) = 0.0090 / 0.0585 = 90 / 585 = 2 / 13 ≒ 0.1538",
+        description: "与えられた感度 P(T^+|D) から、条件を逆にした P(D|T^+) を求めるためベイズの定理を使います。陽性者全体（5.85%）の中で、真の感染者（0.90%）が占める割合です。下の人数表では90/(90+495)としても求められます。"
+      }
+    ],
+    frequencyTable: {
+      caption: "10,000人に検査した場合の期待人数（実測人数ではありません）",
+      columns: ["感染状態", "陽性", "陰性", "合計"],
+      rows: [["感染あり", "90人", "10人", "100人"], ["感染なし", "495人", "9,405人", "9,900人"], ["合計", "585人", "9,415人", "10,000人"]]
+    },
+    finalAnswer: "陽性判定を受けた受診者が実際に感染している確率は 2/13 ≒ 15.4% である。有病率が低い集団では非感染者が多いため、偽陽性者495人が真陽性者90人を上回る。感度90%と陽性適中率は条件の向きが異なる。これは架空の条件に基づく計算例である。",
+    distractors: [
+      {
+        value: "90.0%",
+        reason: "検査の感度（有病者が陽性になる確率）を、陽性者が感染している確率と同一視する誤り（基準率の無視）。"
+      },
+      {
+        value: "95.0%",
+        reason: "特異度（非感染者が正しく陰性になる確率）と混同する誤り。"
+      }
+    ],
+    relatedGuideSlugs: ["learning-roadmap"],
+    appLinks: [
+      { title: "分野別ドリルで「確率」を演習する", url: "https://toukei.bearworks.uk/drill" }
+    ],
+    author: "kuma / bearworks.uk",
+    publishedAt: "2026-09-04",
+    reviewedAt: "2026-09-04",
+    provenance: toukeiProblemBatch1Provenance,
+    references: [
+      { title: "統計検定2級公式出題範囲", url: "https://www.toukei-kentei.jp/grade/grade2/" }
+    ]
+  },
+  {
+    slug: "binomial-normal-approximation",
+    title: "二項分布の正規近似を用いた確率計算",
+    description: "試行回数が十分大きい二項分布 B(n, p) が正規分布 N(np, np(1-p)) に近似できる条件を確認し、標準化による確率算出手順を習得します。",
+    concepts: ["確率分布", "二項分布", "正規分布", "正規近似", "標準化"],
+    question: "ある製品製造ラインの不良品発生率は 10.0%（p = 0.10）で安定しており、製品の良否は互いに独立です。このラインから無作為に 400 個の製品を抽出して検査します。不良品の個数を X とするとき、不良品が 50 個以上発生する確率 P(X ≧ 50) を、正規近似を用いて求めなさい（連続修正は行わないものとする）。ただし、z値は小数第2位に丸め、標準正規分布の上側確率は P(Z ≧ 1.67) = 0.0475, P(Z ≧ 1.645) = 0.0500 とします。",
+    givenValues: [
+      { label: "試行回数 (n)", value: "400" },
+      { label: "母不良率 (p)", value: "0.10" },
+      { label: "1 - p", value: "0.90" },
+      { label: "基準不良数 (X)", value: "50" }
+    ],
+    solutionSteps: [
+      {
+        label: "正規近似の適用条件確認",
+        expression: "np = 400 * 0.10 = 40 ≧ 5, n(1-p) = 400 * 0.90 = 360 ≧ 5",
+        description: "np および n(1-p) がともに十分大きいため、二項分布 B(400, 0.10) は正規分布 N(np, np(1-p)) で近似します。npとn(1-p)が5以上という条件は目安であり、尾部まで精度を保証するものではありません。"
+      },
+      {
+        label: "期待値 μ と標準偏差 σ の計算",
+        expression: "μ = np = 40, σ^2 = np(1-p) = 400 * 0.10 * 0.90 = 36, σ = √36 = 6",
+        description: "二項分布の平均と分散から、近似する正規分布のパラメータを求めます。"
+      },
+      {
+        label: "標準化と確率の算出",
+        expression: "z = (X - μ) / σ = (50 - 40) / 6 = 10 / 6 ≒ 1.67",
+        description: "独立な400回の良否判定で不良率pが一定のため二項分布を使い、その平均と分散を持つ正規分布で近似します。zを1.67に丸め、表の上側確率0.0475を読みます。連続修正をする場合は整数50の境界を49.5としますが、本問の指定では行いません。"
+      }
+    ],
+    finalAnswer: "指定の表と丸め方による正規近似では約0.0475（4.75%）である。同じ条件の400個検査を繰り返すと約4.75%で50個以上となる見積もりであり、二項分布の厳密確率ではない。zを丸めない正規近似では約0.0478となる。",
+    distractors: [
+      {
+        value: "z ≒ 0.28（上側確率 ≒ 0.3897）",
+        reason: "標準偏差6の代わりに分散36で割る誤りです。(50-40)/36 ≒ 0.28となり、表の上側確率は約0.3897です。なお、(1-p)の掛け忘れなら10/√40 ≒ 1.58となり、別の誤りです。"
+      },
+      {
+        value: "0.0500",
+        reason: "z = 1.645 （上側5%点）と誤認して選択するミス。"
+      }
+    ],
+    relatedGuideSlugs: ["distribution-selection"],
+    appLinks: [
+      { title: "分野別ドリルで「確率分布」を演習する", url: "https://toukei.bearworks.uk/drill" }
+    ],
+    author: "kuma / bearworks.uk",
+    publishedAt: "2026-09-04",
+    reviewedAt: "2026-09-04",
+    provenance: toukeiProblemBatch1Provenance,
+    references: [
+      { title: "統計検定2級公式出題範囲", url: "https://www.toukei-kentei.jp/grade/grade2/" }
+    ]
+  },
+  {
+    slug: "sample-proportion-distribution",
+    title: "標本比率の標本分布と標準誤差の算出",
+    description: "母比率 p の母集団から抽出された大きさ n の標本において、標本比率の不偏性と標準誤差 SE = √(p(1-p)/n) の導出過程を整理します。",
+    concepts: ["標本分布", "標本比率", "中心極限定理", "不偏性", "標準誤差"],
+    question: "ある政策への賛成率を把握するため、有権者から無作為に 1,600 人を抽出して世論調査を実施します。母集団は標本に比べて十分大きく、抽出率が小さいため有限母集団補正を無視し、各回答を独立で同じ確率pのベルヌーイ試行として扱います。全員が回答するとします。母集団における真の賛成率が 50.0%（p = 0.50）であると仮定するとき、標本比率 p̂ の期待値 E(p̂)、および標準誤差 SE(p̂) を求めなさい。",
+    givenValues: [
+      { label: "母比率 (p)", value: "0.50" },
+      { label: "標本サイズ (n)", value: "1,600" }
+    ],
+    solutionSteps: [
+      {
+        label: "標本比率の期待値 E(p̂) の導出",
+        expression: "Xを賛成人数とすると p̂ = X/n, E(p̂) = E(X)/n = np/n = p = 0.50（50.0%）",
+        description: "標本比率は母比率の不偏推定量であるため、その期待値は母比率そのものと一致します。"
+      },
+      {
+        label: "標本比率の分散 V(p̂) の計算",
+        expression: "V(p̂) = V(X)/n² = np(1-p)/n² = p(1 - p) / n = (0.50 * 0.50) / 1600 = 0.25 / 1600 = 0.00015625",
+        description: "賛成人数Xを二項分布とみなし、比率X/nの分散を求めます。期待値と分散の公式には正規近似は不要です。有限母集団から非復元抽出し、抽出率が大きい場合は別途補正が必要です。"
+      },
+      {
+        label: "標本比率の標準誤差 SE(p̂) の計算",
+        expression: "SE(p̂) = √(p(1 - p) / n) = √0.25 / √1600 = 0.50 / 40 = 0.0125（1.25パーセントポイント）",
+        description: "分散の平方根を取ることで標準誤差を導出します。"
+      }
+    ],
+    finalAnswer: "標本比率の期待値は0.50（50.0%）、標準誤差は0.0125（1.25パーセントポイント）である。標準誤差は標本比率の繰り返し調査でのばらつきを表し、95%信頼区間の半幅そのものではない。標本数を6,400人（4倍）にすると標準誤差は0.00625（半分）になる。",
+    distractors: [
+      {
+        value: "SE(p̂) = 0.000156",
+        reason: "平方根を取るのを忘れ、分散 V(p̂) の値をそのまま標準誤差として答えてしまう誤り。"
+      },
+      {
+        value: "SE(p̂) = 0.025",
+        reason: "標本サイズ n = 1600 の平方根 √1600 = 40 を誤って 20 と計算してしまうミス。"
+      }
+    ],
+    relatedGuideSlugs: ["hypothesis-testing-basics"],
+    appLinks: [
+      { title: "分野別ドリルで「標本分布」を演習する", url: "https://toukei.bearworks.uk/drill" }
+    ],
+    author: "kuma / bearworks.uk",
+    publishedAt: "2026-09-04",
+    reviewedAt: "2026-09-04",
+    provenance: toukeiProblemBatch1Provenance,
+    references: [
+      { title: "統計検定2級公式出題範囲", url: "https://www.toukei-kentei.jp/grade/grade2/" }
+    ]
+  },
+  {
+    slug: "paired-t-test",
+    title: "対応のある2標本の母平均の差のt検定",
+    description: "同一被験者の前後比較データを「差の変数 d」に変換し、自由度 n - 1 の1標本t検定に帰着させて判断する手順を解説します。",
+    concepts: ["仮説検定", "t検定", "対応のあるt検定", "自由度", "片側検定"],
+    question: "ある研修プログラムの受講効果を検証するため、受講者10名を無作為抽出して受講前と受講後に同一難易度のテストを実施しました。「受講後点数 － 受講前点数」で定義される得点差 d を集計したところ、得点差の標本平均は d̄ = 6.0 点、不偏分散は s_d^2 = 25.0（不偏分散の平方根 s_d = 5.0 点）でした。受講後の母平均得点が受講前より高いと言えるかを調べます。向上を調べる片側検定はデータを見る前に決めたものとし、有意水準5%で検定しなさい。受講者間の得点差は互いに独立で同じ正規分布に従うものとし、自由度9のt分布の上側5%点は t(9) = 1.833、自由度18のt分布の上側5%点は t(18) = 1.734 とします。",
+    givenValues: [
+      { label: "ペア数 (n)", value: "10" },
+      { label: "得点差の標本平均 (d̄)", value: "6.0 点" },
+      { label: "得点差の不偏分散 (s_d^2)", value: "25.0 点²" },
+      { label: "得点差の標本標準偏差 (s_d)", value: "5.0 点" },
+      { label: "有意水準 (α)", value: "0.05 (片側)" },
+      { label: "t臨界値 t(9)", value: "1.833" }
+    ],
+    solutionSteps: [
+      {
+        label: "仮説の設定",
+        expression: "帰無仮説 H0: μ_d = 0, 対立仮説 H1: μ_d > 0",
+        description: "差は受講後−受講前と定義します。事前に向上を調べると決めているため、μ_d > 0を対立仮説にします。片側検定の帰無仮説μ_d ≤ 0の境界μ_d = 0で検定統計量の分布を計算します。"
+      },
+      {
+        label: "標準誤差 SE の計算",
+        expression: "SE = s_d / √n = 5.0 / √10 ≒ 5.0 / 3.162 ≒ 1.581",
+        description: "不偏分散の平方根s_dとペア数nから、平均差の標準誤差を算出します。s_d自体が母標準偏差の不偏推定量という意味ではありません。"
+      },
+      {
+        label: "検定統計量 t値の計算と自由度",
+        expression: "t = (d̄ - 0) / SE = 6.0 / (5.0 / √10) = 1.2 * √10 ≒ 3.79, 自由度 df = n - 1 = 9",
+        description: "同じ人の前後を対応付け、各人の差を1観測として扱うため1標本t検定に帰着します。母分散は未知、差は独立な正規標本と仮定しており、自由度はn−1=9です。前後それぞれの正規性ではなく差の正規性が条件です。"
+      },
+      {
+        label: "判定",
+        expression: "t ≒ 3.79 > 1.833 (片側5%臨界値), p値 ≒ 0.0021 < 0.05",
+        description: "t値が臨界値 1.833 を大幅に上回り、p値が 0.05 より小さいため、帰無仮説 H0 は棄却されます。受講後−受講前の母平均差が正である統計的証拠が得られます。p値は自由度9のt分布の上側確率です。対照群のない前後比較だけでは、練習効果などを除いた研修自体の因果効果は断定できません。"
+      }
+    ],
+    finalAnswer: "検定統計量 t ≒ 3.79 であり、自由度9の片側5%臨界値 1.833 を上回るため帰無仮説は棄却され、受講後の母平均得点が高いと判断される。ただし、研修そのものが原因とはこの検定だけでは結論づけられない。",
+    distractors: [
+      {
+        value: "自由度を df = 10 + 10 - 2 = 18 として独立2標本t検定を行う",
+        reason: "同一人物内の前後測定を独立と扱う誤りです。差の分散は前後の共分散を含み、独立2標本の分散とは異なります。今回は10個の差を使うため自由度9です。対応による精度の改善幅は相関に依存します。"
+      },
+      {
+        value: "両側検定臨界値 2.262 を適用して判断する",
+        reason: "データを見る前に向上を調べる片側検定を指定しているため、上側5%点1.833を使います。両側の2.262を使っても今回は棄却されますが、指定した検定手順とは異なります。観測結果を見てから片側に変更してはいけません。"
+      }
+    ],
+    relatedGuideSlugs: ["hypothesis-testing-basics", "choosing-statistical-tests"],
+    appLinks: [
+      { title: "分野別ドリルで「仮説検定」を演習する", url: "https://toukei.bearworks.uk/drill" }
+    ],
+    author: "kuma / bearworks.uk",
+    publishedAt: "2026-09-04",
+    reviewedAt: "2026-09-04",
+    provenance: toukeiProblemBatch1Provenance,
+    references: [
+      { title: "統計検定2級公式出題範囲", url: "https://www.toukei-kentei.jp/grade/grade2/" }
     ]
   }
 ];

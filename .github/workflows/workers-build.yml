@@ -92,6 +92,8 @@ jobs:
             exit 1
           fi
 
+          node scripts/verify-toukei-pages.mjs http://127.0.0.1:8788
+
           assert_status() {
             expected=$1
             path=$2

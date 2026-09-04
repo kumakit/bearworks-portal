@@ -1,0 +1,93 @@
+import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
+import { build } from "esbuild";
+
+// Verify the actual TypeScript data and the server that serves the built pages.
+// Usage: node scripts/verify-toukei-pages.mjs http://127.0.0.1:3000
+const base = new URL(process.argv[2] ?? "http://127.0.0.1:3000");
+assert(["localhost", "127.0.0.1", "[::1]"].includes(base.hostname), "Use a local preview");
+const bundle = await build({
+  stdin: {
+    contents: `export { problems } from "./app/(monetized)/toukei/problems/problem-data";
+      export { guides } from "./app/(monetized)/toukei/guides/guide-data";
+      export { siteContent } from "./app/site-content";`,
+    resolveDir: process.cwd(),
+    loader: "ts",
+  },
+  bundle: true,
+  write: false,
+  platform: "node",
+  format: "esm",
+});
+const { problems, guides, siteContent } = await import(
+  `data:text/javascript;base64,${Buffer.from(bundle.outputFiles[0].text).toString("base64")}`
+);
+const expectedNewSlugs = [
+  "linear-transformation", "bayes-theorem-screening", "binomial-normal-approximation",
+  "sample-proportion-distribution", "paired-t-test",
+];
+assert.equal(problems.length, 10);
+assert.equal(new Set(problems.map(p => p.slug)).size, 10);
+assert.deepEqual(problems.slice(5).map(p => p.slug), expectedNewSlugs);
+assert.equal(siteContent.length, 27);
+const manifest = JSON.parse(await readFile(".next/prerender-manifest.json", "utf8"));
+const adPattern = /pagead2\.googlesyndication\.com|adsbygoogle|ca-pub-\d+/;
+const escape = text => text.replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#x27;");
+async function page(path, status = 200) {
+  const response = await fetch(new URL(path, base), { redirect: "manual" });
+  assert.equal(response.status, status, `${path} status`);
+  return response.text();
+}
+const index = await page("/toukei/problems");
+for (const problem of problems) {
+  const path = `/toukei/problems/${problem.slug}`;
+  assert(manifest.routes[path], `${path} must be statically generated`);
+  assert(index.includes(`href="${path}"`), `${path} index link`);
+  const html = await page(path);
+  assert(html.includes(`<link rel="canonical" href="https://bearworks.uk${path}"`), `${path} canonical`);
+  assert(adPattern.test(html), `${path} ads`);
+  assert(html.includes("ca-pub-0000000000000000"), `${path} use the dummy ad ID for QA`);
+  for (const text of [problem.title, problem.question, problem.finalAnswer]) {
+    assert(html.includes(escape(text)), `${path} rendered text: ${text.slice(0, 30)}`);
+  }
+  for (const step of problem.solutionSteps) {
+    assert(html.includes(escape(step.expression)), `${path} calculation`);
+    assert(html.includes(escape(step.description)), `${path} explanation`);
+  }
+  for (const distractor of problem.distractors) {
+    assert(html.includes(escape(distractor.value)) && html.includes(escape(distractor.reason)), `${path} distractor`);
+  }
+  for (const slug of problem.relatedGuideSlugs) {
+    assert(guides.some(guide => guide.slug === slug), `${path} valid guide slug`);
+    assert(html.includes(`href="/toukei/guides/${slug}"`), `${path} rendered guide link`);
+  }
+  for (const ref of [...problem.references, ...problem.appLinks, ...problem.provenance.evidenceLinks]) {
+    assert(html.includes(`href="${escape(ref.url)}"`), `${path} reference link`);
+  }
+  if (expectedNewSlugs.includes(problem.slug)) {
+    assert(html.includes("2026-09-04に公開内容を承認"), `${path} publication approval`);
+    assert(!html.includes("最終公開内容の承認待ち") && !html.includes("公開前の検証版"), `${path} no draft notice`);
+    assert(!html.includes("5例題の公開commit"), `${path} must not inherit old publication evidence`);
+    if (problem.frequencyTable) {
+      assert.equal(problem.frequencyTable.rows.length, 3);
+      for (const row of problem.frequencyTable.rows) {
+        assert.equal(row.length, problem.frequencyTable.columns.length);
+        for (const cell of row) assert(html.includes(escape(cell)), `${path} table cell`);
+      }
+      assert(html.includes("<caption") && html.includes('scope="row"'), `${path} accessible table`);
+    }
+  }
+  console.log(`PASS ${path}: static, full text, canonical, ads, references`);
+}
+for (const path of ["/about", "/contact", "/privacy", "/weather", "/dashboard", "/ai-news"]) {
+  assert(!adPattern.test(await page(path)), `${path} must have no ads`);
+}
+for (const path of ["/toukei/problems/__invalid__", "/toukei/guides/__invalid__", "/route-that-does-not-exist"]) {
+  assert(!adPattern.test(await page(path, 404)), `${path} must have no ads`);
+}
+const xml = await page("/sitemap.xml");
+const urls = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map(match => match[1]);
+assert.equal(urls.length, 27);
+assert.equal(new Set(urls).size, 27);
+assert.deepEqual([...urls].sort(), siteContent.map(p => `https://bearworks.uk${p.pathname}`).sort());
+console.log("PASS: sitemap 27 unique URLs; 6 non-ad pages and 3 invalid/404 routes have no ads");
