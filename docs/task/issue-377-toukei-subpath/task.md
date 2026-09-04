@@ -107,21 +107,22 @@
   - [x] Toukei内部のSPA画面遷移、およびPortalとのfull page load相互遷移の実機確認（ユーザー実機ブラウザにて確認完了）
 - [x] **復旧実証テスト（切り戻し所要時間実測）**:
   - ステージング上で直前Worker versionへの切り戻しを実施し、所要時間（上限5分以内に対し、**切り戻し実測: 3.05秒**、**復帰実測: 2.76秒**）を実測・記録完了
-- [ ] ユーザーによる Gate 3 進行承認
+- [x] ユーザーによる Gate 3 進行承認
 
 ---
 
 ## Gate 3: 本番反映（フェーズA: プロキシ並行稼働）
 
-- [ ] 旧ホスト成果物（現行本番Pagesデプロイメント、basePathなし）のIDを固定保持・維持確認
-- [ ] **`bearworks-toukei` の main マージは行わない**（旧URL並行稼働保護のため凍結）
-- [ ] `bearworks-portal` の本番Workersへプロキシルーティング反映（`TOUKEI_ORIGIN` にGate 1Bの固定プレビューURLを設定）
-- [ ] フォールバック復旧Worker版（503+no-store案内）の待機確認
-- [ ] **本番即時スモークテスト**:
-  - 新URL（`bearworks.uk/toukei/drill` 等）の正常動作確認
-  - 旧URL（`toukei.bearworks.uk`）がbasePathなしのまま通常利用可能であることの確認（並行稼働）
-  - 5xxエラー、アセット404がないことの確認
-- [ ] ※この段階では旧URLへの301リダイレクトは絶対に設定しない
+- [x] 旧ホスト成果物（現行本番Pagesデプロイメント、basePathなし）の維持確認（`https://toukei.bearworks.uk/drill` 正常稼働中）
+- [x] **`bearworks-toukei` の main マージは行わない**（旧URL並行稼働保護のため凍結維持確認）
+- [x] `bearworks-portal` の本番Workersへプロキシルーティング反映（`TOUKEI_ORIGIN` にGate 1Bの固定プレビューURLを設定、Version ID: `6a76e71b-d96c-475c-932a-8841623e2aa8` 100%反映）
+- [x] フォールバック復旧Worker版（503+no-store案内）の待機確認
+- [x] **本番即時スモークテスト（ALL PASS [GO] 確認）**:
+  - 新URL（`https://bearworks.uk/toukei/drill`, `/exam`, `/cheatsheet`, `/dashboard`, `/concepts/*`）の正常200 OK動作確認
+  - 静的アセット全14件の 200 OK 配信確認（404エラー 0件）
+  - 旧URL（`https://toukei.bearworks.uk/drill` 等）がbasePathなしのまま通常利用可能であることの確認（並行稼働正常）
+  - 5xxエラー、アセット404、広告漏洩（AdSense出現数0件）がないことの確認
+- [x] ※この段階では旧URLへの301リダイレクトは絶対に設定しない（並行稼働維持確認）
 
 ---
 
