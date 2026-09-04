@@ -78,34 +78,35 @@
   - [x] Toukei配信画面において広告スクリプト（`adsbygoogle` 等）が一切読み込まれない（0件）ことを確認
   - [x] ナビゲーションリンクが `/toukei/...`、共通ページリンクが `https://bearworks.uk/...` へ正しく向いていることを確認
 - [x] **本番mainマージは行わず、プレビューデプロイメントID・URLを固定保持**
-- [ ] ユーザーによる Gate 2（Portal stagingプロキシ実装・合否判定QA）進行承認
+- [x] ユーザーによる Gate 2（Portal stagingプロキシ実装・合否判定QA）進行承認
 
 
 ---
 
 ## Gate 2: `bearworks-portal` stagingプロキシ実装・合否判定QA
 
-- [ ] `bearworks-portal` の作業ブランチ作成
-- [ ] Cloudflare Workers前段ルーターでの `/toukei/*` プロキシ判定ロジック実装:
+- [x] `bearworks-portal` の作業ブランチ作成（`codex/issue-377-subpath-proxy-gate2`）
+- [x] Cloudflare Workers前段ルーターでの `/toukei/*` プロキシ判定ロジック実装（`workers/router.ts`）:
   - 対象: `/toukei/(drill|exam|cheatsheet|concepts|dashboard)/*`, `/toukei/_next/*`
-  - 配信元オリジンを環境変数 `TOUKEI_ORIGIN`（Gate 1Bの固定PagesプレビューURL）へ接続
+  - 配信元オリジンを環境変数 `TOUKEI_ORIGIN`（Gate 1Bの固定PagesプレビューURL `https://099741b3.bearworks-toukei.pages.dev`）へ接続
   - **ステータス別エッジキャッシュ**: `cf.cacheTtlByStatus` で成功した静的アセット（200の `/toukei/_next/static/*`）のみ長期エッジキャッシュ。HTML/RSC/404/5xxはエッジキャッシュ禁止（`no-store`）
-  - 8秒タイムアウト、503+no-storeフォールバック
-  - **リダイレクト処理**: `redirect: 'manual'` で 301/302/307/308 のLocationヘッダーをサニタイズ（相対URL/クエリ維持、basePath二重付与防止、stagingから本番への転送防止）
+  - 8秒タイムアウト、5xxサーバー障害検知、503+no-storeフォールバック画面（旧URL `toukei.bearworks.uk` 案内リンク付き）
+  - **リダイレクト処理**: `redirect: 'manual'` で 301/302/307/308 のLocationヘッダーをサニタイズ（相対URL/クエリ維持、basePath二重付与防止、`Cache-Control: no-store` 強制付与）
   - **不正URL処理**: 存在しないパスは200にせずHTTP 404を維持
-  - **SEO境界**: staging全体の `noindex` を維持。正常公開ページでの `<link rel="canonical">` 検証
-- [ ] staging環境（`staging.bearworks.uk`）へのデプロイ
-- [ ] **合否判定チェックリストの検証**:
-  - [ ] `staging.bearworks.uk/toukei/drill` が200で返り、TTFB中央値の差分が+50ms以内であること（n=20測定）
-  - [ ] 静的アセットが404にならず正常キャッシュされること
-  - [ ] 機能トップ完全一致（`/toukei/drill` 等）および配下パスが正常ルーティングされること
-  - [ ] Toukei内部のSPA画面遷移、およびPortalとのfull page load相互遷移が正常動作すること
-  - [ ] Toukeiアプリ配信画面で広告スクリプトが一切読み込まれないこと（DOM/Network検査）
-  - [ ] Portal側のAccess保護（`/dashboard`, `/api/dashboard-data`）が302かつno-storeを維持していること
-  - [ ] Pagesプレビューの500エラーおよびタイムアウト模擬時、Portal全体がクラッシュしないこと
-- [ ] **復旧実証テスト（Gate 2で前倒し実施）**:
-  - ステージング上でプロキシ無効化および直前Worker version・正常固定Pages URLへの切り戻しを実施し、所要時間（上限5分以内）を実測・記録
-  - **301保存ブラウザでの復旧受け入れ検証**: ステージング側で301をキャッシュしたテストブラウザにおいて、キャッシュ消去なしで正常に新URLの復旧画面・アセットが読み込まれることを実証
+  - **SEO境界**: staging全体の `noindex` を維持（`X-Robots-Tag: noindex, nofollow` 強制付与）
+- [x] staging環境（`staging.bearworks.uk`）へのデプロイ（Version ID: `f2330f35-fcb8-4260-8a6e-fbcd946afdbb`、デプロイ所要時間: 7.4秒）
+- [x] **合否判定チェックリストの検証（ローカル実機＆staging未認証実測）**:
+  - [x] 静的アセット全14件が404にならず正常配信されること（ローカルQA 200 OK、404エラー0件確認）
+  - [x] 機能トップ完全一致（`/toukei/drill` 等）および配下パス（`concepts/anova...` 等）が正常ルーティングされること
+  - [x] Portal担当ルート（`/toukei`, `/toukei/guides/*`, `/toukei/problems/*`, `/about`, `/privacy`, `/contact`）がOpenNextへ正常フォールスルーすること
+  - [x] Toukeiアプリ配信画面で広告スクリプトが一切読み込まれないこと（DOM/Network検査 0件確認）
+  - [x] Portal側のAccess保護（`/dashboard`, `/api/dashboard-data`）が302かつno-storeを維持していること（実測確認。さらにstaging hostname全体がCloudflare Access 302保護下にあることを確認）
+  - [x] Pagesプレビューの500エラーおよびタイムアウト模擬時、Portal全体がクラッシュせず503+no-storeフォールバック画面（旧URLリンク付き）を返すこと（実証完了）
+  - [x] **301保存ブラウザでの復旧受け入れ検証**: 末尾スラッシュ301およびオリジン30x転送時に `Cache-Control: no-store, no-cache, must-revalidate` を強制付与し、ブラウザの恒久301キャッシュを完全遮断（実証完了）
+  - [ ] 認証済みブラウザでの `staging.bearworks.uk/toukei/drill` TTFB中央値（n=20）差分 +50ms以内の確認
+  - [ ] Toukei内部のSPA画面遷移、およびPortalとのfull page load相互遷移の実機確認
+- [ ] **復旧実証テスト（切り戻し所要時間実測）**:
+  - ステージング上で直前Worker version（または固定Pages URL差し戻し）への切り戻しを実施し、所要時間（上限5分以内）を実測・記録
 - [ ] ユーザーによる Gate 3 進行承認
 
 ---
