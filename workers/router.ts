@@ -11,6 +11,11 @@ interface ExecutionContext {
   [key: string]: any;
 }
 
+declare class HTMLRewriter {
+  on(selector: string, handlers: { element?: (element: any) => void; text?: (text: any) => void }): HTMLRewriter;
+  transform(response: Response): Response;
+}
+
 interface Env {
   TOUKEI_ORIGIN?: string;
   ASSETS?: any;
@@ -153,10 +158,17 @@ async function handleToukeiProxy(request: Request, env: Env, ctx: ExecutionConte
       cacheEverything: true,
       cacheTtlByStatus: {
         "200-299": 31536000, // 成功した静的アセットのみ1年エッジキャッシュ
-        "400-499": 0,        // 404等はキャッシュ禁止
-        "500-599": 0,        // 5xxエラーはキャッシュ禁止
+        "400-599": -1,       // 4xx/5xxエラーは非保存（負の値でCloudflare非保存明示）
       },
     };
+  } else {
+    // HTML / RSC / その他の動的リクエストはエッジキャッシュを明示的に非保存
+    fetchOptions.cf = {
+      cacheEverything: false,
+      cacheTtl: -1,
+    };
+    forwardHeaders.set("Cache-Control", "no-cache");
+    forwardHeaders.set("Pragma", "no-cache");
   }
 
   // 5. フェッチ実行とエラーハンドリング（障害注入・タイムアウト耐性）
@@ -240,6 +252,11 @@ async function handleToukeiProxy(request: Request, env: Env, ctx: ExecutionConte
     responseHeaders.set("Cache-Control", "no-store, no-cache, must-revalidate");
   }
 
+  // 静的アセット以外の HTML / RSC は完全非保存（no-store）を明示
+  if (!isStaticAsset) {
+    responseHeaders.set("Cache-Control", "no-store, no-cache, must-revalidate");
+  }
+
   // SEO / X-Robots-Tag 境界制御:
   // staging環境では常に noindex
   const isStaging =
@@ -247,28 +264,56 @@ async function handleToukeiProxy(request: Request, env: Env, ctx: ExecutionConte
     url.hostname.includes("localhost") ||
     url.hostname.includes("127.0.0.1");
 
+  const isPrivatePath =
+    url.pathname.startsWith("/toukei/dashboard") ||
+    url.pathname.includes("/exam/session") ||
+    originResponse.status === 404;
+
   if (isStaging) {
     responseHeaders.set("X-Robots-Tag", "noindex, nofollow");
   } else {
     // 本番環境の場合:
-    // 個人ダッシュボード、試験中画面、404画面は意図的noindexを保持
-    const isPrivatePath =
-      url.pathname.startsWith("/toukei/dashboard") ||
-      url.pathname.includes("/exam/session") ||
-      originResponse.status === 404;
-
+    // 公開対象ページのみ Pages プレビュー由来の noindex をサニタイズ除去
     if (!isPrivatePath && originResponse.status === 200) {
-      // Pagesプレビュー由来のnoindexをサニタイズ除去
       responseHeaders.delete("X-Robots-Tag");
     }
   }
 
-  // 静的アセット以外の HTML / RSC ではエッジキャッシュを防止
-  if (!isStaticAsset) {
-    const existingCc = responseHeaders.get("Cache-Control") || "";
-    if (!existingCc.includes("no-store") && !existingCc.includes("no-cache")) {
-      responseHeaders.set("Cache-Control", "public, max-age=0, must-revalidate");
-    }
+  // Canonical の設定（公開対象ページのみ）
+  // 対象: drill, examトップ案内, cheatsheet, cheatsheet/flashcard, concepts/*
+  const isPublicCanonicalRoute =
+    url.pathname === "/toukei/drill" ||
+    url.pathname === "/toukei/exam" ||
+    url.pathname === "/toukei/cheatsheet" ||
+    url.pathname === "/toukei/cheatsheet/flashcard" ||
+    url.pathname.startsWith("/toukei/concepts/");
+
+  const canonicalUrl = !isPrivatePath && originResponse.status === 200 && isPublicCanonicalRoute
+    ? `https://bearworks.uk${url.pathname}`
+    : null;
+
+  if (canonicalUrl) {
+    responseHeaders.set("Link", `<${canonicalUrl}>; rel="canonical"`);
+  }
+
+  const contentType = originResponse.headers.get("Content-Type") || "";
+  const isHtml = contentType.includes("text/html");
+
+  // HTML レスポンスの場合は HTMLRewriter で <head> 内に <link rel="canonical"> を注入
+  if (canonicalUrl && isHtml && originResponse.body) {
+    const rewriter = new HTMLRewriter().on("head", {
+      element(element: any) {
+        element.append(`<link rel="canonical" href="${canonicalUrl}">`, { html: true });
+      },
+    });
+
+    return rewriter.transform(
+      new Response(originResponse.body, {
+        status: originResponse.status,
+        statusText: originResponse.statusText,
+        headers: responseHeaders,
+      })
+    );
   }
 
   return new Response(originResponse.body, {
