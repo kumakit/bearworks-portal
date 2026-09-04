@@ -161,6 +161,33 @@ export default async function ProblemDetailPage({ params }: PageProps) {
           </div>
         </section>
 
+        {problem.frequencyTable && (
+          <section className="mb-8 overflow-x-auto rounded-2xl border border-gray-100 bg-gray-50/50 p-4">
+            <table className="min-w-full whitespace-nowrap text-sm text-left">
+              <caption className="mb-3 whitespace-normal text-left font-bold text-primary">
+                {problem.frequencyTable.caption}
+              </caption>
+              <thead>
+                <tr className="border-b border-gray-200">
+                  {problem.frequencyTable.columns.map((column) => (
+                    <th key={column} scope="col" className="px-3 py-2 font-bold text-primary">{column}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-100">
+                {problem.frequencyTable.rows.map(([label, ...cells]) => (
+                  <tr key={label}>
+                    <th scope="row" className="px-3 py-2.5 font-medium text-primary">{label}</th>
+                    {cells.map((cell, index) => (
+                      <td key={index} className="px-3 py-2.5 text-muted">{cell}</td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </section>
+        )}
+
         {/* Final Answer */}
         <section className="mb-8">
           <h2 className="text-lg font-bold text-primary mb-3">最終結論</h2>
