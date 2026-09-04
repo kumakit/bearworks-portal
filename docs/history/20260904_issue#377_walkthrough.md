@@ -2,11 +2,13 @@
 
 ## 結果
 
+**最新状況: 2026-09-04にPR #8をmergeし、トラックA第1バッチを本番公開した。新旧10問、sitemap 27URL、広告境界、Access保護の公開検証は成功。以下の初回実装・CI段階の保留事項は当時の記録であり、末尾の公開結果を参照。**
+
 2026-09-04、全文公開例題を5問から10問に拡充した。新5問の前提・手法選択・途中式・結論解釈・誤答分析・参照資料と、バッチ固有の制作情報を追加した。Next.jsで全10問の配信・静的生成・広告境界とsitemap 27URLを確認済み。
 
-ブランチ: `codex/issue-377-problems-batch-1`。開始点はfetch後の `origin/main` = `74beb15ed8f3b5cb2acdfe6c0c349580da107165`。commit・push・PR作成・CI起動・Issue更新・デプロイ・AdSense再申請は行っていない。既存未追跡 `docs/task/issue-377-toukei-subpath/` は保持した。
+初回報告時点のブランチ: `codex/issue-377-problems-batch-1`。開始点はfetch後の `origin/main` = `74beb15ed8f3b5cb2acdfe6c0c349580da107165`。この時点ではcommit・push・PR作成・CI起動・Issue更新・デプロイ・AdSense再申請は行っていない。既存未追跡 `docs/task/issue-377-toukei-subpath/` は保持した。
 
-## 実装
+## 初回実装・公開前の記録
 
 | 問 | Slug | 内容と修正 |
 | --- | --- | --- |
@@ -97,4 +99,23 @@ PASS /toukei/problems/paired-t-test: static, full text, canonical, ads, referenc
 PASS: sitemap 27 unique URLs; 6 non-ad pages and 3 invalid/404 routes have no ads
 ```
 
-**上記Linux未確認ゲートは解消。** Windowsで観測された404を本番障害と扱わず、Linuxでの成功と区別して記録した。本番デプロイ・merge・Issue更新/終了・再審査は未実施。次のゲートは最終公開内容の承認、provenanceの承認待ち文言と公開日の確定、merge・デプロイである。
+**初回Linux CI終了時点で、上記Linux未確認ゲートは解消。** Windowsで観測された404を本番障害と扱わず、Linuxでの成功と区別して記録した。この時点では本番デプロイ・merge・Issue更新/終了・再審査は未実施。次のゲートは最終公開内容の承認、provenanceの承認待ち文言と公開日の確定、merge・デプロイである。
+
+## 続行: 最終承認・merge・本番公開
+
+ユーザーの「OK次に進んで」を、直前に提示した最終公開内容・merge・本番デプロイへの進行承認として受領。公開日と運営者の承認日を2026-09-04に確定した。Lunaは公開文言、既存Route・secret保持、復元手順、公開確認範囲を読み取り専用で監査した。
+
+- 最終head: `f3f36e4f6f4bded9301888b39abdf7642ea09dab`。Linux CI [33854743058](https://github.com/kumakit/bearworks-portal/actions/runs/33854743058)、job `100965327881` が全ステップ成功。検証済みmerge refは `06ca60b2016b19b08ba5555df321ec703ad4077f`。
+- [PR #8](https://github.com/kumakit/bearworks-portal/pull/8) をready化してmerge。mainは `d1f91833b371298a6195df0c280d9b58bdfe9bf0`。最終headとの差分がないことを確認し、ローカルmainをfast-forwardした。
+- 公開ads.txtから本番用広告IDをプロセス内で設定してOpenNextを再build。新5問の生成HTMLに本番IDと公開承認文言があり、ダミーIDがないことを確認。
+- `populateCache local` で静的キャッシュを組み込み、最終dry-runは87 assets、7,847.05 KiB / gzip 1,612.15 KiB。実公開にはOpenNextの `deploy --env "" --keep-vars` を使い、キャッシュ組込みとWranglerアップロードを実行。CLI内部で空env引数のwarningが出たが、アップロード先は既存 `bearworks-portal` と確認した。
+- 公開version: `1bfecf29-916a-46b4-99df-5d82a910ef3e`、100%。deployment: `bf0ec16a-bf12-48d2-8ead-2b315465a974`、2026-09-04 08:57:09 UTC。
+- 復元先は直前のversion `89429366-59a5-486e-92ee-9d93fbc6bb6d`。必要時はWranglerの `rollback [version-id]` を用いる（deployment IDではない）。今回は復元不要。
+- 本番の新旧10問がHTTP 200で、問題文・解法・誤答・canonical・参照リンク・本番広告ID・新問の承認文言を照合。sitemapは27URL・重複なし。about/contact/privacy/weather/ai-newsと不正problem/guide・一般404に広告識別子なし。ads.txtは公開ファイルと一致。
+- `/dashboard` と `/api/dashboard-data` は未認証でAccessへ302、`Cache-Control: no-store`。最初の公開smokeはHTTP timeoutで終了したが、同じ検証の再実行は全項目成功し、公開から10分以内に完了した。timeout対象は初回ログから特定できず、5xxと判断していない。
+- 前後で `bearworks.uk/* -> bearworks-portal`、ASSETSとDASHBOARD_API_TOKENのbinding名・種別、Pages project/domainとGit連携なしが一致。secret値は表示・更新していない。DNS APIはOAuth権限不足403のため設定比較は未確認。公開DNS解決とHTTPSを確認し、DNS・Access設定への書き込みは行っていない。
+- `npm audit --omit=dev` はnpm公式bulk advisory APIのtimeoutで完了せず、期限付き再試行とパッケージ別の直接照会でも一部（@img/colour等）を取得できなかった。最新全件監査の0件とは扱わない。既存記録ではNext.js 16.3.0移行時に0件、今回package.json/package-lock.jsonは変更なし。コンテンツ更新として公開し、この監査制約を残した。
+
+公開工程での外部書き込みは最終公開文言のpush、PR metadata更新・mergeと既存本番Workerの配信物更新。Issue #377は監視用途のため未更新・未終了、AdSense再申請は未実施。トラックBの既存未追跡計画は保持。
+
+公開後の記録2ファイルについて、ユーザーの続行承認を受けて `codex/issue-377-release-record` で確定する。Lunaの読み取り専用点検とCodexによる保存済み証跡の照合を行う。記録の反映ではアプリ・依存関係・インフラ設定を変更せず、再デプロイは不要。PRのmerge状況とCI結果は記録用PRの履歴を参照する。
