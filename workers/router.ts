@@ -160,11 +160,34 @@ async function handleToukeiProxy(request: Request, env: Env, ctx: ExecutionConte
   }
 
   // 5. フェッチ実行とエラーハンドリング（障害注入・タイムアウト耐性）
+  const isStagingEnv =
+    url.hostname.includes("staging") ||
+    url.hostname.includes("localhost") ||
+    url.hostname.includes("127.0.0.1");
+
   let originResponse: Response;
   try {
+    // ステージング・ローカルでの障害注入QAシミュレーション
+    if (isStagingEnv && request.headers.get("x-simulate-origin-failure") === "1") {
+      throw new Error("Simulated origin timeout/failure for QA verification");
+    }
     originResponse = await fetch(targetUrl.toString(), fetchOptions);
   } catch (error) {
     console.error("[Toukei Proxy Fetch Error]:", error);
+    return new Response(generateFallbackHtml(url.pathname), {
+      status: 503,
+      headers: {
+        "Content-Type": "text/html; charset=utf-8",
+        "Cache-Control": "no-store, no-cache, must-revalidate",
+        "Retry-After": "30",
+        "X-Robots-Tag": "noindex, nofollow",
+      },
+    });
+  }
+
+  // オリジンが 5xx サーバーエラーを返した場合も安全に 503 フォールバックを提供
+  if (originResponse.status >= 500) {
+    console.error(`[Toukei Origin 5xx Error]: status ${originResponse.status}`);
     return new Response(generateFallbackHtml(url.pathname), {
       status: 503,
       headers: {
