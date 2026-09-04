@@ -78,8 +78,8 @@ for (const problem of problems) {
     assert(!html.includes("5例題の公開commit"), `${path} must not inherit old publication evidence`);
   }
   if (batch2Slugs.includes(problem.slug)) {
-    assert(html.includes("最終公開内容の承認待ち"), `${path} draft publication status`);
-    assert(!html.includes("2026-09-04に公開内容を承認"), `${path} no unapproved publication claim`);
+    assert(html.includes("2026-09-04に公開内容を承認"), `${path} publication approval`);
+    assert(!html.includes("最終公開内容の承認待ち") && !html.includes("公開前の検証版"), `${path} no draft notice`);
     assert(!html.includes("5例題の公開commit"), `${path} no inherited publication evidence`);
     for (const text of [problem.author, problem.publishedAt, problem.reviewedAt, problem.provenance.aiUsage]) {
       assert(html.includes(escape(text)), `${path} author/date/provenance`);

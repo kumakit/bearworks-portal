@@ -85,3 +85,11 @@ Windows、Node24.14.1、Next16.3.0、OpenNext1.20.2、Wrangler4.114.0。ビル�
 上記のローカル完了報告後、ユーザーから2026-09-04に「続けてください」を受領し、次工程のcommit・push・draft PR・Linux CIまで進める。Lunaには対象8ファイルと既存CIの整合性・公開記録の機密混入を読み取り専用で再点検させ、Codexが全差分・対象範囲を確認する。remote mainは943150aのままで変更なし。
 
 対象はこの記録を含む上表の8ファイル。生成物・認証関連ファイル・未追跡TrackB計画は含めない。Linux上で全15問のHTTP 200・本文・canonical・広告・参照・表・sitemap32・非広告/404境界を検証する。CIの検証対象commit、run URL、最終結果は対応するPRの本文とChecksへ記録する。最終公開内容の承認待ち表示を維持し、merge・本番deploy・Issue更新・AdSense操作は行わない。
+
+## 続行: 公開承認（2026-09-04）
+
+実装commit `e90ec3266b51db2693e4d4964b6ee68a0e9a4957` をpushし、draft [PR #10](https://github.com/kumakit/bearworks-portal/pull/10) を作成。[Linux CI 33867647777](https://github.com/kumakit/bearworks-portal/actions/runs/33867647777) は全項目成功し、新旧15問・sitemap32・広告境界のPASSログを確認した。
+
+その後ユーザーから「OK公開までお願い」を受領し、最終内容・公開日2026-09-04・merge・本番deployを承認された。上記の公開保留は各工程時点の記録である。第2バッチの公開日/確認日は指定日のまま、provenanceとページ検証の承認表記を確定し、最終版のLinux CIを再実行する。
+
+本番は既存 `bearworks-portal` の配信物更新とする。直前version、Route、binding名/種別、Pages設定、公開HTTP baselineを記録し、公開ads.txtの本番広告IDでbuildする。OpenNext公式deployで静的キャッシュを組み込み、既存変数/secretを保持。DNS・Access・Pages・staging設定は変更しない。全15問、sitemap32、広告/404境界、ads.txt、Access 302/no-storeを直後に確認する。意図しない404、広告漏れ、Access迂回、継続5xx、10分以内にsmoke完了不可の場合は直前versionへ戻す。最終CIと公開version・結果はPR #10に追記し、記録の更新だけで再deployを繰り返さない。
