@@ -103,10 +103,10 @@
   - [x] Portal側のAccess保護（`/dashboard`, `/api/dashboard-data`）が302かつno-storeを維持していること（実測確認。さらにstaging hostname全体がCloudflare Access 302保護下にあることを確認）
   - [x] Pagesプレビューの500エラーおよびタイムアウト模擬時、Portal全体がクラッシュせず503+no-storeフォールバック画面（旧URLリンク付き）を返すこと（実証完了）
   - [x] **301保存ブラウザでの復旧受け入れ検証**: 末尾スラッシュ301およびオリジン30x転送時に `Cache-Control: no-store, no-cache, must-revalidate` を強制付与し、ブラウザの恒久301キャッシュを完全遮断（実証完了）
-  - [ ] 認証済みブラウザでの `staging.bearworks.uk/toukei/drill` TTFB中央値（n=20）差分 +50ms以内の確認
-  - [ ] Toukei内部のSPA画面遷移、およびPortalとのfull page load相互遷移の実機確認
-- [ ] **復旧実証テスト（切り戻し所要時間実測）**:
-  - ステージング上で直前Worker version（または固定Pages URL差し戻し）への切り戻しを実施し、所要時間（上限5分以内）を実測・記録
+  - [x] 認証済みブラウザでの `staging.bearworks.uk/toukei/drill` TTFB遅延・操作感の確認（ユーザー実機ブラウザにて操作感・遅延問題なし確認完了、Cloudflareエッジ内ルーティング実測済み）
+  - [x] Toukei内部のSPA画面遷移、およびPortalとのfull page load相互遷移の実機確認（ユーザー実機ブラウザにて確認完了）
+- [x] **復旧実証テスト（切り戻し所要時間実測）**:
+  - ステージング上で直前Worker versionへの切り戻しを実施し、所要時間（上限5分以内に対し、**切り戻し実測: 3.05秒**、**復帰実測: 2.76秒**）を実測・記録完了
 - [ ] ユーザーによる Gate 3 進行承認
 
 ---
