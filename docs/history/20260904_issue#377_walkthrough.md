@@ -78,3 +78,23 @@ Codexが唯一のwriterとして計画、実装、独立検算、全差分確認
 初回報告後、2026-09-04にユーザーから「OK次に進んでください」を受領。commit・push・draft PR・Linux CIへ進行する。上記の「未実施」は初回報告時点の記録である。最終公開確認の文言は公開承認の段階で更新し、merge・本番デプロイ・再審査は行わない。
 
 今回のLuna担当はCIスクリプト・公開前文言・成果物の機密混入についての読み取り専用再監査。対象は本バッチの11ファイルであり、既存未追跡の統合計画、生成物、キャッシュ、環境ファイルをpush対象へ含めない。
+
+### 実施結果
+
+- 実装commit: `c1ea7c5421e8dbbe22768158a5ea441bb447c384`。ローカルとリモートの一致を確認。
+- [draft PR #8](https://github.com/kumakit/bearworks-portal/pull/8) を作成。
+- [Linux CI run 33852993690](https://github.com/kumakit/bearworks-portal/actions/runs/33852993690) は **success**。対象headは上記commit、baseは `74beb15ed8f3b5cb2acdfe6c0c349580da107165`。ActionsはPRのmerge refをclean checkoutして検証した。
+- job `100959801511` の全ステップ成功と実ログを確認。依存関係導入には約7分かかったが正常終了し、その後lint、Next.js build、prefetch検証、OpenNext build、通常・staging両dry-run、Workers previewが成功した。
+- Workers previewで新旧10問の静的manifest・HTTP 200・問題文/解法/誤答・canonical・参照リンクが一致。sitemap 27URL、非広告6ページ、無効/404 3ルートの広告なしがPASS。既存の静的asset・API fail-closed検証も成功。
+- Luna再監査ではP1阻害なし。与件表や著者・日付の全フィールド自動照合は今後のP2改善候補であり、今回のCIの「本文」はスクリプトが明示的に照合する問題文・解答・解法・誤答等を指す。
+
+```text
+PASS /toukei/problems/linear-transformation: static, full text, canonical, ads, references
+PASS /toukei/problems/bayes-theorem-screening: static, full text, canonical, ads, references
+PASS /toukei/problems/binomial-normal-approximation: static, full text, canonical, ads, references
+PASS /toukei/problems/sample-proportion-distribution: static, full text, canonical, ads, references
+PASS /toukei/problems/paired-t-test: static, full text, canonical, ads, references
+PASS: sitemap 27 unique URLs; 6 non-ad pages and 3 invalid/404 routes have no ads
+```
+
+**上記Linux未確認ゲートは解消。** Windowsで観測された404を本番障害と扱わず、Linuxでの成功と区別して記録した。本番デプロイ・merge・Issue更新/終了・再審査は未実施。次のゲートは最終公開内容の承認、provenanceの承認待ち文言と公開日の確定、merge・デプロイである。

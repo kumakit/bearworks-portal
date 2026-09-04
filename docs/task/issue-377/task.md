@@ -11,10 +11,13 @@
 - [x] 問7の人数表のdesktop/mobile表示確認
 - [x] 差分レビュー・walkthrough作成
 - [x] ユーザーによる次工程（commit・push・PR・Linux CI）への進行承認（2026-09-04）
-- [ ] 対象差分だけをcommit・pushし、draft PRを作成
-- [/] Linux clean-checkout CIでWorkers実配信の確認
+- [x] 対象差分だけをcommit・pushし、draft PR #8を作成（実装commit c1ea7c5）
+- [x] Linux clean-checkout CIでWorkers実配信の確認（run 33852993690、全ステップ成功）
 - [ ] 最終公開内容の承認と公開日の確定、merge・本番デプロイ（別ゲート）
 
 トラックBの既存計画は別成果物。未追跡の統合計画を今回のcommitへ含めない。
 
-結果: `docs/history/20260904_issue#377_walkthrough.md`。ローカル実装は完了。Workersリリース判定はLinux CI未確認のため保留。
+結果: `docs/history/20260904_issue#377_walkthrough.md`。実装とLinux Workers技術検証は完了。最終公開内容・merge・本番デプロイは別ゲート。
+
+PR: https://github.com/kumakit/bearworks-portal/pull/8
+Linux CI: https://github.com/kumakit/bearworks-portal/actions/runs/33852993690
