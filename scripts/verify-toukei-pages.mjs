@@ -26,10 +26,15 @@ const expectedNewSlugs = [
   "linear-transformation", "bayes-theorem-screening", "binomial-normal-approximation",
   "sample-proportion-distribution", "paired-t-test",
 ];
-assert.equal(problems.length, 10);
-assert.equal(new Set(problems.map(p => p.slug)).size, 10);
-assert.deepEqual(problems.slice(5).map(p => p.slug), expectedNewSlugs);
-assert.equal(siteContent.length, 27);
+const batch2Slugs = [
+  "correlation-coefficient", "sum-and-difference-variance", "poisson-distribution-calculation",
+  "sample-proportion-confidence-interval", "one-way-anova",
+];
+assert.equal(problems.length, 15);
+assert.equal(new Set(problems.map(p => p.slug)).size, 15);
+assert.deepEqual(problems.slice(5, 10).map(p => p.slug), expectedNewSlugs);
+assert.deepEqual(problems.slice(10).map(p => p.slug), batch2Slugs);
+assert.equal(siteContent.length, 32);
 const manifest = JSON.parse(await readFile(".next/prerender-manifest.json", "utf8"));
 const adPattern = /pagead2\.googlesyndication\.com|adsbygoogle|ca-pub-\d+/;
 const escape = text => text.replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#x27;");
@@ -50,6 +55,9 @@ for (const problem of problems) {
   for (const text of [problem.title, problem.question, problem.finalAnswer]) {
     assert(html.includes(escape(text)), `${path} rendered text: ${text.slice(0, 30)}`);
   }
+  for (const value of problem.givenValues) {
+    assert(html.includes(escape(value.label)) && html.includes(escape(value.value)), `${path} given values`);
+  }
   for (const step of problem.solutionSteps) {
     assert(html.includes(escape(step.expression)), `${path} calculation`);
     assert(html.includes(escape(step.description)), `${path} explanation`);
@@ -68,14 +76,25 @@ for (const problem of problems) {
     assert(html.includes("2026-09-04に公開内容を承認"), `${path} publication approval`);
     assert(!html.includes("最終公開内容の承認待ち") && !html.includes("公開前の検証版"), `${path} no draft notice`);
     assert(!html.includes("5例題の公開commit"), `${path} must not inherit old publication evidence`);
-    if (problem.frequencyTable) {
-      assert.equal(problem.frequencyTable.rows.length, 3);
-      for (const row of problem.frequencyTable.rows) {
-        assert.equal(row.length, problem.frequencyTable.columns.length);
-        for (const cell of row) assert(html.includes(escape(cell)), `${path} table cell`);
-      }
-      assert(html.includes("<caption") && html.includes('scope="row"'), `${path} accessible table`);
+  }
+  if (batch2Slugs.includes(problem.slug)) {
+    assert(html.includes("最終公開内容の承認待ち"), `${path} draft publication status`);
+    assert(!html.includes("2026-09-04に公開内容を承認"), `${path} no unapproved publication claim`);
+    assert(!html.includes("5例題の公開commit"), `${path} no inherited publication evidence`);
+    for (const text of [problem.author, problem.publishedAt, problem.reviewedAt, problem.provenance.aiUsage]) {
+      assert(html.includes(escape(text)), `${path} author/date/provenance`);
     }
+  }
+  const table = problem.solutionTable ?? problem.frequencyTable;
+  if (table) {
+    assert.equal(table.rows.length, 3);
+    assert(html.includes(escape(table.caption)), `${path} table caption`);
+    for (const column of table.columns) assert(html.includes(escape(column)), `${path} table column`);
+    for (const row of table.rows) {
+      assert.equal(row.length, table.columns.length);
+      for (const cell of row) assert(html.includes(escape(cell)), `${path} table cell`);
+    }
+    assert(html.includes("<caption") && html.includes('scope="row"') && html.includes('scope="col"'), `${path} accessible table`);
   }
   console.log(`PASS ${path}: static, full text, canonical, ads, references`);
 }
@@ -87,7 +106,7 @@ for (const path of ["/toukei/problems/__invalid__", "/toukei/guides/__invalid__"
 }
 const xml = await page("/sitemap.xml");
 const urls = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map(match => match[1]);
-assert.equal(urls.length, 27);
-assert.equal(new Set(urls).size, 27);
+assert.equal(urls.length, 32);
+assert.equal(new Set(urls).size, 32);
 assert.deepEqual([...urls].sort(), siteContent.map(p => `https://bearworks.uk${p.pathname}`).sort());
-console.log("PASS: sitemap 27 unique URLs; 6 non-ad pages and 3 invalid/404 routes have no ads");
+console.log("PASS: sitemap 32 unique URLs; 6 non-ad pages and 3 invalid/404 routes have no ads");

@@ -50,6 +50,7 @@ export default async function ProblemDetailPage({ params }: PageProps) {
   if (!problem) {
     notFound();
   }
+  const solutionTable = problem.solutionTable ?? problem.frequencyTable;
 
   // Resolve related guides and perform safety runtime check
   const relatedGuides = problem.relatedGuideSlugs
@@ -150,7 +151,7 @@ export default async function ProblemDetailPage({ params }: PageProps) {
                   {idx + 1}
                 </div>
                 <h3 className="font-bold text-primary mb-2 text-base">{step.label}</h3>
-                <div className="bg-gray-50 rounded-2xl p-4 border border-gray-100 mb-2 font-mono text-sm overflow-x-auto text-primary">
+                <div className="bg-gray-50 rounded-2xl p-4 border border-gray-100 mb-2 font-mono text-sm whitespace-pre-line overflow-x-auto text-primary">
                   {step.expression}
                 </div>
                 <p className="text-sm text-muted leading-relaxed whitespace-pre-line">
@@ -161,21 +162,21 @@ export default async function ProblemDetailPage({ params }: PageProps) {
           </div>
         </section>
 
-        {problem.frequencyTable && (
+        {solutionTable && (
           <section className="mb-8 overflow-x-auto rounded-2xl border border-gray-100 bg-gray-50/50 p-4">
             <table className="min-w-full whitespace-nowrap text-sm text-left">
               <caption className="mb-3 whitespace-normal text-left font-bold text-primary">
-                {problem.frequencyTable.caption}
+                {solutionTable.caption}
               </caption>
               <thead>
                 <tr className="border-b border-gray-200">
-                  {problem.frequencyTable.columns.map((column) => (
+                  {solutionTable.columns.map((column) => (
                     <th key={column} scope="col" className="px-3 py-2 font-bold text-primary">{column}</th>
                   ))}
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-100">
-                {problem.frequencyTable.rows.map(([label, ...cells]) => (
+                {solutionTable.rows.map(([label, ...cells]) => (
                   <tr key={label}>
                     <th scope="row" className="px-3 py-2.5 font-medium text-primary">{label}</th>
                     {cells.map((cell, index) => (
