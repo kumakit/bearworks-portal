@@ -163,11 +163,14 @@ async function handleToukeiProxy(request: Request, env: Env, ctx: ExecutionConte
     };
   } else {
     // HTML / RSC / その他の動的リクエストはエッジキャッシュを明示的に非保存
+    fetchOptions.cache = "no-store";
     fetchOptions.cf = {
       cacheEverything: false,
-      cacheTtl: -1,
+      cacheTtlByStatus: {
+        "100-599": -1, // 全ステータスで負の値（非保存）を指定
+      },
     };
-    forwardHeaders.set("Cache-Control", "no-cache");
+    forwardHeaders.set("Cache-Control", "no-cache, no-store");
     forwardHeaders.set("Pragma", "no-cache");
   }
 
