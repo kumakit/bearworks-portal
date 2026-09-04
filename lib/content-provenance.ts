@@ -129,6 +129,33 @@ export const toukeiProblemBatch1Provenance: ContentProvenance = {
   ],
 };
 
+export const toukeiProblemBatch2Provenance: ContentProvenance = {
+  writtenBy: "kuma / bearworks.uk（問題設計）",
+  checkedBy: "Gemini（受領原稿の検算・教育内容レビュー）、Codex（修正・独立検算・実装確認）、Luna（品質監査）",
+  finalReviewedBy: "kuma / bearworks.uk（2026-09-04に公開内容を承認）",
+  aiUsage:
+    "第2バッチ（問11〜15）は2026-09-04に、GeminiによるPython/uvでの独立検算・教育内容レビュー済みとの説明を添えて原稿を受領しました。Codexが近似値の扱い、前提条件、結論の解釈を修正し、Pythonで独立検算しました。Lunaが内容を監査しました。修正後の原稿をGeminiが再レビューしたという意味ではありません。",
+  humanReview:
+    "運営者が題材と実装方針を指定し、修正内容・独立検算・品質点検・Linuxでの配信検証の結果を踏まえて、2026-09-04に公開内容を承認しました。専門家による第三者査読ではありません。",
+  evidenceLinks: [
+    {
+      title: "統計検定2級の公式出題範囲",
+      url: "https://www.toukei-kentei.jp/grade/grade2/",
+      description: "分野の対応を確認する参照資料です。公式問題の転載ではありません。",
+    },
+    {
+      title: "編集・作問方針",
+      url: "/toukei/methodology",
+      description: "オリジナル例題の作成・確認・訂正方針です。",
+    },
+  ],
+  revisions: [{
+    date: "2026-09-04",
+    kind: "初版",
+    summary: "第2バッチ5問の受領原稿をCodexが修正・独立検算・実装し、運営者が公開内容を承認しました。",
+  }],
+};
+
 export const hachiojiClimateProvenance: ContentProvenance = {
   writtenBy: "kuma / bearworks.uk",
   checkedBy: "kuma / bearworks.uk（公式画面との照合、独立計算、品質判定）",
