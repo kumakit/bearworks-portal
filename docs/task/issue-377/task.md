@@ -14,13 +14,13 @@
 - [x] 対象差分だけをcommit・pushし、draft PR #8を作成（実装commit c1ea7c5）
 - [x] Linux clean-checkout CIでWorkers実配信の確認（run 33852993690、全ステップ成功）
 - [x] 最終公開内容・公開日2026-09-04と、merge・本番デプロイの承認を受領
-- [/] 公開用provenance修正後のLinux CI、PR #8のmerge
-- [ ] 本番baseline・rollback先確認、production IDでbuild・dry-run・deploy
-- [ ] 新5問・sitemap・広告境界・Accessの公開確認
+- [x] 公開用provenance修正後のLinux CI（33854743058）、PR #8のmerge（d1f9183）
+- [x] 本番baseline・rollback先確認（DNS設定比較は権限不足で未確認）、production IDでbuild・dry-run・deploy
+- [x] 新旧10問・sitemap 27URL・広告境界・Accessの公開確認
 
 トラックBの既存計画は別成果物。未追跡の統合計画を今回のcommitへ含めない。
 
-結果: `docs/history/20260904_issue#377_walkthrough.md`。実装とLinux Workers技術検証は完了。最終公開内容・merge・本番デプロイは別ゲート。
+結果: `docs/history/20260904_issue#377_walkthrough.md`。トラックA第1バッチは公開・受け入れ完了。npm監査APIの全件取得はタイムアウトで未確認。依存関係は変更していない。DNS設定比較は権限不足で未確認だが、公開DNS解決・HTTPS疎通は確認済み。
 
 PR: https://github.com/kumakit/bearworks-portal/pull/8
-Linux CI: https://github.com/kumakit/bearworks-portal/actions/runs/33852993690
+Linux CI: https://github.com/kumakit/bearworks-portal/actions/runs/33854743058
