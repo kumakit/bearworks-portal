@@ -36,3 +36,11 @@ READMEのとおりOpenNextはWindows非対応。WSL未導入を確認済み。Wi
 ## 2026-09-04 次工程の承認
 
 ローカル実装・検証報告後、ユーザーから「OK次に進んでください」を受領。対象差分のcommit・push、draft PR作成、それに伴うLinux CI検証を次工程として実施する。上記の初回ローカル限定境界はこの範囲に限り更新する。merge・本番デプロイ・トラックB・再審査・Issue終了は別ゲートとする。最終公開確認の文言は公開承認を受ける段階で確定する。
+
+## 2026-09-04 公開承認
+
+最新commitのLinux CI成功を報告し、「次は公開文言・公開日の確定と、merge・本番デプロイの承認」と提示した後、ユーザーから「OK次に進んで」を受領した。公開内容と公開日を2026-09-04として確定し、最終文言のCI成功、PR #8のmerge、既存production Workerの更新と公開検証まで実施する。トラックB、再審査、Issue終了は対象外。
+
+本番対象は既存 `bearworks-portal`。現行deploymentとversion、secretのbinding名、公開route/Access/ads.txtを確認してから、公開publisher IDをbuildプロセス内で設定する。IDはpublic/ads.txtと本番配信の一致を確認して導出し、ダミーIDが含まれるbundleはdeployしない。runtime secret値は読み取らない。
+
+既存runbookに沿い、直前versionをローカルの非追跡記録で保持する。更新後の予期しない404、広告境界違反、5xx、Access保護の退行、または10分以内に公開smokeを完了できない場合は検証済み直前versionへ戻す。Access迂回・漏洩・DNS/TLS障害があればrunbookのPages fallback手順を優先する。正常時はRoute、DNS、Access、Pages、staging、secretを変更しない。

@@ -65,7 +65,8 @@ for (const problem of problems) {
     assert(html.includes(`href="${escape(ref.url)}"`), `${path} reference link`);
   }
   if (expectedNewSlugs.includes(problem.slug)) {
-    assert(html.includes("最終公開内容の承認待ち"), `${path} pending publication review`);
+    assert(html.includes("2026-09-04に公開内容を承認"), `${path} publication approval`);
+    assert(!html.includes("最終公開内容の承認待ち") && !html.includes("公開前の検証版"), `${path} no draft notice`);
     assert(!html.includes("5例題の公開commit"), `${path} must not inherit old publication evidence`);
     if (problem.frequencyTable) {
       assert.equal(problem.frequencyTable.rows.length, 3);
