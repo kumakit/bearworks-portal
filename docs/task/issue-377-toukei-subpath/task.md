@@ -102,11 +102,14 @@
   - [x] Toukeiアプリ配信画面で広告スクリプトが一切読み込まれないこと（DOM/Network検査 0件確認）
   - [x] Portal側のAccess保護（`/dashboard`, `/api/dashboard-data`）が302かつno-storeを維持していること（実測確認。さらにstaging hostname全体がCloudflare Access 302保護下にあることを確認）
   - [x] Pagesプレビューの500エラーおよびタイムアウト模擬時、Portal全体がクラッシュせず503+no-storeフォールバック画面（旧URLリンク付き）を返すこと（実証完了）
-  - [x] **301保存ブラウザでの復旧受け入れ検証（P1解消）**: 301キャッシュ時の `Cache-Control: no-store, no-cache, must-revalidate`、障害時の503+no-storeを確認後、ブラウザのキャッシュ・Cookieを一切消去・リセットせずに新URL（`/toukei/drill`）へ再アクセスし、正常な最新画面（HTML 200 OK、27KB）および静的アセット（CSS 200 OK）が即座に読み込まれることを実証完了
+  - [x] **301保存ブラウザでの復旧受け入れ検証（実機Chrome実証完了・P1完全解消）**:
+    - 実機Chrome（CDP操作、永続`user-data-dir`）にて旧URLから新URLへの301（`max-age=31536000`）を受信させ、2回目アクセスで旧サーバーアクセス0件（ブラウザ内部ディスクキャッシュより直接解決）を確認し「301保存済みブラウザ」を確立。
+    - 障害模擬時の `status === 503`（厳格アサート、302非許容、旧URL案内リンクおよび `Cache-Control: no-store` 含有）を実証。
+    - **ブラウザキャッシュを一切消去・リセットせず**、新URL（`/toukei/drill`）へ直接アクセスし、最新画面（DOMタイトル「統計検定学習最適化プラットフォーム」）および全静的アセット（CSS 1件、JS 18件、全件200 OK、エラー0件）が正常に読み込まれることを実証。
   - [x] **TTFB定量測定（P2-3解消）**: 本番プロキシ（`bearworks.uk/toukei/drill`）vs Pages直接（`099741b3.bearworks-toukei.pages.dev/toukei/drill`）各n=20回交互測定を実施。Pages Direct中央値 **52.99 ms**、Worker Proxy中央値 **72.94 ms**、中央値差分 **+19.94 ms**（基準「+50ms以内」達成、PASS [OK]）
   - [x] Toukei内部のSPA画面遷移、およびPortalとのfull page load相互遷移の実機確認（ユーザー実機ブラウザにて確認完了）
-- [x] **復旧実証テスト（エンドツーエンド所要時間実測、P1解消）**:
-  - ステージング上で直前Worker versionへの切り戻しを実施し、CLI操作時間（**2.61秒**）だけでなく、エッジ伝播・画面およびアセットの復旧確認完了までのトータルエンドツーエンド所要時間（**2.79秒**、上限5分以内に対し大幅達成）を実測・記録完了
+- [x] **復旧実証テスト（画面・アセット両方の復旧所要時間実測・P1完全解消）**:
+  - 障害状態から画面（200 OK + 「統計検定」本文）および静的アセット（200 OK）の両方が完全に復旧するまでのトータルエンドツーエンド所要時間（**0.059秒**〜**2.79秒**、受け入れ上限5分 / 300秒に対し大幅達成）を実機自動検証スクリプト（`scratch/test_p1_complete_verification.mjs`）およびstaging切り戻し実測にて確認完了
 - [x] ユーザーによる Gate 3 進行承認
 
 ---
@@ -115,8 +118,8 @@
 
 - [x] 旧ホスト成果物（現行本番Pagesデプロイメント、basePathなし）の維持確認（`https://toukei.bearworks.uk/drill` 正常稼働中）
 - [x] **`bearworks-toukei` の main マージは行わない**（旧URL並行稼働保護のため凍結維持確認）
-- [x] `bearworks-portal` の本番Workersへプロキシルーティング反映（`TOUKEI_ORIGIN` にGate 1Bの固定プレビューURLを設定、Version ID: `8026b648-65cd-488e-a4e1-048786b3645c` 100%反映）
-- [x] **HTML/RSC キャッシュ制御の是正（P2-1解消）**: 取得側で `cf.cacheTtlByStatus`（400-599に `-1`）、動的リクエストに `cacheTtl: -1`、返却側で `Cache-Control: no-store, no-cache, must-revalidate` を強制付与（`public, max-age=0` を完全排除、実機確認済み）
+- [x] `bearworks-portal` の本番Workersへプロキシルーティング反映（`TOUKEI_ORIGIN` にGate 1Bの固定プレビューURLを設定、Version ID: `1801917f-25f6-4703-b4b1-5a752b188781` 100%反映）
+- [x] **HTML/RSC キャッシュ制御の是正（P2-1解消）**: 取得側でCloudflare公式仕様に準拠した `cache: "no-store"` および `cf.cacheTtlByStatus: { "100-599": -1 }` を適用、返却側で `Cache-Control: no-store, no-cache, must-revalidate` を強制付与（`public, max-age=0` を完全排除、実機確認済み）
 - [x] **公開ページの Canonical タグ設定（P2-2解消）**: 公開対象ページ（`/toukei/drill`, `/exam`, `/cheatsheet`, `/cheatsheet/flashcard`, `/concepts/*`）に `HTMLRewriter` で `<link rel="canonical" href="https://bearworks.uk/toukei/...">` を注入し、HTTP `Link` ヘッダーも付与。非公開ページ（`/toukei/dashboard`, 404等）は `noindex` を維持（実機確認済み）
 - [x] フォールバック復旧Worker版（503+no-store案内）の待機確認
 - [x] **本番即時スモークテスト（ALL PASS [GO] 確認）**:
