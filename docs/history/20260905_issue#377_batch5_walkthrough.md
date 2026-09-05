@@ -154,13 +154,31 @@ Codexより総合判定【合格（GO）】を受領し、指示に従って以�
 1. **制作情報の公開確定更新**:
    - `lib/content-provenance.ts`: `finalReviewedBy` を `"kuma / bearworks.uk"` に確定し、`humanReview` に「運営者が公式テキスト・問題集に基づく未出題5問の構成案を承認し、独立検算・Codexレビュー【合格】・Linux CI合格を踏まえて、最終公開内容を承認しました。専門家による第三者査読ではありません。」を記録。
    - `scripts/verify-toukei-pages.mjs`: バッチ5問（問26〜30）のアサーションを「運営者が公開内容を承認しました」かつ「公開承認待ち・ドラフト告知なし」に同期。
+   - commit `fb92d49` 作成・push。
 2. **Draft PR #13 を Ready for Review 化しマージ**:
-   - 変更を commit/push 後、`gh pr ready 13` を実行。
-   - Linux clean-checkout CI の完全通過を確認後、`gh pr merge 13 --merge --delete-branch` で `main` にマージ。
+   - `gh pr ready 13` を実行。
+   - GitHub Actions Linux clean-checkout CI [Run 33960101155](https://github.com/kumakit/bearworks-portal/actions/runs/33960101155)（1分3秒）にて全ステップ完全合格（ALL PASS）。
+   - `gh pr merge 13 --merge --delete-branch` で `main` にマージ完了（Merge commit: `ccfa9b7`）。
+   - `git checkout main` & `git pull origin main` で同期。
 3. **本番ビルド・静的キャッシュ投入・Cloudflare Worker デプロイ**:
-   - `$env:NEXT_PUBLIC_ADSENSE_CLIENT_ID="ca-pub-9560028085973137"; npm run cf:build`
-   - `npx opennextjs-cloudflare populateCache local --env ""`
-   - `npx wrangler deploy --dry-run --env=""`（107 assets、`TOUKEI_ORIGIN` バインド確認）
-   - `npx opennextjs-cloudflare deploy --env "" --keep-vars`
-4. **本番スモークテストの実施**:
-   - 全30問（問1〜30）個別ページ、一覧ページ、sitemap（47 URLs）、トラックB（`https://bearworks.uk/toukei/drill`）の稼働、本番広告ID掲載、問26〜30固有要素の検証。
+   - 本番広告ID指定ビルド: `$env:NEXT_PUBLIC_ADSENSE_CLIENT_ID="ca-pub-9560028085973137"; npm run cf:build`（PASS、57静的ページ生成）
+   - 静的キャッシュ投入: `npx opennextjs-cloudflare populateCache local --env ""`（PASS）
+   - Dry-run検証: `npx wrangler deploy --dry-run --env=""`（PASS、107 assets、`TOUKEI_ORIGIN` バインド維持確認）
+   - Cloudflare Workers 本番デプロイ: `npx opennextjs-cloudflare deploy --env "" --keep-vars`
+   - **公開バージョン**: `f2c7a44a-2dfa-423b-9bc3-3e1aaf4bcfde`（100%トラフィック稼働中）
+   - **直前ロールバック先**: `7888ab5e-4be8-4db0-9e25-26d76eaad618`
+4. **本番スモークテストの実施・完全合格（ALL GREEN）**:
+   - 実行スクリプト: `scratch/test_batch5_prod_smoke.mjs`
+   - **問題一覧（`/toukei/problems`）**: HTTP 200、全30問リンク存在確認、本番広告ID（`ca-pub-9560028085973137`）掲載確認
+   - **全30問（問1〜問30）個別ページ**: 全30ページ HTTP 200、本番広告ID掲載、ダミーIDなし、canonical URL完全一致
+   - **第5バッチ固有検証（問26〜問30）**:
+     - 問26（母比率の差）: プール比率 $0.105$、標準誤差 $0.019388$、$z = 2.58$、$p = 0.0099$、無作為割付け・独立性明記、NIST PRC 7.3.3 出典確認、制作情報承認済み確認
+     - 問27（指数分布）: 期待値 $10.0$ 分、$P(X \ge 0.25) \approx 0.2231$、無記憶性、NIST EDA 1.3.6.6.7 出典確認、制作情報承認済み確認
+     - 問28（時系列分析）: 3日移動平均 $40.0, 42.0$、ラグ1自己相関 $r_1 = 0.100$、誤答値 $0.156$（5項平方和 $405.0$）、小標本一般化留保、NIST EDA 1.3.5.12 出典確認、制作情報承認済み確認
+     - 問29（二元配置ANOVA）: $F_{AB} = 6.00 > 4.49$、交互作用有意、独立性・正規性・等分散性前提明記、$MS_E$ のみ共通誤差分散推定量、NIST PRC 7.4.3.8 出典確認、制作情報承認済み確認
+     - 問30（重回帰診断・ダミー変数）: $VIF = 2.78$、標準誤差 $1.67$ 倍、ダミー変数2個、ダミー変数の罠、Penn State STAT 462 出典・scikit-learn 出典確認、制作情報承認済み確認
+     - 全第5バッチ問題で「運営者が公開内容を承認しました」が掲載され、「公開承認待ち」「公開前の検証版」等のドラフト告知が存在しないことを確認
+   - **Sitemap（`/sitemap.xml`）**: HTTP 200、全47 URLユニーク存在確認（全30問、全8ガイド、八王子気候記事、トップ、他ページ完全一致）
+   - **非広告ページ広告非掲載**: `/about`, `/contact`, `/privacy`, `/weather`, `/dashboard`, `/ai-news` および 404ルート2件で広告コード一切非掲載を確認
+   - **トラックB並行稼働プロキシ**: `/toukei/drill`, `/toukei/exam`, `/toukei/cheatsheet` が HTTP 200 正常応答し、広告ID非掲載を確認
+   - **保護ルート**: `/dashboard` が Cloudflare Access へ 302 リダイレクトされ、`no-store` キャッシュヘッダーが付与されていることを確認
