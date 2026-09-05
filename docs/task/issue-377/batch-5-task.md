@@ -11,8 +11,8 @@
 - [x] OpenNext静的キャッシュ生成とWrangler dry-run（`populateCache`, `deploy --dry-run`）
 - [x] Next.js localおよびWorkers localで全30問・47 URL・広告境界を検証
 - [x] 全差分と検証結果をwalkthrough（`docs/history/20260905_issue#377_batch5_walkthrough.md`）へ記録
-- [ ] Codex監査レビューの実施と判定受領
-- [ ] ユーザー承認後のcommit・push・Draft PR・Linux clean-checkout CI
+- [x] Codex監査レビューの実施と判定受領（総合判定【合格（GO）】）
+- [x] commit（`8f7b234`）・push・Draft PR（[#13](https://github.com/kumakit/bearworks-portal/pull/13)）・Linux clean-checkout CI（[Run 33959902229](https://github.com/kumakit/bearworks-portal/actions/runs/33959902229) 完全合格）
 - [ ] 最終公開承認後の制作情報確定、merge・本番Worker公開・スモークテスト全件検証
 
-結果: `docs/history/20260905_issue#377_batch5_walkthrough.md`。ローカル実装・独立検算・静的ビルド・Next.js配信検証（全30問・sitemap 47 URL・広告境界完全一致）が完了。Codex監査レビュー待ち。
+結果: `docs/history/20260905_issue#377_batch5_walkthrough.md`。ローカル実装・独立検算・静的ビルド・Next.js配信検証、Codex監査レビュー【合格（GO）】、Draft PR #13作成、Linux clean-checkout CI全ステップPASSまで完了。運営者の最終公開承認待ち。

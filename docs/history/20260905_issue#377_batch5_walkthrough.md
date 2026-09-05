@@ -127,3 +127,32 @@ Codexによる学術レビュー・実装監査を受領し、指摘されたP1�
 7. `npx wrangler deploy --dry-run --env=""`: **PASS**（107 assets、`env.TOUKEI_ORIGIN` バインド維持確認＝トラックB非破壊）
 8. `node scripts/verify-toukei-pages.mjs http://127.0.0.1:3111`: **ALL PASS**（全30問の静的配信、本文・与件・解法・誤答・canonical・ガイドリンク・新出典URL・制作情報承認待ち表示、非広告ページ6件、無効/404ルート3件、`sitemap.xml` 47件ユニークURL完全一致）
 
+## コミット・プッシュ・Draft PR・Linux CI通過（2026-09-05）
+
+Codexより総合判定【合格（GO）】を受領し、指示に従って以下を実行した。
+
+1. **明示的ステージとコミット**:
+   - 対象6ファイル（`problem-data.ts`, `content-provenance.ts`, `verify-toukei-pages.mjs`, `verify-toukei-batch5.py`, `batch-5-task.md`, 本ファイル）を明示的に stage し、commit `8f7b234` を作成。
+2. **プッシュとDraft PR作成**:
+   - ブランチ `codex/issue-377-problems-batch-5` を `origin` へ push し、Draft [PR #13](https://github.com/kumakit/bearworks-portal/pull/13)（`feat(toukei): add batch 5 problems (Q26-Q30) completing all 30 problems (Issue #377)`）を作成。
+3. **Linux clean-checkout CI 通過**:
+   - [Linux CI Run 33959902229](https://github.com/kumakit/bearworks-portal/actions/runs/33959902229)（1分31秒）にて、以下の全チェックが完全合格（PASS）した：
+     - Install dependencies: PASS
+     - Validate Hachioji climate publication bundle: PASS
+     - Lint: PASS
+     - Build Next.js: PASS
+     - Verify internal link prefetch policy: PASS
+     - Build Workers bundle: PASS
+     - Validate Workers bundle: PASS
+     - Validate staging Workers bundle: PASS
+     - Verify Workers preview routes: PASS
+
+## 次のゲート
+
+本番公開に向けた残ステップ：
+1. 運営者による最終公開承認
+2. 制作情報（`lib/content-provenance.ts`）を「運営者が公開内容を承認しました」へ確定更新し、`scripts/verify-toukei-pages.mjs` を同期
+3. commit, push, PR #13 を ready化して merge
+4. 本番広告ID付き本番ビルド・静的キャッシュ投入・Worker本番デプロイ
+5. 本番スモークテスト（全30問・sitemap 47 URL・トラックB並行稼働）の検証
+
