@@ -183,6 +183,33 @@ export const toukeiProblemBatch3Provenance: ContentProvenance = {
   }],
 };
 
+export const toukeiProblemBatch4Provenance: ContentProvenance = {
+  writtenBy: "kuma / bearworks.uk（問題設計・テーマ指定）",
+  checkedBy: "Antigravity（問題作成・独立検算・実装確認）、Codex（学術レビュー・実装監査）",
+  finalReviewedBy: "kuma / bearworks.uk",
+  aiUsage:
+    "第4バッチ（問21〜25）は公式参考書・問題集の未出題重要論点（物価指数、チェビシェフの不等式、幾何分布、過誤と検出力、フィッシャーの3原則）に基づき、Antigravityが問題・与件・解説・誤答分析を独自に設計・作成し、PythonとSciPyで独立検算しました。Codexが統計学・表記・出典の整合性を読み取り専用で監査・レビューし、指摘事項の反映を確認しました。",
+  humanReview:
+    "運営者が公式テキスト・問題集に基づく未出題5問の構成案を確認し、独立検算・Codexレビュー指摘反映・Linux配信検証の結果を踏まえて、最終公開内容を承認しました。専門家による第三者査読ではありません。",
+  evidenceLinks: [
+    {
+      title: "統計検定2級の公式出題範囲",
+      url: "https://www.toukei-kentei.jp/grade/grade2/",
+      description: "分野の対応を確認する参照資料です。公式問題の転載ではありません。",
+    },
+    {
+      title: "編集・作問方針",
+      url: "/toukei/methodology",
+      description: "オリジナル例題の作成・確認・訂正方針です。",
+    },
+  ],
+  revisions: [{
+    date: "2026-09-05",
+    kind: "初版",
+    summary: "第4バッチ5問をAntigravityが独自設計・実装・SciPy検算し、Codexレビュー指摘（出典URL・解説厳密化）を反映して運営者が公開内容を承認しました。",
+  }],
+};
+
 export const hachiojiClimateProvenance: ContentProvenance = {
   writtenBy: "kuma / bearworks.uk",
   checkedBy: "kuma / bearworks.uk（公式画面との照合、独立計算、品質判定）",

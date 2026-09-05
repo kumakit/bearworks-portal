@@ -1,6 +1,12 @@
 import type { GuideSlug } from "../guides/guide-data";
 import type { ContentProvenance } from "@/lib/content-provenance";
-import { toukeiProblemProvenance, toukeiProblemBatch1Provenance, toukeiProblemBatch2Provenance, toukeiProblemBatch3Provenance } from "@/lib/content-provenance";
+import {
+  toukeiProblemProvenance,
+  toukeiProblemBatch1Provenance,
+  toukeiProblemBatch2Provenance,
+  toukeiProblemBatch3Provenance,
+  toukeiProblemBatch4Provenance,
+} from "@/lib/content-provenance";
 
 export interface Reference {
   title: string;
@@ -1372,6 +1378,337 @@ export const problems: Problem[] = [
     references: [
       { title: "統計検定2級公式出題範囲", url: "https://www.toukei-kentei.jp/grade/grade2/" },
       { title: "NIST：Confidence Limits for the Population Variance", url: "https://www.itl.nist.gov/div898/handbook/eda/section3/eda358.htm" }
+    ]
+  },
+  {
+    slug: "laspeyres-paasche-price-index",
+    title: "ラスパイレス物価指数とパーシェ物価指数（物価指数の計算と性質）",
+    description: "2期間における複数品目の価格と数量データから、基準時加重のラスパイレス物価指数を算出し、パーシェ指数との比較や代替効果（上方バイアス）の性質を理解します。",
+    concepts: ["物価指数", "ラスパイレス指数", "パーシェ指数", "基準時加重", "代替効果"],
+    question: "ある地域の家計消費における2品目（品目A：食料品、品目B：日用品）について、2020年（基準年 t=0）および2025年（比較年 t=1）の価格と年間購入数量を調査したところ、以下の表の通りであった。基準年の物価水準を100とした場合の、2025年における「ラスパイレス物価指数」の値を求め、小数第1位まで四捨五入しなさい。また、パーシェ物価指数との性質の違いについても理解を深めなさい。",
+    frequencyTable: {
+      caption: "品目別の価格と購入数量（基準年と比較年）",
+      columns: ["品目", "基準年 価格 (p_0)", "基準年 数量 (q_0)", "比較年 価格 (p_1)", "比較年 数量 (q_1)"],
+      rows: [
+        ["品目A（食料品）", "200円", "50個", "250円", "40個"],
+        ["品目B（日用品）", "150円", "40個", "180円", "50個"]
+      ]
+    },
+    givenValues: [
+      { label: "品目A 基準年価格 (p_{0,A})", value: "200円" },
+      { label: "品目A 基準年数量 (q_{0,A})", value: "50個" },
+      { label: "品目A 比較年価格 (p_{1,A})", value: "250円" },
+      { label: "品目A 比較年数量 (q_{1,A})", value: "40個" },
+      { label: "品目B 基準年価格 (p_{0,B})", value: "150円" },
+      { label: "品目B 基準年数量 (q_{0,B})", value: "40個" },
+      { label: "品目B 比較年価格 (p_{1,B})", value: "180円" },
+      { label: "品目B 比較年数量 (q_{1,B})", value: "50個" }
+    ],
+    solutionSteps: [
+      {
+        label: "基準年の総支出額（分母）の算出",
+        expression: "Σ(p_0 * q_0) = 200 * 50 + 150 * 40 = 10,000 + 6,000 = 16,000円",
+        description: "基準年（2020年）における各品目の価格に基準年の数量を乗じて合計します。これがラスパイレス指数の分母（基準年基準のバスケット費用）となります。"
+      },
+      {
+        label: "基準年数量による比較年の総支出額（分子）の算出",
+        expression: "Σ(p_1 * q_0) = 250 * 50 + 180 * 40 = 12,500 + 7,200 = 19,700円",
+        description: "比較年（2025年）の新しい価格に対し、ウエイトとして『基準年の数量（q_0）』を固定して乗じます。数量を固定することで純粋な価格変動のみを抽出します。"
+      },
+      {
+        label: "ラスパイレス物価指数の計算",
+        expression: "I_L = [Σ(p_1 * q_0) / Σ(p_0 * q_0)] * 100 = (19,700 / 16,000) * 100 = 123.125 ≒ 123.1",
+        description: "分子を分母で割り100を乗じると 123.125 となり、小数第1位に四捨五入して 123.1 となります。"
+      },
+      {
+        label: "パーシェ指数との比較と上方バイアスの解釈",
+        expression: "パーシェ指数: I_P = [Σ(p_1 * q_1) / Σ(p_0 * q_1)] * 100 = (19,000 / 15,500) * 100 ≒ 122.6",
+        description: "比較年の数量で加重するパーシェ指数（122.6）と比較すると、本問の集計値では I_L > I_P となります。一般論として、価格体系の変化に伴い消費者が相対的に安価な品目へ支出をシフト（代替）する場合、基準年の購入数量を固定するラスパイレス指数は、効用を一定に保つ真の生計費指数の上昇率に対して上方バイアス（高めの見積もり）を持ちやすい性質が知られています。"
+      }
+    ],
+    finalAnswer: "2025年におけるラスパイレス物価指数は 123.1 である。（本問ではパーシェ物価指数 122.6 を上回る。一般に相対価格の変化に伴う消費者の代替行動がある場合、基準年数量で固定するラスパイレス指数は生計費の上昇率を高めに評価する傾向がある）",
+    distractors: [
+      {
+        value: "122.6（パーシェ物価指数の計算式を用いてしまった場合）",
+        reason: "比較年の購入数量 q_1 をウエイトとして用いるとパーシェ指数 (19,000 / 15,500) * 100 ≒ 122.6 となります。ラスパイレス指数は基準年の数量 q_0 をウエイトとする必要があります。"
+      },
+      {
+        value: "122.5（各品目の単純な価格比の平均を計算した場合）",
+        reason: "品目Aの価格比 250/200 = 1.25 と品目Bの価格比 180/150 = 1.20 の単純算術平均 (1.25 + 1.20)/2 * 100 = 122.5 を求めてしまう誤りです。家計支出に占める各品目の金額ウエイトを考慮していません。"
+      },
+      {
+        value: "ラスパイレス指数は消費者の代替行動を反映するため、パーシェ指数よりも物価上昇を低く見積もるという誤認",
+        reason: "ラスパイレス指数は基準年の消費バスケットを固定するため、相対的に価格が上がった品目を減らし安価な品目を増やすような消費者の『代替効果』を反映できず、生計費の上昇率を過大評価（高く評価）しやすい傾向があります。"
+      }
+    ],
+    relatedGuideSlugs: ["cbt-time-management", "learning-roadmap"],
+    appLinks: [
+      { title: "分野別ドリルで「記述統計・指数」を練習する", url: "https://bearworks.uk/toukei/drill" },
+      { title: "CBT模擬試験で総合演習する", url: "https://bearworks.uk/toukei/exam" }
+    ],
+    author: "kuma / bearworks.uk",
+    publishedAt: "2026-09-05",
+    reviewedAt: "2026-09-05",
+    provenance: toukeiProblemBatch4Provenance,
+    references: [
+      { title: "統計検定2級公式出題範囲", url: "https://www.toukei-kentei.jp/grade/grade2/" },
+      { title: "総務省統計局：消費者物価指数の計算方法（ラスパイレス算式）", url: "https://www.stat.go.jp/data/cpi/4-1.html" }
+    ]
+  },
+  {
+    slug: "chebyshev-inequality",
+    title: "チェビシェフの不等式（未知の分布における確率下限評価）",
+    description: "正規分布かどうかを含め分布の形状が未知であるデータにおいて、平均と標準偏差のみを用いて特定区間にデータが含まれる確率の下限を評価します。",
+    concepts: ["チェビシェフの不等式", "確率不等式", "大数の法則", "母集団分布", "標準偏差"],
+    question: "あるEC物流センターにおける注文確定から出荷までの処理時間 X（分）について、過去の全ログから平均が μ = 45.0 分、標準偏差が σ = 6.0 分であることが分かっている。ただし、混雑度や品目特性の影響により、処理時間の分布は正規分布に従うとは限らず、分布の具体的な形状は未知である。チェビシェフの不等式を用いて、処理時間 X が 30.0分以上 60.0分以下（すなわち |X - 45.0| ≤ 15.0）に収まる確率の下限を求めなさい。",
+    givenValues: [
+      { label: "母平均 (μ)", value: "45.0 分" },
+      { label: "母標準偏差 (σ)", value: "6.0 分" },
+      { label: "対象区間の下限", value: "30.0 分" },
+      { label: "対象区間の上限", value: "60.0 分" },
+      { label: "平均からの最大許容乖離幅", value: "15.0 分" }
+    ],
+    solutionSteps: [
+      {
+        label: "平均からの乖離幅と標準偏差の倍数 k の特定",
+        expression: "区間の幅: |X - 45.0| ≤ 15.0,  k = 15.0 / σ = 15.0 / 6.0 = 2.5",
+        description: "対象区間 [30.0, 60.0] は平均 45.0 を中心に対称であり、乖離幅は 15.0 です。標準偏差 σ = 6.0 で割ると k = 2.5 となります。"
+      },
+      {
+        label: "チェビシェフの不等式の適用",
+        expression: "P(|X - μ| ≤ kσ) ≥ P(|X - μ| < kσ) ≥ 1 - 1 / k²",
+        description: "チェビシェフの不等式は、平均と分散が存在する任意の確率分布に対して成立します。はみ出す確率の上限 P(|X - μ| ≥ kσ) ≤ 1/k² の余事象 P(|X - μ| < kσ) ≥ 1 - 1/k² に対し、閉区間 |X - μ| ≤ kσ は開区間を含むため、確率下限として 1 - 1/k² がそのまま適用されます。"
+      },
+      {
+        label: "下限確率の算出",
+        expression: "1 - 1 / (2.5)² = 1 - 1 / 6.25 = 1 - 0.16 = 0.84（84.0%）",
+        description: "k = 2.5 を代入して計算すると 0.84 となり、少なくとも 84.0% の確率で処理時間は 30.0分〜60.0分の間に収まることが示されます。"
+      },
+      {
+        label: "正規分布との比較と普遍性の解釈",
+        expression: "正規分布の場合: P(|X - μ| ≤ 2.5σ) ≒ 0.9876（約98.8%）",
+        description: "正規分布を仮定できる場合は約98.8%となりますが、チェビシェフの不等式は左右非対称や多峰性などの極端な分布であっても『どんな分布でも最低84.0%は確保される』という保守的な確率下限（安全限界）を提供します。"
+      }
+    ],
+    finalAnswer: "処理時間が30.0分以上60.0分以下に収まる確率の下限は 0.84（84.0%以上）である。",
+    distractors: [
+      {
+        value: "0.16（16.0%）",
+        reason: "区間の外側にはみ出す確率の上限 P(|X - μ| ≥ kσ) ≤ 1/k² = 1/6.25 = 0.16 を答えてしまう誤りです。設問は『区間内に収まる確率の下限』を求めているため、1 から引く必要があります。"
+      },
+      {
+        value: "0.75（75.0%）",
+        reason: "k = 2 と勘違いして 1 - 1/2² = 1 - 0.25 = 0.75 を計算してしまう誤りです。乖離幅 15.0 を標準偏差 6.0 で割ると k = 2.5 となります。"
+      },
+      {
+        value: "約 0.988（98.8%）",
+        reason: "母集団が正規分布に従うと勝手に仮定して標準正規分布表から求めてしまう誤りです。問題文で分布の形状は未知と明記されており、正規分布を仮定することはできません。"
+      }
+    ],
+    relatedGuideSlugs: ["distribution-selection", "learning-roadmap"],
+    appLinks: [
+      { title: "分野別ドリルで「確率分布」を練習する", url: "https://bearworks.uk/toukei/drill" },
+      { title: "チートシートで大数の法則・確率不等式を確認する", url: "https://bearworks.uk/toukei/cheatsheet" }
+    ],
+    author: "kuma / bearworks.uk",
+    publishedAt: "2026-09-05",
+    reviewedAt: "2026-09-05",
+    provenance: toukeiProblemBatch4Provenance,
+    references: [
+      { title: "統計検定2級公式出題範囲", url: "https://www.toukei-kentei.jp/grade/grade2/" },
+      { title: "NIST：Approximate intervals that contain most of the population values (Bienaymé-Chebyshev rule)", url: "https://www.itl.nist.gov/div898/handbook/prc/section2/prc261.htm" }
+    ]
+  },
+  {
+    slug: "geometric-distribution",
+    title: "幾何分布（初回成功までの試行回数と無記憶性）",
+    description: "成功確率が一定の独立なベルヌーイ試行において、初めて成功するまでに要する試行回数の確率、期待値、および無記憶性の性質を理解します。",
+    concepts: ["幾何分布", "ベルヌーイ試行", "期待値", "分散", "無記憶性"],
+    question: "ある情報セキュリティ監査において、ペネトレーションテスト（侵入テスト）を実施している。システムの特定の潜在的脆弱性を1回の攻撃試行で検知・突破できる確率を p = 0.20 とする。各回の試行は互いに独立であり、試行ごとに条件は変化しないものとする。\n(1) ちょうど 4回目の試行で初めて突破に成功する確率を求めなさい。\n(2) 初めて突破に成功するまでに必要な試行回数の期待値（平均回数）を求めなさい。",
+    givenValues: [
+      { label: "1回の試行における成功確率 (p)", value: "0.20" },
+      { label: "1回の試行における失敗確率 (q = 1 - p)", value: "0.80" },
+      { label: "初回成功の試行回数 (k)", value: "4" }
+    ],
+    solutionSteps: [
+      {
+        label: "幾何分布の確率関数の適用",
+        expression: "P(X = k) = (1 - p)^(k - 1) * p",
+        description: "最初の k - 1 回連続で失敗し、k 回目に初めて成功する確率です。試行順序が『失敗・失敗・…・失敗・成功』と一意に決まるため、二項係数（組み合わせ数）は乗じません。"
+      },
+      {
+        label: "4回目で初成功する確率の計算",
+        expression: "P(X = 4) = (0.80)³ * 0.20 = 0.512 * 0.20 = 0.1024",
+        description: "3回連続で失敗する確率 (0.80)³ = 0.512 に、4回目に成功する確率 0.20 を乗じて 0.1024（約10.2%）となります。"
+      },
+      {
+        label: "初回成功までの試行回数の期待値の算出",
+        expression: "E(X) = 1 / p = 1 / 0.20 = 5.0 回",
+        description: "幾何分布の期待値は成功確率の逆数 1/p で表されます。成功確率が 20%（1/5）であれば、平均して 5回の試行が必要となります。"
+      },
+      {
+        label: "幾何分布の無記憶性の解釈",
+        expression: "P(X > s + t | X > s) = P(X > t)",
+        description: "例えばすでに3回連続で失敗したという条件のもとでも、あと何回で成功するかの確率分布は最初の状態と全く同じです。過去の失敗回数は将来の成功確率に一切影響を与えません（『そろそろ当たるはず』というギャンブラーの誤謬を否定する統計的根拠です）。"
+      }
+    ],
+    finalAnswer: "(1) 4回目で初めて成功する確率は 0.1024（約10.2%）、(2) 初めて成功するまでの平均試行回数（期待値）は 5.0回 である。",
+    distractors: [
+      {
+        value: "P(X = 4) = 0.4096, E(X) = 5.0",
+        reason: "二項係数 4C1 = 4 を掛けてしまい、4回中1回成功する二項分布の確率 4 * (0.80)³ * 0.20 = 0.4096 と混同する典型的な誤りです。幾何分布では最後の4回目のみが成功と位置が固定されています。"
+      },
+      {
+        value: "P(X = 4) = 0.0819, E(X) = 5.0",
+        reason: "(0.80)⁴ * 0.20 = 0.08192 と計算し、4回失敗して5回目に成功する確率と試行回数を1回分ずらしてしまう誤りです。"
+      },
+      {
+        value: "P(X = 4) = 0.1024, E(X) = 4.0",
+        reason: "初成功までに『失敗する回数の期待値』 (1 - p)/p = 0.80 / 0.20 = 4.0回 と、成功した回を含む『全試行回数の期待値』 1/p = 5.0回 を混同する誤りです。"
+      }
+    ],
+    relatedGuideSlugs: ["distribution-selection", "learning-roadmap"],
+    appLinks: [
+      { title: "分野別ドリルで「離散型確率分布」を練習する", url: "https://bearworks.uk/toukei/drill" },
+      { title: "チートシートで確率分布の期待値・分散を比較する", url: "https://bearworks.uk/toukei/cheatsheet" }
+    ],
+    author: "kuma / bearworks.uk",
+    publishedAt: "2026-09-05",
+    reviewedAt: "2026-09-05",
+    provenance: toukeiProblemBatch4Provenance,
+    references: [
+      { title: "統計検定2級公式出題範囲", url: "https://www.toukei-kentei.jp/grade/grade2/" },
+      { title: "SciPy Tutorial：Geometric Distribution", url: "https://docs.scipy.org/doc/scipy/tutorial/stats/discrete_geom.html" }
+    ]
+  },
+  {
+    slug: "type-1-type-2-errors-power",
+    title: "第1種の過誤・第2種の過誤と検出力（仮説検定の意思決定理論）",
+    description: "仮説検定における有意水準（第1種の過誤 α）、第2種の過誤 β、および検出力（1 - β）の定義と計算手順を理解し、両者のトレードオフ関係を把握します。",
+    concepts: ["第1種の過誤", "第2種の過誤", "検出力", "有意水準", "片側検定", "棄却域"],
+    question: "ある精密機械工場で製造される金属ピンの直径 X は、分散 σ² = 4.0（標準偏差 σ = 2.0 mm）の正規分布に従う。設計基準の母平均は μ = 100.0 mm である。機械の経年変化によりピンの直径が基準より大きくなっていないかを監視するため、無作為に抽出した n = 25 本のピンの標本平均 X̄ を測定し、帰無仮説 H_0: μ = 100.0 に対し対立仮説 H_1: μ > 100.0 の片側検定を有意水準 α = 0.05 で行う。\n(1) 有意水準 α = 0.05 における標本平均 X̄ の棄却限界値を求めなさい。\n(2) 実際には機械の摩耗により真の母平均が μ_1 = 101.2 mm にシフトしていた場合、この検定において正しく帰無仮説を棄却できる確率（検出力 1 - β）を求めなさい。ただし、標準正規分布の上側5%点を z_0.05 = 1.645、累積分布関数として Φ(1.355) ≒ 0.9123 を用いなさい。",
+    givenValues: [
+      { label: "帰無仮説下の母平均 (μ_0)", value: "100.0 mm" },
+      { label: "対立仮説下の真の母平均 (μ_1)", value: "101.2 mm" },
+      { label: "母標準偏差 (σ)", value: "2.0 mm" },
+      { label: "標本サイズ (n)", value: "25" },
+      { label: "有意水準 (α)", value: "0.05（片側）" },
+      { label: "標準正規分布の上側5%点 (z_0.05)", value: "1.645" },
+      { label: "標準正規累積分布 Φ(1.355)", value: "0.9123" }
+    ],
+    solutionSteps: [
+      {
+        label: "標本平均 X̄ の標準誤差 SE の算出",
+        expression: "SE = σ / √n = 2.0 / √25 = 2.0 / 5 = 0.40 mm",
+        description: "標本サイズ 25 の標本平均のばらつき（標準誤差）は母標準偏差の 1/5 である 0.40 mm となります。"
+      },
+      {
+        label: "帰無仮説 H_0 の下での棄却限界値 x_c の決定",
+        expression: "x_c = μ_0 + z_0.05 * SE = 100.0 + 1.645 * 0.40 = 100.0 + 0.658 = 100.658 mm",
+        description: "有意水準 α = 0.05 の片側検定の棄却域は X̄ ≥ 100.658 mm です。標本平均がこの値以上であれば第1種の過誤（誤って棄却する確率）は 5% に抑えられます。"
+      },
+      {
+        label: "真の母平均 μ_1 = 101.2 の下での標準化",
+        expression: "z = (x_c - μ_1) / SE = (100.658 - 101.2) / 0.40 = -0.542 / 0.40 = -1.355",
+        description: "対立仮説が真であるとき、X̄ は平均 101.2、標準誤差 0.40 の正規分布に従います。棄却限界値 100.658 をこの真の分布で標準化すると z = -1.355 となります。"
+      },
+      {
+        label: "検出力 (1 - β) の算出と過誤のトレードオフ",
+        expression: "1 - β = P(Z ≥ -1.355) = P(Z ≤ 1.355) = Φ(1.355) ≒ 0.9123（約91.2%）",
+        description: "真に直径が 101.2 mm に太くなっている場合、この検定によって約91.2%の確率で異常を検出して帰無仮説を正しく棄却できます。見逃してしまう確率（第2種の過誤 β）は 1 - 0.9123 = 0.0877（約8.8%）です。標本サイズ n が一定のもとでは、有意水準 α を小さく厳しくするほど棄却限界値が右にずれて β が増大するトレードオフ関係にあります。α を保ったまま検出力 1 - β を高める（β を抑える）には、標本サイズ n を増やして標準誤差 SE = σ/√n を縮小させることが有効です。"
+      }
+    ],
+    finalAnswer: "(1) 棄却限界値は 100.658 mm である。(2) 真の母平均が 101.2 mm であるときの検出力（1 - β）は 約0.9123（約91.2%）である。（第2種の過誤 β は 約8.8%。αとβにはトレードオフがあり、両者を同時に改善するには標本サイズnの拡大が必要）",
+    distractors: [
+      {
+        value: "棄却限界値: 100.658 mm, 検出力: 0.0877",
+        reason: "第2種の過誤 β = 0.0877（異常を見逃す確率）そのものを検出力と取り違えてしまう誤りです。検出力は 1 - β = 0.9123 となります。"
+      },
+      {
+        value: "棄却限界値: 103.290 mm",
+        reason: "標準誤差 SE = σ / √n ではなく、母標準偏差 σ = 2.0 を直接用いて 100.0 + 1.645 * 2.0 = 103.29 と計算してしまう誤りです。標本平均の検定では √n で割る必要があります。"
+      },
+      {
+        value: "棄却限界値: 100.784 mm",
+        reason: "片側検定であるにもかかわらず、両側検定の臨界値 z_0.025 = 1.96 を用いて 100.0 + 1.96 * 0.40 = 100.784 と計算してしまう誤りです。"
+      }
+    ],
+    relatedGuideSlugs: ["hypothesis-testing-basics", "choosing-statistical-tests"],
+    appLinks: [
+      { title: "分野別ドリルで「仮説検定」を演習する", url: "https://bearworks.uk/toukei/drill" },
+      { title: "チートシートで検定統計量と臨界値を確認する", url: "https://bearworks.uk/toukei/cheatsheet" }
+    ],
+    author: "kuma / bearworks.uk",
+    publishedAt: "2026-09-05",
+    reviewedAt: "2026-09-05",
+    provenance: toukeiProblemBatch4Provenance,
+    references: [
+      { title: "統計検定2級公式出題範囲", url: "https://www.toukei-kentei.jp/grade/grade2/" },
+      { title: "NIST：What are statistical tests? (Significance levels and errors of the second kind)", url: "https://www.itl.nist.gov/div898/handbook/prc/section1/prc13.htm" }
+    ]
+  },
+  {
+    slug: "fishers-three-principles-experiment",
+    title: "実験計画法のフィッシャーの3原則（無作為化・反復・局所管理）",
+    description: "観察研究と対比される実験研究において、交絡因子や系統誤差を制御し因果効果を厳密に評価するための3大原則の役割と適用方法を理解します。",
+    concepts: ["実験計画法", "フィッシャーの3原則", "無作為化", "反復", "局所管理", "因果推論"],
+    question: "ある農業試験場で、東西方向に日照や土壌肥沃度の傾斜がある傾斜地圃場（東側ほど日当たりが良く肥沃で、西側ほど日陰で痩せている）を利用して、新型肥料Aと従来肥料Bのキャベツ収穫量への効果を比較する試験を計画している。全体で16区画（各肥料8区画ずつ）を確保できる。実験計画法における『フィッシャーの3原則』（無作為化、反復、局所管理）をこの試験に適用する際の記述として、統計学的に最も適切なものを1つ選びなさい。",
+    givenValues: [
+      { label: "比較対象", value: "新型肥料A vs 従来肥料B" },
+      { label: "総区画数", value: "16区画（肥料A 8区画、肥料B 8区画）" },
+      { label: "圃場の環境特性", value: "東西方向に日照・肥沃度の系統的傾斜あり" },
+      { label: "フィッシャーの3原則", value: "無作為化（Randomization）、反復（Replication）、局所管理（Local Control）" }
+    ],
+    solutionSteps: [
+      {
+        label: "局所管理（Local Control）の適用と役割",
+        expression: "圃場を環境が均一な4つのブロック（各4区画）に分割し、各ブロック内に肥料AとBを2区画ずつ配置する",
+        description: "東西方向の環境傾斜に応じて圃場を帯状にブロック化することで、日照や土壌による系統的なばらつき（ブロック間差）を分散分析で取り除き、実験誤差を縮小します。"
+      },
+      {
+        label: "無作為化（Randomization）の適用と役割",
+        expression: "各ブロック内の4区画に対し、肥料Aと肥料Bの配置を乱数等で無作為に割り振る",
+        description: "ブロック内に残る未知の土壌勾配や環境要因の影響について、処理割付けとの系統的な結びつきを断ち切り、期待値としての偏りを抑えて妥当な推論（検定）を可能にします（有限標本で完全に偏りがゼロになることを保証するわけではありません）。"
+      },
+      {
+        label: "反復（Replication）の適用と役割",
+        expression: "同一の肥料処理を複数回（全体で各8区画）繰り返して実施する",
+        description: "同一の処理を複数の独立した実験単位（区画）に適用することで、偶然誤差の大きさ（残差分散）を適切に評価し、効果推定の安定化と検定の検出力向上を図ります。"
+      },
+      {
+        label: "観察研究との違いと実験研究の意義",
+        expression: "研究者が介入（処理）を無作為割り付けすることで、選択バイアスや系統的交絡を緩和する",
+        description: "研究者が介入（処理）を人為的・無作為に割り付ける実験研究により、観察研究で生じやすい選択バイアスや既知・未知の系統的交絡を緩和し、より妥当な比較（因果推論）が可能になります。"
+      }
+    ],
+    finalAnswer: "局所管理により圃場を比較的均一なブロックに分けて系統的な環境勾配の影響を低減し、各ブロック内で処理を無作為化して系統的バイアスを抑制し、複数の独立した区画で反復を行うことで実験誤差を評価・低減する設計が最も適切である。",
+    distractors: [
+      {
+        value: "無作為化を行うことで、実験に含まれるあらゆる誤差や交絡因子の影響を完全にゼロに消去できる",
+        reason: "無作為化は未知の系統的偏りを偶然誤差へと分散させて期待値としての偏りを防ぐ手法であり、個別の標本で誤差そのものを消去してゼロにするわけではありません。"
+      },
+      {
+        value: "局所管理とは、実験全体を1つの巨大な単一区画としてまとめ、全ての測定を一元的に集中管理することである",
+        reason: "局所管理の本質は、実験場を『環境が均一な小ブロックに分割する（ブロック化）』ことで既知の系統的ばらつきを取り除く点にあります。"
+      },
+      {
+        value: "反復とは、1つの区画から収穫したキャベツの重さを1台の天秤で複数回量り直して平均を取ることで代替できる",
+        reason: "単一サンプルの測定反復（測定精度の向上）に過ぎず、異なる区画や生物個体間の偶然誤差（生物学的・環境的ばらつき）を評価する反復の代替にはなりません。"
+      }
+    ],
+    relatedGuideSlugs: ["sampling-and-bias", "choosing-statistical-tests"],
+    appLinks: [
+      { title: "分野別ドリルで「データ収集と実験計画」を演習する", url: "https://bearworks.uk/toukei/drill" },
+      { title: "学習ガイドで統計的調査・実験手法を確認する", url: "https://bearworks.uk/toukei/guides/sampling-and-bias" }
+    ],
+    author: "kuma / bearworks.uk",
+    publishedAt: "2026-09-05",
+    reviewedAt: "2026-09-05",
+    provenance: toukeiProblemBatch4Provenance,
+    references: [
+      { title: "統計検定2級公式出題範囲", url: "https://www.toukei-kentei.jp/grade/grade2/" },
+      { title: "NIST：Randomized Block Designs", url: "https://www.itl.nist.gov/div898/handbook/pri/section3/pri332.htm" },
+      { title: "NIST：A Glossary of DOE Terminology (Replication, Blocking, Randomization)", url: "https://www.itl.nist.gov/div898/handbook/pri/section7/pri7.htm" }
     ]
   }
 ];
