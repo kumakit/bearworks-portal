@@ -71,6 +71,35 @@ Windows、Node 24.14.1、Next.js 16.3.0、OpenNext 1.20.2、Wrangler 4.114.0。�
 
 最初のSciPy実行で、受領原稿のt検定p値想定とF検定p値想定が精密値の丸めに一致しないことを検出し、0.0200と0.0584へ修正後に全assertが成功した。OpenNextとページ検証の最初のサンドボックス実行はユーザーディレクトリへの読み書き制限で失敗し、同じコマンドを権限付きで再実行して成功した。アプリコードや依存関係を変えて回避していない。
 
-## 次の工程
+## 続行: commit・push・draft PR・Linux CI
 
-添付指示に従い、ローカル実装・検証で停止する。ユーザーが続行を承認した後、対象7ファイルだけをcommit・pushし、PRとLinux clean-checkout CIで20問・37 URL・広告境界を再検証する。公開する場合は、最終内容、実際の日付、制作情報の承認表記、本番広告IDでのbuild、merge、本番配信確認を別のゲートとして扱う。
+ユーザーから続行指示を受領後、実装commit `13964f0` をpushし、draft [PR #11](https://github.com/kumakit/bearworks-portal/pull/11) を作成。[Linux CI 33948733978](https://github.com/kumakit/bearworks-portal/actions/runs/33948733978)（1分6秒）は全ステップ成功し、新旧20問・sitemap 37 URL・広告境界のPASSを確認した。
+
+## 続行: 本番公開承認・merge・本番デプロイ・公開検証（2026-09-05）
+
+ユーザーから「OK 本番公開して」を受領し、第3バッチの最終公開承認を確定した。
+
+1. **制作情報・検証の確定**: `lib/content-provenance.ts` の承認表記を「運営者が公開内容を承認しました」へ更新し（commit `8170d36`）、`scripts/verify-toukei-pages.mjs` のアサーションを公開承認版へ同期（commit `44b98bf`）。
+2. **Linux CI 通過**: [Linux CI 33949451795](https://github.com/kumakit/bearworks-portal/actions/runs/33949451795)（1分1秒）にて全項目PASS。
+3. **PR #11 merge**: PR #11 を ready化して merge（merge commit: `cece956891a27e7f72439c288ca298fef9b8b093`）。ローカル `main` を pull して同期。
+4. **ロールバック先の確保**: デプロイ直前の本番 Worker Version `1801917f-25f6-4703-b4b1-5a752b188781` をロールバック先として確保。
+5. **プロキシルーター統合と本番ビルド**:
+   - トラックBのサブパスプロキシルーター `workers/router.ts` および `wrangler.jsonc`（`TOUKEI_ORIGIN` バインド）を統合。
+   - 本番広告ID `NEXT_PUBLIC_ADSENSE_CLIENT_ID=ca-pub-9560028085973137` を指定して `npm run cf:build` を実行。
+   - `npx opennextjs-cloudflare populateCache local --env ""` で静的キャッシュを生成・組み込み。
+6. **本番デプロイ**: `npx opennextjs-cloudflare deploy --env "" --keep-vars` を実行。
+   - 公開 Worker Version ID: `e4dd91ce-cf1e-4bca-8c57-9351762c5c81`（配信割合: 100%）。
+7. **本番スモークテスト（全件合格）**:
+   - **トラックA**:
+     - `https://bearworks.uk/toukei/problems`: HTTP 200、新旧20問のリンク存在、本番広告ID掲載。
+     - 全20問（問1〜問20）: HTTP 200、本文、与件、解法、誤答、canonical、参照リンク、本番広告ID掲載。
+     - 第3バッチ新規5問（問16〜問20）: プールされた分散、F検定、適合度検定の観測表・計算表両立表示、調整済み決定係数、分散信頼区間、承認済み制作情報を確認。
+     - `https://bearworks.uk/sitemap.xml`: 全37 URL（重複なし）。
+     - 非広告ページ（`/about`, `/contact`, `/privacy`, `/weather`, `/dashboard`, `/ai-news`）および不正/404ルートに広告ID漏れなし。
+     - 認証保護（`/dashboard`, `/api/dashboard-data`）: Accessへ 302 リダイレクト、`Cache-Control: no-store` を維持。
+   - **トラックB（並行稼働プロキシ）**:
+     - `https://bearworks.uk/toukei/drill`, `/toukei/exam`, `/toukei/cheatsheet`: HTTP 200。
+     - 静的アセット（14件）: HTTP 200。
+     - 旧URL（`https://toukei.bearworks.uk/drill` 等）: 独立並行稼働 HTTP 200。
+     - 統計検定アプリ画面: 完全非広告（AdSense 0件）を維持。
+

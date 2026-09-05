@@ -13,7 +13,7 @@
 - [x] Next.js・Workers localで20問・37 URL・広告境界を検証
 - [x] 問18の観測表と計算表を両方表示し、ローカルブラウザとアクセシビリティ構造を確認
 - [x] 全差分と未実施工程をwalkthroughへ記録
-- [ ] ユーザー承認後のcommit・push・PR・Linux CI
-- [ ] 最終公開内容の承認後の制作情報・日付確定、merge・本番公開
+- [x] ユーザー承認後のcommit・push・PR・Linux CI
+- [x] 最終公開内容の承認後の制作情報・日付確定、merge・本番公開
 
-結果: `docs/history/20260905_issue#377_batch3_walkthrough.md`。ローカル実装・検証まで完了し、commit・push・PR・本番公開は未実施。
+結果: `docs/history/20260905_issue#377_batch3_walkthrough.md`。ローカル実装、独立検算、Linux CI、PR #11 merge、本番デプロイ（Version ID: `e4dd91ce-cf1e-4bca-8c57-9351762c5c81`）、本番スモークテスト（全20問、sitemap 37URL、広告/非広告境界、トラックBプロキシ並行稼働）まで全件合格で完了。
