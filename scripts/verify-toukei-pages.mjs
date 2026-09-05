@@ -30,11 +30,16 @@ const batch2Slugs = [
   "correlation-coefficient", "sum-and-difference-variance", "poisson-distribution-calculation",
   "sample-proportion-confidence-interval", "one-way-anova",
 ];
-assert.equal(problems.length, 15);
-assert.equal(new Set(problems.map(p => p.slug)).size, 15);
+const batch3Slugs = [
+  "two-sample-t-test-pooled", "two-sample-f-test-variance", "chi-square-goodness-of-fit",
+  "adjusted-r-squared", "chi-square-variance-confidence-interval",
+];
+assert.equal(problems.length, 20);
+assert.equal(new Set(problems.map(p => p.slug)).size, 20);
 assert.deepEqual(problems.slice(5, 10).map(p => p.slug), expectedNewSlugs);
-assert.deepEqual(problems.slice(10).map(p => p.slug), batch2Slugs);
-assert.equal(siteContent.length, 32);
+assert.deepEqual(problems.slice(10, 15).map(p => p.slug), batch2Slugs);
+assert.deepEqual(problems.slice(15).map(p => p.slug), batch3Slugs);
+assert.equal(siteContent.length, 37);
 const manifest = JSON.parse(await readFile(".next/prerender-manifest.json", "utf8"));
 const adPattern = /pagead2\.googlesyndication\.com|adsbygoogle|ca-pub-\d+/;
 const escape = text => text.replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#x27;");
@@ -85,9 +90,18 @@ for (const problem of problems) {
       assert(html.includes(escape(text)), `${path} author/date/provenance`);
     }
   }
-  const table = problem.solutionTable ?? problem.frequencyTable;
-  if (table) {
-    assert.equal(table.rows.length, 3);
+  if (batch3Slugs.includes(problem.slug)) {
+    assert(html.includes("最終公開内容の承認待ち"), `${path} draft approval notice`);
+    assert(html.includes("最終公開内容の確認と公開可否の判断は未実施"), `${path} accurate human review status`);
+    assert(!html.includes("2026-09-05に公開内容を承認"), `${path} must not claim publication approval`);
+    assert(!html.includes("5例題の公開commit"), `${path} no inherited publication evidence`);
+    for (const text of [problem.author, problem.publishedAt, problem.reviewedAt, problem.provenance.aiUsage]) {
+      assert(html.includes(escape(text)), `${path} author/date/provenance`);
+    }
+  }
+  const tables = [problem.frequencyTable, problem.solutionTable].filter(Boolean);
+  for (const table of tables) {
+    assert(table.rows.length > 0, `${path} table rows`);
     assert(html.includes(escape(table.caption)), `${path} table caption`);
     for (const column of table.columns) assert(html.includes(escape(column)), `${path} table column`);
     for (const row of table.rows) {
@@ -106,7 +120,7 @@ for (const path of ["/toukei/problems/__invalid__", "/toukei/guides/__invalid__"
 }
 const xml = await page("/sitemap.xml");
 const urls = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map(match => match[1]);
-assert.equal(urls.length, 32);
-assert.equal(new Set(urls).size, 32);
+assert.equal(urls.length, 37);
+assert.equal(new Set(urls).size, 37);
 assert.deepEqual([...urls].sort(), siteContent.map(p => `https://bearworks.uk${p.pathname}`).sort());
-console.log("PASS: sitemap 32 unique URLs; 6 non-ad pages and 3 invalid/404 routes have no ads");
+console.log("PASS: sitemap 37 unique URLs; 6 non-ad pages and 3 invalid/404 routes have no ads");

@@ -1,6 +1,6 @@
 import type { GuideSlug } from "../guides/guide-data";
 import type { ContentProvenance } from "@/lib/content-provenance";
-import { toukeiProblemProvenance, toukeiProblemBatch1Provenance, toukeiProblemBatch2Provenance } from "@/lib/content-provenance";
+import { toukeiProblemProvenance, toukeiProblemBatch1Provenance, toukeiProblemBatch2Provenance, toukeiProblemBatch3Provenance } from "@/lib/content-provenance";
 
 export interface Reference {
   title: string;
@@ -1037,4 +1037,341 @@ export const problems: Problem[] = [
       ]
     }
   },
+  {
+    slug: "two-sample-t-test-pooled",
+    title: "独立2標本の母平均の差のt検定（等分散仮定・プールされた分散）",
+    description: "2つの独立な正規母集団から得られた標本サイズが異なるデータに対し、プールされた分散（合併不偏分散）を算出して母平均の差をt検定します。",
+    concepts: ["2標本t検定", "プールされた分散", "等分散性", "自由度", "両側検定"],
+    question: "ある工場で製造される部品の引張強度（MPa）について、従来の製造ラインAと新規導入ラインBの母平均に差があるかを検証するため、無作為にサンプルを抽出して引張強度を測定した。両ラインの母集団は正規分布に従い、母分散は等しい（等分散）と仮定できる。測定結果は以下の通りであった。\n・ラインA: 標本サイズ n_A = 10, 標本平均 x̄_A = 85.0 MPa, 標本不偏分散 s_A^2 = 38.0 MPa²\n・ラインB: 標本サイズ n_B = 15, 標本平均 x̄_B = 80.0 MPa, 標本不偏分散 s_B^2 = 15.0 MPa²\nこのとき、プールされた分散 s_p^2 および母平均の差に対する検定統計量 t の値を求め、有意水準5%で両側検定を行いなさい。ただし、自由度23のt分布における上側2.5%臨界値は t_0.025(23) = 2.069 とします。",
+    givenValues: [
+      { label: "ラインA 標本サイズ (n_A)", value: "10" },
+      { label: "ラインA 標本平均 (x̄_A)", value: "85.0 MPa" },
+      { label: "ラインA 不偏分散 (s_A^2)", value: "38.0 MPa²" },
+      { label: "ラインB 標本サイズ (n_B)", value: "15" },
+      { label: "ラインB 標本平均 (x̄_B)", value: "80.0 MPa" },
+      { label: "ラインB 不偏分散 (s_B^2)", value: "15.0 MPa²" },
+      { label: "自由度23のt分布上側2.5%臨界値", value: "2.069" }
+    ],
+    solutionSteps: [
+      {
+        label: "自由度の算出",
+        expression: "ν = n_A + n_B - 2 = 10 + 15 - 2 = 23",
+        description: "2群それぞれの標本平均を推定しているため、全体の自由度は各群の自由度 (n_A - 1) と (n_B - 1) の和となり、23となります。"
+      },
+      {
+        label: "プールされた分散（合併不偏分散）の計算",
+        expression: "s_p^2 = [(n_A - 1)s_A^2 + (n_B - 1)s_B^2] / (n_A + n_B - 2) = (9 * 38.0 + 14 * 15.0) / 23 = (342.0 + 210.0) / 23 = 552.0 / 23 = 24.00 MPa²",
+        description: "各群の不偏分散を自由度で重み付けした加重平均により、共通の母分散の推定値（プールされた分散）を求めます。"
+      },
+      {
+        label: "標本平均の差の標準誤差（SE）の計算",
+        expression: "SE = √[s_p^2 * (1/n_A + 1/n_B)] = √[24.0 * (1/10 + 1/15)] = √[24.0 * (5/30)] = √[24.0 * (1/6)] = √4.00 = 2.00 MPa",
+        description: "差の分散 V(x̄_A - x̄_B) = σ^2/n_A + σ^2/n_B にプールされた分散を代入して平方根を取ります。"
+      },
+      {
+        label: "検定統計量 t の算出と統計的判断",
+        expression: "t = (x̄_A - x̄_B) / SE = (85.0 - 80.0) / 2.00 = 5.0 / 2.00 = 2.50",
+        description: "帰無仮説 H_0: μ_A = μ_B のもとでの検定統計量は t = 2.50 となります。両側検定では |t| を臨界値 2.069 と比較し、2.50 > 2.069 なので有意水準5%で帰無仮説を棄却します（両側p値は約0.0200）。これは、正規性・独立性・等分散性という設問の仮定のもとで母平均に差があることを示す統計的証拠です。"
+      }
+    ],
+    finalAnswer: "プールされた分散は s_p^2 = 24.00 MPa²、検定統計量は t = 2.50（自由度23、両側p ≒ 0.0200）である。|t| が臨界値 2.069 を上回るため、設問の仮定のもとで帰無仮説を有意水準5%で棄却し、両ラインの母平均に差があることを示す証拠が得られる。標本平均の差はラインAが5.0 MPa高い。",
+    distractors: [
+      {
+        value: "s_p^2 = 26.50, t = 2.38",
+        reason: "各群の不偏分散の単純算術平均 (38.0 + 15.0)/2 = 26.50 を使ってしまう誤りです。標本サイズが異なる場合、自由度による加重平均を行う必要があります。"
+      },
+      {
+        value: "自由度を 24（n_A + n_B - 1）として臨界値を参照する誤り",
+        reason: "1標本の自由度 n-1 と混同した誤りです。独立2標本検定では2つの平均パラメータを標本から推定しているため、自由度は n_A + n_B - 2 となります。"
+      },
+      {
+        value: "母分散が等しくない場合でも常にこの検定を用いてよいという誤認",
+        reason: "等分散性の仮定が成り立たない場合はウェルチ（Welch）のt検定を用いる必要があります。"
+      }
+    ],
+    relatedGuideSlugs: ["hypothesis-testing-basics", "choosing-statistical-tests"],
+    appLinks: [
+      { title: "分野別ドリルで「2標本検定」を練習する", url: "https://bearworks.uk/toukei/drill" },
+      { title: "CBT模擬試験で総合演習する", url: "https://bearworks.uk/toukei/exam" }
+    ],
+    author: "kuma / bearworks.uk",
+    publishedAt: "2026-09-05",
+    reviewedAt: "2026-09-05",
+    provenance: toukeiProblemBatch3Provenance,
+    references: [
+      { title: "統計検定2級公式出題範囲", url: "https://www.toukei-kentei.jp/grade/grade2/" },
+      { title: "NIST：Comparing Two Independent Population Means", url: "https://www.itl.nist.gov/div898/handbook/prc/section3/prc31.htm" }
+    ]
+  },
+  {
+    slug: "two-sample-f-test-variance",
+    title: "2つの母分散の比のF検定（等分散性の検定）",
+    description: "2つの独立な正規母集団から得られた標本不偏分散を用いてF統計量を算出し、母分散が等しいかどうかの両側検定を行います。",
+    concepts: ["F検定", "等分散性", "母分散の比", "両側検定", "F分布"],
+    question: "2台の自動充填機（機械Aおよび機械B）で充填される液体の内容量のばらつき（母分散）が等しいかどうかを検証するため、それぞれから無作為抽出したサンプルの内容量を測定した。測定結果は以下の通りである。\n・機械A: 標本サイズ n_A = 10, 標本不偏分散 s_A^2 = 72.0 mL²\n・機械B: 標本サイズ n_B = 16, 標本不偏分散 s_B^2 = 24.0 mL²\n両機械の母集団は互いに独立な正規分布に従うものとする。帰無仮説 H_0: σ_A^2 = σ_B^2 に対し、有意水準5%で両側検定を行いなさい。ただし、自由度(9, 15)のF分布において、上側5%点は F_0.05(9, 15) = 2.59、上側2.5%点は F_0.025(9, 15) = 3.12 とします。",
+    givenValues: [
+      { label: "機械A 標本サイズ (n_A)", value: "10" },
+      { label: "機械A 不偏分散 (s_A^2)", value: "72.0 mL²" },
+      { label: "機械B 標本サイズ (n_B)", value: "16" },
+      { label: "機械B 不偏分散 (s_B^2)", value: "24.0 mL²" },
+      { label: "F分布の上側5%点 F_0.05(9, 15)", value: "2.59" },
+      { label: "F分布の上側2.5%点 F_0.025(9, 15)", value: "3.12" }
+    ],
+    solutionSteps: [
+      {
+        label: "自由度の特定",
+        expression: "ν_1 = n_A - 1 = 10 - 1 = 9, ν_2 = n_B - 1 = 16 - 1 = 15",
+        description: "検定統計量を F = s_A^2 / s_B^2 と定義するため、分子は機械Aの自由度9、分母は機械Bの自由度15となります。分子と分母を交換すると、参照するF分布の自由度と棄却域も交換する必要があります。"
+      },
+      {
+        label: "検定統計量 F の算出",
+        expression: "F = s_A^2 / s_B^2 = 72.0 / 24.0 = 3.00",
+        description: "設問で定めた機械Aと機械Bの順に分散比を計算します。このデータでは機械Aの標本分散が大きいため、結果として F ≥ 1 になります。"
+      },
+      {
+        label: "両側検定における臨界値の選定と判定",
+        expression: "臨界値: F_0.025(9, 15) = 3.12（上側2.5%点）",
+        description: "有意水準 α = 0.05 の両側検定では両端に α/2 = 0.025 ずつ割り振ります。今回の F = 3.00 は1より大きいので上側2.5%点 3.12 と比較し、3.00 < 3.12 より帰無仮説を棄却しません（両側p値は約0.0584）。母分散が等しいと証明したのではなく、差があるとの十分な証拠を得られなかったという判断です。"
+      }
+    ],
+    finalAnswer: "検定統計量は F = 3.00（自由度9, 15、両側p ≒ 0.0584）である。両側5%検定の上側臨界値 3.12 を下回るため帰無仮説を棄却せず、母分散に差があるとの十分な証拠は得られない。等分散であると証明した結論ではない。",
+    distractors: [
+      {
+        value: "F = 3.00 であり、臨界値 2.59 を上回るため帰無仮説は棄却される",
+        reason: "両側検定であるにもかかわらず、片側検定の臨界値 F_0.05(9, 15) = 2.59 を用いてしまう典型的な誤りです。両側検定では両端に α/2 ずつ配分するため上側2.5%点（3.12）と比較する必要があります。"
+      },
+      {
+        value: "自由度を (10, 16) として判定する誤り",
+        reason: "サンプルサイズそのものを自由度と取り違える誤りです。自由度は各標本サイズから1を引いた (9, 15) となります。"
+      },
+      {
+        value: "母集団が正規分布に従っていなくてもF検定は頑健であるという誤解",
+        reason: "F検定は母集団の正規性からの逸脱に敏感です。正規性が疑わしい場合は、より頑健なルビーン検定やブラウン・フォーサイス検定などを検討します。"
+      }
+    ],
+    relatedGuideSlugs: ["choosing-statistical-tests", "hypothesis-testing-basics"],
+    appLinks: [
+      { title: "分野別ドリルで「F検定」を演習する", url: "https://bearworks.uk/toukei/drill" },
+      { title: "チートシートで検定手法を比較する", url: "https://bearworks.uk/toukei/cheatsheet" }
+    ],
+    author: "kuma / bearworks.uk",
+    publishedAt: "2026-09-05",
+    reviewedAt: "2026-09-05",
+    provenance: toukeiProblemBatch3Provenance,
+    references: [
+      { title: "統計検定2級公式出題範囲", url: "https://www.toukei-kentei.jp/grade/grade2/" },
+      { title: "NIST：F-Test for Equality of Two Variances", url: "https://www.itl.nist.gov/div898/handbook/eda/section3/eda359.htm" }
+    ]
+  },
+  {
+    slug: "chi-square-goodness-of-fit",
+    title: "カイ二乗適合度検定（メンデル遺伝比率の適合性）",
+    description: "カテゴリカルデータの観測度数と理論上の期待度数からカイ二乗統計量を算出し、理論モデルへの適合度を検定します。",
+    concepts: ["カイ二乗検定", "適合度検定", "期待度数", "自由度", "カテゴリカルデータ"],
+    question: "あるエンドウ豆の交配実験において、2対の対立遺伝子（種子の形：丸・しわ、子葉の色：黄・緑）の表現型の分離比がメンデルの独立の法則に従い理論上「丸・黄 : 丸・緑 : しわ・黄 : しわ・緑 = 9 : 3 : 3 : 1」になると予測された。実際に交配を行い得られた160粒の種子を分類したところ、観測度数は以下の表の通りであった。各種子の表現型は同じ確率モデルから独立に観測されたものとする。観測された比率が理論比率 9:3:3:1 に適合しているかを検定するため、カイ二乗検定統計量 χ² の値を求め、有意水準5%で検定を行いなさい。ただし、自由度3のカイ二乗分布における上側5%臨界値は χ²_0.05(3) = 7.815 とします。",
+    frequencyTable: {
+      caption: "エンドウ豆の表現型の観測度数",
+      columns: ["表現型", "理論比率", "観測度数 (O_i)"],
+      rows: [
+        ["丸・黄", "9", "100"],
+        ["丸・緑", "3", "25"],
+        ["しわ・黄", "3", "30"],
+        ["しわ・緑", "1", "5"],
+        ["合計", "16", "160"]
+      ]
+    },
+    givenValues: [
+      { label: "総観察数 (N)", value: "160" },
+      { label: "理論比率", value: "9 : 3 : 3 : 1 (合計 16)" },
+      { label: "カテゴリ数 (k)", value: "4" },
+      { label: "自由度3のカイ二乗分布上側5%臨界値", value: "7.815" }
+    ],
+    solutionSteps: [
+      {
+        label: "各表現型の期待度数（E_i）の算出",
+        expression: "丸・黄: 160 * (9/16) = 90, 丸・緑: 160 * (3/16) = 30, しわ・黄: 160 * (3/16) = 30, しわ・緑: 160 * (1/16) = 10",
+        description: "理論比率に基づいて全体の160粒を按分します。最小期待度数は10で、すべて5以上という通常の目安を満たしているため、カイ二乗近似を用います。"
+      },
+      {
+        label: "各カテゴリのカイ二乗項 (O_i - E_i)² / E_i の計算",
+        expression: "丸・黄: (100 - 90)² / 90 = 100 / 90 = 10/9 ≒ 1.111\n丸・緑: (25 - 30)² / 30 = 25 / 30 = 5/6 ≒ 0.833\nしわ・黄: (30 - 30)² / 30 = 0 / 30 = 0.000\nしわ・緑: (5 - 10)² / 10 = 25 / 10 = 5/2 = 2.500",
+        description: "各カテゴリについて観測値と期待値の差（残差）を2乗し、期待度数で割ります。"
+      },
+      {
+        label: "検定統計量 χ² の合算と自由度の決定",
+        expression: "χ² = 10/9 + 5/6 + 0 + 5/2 = 40/9 ≒ 4.444, ν = k - 1 = 4 - 1 = 3",
+        description: "全項を合計すると χ² = 40/9 ≒ 4.44 となります。カテゴリ数が k = 4 で総和が固定されているため、自由度は k - 1 = 3 となります。"
+      },
+      {
+        label: "仮説検定の判断",
+        expression: "χ² = 4.44 < 7.815（帰無仮説を棄却しない）",
+        description: "算出された検定統計量 4.44 は臨界値 7.815 を下回り、p値は約0.217です。帰無仮説を棄却せず、この標本からは分離比が 9:3:3:1 と異なるとの統計的証拠は得られません。理論比が真であると証明した結果ではありません。"
+      }
+    ],
+    solutionTable: {
+      caption: "カイ二乗適合度検定の計算表",
+      columns: ["表現型", "観測度数 O_i", "期待度数 E_i", "偏差 O_i - E_i", "(O_i - E_i)² / E_i"],
+      rows: [
+        ["丸・黄", "100", "90", "+10", "1.111"],
+        ["丸・緑", "25", "30", "-5", "0.833"],
+        ["しわ・黄", "30", "30", "0", "0.000"],
+        ["しわ・緑", "5", "10", "-5", "2.500"],
+        ["合計", "160", "160", "0", "4.444"]
+      ]
+    },
+    finalAnswer: "検定統計量は χ² = 40/9 ≒ 4.44（自由度3、p ≒ 0.217）である。臨界値 7.815 を下回るため帰無仮説を棄却せず、この標本からは観測比率が理論比率 9:3:3:1 と異なるとの統計的証拠は得られない。理論比が真であると証明した結果ではない。",
+    distractors: [
+      {
+        value: "χ² = 7.00（分母を観測度数 O_i にして計算した場合）",
+        reason: "各項の分母を期待度数 E_i ではなく観測度数 O_i にしてしまう誤りです。カイ二乗統計量の分母は必ず理論期待値 E_i です。"
+      },
+      {
+        value: "自由度を 159 （N - 1）として検定する誤り",
+        reason: "サンプルサイズ N から 1 を引いてしまう誤りです。適合度検定の自由度はサンプルサイズではなく、カテゴリ数から 1 を引いた k - 1 となります。"
+      },
+      {
+        value: "期待度数が 5 未満のカテゴリが存在してもそのまま検定を適用できるという誤解",
+        reason: "期待度数が小さいとカイ二乗近似の精度が悪化します。カテゴリの統合は科学的に妥当な場合に限り、適合度検定では正確な多項検定やモンテカルロ法なども検討します。"
+      }
+    ],
+    relatedGuideSlugs: ["anova-and-chi-square", "distribution-selection"],
+    appLinks: [
+      { title: "分野別ドリルで「カイ二乗検定」を演習する", url: "https://bearworks.uk/toukei/drill" },
+      { title: "チートシートで確率分布を確認する", url: "https://bearworks.uk/toukei/cheatsheet" }
+    ],
+    author: "kuma / bearworks.uk",
+    publishedAt: "2026-09-05",
+    reviewedAt: "2026-09-05",
+    provenance: toukeiProblemBatch3Provenance,
+    references: [
+      { title: "統計検定2級公式出題範囲", url: "https://www.toukei-kentei.jp/grade/grade2/" },
+      { title: "NIST：Chi-Square Goodness-of-Fit Test", url: "https://www.itl.nist.gov/div898/handbook/eda/section3/eda35f.htm" }
+    ]
+  },
+  {
+    slug: "adjusted-r-squared",
+    title: "重回帰分析における自由度調整済み決定係数の算出と性質",
+    description: "重回帰モデルのサンプルサイズ、説明変数数、単純決定係数から自由度調整済み決定係数を算出し、モデル選択における意義を理解します。",
+    concepts: ["重回帰分析", "自由度調整済み決定係数", "決定係数", "過学習", "モデル選択"],
+    question: "ある地域における中古マンションの成約価格（万円）を目的変数とし、4つの説明変数（専有面積、築年数、最寄り駅徒歩分数、所在階数）を用いて重回帰分析を行った。サンプルサイズは n = 25 であり、得られた単純決定係数は R² = 0.70（70.0%）であった。この重回帰モデルにおける自由度調整済み決定係数 R*² の値を求めなさい。また、単純決定係数と自由度調整済み決定係数の関係に関する記述として正しい解釈を選びなさい。",
+    givenValues: [
+      { label: "サンプルサイズ (n)", value: "25" },
+      { label: "説明変数の数 (k)", value: "4" },
+      { label: "単純決定係数 (R²)", value: "0.70" }
+    ],
+    solutionSteps: [
+      {
+        label: "自由度の特定",
+        expression: "全体の自由度: n - 1 = 25 - 1 = 24\n残差の自由度: n - k - 1 = 25 - 4 - 1 = 20",
+        description: "全体の平方和（総平方和）の自由度は n - 1、回帰モデルの残差平方和の自由度はサンプルサイズから説明変数数 k と定数項 1 を引いた n - k - 1 となります。"
+      },
+      {
+        label: "自由度調整の比率の計算",
+        expression: "(n - 1) / (n - k - 1) = 24 / 20 = 1.20",
+        description: "このモデルでは説明変数が4個あり、残差自由度が全体の自由度より小さいため、未説明の割合 (1 - R²) に乗じるペナルティ係数は 1 より大きくなります。"
+      },
+      {
+        label: "自由度調整済み決定係数 R*² の算出",
+        expression: "R*² = 1 - [(n - 1) / (n - k - 1)] * (1 - R²) = 1 - 1.20 * (1 - 0.70) = 1 - 1.20 * 0.30 = 1 - 0.36 = 0.64 (64.0%)",
+        description: "単純決定係数 R² = 0.70 に対し、自由度によるペナルティを反映した結果、自由度調整済み決定係数は 0.64（64.0%）となります。"
+      },
+      {
+        label: "指標の解釈",
+        expression: "R*² = 0.64 < R² = 0.70",
+        description: "定数項を含む同じデータの回帰モデルでは、説明変数を追加するとR²は低下しませんが、R*²は追加変数の寄与が小さいと低下し得ます。R*²だけで因果関係、予測精度、モデルの妥当性が保証されるわけではなく、残差診断や外部データでの予測評価も必要です。"
+      }
+    ],
+    finalAnswer: "自由度調整済み決定係数は R*² = 0.64（64.0%）である。説明変数を追加すると単純決定係数 R² は決して減少しないが、追加した変数の説明力が不十分な場合は自由度のペナルティにより R*² が減少することがある。",
+    distractors: [
+      {
+        value: "R*² = 0.75（比率を逆にして 1 - (20/24) * 0.30 = 0.75 と計算した場合）",
+        reason: "自由度の比を逆転させてしまう誤りです。自由度調整済み決定係数が単純決定係数（0.70）を上回ることは数学的にあり得ません（R*² ≤ R²）。"
+      },
+      {
+        value: "R*² ≒ 0.657（残差自由度から定数項を引き忘れて n - k = 21 とした場合）",
+        reason: "定数項を含む回帰モデルでは残差自由度は n - k - 1 です。定数項の自由度を差し引き忘れると誤った値になります。"
+      },
+      {
+        value: "説明変数を追加すれば R*² も必ず増加するという解釈",
+        reason: "単純決定係数 R² は無関係な変数を追加しても決して減少しませんが、R*² は変数の寄与が小さければペナルティにより減少します。"
+      }
+    ],
+    relatedGuideSlugs: ["regression-interpretation"],
+    appLinks: [
+      { title: "分野別ドリルで「回帰分析」を演習する", url: "https://bearworks.uk/toukei/drill" },
+      { title: "学習ガイドで「回帰分析の解釈」を読む", url: "https://bearworks.uk/toukei/guides/regression-interpretation" }
+    ],
+    author: "kuma / bearworks.uk",
+    publishedAt: "2026-09-05",
+    reviewedAt: "2026-09-05",
+    provenance: toukeiProblemBatch3Provenance,
+    references: [
+      { title: "統計検定2級公式出題範囲", url: "https://www.toukei-kentei.jp/grade/grade2/" },
+      { title: "statsmodels：自由度調整済み決定係数の定義", url: "https://www.statsmodels.org/stable/generated/statsmodels.regression.linear_model.OLSResults.rsquared_adj.html" }
+    ]
+  },
+  {
+    slug: "chi-square-variance-confidence-interval",
+    title: "カイ二乗分布を用いた母分散の95%信頼区間の算出",
+    description: "正規母集団から得られた標本不偏分散を用いてカイ二乗統計量を構成し、母分散および母標準偏差に対する信頼区間を導出します。",
+    concepts: ["母分散の推定", "信頼区間", "カイ二乗分布", "不偏分散", "非対称性"],
+    question: "ある精密機械メーカーで製造される金属ピンの直径のばらつきを管理するため、正規分布に従う母集団から n = 16 本のサンプルを無作為に抽出した。測定の結果、標本の不偏分散は s² = 25.0 mm²（標本標準偏差 s = 5.0 mm）であった。この部品の母分散 σ² に対する95%信頼区間を求めなさい。ただし、下付き文字を上側確率とする記法を用い、自由度15のカイ二乗分布の上側97.5%点（下側累積確率2.5%点）は χ²_0.975(15) = 6.262、上側2.5%点（下側累積確率97.5%点）は χ²_0.025(15) = 27.488 とします。",
+    givenValues: [
+      { label: "標本サイズ (n)", value: "16" },
+      { label: "標本不偏分散 (s²)", value: "25.0 mm²" },
+      { label: "自由度 (ν = n - 1)", value: "15" },
+      { label: "カイ二乗分布の下側2.5%点 χ²_0.975(15)", value: "6.262" },
+      { label: "カイ二乗分布の上側2.5%点 χ²_0.025(15)", value: "27.488" }
+    ],
+    solutionSteps: [
+      {
+        label: "偏差平方和 S の計算",
+        expression: "S = (n - 1) * s² = 15 * 25.0 = 375.0 mm²",
+        description: "不偏分散 s² に自由度 n - 1 を乗じることで、偏差平方和（Sum of Squares）を求めます。"
+      },
+      {
+        label: "カイ二乗統計量と信頼区間の関係式の構築",
+        expression: "χ²_0.975(15) ≤ (n - 1)s² / σ² ≤ χ²_0.025(15) \iff 6.262 ≤ 375.0 / σ² ≤ 27.488",
+        description: "正規分布からの標本において、統計量 (n - 1)s² / σ² は自由度 n - 1 のカイ二乗分布に従います。確率 95% でこの統計量が下側2.5%点と上側2.5%点の間に入ります。"
+      },
+      {
+        label: "不等式の反転による母分散 σ² の上下限の算出",
+        expression: "下限: 375.0 / 27.488 ≒ 13.64 mm²\n上限: 375.0 / 6.262 ≒ 59.88 mm²",
+        description: "逆数を取ると不等号の向きが反転するため、信頼区間の下限にはカイ二乗分布の『上側臨界値』、上限には『下側臨界値』が分母に来ます。これにより 13.64 mm² ≤ σ² ≤ 59.88 mm² となります。"
+      },
+      {
+        label: "母標準偏差への換算と区間の解釈",
+        expression: "√13.64 ≒ 3.69 mm, √59.88 ≒ 7.74 mm",
+        description: "正の範囲で平方根は単調増加なので、分散区間の両端の平方根が母標準偏差の95%信頼区間になります。同じ標本抽出と区間計算を繰り返したとき、作られる区間の95%が一定の母分散を含むという意味であり、この特定区間に母分散が入る確率が95%という意味ではありません。"
+      }
+    ],
+    finalAnswer: "母分散 σ² に対する95%信頼区間は 13.64 mm² 〜 59.88 mm² （小数第1位まで丸めると 約13.6 mm² 〜 59.9 mm²）である。母標準偏差 σ の区間に換算すると 約3.69 mm 〜 7.74 mm となる。",
+    distractors: [
+      {
+        value: "下限 59.88 mm², 上限 13.64 mm²（逆数を取るときに臨界値の位置を入れ替え忘れた場合）",
+        reason: "不等式の逆数を取る際に不等号の向きを反転させ忘れる典型ミスです。上側2.5%点（27.488）で割ったものが下限、下側2.5%点（6.262）で割ったものが上限になります。"
+      },
+      {
+        value: "s² ± 1.96 * SE のように正規分布を用いて対称な区間を計算する誤り",
+        reason: "母分散の標本分布はカイ二乗分布に従い、非対称です。正規分布のような左右対称の区間推定公式は適用できません。"
+      },
+      {
+        value: "偏差平方和の計算で n - 1 ではなく n を掛けてしまう誤り",
+        reason: "標本分散ではなく不偏分散 s² を使用しているため、自由度 n - 1 = 15 を乗じる必要があります。"
+      }
+    ],
+    relatedGuideSlugs: ["distribution-selection", "hypothesis-testing-basics"],
+    appLinks: [
+      { title: "分野別ドリルで「推定」を練習する", url: "https://bearworks.uk/toukei/drill" },
+      { title: "チートシートでカイ二乗分布を確認する", url: "https://bearworks.uk/toukei/cheatsheet" }
+    ],
+    author: "kuma / bearworks.uk",
+    publishedAt: "2026-09-05",
+    reviewedAt: "2026-09-05",
+    provenance: toukeiProblemBatch3Provenance,
+    references: [
+      { title: "統計検定2級公式出題範囲", url: "https://www.toukei-kentei.jp/grade/grade2/" },
+      { title: "NIST：Confidence Limits for the Population Variance", url: "https://www.itl.nist.gov/div898/handbook/eda/section3/eda358.htm" }
+    ]
+  }
 ];

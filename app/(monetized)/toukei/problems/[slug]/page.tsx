@@ -44,12 +44,46 @@ export async function generateMetadata({ params }: PageProps) {
   };
 }
 
+type ProblemTableData = NonNullable<(typeof problems)[number]["frequencyTable"]>;
+
+function ProblemTable({ table }: { table: ProblemTableData }) {
+  return (
+    <section className="mb-8 overflow-x-auto rounded-2xl border border-gray-100 bg-gray-50/50 p-4">
+      <table className="min-w-full whitespace-nowrap text-sm text-left">
+        <caption className="mb-3 whitespace-normal text-left font-bold text-primary">
+          {table.caption}
+        </caption>
+        <thead>
+          <tr className="border-b border-gray-200">
+            {table.columns.map((column) => (
+              <th key={column} scope="col" className="px-3 py-2 font-bold text-primary">{column}</th>
+            ))}
+          </tr>
+        </thead>
+        <tbody className="divide-y divide-gray-100">
+          {table.rows.map(([label, ...cells]) => (
+            <tr key={label}>
+              <th scope="row" className="px-3 py-2.5 font-medium text-primary">{label}</th>
+              {cells.map((cell, index) => (
+                <td key={index} className="px-3 py-2.5 text-muted">{cell}</td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </section>
+  );
+}
+
 export default async function ProblemDetailPage({ params }: PageProps) {
   const { slug } = await params;
   const problem = problems.find((p) => p.slug === slug);
   if (!problem) {
     notFound();
   }
+  const questionTable = problem.frequencyTable && problem.solutionTable
+    ? problem.frequencyTable
+    : undefined;
   const solutionTable = problem.solutionTable ?? problem.frequencyTable;
 
   // Resolve related guides and perform safety runtime check
@@ -141,6 +175,8 @@ export default async function ProblemDetailPage({ params }: PageProps) {
           </div>
         </section>
 
+        {questionTable && <ProblemTable table={questionTable} />}
+
         {/* Solution Steps */}
         <section className="mb-8">
           <h2 className="text-xl md:text-2xl font-bold text-primary mb-4">解答・途中計算</h2>
@@ -162,32 +198,7 @@ export default async function ProblemDetailPage({ params }: PageProps) {
           </div>
         </section>
 
-        {solutionTable && (
-          <section className="mb-8 overflow-x-auto rounded-2xl border border-gray-100 bg-gray-50/50 p-4">
-            <table className="min-w-full whitespace-nowrap text-sm text-left">
-              <caption className="mb-3 whitespace-normal text-left font-bold text-primary">
-                {solutionTable.caption}
-              </caption>
-              <thead>
-                <tr className="border-b border-gray-200">
-                  {solutionTable.columns.map((column) => (
-                    <th key={column} scope="col" className="px-3 py-2 font-bold text-primary">{column}</th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-gray-100">
-                {solutionTable.rows.map(([label, ...cells]) => (
-                  <tr key={label}>
-                    <th scope="row" className="px-3 py-2.5 font-medium text-primary">{label}</th>
-                    {cells.map((cell, index) => (
-                      <td key={index} className="px-3 py-2.5 text-muted">{cell}</td>
-                    ))}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </section>
-        )}
+        {solutionTable && <ProblemTable table={solutionTable} />}
 
         {/* Final Answer */}
         <section className="mb-8">
