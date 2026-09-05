@@ -159,11 +159,11 @@ export const toukeiProblemBatch2Provenance: ContentProvenance = {
 export const toukeiProblemBatch3Provenance: ContentProvenance = {
   writtenBy: "kuma / bearworks.uk（問題設計）",
   checkedBy: "Codex（原稿修正・独立検算・実装確認）、Luna（既存規約監査）",
-  finalReviewedBy: "kuma / bearworks.uk（最終公開内容の承認待ち）",
+  finalReviewedBy: "kuma / bearworks.uk",
   aiUsage:
     "第3バッチ（問16〜20）は2026-09-05に実装用原稿を受領しました。Codexが数式、前提条件、結論、誤答説明を点検・修正し、PythonとSciPyで独立検算しました。Lunaが既存問題・制作情報・ページ検証との整合性を読み取り専用で監査しました。",
   humanReview:
-    "運営者が題材と実装方針を指定しました。最終公開内容の確認と公開可否の判断は未実施です。専門家による第三者査読ではありません。",
+    "運営者が題材と実装方針を指定し、最終公開内容を承認しました。専門家による第三者査読ではありません。",
   evidenceLinks: [
     {
       title: "統計検定2級の公式出題範囲",
@@ -179,7 +179,7 @@ export const toukeiProblemBatch3Provenance: ContentProvenance = {
   revisions: [{
     date: "2026-09-05",
     kind: "初版",
-    summary: "第3バッチ5問の受領原稿をCodexが修正・独立検算・実装し、ローカル検証を実施しました。最終公開内容は承認待ちです。",
+    summary: "第3バッチ5問の受領原稿をCodexが修正・独立検算・実装し、運営者が公開内容を承認しました。",
   }],
 };
 
