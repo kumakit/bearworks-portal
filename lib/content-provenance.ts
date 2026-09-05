@@ -156,6 +156,33 @@ export const toukeiProblemBatch2Provenance: ContentProvenance = {
   }],
 };
 
+export const toukeiProblemBatch3Provenance: ContentProvenance = {
+  writtenBy: "kuma / bearworks.uk（問題設計）",
+  checkedBy: "Codex（原稿修正・独立検算・実装確認）、Luna（既存規約監査）",
+  finalReviewedBy: "kuma / bearworks.uk",
+  aiUsage:
+    "第3バッチ（問16〜20）は2026-09-05に実装用原稿を受領しました。Codexが数式、前提条件、結論、誤答説明を点検・修正し、PythonとSciPyで独立検算しました。Lunaが既存問題・制作情報・ページ検証との整合性を読み取り専用で監査しました。",
+  humanReview:
+    "運営者が題材と実装方針を指定し、最終公開内容を承認しました。専門家による第三者査読ではありません。",
+  evidenceLinks: [
+    {
+      title: "統計検定2級の公式出題範囲",
+      url: "https://www.toukei-kentei.jp/grade/grade2/",
+      description: "分野の対応を確認する参照資料です。公式問題の転載ではありません。",
+    },
+    {
+      title: "編集・作問方針",
+      url: "/toukei/methodology",
+      description: "オリジナル例題の作成・確認・訂正方針です。",
+    },
+  ],
+  revisions: [{
+    date: "2026-09-05",
+    kind: "初版",
+    summary: "第3バッチ5問の受領原稿をCodexが修正・独立検算・実装し、運営者が公開内容を承認しました。",
+  }],
+};
+
 export const hachiojiClimateProvenance: ContentProvenance = {
   writtenBy: "kuma / bearworks.uk",
   checkedBy: "kuma / bearworks.uk（公式画面との照合、独立計算、品質判定）",
