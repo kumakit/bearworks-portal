@@ -147,12 +147,20 @@ Codexより総合判定【合格（GO）】を受領し、指示に従って以�
      - Validate staging Workers bundle: PASS
      - Verify Workers preview routes: PASS
 
-## 次のゲート
+## 本番公開プロセスの実行（2026-09-05）
 
-本番公開に向けた残ステップ：
-1. 運営者による最終公開承認
-2. 制作情報（`lib/content-provenance.ts`）を「運営者が公開内容を承認しました」へ確定更新し、`scripts/verify-toukei-pages.mjs` を同期
-3. commit, push, PR #13 を ready化して merge
-4. 本番広告ID付き本番ビルド・静的キャッシュ投入・Worker本番デプロイ
-5. 本番スモークテスト（全30問・sitemap 47 URL・トラックB並行稼働）の検証
+運営者より「OK　本番公開して」との最終公開承認を受領し、以下の本番公開プロセスを実行：
 
+1. **制作情報の公開確定更新**:
+   - `lib/content-provenance.ts`: `finalReviewedBy` を `"kuma / bearworks.uk"` に確定し、`humanReview` に「運営者が公式テキスト・問題集に基づく未出題5問の構成案を承認し、独立検算・Codexレビュー【合格】・Linux CI合格を踏まえて、最終公開内容を承認しました。専門家による第三者査読ではありません。」を記録。
+   - `scripts/verify-toukei-pages.mjs`: バッチ5問（問26〜30）のアサーションを「運営者が公開内容を承認しました」かつ「公開承認待ち・ドラフト告知なし」に同期。
+2. **Draft PR #13 を Ready for Review 化しマージ**:
+   - 変更を commit/push 後、`gh pr ready 13` を実行。
+   - Linux clean-checkout CI の完全通過を確認後、`gh pr merge 13 --merge --delete-branch` で `main` にマージ。
+3. **本番ビルド・静的キャッシュ投入・Cloudflare Worker デプロイ**:
+   - `$env:NEXT_PUBLIC_ADSENSE_CLIENT_ID="ca-pub-9560028085973137"; npm run cf:build`
+   - `npx opennextjs-cloudflare populateCache local --env ""`
+   - `npx wrangler deploy --dry-run --env=""`（107 assets、`TOUKEI_ORIGIN` バインド確認）
+   - `npx opennextjs-cloudflare deploy --env "" --keep-vars`
+4. **本番スモークテストの実施**:
+   - 全30問（問1〜30）個別ページ、一覧ページ、sitemap（47 URLs）、トラックB（`https://bearworks.uk/toukei/drill`）の稼働、本番広告ID掲載、問26〜30固有要素の検証。

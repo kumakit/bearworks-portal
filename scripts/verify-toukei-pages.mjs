@@ -118,7 +118,8 @@ for (const problem of problems) {
     }
   }
   if (batch5Slugs.includes(problem.slug)) {
-    assert(html.includes("公開承認待ち") || html.includes("Codex監査および運営者の公開承認待ちです"), `${path} publication draft/waiting`);
+    assert(html.includes("運営者が公開内容を承認しました"), `${path} publication approval`);
+    assert(!html.includes("最終公開内容の承認待ち") && !html.includes("公開前の検証版") && !html.includes("公開承認待ち"), `${path} no draft notice`);
     assert(!html.includes("5例題の公開commit"), `${path} no inherited publication evidence`);
     for (const text of [problem.author, problem.publishedAt, problem.reviewedAt, problem.provenance.aiUsage]) {
       assert(html.includes(escape(text)), `${path} author/date/provenance`);

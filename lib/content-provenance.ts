@@ -212,12 +212,12 @@ export const toukeiProblemBatch4Provenance: ContentProvenance = {
 
 export const toukeiProblemBatch5Provenance: ContentProvenance = {
   writtenBy: "kuma / bearworks.uk（問題設計・テーマ指定）",
-  checkedBy: "Antigravity（問題作成・独立検算・実装確認）、Codex（学術レビュー・実装監査予定）",
-  finalReviewedBy: "kuma / bearworks.uk（公開承認待ち）",
+  checkedBy: "Antigravity（問題作成・独立検算・実装確認）、Codex（学術レビュー・実装監査【合格】）",
+  finalReviewedBy: "kuma / bearworks.uk",
   aiUsage:
-    "第5バッチ（問26〜30）は公式参考書・問題集の未出題重要論点（2つの母比率の差の検定、指数分布、時系列分析、二元配置分散分析、重回帰診断とダミー変数）に基づき、Antigravityが問題・与件・解説・誤答分析を独自に設計・作成し、PythonとSciPyで独立検算しました。Codexによる統計学・表記・出典の整合性監査および運営者による最終公開承認を経て公開されます。",
+    "第5バッチ（問26〜30）は公式参考書・問題集の未出題重要論点（2つの母比率の差の検定、指数分布、時系列分析、二元配置分散分析、重回帰診断とダミー変数）に基づき、Antigravityが問題・与件・解説・誤答分析を独自に設計・作成し、PythonとSciPyで独立検算しました。Codexが統計学・表記・出典の整合性を読み取り専用で監査・レビューし、指摘事項の反映を確認しました。",
   humanReview:
-    "運営者が公式テキスト・問題集に基づく未出題5問の構成案を承認し、独立検算・Codexレビュー・Linux配信検証の完了後に最終公開可否を判断します。専門家による第三者査読ではありません。",
+    "運営者が公式テキスト・問題集に基づく未出題5問の構成案を承認し、独立検算・Codexレビュー【合格】・Linux CI合格を踏まえて、最終公開内容を承認しました。専門家による第三者査読ではありません。",
   evidenceLinks: [
     {
       title: "統計検定2級の公式出題範囲",
@@ -233,7 +233,7 @@ export const toukeiProblemBatch5Provenance: ContentProvenance = {
   revisions: [{
     date: "2026-09-05",
     kind: "初版",
-    summary: "第5バッチ5問をAntigravityが独自設計・実装・SciPy検算しました。Codex監査および運営者の公開承認待ちです。",
+    summary: "第5バッチ5問をAntigravityが独自設計・実装・SciPy検算し、Codex監査レビュー【合格】を経て運営者が公開内容を承認しました。",
   }],
 };
 
