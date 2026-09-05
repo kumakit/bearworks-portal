@@ -210,6 +210,33 @@ export const toukeiProblemBatch4Provenance: ContentProvenance = {
   }],
 };
 
+export const toukeiProblemBatch5Provenance: ContentProvenance = {
+  writtenBy: "kuma / bearworks.uk（問題設計・テーマ指定）",
+  checkedBy: "Antigravity（問題作成・独立検算・実装確認）、Codex（学術レビュー・実装監査予定）",
+  finalReviewedBy: "kuma / bearworks.uk（公開承認待ち）",
+  aiUsage:
+    "第5バッチ（問26〜30）は公式参考書・問題集の未出題重要論点（2つの母比率の差の検定、指数分布、時系列分析、二元配置分散分析、重回帰診断とダミー変数）に基づき、Antigravityが問題・与件・解説・誤答分析を独自に設計・作成し、PythonとSciPyで独立検算しました。Codexによる統計学・表記・出典の整合性監査および運営者による最終公開承認を経て公開されます。",
+  humanReview:
+    "運営者が公式テキスト・問題集に基づく未出題5問の構成案を承認し、独立検算・Codexレビュー・Linux配信検証の完了後に最終公開可否を判断します。専門家による第三者査読ではありません。",
+  evidenceLinks: [
+    {
+      title: "統計検定2級の公式出題範囲",
+      url: "https://www.toukei-kentei.jp/grade/grade2/",
+      description: "分野の対応を確認する参照資料です。公式問題の転載ではありません。",
+    },
+    {
+      title: "編集・作問方針",
+      url: "/toukei/methodology",
+      description: "オリジナル例題の作成・確認・訂正方針です。",
+    },
+  ],
+  revisions: [{
+    date: "2026-09-05",
+    kind: "初版",
+    summary: "第5バッチ5問をAntigravityが独自設計・実装・SciPy検算しました。Codex監査および運営者の公開承認待ちです。",
+  }],
+};
+
 export const hachiojiClimateProvenance: ContentProvenance = {
   writtenBy: "kuma / bearworks.uk",
   checkedBy: "kuma / bearworks.uk（公式画面との照合、独立計算、品質判定）",
