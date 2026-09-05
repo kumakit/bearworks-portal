@@ -111,7 +111,22 @@ Windows、Node 24.14.1、Next.js 16.3.0、OpenNext 1.20.2、Wrangler 4.114.0。�
 6. `npx wrangler deploy --dry-run --env=""`: **102 assets 正常、トラックBバインディング保持**
 7. `node scripts/verify-toukei-pages.mjs http://127.0.0.1:3111`: **全25問、本文、与件、計算、誤答、canonical、guide、出典、制作情報、広告境界、sitemap 42 URL ALL PASS**
 
-## 次の工程
+## 続行: commit・push・Draft PR・Linux CI（2026-09-05）
 
-指示に従い、ローカル実装・検証で停止する。Codex再レビューで【合格（GO）】を受領後、ユーザーの承認を得て commit・push・Draft PR・Linux CI・本番公開工程へと進む。
+ユーザーからの進行指示「OK 進んで」を受領し、以下を実行した。
+
+1. **明示的ステージとコミット**: 対象6ファイルのみを明示的に stage し、commit `7c2c3e7` を作成。
+2. **プッシュとDraft PR作成**: ブランチ `codex/issue-377-problems-batch-4` を `origin` へ push し、Draft [PR #12](https://github.com/kumakit/bearworks-portal/pull/12) を作成。
+3. **Linux clean-checkout CI 通過**: [Linux CI Run 33957579768](https://github.com/kumakit/bearworks-portal/actions/runs/33957579768)（1分23秒）にて、Lint, Next.js build, Prefetch policy, Workers bundle, Staging bundle, Workers preview routes の全チェックが完全合格（PASS）した。
+
+## 次の工程（本番公開承認待ち）
+
+指示に従い、Draft PR作成およびLinux CI通過の段階で停止する。
+即時の本番公開は行わず、ユーザーによる最終公開承認（「OK 本番公開して」等）を受領した後に、以下の別ゲートとして本番公開工程を実行する：
+1. `lib/content-provenance.ts` の `toukeiProblemBatch4Provenance` を「運営者が公開内容を承認しました」の確定表記へ更新
+2. `scripts/verify-toukei-pages.mjs` のアサーションを公開確定版へ同期
+3. 本番広告ID `NEXT_PUBLIC_ADSENSE_CLIENT_ID=ca-pub-9560028085973137` でのビルド & 静的キャッシュ組み込み
+4. PR #12 を ready化して merge
+5. Cloudflare Workers本番デプロイおよび本番スモークテスト（全25問・sitemap 42 URL・トラックB並行稼働確認）
+
 

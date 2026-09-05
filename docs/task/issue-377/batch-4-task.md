@@ -13,7 +13,7 @@
 - [x] 全差分と検証結果をwalkthrough（`docs/history/20260905_issue#377_batch4_walkthrough.md`）へ記録
 - [x] Codex監査レビュー受領（P1: 4件、P2: 3件）と全指摘事項の是正対応
 - [x] Codex再レビューにて総合判定【合格（GO）】受領
-- [ ] ユーザー承認後のcommit・push・Draft PR・Linux CI（未実施・承認待ち）
+- [x] ユーザー承認後のcommit（`7c2c3e7`）・push・Draft PR（[#12](https://github.com/kumakit/bearworks-portal/pull/12)）・Linux clean-checkout CI（[Run 33957579768](https://github.com/kumakit/bearworks-portal/actions/runs/33957579768) 全ステップPASS）
 - [ ] 最終公開承認後の制作情報確定、merge・本番公開（未実施・承認待ち）
 
-結果: `docs/history/20260905_issue#377_batch4_walkthrough.md`。ローカル実装・独立検算・静的ビルド・Next.js/Workers配信検証、およびCodex再レビュー【合格（GO）】まで完了。公開工程はユーザー承認待ち。
+結果: `docs/history/20260905_issue#377_batch4_walkthrough.md`。ローカル実装・独立検算・静的ビルド・Next.js/Workers配信検証、Codex再レビュー【合格（GO）】、Draft PR #12作成、Linux CI通過まで全件完了。本番公開工程はユーザー承認待ち。
