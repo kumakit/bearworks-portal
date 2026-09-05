@@ -104,8 +104,8 @@ for (const problem of problems) {
     }
   }
   if (batch4Slugs.includes(problem.slug)) {
-    assert(html.includes("最終公開内容の承認待ち"), `${path} draft approval notice`);
-    assert(html.includes("最終公開内容の確認と公開可否の判断は未実施"), `${path} accurate human review status`);
+    assert(html.includes("運営者が公開内容を承認しました"), `${path} publication approval`);
+    assert(!html.includes("最終公開内容の承認待ち") && !html.includes("公開前の検証版"), `${path} no draft notice`);
     assert(!html.includes("5例題の公開commit"), `${path} no inherited publication evidence`);
     for (const text of [problem.author, problem.publishedAt, problem.reviewedAt, problem.provenance.aiUsage]) {
       assert(html.includes(escape(text)), `${path} author/date/provenance`);
