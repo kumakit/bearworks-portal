@@ -119,14 +119,36 @@ Windows、Node 24.14.1、Next.js 16.3.0、OpenNext 1.20.2、Wrangler 4.114.0。�
 2. **プッシュとDraft PR作成**: ブランチ `codex/issue-377-problems-batch-4` を `origin` へ push し、Draft [PR #12](https://github.com/kumakit/bearworks-portal/pull/12) を作成。
 3. **Linux clean-checkout CI 通過**: [Linux CI Run 33957579768](https://github.com/kumakit/bearworks-portal/actions/runs/33957579768)（1分23秒）にて、Lint, Next.js build, Prefetch policy, Workers bundle, Staging bundle, Workers preview routes の全チェックが完全合格（PASS）した。
 
-## 次の工程（本番公開承認待ち）
+## 続行: 本番公開承認・merge・本番デプロイ・公開検証（2026-09-05）
 
-指示に従い、Draft PR作成およびLinux CI通過の段階で停止する。
-即時の本番公開は行わず、ユーザーによる最終公開承認（「OK 本番公開して」等）を受領した後に、以下の別ゲートとして本番公開工程を実行する：
-1. `lib/content-provenance.ts` の `toukeiProblemBatch4Provenance` を「運営者が公開内容を承認しました」の確定表記へ更新
-2. `scripts/verify-toukei-pages.mjs` のアサーションを公開確定版へ同期
-3. 本番広告ID `NEXT_PUBLIC_ADSENSE_CLIENT_ID=ca-pub-9560028085973137` でのビルド & 静的キャッシュ組み込み
-4. PR #12 を ready化して merge
-5. Cloudflare Workers本番デプロイおよび本番スモークテスト（全25問・sitemap 42 URL・トラックB並行稼働確認）
+ユーザーからの「本番公開へ進んで」を受領し、第4バッチの最終公開を完了した。
+
+1. **制作情報・検証の確定**:
+   - `lib/content-provenance.ts` の `toukeiProblemBatch4Provenance` を「運営者が公開内容を承認しました」の確定表記へ更新（commit `af374b1`）。
+   - `scripts/verify-toukei-pages.mjs` のアサーションを公開承認版へ同期。
+   - push 後、[Linux CI Run 33957786962](https://github.com/kumakit/bearworks-portal/actions/runs/33957786962)（1分11秒）にて全チェック通過を確認。
+2. **PR #12 merge**:
+   - PR #12 を ready化し、`main` へ merge（merge commit: `156368be0588636b1d1f0578632df378564db80f`）。ローカル `main` を pull して同期。
+3. **ロールバック先の確保**:
+   - デプロイ直前の本番 Worker Version `e4dd91ce-cf1e-4bca-8c57-9351762c5c81`（100%）をロールバック先として確保。
+4. **本番ビルド & 静的キャッシュ組み込み**:
+   - 本番広告ID `NEXT_PUBLIC_ADSENSE_CLIENT_ID=ca-pub-9560028085973137` を指定して `npm run cf:build` を実行。
+   - `opennextjs-cloudflare populateCache local --env ""` で静的キャッシュを生成・組み込み。
+   - Wrangler dry-run（102 assets、`TOUKEI_ORIGIN` バインド維持）を確認。
+5. **本番デプロイ**:
+   - `npx opennextjs-cloudflare deploy --env "" --keep-vars` を実行。
+   - 公開 Worker Version ID: `7888ab5e-4be8-4db0-9e25-26d76eaad618`（配信割合: 100%）。
+6. **本番スモークテスト（全件合格・100% GREEN）**:
+   - **トラックA**:
+     - `https://bearworks.uk/toukei/problems`: HTTP 200、全25問のリンク存在、本番広告ID掲載。
+     - 全25問（問1〜問25）: HTTP 200、本文、与件、解法、誤答、canonical、参照リンク、本番広告ID掲載。
+     - 第4バッチ新規5問（問21〜問25）: ラスパイレス・パーシェ指数（123.1 vs 122.6）、チェビシェフ不等式（84.0%）、幾何分布（0.1024 / 5.0）、過誤と検出力（100.658 mm / 91.23%）、フィッシャーの3原則（局所管理・無作為化・反復）、承認済み制作情報、NIST/SciPy公式URL（prc261.htm, discrete_geom.html, prc13.htm, pri332.htm, pri7.htm）をすべて確認。
+     - `https://bearworks.uk/sitemap.xml`: 全42 URL（重複なし、全25問含む）。
+     - 非広告6ページ（`/about`, `/contact`, `/privacy`, `/weather`, `/dashboard`, `/ai-news`）および不正/404ルートに広告漏れなし。
+     - 認証保護（`/dashboard`）: Cloudflare Accessへ 302 リダイレクト、`Cache-Control: no-store` を維持。
+   - **トラックB（並行稼働プロキシ）**:
+     - サブパスプロキシ（`/toukei/drill`, `/toukei/exam`, `/toukei/cheatsheet`）: HTTP 200、完全非広告維持。
+     - 旧オリジン（`https://toukei.bearworks.uk/drill` 等）: 独立並行稼働を確認。
+
 
 
