@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-09-10",
+    "daily_summary": "本日のAIニュースでは、住友商事によるサカナAIの技術を活用した中小企業への導入加速や、10月に日本語版提供が控えるAppleの「Siri AI」の話題など、産業や身近なサービスへのAI実装が大きく進む一方、ビル・ゲイツ氏によるAIの未来予測や労働市場への懸念、さらには開発競争の激化に伴う安全性を憂慮した研究者の辞職など、技術の急激な進化がもたらす社会的リスクや倫理的課題についても改めて強い関心が寄せられています。",
+    "articles": [
+      {
+        "title": "住友商事、サカナAIの技術を10万社へ支援し中小企業への導入を加速",
+        "content": "住友商事は、日本のAI開発スタートアップであるサカナAIの技術を国内10万社規模へ普及させるための支援を開始すると発表しました。中小企業への導入を促進することで、国産AIの本格的な普及期を切り拓く狙いがあります。",
+        "source": "Google News",
+        "published_at": "2026-09-10",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5TZzMyaGw4VUZuTE00aENWUTlrMXIxa2NSODAtVlhGeWhuM1RGS0tIbVVUelZNN2FBbGNPN2c3a2kwWUZCRGtMNTVJU3JHNWg3QkUzSzZVNTNPY1JmWno0NWFSa25KT3hkVndXdQ?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "「Siri AI」日本語版は10月提供 AI機能組み込んだ音声アシスタント 専用アプリも【追記あり】",
+        "content": "Appleは、AI機能を組み込んだ音声アシスタント「Siri AI」の日本語版を10月に提供開始すると発表しました。専用アプリも用意され、より高度な処理や自然な対話が可能になる予定です。日本のユーザーに向けて、AIを活用した新しい音声体験が順次展開されます。",
+        "source": "Google News",
+        "published_at": "2026-09-10",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBSM0FEN1ZicDlRT1MyOHBiWDZfcE90LVZ3VTJvRDBGekh2NlZlYUVRWWpNeHNNdjV3U214M1pZRWhJRzY5dnJWZVc1UFQ4OWJ3QV9adjNnWGwyZFJPbkRCdzMwa0tFSWpRRHVrSA?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "「Siri AI」は何ができる？ 対応アプリは30万以上で一覧にはLINEも 日本語は10月から",
+        "content": "Appleの新しいAI機能である「Siri AI」の機能や対応アプリに関する詳細が報じられています。対応アプリは30万以上に及び、LINEなども含まれているほか、日本語への対応は10月から開始される予定です。",
+        "source": "Google News",
+        "published_at": "2026-09-10",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBrcTRxMVVMaHBIVjF1aWZNVzZCZXhCa1ZwTTFWNC1sWUFsdGdwTmRtRTJWNWpudE8tZjdrMUlrdGE1OVR1TEJSWUJHZ3NyZDJZSGxSQU00aTQycDF0blBaZnoxR2I5bzFGX1BQV3piOFRDSWtNU2xONHlVNzktcnc?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "AppleのAIエージェント「Siri AI」、日本語β版は10月から提供予定",
+        "content": "AppleのAIエージェント機能である「Siri AI」の日本語β版が、10月から提供される予定であることが報じられました。新機能により、Siriの利便性や自然な対話能力が向上することが期待されています。ユーザーは段階的に高度なAI機能を利用できるようになります。",
+        "source": "Google News",
+        "published_at": "2026-09-10",
+        "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNY3BRb3hqd09DSFlwbUNUTG93R2pSb1lZTHVRajlZekFhSmNxZ3BiUmF2bXVWTFFQY3U0eTJwTzFidi1zTU16ZVNpWHp0N1RuNDNjRk8xUEF4dG9BSmk4aFJWeDdndmpxSmVUa2FUZFF1X2dhWjVESm5WVWxaVndGWkR2cS10TmFPc29weDVBcGpVUdIBlwFBVV95cUxNcUEwUUJFQWVfZWVpOEtYR29vbnZ2WDgyUkE2dVdHSlljM1poVWY2YWVqVnVWRkltTXlQTTFpX3VXdkZhV0c0VlVJamx3enZBNXpjTDBFLVBTS1BWQmQ4WS00R3FBY3h6NVVjTl9mT2RueTNaREVqbE1oVkRaTERWcm1SclZnWkFZaDFtNkQwUEh6OVBCUmR3?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "AIだけでは産業用ロボットは動かせない Mujinが選んだアルゴリズムとのハイブリッド戦略",
+        "content": "産業用ロボットの制御において、AI単体では限界があるためアルゴリズムとの組み合わせが不可欠であるというMujinの戦略について解説しています。AIと高度なアルゴリズムを融合させることで、より実用的で信頼性の高いロボットシステムを実現するアプローチが紹介されています。",
+        "source": "Google News",
+        "published_at": "2026-09-10",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5haVFYc0trUjFvOHN5S0cyQkc2LWpjUVB0dW1HeTVvMjlYd3FDLU9qSEhkM1hIaG9hRk5zLVdjazdGdGxSVDFVZ0ZDeDkwMkF2RDlIcnlR?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "AIで蘇る、中国のマルクス経済学",
+        "content": "人工知能の急速な発展が、中国においてマルクス経済学の新たな解釈や応用をもたらしているという話題を取り上げています。AI技術を活用した経済分析や社会管理のあり方が、現代の中国の文脈でどのように議論されているかを解説しています。",
+        "source": "Google News",
+        "published_at": "2026-09-10",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBsVWZXcEljTlR2WmZJXzd1VUdLNDk1ckR6X2p4Qi13aHphQTdIclNVQ3NHLWRtM3loQm9aT2JRR3lQN3NNQ1k1ZmRLMm_SAU9BVV95cUxNNmJQN01ZSTZ4OEgzS2Y5U2pLSDNWaE9vUVdERkZXQkdyWEJhR0xCdHRieGN5YzVqR1ZsZEhpWWkzZ3BLemNFUWtqLTl4YWhZ?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "「AIでなくなる仕事」ビル・ゲイツが明言 いま始まる“人間の仕事”争奪戦",
+        "content": "ビル・ゲイツ氏がAIの進化によってなくなる仕事について明言しました。生成AIの普及により、今後の労働市場や人間の仕事のあり方が大きく変わると予測されています。人間ならではの役割を巡る新たな争奪戦が始まろうとしています。",
+        "source": "Google News",
+        "published_at": "2026-09-10",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBGeV9Td24yZzRNdWhMSDRsVzYyb3VYdXdKMmxSdWNPbE9QU2V6cXRoX1hTdkwzMlVadmFrN2N1OVlua0RlUXRUMFZ6dGk3cTdfdE1lb0U0TkFmYlB0aUUyNDlUMENXX2hSa3JpU0xZNUVDY1hDaTNyWklQa0kxeHc?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "ビル・ゲイツが語るAIの未来：期待と懸念の交錯",
+        "content": "ビル・ゲイツはAIの急速な進歩に対して大きな期待を寄せる一方で、その制御不能なリスクや雇用市場への深刻な影響について警戒感を示しています。技術革新がもたらす便益を認めつつも、社会的な副作用に対する慎重な対策の必要性を訴えています。",
+        "source": "Google News",
+        "published_at": "2026-09-10",
+        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOODJHa04zU0x2NG8zY041V05fcXZQZUVqb2VEeG1KcUR6MVJuZGZia0h1Zm1tdExCaTcxUHJZV0ZPUzd2YTVqWEpELWZral9UN3F4OU1qM3VGQVlHeXhFTFltcFRyV05HZVp3LS00MmxZX1hjZl9jMjJXYlVJbzFfSDlod0x5LWNG?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "ビル・ゲイツ、いまのAIを「2001年宇宙の旅」のHALにたとえる",
+        "content": "ビル・ゲイツ氏が現在のAI技術について、映画「2001年宇宙の旅」に登場する人工知能HALになぞらえて言及しました。AIの急速な進化とそれに伴う影響について、独自の視点を示しています。技術の未来像とリスクについての議論を呼ぶ内容となっています。",
+        "source": "Google News",
+        "published_at": "2026-09-10",
+        "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE4zRnJXVTlCVDV6UlZ4RFAwX28yZ29kSFdoVktheHY1Z1VYM1VMV250ZHpPeEF6emh0cmwxb1pjVGZTUDliOWNCMlVB?oc=5",
+        "category": "その他"
+      },
+      {
+        "title": "アンソロピック研究者、AI競争の停止求め辞職 「開発企業は無責任」",
+        "content": "AI開発企業アンソロピックの研究者が、AI競争の即時停止を求めて辞職しました。開発企業による無責任な姿勢を批判しています。AIの急速な進化と安全性に対する懸念が高まっています。",
+        "source": "Google News",
+        "published_at": "2026-09-10",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1DcmN6UGxrYURKOXlMWTYzTXhrWjZMclZCSnM0aGZFaXdLV2NqckdmSnZ0Qzhab2RORkVnNVk2M2FUdUJ2YkJaRmdhSE1QeTcxNURxd0VzaG52T0tkNWJkQVB0WFRFZERoMzRZZQ?oc=5",
+        "category": "政策・安全"
+      }
+    ]
+  },
+  {
     "date": "2026-09-09",
     "daily_summary": "本日のAIニュースは、AIエージェントの活用や「AI PC」の普及など業務効率化やライフスタイルの変化が進む一方で、NECの「無人部署」導入のような労働市場へのインパクトやシステム連携の課題が浮き彫りになりました。また、先端AIの安全性確保や米中間の技術覇権争い、AI生成画像の著作権をめぐる裁判など、法規制や国際的なルール作りの重要性も高まっています。",
     "articles": [
