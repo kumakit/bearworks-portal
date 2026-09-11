@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-09-12",
+    "daily_summary": "本日のAIニュースは、OpenAIによる開発ペースの減速検討や研究者からの人類滅亡の警告など、AIの急速な進化に伴う安全性や倫理的リスクへの懸念が浮き彫りになる一方、ファナックとGoogleによる溶接ロボットの実用化や「AI婚活」の普及など、産業から日常生活に至るまでAIの活用が着実に広がりを見せていることを伝えています。また、激化する開発競争の裏で、IT人材の不足、フェイク情報への危機感、米中間のセキュリティを巡る攻防など、AI時代がもたらす新たな課題への対応も急務となっています。",
+    "articles": [
+      {
+        "title": "ＡＩ業界去る研究者、「ＡＩが人類滅ぼす可能性」を警告",
+        "content": "AI業界を去る研究者が、AIが将来的に人類を滅ぼす可能性があると強く警告しています。最先端の技術開発を進める現場の内部から、リスクに対する懸念の声が上がっています。専門家の間でAIの安全性と倫理的な規制の必要性が改めて議論されています。",
+        "source": "Google News",
+        "published_at": "2026-09-12",
+        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBpVlY5elZlaEIzN2syQUZTb0dTVUtRZTRDTFlqMHdxT2VNdFNqa2N2amUwNV8zUkxmbWRQd3JQYTV4R3hIWEswYkhWN3Jrcnl3eU1wd3hWYzU1MTVhcUpSU2RwMXdwUQ?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "OpenAI、最先端AI開発ペースを緩める可能性も－CEOが社員に言及",
+        "content": "OpenAIのCEOが社員に対し、最先端AIの開発ペースを緩めることも選択肢の一つであると語ったことが報じられました。競争が激化するAI業界において、開発戦略の方向性を見直す可能性を示唆しています。今後の技術革新のスピードや方針に影響を与える発言として注目されています。",
+        "source": "Google News",
+        "published_at": "2026-09-12",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9qRGtwQWxlYTJ5RDFYVm5ydUZaUnVTT180ZGM0dzY3YmdZMDJSWG43OUhBcUZRYWNTX04zSm80bnFmRWZ3MWRnRU1BT0dXcXN0cVY1bmY3blpiVnJJX01FQ3ZnREV5NDdvVWVvMGFma2NlaE5wWDZYQXpKU212d2c?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "オープンAI 最先端AI開発のペース減速を検討か アルトマンCEOが従業員に説明と米報道",
+        "content": "オープンAIが最先端AIの開発ペースを減速させる方向で検討していることが、米メディアの報道で明らかになりました。サム・アルトマンCEOが社内従業員に対して直接説明を行ったと伝えられています。今後の開発戦略や技術進化への影響に注目が集まっています。",
+        "source": "Google News",
+        "published_at": "2026-09-12",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBxdGtxMUkzU25jQUVmZ3ZkSTNMWWdqOElpRnk5aHFBazBiSkd4aHFndVdBc3h1QUgzblFrRkFEa0lZUFJ0RXNuSkdoUDd4ZF92WVN5N01HeFUxbldGUk9RcEdoRWZoSlJTZkJVdk1GTG1iMFA3?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "ファナック、GoogleとAI溶接ロボット 自ら図面を読んで自動で作業",
+        "content": "ファナックはGoogleと協力し、AIを活用して自ら図面を読み取り自動で作業を行う溶接ロボットを開発した。これにより、熟練の技術が必要とされる溶接作業の効率化と自動化が大きく進展することが期待されている。製造業の人手不足解消に向けた新たなAI活用の事例として注目を集めている。",
+        "source": "Google News",
+        "published_at": "2026-09-12",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1tMWJJS1FYLVVIQk1BMGllYm9MRWI3eFlwVlBiUzZ6VTRrQ3lpa0pLYnBmNDBwTG1aOTc2dlR2R0ttWFY0Y1VINkdlZVI1Wm9xOFdDX3hsVThVYkJPOVhybGhnbnFFNlM1VzdaTw?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "生成AI時代に「より深い問い」を立てるために欠かせない知識とは",
+        "content": "生成AIの普及により、既存の答えを探すことよりも重要な問いを立てる能力が求められています。この記事では、AI時代を生き抜くために必要な深い思考力と、それを支える知識について解説しています。",
+        "source": "Google News",
+        "published_at": "2026-09-12",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFB6cTNvVGRuVzZiU21ZazB4aHN5Zk9fb1VKa1pUOW9iV2VRY1dPbThwU3pfYld4bnpBM3RyZTcwaEpVcHgzcFA2QnBIY1TSAU9BVV95cUxQSFVXTTVtc0llQ2pvNUNDS0ZfSDF5Tm9NbXgxazF2OTA0MVdVUHFpSU9XbUs0QXJvcnFUUWx5REZyRm1MdDkzdXd1ekFydmFJ?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "「AI婚活」出会いの主流に？ネットきっかけでの結婚が2021年から倍増",
+        "content": "最新の出生動向基本調査によると、インターネットやAIを活用した婚活を通じて結婚するカップルが急増しており、2021年の調査から倍近くに達していることが分かりました。マッチングアプリやAIマッチングシステムが、現代の出会いの主流になりつつあります。少子化対策の一環としても、こうしたデジタルを活用した出会いの場に注目が集まっています。",
+        "source": "Google News",
+        "published_at": "2026-09-12",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9vMkp3QnVjTzQxaVJDcWZtblZHTTNPQlVTbV9XRW9OZGVfQW5Ibmh2dk52QklCelhoaXFtMUd4TlRQcDhjRVlTeDdmVmZDS2Z4VEtubDF3?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "米国AI企業の働き方、「モーレツ」勤務の技術革新",
+        "content": "米国の人工知能（AI）企業における過酷な勤務実態と、それがもたらす技術革新について報じています。最先端の開発競争の裏側で、エンジニアたちが長時間労働をいとわない働き方をしている現状が示されています。",
+        "source": "Google News",
+        "published_at": "2026-09-12",
+        "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5yTjdpcUtnd3JJd2tnVGVBSi1mWWVhVWZFMzFIWmFUQ0ZJa2VwUnBsWkJMMEJBNE53cVN3azNMc2xqb0NJZ3cybTZkOURraUhRYXRnUk1od1loNkl5?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "“嘘にAI”事実否定に危機感 9.11“封印”された映像…突入直後から1時間以上",
+        "content": "AI技術の発展による事実の否定やフェイク情報の増加に対する危機感が報じられています。特に9.11事件に関する未公開映像を取り上げ、情報の真偽が揺らぐ現代社会の問題点に焦点を当てています。",
+        "source": "Google News",
+        "published_at": "2026-09-12",
+        "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5tWU1zcXczTjFUSWxJQ2lFTENNaHZZakM4MEtwNnp3X0JvUDdWSzZ4a3lDNU9ndk13WjNTYXZFWkFQREd6SUpDS1JNcWJ0UUJTZFhaeHZiVlB5dXlyOFRkSXNOUEZEU3BvaFNzdnFEYkRRNmlmdDRNaVJn?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "「争奪戦が激しいITエンジニア職」とその理由 AIがあってもなぜ人材不足？：企業の9割が「需要増を実感」、ITR調査",
+        "content": "ITRの調査によると、企業の9割がITエンジニアの需要増を実感しており、採用の争奪戦が激化していることが明らかになった。AIの普及が進む一方で、それを活用・開発する高度な人材の不足感は依然として高い状態が続いている。企業のデジタルトランスフォーメーション（DX）推進に伴い、今後もIT人材の確保が重要な課題となっている。",
+        "source": "Google News",
+        "published_at": "2026-09-12",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBuVE1hdTBlWkQ0WkdkNDk4dnBoRlUzazBfaHV0RU00NmdSbnQ3MlNPOGM3aVBiY2NrM1JlX014S3Z0U0s1VTJqdzNjM0d0LTlrU2I4b2hGZ1oxN3lKMDZZc2Q3NUlJeWFVZFo3aXdOQVQzQQ?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "中国AI企業による「蒸留」攻撃と米アンソロピックの対応",
+        "content": "米アンソロピック社は、アリババなどの中国AI企業が同社のモデルに対して「蒸留」攻撃を行っていると指摘しました。また、生成AI「クロード」が悪用される恐れがあるとして、関連するアカウントの停止措置を実施しています。AI技術の安全性やセキュリティに関する国際的な懸念が高まっています。",
+        "source": "Google News",
+        "published_at": "2026-09-12",
+        "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9mTTYydTFWazRKTE02VmFVQkpJWkxtRG52UEVLQTVMaEFmQTlleklOS0pGWlQ1WTFqRVUwbGtHNV92Q3poa19qZW9nQWkxY1oyUVNOaWEtZFFaMk5YRjk0c2dOSGxKQ29VdjdtejBTOEZiT1RWZjdndVFoQ1fSAYIBQVVfeXFMT3lRbVBsOGRpX2xKdmZMRk9FeXhuRE5CRThmM0MtR250djhtdU43Y1dWMmQxb3RaYVNRdzdfOHRVTVlESUUyMGFJRFZyemZMVFpoTWpwQ2JZVkZTai1hcnJ4NG55RnNpV1VBS3EtZm5XNEFfZjR6ODF3MkZHOUxQSGYzZw?oc=5",
+        "category": "政策・安全"
+      }
+    ]
+  },
+  {
     "date": "2026-09-11",
     "daily_summary": "本日のAIニュースでは、NECによる「無人部署」の創設やコスト削減の取り組みなど企業のAI活用が進展する一方で、アンソロピック社の研究者による人類滅亡リスクの警告やフェイク情報の拡散といった安全性・倫理面の懸念が浮き彫りになりました。また、欧州AI法への備えや教育のあり方、IT業界やマーケティングにおける市場動向など、技術の急速な進化に伴うビジネスと社会全体の変革およびリスク管理の重要性が多角的に報じられています。",
     "articles": [
