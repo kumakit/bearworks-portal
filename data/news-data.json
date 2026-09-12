@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-09-13",
+    "daily_summary": "本日のAIニュースでは、AIの急速な発展がもたらす光と影が浮き彫りになりました。数学の難問解決を巡る著名数学者たちの非難声明や、アンソロピックCEOによる開発減速の呼びかけなど、倫理的課題や暴走リスクに対する深刻な懸念が示される一方、教育現場での活用や企業の好決算、ロボット部品関連株の急拡大など、経済や社会への浸透も加速しています。さらに、レシートの不正生成や文章推敲における内容改変リスクなど、実用上の新たな弊害も報告されており、AIの急速な進化に対して技術的・倫理的な規制や対策の必要性が改めて問われる一日となりました。",
+    "articles": [
+      {
+        "title": "数学難問をAIで解決、フィールズ賞25人が非難声明「科学に有害」",
+        "content": "人工知能による数学の難問解決に対し、フィールズ賞受賞者を含む著名な数学者25人が科学的発展にとって有害であるとする非難声明を発表しました。AIの利用が数学の本質や研究プロセスに与える影響について、専門家の間で深刻な懸念が広がっています。",
+        "source": "Google News",
+        "published_at": "2026-09-13",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5nRnVLeUQwaDBNc0FfYlhxc2lqdXp4cUthLW5XUXk3WmxaZUw2UmlSYmZfSmdyVnhQdFJKb3AxRVhOY2RBdlctVTdqcWh5bTVYNGIxV3pCVzk5aDFySWg2bUFSRURnVEgxeU5hVg?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "世界の数学者25人が緊急声明 AIで企業が数学の難問を解く行為を非難",
+        "content": "世界中の数学者25人が、AI企業が数学の難問を解くためにAIを利用する行為を非難する緊急声明を発表しました。この動きは、AIによる数学的アプローチの是非や、学術的な公平性に関する議論を巻き起こしています。専門家らは、人間の知的探求におけるAIの役割について早急な議論が必要であると訴えています。",
+        "source": "Google News",
+        "published_at": "2026-09-13",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE4tdGNoWjFfb18yMDc0QVUxcmVVd2phTjA5RHpIbHA2YkZJQlZMYTl1cUF4VkVTSnE2SFl5QnhEWlN6SEoxbmVFenk3V0JsMGR2UVl4MzNUYjIyaTNqcGc?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "AIによる数学研究は成果の優先権をどう変えるのか――計算資源と先行研究が成果帰属の判断を難しくする",
+        "content": "AIを活用した数学研究の進展により、発見の成果の優先権や帰属をめぐる問題が複雑化しています。膨大な計算資源や複雑な先行研究の存在が、誰が真の貢献者であるかの判断を困難にさせています。この記事では、AI時代における研究成果の評価と倫理的な課題について解説しています。",
+        "source": "Google News",
+        "published_at": "2026-09-13",
+        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNZWdVSjdqaXNHNTllUXlaSi12MVpGRk5jejQ5cXVfbFpBMGFnNzlRTmlWYi03M2JEczJkMDRwWDRJRG9CMnZHMWV6T2lqMnFqNGtqN204SWlPZ1RiUzVqQnc4VU9GcVFFZjlvOWRCN3NBcGFyTGxITXU2S0xTU3ZBTnNkaGVrbkth?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "AI開発「減速必要」米アンソロCEO呼びかけ 暴走リスク「ネット全体乗っ取る可能性」",
+        "content": "米アンソロピックのCEOが、AIの急速な発展がもたらす人類への深刻なリスクについて警告を発しました。AIの暴走によりインターネット全体が乗っ取られる可能性があると指摘し、開発の減速に向けた業界の協調を呼びかけています。",
+        "source": "Google News",
+        "published_at": "2026-09-13",
+        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9FejZERlVoa3RHSWZndUZ6c2xQOS01cV83VW1sTDJCR0ViOUVpRXdpOHk5b05ReW5DTElIYThjZXRDU0FYOTg0ZWh4S2J0Ym11NDl1TzY2MFFvSFp4VXItMVJvMzM0aGVNa2lmVzZuY0Z0WHNKRGc?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "AI先生と人間先生 アメリカの学校で導入も",
+        "content": "アメリカの学校において、AIを活用した「AI先生」と人間の教師を組み合わせた新しい教育アプローチの導入が進んでいます。生徒一人ひとりの学習進度に応じた個別指導が可能になる一方、教育現場におけるAIの役割や人間教師との関係性について議論が続けられています。",
+        "source": "Google News",
+        "published_at": "2026-09-13",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE4zaXJEeVZHY3NtWlozSE1CZUxyc00tUU5la3JTR0c2ZDktb0JaUDNyT2pqdFF6Q3Fjb25JdHN5X2poTW51V3FXS1JCZ2luSkhvZFdHTmNRc1hTOW9TX2RLU1NwUDdyRF9DcC05ZmFiS1N1QQ?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "フィジカルAIは急拡大必至、勇往邁進の「ロボット部品」関連6銘柄",
+        "content": "フィジカルAIの普及に伴い、ロボット部品関連の需要が急拡大することが予想されています。この記事では、今後の成長が期待される注目の関連6銘柄について詳しく解説しています。",
+        "source": "Google News",
+        "published_at": "2026-09-13",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1mZkFJcnZabVNrTWtkaC05THlfUVhJNWY2Z1doQnp4QlQ1NHlvWnZiNkpDRUhiSnRoUkV3UGVSUjdaLWc4LUlKYkI3WXkxYnRwYktrTWtadXEzRVU4VHlVSw?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "オラクル株上昇、第1四半期でAIクラウド収入121％増と巨額契約を発表",
+        "content": "オラクルは第1四半期の決算を発表し、AIクラウド収入が前年同期比121%増と急成長を遂げたことを明らかにしました。この好調な業績と巨額の新規契約の発表を受けて、同社の株価は大幅に上昇しました。",
+        "source": "Google News",
+        "published_at": "2026-09-13",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9MdkRiLWZjVmVRaUl6WVJLclZudFp2SXVneWhqNjExcldnS2hRWGRNaWp6R3FXNkc0N0h0dEp6R1RIWUJfeWtxX01KZVN3TEEyV05NSVQ0bEtNQQ?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "バークシャー・ハサウェイのAI株注目理由とアベル新CEOによる投資戦略の変化",
+        "content": "バークシャー・ハサウェイがAI関連株に関心を寄せる背景と、アベル新CEOへの継承に伴う今後の投資戦略の変化について解説しています。巨額の資金を動かす同社の動向が、テクノロジーセクターや株式市場全体に与える影響に注目が集まっています。",
+        "source": "Google News",
+        "published_at": "2026-09-13",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBtUHM0bUJ3SmJYc0xCNWkzSFZoZDZ2RWRweXBkcVZlNkZ3WVh1U3JxbHRVLUlRNnoySnVBSzVJMGd2eGR6YTB3SHRDRjdGaWxBMzY0a9IBV0FVX3lxTFAyYWZmNUp1c1Z1TVlBdGlDMTdGX3VITUEtWWZpZWpQOUstdDFoMk1tMXZjOFNITVNPNUE4NElsWVRpTUN4SnpYSUYwcWJTOU1pYk5TWW1EZw?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "レシートAI生成による経費不正を防ぐ方法",
+        "content": "AI技術を用いて偽のレシートを簡単に作成できるようになったことで、企業の経費不正リスクが高まっています。これに対抗するためには、AI生成を見抜く検知ツールの導入や、デジタル明細の義務化などの新たなセキュリティ対策が求められています。",
+        "source": "Google News",
+        "published_at": "2026-09-13",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE54T1ByNHlnUTFhOHpMVl81Umdrb0FNVko0NEZaM2JCMktkTk1qSHlGSXIwcmtSQjJkcWhGTnlPQWExYlQzZF9NVnJ3SVptQ2tY?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "AIで文章を推敲してはいけない、「内容を著しく改変する」と研究結果",
+        "content": "AIを使用して文章を推敲すると、意図とは異なり内容が著しく改変されてしまうという研究結果がForbes JAPANで報じられました。文章のトーンやニュアンスが変わってしまう危険性があるため、AIによる安易な添削には注意が必要です。",
+        "source": "Google News",
+        "published_at": "2026-09-13",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9pbzZyUHpKY1M3dlhnTGN1aFRJbTdLbURKVHFmY21YbFVHQzR4c2RzLW54YnRLLXIzSDFqdU9HNm1nLUF0dXc5UFJpZEZEclZOQjAwM3FOczVzUQ?oc=5",
+        "category": "モデル・研究"
+      }
+    ]
+  },
+  {
     "date": "2026-09-12",
     "daily_summary": "本日のAIニュースは、OpenAIによる開発ペースの減速検討や研究者からの人類滅亡の警告など、AIの急速な進化に伴う安全性や倫理的リスクへの懸念が浮き彫りになる一方、ファナックとGoogleによる溶接ロボットの実用化や「AI婚活」の普及など、産業から日常生活に至るまでAIの活用が着実に広がりを見せていることを伝えています。また、激化する開発競争の裏で、IT人材の不足、フェイク情報への危機感、米中間のセキュリティを巡る攻防など、AI時代がもたらす新たな課題への対応も急務となっています。",
     "articles": [
