@@ -161,6 +161,17 @@ jobs:
             echo 'AdSense client ID was found on an invalid labs response'
             exit 1
           fi
+          assert_status 200 /labs/hachioji-snow
+          grep --quiet 'ca-pub-0000000000000000' /tmp/response-body
+          grep --fixed-strings --quiet '雪のニュース。' /tmp/response-body
+          grep --fixed-strings --quiet '3ed2217036d5be5631b80fd1e171900138317f73f6ae6b6ab0f982dec6117c6d' /tmp/response-body
+          grep --fixed-strings --quiet 'https://bearworks.uk/labs/hachioji-snow' /tmp/response-body
+          grep --fixed-strings --quiet 'src="/images/hachioji-snow/hero-illustration.webp"' /tmp/response-body
+          if grep --fixed-strings --quiet '/_next/image' /tmp/response-body; then
+            echo 'Snow illustration unexpectedly uses the image optimization endpoint'
+            exit 1
+          fi
+          assert_status 200 /images/hachioji-snow/hero-illustration.webp
           assert_status 404 /toukei/problems/__invalid__
           if contains_ads; then
             echo 'AdSense client ID was found on an invalid problem response'
@@ -177,6 +188,7 @@ jobs:
           assert_status 200 /robots.txt
           assert_status 200 /sitemap.xml
           grep --fixed-strings --quiet 'https://bearworks.uk/labs/hachioji-climate' /tmp/response-body
+          grep --fixed-strings --quiet 'https://bearworks.uk/labs/hachioji-snow' /tmp/response-body
           assert_status 404 /route-that-does-not-exist
           if contains_ads; then
             echo 'AdSense client ID was found on a 404 response'
