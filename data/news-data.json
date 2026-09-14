@@ -1,5 +1,177 @@
 [
   {
+    "date": "2026-09-15",
+    "daily_summary": "本日のAIニュースは、AI開発の急速な進展に伴う「安全性や暴走リスクを理由とした開発減速論」が世界的な株安や巨額の資産減少を引き起こすなど、市場に大きな衝撃を与えたことが中心となりました。同時に、国内の官公庁における業務効率化のための生成AI活用や、面接でのなりすまし、料理写真への反発といった倫理・社会的な課題が浮き彫りになる一方、米中関係を意識した国際的な技術協力の動きも報じられています。",
+    "articles": [
+      {
+        "title": "AIの開発ペース「減速」は可能?",
+        "content": "急速に進展するAI技術の開発ペースを意図的に減速させることが可能かどうかについて議論されています。安全なAI利用や開発のガバナンスに関する社会的な関心の高まりを背景に取り上げられています。",
+        "source": "Google News",
+        "published_at": "2026-09-15",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9PZ1JmNzJlNjRzSTFtU3Ezcm12MWNWaDRPdUJ3UkozYjN1WWhIWW84YkxuRHREOThRTUx0bjlsckh1WGFMZ1RObWtrZ2pNZkRq?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "AIで面接応募者になりすまし 対策",
+        "content": "AI技術を用いて面接の応募者になりすます不正行為が問題視されており、企業側での対策が求められています。このような偽装を見破るためのセキュリティ強化や新しい本人確認手法の導入が進められています。採用プロセスの信頼性を担保するため、さらなる技術的・制度的アプローチが必要となっています。",
+        "source": "Google News",
+        "published_at": "2026-09-15",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE0xNzhwSDcyRV8wazlVRHRJVDdkaEY2OVRZX0RGclQzWDQ1eFFPeUNWUzlwTjFhcldua1EwTlhDQmJTeXlfVVhJbW1hcFc2VmM0?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "「ブラック霞が関」なくなるか？長時間かかる国会答弁作成、生成ＡＩ活用へ",
+        "content": "霞が関の長時間労働の要因となっている国会答弁の作成業務において、生成AIの活用に向けた動きが進んでいます。業務の効率化と負担軽減を図り、過酷な労働環境の改善を目指す取り組みとして注目されています。",
+        "source": "Google News",
+        "published_at": "2026-09-15",
+        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1BTHJMbzUtOHFQdHotRnNrcG9ucC1ZRlViVV9VV2lVNVgyNkhzMVRTMG9SOVVsdVlxaU9ka1ZFMjZPM2FmRkxtaUU3RzJ6ekxnblJDNlRDZ0p5NmEtcGtCSGZOZkxPUQ?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "米国株式市場は反落、AI減速懸念による半導体株売りや高水準の長期金利が重荷に",
+        "content": "米国の株式市場は、人工知能（AI）の成長鈍化に関する懸念から半導体関連株が売られて反落しました。さらに、長期金利が5％近辺の高水準で推移していることも市場全体の大きな重荷となりました。投資家は景気や金利の先行きに対する警戒感を強めています。",
+        "source": "Google News",
+        "published_at": "2026-09-15",
+        "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOY3ZkU2N6NVRxcW1fUDFDTkc3NUYtcU9hc2JneUFuOFg2UjZxdWNlTnc0bmhCU1M1QTcwMDVzQjRjVzZEck9jeERpOFc5VGxnbE5rNjR0WkF4Nlp1ZG5ydXdRc3ZuZlRpaHJmeG5FMDFLbnc5WlpNazdjaWtHcERkYThMdm8?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "開発減速の声受け「世界のAI関連株」が同時急落 孫正義の資産は1.2兆円減",
+        "content": "AI開発の減速懸念を受けて世界のAI関連株が同時に急落し、投資家や市場に大きな衝撃を与えました。この市場の混乱により、ソフトバンクグループを率いる孫正義氏の保有資産も約1.2兆円減少しました。AIブームの急激な拡大に対する過熱感と、今後の成長ペースへの警戒感が改めて意識される展開となっています。",
+        "source": "Google News",
+        "published_at": "2026-09-15",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9kTXU1eXltcnIwM0t3anBPTlRvempFanZDamN4bEdMR1JLa0M5NHlQMVl2bUFITmk3V0tFWlNnRDM1d1YwdnQ5SzlZSTBUQWpfRTdLODY5eldWUUljZEpacXRkZVhqbTktczkxaHdPZkxpV0Y5dmYxOHZTejdiNjQ?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "米国株式市場は反落、AI減速論による半導体株売りや長期金利の上昇が重荷に",
+        "content": "米国株式市場は反落しました。人工知能（AI）の成長鈍化懸念から半導体関連株が売られたほか、長期金利が5%に達したことも相場の重荷となりました。",
+        "source": "Google News",
+        "published_at": "2026-09-15",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5OYzFHWEJ0eGhUd0lqU29wcUpYSlpCQ3dLX0Eydl91b21qWmxVeTUybUIzWHFwcV9qX0dPTmx3MEFjWEN3M2RaVnFld1hsTzJ2cndnUzh0X180dw?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "米AI開発、対中にらみ抑制論 暴走脅威でアンソロCEOに賛同広がる",
+        "content": "米AI開発において、AIの暴走による脅威や技術リスクに対する抑制論が強まっています。アンソロピックのCEOが開発の減速を呼び掛け、業界内で大きな賛同が広がっています。中国との競争を意識しつつも、AIの安全性を最優先すべきだという議論が活発化しています。",
+        "source": "Google News",
+        "published_at": "2026-09-15",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE03R0lDSkQ1NjN1SFhFVWI0TXpMV25GQ1p2M1RWWlpfTWZTRlZBdmotbDdkT3k0SHZIRGRnbnBzRjg3bGZCOXdYREpOZ1U3VFNCTWFmLUQ2Rlo3RXQ5WUk5dlpyWTFxTmZ5RUhTOA?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "企業法務はAIに代替されてしまうのか？ 一橋大・小林教授が示すAI時代に法務が担う新たな役割",
+        "content": "一橋大学の小林教授が、AI時代における企業法務のあり方について解説しています。単なる定型業務の代替にとどまらず、法務部門が新たに担うべき重要な役割や戦略的価値について考察されています。",
+        "source": "Google News",
+        "published_at": "2026-09-15",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9pMllad0hsSzl2S014bjNLMlcyQkhtZ0RKV0RVRnhVZ2dDYm81SjJnbXNuQlBYOVNXMElRX3U0aDFWZHc0MWt2cGk1dDJIbGhNQmhWUTB3?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "AI生成の料理写真は「不気味の谷」、これほどの反発に遭う理由は？",
+        "content": "人工知能によって生成された料理写真に対して、人々から強い反発や嫌悪感が示されている。その背景には、視覚的な違和感だけでなく、食に対する人間の本能的な信頼感や文化的な価値観が損なわれることへの懸念があると考えられる。AI技術の急速な普及に伴い、食のビジュアル表現における倫理や受容に関する議論が深まっている。",
+        "source": "Google News",
+        "published_at": "2026-09-15",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE16NkFFS2dIeFZ0RnNwTW16U0I5V0J5czNISjZESDdlMzBRTndwRlNZQUx1SFRqN3ZXME1WZ3VodzgybjR0bmZaNHJvdlFMMUZw?oc=5",
+        "category": "その他"
+      },
+      {
+        "title": "習氏、BRICSで「オープンソースAI」構想を提案 米中会談控え",
+        "content": "中国の習近平国家主席がBRICS首脳会議にてオープンソースAIの発展に関する構想を提案しました。これは米中首脳会談を控えたタイミングでの発表であり、国際的な技術協力をアピールする狙いがあるとみられています。",
+        "source": "Google News",
+        "published_at": "2026-09-15",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5BTzA3VkVzb1NreUt0WEtTS3YxbE1pTHlvRXVPVVFWcUpaU1JYZjBXaFVVLXBEVERXYzhEU19YZDV5XzVZNnpVXzZjOERUR1BqOWfSAVRBVV95cUxNdGthU2I1X2owSXJwOHhtaG9RYm5TcENoT2R4YVAyRU04dTBzMmktbS1qOTNoRDJoSURiSXhfYzBZRklWaHkzbjdtMVA3bTkzZzIyVWQ?oc=5",
+        "category": "政策・安全"
+      }
+    ]
+  },
+  {
+    "date": "2026-09-14",
+    "daily_summary": "本日のAIニュースは、AIの急速な進化がもたらす光と影を浮き彫りにしています。開発競争の激化や米中覇権争いを背景に規制をけん制する動きがある一方で、AIによる乗っ取りリスクの警告や環境負荷、労働市場への深刻な影響といった課題が表面化しています。同時に、ヒューマノイドやラボ自動化などフィジカルAIの現実世界への応用が加速しており、技術革新と安全保障、そして倫理的なバランスをいかに取るかが問われる転換点にきています。",
+    "articles": [
+      {
+        "title": "アンソロピックCEO「AIが1年内ネット乗っ取り恐れ」 開発減速訴え",
+        "content": "米Anthropicの最高経営責任者（CEO）が、AIが1年以内にインターネットを乗っ取るリスクを指摘し、開発ペースの減速を訴えました。しかし、激化する開発競争の前には各社とも足を止めづらく、「囚人のジレンマ」のような構造的課題が浮き彫りになっています。AIのリスクと安全保障に関する議論が一段と高まっています。",
+        "source": "Google News",
+        "published_at": "2026-09-14",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9pZExwS3l5b2gzd05EdzZSSWRYVGhMeXhaaDVlcnRUckVXakxxZFZWVkZhR1h4NFNRb0IwNnp3bVJHUHZnaFI4Z05GV2prV2hIUG0zcXEyYWJxR09HQW5XVks1SjhWQzVnLVVnSg?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "AIブームの落とし穴：データセンター・半導体生産で増大する水資源への負荷",
+        "content": "急拡大するAIブームの裏で、データセンターの冷却や半導体製造に伴う水資源の大量消費が深刻な環境負荷となっています。AI技術の進展に伴い、電力だけでなく水資源の持続可能な管理が急務であることが指摘されています。",
+        "source": "Google News",
+        "published_at": "2026-09-14",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFB5ZWIyZnVTcldmNnpDV2s1SU02ekJUTkZXRXQ2em5hcXdoLVlLNy15Y0xVUDZHUEw1Ni11aWRrOGhSRVgyQkw5aWhfWDFuVmJRQU8yaG1kTjRjOHZ2QlFWVDM2Q1hVQS01ZFo1OTlST3FMQmdfT1EySEtGbldZWnc?oc=5",
+        "category": "インフラ・半導体"
+      },
+      {
+        "title": "舞台は現実世界、味の素がフィジカルAI時代に発揮する意外な強み",
+        "content": "食品メーカーの味の素が、フィジカルAIが活躍する現実世界の分野において意外な強みを発揮していることを報じています。長年培ってきた独自の技術やデータが、AIと物理世界を融合させる時代にどのように活かされているのかが注目されています。",
+        "source": "Google News",
+        "published_at": "2026-09-14",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE4zcUxPT3kxUE4xSDAzZjVpR05Bc3N2LW8tb1VkTllsYWVRdU1OeUVGV01IdTNDTl9WSXFaX2hhVm9nM0FpN19UT1l3WWNYNFBEVFJsWUxn?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "「正解」の「楽しくなさ」 ニューヨークの教育現場におけるAI禁止措置を考える",
+        "content": "ニューヨークの教育現場における生成AIの禁止措置を契機に、教育における「正解」を求めることの是非やAIがもたらす影響について考察しています。効率的に正解を得られる環境が、学ぶこと本来の楽しさを損なっていないかという現代的な課題を取り上げています。",
+        "source": "Google News",
+        "published_at": "2026-09-14",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5vRUNHY1lJOU9xU1MybmstQTVHelpQcEZ1YTNDQXZsT2tzdE1GdWdvZ0pzcUEzVVktbTl2NUh3Yy1tUG4xWlhmTlNQVUhLb0E5VEt3?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "トランプ氏 AI規制議論をけん制 中国との覇権争い「アメリカがリード」",
+        "content": "トランプ氏は過度なAI規制の議論をけん制し、中国との技術覇権争いにおいてアメリカが主導権を握るべきだと主張しました。AI開発における安全規制のあり方や、米中間の競争戦略に影響を与える発言として注目されています。",
+        "source": "Google News",
+        "published_at": "2026-09-14",
+        "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNVDRFZlQ3VXAxOEJSN2hYUHRmV0pGUzhEWEM2anBBT2xBVnZVUl9ndTNtTkVkam1ibU45QVVzNkZFblU3R3N0dVNjVmhwdFpnaWxGYWtadmJ4UDNkejJCTmE0UE1XU1BxTHl3NHc5Z0tVY3A5TXRqa1IyRVdwTG1qVGZnZmNwQdIBiwFBVV95cUxPY3dLdFNLc08zVFFjYTJ5TE16TExZMTQ1eTFJODZZYWVvLWRTRXRtWnJRRnlKV0F1aW03Z2ozMkp4OGdhOHRWdjJ0aG9TTEd6UkRXWjJ3V3RBbEJabmkwOWVoMFdJbnQxWW40SGJaZTJQeXkzb1RDX0F0TVJ6VnJEa3NwVEdkSUFrUUhF?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "米大統領、AI規制議論けん制 開発で「中国をリード」",
+        "content": "米大統領がAIに関する過度な規制議論をけん制し、技術開発において中国に対してリードを維持する姿勢を示しました。AI産業の競争力強化と国家安全保障のバランスをめぐる動きとして注目されています。",
+        "source": "Google News",
+        "published_at": "2026-09-14",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE4xZFU2UE5abDRZSmN1S19MbU5DU0FOMTRjdGt6Qm1rbmctZGVQRXBtSFJIcndLdGxvcERDYU5tT2pQalVwNHV6WEZuSXhiRTBHbXYxYjdjdEpsRElMUldfdzBidzRFVTJXbU8xTXZqOXVLbzIyWkZfOUotZG1ldHc?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "米大統領、AI規制議論けん制",
+        "content": "アメリカの大統領が人工知能（AI）に関する新たな規制議論をけん制する動きを見せました。技術革新のスピードを維持するため、過度な規制に対する懸念が示されています。今後のAI政策の動向に注目が集まっています。",
+        "source": "Google News",
+        "published_at": "2026-09-14",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE11eEFxWlJVNldqSzN1Z2gzaVRJelNSVUl5Y1RZSFZHRmN6TXRYUVRMNWJOWjlIeXpPMkFmV1k3Q3Y4QlIxRmFueXpVZDBpcjkyVjlHakF2YlJZV250a2c?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "Anthropic初のフィジカルAI「成功率99％」 MCPに次ぐ「ラボ自動化」規格MHSの衝撃",
+        "content": "Anthropicが初のフィジカルAIを発表し、成功率99%という高い実績を記録しました。さらに、MCPに続く新たなラボ自動化規格であるMHSが業界に大きな衝撃を与えています。AI技術の物理世界への応用と自動化の進展が注目されています。",
+        "source": "Google News",
+        "published_at": "2026-09-14",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9HZ19lV3pDdjRjM0pOYlI0TGlUVnkyTDh4Ti05VUxZbkNYUXZsRkxTU1RzbmZpd1BSUjVIMFhrVjZtZzI4cnBHVm52dEQ3RmZjMG40cUhoNU9RWFZ0a3RFaDdoWDZEd1BwQzlmaU4xS2pVbE1qTjVOZ3F6X1pnUEk?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "地下鉄駅の案内役にヒューマノイド、フィジカルAIで「自然な対話」を実現",
+        "content": "日経クロステックによると、地下鉄駅の案内役としてヒューマノイドロボットが導入される予定です。フィジカルAIを活用することで、人間とのより自然な対話や案内業務の実現を目指しています。",
+        "source": "Google News",
+        "published_at": "2026-09-14",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBiQ0lrU2lHcmdLR2pzLWk2NDRKcEkwNkpuc1o0cXQ2anBUajA2TW0yd1ZxYU13UmlYbmUyRi1qVUYxUy1BVTJsSzluTmZFWl8zdFpRWmd2YzE1dkpXcHF2VnRubUFOS00?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "AI上司が「人間を解雇」、サンフランシスコで起きた世界初の事例",
+        "content": "サンフランシスコにおいて、AIの上司が人間の従業員を解雇するという世界初の事例が発生しました。人工知能の判断により雇用が左右されるこの出来事は、労働市場やマネジメントにおけるAIの役割に大きな波紋を広げています。技術の進化が雇用のあり方そのものを変えつつある現状を浮き彫りにしています。",
+        "source": "Google News",
+        "published_at": "2026-09-14",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE0xYzJ0bFV3OUJQV25Bb0tBczBfRlI1cmNSQ1B5aVlIWmgwVWpsMUZzOUFxYUNJcDBHVkZNbExFdG9pNFFlaHdHUEtsRDg1bFR5Y01jbndHU0h3QQ?oc=5",
+        "category": "事業・投資"
+      }
+    ]
+  },
+  {
     "date": "2026-09-13",
     "daily_summary": "本日のAIニュースでは、AIの急速な発展がもたらす光と影が浮き彫りになりました。数学の難問解決を巡る著名数学者たちの非難声明や、アンソロピックCEOによる開発減速の呼びかけなど、倫理的課題や暴走リスクに対する深刻な懸念が示される一方、教育現場での活用や企業の好決算、ロボット部品関連株の急拡大など、経済や社会への浸透も加速しています。さらに、レシートの不正生成や文章推敲における内容改変リスクなど、実用上の新たな弊害も報告されており、AIの急速な進化に対して技術的・倫理的な規制や対策の必要性が改めて問われる一日となりました。",
     "articles": [
