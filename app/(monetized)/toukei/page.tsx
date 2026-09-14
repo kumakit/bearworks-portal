@@ -488,6 +488,14 @@ export default function ToukeiPage() {
           </div>
         </div>
       </section>
+      <section className="mt-6 rounded-[2rem] border border-blue-100 bg-blue-50 p-7">
+        <h2 className="text-2xl font-bold text-primary">実データで学ぶ統計</h2>
+        <p className="mt-3 text-muted">身近な街の問いに、記述統計・相関・推定の考え方を使ってみましょう。</p>
+        <div className="mt-5 grid gap-4 md:grid-cols-2">
+          <Link href="/labs/hachioji-snow" className="rounded-2xl bg-white p-5 font-bold text-accent-blue hover:underline">雪のニュース。また、八王子だ。<span className="mt-2 block text-sm font-normal text-muted">箱ひげ図・散布図・気温の時系列と、5つの確認問題</span></Link>
+          <Link href="/labs/hachioji-climate" className="rounded-2xl bg-white p-5 font-bold text-accent-blue hover:underline">八王子は本当に夏暑く、冬寒いのか<span className="mt-2 block text-sm font-normal text-muted">4地点の気象データで街のイメージを検証</span></Link>
+        </div>
+      </section>
       <PublicSiteFooter />
     </main>
   );

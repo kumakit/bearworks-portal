@@ -82,7 +82,7 @@ export const recentStationSummaries = stationOrder.map((stationKey) => {
 
   return {
     key: stationKey,
-    name: station.display_name_ja,
+    name: stationKey === "tokyo" ? "東京都心" : station.display_name_ja,
     heatstrokeDays: average("heatstroke_days"),
     midsummerDays: average("midsummer_days"),
     tropicalNightEquivalentDays: average("min_temp_ge25_days"),

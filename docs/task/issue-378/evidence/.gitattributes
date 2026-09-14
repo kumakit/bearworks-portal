@@ -1,0 +1,4 @@
+# Preserve official snapshot bytes used by SHA-256 manifests across platforms.
+*.csv binary
+*.html binary
+jma-download-ui.js binary

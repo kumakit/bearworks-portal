@@ -273,5 +273,10 @@ export const hachiojiClimateProvenance: ContentProvenance = {
       kind: "初版",
       summary: "固定bundleを使用した八王子気候分析記事を公開しました。",
     },
+    {
+      date: "2026-09-13",
+      kind: "更新",
+      summary: "比較対象の読者向け表記を「東京都心」に統一し、気象庁「東京」観測地点を指す注記を追加しました。分析データと数値は変更していません。",
+    },
   ],
 };

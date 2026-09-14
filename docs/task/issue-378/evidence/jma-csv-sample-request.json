@@ -1,0 +1,18 @@
+{
+  "optionNumList": "[]",
+  "rmkFlag": "1",
+  "aggrgPeriod": "9",
+  "ymdList": "[2024,2024,12,12,22,24]",
+  "kijiFlag": "0",
+  "stationNumList": "[\"a0366\",\"s47662\"]",
+  "jikantaiFlag": "0",
+  "csvFlag": "1",
+  "fukenFlag": "0",
+  "disconnectFlag": "1",
+  "interAnnualType": "1",
+  "ymdLiteral": "1",
+  "youbiFlag": "0",
+  "downloadFlag": "true",
+  "jikantaiList": "[]",
+  "elementNumList": "[[\"201\",\"\"],[\"101\",\"\"],[\"605\",\"\"],[\"703\",\"\"],[\"503\",\"\"],[\"501\",\"\"]]"
+}

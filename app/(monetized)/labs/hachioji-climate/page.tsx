@@ -27,7 +27,7 @@ const canonicalUrl = "https://bearworks.uk/labs/hachioji-climate";
 export const metadata: Metadata = {
   title: "八王子は本当に夏暑く、冬寒いのか | bearworks.uk",
   description:
-    "気象庁の1990〜2025年の日別観測値を使い、八王子・府中・青梅・東京の暑さ、寒さ、日較差を5つの事前仮説で比較しました。",
+    "気象庁の1990〜2025年の日別観測値を使い、八王子・府中・青梅・東京都心の暑さ、寒さ、日較差を5つの事前仮説で比較しました。",
   alternates: { canonical: canonicalUrl },
   openGraph: {
     type: "article",
@@ -41,24 +41,24 @@ export const metadata: Metadata = {
 const hypotheses = [
   {
     id: "H1",
-    title: "昼の厳しい暑さは東京より多い",
-    body: "八王子の猛暑日は、比較可能な全区間で東京を年3.0〜5.8日上回りました。",
+    title: "昼の厳しい暑さは東京都心より多い",
+    body: "八王子の猛暑日は、比較可能な全区間で東京都心を年3.0〜5.8日上回りました。",
     icon: ThermometerSun,
     color: "text-accent-pink",
     background: "bg-pink-50 border-pink-100",
   },
   {
     id: "H2",
-    title: "夜は東京より涼しい",
-    body: "日最低気温25℃以上の日は東京のほうが年22.0〜36.6日多く、八王子では少ない結果でした。",
+    title: "夜は東京都心より涼しい",
+    body: "日最低気温25℃以上の日は東京都心のほうが年22.0〜36.6日多く、八王子では少ない結果でした。",
     icon: Sun,
     color: "text-accent-yellow",
     background: "bg-yellow-50 border-yellow-100",
   },
   {
     id: "H3",
-    title: "冬日は東京より大幅に多い",
-    body: "八王子の冬日は、比較可能な全区間で東京を年49.3〜61.6日上回りました。",
+    title: "冬日は東京都心より大幅に多い",
+    body: "八王子の冬日は、比較可能な全区間で東京都心を年49.3〜61.6日上回りました。",
     icon: Snowflake,
     color: "text-accent-blue",
     background: "bg-blue-50 border-blue-100",
@@ -74,7 +74,7 @@ const hypotheses = [
   {
     id: "H5",
     title: "昼夜の気温差が大きい",
-    body: "八王子の日較差中央値は、夏季・冬季とも東京より1.5〜4.3℃大きい結果でした。",
+    body: "八王子の日較差中央値は、夏季・冬季とも東京都心より1.5〜4.3℃大きい結果でした。",
     icon: Database,
     color: "text-accent-green",
     background: "bg-green-50 border-green-100",
@@ -93,7 +93,7 @@ export default function HachiojiClimatePage() {
     "@type": "Article",
     headline: "八王子は本当に夏暑く、冬寒いのか",
     datePublished: "2026-08-12",
-    dateModified: "2026-08-12",
+    dateModified: "2026-09-13",
     mainEntityOfPage: canonicalUrl,
     author: { "@type": "Person", name: "kuma" },
     publisher: { "@type": "Organization", name: "bearworks.uk", url: "https://bearworks.uk" },
@@ -119,14 +119,18 @@ export default function HachiojiClimatePage() {
               八王子は本当に<br className="hidden sm:block" />夏暑く、冬寒いのか
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-muted">
-              気象庁の1990〜2025年の日別観測値を使い、八王子・府中・青梅・東京の4地点を比較しました。
+              気象庁の1990〜2025年の日別観測値を使い、八王子・府中・青梅・東京都心の4地点を比較しました。
               先に5つの仮説と判定基準を固定し、観測環境が変わった境界をまたがない区間ごとに確かめています。
+            </p>
+            <p className="mt-4 text-sm leading-relaxed text-muted">
+              本記事の「東京都心」は、気象庁の「東京」観測地点の観測値を指します。
+              東京都全域や東京23区全体の平均ではありません。
             </p>
             <div className="mt-8 flex flex-wrap gap-2 text-xs font-bold text-muted">
               <span className="rounded-full bg-gray-100 px-4 py-2">対象 1990-01-01〜2025-12-31</span>
               <span className="rounded-full bg-gray-100 px-4 py-2">4地点</span>
               <span className="rounded-full bg-gray-100 px-4 py-2">5仮説</span>
-              <span className="rounded-full bg-gray-100 px-4 py-2">更新 2026-08-12</span>
+              <span className="rounded-full bg-gray-100 px-4 py-2">更新 2026-09-13</span>
             </div>
           </div>
         </header>
@@ -211,9 +215,9 @@ export default function HachiojiClimatePage() {
               <li>気象庁の品質コード8（正常値）と5（準正常値）を集計対象にしました。</li>
               <li>各指標は有効日が期待日数の90%以上ある期間だけ公開対象です。</li>
               <li>
-                品質5の採用件数は府中{qualityCounts?.fuchu}、八王子{qualityCounts?.hachioji}、青梅{qualityCounts?.ome}、東京{qualityCounts?.tokyo}です。
+                品質5の採用件数は府中{qualityCounts?.fuchu}、八王子{qualityCounts?.hachioji}、青梅{qualityCounts?.ome}、東京都心{qualityCounts?.tokyo}です。
               </li>
-              <li>八王子・府中・青梅は2003年と2008年、東京は2014年の観測環境境界を考慮しました。</li>
+              <li>八王子・府中・青梅は2003年と2008年、東京都心は2014年の観測環境境界を考慮しました。</li>
               <li>境界をまたぐ単一のトレンド、順位、因果関係は主張しません。</li>
             </ul>
           </div>
@@ -256,6 +260,11 @@ export default function HachiojiClimatePage() {
           </p>
         </section>
 
+        <section className="mb-8 rounded-[2rem] bg-blue-50 p-6 md:p-8">
+          <h2 className="text-xl font-bold text-primary">続編：雪のニュース。また、八王子だ。</h2>
+          <p className="mt-3 text-muted">この記事で対象外とした雪を、降水時の気温差と大雪の事例から考えます。箱ひげ図や相関の読み方も学べます。</p>
+          <Link href="/labs/hachioji-snow" className="mt-4 inline-block font-bold text-accent-blue hover:underline">八王子は本当に雪が降りやすいのか →</Link>
+        </section>
         <ContentProvenance provenance={hachiojiClimateProvenance} />
 
         <section className="rounded-[2rem] border border-gray-100 bg-white p-7">
