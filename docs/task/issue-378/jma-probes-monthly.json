@@ -1,0 +1,7 @@
+[
+  {"id":"hachioji-monthly-2024","url":"https://www.data.jma.go.jp/stats/etrn/view/monthly_a1.php?prec_no=44&block_no=0366&year=2024&month=1&day=1&view=a2"},
+  {"id":"fuchu-monthly-2024","url":"https://www.data.jma.go.jp/stats/etrn/view/monthly_a1.php?prec_no=44&block_no=1133&year=2024&month=1&day=1&view=a2"},
+  {"id":"ome-monthly-2024","url":"https://www.data.jma.go.jp/stats/etrn/view/monthly_a1.php?prec_no=44&block_no=1001&year=2024&month=1&day=1&view=a2"},
+  {"id":"hachioji-hourly-2025-01-01","url":"https://www.data.jma.go.jp/stats/etrn/view/hourly_a1.php?prec_no=44&block_no=0366&year=2025&month=1&day=1&view=p1"},
+  {"id":"tokyo-hourly-2024-02-05","url":"https://www.data.jma.go.jp/stats/etrn/view/hourly_s1.php?prec_no=44&block_no=47662&year=2024&month=2&day=5&view=p1"}
+]

@@ -8,14 +8,15 @@
   "scripts": {
     "dev": "next dev",
     "validate:hachioji-climate": "node scripts/validate-hachioji-climate-bundle.mjs",
-    "build": "npm run validate:hachioji-climate && next build",
-    "cf:build": "npm run validate:hachioji-climate && opennextjs-cloudflare build",
-    "preview": "npm run validate:hachioji-climate && opennextjs-cloudflare build && opennextjs-cloudflare preview",
-    "deploy": "npm run validate:hachioji-climate && opennextjs-cloudflare build && opennextjs-cloudflare deploy",
-    "upload": "npm run validate:hachioji-climate && opennextjs-cloudflare build && opennextjs-cloudflare upload",
+    "build": "npm run validate:hachioji-climate && npm run validate:hachioji-snow && next build",
+    "cf:build": "npm run validate:hachioji-climate && npm run validate:hachioji-snow && opennextjs-cloudflare build",
+    "preview": "npm run validate:hachioji-climate && npm run validate:hachioji-snow && opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "deploy": "npm run validate:hachioji-climate && npm run validate:hachioji-snow && opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "upload": "npm run validate:hachioji-climate && npm run validate:hachioji-snow && opennextjs-cloudflare build && opennextjs-cloudflare upload",
     "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
     "start": "next start",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "validate:hachioji-snow": "node scripts/validate-hachioji-snow-bundle.mjs"
   },
   "dependencies": {
     "lucide-react": "^0.378.0",

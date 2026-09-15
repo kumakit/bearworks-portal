@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0",
+  "snapshot_id": "jma-hourly-boundary-20260914",
+  "file": "jma-hourly-sample-20241222-24.csv",
+  "sha256": "7c06b1a9835886ff09817cf943e7f20455eb28ae28209e82bb5928c2e014a682",
+  "bytes": 8034,
+  "source_url": "https://www.data.jma.go.jp/risk/obsdl/",
+  "form_action": "https://www.data.jma.go.jp/risk/obsdl/show/table",
+  "method": "POST",
+  "request_file": "jma-csv-sample-request-r2.json",
+  "retrieved_at": "2026-09-13T21:45:43.0941834Z",
+  "source_download_time_jst": "2026-09-14T06:45:42+09:00",
+  "start": "2024-12-22T01:00:00+09:00",
+  "end": "2024-12-25T00:00:00+09:00",
+  "station_ids": [
+    "44112",
+    "44132"
+  ],
+  "elements": [
+    "temperature",
+    "precipitation",
+    "humidity",
+    "weather",
+    "snowfall",
+    "snow_depth"
+  ],
+  "purpose": "Official CSV schema and availability fixture; not a hypothesis result"
+}
