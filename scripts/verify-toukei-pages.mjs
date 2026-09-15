@@ -147,7 +147,7 @@ for (const path of ["/toukei/problems/__invalid__", "/toukei/guides/__invalid__"
 }
 const xml = await page("/sitemap.xml");
 const urls = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map(match => match[1]);
-assert.equal(urls.length, 47);
-assert.equal(new Set(urls).size, 47);
+assert.equal(urls.length, 48);
+assert.equal(new Set(urls).size, 48);
 assert.deepEqual([...urls].sort(), siteContent.map(p => `https://bearworks.uk${p.pathname}`).sort());
-console.log("PASS: sitemap 47 unique URLs; 6 non-ad pages and 3 invalid/404 routes have no ads");
+console.log("PASS: sitemap 48 unique URLs; 6 non-ad pages and 3 invalid/404 routes have no ads");
