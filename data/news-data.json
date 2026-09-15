@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-09-16",
+    "daily_summary": "本日のAIニュースでは、ビル・ゲイツ氏による世界的なリスクへの危機感表明やトランプ氏の政治的見解などAIの安全性やガバナンスを巡る議論が活発化する一方で、低品質な「スロップ」の氾濫や管理職の業務自動化といった社会・組織への影響が浮き彫りになりました。また、シャープのAIサーバー参入や投資市場における小型株への注目などビジネス展開が進む半面、AI需要の減速懸念や終末リスクの意識からテック株や半導体株が急落するなど、急速な技術発展に伴う光と影が多方面で鮮明になった一日となりました。",
+    "articles": [
+      {
+        "title": "トランプ氏、AI懸念を陰謀と一蹴 「高IQの大統領いれば統制は十分」",
+        "content": "トランプ氏はAIに対する過度な懸念を陰謀論として一蹴し、高IQの大統領がいれば十分な統制が可能だと主張した。また、AI開発の減速を求める提言に対しては国内外から批判や議論の声が上がっている。AI技術の急速な発展に伴い、そのガバナンスや安全性を巡る議論が活発化している。",
+        "source": "Google News",
+        "published_at": "2026-09-16",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE84VWh0QldQTV8zcG9RZTgwckRGYWFxb1ZpcHZIY1FIMXd1d2hjX1p3MUdzcnpZZHdHSGFzM1NwczE5NzF2X0pBMnF1Y041N0VkM1JnbDA3NHFwQ0dxT0I5VFZwVE1WOWs3T3A2Sg?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "AI生成のゴミ情報「スロップ」…まるで公害！低コストで作り収益化、ゴミ処理コストは社会に押し付け",
+        "content": "AIによって低コストで大量生産される低品質な情報「スロップ」が、ネット上の公害として問題視されています。作成者は容易に収益を得る一方で、その処理や悪影響のコストは社会全体に押し付けられている現状が指摘されています。",
+        "source": "Google News",
+        "published_at": "2026-09-16",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9vbXF3Wk1fRzVPTS0ydkFiUWFRWS1oM1Vha0Q0dlhFSVdLWGJGdnFqamhacmpnaU8zZUxLZFVidTNJYzBid1d5eDBhTExMT2ptczNJR2ln?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "管理職の仕事はAIに任せられる？「昇進」なしでもやる気は保てるか",
+        "content": "AIの台頭により管理職の業務を自動化できる可能性が高まっており、企業の組織構造や評価制度に大きな影響を与えつつあります。昇進によるインセンティブが薄れる中、社員のモチベーションをどのように維持するかが重要な課題となっています。本記事では、AI時代におけるマネジメントのあり方や新しいキャリアパスについて考察しています。",
+        "source": "Google News",
+        "published_at": "2026-09-16",
+        "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBzNmI3Wkl0d0hGN25HTFVqcFhQUUNFSXBhMGFadjRwc0RPenNLVmhEWE9VNmlfcjBGS3VUckM4LTlSbXhKRFF5a1hkMktteHNiQkdJbW5IUXhtTFJlcUVwZFVPRGhHY0dxaW5BTDl1R3l1UjFSVHdTT3pRY1g?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "ビル・ゲイツ氏がAIリスクに危機感 習国家主席とも会談へ",
+        "content": "マイクロソフト共同創業者のビル・ゲイツ氏が人工知能（AI）がもたらすリスクに対して強い危機感を表明しました。同氏は中国の習近平国家主席とも会談を行う予定であり、AI技術の安全な発展や国際的な協力について議論される見込みです。",
+        "source": "Google News",
+        "published_at": "2026-09-16",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9LRGZiQnpMZkJJUGdiRjFOU2RWRF9aRUhMOVdfb0ExaXQxZExRYS10QlZKN2FBRlFxOGtrT3liMWRyajJJTmJjNjVQLU4wS2Ewd181cDMtdndHY0J6YVVF?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "ビル・ゲイツ氏 AIリスクに「どの国も備えていない」 世界規模での取り組みの必要性訴え",
+        "content": "マイクロソフト創業者であるビル・ゲイツ氏が、人工知能（AI）がもたらすリスクに対して現在のどの国も十分に備えていないと警告を発しました。彼はAIの急速な発展に伴う脅威に対処するため、世界規模での協調と取り組みの必要性を強く訴えています。",
+        "source": "Google News",
+        "published_at": "2026-09-16",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9MQWozT0l4bXA1eUV5NE5xbWdETEJwVTJYWVR2VWR4TFZabUFMWTJERUliVXhndV8wZFZiU1FJM19uZEptM05ZWHQ1WlBZOUg3bC1DTk1YWQ?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "シャープがAIサーバー受注開始…エヌビディアGPU搭載、30年度に2500億円規模の売り上げ目指す",
+        "content": "シャープはエヌビディアのGPUを搭載したAIサーバーの受注を開始しました。2030年度には2500億円規模の売り上げを目指す方針です。国内のAIインフラ需要を取り込む狙いがあります。",
+        "source": "Google News",
+        "published_at": "2026-09-16",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1nT1Z1bzdLQXJCWFBFNWVFdkdOcW1hNXYwVDVmQWxsSVZXMXBheXdPQlZldVR5QWE3Z0MyXzQtYW5kQS1pbUZtNlhLc3QxblAtOTRfMVFMUkMxYWZOQm81bTV2N0o?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "まだ間に合う！ 変身前夜「AI小型株」時価総額10倍化狙う5銘柄",
+        "content": "株探トップ特集において、時価総額が10倍に成長するポテンシャルを秘めたAI関連の小型株5銘柄が紹介されています。AI市場の拡大とともに今後の飛躍が期待される注目企業を取り上げ、投資戦略を解説しています。",
+        "source": "Google News",
+        "published_at": "2026-09-16",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9scElLZXhITkdOUng1VXhjbXduRkRObFpsM1FmdXhZa2d0VVA5YjZNTno1bFk1OTBicXp6RkhMRWdJcUtZbUJSeUVOUFh3eGsycG1QT2poOV9sLVd2dzZnWQ?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "米国株式市場は反落、AI減速懸念による半導体株売りや長期金利の上昇が重荷に",
+        "content": "米国の株式市場は、AI需要の減速懸念から半導体関連株が売られて反落しました。さらに、長期金利が5％に達したことも株式市場全体にとって大きな重荷となりました。",
+        "source": "Google News",
+        "published_at": "2026-09-16",
+        "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQZFlNR29lcHZqVDhaUl9NVGotVmtZdVptRHNOMWVNanlVZ3cxOEJ6RzlyN2NhM3Rsb1dXaFlYRk95WEV2czJuM3FuTmlGME1UTVdERG5HZ05yc3lQVEpLMXFlSmtrdjFTOEx1QTBPczZmZURHWnljbGJqUW51RmpNUzVYeFU0Zw?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "AIによる「終末」への懸念拡大でテック株が急落",
+        "content": "人工知能（AI）の急速な発展による終末的なリスクへの懸念が広がる中、株式市場でテック関連の銘柄が急落しています。この動きは投資家心理に影を落としており、今後の市場動向や規制に関する議論に影響を与える可能性があります。",
+        "source": "Google News",
+        "published_at": "2026-09-16",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5lSk1BVnV4Mm5wSWV6MUJVVUlrM2lIMzJqNEJ6RUJ1bXo1UlJDY2xpTm1DZVFSSnBCM2RxckwyYnIzVk1NZVpkYzA5ajBZbmlRM3RRSTRwbnhjVkhtU29maGFYTlNLakZaaWJfVnBuOTRGQktmeU11VUl2WnlKNVE?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "生成AIを「別画面」で使い続けて本当によいのか？ 300人調査で見えた活用定着の“壁”",
+        "content": "生成AIの活用に関する300人を対象とした調査結果から、業務における定着の壁が明らかになりました。別画面での利用が主流である現状において、真の効率化や定着に向けた課題が浮き彫りになっています。企業におけるAIの活用方法や今後の展望について考察されています。",
+        "source": "Google News",
+        "published_at": "2026-09-16",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1GbkttZ251MndkbElKdUswSVc4a0N0WjFPSXUzZ3Jsa0hhejlLTHV1T0xTWDJCNTViaHpvb2hybzdqb3lwZl9LcmtmejIwbldYa25rOFR1WG40bHlfQWZYYWpZNFhJQlZTSEF4Z1Y3b2lUZw?oc=5",
+        "category": "エージェント・開発ツール"
+      }
+    ]
+  },
+  {
     "date": "2026-09-15",
     "daily_summary": "本日のAIニュースは、AI開発の急速な進展に伴う「安全性や暴走リスクを理由とした開発減速論」が世界的な株安や巨額の資産減少を引き起こすなど、市場に大きな衝撃を与えたことが中心となりました。同時に、国内の官公庁における業務効率化のための生成AI活用や、面接でのなりすまし、料理写真への反発といった倫理・社会的な課題が浮き彫りになる一方、米中関係を意識した国際的な技術協力の動きも報じられています。",
     "articles": [
