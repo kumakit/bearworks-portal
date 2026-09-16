@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-09-17",
+    "daily_summary": "本日のAIニュースは、ビル・ゲイツによる格差拡大への警告やAnthropicおよびOpenAIのトップによる安全性と業界のあり方を巡る議論など、技術の急速な進化に伴う倫理的・規制的課題が浮き彫りになりました。同時に、メタの有料プラン発表やGoogleの新型AI端末、国産ロボットや日本企業が支える半導体製造など、産業面での具体的な展開やサービス普及も着実に進んでいます。",
+    "articles": [
+      {
+        "title": "ビル・ゲイツが警告、規制がなければ「AIは最も裕福な人々が彼ら自身のために設計される」",
+        "content": "マイクロソフトの共同創業者ビル・ゲイツは、適切な規制がなければAI技術が富裕層の利益を優先して開発されると警告しました。テクノロジーが社会全体に公平な恩恵をもたらすためには、公的な介入と指針が不可欠であると訴えています。",
+        "source": "Google News",
+        "published_at": "2026-09-17",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1NUFpYY2I0aHEtSHVVZFFaVEd0WVk0eW9iYmxTR2szMDM0ckU2Unh2OHFSSUItcEhyS2dBZVZvTGU5Yl9ZVHZCOHFVRjNzSnNxRm1hZTJORmktUQ?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "アンソロピックCEO「競合批判やめる」 AI暴走脅威に業界結束訴え",
+        "content": "AnthropicのCEOがAI業界に対し、競合批判をやめて技術リスクの脅威に対する業界全体の結束を呼びかけました。同氏は、AI業界がこれまで技術リスクについて不誠実であったとも言及しています。",
+        "source": "Google News",
+        "published_at": "2026-09-17",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9yNkM1UG9vMlRkRmEwbWhPaXlWRHVybDlvS1VFaG53SmJmTDB5ZWgwdzh3Z3hmZ0IyNEl1ZlVIaGZXYzA0d2JxVVYwbFdxVGN6QnEzSDB1VWFqdWpQeEh5RThYNUZjS2ZnSU8yUg?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "オープンAIのCEO、AI開発「安全にできると確信」",
+        "content": "オープンAIの最高経営責任者が、人工知能の開発を安全に行うことに対して強い確信を示したことがブルームバーグにより報じられました。今後の技術革新と安全性確保の両立に向けた発言として注目されています。",
+        "source": "Google News",
+        "published_at": "2026-09-17",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9lVTU0NTBKbGE4NTdFRmF2WjFiUkkyWXRBNDF6YVlqNE45SkJRcDhMR3Q5QzBhWFhPenBfWHBDb2xmcG9Gd3A2N1Y3VDZsWE8zSVFrZFl3?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "オープンAIのアルトマン氏、AIへの懸念は理解しつつも「企業を信頼してほしい」と主張",
+        "content": "オープンAIのサム・アルトマン最高経営責任者（CEO）は、世界が人工知能（AI）の急速な進化を恐れるのは当然であると認めました。しかしその一方で、AIの安全性と発展を担う企業側を信頼してほしいと訴えています。技術の脅威に対する社会的な不安の高まりを受け、AI開発企業としての責任と信頼性の確保が改めて強調されています。",
+        "source": "Google News",
+        "published_at": "2026-09-17",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBkMXBIUW44dXZPR2JiWjY0Y2J6YVdFTllGeVh3azdoZm1LY2k3dHNUcGZzUDFJclVWNkFleDkzLURFeFhaMzdOQlNQRWg4YTNUSm85U2FIV1FPQWY2QkxOLdIBZkFVX3lxTFBuLWJ6WkRmclhYQzNrejRva2REdVVaa0VWLUdKa1FhZ2ZsckN3QWtDYUtKMGQySzBMRDc1SjJSa3dZSjR6MWk2bU5HQ1Ewc3dPZVlMMlMtRmdUS2s5TlNsRl9QdEJrUQ?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "オープンAIのアルトマンCEO、米中首脳の公式晩餐会に出席へ",
+        "content": "オープンAIのサム・アルトマンCEOが、米中首脳会談に関連して開催される公式晩餐会に出席する予定であることが報じられました。AI技術の急速な発展と国際的な規制・協力が議論される中での技術トップの動向として注目されています。",
+        "source": "Google News",
+        "published_at": "2026-09-17",
+        "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1iakQxSXU1SVFNVDdLQWFvUWpmTkotd09TVXpZYVY2OWFiUlhUX3VGNVZ2WlhLNkRUdGJTdTAyZllfOFo3cVFqUEJYeVN1WHoySXNFa1liS3ZmaTRTQjZjRmNxNkRIM3pPOF9TYVI5Ry1PdzJPQmFnVVJIS0JqZw?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "信越化学、JSR…AI半導体の製造に日本企業が不可欠であり続ける理由",
+        "content": "AI半導体の製造プロセスにおいて、日本の素材メーカーや装置メーカーの高い技術力が世界的に不可欠な存在となっています。信越化学工業やJSRなどの企業が持つ微細加工や先端材料の技術は、最先端半導体の進化を支える根幹となっています。この記事では、日本企業がなぜグローバル市場で優位性を保ち続けられるのか、その理由を解説しています。",
+        "source": "Google News",
+        "published_at": "2026-09-17",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9LRUFCM0hhRVJzYURTR0NSYlAyYk9HMmVHaVQtVkNvclRUNjlkMm94dW1fQllEUEs2czlwWk1HbUZoMEppZW5DcmVxV1U1bVRHeW8tMkJ3?oc=5",
+        "category": "インフラ・半導体"
+      },
+      {
+        "title": "メタ、AI機能を拡充した新しいサブスクリプションを発表",
+        "content": "メタ社がAI機能を大幅に拡大した新しいサブスクリプションプランを発表しました。ユーザーは月額料金を支払うことで、より高度なAIツールや拡張機能を利用できるようになります。今回の発表により、同社のプラットフォームにおける収益化モデルの多様化と、AIサービスのさらなる普及が期待されています。",
+        "source": "Google News",
+        "published_at": "2026-09-17",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1kZGdDTHR4ZnplLTNDUjZMY0FfSXAteGFieUhoSVY5cERydEptOXlaaDNkN0RiNV9WS3B2SFpkNXp3N1FrNG9MSnpJT3oxTDl1?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "心の悩みはＡＩに相談、自治体や企業で広がる…「他者への危害」「感情依存」リスクも",
+        "content": "自治体や企業の間で、心の悩みをAIに相談するサービスの導入が広がっています。一方で、他者への危害や感情依存といった新たなリスクに対する懸念も指摘されています。",
+        "source": "Google News",
+        "published_at": "2026-09-17",
+        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5PeDdOWTd6RkJUMk1lRHlmdXJET2lNaDhqLWNtbUljd21tNVdreUNMaG1Vc2t2ZFpWdU9ibW5KSFp6d1JQWi1oeVc5ZDh4d3Y5dk90MW40el9fdFloTHRnV2E1X1pjUQ?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "AndroidとChromeOS融合のAIノート「Googlebook」、9月21日予約開始",
+        "content": "Googleの新しいAIノート端末「Googlebook」の予約が9月21日より開始されます。本製品はAndroidとChromeOSを融合させた画期的なシステムを搭載しており、高度なAI機能の活用が期待されています。詳細なスペックや価格については今後の発表が注目されます。",
+        "source": "Google News",
+        "published_at": "2026-09-17",
+        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE02Y21rUDBMV2JxNGpYSzNEbHFKcFZ5cmdlWmZCNnN2bEg3eHM0MGxtY1BMYlJWRmItcV9YT2Jrdk9oUFp0bUN5R2ptWUtLWGRwbUZXYmFmbHBkWGNkV2dDN09Mdw?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "国産AIプロジェクトで開発のロボット試作機公開",
+        "content": "国産AIプロジェクトによって開発されたロボットの試作機が新たに公開されました。最先端のAI技術を搭載したこのロボットは、様々な分野での活用が期待されています。今後の実証実験を経て、実用化に向けた開発がさらに進められる予定です。",
+        "source": "Google News",
+        "published_at": "2026-09-17",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE4tdXRqR2NybFlBNWhZVWRJQVVrTEcyZGxpbGo1MVVoV2hJRXVvRnFQcE9oWXFKOFlaNWloSWlkMG5aUktVdFdTTnR6LTZveDA5RjYyUXlkV1JYemxkZXBZ?oc=5",
+        "category": "モデル・研究"
+      }
+    ]
+  },
+  {
     "date": "2026-09-16",
     "daily_summary": "本日のAIニュースでは、ビル・ゲイツ氏による世界的なリスクへの危機感表明やトランプ氏の政治的見解などAIの安全性やガバナンスを巡る議論が活発化する一方で、低品質な「スロップ」の氾濫や管理職の業務自動化といった社会・組織への影響が浮き彫りになりました。また、シャープのAIサーバー参入や投資市場における小型株への注目などビジネス展開が進む半面、AI需要の減速懸念や終末リスクの意識からテック株や半導体株が急落するなど、急速な技術発展に伴う光と影が多方面で鮮明になった一日となりました。",
     "articles": [
