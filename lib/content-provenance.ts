@@ -239,12 +239,12 @@ export const toukeiProblemBatch5Provenance: ContentProvenance = {
 
 export const hachiojiClimateProvenance: ContentProvenance = {
   writtenBy: "kuma / bearworks.uk",
-  checkedBy: "kuma / bearworks.uk（公式画面との照合、独立計算、品質判定）",
-  finalReviewedBy: "kuma / bearworks.uk",
+  checkedBy: "既存分析：kuma / bearworks.uk（公式画面との照合、独立計算、品質判定）。2026-09-16改訂案：Codex（図表・数値例・実装の確認）",
+  finalReviewedBy: "kuma / bearworks.uk（2026-09-16改訂案は公開前の確認待ち）",
   aiUsage:
-    "仮説と分析手順の整理、実装補助、文章の推敲、レビュー補助にAIを使用しました。AIの出力だけで分析結果を決めていません。",
+    "仮説と分析手順の整理、実装補助、文章の推敲、レビュー補助にAIを使用しました。2026-09-16改訂案では、Codexが既存の固定データを用いて構成・図表・確認問題を作成し、導入イラストをAIで生成しました。イラストは観測の証拠ではありません。",
   humanReview:
-    "運営者が気象庁データを取得し、公式画面との照合、独立計算、品質判断、公開内容の最終確認を行いました。専門家による第三者査読ではありません。",
+    "既存分析では、運営者が気象庁データを取得し、公式画面との照合、独立計算、品質判断、公開内容の最終確認を行いました。2026-09-16改訂案の文章・図表・確認問題は運営者の最終確認待ちです。専門家による第三者査読ではありません。",
   evidenceLinks: [
     {
       title: "固定した公開データ",
@@ -259,7 +259,7 @@ export const hachiojiClimateProvenance: ContentProvenance = {
     {
       title: "Linux clean-checkout CI",
       url: "https://github.com/kumakit/bearworks-portal/actions/runs/31603872907",
-      description: "bundle検証、Next.js、OpenNext、route境界を確認したActions runです。",
+      description: "初版のbundle検証、Next.js、OpenNext、route境界を確認したActions runです。2026-09-16改訂案のCI結果ではありません。",
     },
     {
       title: "Portal公開・検証walkthrough",
@@ -277,6 +277,11 @@ export const hachiojiClimateProvenance: ContentProvenance = {
       date: "2026-09-13",
       kind: "更新",
       summary: "比較対象の読者向け表記を「東京都心」に統一し、気象庁「東京」観測地点を指す注記を追加しました。分析データと数値は変更していません。",
+    },
+    {
+      date: "2026-09-16",
+      kind: "更新",
+      summary: "改訂案：第2弾と共通のシリーズ構成に変更し、比較グラフ・統計の読み方・確認問題5問・AI生成イラストを追加。固定データと既存の仮説判定は維持。公開前の運営者確認待ちです。",
     },
   ],
 };

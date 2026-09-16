@@ -96,6 +96,34 @@ for (const [stationKey, values] of Object.entries(expectedRecent)) {
   });
 }
 
+// The redesigned article exposes individual annual values and seasonal summaries.
+// Recompute the displayed segment averages from the lower-level annual/seasonal rows.
+for (const hypothesis of bundle.hypotheses) {
+  for (const segment of hypothesis.segments) {
+    for (const [stationKey, expectedValue] of Object.entries(segment.station_values)) {
+      const rows = bundle.aggregates[segment.period_type].filter(
+        (row) => row.station_key === stationKey && segment.included_periods.includes(row.period_id),
+      );
+      assert(rows.length === segment.included_periods.length, `${hypothesis.hypothesis_id} ${stationKey} segment rows missing`);
+      const mean = rows.reduce((sum, row) => sum + row.metrics[hypothesis.metric], 0) / rows.length;
+      assertClose(mean, expectedValue, `${hypothesis.hypothesis_id} ${stationKey} ${segment.period_type} ${segment.period_start}`);
+    }
+  }
+}
+const recentRows = bundle.aggregates.annual.filter(row => row.period_id >= 2020 && row.period_id <= 2025);
+for (const row of recentRows) {
+  for (const coverage of Object.values(row.coverage)) {
+    assert(coverage.publishable && coverage.rate >= 0.9, `recent chart includes unpublishable data: ${row.station_key} ${row.period_id}`);
+  }
+}
+const heatRows = recentRows.filter(row => row.station_key === "hachioji").sort((a, b) => a.period_id - b.period_id);
+const heatValues = heatRows.map(row => row.metrics.heatstroke_days);
+assert(JSON.stringify(heatValues) === "[19,5,17,23,32,46]", "annual heat chart / Q1 mismatch");
+assert(heatValues.reduce((sum, value) => sum + value, 0) === 142, "Q1 total mismatch");
+const sortedHeat = [...heatValues].sort((a, b) => a - b);
+assert((sortedHeat[2] + sortedHeat[3]) / 2 === 21, "Q1 median mismatch");
+assert(heatRows[4].coverage.max.valid_days === 363 && heatRows[4].coverage.max.expected_days === 366, "2024 coverage caption mismatch");
+
 const qualityWarning = bundle.warnings.find((warning) => warning.code === "semi_normal_values_included");
 assert(qualityWarning, "quality warning missing");
 assert(

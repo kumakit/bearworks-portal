@@ -22,6 +22,7 @@ type Segment = {
   period_end: number;
   period_start: number;
   period_type: "annual" | "summer" | "winter";
+  station_values: Record<string, number>;
 };
 
 type Hypothesis = {
@@ -67,6 +68,10 @@ export const climateBundle = bundleJson as PublicationBundle;
 export const climateLock = lockJson;
 
 const stationOrder = ["hachioji", "fuchu", "ome", "tokyo"];
+
+export const recentAnnualRows = climateBundle.aggregates.annual.filter(
+  (row) => row.period_id >= 2020 && row.period_id <= 2025,
+);
 
 export const recentStationSummaries = stationOrder.map((stationKey) => {
   const rows = climateBundle.aggregates.annual.filter(
