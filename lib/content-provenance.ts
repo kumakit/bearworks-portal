@@ -285,3 +285,37 @@ export const hachiojiClimateProvenance: ContentProvenance = {
     },
   ],
 };
+
+export const hachiojiHeatProvenance: ContentProvenance = {
+  writtenBy: "kuma / bearworks.uk",
+  checkedBy: "Antigravity（気象庁アメダス・官署データの抽出、固定bundle作成、独立バリデーション）",
+  finalReviewedBy: "kuma / bearworks.uk（公開前の確認待ち）",
+  aiUsage:
+    "記事の構成案、データ処理スクリプト、SVGグラフ実装、統計検定2級の解説・確認問題作成、導入イラスト生成にAI（Antigravity）を使用しました。AI出力を無検証で公開せず、固定bundleのバイト数・SHA-256・検算コードで整合性を確認しています。",
+  humanReview:
+    "運営者が気象庁データとの整合性、分析視点（昼の猛暑 vs 夜の放射冷却・ヒートアイランド）、グラフ表示と結論の妥当性を確認し、公開判断を行います。専門家による第三者査読ではありません。",
+  evidenceLinks: [
+    {
+      title: "固定した公開データ（hachioji-heat）",
+      url: "https://github.com/kumakit/bearworks-portal/blob/main/app/%28monetized%29/labs/hachioji-heat/data/hachioji-heat-2026-09-17.r1.json",
+      description: "猛暑日・熱帯夜年次推移および猛暑日24時間推移の固定bundleです。",
+    },
+    {
+      title: "bundle検証コード",
+      url: "https://github.com/kumakit/bearworks-portal/blob/main/scripts/validate-hachioji-heat-bundle.mjs",
+      description: "byte size、SHA-256、スキーマ、集計値整合性をfail-closedで検証します。",
+    },
+    {
+      title: "気象庁：過去の気象データ・ダウンロード",
+      url: "https://www.data.jma.go.jp/risk/obsdl/",
+      description: "本記事で使用したアメダス八王子および東京（大手町/北の丸公園）の一次データ出典です。",
+    },
+  ],
+  revisions: [
+    {
+      date: "2026-09-17",
+      kind: "初版",
+      summary: "八王子の夏の猛暑と都心ヒートアイランド比較記事（シリーズ第3弾）の初版を作成しました。",
+    },
+  ],
+};

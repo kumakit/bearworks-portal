@@ -176,8 +176,21 @@ export default function HachiojiClimatePage() {
 
       <ContentProvenance provenance={hachiojiClimateProvenance} />
 
-      <section className="overflow-hidden rounded-3xl bg-slate-900 text-white">
-        <div className="grid items-center md:grid-cols-2"><Image src="/images/hachioji-snow/hero-illustration.webp" width={1536} height={1024} alt="続編の導入用AI生成イラスト。雪の駅前と中継カメラ" unoptimized className="h-full max-h-80 w-full object-cover" /><div className="p-7 md:p-9"><p className="text-sm font-bold tracking-wider text-sky-200">街のうわさを、統計でほどく · 02</p><h2 className="mt-3 text-2xl font-bold">次は、雪の日の八王子へ。</h2><p className="mt-4 text-slate-200">気温が低いことと、雪が多いことは同じでしょうか。箱ひげ図・相関・大雪の事例で、もう一歩先の問いを考えます。</p><Link href="/labs/hachioji-snow" className="mt-6 inline-flex items-center gap-2 font-bold text-sky-200 underline">雪のニュース。また、八王子だ。<ArrowRight size={18} aria-hidden="true" /></Link></div></div>
+      <section className="overflow-hidden rounded-3xl bg-slate-900 text-white p-7 md:p-10">
+        <p className="text-sm font-bold tracking-wider text-orange-200">街のうわさを、統計でほどく シリーズ</p>
+        <h2 className="mt-2 text-2xl font-bold md:text-3xl">八王子の気候を、もっと深く知る</h2>
+        <div className="mt-6 grid gap-6 md:grid-cols-2">
+          <Link href="/labs/hachioji-snow" className="group block rounded-2xl border border-slate-700 bg-slate-800 p-5 transition hover:border-slate-500">
+            <p className="text-xs font-bold text-sky-200">第2弾 · 雪の分析</p>
+            <h3 className="mt-1 text-lg font-bold group-hover:text-sky-200">雪のニュース。また、八王子だ。 →</h3>
+            <p className="mt-2 text-sm text-slate-300">気温が低いことと雪が多いことは同じか。箱ひげ図・散布図・4大雪事例で検証。</p>
+          </Link>
+          <Link href="/labs/hachioji-heat" className="group block rounded-2xl border border-slate-700 bg-slate-800 p-5 transition hover:border-slate-500">
+            <p className="text-xs font-bold text-orange-300">第3弾 · 夏の猛暑と熱帯夜</p>
+            <h3 className="mt-1 text-lg font-bold group-hover:text-orange-200">八王子の夏は本当に暑いのか →</h3>
+            <p className="mt-2 text-sm text-slate-300">昼の猛暑日の多さと夜の涼しさ。都心ヒートアイランドとの24時間冷却対比。</p>
+          </Link>
+        </div>
       </section>
       <div className="text-center"><Link href="/toukei" className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-white px-6 py-3 font-bold text-blue-800 hover:bg-blue-50">統計検定2級の学習へ<ArrowRight size={18} aria-hidden="true" /></Link></div>
     </article>

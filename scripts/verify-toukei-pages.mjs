@@ -50,7 +50,8 @@ assert.deepEqual(problems.slice(10, 15).map(p => p.slug), batch2Slugs);
 assert.deepEqual(problems.slice(15, 20).map(p => p.slug), batch3Slugs);
 assert.deepEqual(problems.slice(20, 25).map(p => p.slug), batch4Slugs);
 assert.deepEqual(problems.slice(25, 30).map(p => p.slug), batch5Slugs);
-assert.equal(siteContent.length, 48);
+assert.equal(siteContent.length, 49);
+assert(siteContent.some(entry => entry.pathname === "/labs/hachioji-heat"));
 assert(siteContent.some(entry => entry.pathname === "/labs/hachioji-snow"));
 const manifest = JSON.parse(await readFile(".next/prerender-manifest.json", "utf8"));
 const adPattern = /pagead2\.googlesyndication\.com|adsbygoogle|ca-pub-\d+/;
@@ -147,7 +148,7 @@ for (const path of ["/toukei/problems/__invalid__", "/toukei/guides/__invalid__"
 }
 const xml = await page("/sitemap.xml");
 const urls = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map(match => match[1]);
-assert.equal(urls.length, 48);
-assert.equal(new Set(urls).size, 48);
+assert.equal(urls.length, 49);
+assert.equal(new Set(urls).size, 49);
 assert.deepEqual([...urls].sort(), siteContent.map(p => `https://bearworks.uk${p.pathname}`).sort());
-console.log("PASS: sitemap 48 unique URLs; 6 non-ad pages and 3 invalid/404 routes have no ads");
+console.log("PASS: sitemap 49 unique URLs; 6 non-ad pages and 3 invalid/404 routes have no ads");

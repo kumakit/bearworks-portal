@@ -1,0 +1,2649 @@
+{
+  "bundle_version": "2026-09-17.r1",
+  "bundle_schema_version": "1.0.0",
+  "generated_at": "2026-09-17T11:49:21.351Z",
+  "attribution": {
+    "source_name": "気象庁（過去の気象データ・ダウンロード）",
+    "source_url": "https://www.data.jma.go.jp/risk/obsdl/",
+    "processing_ja": "気象庁アメダス日別値および1時間値をもとに bearworks.uk にて抽出・集計"
+  },
+  "stations": [
+    {
+      "key": "hachioji",
+      "station_id": "44112",
+      "name": "八王子",
+      "prefecture": "東京都",
+      "type": "amedas"
+    },
+    {
+      "key": "tokyo",
+      "station_id": "44132",
+      "name": "東京都心",
+      "prefecture": "東京都",
+      "type": "kanso"
+    },
+    {
+      "key": "fuchu",
+      "station_id": "44116",
+      "name": "府中",
+      "prefecture": "東京都",
+      "type": "amedas"
+    },
+    {
+      "key": "ome",
+      "station_id": "44056",
+      "name": "青梅",
+      "prefecture": "東京都",
+      "type": "amedas"
+    }
+  ],
+  "summary": {
+    "all_time_record_high": {
+      "hachioji": {
+        "temp": 39.3,
+        "date": "2018-07-23"
+      },
+      "tokyo": {
+        "temp": 39.5,
+        "date": "2004-07-20"
+      }
+    },
+    "recent_averages_2020_2025": {
+      "heatstroke_days": {
+        "hachioji": 23.7,
+        "tokyo": 16.8,
+        "fuchu": 21.3,
+        "ome": 24.7
+      },
+      "midsummer_days": {
+        "hachioji": 72.8,
+        "tokyo": 72.2,
+        "fuchu": 72,
+        "ome": 71.3
+      },
+      "min_temp_ge25_days": {
+        "hachioji": 11.7,
+        "tokyo": 38.7,
+        "fuchu": 25,
+        "ome": 8.7
+      },
+      "median_daily_range_c": {
+        "hachioji": 11,
+        "tokyo": 8.7,
+        "fuchu": 10,
+        "ome": 11.3
+      }
+    }
+  },
+  "annual_comparison": [
+    {
+      "year": 1990,
+      "hachioji": {
+        "heatstroke_days": 11,
+        "midsummer_days": 58,
+        "min_temp_ge25_days": 5,
+        "winter_days": 48,
+        "median_daily_range_c": 9.5
+      },
+      "tokyo": {
+        "heatstroke_days": 2,
+        "midsummer_days": 60,
+        "min_temp_ge25_days": 33,
+        "winter_days": 3,
+        "median_daily_range_c": 6.7
+      },
+      "fuchu": {
+        "heatstroke_days": 6,
+        "midsummer_days": 56,
+        "min_temp_ge25_days": 10,
+        "median_daily_range_c": 8.7
+      },
+      "ome": {
+        "heatstroke_days": 2,
+        "midsummer_days": 47,
+        "min_temp_ge25_days": 3,
+        "median_daily_range_c": 9.5
+      }
+    },
+    {
+      "year": 1991,
+      "hachioji": {
+        "heatstroke_days": 8,
+        "midsummer_days": 41,
+        "min_temp_ge25_days": 1,
+        "winter_days": 59,
+        "median_daily_range_c": 9.1
+      },
+      "tokyo": {
+        "heatstroke_days": 4,
+        "midsummer_days": 45,
+        "min_temp_ge25_days": 23,
+        "winter_days": 3,
+        "median_daily_range_c": 6.9
+      },
+      "fuchu": {
+        "heatstroke_days": 5,
+        "midsummer_days": 40,
+        "min_temp_ge25_days": 7,
+        "median_daily_range_c": 8.5
+      },
+      "ome": {
+        "heatstroke_days": 3,
+        "midsummer_days": 33,
+        "min_temp_ge25_days": 1,
+        "median_daily_range_c": 8.8
+      }
+    },
+    {
+      "year": 1992,
+      "hachioji": {
+        "heatstroke_days": 5,
+        "midsummer_days": 44,
+        "min_temp_ge25_days": 3,
+        "winter_days": 60,
+        "median_daily_range_c": 9.7
+      },
+      "tokyo": {
+        "heatstroke_days": 2,
+        "midsummer_days": 46,
+        "min_temp_ge25_days": 32,
+        "winter_days": 1,
+        "median_daily_range_c": 6.85
+      },
+      "fuchu": {
+        "heatstroke_days": 5,
+        "midsummer_days": 43,
+        "min_temp_ge25_days": 7,
+        "median_daily_range_c": 9.1
+      },
+      "ome": {
+        "heatstroke_days": 1,
+        "midsummer_days": 34,
+        "min_temp_ge25_days": 0,
+        "median_daily_range_c": 9.3
+      }
+    },
+    {
+      "year": 1993,
+      "hachioji": {
+        "heatstroke_days": 1,
+        "midsummer_days": 18,
+        "min_temp_ge25_days": 0,
+        "winter_days": 61,
+        "median_daily_range_c": 9.6
+      },
+      "tokyo": {
+        "heatstroke_days": 0,
+        "midsummer_days": 19,
+        "min_temp_ge25_days": 4,
+        "winter_days": 0,
+        "median_daily_range_c": 6.6
+      },
+      "fuchu": {
+        "heatstroke_days": 0,
+        "midsummer_days": 19,
+        "min_temp_ge25_days": 0,
+        "median_daily_range_c": 8.8
+      },
+      "ome": {
+        "heatstroke_days": 0,
+        "midsummer_days": 17,
+        "min_temp_ge25_days": 0,
+        "median_daily_range_c": 9.4
+      }
+    },
+    {
+      "year": 1994,
+      "hachioji": {
+        "heatstroke_days": 12,
+        "midsummer_days": 63,
+        "min_temp_ge25_days": 7,
+        "winter_days": 64,
+        "median_daily_range_c": 9.7
+      },
+      "tokyo": {
+        "heatstroke_days": 8,
+        "midsummer_days": 66,
+        "min_temp_ge25_days": 47,
+        "winter_days": 6,
+        "median_daily_range_c": 6.85
+      },
+      "fuchu": {
+        "heatstroke_days": 11,
+        "midsummer_days": 63,
+        "min_temp_ge25_days": 16,
+        "median_daily_range_c": 8.8
+      },
+      "ome": {
+        "heatstroke_days": 6,
+        "midsummer_days": 60,
+        "min_temp_ge25_days": 3,
+        "median_daily_range_c": 9.8
+      }
+    },
+    {
+      "year": 1995,
+      "hachioji": {
+        "heatstroke_days": 15,
+        "midsummer_days": 47,
+        "min_temp_ge25_days": 2,
+        "winter_days": 79,
+        "median_daily_range_c": 10.4
+      },
+      "tokyo": {
+        "heatstroke_days": 13,
+        "midsummer_days": 50,
+        "min_temp_ge25_days": 38,
+        "winter_days": 3,
+        "median_daily_range_c": 7.1
+      },
+      "fuchu": {
+        "heatstroke_days": 14,
+        "midsummer_days": 48,
+        "min_temp_ge25_days": 12,
+        "median_daily_range_c": 9.4
+      },
+      "ome": {
+        "heatstroke_days": 4,
+        "midsummer_days": 43,
+        "min_temp_ge25_days": 0,
+        "median_daily_range_c": 10
+      }
+    },
+    {
+      "year": 1996,
+      "hachioji": {
+        "heatstroke_days": 5,
+        "midsummer_days": 39,
+        "min_temp_ge25_days": 3,
+        "winter_days": 73,
+        "median_daily_range_c": 9.6
+      },
+      "tokyo": {
+        "heatstroke_days": 2,
+        "midsummer_days": 46,
+        "min_temp_ge25_days": 15,
+        "winter_days": 7,
+        "median_daily_range_c": 7.3
+      },
+      "fuchu": {
+        "heatstroke_days": 3,
+        "midsummer_days": 40,
+        "min_temp_ge25_days": 6,
+        "median_daily_range_c": 8.7
+      },
+      "ome": {
+        "heatstroke_days": 2,
+        "midsummer_days": 34,
+        "min_temp_ge25_days": 2,
+        "median_daily_range_c": 9.7
+      }
+    },
+    {
+      "year": 1997,
+      "hachioji": {
+        "heatstroke_days": 7,
+        "midsummer_days": 44,
+        "min_temp_ge25_days": 4,
+        "winter_days": 62,
+        "median_daily_range_c": 10
+      },
+      "tokyo": {
+        "heatstroke_days": 3,
+        "midsummer_days": 58,
+        "min_temp_ge25_days": 19,
+        "winter_days": 3,
+        "median_daily_range_c": 7.4
+      },
+      "fuchu": {
+        "heatstroke_days": 3,
+        "midsummer_days": 51,
+        "min_temp_ge25_days": 8,
+        "median_daily_range_c": 9.4
+      },
+      "ome": {
+        "heatstroke_days": 4,
+        "midsummer_days": 42,
+        "min_temp_ge25_days": 1,
+        "median_daily_range_c": 10.3
+      }
+    },
+    {
+      "year": 1998,
+      "hachioji": {
+        "heatstroke_days": 3,
+        "midsummer_days": 42,
+        "min_temp_ge25_days": 0,
+        "winter_days": 55,
+        "median_daily_range_c": 8.8
+      },
+      "tokyo": {
+        "heatstroke_days": 3,
+        "midsummer_days": 48,
+        "min_temp_ge25_days": 31,
+        "winter_days": 3,
+        "median_daily_range_c": 7
+      },
+      "fuchu": {
+        "heatstroke_days": 3,
+        "midsummer_days": 45,
+        "min_temp_ge25_days": 11,
+        "median_daily_range_c": 8.3
+      },
+      "ome": {
+        "heatstroke_days": 2,
+        "midsummer_days": 35,
+        "min_temp_ge25_days": 0,
+        "median_daily_range_c": 8.8
+      }
+    },
+    {
+      "year": 1999,
+      "hachioji": {
+        "heatstroke_days": 5,
+        "midsummer_days": 55,
+        "min_temp_ge25_days": 5,
+        "winter_days": 63,
+        "median_daily_range_c": 9.7
+      },
+      "tokyo": {
+        "heatstroke_days": 0,
+        "midsummer_days": 63,
+        "min_temp_ge25_days": 46,
+        "winter_days": 5,
+        "median_daily_range_c": 7.1
+      },
+      "fuchu": {
+        "heatstroke_days": 1,
+        "midsummer_days": 58,
+        "min_temp_ge25_days": 18,
+        "median_daily_range_c": 8.8
+      },
+      "ome": {
+        "heatstroke_days": 1,
+        "midsummer_days": 46,
+        "min_temp_ge25_days": 0,
+        "median_daily_range_c": 9.8
+      }
+    },
+    {
+      "year": 2000,
+      "hachioji": {
+        "heatstroke_days": 4,
+        "midsummer_days": 57,
+        "min_temp_ge25_days": 4,
+        "winter_days": 62,
+        "median_daily_range_c": 9.6
+      },
+      "tokyo": {
+        "heatstroke_days": 1,
+        "midsummer_days": 67,
+        "min_temp_ge25_days": 41,
+        "winter_days": 1,
+        "median_daily_range_c": 7.1
+      },
+      "fuchu": {
+        "heatstroke_days": 2,
+        "midsummer_days": 60,
+        "min_temp_ge25_days": 13,
+        "median_daily_range_c": 8.7
+      },
+      "ome": {
+        "heatstroke_days": 2,
+        "midsummer_days": 57,
+        "min_temp_ge25_days": 3,
+        "median_daily_range_c": 9.9
+      }
+    },
+    {
+      "year": 2001,
+      "hachioji": {
+        "heatstroke_days": 11,
+        "midsummer_days": 44,
+        "min_temp_ge25_days": 8,
+        "winter_days": 68,
+        "median_daily_range_c": 9.6
+      },
+      "tokyo": {
+        "heatstroke_days": 8,
+        "midsummer_days": 52,
+        "min_temp_ge25_days": 25,
+        "winter_days": 4,
+        "median_daily_range_c": 7.3
+      },
+      "fuchu": {
+        "heatstroke_days": 12,
+        "midsummer_days": 48,
+        "min_temp_ge25_days": 12,
+        "median_daily_range_c": 9
+      },
+      "ome": {
+        "heatstroke_days": 6,
+        "midsummer_days": 36,
+        "min_temp_ge25_days": 3,
+        "median_daily_range_c": 9.8
+      }
+    },
+    {
+      "year": 2002,
+      "hachioji": {
+        "heatstroke_days": 8,
+        "midsummer_days": 51,
+        "min_temp_ge25_days": 6,
+        "winter_days": 50,
+        "median_daily_range_c": 10
+      },
+      "tokyo": {
+        "heatstroke_days": 6,
+        "midsummer_days": 59,
+        "min_temp_ge25_days": 33,
+        "winter_days": 1,
+        "median_daily_range_c": 7.2
+      },
+      "fuchu": {
+        "heatstroke_days": 6,
+        "midsummer_days": 53,
+        "min_temp_ge25_days": 14,
+        "median_daily_range_c": 9.1
+      },
+      "ome": {
+        "heatstroke_days": 6,
+        "midsummer_days": 48,
+        "min_temp_ge25_days": 1,
+        "median_daily_range_c": 10
+      }
+    },
+    {
+      "year": 2003,
+      "hachioji": {
+        "heatstroke_days": 3,
+        "midsummer_days": 34,
+        "min_temp_ge25_days": 0,
+        "winter_days": 60,
+        "median_daily_range_c": 9.2
+      },
+      "tokyo": {
+        "heatstroke_days": 0,
+        "midsummer_days": 38,
+        "min_temp_ge25_days": 17,
+        "winter_days": 4,
+        "median_daily_range_c": 6.9
+      },
+      "fuchu": {
+        "heatstroke_days": 3,
+        "midsummer_days": 40,
+        "min_temp_ge25_days": 3,
+        "median_daily_range_c": 8.8
+      },
+      "ome": {
+        "heatstroke_days": 1,
+        "midsummer_days": 30,
+        "min_temp_ge25_days": 0,
+        "median_daily_range_c": 9.5
+      }
+    },
+    {
+      "year": 2004,
+      "hachioji": {
+        "heatstroke_days": 11,
+        "midsummer_days": 68,
+        "min_temp_ge25_days": 0,
+        "winter_days": 53,
+        "median_daily_range_c": 10.6
+      },
+      "tokyo": {
+        "heatstroke_days": 6,
+        "midsummer_days": 70,
+        "min_temp_ge25_days": 41,
+        "winter_days": 0,
+        "median_daily_range_c": 7.2
+      },
+      "fuchu": {
+        "heatstroke_days": 8,
+        "midsummer_days": 71,
+        "min_temp_ge25_days": 16,
+        "median_daily_range_c": 9.6
+      },
+      "ome": {
+        "heatstroke_days": 10,
+        "midsummer_days": 61,
+        "min_temp_ge25_days": 0,
+        "median_daily_range_c": 10.6
+      }
+    },
+    {
+      "year": 2005,
+      "hachioji": {
+        "heatstroke_days": 6,
+        "midsummer_days": 61,
+        "min_temp_ge25_days": 6,
+        "winter_days": 73,
+        "median_daily_range_c": 10.1
+      },
+      "tokyo": {
+        "heatstroke_days": 4,
+        "midsummer_days": 57,
+        "min_temp_ge25_days": 31,
+        "winter_days": 4,
+        "median_daily_range_c": 7.1
+      },
+      "fuchu": {
+        "heatstroke_days": 5,
+        "midsummer_days": 61,
+        "min_temp_ge25_days": 13,
+        "median_daily_range_c": 9.6
+      },
+      "ome": {
+        "heatstroke_days": 4,
+        "midsummer_days": 58,
+        "min_temp_ge25_days": 2,
+        "median_daily_range_c": 10.5
+      }
+    },
+    {
+      "year": 2006,
+      "hachioji": {
+        "heatstroke_days": 5,
+        "midsummer_days": 38,
+        "min_temp_ge25_days": 1,
+        "winter_days": 54,
+        "median_daily_range_c": 8.7
+      },
+      "tokyo": {
+        "heatstroke_days": 3,
+        "midsummer_days": 38,
+        "min_temp_ge25_days": 20,
+        "winter_days": 9,
+        "median_daily_range_c": 6.3
+      },
+      "fuchu": {
+        "heatstroke_days": 6,
+        "midsummer_days": 44,
+        "min_temp_ge25_days": 8,
+        "median_daily_range_c": 8.2
+      },
+      "ome": {
+        "heatstroke_days": 2,
+        "midsummer_days": 34,
+        "min_temp_ge25_days": 0,
+        "median_daily_range_c": 8.9
+      }
+    },
+    {
+      "year": 2007,
+      "hachioji": {
+        "heatstroke_days": 10,
+        "midsummer_days": 56,
+        "min_temp_ge25_days": 3,
+        "winter_days": 50,
+        "median_daily_range_c": 10.3
+      },
+      "tokyo": {
+        "heatstroke_days": 7,
+        "midsummer_days": 55,
+        "min_temp_ge25_days": 31,
+        "winter_days": 0,
+        "median_daily_range_c": 7
+      },
+      "fuchu": {
+        "heatstroke_days": 8,
+        "midsummer_days": 58,
+        "min_temp_ge25_days": 14,
+        "median_daily_range_c": 9.6
+      },
+      "ome": {
+        "heatstroke_days": 7,
+        "midsummer_days": 52,
+        "min_temp_ge25_days": 2,
+        "median_daily_range_c": 10.4
+      }
+    },
+    {
+      "year": 2008,
+      "hachioji": {
+        "heatstroke_days": 7,
+        "midsummer_days": 52,
+        "min_temp_ge25_days": 1,
+        "winter_days": 67,
+        "median_daily_range_c": 9.65
+      },
+      "tokyo": {
+        "heatstroke_days": 1,
+        "midsummer_days": 53,
+        "min_temp_ge25_days": 25,
+        "winter_days": 1,
+        "median_daily_range_c": 6.8
+      },
+      "fuchu": {
+        "heatstroke_days": 9,
+        "midsummer_days": 57,
+        "min_temp_ge25_days": 11,
+        "median_daily_range_c": 9.1
+      },
+      "ome": {
+        "heatstroke_days": 4,
+        "midsummer_days": 45,
+        "min_temp_ge25_days": 1,
+        "median_daily_range_c": 9.7
+      }
+    },
+    {
+      "year": 2009,
+      "hachioji": {
+        "heatstroke_days": 2,
+        "midsummer_days": 42,
+        "min_temp_ge25_days": 1,
+        "winter_days": 47,
+        "median_daily_range_c": 9.4
+      },
+      "tokyo": {
+        "heatstroke_days": 0,
+        "midsummer_days": 38,
+        "min_temp_ge25_days": 20,
+        "winter_days": 0,
+        "median_daily_range_c": 6.6
+      },
+      "fuchu": {
+        "heatstroke_days": 0,
+        "midsummer_days": 45,
+        "min_temp_ge25_days": 4,
+        "median_daily_range_c": 8.9
+      },
+      "ome": {
+        "heatstroke_days": 2,
+        "midsummer_days": 35,
+        "min_temp_ge25_days": 0,
+        "median_daily_range_c": 9.7
+      }
+    },
+    {
+      "year": 2010,
+      "hachioji": {
+        "heatstroke_days": 25,
+        "midsummer_days": 76,
+        "min_temp_ge25_days": 13,
+        "winter_days": 57,
+        "median_daily_range_c": 10.1
+      },
+      "tokyo": {
+        "heatstroke_days": 13,
+        "midsummer_days": 71,
+        "min_temp_ge25_days": 56,
+        "winter_days": 2,
+        "median_daily_range_c": 7
+      },
+      "fuchu": {
+        "heatstroke_days": 20,
+        "midsummer_days": 80,
+        "min_temp_ge25_days": 26,
+        "median_daily_range_c": 9.7
+      },
+      "ome": {
+        "heatstroke_days": 18,
+        "midsummer_days": 64,
+        "min_temp_ge25_days": 9,
+        "median_daily_range_c": 10.4
+      }
+    },
+    {
+      "year": 2011,
+      "hachioji": {
+        "heatstroke_days": 11,
+        "midsummer_days": 60,
+        "min_temp_ge25_days": 7,
+        "winter_days": 77,
+        "median_daily_range_c": 10.4
+      },
+      "tokyo": {
+        "heatstroke_days": 4,
+        "midsummer_days": 61,
+        "min_temp_ge25_days": 49,
+        "winter_days": 5,
+        "median_daily_range_c": 7.1
+      },
+      "fuchu": {
+        "heatstroke_days": 16,
+        "midsummer_days": 66,
+        "min_temp_ge25_days": 16,
+        "median_daily_range_c": 9.9
+      },
+      "ome": {
+        "heatstroke_days": 9,
+        "midsummer_days": 59,
+        "min_temp_ge25_days": 4,
+        "median_daily_range_c": 10.5
+      }
+    },
+    {
+      "year": 2012,
+      "hachioji": {
+        "heatstroke_days": 12,
+        "midsummer_days": 66,
+        "min_temp_ge25_days": 4,
+        "winter_days": 77,
+        "median_daily_range_c": 10.4
+      },
+      "tokyo": {
+        "heatstroke_days": 6,
+        "midsummer_days": 66,
+        "min_temp_ge25_days": 49,
+        "winter_days": 6,
+        "median_daily_range_c": 7
+      },
+      "fuchu": {
+        "heatstroke_days": 7,
+        "midsummer_days": 66,
+        "min_temp_ge25_days": 9,
+        "median_daily_range_c": 9.65
+      },
+      "ome": {
+        "heatstroke_days": 12,
+        "midsummer_days": 62,
+        "min_temp_ge25_days": 1,
+        "median_daily_range_c": 10.6
+      }
+    },
+    {
+      "year": 2013,
+      "hachioji": {
+        "heatstroke_days": 14,
+        "midsummer_days": 54,
+        "min_temp_ge25_days": 5,
+        "winter_days": 67,
+        "median_daily_range_c": 10.9
+      },
+      "tokyo": {
+        "heatstroke_days": 12,
+        "midsummer_days": 58,
+        "min_temp_ge25_days": 39,
+        "winter_days": 4,
+        "median_daily_range_c": 7.4
+      },
+      "fuchu": {
+        "heatstroke_days": 14,
+        "midsummer_days": 59,
+        "min_temp_ge25_days": 12,
+        "median_daily_range_c": 9.9
+      },
+      "ome": {
+        "heatstroke_days": 14,
+        "midsummer_days": 53,
+        "min_temp_ge25_days": 1,
+        "median_daily_range_c": 11
+      }
+    },
+    {
+      "year": 2014,
+      "hachioji": {
+        "heatstroke_days": 10,
+        "midsummer_days": 44,
+        "min_temp_ge25_days": 5,
+        "winter_days": 78,
+        "median_daily_range_c": 10.5
+      },
+      "tokyo": {
+        "heatstroke_days": 5,
+        "midsummer_days": 45,
+        "min_temp_ge25_days": 29,
+        "winter_days": 8,
+        "median_daily_range_c": 7.5
+      },
+      "fuchu": {
+        "heatstroke_days": 7,
+        "midsummer_days": 48,
+        "min_temp_ge25_days": 9,
+        "median_daily_range_c": 9.8
+      },
+      "ome": {
+        "heatstroke_days": 11,
+        "midsummer_days": 43,
+        "min_temp_ge25_days": 1,
+        "median_daily_range_c": 10.7
+      }
+    },
+    {
+      "year": 2015,
+      "hachioji": {
+        "heatstroke_days": 14,
+        "midsummer_days": 46,
+        "min_temp_ge25_days": 7,
+        "winter_days": 55,
+        "median_daily_range_c": 10.2
+      },
+      "tokyo": {
+        "heatstroke_days": 11,
+        "midsummer_days": 47,
+        "min_temp_ge25_days": 26,
+        "winter_days": 11,
+        "median_daily_range_c": 8.4
+      },
+      "fuchu": {
+        "heatstroke_days": 12,
+        "midsummer_days": 48,
+        "min_temp_ge25_days": 18,
+        "median_daily_range_c": 9.5
+      },
+      "ome": {
+        "heatstroke_days": 10,
+        "midsummer_days": 45,
+        "min_temp_ge25_days": 1,
+        "median_daily_range_c": 10.5
+      }
+    },
+    {
+      "year": 2016,
+      "hachioji": {
+        "heatstroke_days": 4,
+        "midsummer_days": 55,
+        "min_temp_ge25_days": 0,
+        "winter_days": 54,
+        "median_daily_range_c": 9.6
+      },
+      "tokyo": {
+        "heatstroke_days": 3,
+        "midsummer_days": 57,
+        "min_temp_ge25_days": 10,
+        "winter_days": 6,
+        "median_daily_range_c": 8.1
+      },
+      "fuchu": {
+        "heatstroke_days": 4,
+        "midsummer_days": 57,
+        "min_temp_ge25_days": 0,
+        "median_daily_range_c": 9.3
+      },
+      "ome": {
+        "heatstroke_days": 5,
+        "midsummer_days": 55,
+        "min_temp_ge25_days": 0,
+        "median_daily_range_c": 10.2
+      }
+    },
+    {
+      "year": 2017,
+      "hachioji": {
+        "heatstroke_days": 2,
+        "midsummer_days": 51,
+        "min_temp_ge25_days": 4,
+        "winter_days": 74,
+        "median_daily_range_c": 10.4
+      },
+      "tokyo": {
+        "heatstroke_days": 2,
+        "midsummer_days": 51,
+        "min_temp_ge25_days": 18,
+        "winter_days": 9,
+        "median_daily_range_c": 8.4
+      },
+      "fuchu": {
+        "heatstroke_days": 3,
+        "midsummer_days": 51,
+        "min_temp_ge25_days": 11,
+        "median_daily_range_c": 9.8
+      },
+      "ome": {
+        "heatstroke_days": 5,
+        "midsummer_days": 55,
+        "min_temp_ge25_days": 3,
+        "median_daily_range_c": 11.1
+      }
+    },
+    {
+      "year": 2018,
+      "hachioji": {
+        "heatstroke_days": 20,
+        "midsummer_days": 67,
+        "min_temp_ge25_days": 22,
+        "winter_days": 56,
+        "median_daily_range_c": 10.4
+      },
+      "tokyo": {
+        "heatstroke_days": 12,
+        "midsummer_days": 68,
+        "min_temp_ge25_days": 42,
+        "winter_days": 22,
+        "median_daily_range_c": 8.1
+      },
+      "fuchu": {
+        "heatstroke_days": 16,
+        "midsummer_days": 65,
+        "min_temp_ge25_days": 25,
+        "median_daily_range_c": 9.4
+      },
+      "ome": {
+        "heatstroke_days": 29,
+        "midsummer_days": 70,
+        "min_temp_ge25_days": 9,
+        "median_daily_range_c": 11.3
+      }
+    },
+    {
+      "year": 2019,
+      "hachioji": {
+        "heatstroke_days": 15,
+        "midsummer_days": 53,
+        "min_temp_ge25_days": 11,
+        "winter_days": 54,
+        "median_daily_range_c": 10.2
+      },
+      "tokyo": {
+        "heatstroke_days": 12,
+        "midsummer_days": 55,
+        "min_temp_ge25_days": 28,
+        "winter_days": 7,
+        "median_daily_range_c": 8.1
+      },
+      "fuchu": {
+        "heatstroke_days": 13,
+        "midsummer_days": 54,
+        "min_temp_ge25_days": 20,
+        "median_daily_range_c": 9.1
+      },
+      "ome": {
+        "heatstroke_days": 15,
+        "midsummer_days": 53,
+        "min_temp_ge25_days": 7,
+        "median_daily_range_c": 10.6
+      }
+    },
+    {
+      "year": 2020,
+      "hachioji": {
+        "heatstroke_days": 19,
+        "midsummer_days": 57,
+        "min_temp_ge25_days": 3,
+        "winter_days": 41,
+        "median_daily_range_c": 10.35
+      },
+      "tokyo": {
+        "heatstroke_days": 12,
+        "midsummer_days": 54,
+        "min_temp_ge25_days": 27,
+        "winter_days": 6,
+        "median_daily_range_c": 8.5
+      },
+      "fuchu": {
+        "heatstroke_days": 13,
+        "midsummer_days": 56,
+        "min_temp_ge25_days": 20,
+        "median_daily_range_c": 9.5
+      },
+      "ome": {
+        "heatstroke_days": 17,
+        "midsummer_days": 54,
+        "min_temp_ge25_days": 5,
+        "median_daily_range_c": 10.75
+      }
+    },
+    {
+      "year": 2021,
+      "hachioji": {
+        "heatstroke_days": 5,
+        "midsummer_days": 49,
+        "min_temp_ge25_days": 4,
+        "winter_days": 59,
+        "median_daily_range_c": 10.8
+      },
+      "tokyo": {
+        "heatstroke_days": 2,
+        "midsummer_days": 52,
+        "min_temp_ge25_days": 19,
+        "winter_days": 14,
+        "median_daily_range_c": 8.8
+      },
+      "fuchu": {
+        "heatstroke_days": 4,
+        "midsummer_days": 50,
+        "min_temp_ge25_days": 7,
+        "median_daily_range_c": 10.1
+      },
+      "ome": {
+        "heatstroke_days": 10,
+        "midsummer_days": 49,
+        "min_temp_ge25_days": 4,
+        "median_daily_range_c": 11.3
+      }
+    },
+    {
+      "year": 2022,
+      "hachioji": {
+        "heatstroke_days": 17,
+        "midsummer_days": 64,
+        "min_temp_ge25_days": 11,
+        "winter_days": 71,
+        "median_daily_range_c": 10.7
+      },
+      "tokyo": {
+        "heatstroke_days": 16,
+        "midsummer_days": 66,
+        "min_temp_ge25_days": 27,
+        "winter_days": 15,
+        "median_daily_range_c": 8.7
+      },
+      "fuchu": {
+        "heatstroke_days": 12,
+        "midsummer_days": 65,
+        "min_temp_ge25_days": 19,
+        "median_daily_range_c": 9.9
+      },
+      "ome": {
+        "heatstroke_days": 17,
+        "midsummer_days": 66,
+        "min_temp_ge25_days": 6,
+        "median_daily_range_c": 11.1
+      }
+    },
+    {
+      "year": 2023,
+      "hachioji": {
+        "heatstroke_days": 23,
+        "midsummer_days": 89,
+        "min_temp_ge25_days": 14,
+        "winter_days": 54,
+        "median_daily_range_c": 11.4
+      },
+      "tokyo": {
+        "heatstroke_days": 22,
+        "midsummer_days": 90,
+        "min_temp_ge25_days": 57,
+        "winter_days": 7,
+        "median_daily_range_c": 8.9
+      },
+      "fuchu": {
+        "heatstroke_days": 18,
+        "midsummer_days": 86,
+        "min_temp_ge25_days": 27,
+        "median_daily_range_c": 10
+      },
+      "ome": {
+        "heatstroke_days": 25,
+        "midsummer_days": 86,
+        "min_temp_ge25_days": 11,
+        "median_daily_range_c": 11.4
+      }
+    },
+    {
+      "year": 2024,
+      "hachioji": {
+        "heatstroke_days": 32,
+        "midsummer_days": 85,
+        "min_temp_ge25_days": 17,
+        "winter_days": 63,
+        "median_daily_range_c": 10.9
+      },
+      "tokyo": {
+        "heatstroke_days": 20,
+        "midsummer_days": 83,
+        "min_temp_ge25_days": 47,
+        "winter_days": 2,
+        "median_daily_range_c": 8.65
+      },
+      "fuchu": {
+        "heatstroke_days": 36,
+        "midsummer_days": 83,
+        "min_temp_ge25_days": 35,
+        "median_daily_range_c": 10.1
+      },
+      "ome": {
+        "heatstroke_days": 34,
+        "midsummer_days": 84,
+        "min_temp_ge25_days": 13,
+        "median_daily_range_c": 11.25
+      }
+    },
+    {
+      "year": 2025,
+      "hachioji": {
+        "heatstroke_days": 46,
+        "midsummer_days": 93,
+        "min_temp_ge25_days": 21,
+        "winter_days": 69,
+        "median_daily_range_c": 11.6
+      },
+      "tokyo": {
+        "heatstroke_days": 29,
+        "midsummer_days": 88,
+        "min_temp_ge25_days": 55,
+        "winter_days": 9,
+        "median_daily_range_c": 8.9
+      },
+      "fuchu": {
+        "heatstroke_days": 45,
+        "midsummer_days": 92,
+        "min_temp_ge25_days": 42,
+        "median_daily_range_c": 10.4
+      },
+      "ome": {
+        "heatstroke_days": 45,
+        "midsummer_days": 89,
+        "min_temp_ge25_days": 13,
+        "median_daily_range_c": 11.7
+      }
+    }
+  ],
+  "hourly_cases": [
+    {
+      "id": "case-20180723",
+      "name": "2018年7月23日（八王子観測史上最高 39.3℃）",
+      "description": "八王子で観測史上最高気温39.3℃（国内歴代上位）を記録した日。都心も36.2℃を記録。",
+      "series": [
+        {
+          "datetime": "2018-07-23T01:00:00+09:00",
+          "date": "2018-07-23",
+          "hour": 1,
+          "hachioji": {
+            "temp": 28.3,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 28.6,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": -0.3
+        },
+        {
+          "datetime": "2018-07-23T02:00:00+09:00",
+          "date": "2018-07-23",
+          "hour": 2,
+          "hachioji": {
+            "temp": 28.1,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 30.2,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": -2.1
+        },
+        {
+          "datetime": "2018-07-23T03:00:00+09:00",
+          "date": "2018-07-23",
+          "hour": 3,
+          "hachioji": {
+            "temp": 27.3,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 30.1,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": -2.8
+        },
+        {
+          "datetime": "2018-07-23T04:00:00+09:00",
+          "date": "2018-07-23",
+          "hour": 4,
+          "hachioji": {
+            "temp": 27,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 29.9,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": -2.9
+        },
+        {
+          "datetime": "2018-07-23T05:00:00+09:00",
+          "date": "2018-07-23",
+          "hour": 5,
+          "hachioji": {
+            "temp": 26.1,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 29.3,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": -3.2
+        },
+        {
+          "datetime": "2018-07-23T06:00:00+09:00",
+          "date": "2018-07-23",
+          "hour": 6,
+          "hachioji": {
+            "temp": 27.8,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 28.7,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": -0.9
+        },
+        {
+          "datetime": "2018-07-23T07:00:00+09:00",
+          "date": "2018-07-23",
+          "hour": 7,
+          "hachioji": {
+            "temp": 29.3,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 31.3,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": -2
+        },
+        {
+          "datetime": "2018-07-23T08:00:00+09:00",
+          "date": "2018-07-23",
+          "hour": 8,
+          "hachioji": {
+            "temp": 32.2,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 32.4,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": -0.2
+        },
+        {
+          "datetime": "2018-07-23T09:00:00+09:00",
+          "date": "2018-07-23",
+          "hour": 9,
+          "hachioji": {
+            "temp": 35.1,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 32.7,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": 2.4
+        },
+        {
+          "datetime": "2018-07-23T10:00:00+09:00",
+          "date": "2018-07-23",
+          "hour": 10,
+          "hachioji": {
+            "temp": 36.4,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 34.1,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": 2.3
+        },
+        {
+          "datetime": "2018-07-23T11:00:00+09:00",
+          "date": "2018-07-23",
+          "hour": 11,
+          "hachioji": {
+            "temp": 38.3,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 36.1,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": 2.2
+        },
+        {
+          "datetime": "2018-07-23T12:00:00+09:00",
+          "date": "2018-07-23",
+          "hour": 12,
+          "hachioji": {
+            "temp": 38.3,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 37.1,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": 1.2
+        },
+        {
+          "datetime": "2018-07-23T13:00:00+09:00",
+          "date": "2018-07-23",
+          "hour": 13,
+          "hachioji": {
+            "temp": 37.7,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 37.4,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": 0.3
+        },
+        {
+          "datetime": "2018-07-23T14:00:00+09:00",
+          "date": "2018-07-23",
+          "hour": 14,
+          "hachioji": {
+            "temp": 36.5,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 36.9,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": -0.4
+        },
+        {
+          "datetime": "2018-07-23T15:00:00+09:00",
+          "date": "2018-07-23",
+          "hour": 15,
+          "hachioji": {
+            "temp": 36.8,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 34.2,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": 2.6
+        },
+        {
+          "datetime": "2018-07-23T16:00:00+09:00",
+          "date": "2018-07-23",
+          "hour": 16,
+          "hachioji": {
+            "temp": 35.1,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 34.8,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": 0.3
+        },
+        {
+          "datetime": "2018-07-23T17:00:00+09:00",
+          "date": "2018-07-23",
+          "hour": 17,
+          "hachioji": {
+            "temp": 34.2,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 33.4,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": 0.8
+        },
+        {
+          "datetime": "2018-07-23T18:00:00+09:00",
+          "date": "2018-07-23",
+          "hour": 18,
+          "hachioji": {
+            "temp": 32.3,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 32.4,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": -0.1
+        },
+        {
+          "datetime": "2018-07-23T19:00:00+09:00",
+          "date": "2018-07-23",
+          "hour": 19,
+          "hachioji": {
+            "temp": 31.4,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 31.6,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": -0.2
+        },
+        {
+          "datetime": "2018-07-23T20:00:00+09:00",
+          "date": "2018-07-23",
+          "hour": 20,
+          "hachioji": {
+            "temp": 31,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 30.8,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": 0.2
+        },
+        {
+          "datetime": "2018-07-23T21:00:00+09:00",
+          "date": "2018-07-23",
+          "hour": 21,
+          "hachioji": {
+            "temp": 30.6,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 30.3,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": 0.3
+        },
+        {
+          "datetime": "2018-07-23T22:00:00+09:00",
+          "date": "2018-07-23",
+          "hour": 22,
+          "hachioji": {
+            "temp": 29.2,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 30.1,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": -0.9
+        },
+        {
+          "datetime": "2018-07-23T23:00:00+09:00",
+          "date": "2018-07-23",
+          "hour": 23,
+          "hachioji": {
+            "temp": 28.6,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 30.5,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": -1.9
+        },
+        {
+          "datetime": "2018-07-24T00:00:00+09:00",
+          "date": "2018-07-24",
+          "hour": 0,
+          "hachioji": {
+            "temp": 27.7,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 29.5,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": -1.8
+        },
+        {
+          "datetime": "2018-07-24T01:00:00+09:00",
+          "date": "2018-07-24",
+          "hour": 1,
+          "hachioji": {
+            "temp": 27.2,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 27.9,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": -0.7
+        },
+        {
+          "datetime": "2018-07-24T02:00:00+09:00",
+          "date": "2018-07-24",
+          "hour": 2,
+          "hachioji": {
+            "temp": 26.7,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 27.5,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": -0.8
+        },
+        {
+          "datetime": "2018-07-24T03:00:00+09:00",
+          "date": "2018-07-24",
+          "hour": 3,
+          "hachioji": {
+            "temp": 26.4,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 27,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": -0.6
+        },
+        {
+          "datetime": "2018-07-24T04:00:00+09:00",
+          "date": "2018-07-24",
+          "hour": 4,
+          "hachioji": {
+            "temp": 25.8,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 26.4,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": -0.6
+        },
+        {
+          "datetime": "2018-07-24T05:00:00+09:00",
+          "date": "2018-07-24",
+          "hour": 5,
+          "hachioji": {
+            "temp": 25.8,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 26.7,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": -0.9
+        },
+        {
+          "datetime": "2018-07-24T06:00:00+09:00",
+          "date": "2018-07-24",
+          "hour": 6,
+          "hachioji": {
+            "temp": 25.9,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 26.9,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": -1
+        }
+      ]
+    },
+    {
+      "id": "case-20230716",
+      "name": "2023年7月16日（猛暑日 八王子 38.9℃）",
+      "description": "真夏の猛烈な日照で八王子が38.9℃に到達した一方、夜間は26.2℃まで急低下した日。",
+      "series": [
+        {
+          "datetime": "2023-07-16T01:00:00+09:00",
+          "date": "2023-07-16",
+          "hour": 1,
+          "hachioji": {
+            "temp": 24.7,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 27.3,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": -2.6
+        },
+        {
+          "datetime": "2023-07-16T02:00:00+09:00",
+          "date": "2023-07-16",
+          "hour": 2,
+          "hachioji": {
+            "temp": 25.1,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 27.2,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": -2.1
+        },
+        {
+          "datetime": "2023-07-16T03:00:00+09:00",
+          "date": "2023-07-16",
+          "hour": 3,
+          "hachioji": {
+            "temp": 24.7,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 27.5,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": -2.8
+        },
+        {
+          "datetime": "2023-07-16T04:00:00+09:00",
+          "date": "2023-07-16",
+          "hour": 4,
+          "hachioji": {
+            "temp": 24,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 27.3,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": -3.3
+        },
+        {
+          "datetime": "2023-07-16T05:00:00+09:00",
+          "date": "2023-07-16",
+          "hour": 5,
+          "hachioji": {
+            "temp": 23.7,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 27,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": -3.3
+        },
+        {
+          "datetime": "2023-07-16T06:00:00+09:00",
+          "date": "2023-07-16",
+          "hour": 6,
+          "hachioji": {
+            "temp": 24.9,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 26.9,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": -2
+        },
+        {
+          "datetime": "2023-07-16T07:00:00+09:00",
+          "date": "2023-07-16",
+          "hour": 7,
+          "hachioji": {
+            "temp": 27.4,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 29,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": -1.6
+        },
+        {
+          "datetime": "2023-07-16T08:00:00+09:00",
+          "date": "2023-07-16",
+          "hour": 8,
+          "hachioji": {
+            "temp": 29.5,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 30.7,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": -1.2
+        },
+        {
+          "datetime": "2023-07-16T09:00:00+09:00",
+          "date": "2023-07-16",
+          "hour": 9,
+          "hachioji": {
+            "temp": 32.2,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 32.2,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": 0
+        },
+        {
+          "datetime": "2023-07-16T10:00:00+09:00",
+          "date": "2023-07-16",
+          "hour": 10,
+          "hachioji": {
+            "temp": 33.4,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 34,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": -0.6
+        },
+        {
+          "datetime": "2023-07-16T11:00:00+09:00",
+          "date": "2023-07-16",
+          "hour": 11,
+          "hachioji": {
+            "temp": 35,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 33.3,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": 1.7
+        },
+        {
+          "datetime": "2023-07-16T12:00:00+09:00",
+          "date": "2023-07-16",
+          "hour": 12,
+          "hachioji": {
+            "temp": 36.8,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 34.7,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": 2.1
+        },
+        {
+          "datetime": "2023-07-16T13:00:00+09:00",
+          "date": "2023-07-16",
+          "hour": 13,
+          "hachioji": {
+            "temp": 37.2,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 34.4,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": 2.8
+        },
+        {
+          "datetime": "2023-07-16T14:00:00+09:00",
+          "date": "2023-07-16",
+          "hour": 14,
+          "hachioji": {
+            "temp": 37.8,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 33.8,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": 4
+        },
+        {
+          "datetime": "2023-07-16T15:00:00+09:00",
+          "date": "2023-07-16",
+          "hour": 15,
+          "hachioji": {
+            "temp": 38.3,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 34.3,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": 4
+        },
+        {
+          "datetime": "2023-07-16T16:00:00+09:00",
+          "date": "2023-07-16",
+          "hour": 16,
+          "hachioji": {
+            "temp": 37.3,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 33.2,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": 4.1
+        },
+        {
+          "datetime": "2023-07-16T17:00:00+09:00",
+          "date": "2023-07-16",
+          "hour": 17,
+          "hachioji": {
+            "temp": 36.2,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 31.9,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": 4.3
+        },
+        {
+          "datetime": "2023-07-16T18:00:00+09:00",
+          "date": "2023-07-16",
+          "hour": 18,
+          "hachioji": {
+            "temp": 35.5,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 30.7,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": 4.8
+        },
+        {
+          "datetime": "2023-07-16T19:00:00+09:00",
+          "date": "2023-07-16",
+          "hour": 19,
+          "hachioji": {
+            "temp": 34.3,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 29.8,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": 4.5
+        },
+        {
+          "datetime": "2023-07-16T20:00:00+09:00",
+          "date": "2023-07-16",
+          "hour": 20,
+          "hachioji": {
+            "temp": 31.8,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 28.9,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": 2.9
+        },
+        {
+          "datetime": "2023-07-16T21:00:00+09:00",
+          "date": "2023-07-16",
+          "hour": 21,
+          "hachioji": {
+            "temp": 30.5,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 28,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": 2.5
+        },
+        {
+          "datetime": "2023-07-16T22:00:00+09:00",
+          "date": "2023-07-16",
+          "hour": 22,
+          "hachioji": {
+            "temp": 30.6,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 27.9,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": 2.7
+        },
+        {
+          "datetime": "2023-07-16T23:00:00+09:00",
+          "date": "2023-07-16",
+          "hour": 23,
+          "hachioji": {
+            "temp": 30,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 27.3,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": 2.7
+        },
+        {
+          "datetime": "2023-07-17T00:00:00+09:00",
+          "date": "2023-07-17",
+          "hour": 0,
+          "hachioji": {
+            "temp": 29,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 27.8,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": 1.2
+        },
+        {
+          "datetime": "2023-07-17T01:00:00+09:00",
+          "date": "2023-07-17",
+          "hour": 1,
+          "hachioji": {
+            "temp": 28.3,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 28.3,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": 0
+        },
+        {
+          "datetime": "2023-07-17T02:00:00+09:00",
+          "date": "2023-07-17",
+          "hour": 2,
+          "hachioji": {
+            "temp": 27.4,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 28.3,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": -0.9
+        },
+        {
+          "datetime": "2023-07-17T03:00:00+09:00",
+          "date": "2023-07-17",
+          "hour": 3,
+          "hachioji": {
+            "temp": 26.7,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 27.7,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": -1
+        },
+        {
+          "datetime": "2023-07-17T04:00:00+09:00",
+          "date": "2023-07-17",
+          "hour": 4,
+          "hachioji": {
+            "temp": 26.3,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 27.6,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": -1.3
+        },
+        {
+          "datetime": "2023-07-17T05:00:00+09:00",
+          "date": "2023-07-17",
+          "hour": 5,
+          "hachioji": {
+            "temp": 26.2,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 27.6,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": -1.4
+        },
+        {
+          "datetime": "2023-07-17T06:00:00+09:00",
+          "date": "2023-07-17",
+          "hour": 6,
+          "hachioji": {
+            "temp": 27.3,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 28.8,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": -1.5
+        }
+      ]
+    },
+    {
+      "id": "case-20240729",
+      "name": "2024年7月29日（八王子 39.1℃ / 都心の熱帯夜）",
+      "description": "八王子が39.1℃を記録した翌朝、都心は朝5時でも30.8℃の超熱帯夜、八王子は26.1℃まで下がった日。",
+      "series": [
+        {
+          "datetime": "2024-07-29T01:00:00+09:00",
+          "date": "2024-07-29",
+          "hour": 1,
+          "hachioji": {
+            "temp": 27.9,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 30.7,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": -2.8
+        },
+        {
+          "datetime": "2024-07-29T02:00:00+09:00",
+          "date": "2024-07-29",
+          "hour": 2,
+          "hachioji": {
+            "temp": 27.6,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 30.3,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": -2.7
+        },
+        {
+          "datetime": "2024-07-29T03:00:00+09:00",
+          "date": "2024-07-29",
+          "hour": 3,
+          "hachioji": {
+            "temp": 27.2,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 30,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": -2.8
+        },
+        {
+          "datetime": "2024-07-29T04:00:00+09:00",
+          "date": "2024-07-29",
+          "hour": 4,
+          "hachioji": {
+            "temp": 26.5,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 30,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": -3.5
+        },
+        {
+          "datetime": "2024-07-29T05:00:00+09:00",
+          "date": "2024-07-29",
+          "hour": 5,
+          "hachioji": {
+            "temp": 26.4,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 29.8,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": -3.4
+        },
+        {
+          "datetime": "2024-07-29T06:00:00+09:00",
+          "date": "2024-07-29",
+          "hour": 6,
+          "hachioji": {
+            "temp": 27.2,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 30.2,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": -3
+        },
+        {
+          "datetime": "2024-07-29T07:00:00+09:00",
+          "date": "2024-07-29",
+          "hour": 7,
+          "hachioji": {
+            "temp": 29.4,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 29.9,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": -0.5
+        },
+        {
+          "datetime": "2024-07-29T08:00:00+09:00",
+          "date": "2024-07-29",
+          "hour": 8,
+          "hachioji": {
+            "temp": 32.6,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 32.9,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": -0.3
+        },
+        {
+          "datetime": "2024-07-29T09:00:00+09:00",
+          "date": "2024-07-29",
+          "hour": 9,
+          "hachioji": {
+            "temp": 34.3,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 34.7,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": -0.4
+        },
+        {
+          "datetime": "2024-07-29T10:00:00+09:00",
+          "date": "2024-07-29",
+          "hour": 10,
+          "hachioji": {
+            "temp": 35.2,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 35.4,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": -0.2
+        },
+        {
+          "datetime": "2024-07-29T11:00:00+09:00",
+          "date": "2024-07-29",
+          "hour": 11,
+          "hachioji": {
+            "temp": 36.5,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 36.2,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": 0.3
+        },
+        {
+          "datetime": "2024-07-29T12:00:00+09:00",
+          "date": "2024-07-29",
+          "hour": 12,
+          "hachioji": {
+            "temp": 37.6,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 36,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": 1.6
+        },
+        {
+          "datetime": "2024-07-29T13:00:00+09:00",
+          "date": "2024-07-29",
+          "hour": 13,
+          "hachioji": {
+            "temp": 37.7,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 37.1,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": 0.6
+        },
+        {
+          "datetime": "2024-07-29T14:00:00+09:00",
+          "date": "2024-07-29",
+          "hour": 14,
+          "hachioji": {
+            "temp": 35.1,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 36.7,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": -1.6
+        },
+        {
+          "datetime": "2024-07-29T15:00:00+09:00",
+          "date": "2024-07-29",
+          "hour": 15,
+          "hachioji": {
+            "temp": 33.9,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 35.8,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": -1.9
+        },
+        {
+          "datetime": "2024-07-29T16:00:00+09:00",
+          "date": "2024-07-29",
+          "hour": 16,
+          "hachioji": {
+            "temp": 33.2,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 34.1,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": -0.9
+        },
+        {
+          "datetime": "2024-07-29T17:00:00+09:00",
+          "date": "2024-07-29",
+          "hour": 17,
+          "hachioji": {
+            "temp": 32.7,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 32.6,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": 0.1
+        },
+        {
+          "datetime": "2024-07-29T18:00:00+09:00",
+          "date": "2024-07-29",
+          "hour": 18,
+          "hachioji": {
+            "temp": 31.8,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 31.6,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": 0.2
+        },
+        {
+          "datetime": "2024-07-29T19:00:00+09:00",
+          "date": "2024-07-29",
+          "hour": 19,
+          "hachioji": {
+            "temp": 31,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 30.5,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": 0.5
+        },
+        {
+          "datetime": "2024-07-29T20:00:00+09:00",
+          "date": "2024-07-29",
+          "hour": 20,
+          "hachioji": {
+            "temp": 30.8,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 30.4,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": 0.4
+        },
+        {
+          "datetime": "2024-07-29T21:00:00+09:00",
+          "date": "2024-07-29",
+          "hour": 21,
+          "hachioji": {
+            "temp": 30.4,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 29.9,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": 0.5
+        },
+        {
+          "datetime": "2024-07-29T22:00:00+09:00",
+          "date": "2024-07-29",
+          "hour": 22,
+          "hachioji": {
+            "temp": 29.6,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 30.2,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": -0.6
+        },
+        {
+          "datetime": "2024-07-29T23:00:00+09:00",
+          "date": "2024-07-29",
+          "hour": 23,
+          "hachioji": {
+            "temp": 28.4,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 30.5,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": -2.1
+        },
+        {
+          "datetime": "2024-07-30T00:00:00+09:00",
+          "date": "2024-07-30",
+          "hour": 0,
+          "hachioji": {
+            "temp": 27.3,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 29.7,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": -2.4
+        },
+        {
+          "datetime": "2024-07-30T01:00:00+09:00",
+          "date": "2024-07-30",
+          "hour": 1,
+          "hachioji": {
+            "temp": 28.1,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 30.3,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": -2.2
+        },
+        {
+          "datetime": "2024-07-30T02:00:00+09:00",
+          "date": "2024-07-30",
+          "hour": 2,
+          "hachioji": {
+            "temp": 28.1,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 29.8,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": -1.7
+        },
+        {
+          "datetime": "2024-07-30T03:00:00+09:00",
+          "date": "2024-07-30",
+          "hour": 3,
+          "hachioji": {
+            "temp": 27.1,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 30.4,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": -3.3
+        },
+        {
+          "datetime": "2024-07-30T04:00:00+09:00",
+          "date": "2024-07-30",
+          "hour": 4,
+          "hachioji": {
+            "temp": 26.8,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 30.2,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": -3.4
+        },
+        {
+          "datetime": "2024-07-30T05:00:00+09:00",
+          "date": "2024-07-30",
+          "hour": 5,
+          "hachioji": {
+            "temp": 26.1,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 30.8,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": -4.7
+        },
+        {
+          "datetime": "2024-07-30T06:00:00+09:00",
+          "date": "2024-07-30",
+          "hour": 6,
+          "hachioji": {
+            "temp": 27.3,
+            "precip": 0,
+            "quality": 8
+          },
+          "tokyo": {
+            "temp": 30.4,
+            "precip": 0,
+            "quality": 8
+          },
+          "delta": -3.1
+        }
+      ]
+    }
+  ],
+  "cooling_rates": [
+    {
+      "case_id": "case-20180723",
+      "name": "2018年7月23日（八王子観測史上最高 39.3℃）",
+      "temp_18h": {
+        "hachioji": 32.3,
+        "tokyo": 32.4
+      },
+      "temp_05h": {
+        "hachioji": 25.8,
+        "tokyo": 26.7
+      },
+      "cooling_amount": {
+        "hachioji": 6.5,
+        "tokyo": 5.7
+      },
+      "hourly_cooling_rate": {
+        "hachioji": 0.59,
+        "tokyo": 0.52
+      }
+    },
+    {
+      "case_id": "case-20230716",
+      "name": "2023年7月16日（猛暑日 八王子 38.9℃）",
+      "temp_18h": {
+        "hachioji": 35.5,
+        "tokyo": 30.7
+      },
+      "temp_05h": {
+        "hachioji": 26.2,
+        "tokyo": 27.6
+      },
+      "cooling_amount": {
+        "hachioji": 9.3,
+        "tokyo": 3.1
+      },
+      "hourly_cooling_rate": {
+        "hachioji": 0.85,
+        "tokyo": 0.28
+      }
+    },
+    {
+      "case_id": "case-20240729",
+      "name": "2024年7月29日（八王子 39.1℃ / 都心の熱帯夜）",
+      "temp_18h": {
+        "hachioji": 31.8,
+        "tokyo": 31.6
+      },
+      "temp_05h": {
+        "hachioji": 26.1,
+        "tokyo": 30.8
+      },
+      "cooling_amount": {
+        "hachioji": 5.7,
+        "tokyo": 0.8
+      },
+      "hourly_cooling_rate": {
+        "hachioji": 0.52,
+        "tokyo": 0.07
+      }
+    }
+  ]
+}

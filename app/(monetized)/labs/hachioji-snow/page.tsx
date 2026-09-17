@@ -91,7 +91,15 @@ export default function SnowPage() {
       <section id="quiz" className="space-y-4"><h2 className={heading}>06　見えたつもり、を確かめる5問。</h2><p>以下はすべて学習用の仮想例です。八王子の実測結果と分けて考えてください。</p>{quizzes.map(([q,body,answer], i) => <div key={q} className={card}><h3 className="text-lg font-bold">Q{i+1}　{q}</h3><p className="mt-3">{body}</p><details className="mt-4 rounded-xl bg-indigo-50 p-4"><summary className="cursor-pointer font-semibold text-indigo-900">答えと考え方</summary><p className="mt-3">{answer}</p></details></div>)}<div className="flex flex-wrap gap-4 text-blue-700 underline"><Link href="/toukei/guides/hypothesis-testing-basics">仮説検定の基礎</Link><Link href="/toukei/problems/contingency-table">分割表の例題</Link><Link href="/toukei/guides/sampling-and-bias">標本と偏り</Link></div></section>
 
       <section id="method" className={card}><h2 className={heading}>方法・再現性・出典</h2><div className="mt-5 space-y-4 text-sm"><p>対象候補は1990/91〜2024/25の35冬（12〜2月）。主解析は気象庁の品質情報8（正常値）のみ。冬全体の気温・降水量のペア有効率95%以上を条件とし、均質性が冬の途中で変わる2014/15を除いた34冬を使いました。均質番号は取得単位をまたいで単純比較せず、重複区間の値を照合して接続しています。</p><p>降水イベントは6時間連続の無降水で区切り、不明な降水や観測条件の境界で中断します。前後の区切りを確認できたイベントのうち、降水が3時間以上、気温ペア有効率90%以上を採用。H1の支持基準は5冬・30イベント以上、かつ低温の時間割合と負のイベント平均差の割合がともに60%以上です。有意差検定の基準ではありません。</p><p>準正常値を含める、区切りを12時間にする、両地点とも降水した時間に絞る、冬の有効率を90%にする感度分析でも、2区間のH1判定は変わりませんでした。</p><p>CSV原本のバイト数・SHA-256・要求した全時間の被覆を確認し、取得境界の3,264レコードを照合しました。主解析とは別のCSV読み取り・イベント集約による170組の照合も通過しています。</p><p>データ版：{data.version} ／ bundle：{snowLock.bytes.toLocaleString()} bytes<br /><span className="break-all">SHA-256：{snowLock.sha256}</span></p><p>AIは構成、解析・実装補助、レビュー補助と導入イラストに使用しました。記事設計にGeminiのレビューを反映しています。運営者が記事プレビューを確認し、2026年9月15日に公開を承認しました。</p></div><ul className="mt-5 space-y-2 text-sm text-blue-700">{sources.map(([label,url]) => <li key={url}><a href={url} className="underline">{label}</a></li>)}</ul></section>
-      <section className="rounded-3xl bg-blue-50 p-7"><h2 className="text-xl font-bold">次は、普段の八王子も見てみる。</h2><p className="mt-3">雪の日だけを選ぶと見えない、夏の暑さや冬の冷え込み。前編では4地点の日別データを比較しています。</p><div className="mt-4 flex flex-wrap gap-5 font-semibold text-blue-700"><Link href="/labs/hachioji-climate">前編：八王子は本当に夏暑く、冬寒いのか →</Link><Link href="/toukei">統計検定2級の学習へ →</Link></div></section>
+      <section className="rounded-3xl bg-blue-50 p-7">
+        <h2 className="text-xl font-bold">八王子の気候シリーズ</h2>
+        <p className="mt-3">雪の日だけを選ぶと見えない、普段の気候や夏の猛暑。他の分析記事もあわせてご覧ください。</p>
+        <div className="mt-4 flex flex-wrap gap-5 font-semibold text-blue-700">
+          <Link href="/labs/hachioji-climate">第1弾：八王子は本当に夏暑く、冬寒いのか →</Link>
+          <Link href="/labs/hachioji-heat">第3弾：八王子の夏は本当に暑いのか（猛暑・熱帯夜） →</Link>
+          <Link href="/toukei">統計検定2級の学習へ →</Link>
+        </div>
+      </section>
     </article><PublicSiteFooter />
   </main>;
 }
