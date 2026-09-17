@@ -319,3 +319,37 @@ export const hachiojiHeatProvenance: ContentProvenance = {
     },
   ],
 };
+
+export const takaoGearProvenance: ContentProvenance = {
+  writtenBy: "kuma / bearworks.uk",
+  checkedBy: "Antigravity（Open-Meteo標高モデル・気象庁アメダスデータの抽出、固定bundle作成、独立バリデーション）",
+  finalReviewedBy: "kuma / bearworks.uk（2026-09-17に公開内容を承認）",
+  aiUsage:
+    "記事の構成案、気象データ処理スクリプト、SVGグラフ実装、高尾山装備シミュレーターコンポーネント、確認問題作成にAI（Antigravity）を使用しました。AI出力を無検証で公開せず、固定bundleのバイト数・SHA-256・検算コードで整合性を確認しています。",
+  humanReview:
+    "運営者が気象データ（気温減率・体感温度式）、高尾山の各登山ルート（1号路・6号路・稲荷山・陣馬縦走）の環境特性、装備判定ルールの妥当性を確認し、2026-09-17に公開内容を承認しました。専門家による第三者査読ではありません。",
+  evidenceLinks: [
+    {
+      title: "固定した公開データ（takao-gear）",
+      url: "https://github.com/kumakit/bearworks-portal/blob/main/app/%28monetized%29/labs/takao-gear/data/takao-gear-2026-09-17.r1.json",
+      description: "高尾山頂・八王子・都心の月別気候比較および年間装備必須日数の固定bundleです。",
+    },
+    {
+      title: "bundle検証コード",
+      url: "https://github.com/kumakit/bearworks-portal/blob/main/scripts/validate-takao-gear-bundle.mjs",
+      description: "byte size、SHA-256、スキーマ、集計値整合性をfail-closedで検証します。",
+    },
+    {
+      title: "Open-Meteo Weather API",
+      url: "https://open-meteo.com/",
+      description: "高尾山頂（標高599m）および八王子の標高別気象データ取得に使用したオープンAPIです。",
+    },
+  ],
+  revisions: [
+    {
+      date: "2026-09-17",
+      kind: "初版",
+      summary: "高尾山装備シミュレーター＆気象データ検証ページ（シリーズ第4弾）の初版を作成し、運営者が公開内容を承認しました。",
+    },
+  ],
+};

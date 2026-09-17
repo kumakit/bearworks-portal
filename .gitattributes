@@ -1,6 +1,9 @@
 app/(monetized)/labs/hachioji-climate/data/*.json text eol=lf
 app/(monetized)/labs/hachioji-snow/data/*.json text eol=lf
 app/(monetized)/labs/hachioji-heat/data/*.json text eol=lf
+app/(monetized)/labs/takao-gear/data/*.json text eol=lf
 scripts/validate-hachioji-climate-bundle.mjs text eol=lf
 scripts/validate-hachioji-snow-bundle.mjs text eol=lf
 scripts/validate-hachioji-heat-bundle.mjs text eol=lf
+scripts/validate-takao-gear-bundle.mjs text eol=lf
+

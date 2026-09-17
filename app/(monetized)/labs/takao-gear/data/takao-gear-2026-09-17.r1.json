@@ -1,0 +1,566 @@
+{
+  "bundle_version": "2026-09-17.r1",
+  "bundle_schema_version": "1.0.0",
+  "generated_at": "2026-09-17T13:34:38.002Z",
+  "attribution": {
+    "source_name": "Open-Meteo Historical Weather API & 気象庁アメダス八王子",
+    "source_url": "https://open-meteo.com/",
+    "processing_ja": "高尾山頂（標高599m）、八王子（標高123m）、東京都心（標高25m）の気象モデル・観測値（2024年1時間値）から、月別体感温度・風速・ギャップおよび山装備必須日数を集計。"
+  },
+  "coordinates": {
+    "takao_summit": {
+      "name": "高尾山頂",
+      "latitude": 35.6251,
+      "longitude": 139.2437,
+      "elevation": 599
+    },
+    "hachioji": {
+      "name": "八王子（市街地）",
+      "latitude": 35.6567,
+      "longitude": 139.3244,
+      "elevation": 123
+    },
+    "tokyo": {
+      "name": "東京都心",
+      "latitude": 35.6917,
+      "longitude": 139.75,
+      "elevation": 25
+    }
+  },
+  "routes": [
+    {
+      "id": "route-1",
+      "name": "1号路（表参道コース）",
+      "distance_km": 3.8,
+      "elevation_gain_m": 399,
+      "estimated_time_up_min": 90,
+      "paved_ratio": 1,
+      "difficulty": "beginner",
+      "footwear_normal": "スニーカーOK",
+      "footwear_rain": "防滑靴推奨（濡れた舗装路の下りスリップ注意）",
+      "features": "薬王院を通る最も定番のコース。全線舗装されており街灯もあります。スニーカーでも登頂可能ですが、雨上がりの下り舗装路は苔や濡れた路面で滑りやすいため歩行に注意が必要です。"
+    },
+    {
+      "id": "route-6",
+      "name": "6号路（琵琶滝・沢コース）",
+      "distance_km": 3.3,
+      "elevation_gain_m": 390,
+      "estimated_time_up_min": 90,
+      "paved_ratio": 0,
+      "difficulty": "intermediate",
+      "footwear_normal": "登山靴・トレッキングシューズ推奨",
+      "footwear_rain": "登山靴必須（スニーカー不可）",
+      "features": "沢沿いを歩く自然豊かなコース。山頂手前には沢の中の飛び石を渡る区間があり、雨の後や降水時は増水・泥濘化します。防水性のある登山靴が必須となります。"
+    },
+    {
+      "id": "route-inari",
+      "name": "稲荷山コース（尾根コース）",
+      "distance_km": 3.1,
+      "elevation_gain_m": 400,
+      "estimated_time_up_min": 90,
+      "paved_ratio": 0,
+      "difficulty": "intermediate",
+      "footwear_normal": "トレッキングシューズ推奨",
+      "footwear_rain": "登山靴必須（赤土が猛烈に滑る）",
+      "features": "南側の尾根を登る見晴らしの良いコース。未舗装の山道で、木の根の段差や階段が続きます。土質が赤土（関東ローム層）のため、雨の後や霜柱が解けた後は非常に滑りやすく転倒リスクが高まります。"
+    },
+    {
+      "id": "route-jinba",
+      "name": "高尾山〜陣馬山縦走コース",
+      "distance_km": 15.3,
+      "elevation_gain_m": 1050,
+      "estimated_time_up_min": 330,
+      "paved_ratio": 0.05,
+      "difficulty": "advanced",
+      "footwear_normal": "本格登山靴必須",
+      "footwear_rain": "本格登山靴＋完全雨具必須",
+      "features": "城山・小仏峠・景信山・陣馬山を巡る本格的な縦走トレイル。歩行時間5時間以上を要し、途中で体調不良や日没を迎えるとエスケープが困難です。防寒着・雨具・ヘッドライト・行動食の携行が必須です。"
+    }
+  ],
+  "layering_presets": {
+    "freezing": {
+      "key": "freezing",
+      "label": "氷点下〜5℃未満（極寒・厳冬期）",
+      "temp_range": "5℃未満",
+      "base": "厚手メリノウールまたは高機能保温アンダー（長袖）",
+      "mid": "厚手フリースまたは軽量インサレーションジャケット",
+      "outer": "防風・防寒ジャケット（ダウンまたはハードシェル）",
+      "gear": [
+        "防風・保温グローブ",
+        "ニット帽/耳あて",
+        "ネックゲイター",
+        "軽アイゼン/滑り止め（凍結時）"
+      ]
+    },
+    "cold": {
+      "key": "cold",
+      "label": "5℃〜10℃未満（晩秋・初春）",
+      "temp_range": "5℃〜10℃",
+      "base": "吸汗速乾長袖ベースレイヤー（ウール混紡推奨）",
+      "mid": "薄手フリースまたはアクティブインサレーション",
+      "outer": "ウィンドブレーカーまたはレインジャケット",
+      "gear": [
+        "薄手グローブ",
+        "防寒用キャップ",
+        "ネックウォーマー"
+      ]
+    },
+    "mild": {
+      "key": "mild",
+      "label": "10℃〜18℃未満（春・秋の快適登山）",
+      "temp_range": "10℃〜18℃",
+      "base": "吸汗速乾長袖シャツ（化繊または薄手ウール）",
+      "mid": "薄手フリース（行動中は脱ぎ、山頂休憩時に着用）",
+      "outer": "軽量ウィンドブレーカー（山頂の風冷え対策に携行）",
+      "gear": [
+        "日除けキャップ",
+        "予備の着替えTシャツ"
+      ]
+    },
+    "warm": {
+      "key": "warm",
+      "label": "18℃以上（初夏〜夏）",
+      "temp_range": "18℃以上",
+      "base": "高通気・吸汗速乾半袖Tシャツ（化繊）",
+      "mid": "不要",
+      "outer": "携帯用超軽量ウィンドブレーカー（雨天・強風時の備え）",
+      "gear": [
+        "水分1.5L以上",
+        "塩分補給タブレット",
+        "日焼け止め",
+        "虫除け"
+      ]
+    }
+  },
+  "monthly_comparison": [
+    {
+      "month": 1,
+      "month_name": "1月",
+      "takao": {
+        "avg_temp": 2.6,
+        "avg_apparent_temp": -0.8,
+        "midday_temp": 7,
+        "midday_apparent_temp": 3.4,
+        "morning_apparent_temp": -1.5,
+        "avg_wind_speed": 6.4
+      },
+      "hachioji": {
+        "midday_temp": 10.1,
+        "midday_apparent_temp": 5.9
+      },
+      "tokyo": {
+        "midday_temp": 9.7,
+        "midday_apparent_temp": 4.5
+      },
+      "gap": {
+        "temp_gap": -3.1,
+        "apparent_gap": -2.5,
+        "tokyo_apparent_gap": -1.1,
+        "departure_gap": -6.7
+      }
+    },
+    {
+      "month": 2,
+      "month_name": "2月",
+      "takao": {
+        "avg_temp": 3.1,
+        "avg_apparent_temp": 0.2,
+        "midday_temp": 6.3,
+        "midday_apparent_temp": 3.5,
+        "morning_apparent_temp": -0.4,
+        "avg_wind_speed": 6.1
+      },
+      "hachioji": {
+        "midday_temp": 10.3,
+        "midday_apparent_temp": 6.7
+      },
+      "tokyo": {
+        "midday_temp": 10,
+        "midday_apparent_temp": 5.4
+      },
+      "gap": {
+        "temp_gap": -4,
+        "apparent_gap": -3.2,
+        "tokyo_apparent_gap": -1.9,
+        "departure_gap": -6.8
+      }
+    },
+    {
+      "month": 3,
+      "month_name": "3月",
+      "takao": {
+        "avg_temp": 4.8,
+        "avg_apparent_temp": 1.8,
+        "midday_temp": 8.7,
+        "midday_apparent_temp": 6.3,
+        "morning_apparent_temp": 1.9,
+        "avg_wind_speed": 7
+      },
+      "hachioji": {
+        "midday_temp": 12.3,
+        "midday_apparent_temp": 9.1
+      },
+      "tokyo": {
+        "midday_temp": 11.9,
+        "midday_apparent_temp": 7.5
+      },
+      "gap": {
+        "temp_gap": -3.6,
+        "apparent_gap": -2.8,
+        "tokyo_apparent_gap": -1.2,
+        "departure_gap": -6
+      }
+    },
+    {
+      "month": 4,
+      "month_name": "4月",
+      "takao": {
+        "avg_temp": 12.6,
+        "avg_apparent_temp": 11.7,
+        "midday_temp": 16.1,
+        "midday_apparent_temp": 15.8,
+        "morning_apparent_temp": 12.1,
+        "avg_wind_speed": 5.9
+      },
+      "hachioji": {
+        "midday_temp": 19.2,
+        "midday_apparent_temp": 19.1
+      },
+      "tokyo": {
+        "midday_temp": 19.6,
+        "midday_apparent_temp": 18.8
+      },
+      "gap": {
+        "temp_gap": -3.1,
+        "apparent_gap": -3.3,
+        "tokyo_apparent_gap": -3,
+        "departure_gap": -3.4
+      }
+    },
+    {
+      "month": 5,
+      "month_name": "5月",
+      "takao": {
+        "avg_temp": 15.6,
+        "avg_apparent_temp": 15.3,
+        "midday_temp": 19,
+        "midday_apparent_temp": 19.4,
+        "morning_apparent_temp": 15.4,
+        "avg_wind_speed": 7.4
+      },
+      "hachioji": {
+        "midday_temp": 22.1,
+        "midday_apparent_temp": 22.8
+      },
+      "tokyo": {
+        "midday_temp": 22.7,
+        "midday_apparent_temp": 22.6
+      },
+      "gap": {
+        "temp_gap": -3.1,
+        "apparent_gap": -3.4,
+        "tokyo_apparent_gap": -3.2,
+        "departure_gap": -2.7
+      }
+    },
+    {
+      "month": 6,
+      "month_name": "6月",
+      "takao": {
+        "avg_temp": 19,
+        "avg_apparent_temp": 20.4,
+        "midday_temp": 22.3,
+        "midday_apparent_temp": 24.4,
+        "morning_apparent_temp": 20.8,
+        "avg_wind_speed": 5.8
+      },
+      "hachioji": {
+        "midday_temp": 25.1,
+        "midday_apparent_temp": 27.9
+      },
+      "tokyo": {
+        "midday_temp": 25.8,
+        "midday_apparent_temp": 28.2
+      },
+      "gap": {
+        "temp_gap": -2.8,
+        "apparent_gap": -3.5,
+        "tokyo_apparent_gap": -3.8,
+        "departure_gap": -0.7
+      }
+    },
+    {
+      "month": 7,
+      "month_name": "7月",
+      "takao": {
+        "avg_temp": 25,
+        "avg_apparent_temp": 29.4,
+        "midday_temp": 28.1,
+        "midday_apparent_temp": 33.4,
+        "morning_apparent_temp": 29.7,
+        "avg_wind_speed": 4.6
+      },
+      "hachioji": {
+        "midday_temp": 30.7,
+        "midday_apparent_temp": 37
+      },
+      "tokyo": {
+        "midday_temp": 32,
+        "midday_apparent_temp": 37.5
+      },
+      "gap": {
+        "temp_gap": -2.6,
+        "apparent_gap": -3.6,
+        "tokyo_apparent_gap": -4.1,
+        "departure_gap": 2.7
+      }
+    },
+    {
+      "month": 8,
+      "month_name": "8月",
+      "takao": {
+        "avg_temp": 24.6,
+        "avg_apparent_temp": 28.8,
+        "midday_temp": 28,
+        "midday_apparent_temp": 32.6,
+        "morning_apparent_temp": 29.4,
+        "avg_wind_speed": 5.7
+      },
+      "hachioji": {
+        "midday_temp": 31.5,
+        "midday_apparent_temp": 37.1
+      },
+      "tokyo": {
+        "midday_temp": 32.9,
+        "midday_apparent_temp": 37.3
+      },
+      "gap": {
+        "temp_gap": -3.5,
+        "apparent_gap": -4.5,
+        "tokyo_apparent_gap": -4.7,
+        "departure_gap": 1.1
+      }
+    },
+    {
+      "month": 9,
+      "month_name": "9月",
+      "takao": {
+        "avg_temp": 22.3,
+        "avg_apparent_temp": 25.5,
+        "midday_temp": 25.5,
+        "midday_apparent_temp": 29,
+        "morning_apparent_temp": 25.7,
+        "avg_wind_speed": 5.7
+      },
+      "hachioji": {
+        "midday_temp": 28.9,
+        "midday_apparent_temp": 33
+      },
+      "tokyo": {
+        "midday_temp": 29.6,
+        "midday_apparent_temp": 32.8
+      },
+      "gap": {
+        "temp_gap": -3.4,
+        "apparent_gap": -4,
+        "tokyo_apparent_gap": -3.8,
+        "departure_gap": 0.1
+      }
+    },
+    {
+      "month": 10,
+      "month_name": "10月",
+      "takao": {
+        "avg_temp": 16.5,
+        "avg_apparent_temp": 17.1,
+        "midday_temp": 19.2,
+        "midday_apparent_temp": 19.6,
+        "morning_apparent_temp": 17.1,
+        "avg_wind_speed": 6
+      },
+      "hachioji": {
+        "midday_temp": 22.6,
+        "midday_apparent_temp": 23.5
+      },
+      "tokyo": {
+        "midday_temp": 23.1,
+        "midday_apparent_temp": 23.5
+      },
+      "gap": {
+        "temp_gap": -3.4,
+        "apparent_gap": -3.9,
+        "tokyo_apparent_gap": -3.9,
+        "departure_gap": -3
+      }
+    },
+    {
+      "month": 11,
+      "month_name": "11月",
+      "takao": {
+        "avg_temp": 9.9,
+        "avg_apparent_temp": 8.3,
+        "midday_temp": 13.4,
+        "midday_apparent_temp": 11.6,
+        "morning_apparent_temp": 8.3,
+        "avg_wind_speed": 5.2
+      },
+      "hachioji": {
+        "midday_temp": 15.9,
+        "midday_apparent_temp": 14
+      },
+      "tokyo": {
+        "midday_temp": 15.9,
+        "midday_apparent_temp": 14.3
+      },
+      "gap": {
+        "temp_gap": -2.5,
+        "apparent_gap": -2.4,
+        "tokyo_apparent_gap": -2.7,
+        "departure_gap": -4.3
+      }
+    },
+    {
+      "month": 12,
+      "month_name": "12月",
+      "takao": {
+        "avg_temp": 2.8,
+        "avg_apparent_temp": -0.6,
+        "midday_temp": 8.6,
+        "midday_apparent_temp": 4.7,
+        "morning_apparent_temp": -0.8,
+        "avg_wind_speed": 5.5
+      },
+      "hachioji": {
+        "midday_temp": 10.5,
+        "midday_apparent_temp": 7
+      },
+      "tokyo": {
+        "midday_temp": 10.7,
+        "midday_apparent_temp": 7.5
+      },
+      "gap": {
+        "temp_gap": -1.9,
+        "apparent_gap": -2.3,
+        "tokyo_apparent_gap": -2.8,
+        "departure_gap": -5.8
+      }
+    }
+  ],
+  "gear_days_summary": {
+    "total_days": 366,
+    "warm_clothes_required_days": 167,
+    "rainwear_required_days": 174,
+    "crampons_caution_days": 22,
+    "mud_risk_days": 175,
+    "monthly_gear_days": [
+      {
+        "month": 1,
+        "month_name": "1月",
+        "total_days": 31,
+        "warm_clothes_days": 31,
+        "rainwear_days": 3,
+        "crampons_days": 3,
+        "mud_risk_days": 4
+      },
+      {
+        "month": 2,
+        "month_name": "2月",
+        "total_days": 29,
+        "warm_clothes_days": 28,
+        "rainwear_days": 15,
+        "crampons_days": 13,
+        "mud_risk_days": 13
+      },
+      {
+        "month": 3,
+        "month_name": "3月",
+        "total_days": 31,
+        "warm_clothes_days": 31,
+        "rainwear_days": 14,
+        "crampons_days": 0,
+        "mud_risk_days": 19
+      },
+      {
+        "month": 4,
+        "month_name": "4月",
+        "total_days": 30,
+        "warm_clothes_days": 16,
+        "rainwear_days": 14,
+        "crampons_days": 0,
+        "mud_risk_days": 15
+      },
+      {
+        "month": 5,
+        "month_name": "5月",
+        "total_days": 31,
+        "warm_clothes_days": 7,
+        "rainwear_days": 16,
+        "crampons_days": 0,
+        "mud_risk_days": 18
+      },
+      {
+        "month": 6,
+        "month_name": "6月",
+        "total_days": 30,
+        "warm_clothes_days": 0,
+        "rainwear_days": 17,
+        "crampons_days": 0,
+        "mud_risk_days": 18
+      },
+      {
+        "month": 7,
+        "month_name": "7月",
+        "total_days": 31,
+        "warm_clothes_days": 0,
+        "rainwear_days": 20,
+        "crampons_days": 0,
+        "mud_risk_days": 23
+      },
+      {
+        "month": 8,
+        "month_name": "8月",
+        "total_days": 31,
+        "warm_clothes_days": 0,
+        "rainwear_days": 24,
+        "crampons_days": 0,
+        "mud_risk_days": 19
+      },
+      {
+        "month": 9,
+        "month_name": "9月",
+        "total_days": 30,
+        "warm_clothes_days": 0,
+        "rainwear_days": 20,
+        "crampons_days": 0,
+        "mud_risk_days": 19
+      },
+      {
+        "month": 10,
+        "month_name": "10月",
+        "total_days": 31,
+        "warm_clothes_days": 3,
+        "rainwear_days": 15,
+        "crampons_days": 0,
+        "mud_risk_days": 15
+      },
+      {
+        "month": 11,
+        "month_name": "11月",
+        "total_days": 30,
+        "warm_clothes_days": 20,
+        "rainwear_days": 13,
+        "crampons_days": 0,
+        "mud_risk_days": 12
+      },
+      {
+        "month": 12,
+        "month_name": "12月",
+        "total_days": 31,
+        "warm_clothes_days": 31,
+        "rainwear_days": 3,
+        "crampons_days": 6,
+        "mud_risk_days": 0
+      }
+    ]
+  }
+}

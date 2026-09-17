@@ -179,16 +179,21 @@ export default function HachiojiClimatePage() {
       <section className="overflow-hidden rounded-3xl bg-slate-900 text-white p-7 md:p-10">
         <p className="text-sm font-bold tracking-wider text-orange-200">街のうわさを、統計でほどく シリーズ</p>
         <h2 className="mt-2 text-2xl font-bold md:text-3xl">八王子の気候を、もっと深く知る</h2>
-        <div className="mt-6 grid gap-6 md:grid-cols-2">
+        <div className="mt-6 grid gap-6 md:grid-cols-3">
           <Link href="/labs/hachioji-snow" className="group block rounded-2xl border border-slate-700 bg-slate-800 p-5 transition hover:border-slate-500">
             <p className="text-xs font-bold text-sky-200">第2弾 · 雪の分析</p>
-            <h3 className="mt-1 text-lg font-bold group-hover:text-sky-200">雪のニュース。また、八王子だ。 →</h3>
-            <p className="mt-2 text-sm text-slate-300">気温が低いことと雪が多いことは同じか。箱ひげ図・散布図・4大雪事例で検証。</p>
+            <h3 className="mt-1 text-base font-bold group-hover:text-sky-200">雪のニュース。また、八王子だ。 →</h3>
+            <p className="mt-2 text-xs text-slate-300">気温が低いことと雪が多いことは同じか。箱ひげ図・散布図・4大雪事例で検証。</p>
           </Link>
           <Link href="/labs/hachioji-heat" className="group block rounded-2xl border border-slate-700 bg-slate-800 p-5 transition hover:border-slate-500">
             <p className="text-xs font-bold text-orange-300">第3弾 · 夏の猛暑と熱帯夜</p>
-            <h3 className="mt-1 text-lg font-bold group-hover:text-orange-200">八王子の夏は本当に暑いのか →</h3>
-            <p className="mt-2 text-sm text-slate-300">昼の猛暑日の多さと夜の涼しさ。都心ヒートアイランドとの24時間冷却対比。</p>
+            <h3 className="mt-1 text-base font-bold group-hover:text-orange-200">八王子の夏は本当に暑いのか →</h3>
+            <p className="mt-2 text-xs text-slate-300">昼の猛暑日の多さと夜の涼しさ。都心ヒートアイランドとの24時間冷却対比。</p>
+          </Link>
+          <Link href="/labs/takao-gear" className="group block rounded-2xl border border-slate-700 bg-slate-800 p-5 transition hover:border-slate-500">
+            <p className="text-xs font-bold text-emerald-300">第4弾 · 高尾山装備判定</p>
+            <h3 className="mt-1 text-base font-bold group-hover:text-emerald-200">高尾山に山装備は本当に必要か →</h3>
+            <p className="mt-2 text-xs text-slate-300">標高599mの体感温度ギャップ、年間装備必須日数を判定するシミュレーター。</p>
           </Link>
         </div>
       </section>

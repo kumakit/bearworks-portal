@@ -8,6 +8,12 @@ type SitemapEntry = Omit<MetadataRoute.Sitemap[number], "url"> & {
 
 const staticPaths: SitemapEntry[] = [
   {
+    pathname: "/labs/takao-gear",
+    lastModified: new Date("2026-09-17"),
+    changeFrequency: "monthly",
+    priority: 0.85,
+  },
+  {
     pathname: "/labs/hachioji-heat",
     lastModified: new Date("2026-09-17"),
     changeFrequency: "monthly",

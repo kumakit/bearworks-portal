@@ -97,6 +97,7 @@ export default function SnowPage() {
         <div className="mt-4 flex flex-wrap gap-5 font-semibold text-blue-700">
           <Link href="/labs/hachioji-climate">第1弾：八王子は本当に夏暑く、冬寒いのか →</Link>
           <Link href="/labs/hachioji-heat">第3弾：八王子の夏は本当に暑いのか（猛暑・熱帯夜） →</Link>
+          <Link href="/labs/takao-gear">第4弾：高尾山に山装備は本当に必要か（装備シミュレーター） →</Link>
           <Link href="/toukei">統計検定2級の学習へ →</Link>
         </div>
       </section>
