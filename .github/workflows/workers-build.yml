@@ -171,6 +171,10 @@ jobs:
             echo 'Snow illustration unexpectedly uses the image optimization endpoint'
             exit 1
           fi
+          assert_status 200 /labs/takao-weather-shift
+          grep --quiet 'ca-pub-0000000000000000' /tmp/response-body
+          grep --fixed-strings --quiet 'https://bearworks.uk/labs/takao-weather-shift' /tmp/response-body
+          assert_status 200 /images/takao-weather-shift/hero-illustration.webp
           assert_status 200 /labs/takao-gear
           grep --quiet 'ca-pub-0000000000000000' /tmp/response-body
           grep --fixed-strings --quiet 'https://bearworks.uk/labs/takao-gear' /tmp/response-body
@@ -194,6 +198,7 @@ jobs:
           grep --fixed-strings --quiet 'https://bearworks.uk/labs/hachioji-climate' /tmp/response-body
           grep --fixed-strings --quiet 'https://bearworks.uk/labs/hachioji-snow' /tmp/response-body
           grep --fixed-strings --quiet 'https://bearworks.uk/labs/takao-gear' /tmp/response-body
+          grep --fixed-strings --quiet 'https://bearworks.uk/labs/takao-weather-shift' /tmp/response-body
           assert_status 404 /route-that-does-not-exist
           if contains_ads; then
             echo 'AdSense client ID was found on a 404 response'

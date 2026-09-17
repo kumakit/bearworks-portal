@@ -6,4 +6,6 @@ scripts/validate-hachioji-climate-bundle.mjs text eol=lf
 scripts/validate-hachioji-snow-bundle.mjs text eol=lf
 scripts/validate-hachioji-heat-bundle.mjs text eol=lf
 scripts/validate-takao-gear-bundle.mjs text eol=lf
+app/(monetized)/labs/takao-weather-shift/data/*.json text eol=lf
+scripts/validate-takao-weather-bundle.mjs text eol=lf
 

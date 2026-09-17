@@ -1,0 +1,280 @@
+{
+  "metadata": {
+    "generated_at": "2026-09-17T14:08:22.156Z",
+    "dataset_version": "2026-09-17.r1",
+    "year": 2024,
+    "points": {
+      "takao_summit": {
+        "name": "高尾山頂",
+        "latitude": 35.6251,
+        "longitude": 139.2437,
+        "elevation": 599
+      },
+      "hachioji": {
+        "name": "八王子（市街地）",
+        "latitude": 35.6567,
+        "longitude": 139.3244,
+        "elevation": 123
+      }
+    },
+    "description": "高尾山頂（標高599m）における気象急変・ガス発生リスクおよび平野部（八王子）との天候乖離の統計bundle"
+  },
+  "annual_summary": {
+    "total_days": 366,
+    "gas_days": 279,
+    "gas_days_pct": 76.2,
+    "apparent_sunny_gas_days": 34,
+    "apparent_sunny_gas_days_pct": 9.3,
+    "afternoon_shift_days": 6,
+    "rain_snow_border_days": 11
+  },
+  "monthly_summary": [
+    {
+      "month": 1,
+      "total_days": 31,
+      "gas_days": 10,
+      "apparent_sunny_gas_days": 1,
+      "afternoon_shift_days": 0,
+      "rain_snow_border_days": 3,
+      "avg_summit_humidity": 65.8,
+      "avg_base_humidity": 61.1,
+      "humidity_gap": 4.7
+    },
+    {
+      "month": 2,
+      "total_days": 29,
+      "gas_days": 18,
+      "apparent_sunny_gas_days": 0,
+      "afternoon_shift_days": 0,
+      "rain_snow_border_days": 7,
+      "avg_summit_humidity": 78.1,
+      "avg_base_humidity": 66.9,
+      "humidity_gap": 11.2
+    },
+    {
+      "month": 3,
+      "total_days": 31,
+      "gas_days": 19,
+      "apparent_sunny_gas_days": 3,
+      "afternoon_shift_days": 0,
+      "rain_snow_border_days": 0,
+      "avg_summit_humidity": 71.3,
+      "avg_base_humidity": 65.5,
+      "humidity_gap": 5.8
+    },
+    {
+      "month": 4,
+      "total_days": 30,
+      "gas_days": 22,
+      "apparent_sunny_gas_days": 3,
+      "afternoon_shift_days": 0,
+      "rain_snow_border_days": 0,
+      "avg_summit_humidity": 79.9,
+      "avg_base_humidity": 76.4,
+      "humidity_gap": 3.5
+    },
+    {
+      "month": 5,
+      "total_days": 31,
+      "gas_days": 25,
+      "apparent_sunny_gas_days": 2,
+      "afternoon_shift_days": 0,
+      "rain_snow_border_days": 0,
+      "avg_summit_humidity": 78.8,
+      "avg_base_humidity": 76,
+      "humidity_gap": 2.8
+    },
+    {
+      "month": 6,
+      "total_days": 30,
+      "gas_days": 27,
+      "apparent_sunny_gas_days": 2,
+      "afternoon_shift_days": 1,
+      "rain_snow_border_days": 0,
+      "avg_summit_humidity": 83.4,
+      "avg_base_humidity": 81.3,
+      "humidity_gap": 2.1
+    },
+    {
+      "month": 7,
+      "total_days": 31,
+      "gas_days": 30,
+      "apparent_sunny_gas_days": 2,
+      "afternoon_shift_days": 3,
+      "rain_snow_border_days": 0,
+      "avg_summit_humidity": 84,
+      "avg_base_humidity": 82.5,
+      "humidity_gap": 1.5
+    },
+    {
+      "month": 8,
+      "total_days": 31,
+      "gas_days": 31,
+      "apparent_sunny_gas_days": 9,
+      "afternoon_shift_days": 2,
+      "rain_snow_border_days": 0,
+      "avg_summit_humidity": 86.2,
+      "avg_base_humidity": 80.8,
+      "humidity_gap": 5.4
+    },
+    {
+      "month": 9,
+      "total_days": 30,
+      "gas_days": 30,
+      "apparent_sunny_gas_days": 9,
+      "afternoon_shift_days": 0,
+      "rain_snow_border_days": 0,
+      "avg_summit_humidity": 87.2,
+      "avg_base_humidity": 79.7,
+      "humidity_gap": 7.5
+    },
+    {
+      "month": 10,
+      "total_days": 31,
+      "gas_days": 28,
+      "apparent_sunny_gas_days": 1,
+      "afternoon_shift_days": 0,
+      "rain_snow_border_days": 0,
+      "avg_summit_humidity": 86.2,
+      "avg_base_humidity": 79.4,
+      "humidity_gap": 6.8
+    },
+    {
+      "month": 11,
+      "total_days": 30,
+      "gas_days": 24,
+      "apparent_sunny_gas_days": 2,
+      "afternoon_shift_days": 0,
+      "rain_snow_border_days": 0,
+      "avg_summit_humidity": 78.8,
+      "avg_base_humidity": 74.4,
+      "humidity_gap": 4.4
+    },
+    {
+      "month": 12,
+      "total_days": 31,
+      "gas_days": 15,
+      "apparent_sunny_gas_days": 0,
+      "afternoon_shift_days": 0,
+      "rain_snow_border_days": 1,
+      "avg_summit_humidity": 66.8,
+      "avg_base_humidity": 64.8,
+      "humidity_gap": 2
+    }
+  ],
+  "summer_hourly_matrix": [
+    {
+      "hour": 10,
+      "hour_label": "10:00",
+      "rain_probability": 36.1,
+      "heavy_rain_probability": 6.6,
+      "high_humidity_rate": 17.2,
+      "gas_probability": 36.1,
+      "avg_temperature": 25.3,
+      "avg_cloud_cover": 72.8
+    },
+    {
+      "hour": 12,
+      "hour_label": "12:00",
+      "rain_probability": 47.5,
+      "heavy_rain_probability": 6.6,
+      "high_humidity_rate": 10.7,
+      "gas_probability": 47.5,
+      "avg_temperature": 26,
+      "avg_cloud_cover": 78
+    },
+    {
+      "hour": 14,
+      "hour_label": "14:00",
+      "rain_probability": 57.4,
+      "heavy_rain_probability": 7.4,
+      "high_humidity_rate": 11.5,
+      "gas_probability": 57.4,
+      "avg_temperature": 25.7,
+      "avg_cloud_cover": 75.4
+    },
+    {
+      "hour": 16,
+      "hour_label": "16:00",
+      "rain_probability": 50.8,
+      "heavy_rain_probability": 9,
+      "high_humidity_rate": 22.1,
+      "gas_probability": 51.6,
+      "avg_temperature": 24.8,
+      "avg_cloud_cover": 76
+    },
+    {
+      "hour": 18,
+      "hour_label": "18:00",
+      "rain_probability": 32,
+      "heavy_rain_probability": 4.9,
+      "high_humidity_rate": 68,
+      "gas_probability": 46.7,
+      "avg_temperature": 23,
+      "avg_cloud_cover": 71.9
+    }
+  ],
+  "mechanisms": [
+    {
+      "step": 1,
+      "title": "湿潤気流の平野流入",
+      "description": "東京湾・相模湾方面から、湿り気を多く含んだ南東〜南の季節風が関東平野を横断して吹き込みます。"
+    },
+    {
+      "step": 2,
+      "title": "地形衝突と強制上昇（Orographic Lift）",
+      "description": "平坦な平野部を進んできた気流が、標高599mの高尾山・陣馬山地にぶつかり、山肌に沿って強制的に上昇します。"
+    },
+    {
+      "step": 3,
+      "title": "断熱膨張と冷却による飽和",
+      "description": "空気が上昇すると気圧が低下して断熱膨張が起き、100mあたり約0.65℃気温が下がります。これにより露点温度に達し、水蒸気が凝結します。"
+    },
+    {
+      "step": 4,
+      "title": "局地的な雲底低下・濃霧（ガス）の発生",
+      "description": "平野部では雲底高度が800〜1,000mであっても、山肌に沿って上昇した空気は山腹（300〜500m）で飽和し、平野は晴れでも山頂は真っ白なガスに包まれます。"
+    }
+  ],
+  "risk_checker_engine": {
+    "description": "月・時間帯・麓天候の組み合わせに基づく天候急変・ガス発生リスク判定エンジン",
+    "levels": [
+      {
+        "code": "safe",
+        "label": "安定・低リスク",
+        "color": "emerald",
+        "score_range": [
+          0,
+          30
+        ]
+      },
+      {
+        "code": "notice",
+        "label": "ガス注意（見せかけの晴れリスク）",
+        "color": "amber",
+        "score_range": [
+          31,
+          55
+        ]
+      },
+      {
+        "code": "warning",
+        "label": "天候急変警戒（午後発雷・夕立）",
+        "color": "orange",
+        "score_range": [
+          56,
+          75
+        ]
+      },
+      {
+        "code": "danger",
+        "label": "高リスク（荒天・凍結・視界不良）",
+        "color": "rose",
+        "score_range": [
+          76,
+          100
+        ]
+      }
+    ]
+  }
+}

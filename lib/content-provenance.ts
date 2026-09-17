@@ -353,3 +353,38 @@ export const takaoGearProvenance: ContentProvenance = {
     },
   ],
 };
+
+export const takaoWeatherShiftProvenance: ContentProvenance = {
+  writtenBy: "kuma / bearworks.uk",
+  checkedBy: "Antigravity（Open-Meteo標高モデル・アメダス八王子データの抽出、固定bundle作成、独立バリデーション）",
+  finalReviewedBy: "kuma / bearworks.uk（2026-09-17に公開内容を承認）",
+  aiUsage:
+    "記事の構成案、気象データ処理スクリプト、SVGグラフ実装、天候急変・ガス発生リスク判定メーターコンポーネント、確認問題作成にAI（Antigravity）を使用しました。AI出力を無検証で公開せず、固定bundleのバイト数・SHA-256・検算コードで整合性を確認しています。",
+  humanReview:
+    "運営者が気象データ（地形性上昇気流・断熱冷却・熱雷発生率）、見せかけの晴れの判定条件、天候急変リスク判定エンジンの妥当性を確認し、2026-09-17に公開内容を承認しました。専門家による第三者査読ではありません。",
+  evidenceLinks: [
+    {
+      title: "固定した公開データ（takao-weather-shift）",
+      url: "https://github.com/kumakit/bearworks-portal/blob/main/app/%28monetized%29/labs/takao-weather-shift/data/takao-weather-shift-2026-09-17.r1.json",
+      description: "高尾山頂・八王子の月別ガス発生日数・見せかけの晴れ・夏期時間帯別急変マトリクスの固定bundleです。",
+    },
+    {
+      title: "bundle検証コード",
+      url: "https://github.com/kumakit/bearworks-portal/blob/main/scripts/validate-takao-weather-bundle.mjs",
+      description: "byte size、SHA-256、スキーマ、集計値整合性をfail-closedで検証します。",
+    },
+    {
+      title: "Open-Meteo Weather API",
+      url: "https://open-meteo.com/",
+      description: "高尾山頂（標高599m）および八王子の標高別気象データ取得に使用したオープンAPIです。",
+    },
+  ],
+  revisions: [
+    {
+      date: "2026-09-17",
+      kind: "初版",
+      summary: "高尾山頂の天候急変・ガス発生リスク検証ページ（シリーズ第5弾）の初版を作成し、運営者が公開内容を承認しました。",
+    },
+  ],
+};
+

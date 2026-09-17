@@ -503,7 +503,7 @@ export default function HachiojiHeatPage() {
           <div className="p-7 md:p-10">
             <p className="text-sm font-bold tracking-wider text-orange-300">街のうわさを、統計でほどく シリーズ</p>
             <h2 className="mt-3 text-2xl font-bold md:text-3xl">八王子の気候を、もっと深く知る</h2>
-            <div className="mt-6 grid gap-6 md:grid-cols-3">
+            <div className="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
               <Link
                 href="/labs/hachioji-climate"
                 className="group block rounded-2xl border border-slate-700 bg-slate-800 p-5 transition hover:border-slate-500"
@@ -540,6 +540,19 @@ export default function HachiojiHeatPage() {
                 </h3>
                 <p className="mt-2 text-xs text-slate-300">
                   標高599mの体感温度ギャップ、年間装備必須日数を判定するシミュレーター。
+                </p>
+              </Link>
+
+              <Link
+                href="/labs/takao-weather-shift"
+                className="group block rounded-2xl border border-slate-700 bg-slate-800 p-5 transition hover:border-slate-500"
+              >
+                <p className="text-xs font-bold text-amber-300">第5弾</p>
+                <h3 className="mt-1 text-base font-bold group-hover:text-amber-200">
+                  高尾山頂はなぜガスるのか？ →
+                </h3>
+                <p className="mt-2 text-xs text-slate-300">
+                  平野晴天でも山頂は濃霧。「見せかけの晴れ（年34日）」と午後急変リスクを解明。
                 </p>
               </Link>
             </div>
