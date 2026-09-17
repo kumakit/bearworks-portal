@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-09-18",
+    "daily_summary": "本日のAIニュースは、ゲーム開発現場での9割に迫る生成AIの活用や東京ゲームショウでの関連製品の台頭など実用化が加速する一方で、著作権裁判、データセンター急増に伴う環境破壊や電力需要の懸念、国連によるAI兵器への国際人道法適用確認など、法的・倫理的・環境的な深刻な課題も浮き彫りになっています。",
+    "articles": [
+      {
+        "title": "「人類皆殺しにしかねない」元開発者が警鐘のAI “AI著作物”で前例なき裁判 文学賞も席巻 突きつけられた深刻な問い",
+        "content": "AIの潜在的な危険性について元開発者が警鐘を鳴らしており、AI著作物をめぐる前例のない裁判や文学賞の受賞が相次いでいます。これらの動向は、生成AIの急速な普及に伴う法的な課題や社会的な影響について深刻な問いを突きつけています。",
+        "source": "Google News",
+        "published_at": "2026-09-18",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBNSWJIVFNrQTF3UEZfSUFSa0VLcTllNWRWTGlpWVRmZXdRWkJ4bUtVSEdXek45WHZWZnl0eWVnUmt6QlVIZTZBQ3VXamI3RTU1RlA5WVNJVERQeTRCN3ZmQ3lESnNSQlp2Z3Nqd3hxeEZkYUZTLS1ISUhWMWRhWkU?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "東京ゲームショウ2026もうすぐ一般公開日 ゲーミング製品は「AI活用」目立つ",
+        "content": "東京ゲームショウ2026の一般公開日が間近に迫り、会場ではAI技術を活用した最新のゲーミング製品が多数出展され注目を集めている。ハードウェアからソフトウェアに至るまで、AIによる体験向上や効率化がトレンドとなっている。ゲーム業界全体におけるAIの浸透と、今後の新しいプレイスタイルへの期待が高まっている。",
+        "source": "Google News",
+        "published_at": "2026-09-18",
+        "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFB0cWdHSzIzODVuUW5PSngwVmdhVGltbktEaUxRZUdjOHVLSEVON0hqUWFJX3I4SWRPejNGOVB2Smd2b3hnM2xDWk9nYlRSWkFJTVFCLWp6aWxuZENuWVFuNnc1N19MTUs0aVh5cFlqTFVQNmxsc2Q1ZG1iSmbSAYIBQVVfeXFMUEVuX1FpYWpicVd6T1VpTko5cEt6cy1XV1BhSXdfWFRoSVRfSnhISVFuMC1HY0F4bjhSWUVrM3BsRDZaQ1NHMS1ZVXhVbEhEeEVrT0lDUzR0d1pkYTM4S3NXTW1KaWJKNnZXRFN5RF9BdFhUdGw2dm51b1RVN0VpRktHdw?oc=5",
+        "category": "その他"
+      },
+      {
+        "title": "ゲーム開発者の9割が業務に生成AIを利用、CESAが調査結果を発表",
+        "content": "一般社団法人コンピュータエンターテインメント協会（CESA）の調査により、国内のゲーム開発者の約9割が業務において生成AIを利用していることが明らかになりました。開発効率の向上や制作プロセスの効率化を目的として、様々な生成AIツールが現場に浸透している実態を示しています。",
+        "source": "Google News",
+        "published_at": "2026-09-18",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1Bd2ZCVkpOMXFfOGNwRS1qSW1WbG8xVEVfQ3ItVk15am5NSmszaThpamxoU2lNaUlqbGhNOGFubjRYd2YtSC1ISlhDT1NQaV80NUxwTFdNMHhZM1k1SGJKcHV5S0w5UXVDWjU3dQ?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "ゲーム開発者の約9割が生成AIを業務で利用 東京ゲームショウ主催団体の調査で明らかに",
+        "content": "東京ゲームショウの主催団体による調査で、ゲーム開発者の約9割が生成AIを業務で利用していることが明らかになりました。開発現場における生成AIの活用が急速に進んでいる実態を示しています。今後のゲーム業界におけるAI技術の導入と影響に注目が集まります。",
+        "source": "Google News",
+        "published_at": "2026-09-18",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1pNWdmVFRKb2ZKdmdvUE9GUHRxNUNJVU9JaGVpMV82dERkYUsxZDlWMkFiUi14RFFuY0c3TUFMOUFuRWQ0bGN0bHFyc2NEYVZtU2dkTkxRU3J1SWt6Zy1qU1dpT3l4VGduN1hWcnd3OEpKTzdRTVdBR3FVeVBuazg?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "賢くなったSiri、それでもアップルはAI競争で後れ",
+        "content": "アップルの音声アシスタント「Siri」の性能が向上したにもかかわらず、同社は依然としてAI競争で後れを取っているという記事です。競合他社が急速に生成AIの革新を進める中、アップルはその対応に苦戦しています。",
+        "source": "Google News",
+        "published_at": "2026-09-18",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE45WkxoS0pmYlFhNFdNRmxsVlZFZkRCS0hOdVR1b2t4SWprQmxNNVNwVHdlclZNYmpWY2RfYUtmR1JtQlJyb3VIUG94N20?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "AIブームの陰で「ふるさとの雑木林」がデータセンター集積地に…埼玉･川越の開発計画に専門家が抱いた疑念",
+        "content": "AIの普及に伴うデータセンターの需要急増により、埼玉県川越市で自然豊かな雑木林の開発計画が進められています。この開発計画に対し、環境破壊や地域社会への影響を懸念する専門家から疑問の声が上がっています。AIインフラの拡大と環境保全のバランスが問われる問題となっています。",
+        "source": "Google News",
+        "published_at": "2026-09-18",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5FbWxTMU5vd2ZWQkZZdXZKYUw5UnFfY1NMbklBdWN0bnFZWTF2SG50WGVqdEVzWXo1d3dvQWFWRHVfQUhsLUlhSVV3NUhpbWplX3pRQ3o1MnZmX1B5RWM5V1hFOHZPRlllQVpBRDVaOEZzV2Roay13VjBCNDFub2c?oc=5",
+        "category": "インフラ・半導体"
+      },
+      {
+        "title": "AIブームの陰で｢ふるさとの雑木林｣がデータセンター集積地に…埼玉･川越の開発計画に専門家が抱いた疑念",
+        "content": "AIの普及に伴う需要増加を背景に、埼玉県川越市でデータセンターの建設計画が進められており、地域の豊かな自然環境への影響が懸念されています。雑木林の開発計画に対し、専門家や地域住民の間から環境破壊や計画の妥当性について疑問の声が上がっています。",
+        "source": "Google News",
+        "published_at": "2026-09-18",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE51LUc1cWVkeVFsQ2FSY2M2X3hLM3VqeHg3NEk0NnBjZ0ZGb243SHB3NjRrRFd2RDJhV1V2VkNkTXVoX0YxN2cxeHBTaWN1aTIzQkE?oc=5",
+        "category": "インフラ・半導体"
+      },
+      {
+        "title": "北海道、データセンター事業者向けの「お願い」表明 AI向けに立地推進の裏で懸念も",
+        "content": "北海道はAI向けデータセンターの立地促進を進める一方で、環境や地域への影響に対する懸念から事業者向けに新たなお願いを表明しました。インフラ整備や電力需要の高まりに対し、地域との調和を図るための取り組みが注目されています。",
+        "source": "Google News",
+        "published_at": "2026-09-18",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBNNzdLc0NINlpjbFB4YWJXaUJNRlBmby0tWXRPSVppNkMxZVl0RnFESzJMZ1Zmd2hNTTNQaWgyS0h4RlZ2MUFxQWJUSVdQdGFIY1dFQ2NrcUFNeUFIM3VUQkRVLVNadmI0ZzVIeQ?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "AI兵器に国際人道法 国連会議、適用を確認",
+        "content": "国連の会議において、人工知能（AI）を活用した兵器に対して国際人道法が適用されることが確認されました。この動きは、急速に進化する軍事技術に対する国際的な規制やルールの枠組みを明確にするものです。",
+        "source": "Google News",
+        "published_at": "2026-09-18",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1iSFZHUHhGV3Jnb1o3MVFIcTlPbk5GWUJMRUtKUUhrUDBUNDhXZEFQR3pza0dacTVzU1NtYXdMQUVLcU9QaE84TjVjbzZUTGdNOHFLWjlLV2ZVZ09UWXc?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "「まんが日本昔ばなし」の語り、AIで再現 NTT西、多言語で発信 18日から公開",
+        "content": "NTT西日本は、名作アニメ「まんが日本昔ばなし」の独特な語りをAI技術によって再現することを発表しました。再現された音声は多言語に翻訳され、18日から一般公開されます。これにより、日本の伝統的な昔話の魅力が世界に向けて広く発信されることが期待されます。",
+        "source": "Google News",
+        "published_at": "2026-09-18",
+        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1zYTdOaWxlMDFOMUpMQmw5YnRqMi1zVDBoc3FwWVEyMl9vTDRiYWtPVTJBMnQxdy1aRzlwa0J2X08zWVhvRF9KbUpnWjFLbUdSajBmWVVsS1J4M0dOdnc5MU5JN1JKZWhsaUkwQVRFM0xvdWFkWUE?oc=5",
+        "category": "モデル・研究"
+      }
+    ]
+  },
+  {
     "date": "2026-09-17",
     "daily_summary": "本日のAIニュースは、ビル・ゲイツによる格差拡大への警告やAnthropicおよびOpenAIのトップによる安全性と業界のあり方を巡る議論など、技術の急速な進化に伴う倫理的・規制的課題が浮き彫りになりました。同時に、メタの有料プラン発表やGoogleの新型AI端末、国産ロボットや日本企業が支える半導体製造など、産業面での具体的な展開やサービス普及も着実に進んでいます。",
     "articles": [
