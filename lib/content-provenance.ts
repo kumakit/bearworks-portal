@@ -288,17 +288,27 @@ export const hachiojiClimateProvenance: ContentProvenance = {
 
 export const hachiojiHeatProvenance: ContentProvenance = {
   writtenBy: "kuma / bearworks.uk",
-  checkedBy: "Antigravity（気象庁アメダス・官署データの抽出、固定bundle作成、独立バリデーション）",
-  finalReviewedBy: "kuma / bearworks.uk（公開前の確認待ち）",
+  checkedBy: "初版データ作成：Antigravity。2026-09-18改訂案：Codex（年間値・冷却量の再計算、気象庁公開表との180気温値照合）、Luna（数値・解釈の独立点検）",
+  finalReviewedBy: "kuma / bearworks.uk（2026-09-18改訂案は公開前の確認待ち）",
   aiUsage:
-    "記事の構成案、データ処理スクリプト、SVGグラフ実装、統計検定2級の解説・確認問題作成、導入イラスト生成にAI（Antigravity）を使用しました。AI出力を無検証で公開せず、固定bundleのバイト数・SHA-256・検算コードで整合性を確認しています。",
+    "初版の構成、処理スクリプト、図表、確認問題、導入イラストにAIを使用しました。改訂案ではCodexが構成・図表・計算・解説を見直し、Lunaが独立点検しました。固定データの照合と計算の検証を行っています。",
   humanReview:
-    "運営者が気象庁データとの整合性、分析視点（昼の猛暑 vs 夜の放射冷却・ヒートアイランド）、グラフ表示と結論の妥当性を確認し、公開判断を行います。専門家による第三者査読ではありません。",
+    "2026-09-18改訂案の本文・図表・確認問題は運営者の最終確認待ちです。AIによる点検は専門家による第三者査読ではありません。",
   evidenceLinks: [
     {
       title: "固定した公開データ（hachioji-heat）",
       url: "https://github.com/kumakit/bearworks-portal/blob/main/app/%28monetized%29/labs/hachioji-heat/data/hachioji-heat-2026-09-17.r1.json",
-      description: "猛暑日・熱帯夜年次推移および猛暑日24時間推移の固定bundleです。",
+      description: "年間集計と3事例・各30時刻の固定データ。改訂では数値を変更せず、名称や説明の誤記は記事側で訂正しています。",
+    },
+    {
+      title: "気象庁公開表との180気温値の照合記録",
+      url: "https://github.com/kumakit/bearworks-portal/blob/main/docs/task/issue-381/evidence/jma-hourly-source-check.json",
+      description: "12ページの取得先・日時・応答ハッシュと、3事例の照合値を保存しています。",
+    },
+    {
+      title: "公開表との独立照合スクリプト",
+      url: "https://github.com/kumakit/bearworks-portal/blob/main/scripts/verify-hachioji-heat-sources.mjs",
+      description: "当初のCSV読み取りとは別に、気象庁HTML表の時刻・気温を照合します。明示的に実行するオンライン検証です。",
     },
     {
       title: "bundle検証コード",
@@ -316,6 +326,11 @@ export const hachiojiHeatProvenance: ContentProvenance = {
       date: "2026-09-17",
       kind: "初版",
       summary: "八王子の夏の猛暑と都心ヒートアイランド比較記事（シリーズ第3弾）の初版を作成しました。",
+    },
+    {
+      date: "2026-09-18",
+      kind: "訂正",
+      summary: "改訂案：4地点の順位、2025年の都心猛暑日数（33→29日）、平均差（6.9→6.8日）、時間範囲、品質条件を訂正。年別差・時間別差・冷却量の図を追加し、比較区間と因果解釈を整理。気象庁の180気温値と照合。公開前の確認待ちです。",
     },
   ],
 };
@@ -388,3 +403,36 @@ export const takaoWeatherShiftProvenance: ContentProvenance = {
   ],
 };
 
+export const hachiojiChillProvenance: ContentProvenance = {
+  writtenBy: "kuma / bearworks.uk",
+  checkedBy: "Antigravity（気象庁アメダス八王子・東京観測所の12シーズン時間値・36年分冬季日較差の抽出、固定bundle作成、独立バリデーション）",
+  finalReviewedBy: "kuma / bearworks.uk（2026-09-18に公開内容を承認）",
+  aiUsage:
+    "記事の構成案、気象庁オープンデータ取得・集計スクリプト、SVGグラフ実装、確認問題作成にAI（Antigravity）を使用しました。AI出力を無検証で公開せず、固定bundleのバイト数・SHA-256・検算コードで整合性を確認しています。",
+  humanReview:
+    "運営者が気象データ（朝7時差・24時間気温プロファイル・日較差・夜間弱風条件）、均質性境界（東京の北の丸公園移転）、解釈の妥当性を確認し、2026-09-18に公開内容を承認しました。専門家による第三者査読ではありません。",
+  evidenceLinks: [
+    {
+      title: "固定した公開データ（hachioji-chill）",
+      url: "https://github.com/kumakit/bearworks-portal/blob/main/app/%28monetized%29/labs/hachioji-chill/data/hachioji-chill-2026-09-18.r1.json",
+      description: "2014-2026冬の12シーズン・1,078日分の朝7時気温差・24時間プロファイル・条件別集計の固定bundleです。",
+    },
+    {
+      title: "bundle検証コード",
+      url: "https://github.com/kumakit/bearworks-portal/blob/main/scripts/validate-hachioji-chill-bundle.mjs",
+      description: "byte size、SHA-256、スキーマ、集計値整合性をfail-closedで検証します。",
+    },
+    {
+      title: "気象庁：過去の気象データ・ダウンロード",
+      url: "https://www.data.jma.go.jp/risk/obsdl/",
+      description: "本記事で使用したアメダス八王子および東京（北の丸公園）の一次データ出典です。",
+    },
+  ],
+  revisions: [
+    {
+      date: "2026-09-18",
+      kind: "初版",
+      summary: "八王子の朝の冷え込み・日較差・放射冷却検証ページ（八王子気候シリーズ第4弾）の初版を作成し、運営者が公開内容を承認しました。",
+    },
+  ],
+};

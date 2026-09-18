@@ -20,6 +20,12 @@ const staticPaths: SitemapEntry[] = [
     priority: 0.85,
   },
   {
+    pathname: "/labs/hachioji-chill",
+    lastModified: new Date("2026-09-18"),
+    changeFrequency: "monthly",
+    priority: 0.85,
+  },
+  {
     pathname: "/labs/hachioji-heat",
     lastModified: new Date("2026-09-17"),
     changeFrequency: "monthly",
