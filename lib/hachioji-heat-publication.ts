@@ -94,3 +94,44 @@ export const hourlyCases = heatBundle.hourly_cases;
 export const coolingRates = heatBundle.cooling_rates;
 
 export const fmt = (val: number, digits = 1) => val.toFixed(digits);
+
+export type HeatMetric = "heatstroke_days" | "min_temp_ge25_days";
+export const recentYears = annualComparison.filter(row => row.year >= 2020 && row.year <= 2025);
+export const average = (values: number[]) => values.reduce((sum, value) => sum + value, 0) / values.length;
+export const recentDifference = (metric: HeatMetric) => average(recentYears.map(row => row.hachioji[metric] - row.tokyo[metric]));
+export const signed = (value: number, digits = 1) => `${value > 0 ? "+" : value < 0 ? "−" : ""}${Math.abs(value).toFixed(digits)}`;
+
+// Same annual common-homogeneity intervals as the first article (H1/H2).
+// Boundary years 2008 and 2014 are intentionally not connected or pooled.
+export const comparisonPeriods = [
+  { start: 1990, end: 2002 },
+  { start: 2003, end: 2007 },
+  { start: 2009, end: 2013 },
+  { start: 2015, end: 2025 },
+];
+
+export const caseDate = (item: HourlyCase) => item.series[0].date;
+export const caseLabel = (item: HourlyCase) => caseDate(item).replaceAll("-", "/");
+export const validTemperature = (point: HourlyPoint, station: "hachioji" | "tokyo") =>
+  point[station].quality === 8 && Number.isFinite(point[station].temp) ? point[station].temp : null;
+export const temperatureDifference = (point: HourlyPoint) => {
+  const h = validTemperature(point, "hachioji");
+  const t = validTemperature(point, "tokyo");
+  return h === null || t === null ? null : Math.round((h - t) * 10) / 10;
+};
+
+export function caseCooling(item: HourlyCase) {
+  const start = item.series.find(point => point.date === caseDate(item) && point.hour === 18);
+  const end = item.series.find(point => point.date !== caseDate(item) && point.hour === 5);
+  if (!start || !end) throw new Error(`Missing cooling endpoints: ${item.id}`);
+  const hours = (Date.parse(end.datetime) - Date.parse(start.datetime)) / 3_600_000;
+  if (hours !== 11) throw new Error(`Invalid cooling interval: ${item.id}`);
+  const values = (station: "hachioji" | "tokyo") => {
+    const from = validTemperature(start, station);
+    const to = validTemperature(end, station);
+    if (from === null || to === null) throw new Error(`Invalid cooling temperature: ${item.id}`);
+    const drop = Math.round((from - to) * 10) / 10;
+    return { from, to, drop, rate: drop / hours };
+  };
+  return { hours, hachioji: values("hachioji"), tokyo: values("tokyo") };
+}
