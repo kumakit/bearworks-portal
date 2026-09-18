@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-09-19",
+    "daily_summary": "本日のAIニュースは、米中間の技術覇権争いや安全保障のジレンマが浮き彫りになる一方で、中国発AIの躍進や開発者の脅威論が伝えられました。また、トヨタのロボティクス本格参入や安川電機の戦略など、製造業における「フィジカルAI」の活用が加速する動きが見られます。さらに、ガレリアの高性能PCやゲーム関連のAI活用、『ライザチャットAI』のアップデートといったエンタメ分野の話題に加え、英国のベンダーロックイン問題や東北大学とソフトバンクによる防災分野でのAI活用など、技術の実用化や社会的課題へのアプローチが多方面で展開された一日となりました。",
+    "articles": [
+      {
+        "title": "AI新世紀：米国発「AI脅威論」はライバル封じ? 中国から見た開発競争",
+        "content": "米国のAI脅威論の背景について、中国視点からの開発競争やライバル牽制の意図を分析した記事です。米中間の技術覇権争いが激化する中での両国の動向を伝えています。",
+        "source": "Google News",
+        "published_at": "2026-09-19",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFAyQjY1UDIwdklITlduajBWaTk2dURGN1FaeWdMSTlfVGxUNF9CY0pUb1NMdzlaa2VjUUpIbDEzZ3N2em02ZVIyUUl6SU5CWUlzU3F4S1hQYUNmYVJ6OFBEWkFrcnI5SU9q?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "AIに「近く抜かれる」と開発者 中国のディープシーク、不安吐露",
+        "content": "中国のAI企業ディープシークの開発者が、人工知能の急速な進化により人間が近く追い抜かれるのではないかと不安を吐露した。この発言はAI技術の急速な発展とそれに伴う将来への影響について、改めて議論を呼んでいる。",
+        "source": "Google News",
+        "published_at": "2026-09-19",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE54RmN5NkhyOHF6QVVSY1U4bnY1Sm1kZHZndTRtY0kwY1dDdVg2NUJ5Tk1URHV2dTFXUGtpS0tacTdTcjFKb0oxOFp3bnFHeXAwS0JEdG5XekRVSl9oTEh6MThNX3RZM2M1WGZqNEdWTk9EWWJKNXVTLXlJZVg5TlU?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "米政府サイト、中国アリババのAIモデルを検索手段に採用 警戒姿勢と矛盾も",
+        "content": "米国の政府サイトが、中国のアリババグループが開発したAIモデルを検索機能に採用したことが明らかになりました。中国の技術に対する米政府の厳しい警戒姿勢や規制の動きと矛盾する決定として注目を集めています。専門家の間では、実用性と安全保障上のリスクのバランスについての議論が改めて高まっています。",
+        "source": "Google News",
+        "published_at": "2026-09-19",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNTEcyZWNIaVFqU3kya25ZdEhwVnhrQ2RleVVVMllUaENFZlJEd1NBblA4d092cTNrOEpBQ05tSVdfbXNuTjBfS3BocXZCcjdQVU1CeFlmODZBWmpFM1VNSVVtRUpkZHRiaFpSUHJCX09hdEFxN2dOQ3FBVHFmaU5rci1pbUhuRzQ?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "『ライザチャットAI』ライザと日本を旅できる“トラベルモード”の追加を検討中、歴代イラストの新スキンも実装",
+        "content": "『ライザチャットAI』において、キャラクターと一緒に日本を旅できる「トラベルモード」の追加検討が発表されました。また、歴代の描き下ろしイラストをもとにした多数の新スキンも実装予定です。東京ゲームショウ2026に向けた最新情報として注目を集めています。",
+        "source": "Google News",
+        "published_at": "2026-09-19",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE02R2Z0UjFvSkdWOXVsanRsMzRwYnhIODNtUlpsc2dTWlJ5aG9kdmllTU91clFDV3czQlNkblJzTGp5RVg1NllHenlfdi13YXREN2xnU2V1SQ?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "「ゲームも、クリエイティブも、AIも。」 日本のハイパフォーマンスPCの世界をリードする！ GALLERIAがアピール【TGS2026特集】",
+        "content": "TGS2026において、GALLERIAブランドのハイパフォーマンスPCがゲームからクリエイティブ、さらにAI用途まで幅広く対応する性能をアピールしました。日本市場をリードする先進的な機能と最新技術が紹介されています。",
+        "source": "Google News",
+        "published_at": "2026-09-19",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE14UWRlbkpkak5HSmx5UFFmSlA5NHJyeWZxZmdSWk5qYmE5V1VuTUo5WHNubExHYTJrLXJvRllncnkwempfUHBzUlZRcFM3OTBneVNIcDdNUTlUekpCSnVGUHVvVXNfWGF2MWJJeTVlMXdTbG81MVZtcjJvNGx3eFk?oc=5",
+        "category": "インフラ・半導体"
+      },
+      {
+        "title": "中国フィジカルAI主要15社と5大集積地で見る「点と線と面」：FAイベントレポート",
+        "content": "中国のフィジカルAIに関する主要15社と5大集積地の実態を、FAイベントのレポートを通じて多角的に分析しています。技術や市場の広がりを点と線と面で捉え、その動向を詳しく解説しています。",
+        "source": "Google News",
+        "published_at": "2026-09-19",
+        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5GV0dCN0VseUpIVmdLOG9iZllIQVM5QUN6MHV2S1gta2tqVWlOMi05SlZhZllEa0o2cGZOemJZaFViSmJfazI5RVM2VjhJUkNYcjRxTktPNll5aWZvZVFfN25LX2F2SFdnaGM3TFVCOA?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "トヨタがロボティクス事業に本格参入へ、「フィジカルAI」ロボを生産現場へ導入",
+        "content": "トヨタ自動車がロボティクス事業へ本格的に参入することが明らかになりました。最先端の「フィジカルAI」を搭載したロボットを自社の生産現場に導入し、将来的には外部への販売も視野に入れています。製造業の自動化と効率化を大きく進める取り組みとして注目されています。",
+        "source": "Google News",
+        "published_at": "2026-09-19",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1zNUJyZEUtMEY5SUJ4aEZIR1Nuc2Ftc3ZvbzFmOW5BbjRkdDUxQUxXbWgtNU1GdEZBdGJIaWpvNGpMdWFLaENQN3pRdzJPTmk0X0VXVE5Fa241VWlUQ2VzQkRNcUo?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "安川電機会長「中国と真っ向勝負せず」 フィジカルAI、5000億～2兆円に勝機",
+        "content": "安川電機の会長が中国企業とは真っ向勝負を避ける方針を示し、フィジカルAIを活用した新たな領域での勝機を見出す考えを明らかにしました。ロボットやメカトロニクスの分野において、AIの融合による次世代の事業展開と市場獲得を目指します。",
+        "source": "Google News",
+        "published_at": "2026-09-19",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFByMmM2M2t1aGNBQUNxMUVySlEtSWZ0VFJHTGxzT1NtRFBSbGd3eGFnbl92Q2JXaUhrQVJ0b0UtNWZsaTIycWk0X2xUNjExak1FMXNhaHE3QTJ1RU1NYkhxUEdmT1pEbUE?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "英国政府のAI導入におけるベンダーロックイン問題",
+        "content": "英国政府が大規模なAI契約により特定のベンダーに依存してしまう「ベンダーロックイン」の罠に陥っていることが報じられています。医療や警察、軍事分野にまで影響が広がっており、巨額の契約が逆に政府の弱点となっています。",
+        "source": "Google News",
+        "published_at": "2026-09-19",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5aN3Rmc3ZNaWtySFQwcEt4TkpWTTd0S1BDTEV5UzhFN2dUQVpWTEpuZkNJenp0aXR3V3JqZXJHMkdjYkhSSXRUT3l0WXdKOUUwamM2ODdn?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "ＡＩで防災・減災を実現する。東北大学とソフトバンクが手を組んだ",
+        "content": "東北大学とソフトバンクが提携し、AIを活用した防災・減災の仕組みづくりに向けて動き出した最先端の取り組みについて報じています。両者の技術や研究成果を融合させることで、災害時の被害軽減や迅速な対応への貢献が期待されています。",
+        "source": "Google News",
+        "published_at": "2026-09-19",
+        "url": "https://news.google.com/rss/articles/CBMiQkFVX3lxTE5mY2RKeWtXcXBSUjV0bVdPc2o0VnBNZkJXUnZjbEVOMDB5S2JSQS0xVV83eEJQVFlNYVp1MHVXVUFUdw?oc=5",
+        "category": "事業・投資"
+      }
+    ]
+  },
+  {
     "date": "2026-09-18",
     "daily_summary": "本日のAIニュースは、ゲーム開発現場での9割に迫る生成AIの活用や東京ゲームショウでの関連製品の台頭など実用化が加速する一方で、著作権裁判、データセンター急増に伴う環境破壊や電力需要の懸念、国連によるAI兵器への国際人道法適用確認など、法的・倫理的・環境的な深刻な課題も浮き彫りになっています。",
     "articles": [
