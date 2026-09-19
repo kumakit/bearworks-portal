@@ -288,12 +288,12 @@ export const hachiojiClimateProvenance: ContentProvenance = {
 
 export const hachiojiHeatProvenance: ContentProvenance = {
   writtenBy: "kuma / bearworks.uk",
-  checkedBy: "初版データ作成：Antigravity。2026-09-18改訂案：Codex（年間値・冷却量の再計算、気象庁公開表との180気温値照合）、Luna（数値・解釈の独立点検）",
-  finalReviewedBy: "kuma / bearworks.uk（2026-09-18改訂案は公開前の確認待ち）",
+  checkedBy: "初版データ作成：Antigravity。2026-09-18改訂：Codex（年間値・冷却量の再計算、気象庁公開表との180気温値照合）、Luna（数値・解釈の独立点検）",
+  finalReviewedBy: "kuma / bearworks.uk（2026-09-19に改訂内容を承認）",
   aiUsage:
-    "初版の構成、処理スクリプト、図表、確認問題、導入イラストにAIを使用しました。改訂案ではCodexが構成・図表・計算・解説を見直し、Lunaが独立点検しました。固定データの照合と計算の検証を行っています。",
+    "初版の構成、処理スクリプト、図表、確認問題、導入イラストにAIを使用しました。改訂ではCodexが構成・図表・計算・解説を見直し、Lunaが独立点検しました。固定データの照合と計算の検証を行っています。",
   humanReview:
-    "2026-09-18改訂案の本文・図表・確認問題は運営者の最終確認待ちです。AIによる点検は専門家による第三者査読ではありません。",
+    "運営者が2026-09-18改訂の本文・図表・確認問題と検証結果を確認し、2026-09-19に公開を承認しました。AIによる点検は専門家による第三者査読ではありません。",
   evidenceLinks: [
     {
       title: "固定した公開データ（hachioji-heat）",
@@ -330,7 +330,7 @@ export const hachiojiHeatProvenance: ContentProvenance = {
     {
       date: "2026-09-18",
       kind: "訂正",
-      summary: "改訂案：4地点の順位、2025年の都心猛暑日数（33→29日）、平均差（6.9→6.8日）、時間範囲、品質条件を訂正。年別差・時間別差・冷却量の図を追加し、比較区間と因果解釈を整理。気象庁の180気温値と照合。公開前の確認待ちです。",
+      summary: "4地点の順位、2025年の都心猛暑日数（33→29日）、平均差（6.9→6.8日）、時間範囲、品質条件を訂正。年別差・時間別差・冷却量の図を追加し、比較区間と因果解釈を整理。気象庁の180気温値と照合しました。",
     },
   ],
 };

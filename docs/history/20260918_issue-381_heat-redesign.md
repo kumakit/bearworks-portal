@@ -56,3 +56,10 @@ Lunaは読み取り専用で初版の数値・時刻・生成元・解釈を独�
 - 当初の取得CSV原本は未保存。今回の照合は気温値に限り、降水量・原因を検証していない。
 
 `next dev`が生成したAGENTS.md/CLAUDE.mdは、この作業で初めて発生した未追跡ファイルと確認して除去した。既存ルールや設定は変更していない。
+
+## 公開結果（2026-09-19）
+
+- 運営者が改訂内容と本番デプロイを承認。
+- 改訂commit `406a61e` と公開前整合性修正を `origin/main` へpush。
+- 全bundle検証、Next.js本番ビルド、OpenNext/Workersビルド、Cloudflare Workersデプロイが成功。
+- `https://bearworks.uk/labs/hachioji-heat` で新しい見出し、修正値、図表の配信を確認。
