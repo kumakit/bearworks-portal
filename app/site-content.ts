@@ -27,7 +27,7 @@ const staticPaths: SitemapEntry[] = [
   },
   {
     pathname: "/labs/hachioji-heat",
-    lastModified: new Date("2026-09-17"),
+    lastModified: new Date("2026-09-18"),
     changeFrequency: "monthly",
     priority: 0.85,
   },

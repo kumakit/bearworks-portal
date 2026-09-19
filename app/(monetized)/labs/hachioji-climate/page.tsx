@@ -188,7 +188,7 @@ export default function HachiojiClimatePage() {
           <Link href="/labs/hachioji-heat" className="group block rounded-2xl border border-slate-700 bg-slate-800 p-5 transition hover:border-slate-500">
             <p className="text-xs font-bold text-orange-300">第3弾 · 夏の猛暑と熱帯夜</p>
             <h3 className="mt-1 text-base font-bold group-hover:text-orange-200">八王子の夏は本当に暑いのか →</h3>
-            <p className="mt-2 text-xs text-slate-300">昼の猛暑日の多さと夜の涼しさ。都心ヒートアイランドとの24時間冷却対比。</p>
+            <p className="mt-2 text-xs text-slate-300">昼の猛暑日の多さと夜の冷え方。都心との30時刻の気温推移・冷却量を比較。</p>
           </Link>
           <Link href="/labs/hachioji-chill" className="group block rounded-2xl border border-slate-700 bg-slate-800 p-5 transition hover:border-slate-500">
             <p className="text-xs font-bold text-cyan-300">第4弾 · 冬の朝と放射冷却</p>
