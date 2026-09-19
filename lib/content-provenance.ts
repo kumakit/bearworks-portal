@@ -364,7 +364,7 @@ export const takaoGearProvenance: ContentProvenance = {
     {
       date: "2026-09-17",
       kind: "初版",
-      summary: "高尾山装備シミュレーター＆気象データ検証ページ（シリーズ第4弾）の初版を作成し、運営者が公開内容を承認しました。",
+      summary: "高尾山装備シミュレーター＆気象データ検証ページ（シリーズ第5弾）の初版を作成し、運営者が公開内容を承認しました。",
     },
   ],
 };
@@ -398,7 +398,7 @@ export const takaoWeatherShiftProvenance: ContentProvenance = {
     {
       date: "2026-09-17",
       kind: "初版",
-      summary: "高尾山頂の天候急変・ガス発生リスク検証ページ（シリーズ第5弾）の初版を作成し、運営者が公開内容を承認しました。",
+      summary: "高尾山頂の天候急変・ガス発生リスク検証ページ（シリーズ第6弾）の初版を作成し、運営者が公開内容を承認しました。",
     },
   ],
 };

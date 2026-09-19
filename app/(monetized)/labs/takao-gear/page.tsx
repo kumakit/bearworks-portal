@@ -140,7 +140,7 @@ export default function TakaoGearPage() {
         <header className="space-y-6">
           <div className="inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-emerald-50 px-3.5 py-1 text-xs font-bold text-emerald-800">
             <Sparkles className="h-3.5 w-3.5" />
-            街のうわさを、統計でほどく · 04
+            街のうわさを、統計でほどく · 05
           </div>
 
           <h1 className="text-3xl font-extrabold tracking-tight text-slate-900 md:text-5xl md:leading-[1.15]">
@@ -485,7 +485,7 @@ export default function TakaoGearPage() {
           <div className="p-7 md:p-10">
             <p className="text-sm font-bold tracking-wider text-emerald-300">街のうわさを、統計でほどく シリーズ</p>
             <h2 className="mt-3 text-2xl font-bold md:text-3xl">八王子の気候と統計を、もっと深く知る</h2>
-            <div className="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               <Link
                 href="/labs/hachioji-climate"
                 className="group block rounded-2xl border border-slate-700 bg-slate-800 p-5 transition hover:border-slate-500"
@@ -526,11 +526,24 @@ export default function TakaoGearPage() {
               </Link>
 
               <Link
+                href="/labs/hachioji-chill"
+                className="group block rounded-2xl border border-slate-700 bg-slate-800 p-5 transition hover:border-slate-500"
+              >
+                <p className="text-xs font-bold text-cyan-300">第4弾</p>
+                <h3 className="mt-1 text-base font-bold group-hover:text-cyan-200">
+                  八王子の朝はなぜ寒い？ →
+                </h3>
+                <p className="mt-2 text-xs text-slate-300">
+                  朝7時の気温差中央値−3.4℃。24時間の時間構造と弱風・放射冷却条件を検証。
+                </p>
+              </Link>
+
+              <Link
                 href="/labs/takao-weather-shift"
                 className="group block rounded-2xl border border-slate-700 bg-slate-800 p-5 transition hover:border-slate-500"
               >
-                <p className="text-xs font-bold text-emerald-300">第5弾</p>
-                <h3 className="mt-1 text-base font-bold group-hover:text-emerald-200">
+                <p className="text-xs font-bold text-amber-300">第6弾</p>
+                <h3 className="mt-1 text-base font-bold group-hover:text-amber-200">
                   高尾山頂はなぜガスるのか？ →
                 </h3>
                 <p className="mt-2 text-xs text-slate-300">

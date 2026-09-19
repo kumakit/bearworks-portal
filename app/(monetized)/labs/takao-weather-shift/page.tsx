@@ -146,7 +146,7 @@ export default function TakaoWeatherShiftPage() {
           {/* Series Badge */}
           <div className="mb-3 flex items-center gap-2">
             <span className="inline-flex items-center rounded-md bg-amber-100 px-2.5 py-0.5 text-xs font-bold text-amber-800">
-              街のうわさを、統計でほどく · 05
+              街のうわさを、統計でほどく · 06
             </span>
             <span className="text-xs text-slate-500">気象データ分析シリーズ</span>
           </div>
@@ -418,7 +418,7 @@ export default function TakaoWeatherShiftPage() {
           <h3 className="mb-4 text-sm font-bold text-slate-900 uppercase tracking-wider">
             📚 「街のうわさを、統計でほどく」気象データ分析シリーズ
           </h3>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             <InternalLink
               href="/labs/hachioji-climate"
               className="group block rounded-xl border border-slate-200 p-4 transition-all hover:border-amber-400 hover:shadow-xs"
@@ -450,10 +450,20 @@ export default function TakaoWeatherShiftPage() {
             </InternalLink>
 
             <InternalLink
+              href="/labs/hachioji-chill"
+              className="group block rounded-xl border border-slate-200 p-4 transition-all hover:border-amber-400 hover:shadow-xs"
+            >
+              <span className="text-[10px] font-bold text-amber-600">第4弾 · 冷え込み編</span>
+              <h4 className="mt-1 text-xs font-bold text-slate-900 group-hover:text-amber-600">
+                八王子の朝はなぜ寒い？ 冬の冷え込み・放射冷却と時間構造
+              </h4>
+            </InternalLink>
+
+            <InternalLink
               href="/labs/takao-gear"
               className="group block rounded-xl border border-slate-200 p-4 transition-all hover:border-amber-400 hover:shadow-xs"
             >
-              <span className="text-[10px] font-bold text-amber-600">第4弾 · 装備編</span>
+              <span className="text-[10px] font-bold text-amber-600">第5弾 · 装備編</span>
               <h4 className="mt-1 text-xs font-bold text-slate-900 group-hover:text-amber-600">
                 高尾山に登山装備は必要か？ 体感温度ギャップと装備シミュレーター
               </h4>

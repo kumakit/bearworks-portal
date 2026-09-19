@@ -453,7 +453,7 @@ export default function HachiojiChillPage() {
         <nav aria-label="八王子気候データ分析シリーズ" className={card}>
           <p className="text-xs font-bold tracking-wider text-slate-400">SERIES</p>
           <h2 className="mt-1 text-lg font-bold text-slate-900">街のうわさを、統計でほどく</h2>
-          <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             <Link
               href="/labs/hachioji-climate"
               className="group rounded-2xl border border-slate-200 p-4 transition-all hover:border-slate-400 hover:bg-slate-50"
@@ -495,6 +495,30 @@ export default function HachiojiChillPage() {
               <h3 className="mt-2 text-sm font-bold">八王子の朝検証</h3>
               <p className="mt-1 text-xs text-slate-300">朝7時の気温差と24時間の時間構造をデータで検証</p>
             </div>
+
+            <Link
+              href="/labs/takao-gear"
+              className="group rounded-2xl border border-slate-200 p-4 transition-all hover:border-slate-400 hover:bg-slate-50"
+            >
+              <div className="flex items-center justify-between text-xs text-slate-400">
+                <span>05 · 高尾山装備判定</span>
+                <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+              </div>
+              <h3 className="mt-2 text-sm font-bold text-slate-900">高尾山装備シミュレーター</h3>
+              <p className="mt-1 text-xs text-slate-500">標高599mの体感温度ギャップと必須装備を判定</p>
+            </Link>
+
+            <Link
+              href="/labs/takao-weather-shift"
+              className="group rounded-2xl border border-slate-200 p-4 transition-all hover:border-slate-400 hover:bg-slate-50"
+            >
+              <div className="flex items-center justify-between text-xs text-slate-400">
+                <span>06 · 天候急変とガス</span>
+                <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+              </div>
+              <h3 className="mt-2 text-sm font-bold text-slate-900">高尾山頂の濃霧・急変検証</h3>
+              <p className="mt-1 text-xs text-slate-500">平野晴天でも山頂は濃霧？見せかけの晴れを解明</p>
+            </Link>
           </div>
         </nav>
 
