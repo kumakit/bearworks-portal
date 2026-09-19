@@ -348,36 +348,42 @@ export default function TakaoWeatherShiftPage() {
             理解度チェック：高尾山 気象急変＆統計クイズ（全5問）
           </h2>
           <p className="mt-1 text-xs text-slate-600 sm:text-sm">
-            本記事で解説した気象メカニズムと統計的概念の理解度を確認しましょう。クリックで解答と解説が表示されます。
+            本記事で解説した気象メカニズムと統計的概念の理解度を確認しましょう。選択肢を考えた後、「正解と解説」を開いて確認してください。
           </p>
         </div>
 
         <div className="space-y-4">
           {quizItems.map((q) => (
-            <details
+            <div
               key={q.id}
-              className="group rounded-2xl border border-slate-200 bg-white p-5 transition-all open:border-amber-400 open:shadow-sm"
+              className="rounded-2xl border border-slate-200 bg-white p-5 sm:p-6 shadow-xs"
             >
-              <summary className="flex cursor-pointer items-start justify-between gap-3 text-sm font-bold text-slate-900 sm:text-base">
-                <span>{q.question}</span>
-                <span className="flex-shrink-0 text-amber-600 group-open:rotate-180 transition-transform">
-                  ▼
-                </span>
-              </summary>
-              <div className="mt-4 border-t border-slate-100 pt-4">
-                <ul className="mb-4 space-y-2 text-xs text-slate-700 sm:text-sm">
-                  {q.options.map((opt, i) => (
-                    <li key={i} className="rounded-lg bg-slate-50 p-2.5">
-                      {opt}
-                    </li>
-                  ))}
-                </ul>
-                <div className="rounded-xl border border-emerald-200 bg-emerald-50 p-4 text-xs leading-relaxed text-emerald-950 sm:text-sm">
-                  <span className="font-bold text-emerald-800">【正解】{q.answer}</span>
+              <h3 className="text-sm font-bold text-slate-900 sm:text-base leading-snug">
+                {q.question}
+              </h3>
+              <ul className="mt-3.5 space-y-2 text-xs text-slate-700 sm:text-sm">
+                {q.options.map((opt, i) => (
+                  <li key={i} className="rounded-lg bg-slate-50 p-2.5">
+                    {opt}
+                  </li>
+                ))}
+              </ul>
+              <details className="group mt-4 rounded-xl border border-slate-200 bg-slate-50/60 p-3.5 transition-all open:border-emerald-300 open:bg-emerald-50/40">
+                <summary className="flex cursor-pointer list-none items-center justify-between text-xs font-bold text-slate-700 hover:text-amber-700 sm:text-sm">
+                  <span className="flex items-center gap-1.5">
+                    <span className="text-amber-600">💡</span>
+                    <span>正解と解説を確認する</span>
+                  </span>
+                  <span className="text-xs text-slate-400 group-open:rotate-180 transition-transform">
+                    ▼
+                  </span>
+                </summary>
+                <div className="mt-3 border-t border-emerald-200/60 pt-3 text-xs leading-relaxed text-emerald-950 sm:text-sm">
+                  <div className="font-bold text-emerald-800">【正解】{q.answer}</div>
                   <p className="mt-1.5">{q.explanation}</p>
                 </div>
-              </div>
-            </details>
+              </details>
+            </div>
           ))}
         </div>
       </section>
