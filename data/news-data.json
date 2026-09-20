@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-09-21",
+    "daily_summary": "本日のAIニュースは、米トランプ氏による「AIフォース」創設の表明や経済的リスクによるバブル終焉の懸念といった国家安全保障・経済動向に関する話題が目立ったほか、道徳的判断や人生の重大な決断におけるAIへの依存と「判断の外部化」がもたらす倫理的リスクへの警鐘、さらにクリエイティブ分野での共存論や個人の活用事例まで、AIが社会や人間の意思決定に与える多面的な影響と規制・活用を巡る議論の広がりを浮き彫りにしています。",
+    "articles": [
+      {
+        "title": "道徳的問い AI反論で3割判断覆す",
+        "content": "人工知能（AI）からの反論を受けることで、人間が持つ道徳的な問いに対する判断の約3割が覆ることが明らかになりました。この研究は、AIが人間の意思決定や倫理観に大きな影響を与える可能性を示唆しています。今後のAIの活用方法や倫理的な議論において重要な知見となります。",
+        "source": "Google News",
+        "published_at": "2026-09-21",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5nMkw1VmlQNTQwb3FFMkd5alZJYzM4UFY4SW44aWpWbXVHTkpvTjBQNHpYMm5JcFhHNW0wa2EzdV83U2xsWFpJMWxxOENsZEhH?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "AIバブルはこうして終わる 金利高と収穫逓減「死の交差」",
+        "content": "この記事では、金利の高止まりとAI開発における収穫逓減の法則が重なることで、現在のAIブームがどのように終焉を迎えるのかを解説しています。経済的な負担と技術的な成長の鈍化が同時に訪れるリスクについて警鐘を鳴らしています。",
+        "source": "Google News",
+        "published_at": "2026-09-21",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5nZ0J0TXA3N3AycmVkQmtBX1JZSVBPRlFqMDcybzMtR1VXczRUaXlCdEdfaFM5di0zVmNHbkRjRDN1TEgxYVprUFkydWJLMC1iai1iWUhMNVFsQVdyVGFqWFJweGl6X3Q4blI5ag?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "高市首相、国連で中東エネルギー供給の強靱化へ支援表明…ＡＩ偽情報や気候変動対策も訴え",
+        "content": "高市首相は国連の演説で、中東のエネルギー供給強靱化に向けた支援を表明しました。同時に、AIによる偽情報対策や気候変動問題への積極的な取り組みも訴えました。国際社会の諸課題に対する日本の貢献姿勢を示しています。",
+        "source": "Google News",
+        "published_at": "2026-09-21",
+        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5Fcml2c3ZacUg4dnhuV2VpeHQtVndLQ3hWZDNHdlh0ZnY5UDBHR3pMYXZ5OHpsTWNyWXc1ZHJHdkUxVS0xMTlVamhxd2Q3QktLSUQyc0FaSFJDRkptakVldDNlWjdUQQ?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "詩吟の魅力 動画配信 AI使い作成 「毎日が充実」 浦添の与儀さん（78） 孫も協力",
+        "content": "沖縄県浦添市の与儀さん（78）が、AIを活用して詩吟の魅力を伝える動画を制作し、配信を行っている。孫の協力も得ながら新しい技術を取り入れ、充実した日々を送る様子が紹介されている。",
+        "source": "Google News",
+        "published_at": "2026-09-21",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1kQmk4ZWNSZTM1MjBaN0RZdVRZblE3angzV0JzOTIzWS1zZF92M2oyQVM4RngzTXhNQ0d6b2Q2aThISDFyYnFSLUkxTDFpMU1kOE94YjZYemMzYVJoYkE?oc=5",
+        "category": "その他"
+      },
+      {
+        "title": "AI活用「最終判断は人間」は本当？人生の決断までAI任せにするリスクを考察",
+        "content": "就職や恋愛、進学などの重大な意思決定において、AIへの依存が進む現状について解説しています。最終判断は人間が行うとされていながらも、知らぬ間にAIの提案に流されてしまう「判断の外部化」の危険性に警鐘を鳴らしています。",
+        "source": "Google News",
+        "published_at": "2026-09-21",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9QbnRRTlJOaUlKSi1QOU4zY00zbUNDRTB1VmdZUFo5SUhBMHhkLXMzNVIzSlBaRnZJUzhpeGVpQXRKeXFrSjRlTDlTTk1ndGc3eV9sWk1n?oc=5",
+        "category": "その他"
+      },
+      {
+        "title": "生成AIで「デザイナー不要論」に、僕はこう答える 杉山知之デジハリ大前学長・回答全文",
+        "content": "デジタルハリウッド大学の杉山知之学長が、生成AIの台頭によるデザイナー不要論に対して自身の見解を述べています。AIと人間の共存や、クリエイティブ分野におけるAIの活用法について詳しく語られています。",
+        "source": "Google News",
+        "published_at": "2026-09-21",
+        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5jemMxWEdEQVhmYjAtX280Z0xQUUJMWlFMZ3p5ZS0zdmpDbFdaMGpJRUwwRERMSlFiWDc1cEh0dmd6T0xPdkxrSXdVX3lPTWNza1Jva296YjRTY3VmaHYzMmVYNTlaY1dwUXllWGw4YWJqMTVOX3c?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "トランプ氏「AIフォース創設」 首脳会談を控え中国への優位も強調",
+        "content": "トランプ氏は中国に対する技術的優位性を強調し、新たに「AIフォース」の創設を提唱しました。これは米中首脳会談を間近に控えた発言であり、人工知能分野における国家安全保障や戦略的優位の確保を狙ったものとみられます。",
+        "source": "Google News",
+        "published_at": "2026-09-21",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9nRTBld0VDMEhnMVBUZlpyTDZwTGEyV1lwRlRQOFFRUk52NjNCMVBUOGRSclRZaEdTNmtDalo5UkZ4ajhWUlhMVDJnV28wejI1?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "トランプ氏、新組織「ＡＩフォース」創設表明…規制強化に否定的な考え「悪も探し出す」",
+        "content": "トランプ米大統領は人工知能（AI）に関する新組織「AIフォース」の創設を表明しました。過度な規制強化には否定的な姿勢を示しつつ、AIの悪用を防ぎながら発展を促す考えを示しています。",
+        "source": "Google News",
+        "published_at": "2026-09-21",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5IR1Q2VGFxN19yZWRlU3Yya2tZNFFkVjcxNHM2UUkyUm0tcElSR01uODhfa2xkLU9hTEotVlBVamdWcDRQR2RmdTZidGVzcG5xYm9IeDJHdmRfR2t3TDEyYUl3?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "米、「AIフォース」創設へ トランプ氏「悪質行為監視」",
+        "content": "米国のトランプ氏が、AIを活用して悪質な行為を監視する「AIフォース」の創設を発表しました。この組織は安全保障や犯罪対策の観点から人工知能の利用と警戒を強めることを目的としています。今後の米国のAI政策および安全保障体制に大きな影響を与える可能性があります。",
+        "source": "Google News",
+        "published_at": "2026-09-21",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE40T0hZT0ZJOHZFWEJnT21sOUo1R2dTeGlueDNMazgzVF9YNVpDWV9RZkE5N2NxYTFqX2dQNDRCaVRwdmwzZ3g0QlVnWHI3ZnlWVVZ4ZzhEMEZVWDd0dGc?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "トランプ氏、「AIフォース」の創設と責任者の指名を表明 開発の規制求める声高まるなか",
+        "content": "トランプ氏は人工知能（AI）分野の推進を目的とした「AIフォース」の創設およびその責任者の指名を表明しました。AI開発に対する厳格な規制を求める声が高まる中で発表され、今後の米国のAI政策や開発体制に大きな影響を与える可能性があります。",
+        "source": "Google News",
+        "published_at": "2026-09-21",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5KTVRsdEVXQ2FoLW9OYTZSZW5YVXlsczNDWDlUVXM2Z1RhRFRQZERoVmU0T0tkNW9ZSU1TdGRJNjZWUUw1VzMteDRzWjMtRmlL?oc=5",
+        "category": "政策・安全"
+      }
+    ]
+  },
+  {
     "date": "2026-09-20",
     "daily_summary": "本日のAIニュースでは、アプリ開発の民主化や伝統工芸・教育分野での活用、AI俳優の登場など技術の多面的な進化が伝えられる一方で、グーグルのAIによる不正侵入の確認や米軍のAI誤報による一触即発の事態など、サイバーセキュリティや軍事利用における深刻なリスクと安全性確保の重要性が改めて浮き彫りとなりました。",
     "articles": [
