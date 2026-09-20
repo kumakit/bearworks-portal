@@ -32,11 +32,11 @@ const hypotheses = [
 ];
 
 const quizzes = [
-  { title: "平均23.7日なら、毎年24日くらい？", question: "八王子の2020〜2025年の猛暑日は、19、5、17、23、32、46日。平均だけで、毎年ほぼ同じ暑さだったと言えますか。", answer: "言えません。合計142日 ÷ 6年 ≈ 23.7日ですが、最小5日・最大46日です。平均は中心を要約し、散らばりは別に確認します。中央値は並べ替えた中央の19日と23日の平均で、21日です。" },
-  { title: "中央値を平均すれば、全日をまとめた中央値？", question: "学習用の仮想例です。ある年の日較差が［1, 2, 10］℃、別の年が［3, 4, 5］℃でした。各年の中央値の平均と、6日をまとめた中央値は一致しますか。", answer: "一致しません。各年の中央値は2℃と4℃なので、その平均は3℃です。全6日を並べると［1, 2, 3, 4, 5, 10］℃で、中央値は (3 + 4) ÷ 2 = 3.5℃。集計の順序が違うため、一般には同じ値ではありません。" },
-  { title: "「3.0〜5.8日」は95%信頼区間？", question: "この記事の「猛暑日は東京都心より年3.0〜5.8日多い」という範囲は、母平均差の95%信頼区間でしょうか。", answer: "違います。比較可能な4区間の平均差のうち、最小と最大を示した記述的な範囲です。標本抽出の不確実性を評価した信頼区間ではありません。" },
-  { title: "5つの仮説を支持。p < 0.05という意味？", question: "今回のH1〜H5がすべて「支持」なら、統計的に有意な差が確認できたと言えますか。", answer: "言えません。今回は事前に決めた差の大きさ・品質・比較区間の条件を満たすかを確認しました。有意差検定は実施していません。検定や信頼区間を使うなら、対象母集団、標本の取り方、独立性などを別途検討します。" },
-  { title: "4地点の比較で、多摩全域の一番が決まる？", question: "今回の4地点で冬日が最も多い地点を、そのまま「多摩全域で最も寒い場所」と呼べますか。", answer: "呼べません。4観測地点は多摩全域の無作為標本ではなく、市内でも標高や周辺環境は異なります。「寒い」の定義も冬日・最低気温・体感で変わります。比較対象と指標を限定して結論を述べます。" },
+  { title: "平均23.7日なら、毎年24日くらい？", question: "八王子の2020〜2025年における猛暑日数は、19日、5日、17日、23日、32日、46日でした。平均値だけを見て「毎年だいたい同じくらいの暑さだった」と言えるでしょうか。", answer: "言えません。6年間の合計142日 ÷ 6年 ≈ 約23.7日ですが、実際には最小5日・最大46日と大きな開きがあります。平均値はデータの中心の目安を要約した値にすぎず、年ごとの散らばりは別に確認する必要があります。なお、数値を小さい順に並べ替えた中央値は、中央の19日と23日の平均で「21日」です。" },
+  { title: "中央値を平均すれば、全日をまとめた中央値？", question: "学習用の仮想例です。ある年の日較差が［1, 2, 10］℃、別の年が［3, 4, 5］℃でした。各年の中央値の平均と、全6日をまとめた中央値は一致しますか。", answer: "一致しません。各年の中央値は2℃と4℃なので、その平均は3℃です。全6日を並べると［1, 2, 3, 4, 5, 10］℃となり、中央値は (3 + 4) ÷ 2 = 3.5℃です。このように集計の順序が異なるため、一般には同じ値になりません。" },
+  { title: "「3.0〜5.8日」は95%信頼区間？", question: "この記事で示した「猛暑日は東京都心より年3.0〜5.8日多い」という範囲は、母平均差の95%信頼区間でしょうか。", answer: "違います。比較条件をそろえた4区間の平均差のうち、最小値と最大値を示した「記述的な範囲」にすぎません。標本抽出に伴う確率的な不確実性を評価した信頼区間とは異なります。" },
+  { title: "5つの仮説を支持。p < 0.05という意味？", question: "今回の事前仮説H1〜H5がすべて「支持」なら、統計的に有意な差が確認できたと言えますか。", answer: "言えません。今回は事前に定めた「差の大きさ・データ品質・比較区間」の条件を満たすかを確認した記述的な判定であり、有意差検定は実施していません。検定や信頼区間を使う場合は、対象母集団の定義、標本の抽出方法、データの独立性などを慎重に検討する必要があります。" },
+  { title: "4地点の比較で、多摩全域の一番が決まる？", question: "今回の4地点で冬日が最も多い地点を、そのまま「多摩全域で最も寒い場所」と呼べますか。", answer: "呼べません。4観測地点は多摩全域を代表する無作為標本ではなく、市内でも標高や周辺環境によって気温は異なります。また「寒い」の定義も、冬日数・最低気温・体感温度などで変わります。比較対象とした地点と指標を限定して結論を述べることが大切です。" },
 ];
 
 function Lesson({ title: lessonTitle, children }: { title: string; children: ReactNode }) {
@@ -66,8 +66,7 @@ export default function HachiojiClimatePage() {
             <p className="mb-4 text-sm font-semibold tracking-widest text-orange-200">街のうわさを、統計でほどく · 01</p>
             <h1 className="text-3xl font-bold leading-tight md:text-5xl">夏は暑い。<br />冬は寒い。<br /><span className="text-orange-200">それって、本当？</span></h1>
             <p className="mt-6 text-xl font-semibold">{title}</p>
-            <p className="mt-4 text-slate-200">昼の駅前は暑いのに、夜は少しほっとする。冬の朝は、都心より冷える気がする。その実感を、八王子・府中・青梅・東京都心の観測データで確かめます。</p>
-            <p className="mt-5 text-sm text-orange-200">平均・中央値・ばらつき・仮説検証。統計検定2級の知識を、いつもの街の気温に使う記事です。</p>
+            <p className="mt-4 text-slate-200">昼の駅前は暑いのに、夜になると少しほっとする。冬の朝は、都心よりも冷える気がする——そんな肌感覚は、実際の気象データと一致しているのでしょうか。本記事では、八王子・府中・青梅・東京都心の観測データをもとに、平均や中央値、ばらつき、仮説検証といった「統計検定2級」の視点で、街の気温の実態を丁寧に読み解いていきます。</p>
           </div>
           <figure>
             <Image src="/images/hachioji-climate/hero-illustration.webp" width={1536} height={1024} alt="同じ街路を夏の暑い昼と冬の冷たい朝で対比したイラスト" unoptimized priority className="w-full" />
@@ -79,15 +78,15 @@ export default function HachiojiClimatePage() {
       <section id="conclusion" className={card} aria-labelledby="answer">
         <p className="text-sm font-bold text-orange-700">まず、データから言えること</p>
         <h2 id="answer" className={`${heading} mt-2`}>昼は暑い。夜と冬は、冷えやすい。</h2>
-        <p className="mt-4">東京都心と比べると、猛暑日が多く、最低気温25℃以上の日は少なく、冬日は多い。比較可能な区間に分けても、この方向は共通していました。</p>
+        <p className="mt-4">気象データを東京都心と比較すると、八王子は「猛暑日が多く、最低気温25℃以上の日は少なく、冬日が多い」という傾向がみられます。比較可能な複数の区間に分けて検証しても、この方向は共通していました。</p>
         <div className="mt-6 grid gap-4 sm:grid-cols-3">
           {[{ Icon: Sun, label: "猛暑日が多い", id: "H1", direction: "八王子 − 東京都心", style: "bg-orange-50 text-orange-800" }, { Icon: Moon, label: "最低25℃以上の日が少ない", id: "H2", direction: "東京都心 − 八王子", style: "bg-indigo-50 text-indigo-800" }, { Icon: Snowflake, label: "冬日が多い", id: "H3", direction: "八王子 − 東京都心", style: "bg-blue-50 text-blue-800" }].map(({ Icon, label, id, direction, style }) => {
             const range = deltaRange(id);
             return <div key={id} className={`rounded-2xl p-5 ${style}`}><Icon size={23} aria-hidden="true" /><h3 className="mt-3 text-sm font-bold">{label}</h3><p className="mt-2 text-3xl font-bold tracking-tight tabular-nums">{format(range.min)}〜{format(range.max)}</p><p className="mt-1 text-sm">日/年の差</p><p className="mt-3 text-xs">{direction}</p></div>;
           })}
         </div>
-        <p className="mt-5 text-sm">数字の幅は、比較区間ごとの平均差の最小〜最大で、信頼区間ではありません。青梅の冬日は八王子より多く、「八王子が多摩で最も寒い」とは言えません。</p>
-        <p className="mt-3 text-sm text-slate-600">対象は1990〜2025年の4観測地点。「東京都心」は気象庁「東京」地点で、東京都全域・23区の平均ではありません。第1・2節の4地点棒グラフは2020〜2025年の参考比較、上の結論は比較可能な全区間の判定です。</p>
+        <p className="mt-5 text-sm">※ ここで示した数値の幅は、比較区間ごとに算出した平均差の最小値から最大値を示した記述的な範囲であり、統計的な信頼区間ではありません。また、冬日の日数は青梅のほうが八王子より多く、「八王子が多摩で最も寒い」とは言えない点にご注意ください。</p>
+        <p className="mt-3 text-sm text-slate-600">対象は1990〜2025年の4観測地点です。「東京都心」は気象庁の「東京」観測所のデータを指し、東京都全域や東京23区全体の平均値ではありません。第1節・第2節の棒グラフは直近6年（2020〜2025年）の参考比較ですが、上記の結論は比較可能な全区間を通した判定に基づいています。</p>
       </section>
 
       <nav aria-label="記事の目次" className="flex flex-wrap gap-2 text-sm font-semibold text-blue-800">
@@ -96,37 +95,37 @@ export default function HachiojiClimatePage() {
 
       <section id="summer" className="scroll-mt-6 space-y-5">
         <h2 className={heading}>01　「暑い」を、昼と夜に分けてみる。</h2>
-        <p>最高気温が35℃に届く昼と、最低気温が25℃を下回らない一日。同じ「暑い」でも、見ている側面は違います。</p>
+        <p>最高気温が35℃以上に達する昼の暑さと、一日の最低気温が25℃を下回らない暑さ。同じ「暑い」という言葉でも、着目している側面は異なります。</p>
         <div className="grid gap-5 md:grid-cols-2">
           <section className={card}><p className="text-xs font-bold tracking-widest text-orange-700">DAYTIME</p><h3 className="mb-6 mt-2 text-xl font-bold text-slate-900">猛暑日 · 日最高気温35℃以上</h3><RecentClimateBars metric="heatstrokeDays" max={50} tone="warm" /></section>
           <section className={card}><p className="text-xs font-bold tracking-widest text-indigo-700">DAILY MINIMUM</p><h3 className="mb-6 mt-2 text-xl font-bold text-slate-900">日最低気温25℃以上の日</h3><RecentClimateBars metric="tropicalNightEquivalentDays" max={50} tone="cool" /></section>
         </div>
-        <p>八王子の猛暑日は年平均<strong>{format(hachioji.heatstrokeDays)}日</strong>で、東京都心の{format(tokyo.heatstrokeDays)}日より多い一方、最低25℃以上の日は<strong>{format(hachioji.tropicalNightEquivalentDays)}日</strong>で、東京都心の{format(tokyo.tropicalNightEquivalentDays)}日より少なくなっています。</p>
-        <p className="text-sm text-slate-600">最低25℃以上は一日全体の最低気温による指標です。夜間だけを切り出す「熱帯夜」と同じではなく、すべての夜の平均気温を比べた結果でもありません。</p>
-        <Lesson title="問いを、測れる指標に置き換える。"><p>「暑い街」という印象を、そのまま一つの数字にはできません。日最高気温を見るのか、最低気温を見るのか、閾値を何℃にするのか。変数の定義を先に決めると、比較の意味がはっきりします。</p><p>この2図はどちらも0〜50日/年の共通目盛りです。軸の範囲が違うグラフの棒の長さを、そのまま比較しないことも大切です。</p></Lesson>
-        <details className={card}><summary className="cursor-pointer font-bold text-slate-900">30℃以上の「真夏日」でも見てみる</summary><div className="mt-6"><RecentClimateBars metric="midsummerDays" max={100} tone="warm" /></div><p className="mt-4 text-sm">35℃以上と30℃以上では、地点間の差の見え方が変わります。真夏日の図は0〜100日/年です。猛暑日の図との目盛りの違いにも注意してください。</p></details>
+        <p>八王子の猛暑日は年平均<strong>{format(hachioji.heatstrokeDays)}日</strong>で、東京都心の{format(tokyo.heatstrokeDays)}日より多い一方、日最低気温が25℃以上の日は<strong>{format(hachioji.tropicalNightEquivalentDays)}日</strong>で、東京都心の{format(tokyo.tropicalNightEquivalentDays)}日より少なくなっています。</p>
+        <p className="text-sm text-slate-600">なお、日最低気温25℃以上は一日全体の最低気温に基づく指標です。夜間だけを切り出す「熱帯夜」そのものとは異なり、すべての夜の平均気温を比べた結果でもありません。</p>
+        <Lesson title="問いを、測れる指標に置き換える。"><p>「八王子は暑い」という漠然とした印象を、そのまま一つの数字にはできません。日最高気温で昼のピークを見るのか、日最低気温で一日の中で最も下がらない暑さを見るのか、さらに閾値を何℃にするのかによって、比較の意味合いは大きく変わります。このように「変数の定義」をあらかじめ明確にすることが、統計的に比較する第一歩です。</p><p>また、上記2つのグラフはどちらも「0〜50日/年」の共通目盛りに揃えています。軸の範囲が異なるグラフ同士では棒の長さをそのまま比較できないため、可視化のスケールを揃えることも重要なポイントです。</p></Lesson>
+        <details className={card}><summary className="cursor-pointer font-bold text-slate-900">30℃以上の「真夏日」でも見てみる</summary><div className="mt-6"><RecentClimateBars metric="midsummerDays" max={100} tone="warm" /></div><p className="mt-4 text-sm">35℃以上（猛暑日）と30℃以上（真夏日）では、地点ごとの差の見え方が変わります。真夏日のグラフは0〜100日/年のスケールです。猛暑日のグラフ（0〜50日/年）との目盛りの違いにも注意してください。</p></details>
       </section>
 
       <section id="winter" className="scroll-mt-6 space-y-5">
         <h2 className={heading}>02　冬の冷え込み。比べる相手を増やすと？</h2>
         <div className="grid gap-6 lg:grid-cols-2">
           <section className={card}><h3 className="mb-6 text-xl font-bold text-slate-900">冬日 · 日最低気温0℃未満</h3><RecentClimateBars metric="winterDays" max={80} tone="cool" /></section>
-          <div className="flex flex-col justify-center rounded-3xl bg-slate-900 p-7 text-white md:p-9"><Snowflake size={30} className="text-sky-200" aria-hidden="true" /><p className="mt-5 text-2xl font-bold">東京都心より寒い。<br />でも、地域の一番とは限らない。</p><p className="mt-5 text-slate-200">この6年の冬日は、八王子が年平均{format(hachioji.winterDays)}日、東京都心が{format(tokyo.winterDays)}日。さらに青梅を見ると、八王子より多くなります。</p><p className="mt-4 text-sm text-sky-200">「東京都心との比較」と「多摩で最も寒い」は、別の問いです。</p></div>
+          <div className="flex flex-col justify-center rounded-3xl bg-slate-900 p-7 text-white md:p-9"><Snowflake size={30} className="text-sky-200" aria-hidden="true" /><p className="mt-5 text-2xl font-bold">東京都心より寒い。<br />でも、地域の一番とは限らない。</p><p className="mt-5 text-slate-200">直近6年間の冬日を見ると、八王子は年平均{format(hachioji.winterDays)}日、東京都心は{format(tokyo.winterDays)}日。さらに青梅を見ると、八王子より多くなります。</p><p className="mt-4 text-sm text-sky-200">「東京都心との比較」と「多摩で最も寒い」は、別の問いです。</p></div>
         </div>
-        <p className="text-sm text-slate-600">冬日は1〜12月の暦年集計で、12〜2月だけの日数ではありません。上の6年平均は参考表示で、仮説の順位判定には使っていません。H4は後述の共通区間で確認しています。</p>
-        <Lesson title="比較対象の選び方が、結論の範囲を決める。"><p>4地点の観測結果は、市内全域や多摩全域を代表する無作為標本ではありません。「この地点・この指標・この期間では」と範囲を明示するのが、観察データを読む基本です。</p><Link href="/toukei/guides/sampling-and-bias" className="inline-block font-semibold text-blue-800 underline">標本抽出と偏りを復習する →</Link></Lesson>
+        <p className="text-sm text-slate-600">※ 冬日は1〜12月の暦年集計で、12〜2月だけの日数ではありません。上の6年平均は直近水準を示す参考表示で、仮説の順位判定には使っていません（仮説H4は後述の共通区間で判定しています）。</p>
+        <Lesson title="比較対象の選び方が、結論の適用範囲を決める。"><p>4地点の観測結果は、市内全域や多摩全域を代表する「無作為標本（ランダムサンプリング）」ではありません。「この地点・この指標・この期間では」と条件を限定して結論を述べるのが、観察データを正しく読み解く基本です。</p><Link href="/toukei/guides/sampling-and-bias" className="inline-block font-semibold text-blue-800 underline">標本抽出と偏りを復習する →</Link></Lesson>
       </section>
 
       <section id="variation" className="scroll-mt-6 space-y-5">
         <h2 className={heading}>03　平均の向こうに、6つの夏がある。</h2>
-        <p>年平均{format(hachioji.heatstrokeDays)}日。それだけでは、毎年の暑さの違いが隠れます。八王子の猛暑日を1年ずつ並べてみましょう。</p>
+        <p>八王子の猛暑日は年平均{format(hachioji.heatstrokeDays)}日。しかし平均値を見るだけでは、年ごとの暑さの違いが見えにくくなります。実際の猛暑日数を1年ずつ並べてみましょう。</p>
         <div className={card}><AnnualHeatChart /><div className="mt-6 grid grid-cols-3 gap-2 rounded-2xl bg-orange-50 p-4 text-center"><div><p className="text-xs text-orange-900">最も少ない年</p><p className="mt-1 text-2xl font-bold text-orange-800">{Math.min(...heatValues)}<span className="ml-1 text-sm">日</span></p></div><div><p className="text-xs text-orange-900">6年平均</p><p className="mt-1 text-2xl font-bold text-orange-800">{format(hachioji.heatstrokeDays)}<span className="ml-1 text-sm">日</span></p></div><div><p className="text-xs text-orange-900">最も多い年</p><p className="mt-1 text-2xl font-bold text-orange-800">{Math.max(...heatValues)}<span className="ml-1 text-sm">日</span></p></div></div></div>
-        <Lesson title="中心と、散らばりをセットで読む。"><p>平均は「合計 ÷ 個数」。ここでの1個は1年です。最大と最小の差である範囲は{Math.max(...heatValues) - Math.min(...heatValues)}日。中心が同じでも、年ごとの変動が同じとは限りません。</p><p>標準偏差（SD）は値の散らばり、標準誤差（SE）は推定量のばらつきを表します。独立・同分布などの前提を確かめずに、6年分からSEや信頼区間を機械的に付けることはしていません。</p><Link href="/toukei/problems/confidence-interval" className="inline-block font-semibold text-blue-800 underline">信頼区間の例題で、前提を確認する →</Link></Lesson>
+        <Lesson title="データの中心と「ばらつき」をセットで捉える。"><p>平均値は「合計 ÷ 個数」で計算されます（ここでは1年ごとの値が1個に相当）。八王子の猛暑日は最小年と最大年で{Math.max(...heatValues) - Math.min(...heatValues)}日もの範囲（レンジ）の開きがあります。中心となる平均値が同じでも、年ごとの変動の大きさまで同じとは限りません。</p><p>値の散らばりを表すのが「標準偏差（SD）」、推定量のばらつきを表すのが「標準誤差（SE）」です。データ同士の独立性や同一分布といった前提を確認しないまま、6年分のデータに対して機械的にSEや信頼区間を適用することはしていません。</p><Link href="/toukei/problems/confidence-interval" className="inline-block font-semibold text-blue-800 underline">信頼区間の例題で、前提を確認する →</Link></Lesson>
       </section>
 
       <section id="daily-range" className="scroll-mt-6 space-y-5">
         <h2 className={heading}>04　昼と夜の差を、ひとつの変数に。</h2>
-        <p>日較差は、同じ日の最高気温から最低気温を引いた値です。暑さと寒さを別々に見るだけでなく、「一日の気温の幅」に注目します。</p>
+        <p>日較差とは、同じ日の最高気温から最低気温を引いた値です。昼の暑さや夜の寒さを別々に見るだけでなく、「一日の寒暖差」に着目します。</p>
         <div className={card}>
           <figure className="mb-7 rounded-2xl bg-slate-50 p-5">
             <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-3 text-center"><div className="flex items-center gap-4"><div><p className="text-xs text-slate-500">日最高気温</p><p className="text-3xl font-bold text-orange-700">32℃</p></div><span className="text-2xl text-slate-400">−</span><div><p className="text-xs text-slate-500">日最低気温</p><p className="text-3xl font-bold text-blue-700">21℃</p></div></div><div className="flex items-center gap-4"><span className="text-2xl text-slate-400">＝</span><div><p className="text-xs text-slate-500">日較差</p><p className="text-3xl font-bold text-slate-900">11℃</p></div></div></div>
@@ -135,32 +134,32 @@ export default function HachiojiClimatePage() {
           <SeasonalRangeCharts />
           <p className="mt-5 text-sm text-slate-600">冬Yは前年12月〜Y年2月。例えば2016冬は2015年12月〜2016年2月です。観測環境をそろえるため、表示した夏と冬では開始年が異なります。</p>
         </div>
-        <Lesson title="「中央値の平均」と「全部まとめた中央値」を分ける。"><p>中央値は、値を小さい順に並べた中央の値です。個数が偶数なら中央2値を平均します。この図では、まず各年の夏・冬の日較差の中央値を計算し、次に比較区間の年数で平均しています。</p><p className="rounded-xl bg-white p-4 font-semibold">日々の最高 − 最低 → 季節ごとの中央値 → 区間内で年ごとに平均</p><p>そのため、全期間の日別データをひとまとめにした中央値とは一般に一致しません。日較差は一日の最高と最低の差で、日々の気温の標準偏差でもありません。</p></Lesson>
+        <Lesson title="「中央値の平均」と「全体のデータをまとめた中央値」を混同しない。"><p>中央値（メディアン）は、データを大きさ順に並べた中央の値です（偶数なら中央2値の平均値）。この図では、まず各年の夏・冬それぞれについて日較差の中央値を計算し、次に比較区間の年数で平均しています。</p><p className="rounded-xl bg-white p-4 font-semibold">日々の（最高 − 最低） → 季節ごとの中央値 → 区間内で年ごとに平均</p><p>集計の手順が異なるため、全期間の日別データを一度に集めて計算した中央値とは一般に一致しません。なお、日較差は一日の最高と最低の差であり、気温の標準偏差とは異なる点にも注意してください。</p></Lesson>
       </section>
 
       <section id="comparison" className="scroll-mt-6 space-y-5">
         <h2 className={heading}>05　長いデータほど、比べ方をていねいに。</h2>
-        <p>観測地点の移設や測器の変更があると、数字の変化に観測条件の違いが混ざることがあります。1990〜2025年を一本につなぐ前に、両地点で条件をそろえられる区間に分けました。</p>
+        <p>観測地点の移設や測器の変更があると、数字の変化に観測環境の違いが混ざることがあります。1990〜2025年を一本につなぐ前に、両地点で観測条件をそろえて比較できる区間に分けました。</p>
         <div className={card}><h3 className="mb-5 text-xl font-bold text-slate-900">猛暑日は、どの比較区間でも八王子が多い</h3><SegmentComparison /></div>
-        <Lesson title="仮説の「支持」と、有意差検定は違う。"><p>H1では「八王子の猛暑日が東京都心より年1日以上多い」と先に基準を決めました。上の4区間はいずれも基準を満たしています。これは記述的な比較で、p値による有意差判定ではありません。</p><p>同じ天候が両地点に影響し、日々の気温も時間的につながります。日数が多いからといって、すべてを独立な標本として検定できるわけではありません。また、気温差だけで標高や都市化などの原因を特定することもできません。</p><Link href="/toukei/guides/hypothesis-testing-basics" className="inline-block font-semibold text-blue-800 underline">p値・有意水準・信頼区間の違い →</Link></Lesson>
+        <Lesson title="事前仮説の「支持」と、有意差検定は違う。"><p>仮説H1では「八王子の猛暑日が東京都心より年1日以上多い」と事前に明確な基準を決めました。上の4区間はいずれもその基準を満たしています。ただし、これは設定した基準を満たすかを確認した「記述的な比較」であり、p値による有意差判定ではありません。</p><p>近隣地点同士には同じ天候が影響し、日々の気温にも時間的なつながりがあります。日数が多いからといって、すべてを独立な標本として安易に検定にかけることはできません。また、観察された気温差だけで標高や都市化などの原因を単純に特定することもできません。</p><Link href="/toukei/guides/hypothesis-testing-basics" className="inline-block font-semibold text-blue-800 underline">p値・有意水準・信頼区間の違い →</Link></Lesson>
         <details className={card}><summary className="cursor-pointer text-lg font-bold text-slate-900">5つの事前仮説と判定基準を確認する</summary><p className="mt-4 text-sm">品質条件と共通均質区間の範囲で、H1〜H5はすべて支持されました。H4は「八王子が最も寒いとは限らない」という仮説です。事前予想への反証が得られた、という意味ではありません。</p><div className="mt-5 space-y-4">{hypotheses.map(hypothesis => { const range = deltaRange(hypothesis.id); return <section key={hypothesis.id} className="rounded-2xl bg-slate-50 p-5"><p className="text-xs font-bold text-blue-800">{hypothesis.id} · 今回の比較範囲で支持</p><h3 className="mt-1 font-bold text-slate-900">{hypothesis.title}</h3><p className="mt-2 text-sm">事前基準：{hypothesis.threshold}</p><p className="mt-2 text-sm">{hypothesis.direction}：<strong>{format(range.min)}〜{format(range.max)} {hypothesis.unit}</strong></p></section>; })}</div></details>
       </section>
 
       <section id="quiz" className="scroll-mt-6 space-y-5">
         <h2 className={heading}>06　グラフの読み方を、5問で確かめる。</h2>
-        <p>計算できることと、そこから言えること。答えを開く前に、少し考えてみてください。Q2は学習用の仮想データです。</p>
+        <p>計算できることと、そこから言えることの違い。答えを開く前に、少し考えてみてください（※Q2は学習用の仮想データです）。</p>
         {quizzes.map((quiz, index) => <section key={quiz.title} className={card}><p className="text-sm font-bold text-orange-700">QUESTION {String(index + 1).padStart(2, "0")}</p><h3 className="mt-2 text-lg font-bold text-slate-900">{quiz.title}</h3><p className="mt-3">{quiz.question}</p><details className="mt-4 rounded-xl bg-slate-50 p-4"><summary className="cursor-pointer font-semibold text-blue-800">答えと考え方</summary><p className="mt-3 text-sm leading-7">{quiz.answer}</p></details></section>)}
       </section>
 
       <section id="method" className={`${card} scroll-mt-6`}>
         <h2 className={heading}>方法・再現性・出典</h2>
-        <p className="mt-4">気象庁の1990年1月1日〜2025年12月31日の日別観測値を、固定した公開データから表示しています。今回の改訂では、元の観測データ・5仮説の判定・比較条件を維持し、図解と学習解説を加えました。</p>
+        <p className="mt-4">気象庁の1990年1月1日〜2025年12月31日の日別観測値を、固定した公開データから表示しています。今回の改訂では、元の観測データ・5仮説の判定・比較条件を維持したうえで、図解と統計学習の解説を加えました。</p>
         <ul className="mt-5 list-disc space-y-2 pl-5 text-sm">
-          <li>品質コード8（正常値）と5（準正常値）を集計。指標ごとに有効日が期待日数の90%以上ある期間を公開対象としています。90%は本分析の基準です。</li>
+          <li>気象庁の品質コード8（正常値）および5（準正常値）を集計。指標ごとに有効観測日が期待日数の90%以上ある期間を公開対象としています（※90%は本分析の基準です）。</li>
           <li>品質5の採用件数：八王子{qualityCounts?.hachioji}、府中{qualityCounts?.fuchu}、青梅{qualityCounts?.ome}、東京都心{qualityCounts?.tokyo}。</li>
-          <li>八王子・府中・青梅は2003年・2008年、東京都心は2014年の観測環境境界を考慮。期間の区切りと除外年は指標・季節によって異なります。</li>
-          <li>年平均の参考比較は2020〜2025年の6年を等しい重みで平均。欠測分の推計・日数補正は行いません。年によって有効日数は異なります。</li>
-          <li>結果は4観測地点・定義済み指標の範囲です。市域全体、原因、将来予測、境界をまたぐ単一のトレンドは示していません。降雪・積雪は本記事の対象外です。</li>
+          <li>観測環境の境界を考慮し、八王子・府中・青梅は2003年・2008年、東京都心は2014年の境界で区間を区分。期間の区切りと除外年は指標・季節によって異なります。</li>
+          <li>年平均の参考比較は2020〜2025年の6年を等しい重みで平均。欠測分の推計や日数補正は行っておらず、年によって有効日数は異なります。</li>
+          <li>結果は4観測地点・定義済み指標の範囲内に限られます。市域全体の代表値、気温差の原因の特定、将来予測、境界をまたぐ単一のトレンドを示すものではありません。なお降雪・積雪は本記事の対象外です。</li>
         </ul>
         <details className="mt-6 rounded-2xl bg-slate-50 p-5"><summary className="cursor-pointer font-bold text-slate-900">図の元になった6年平均を表で見る</summary><div className="mt-4 overflow-x-auto"><table className="w-full min-w-[680px] text-right text-sm"><caption className="mb-3 text-left">2020〜2025年の各年集計の単純平均。日較差は各暦年の中央値を平均した値です。</caption><thead><tr className="border-b border-slate-300">{["地点", "猛暑日", "真夏日", "最低25℃以上", "冬日", "年間の日較差中央値の平均"].map(label => <th key={label} scope="col" className="p-2">{label}</th>)}</tr></thead><tbody>{recentStationSummaries.map(row => <tr key={row.key} className="border-b border-slate-200"><th scope="row" className="p-3 text-left text-slate-900">{row.name}</th>{[row.heatstrokeDays, row.midsummerDays, row.tropicalNightEquivalentDays, row.winterDays].map((value, i) => <td key={i} className="p-2 tabular-nums">{format(value)}日</td>)}<td className="p-2 tabular-nums">{format(row.dailyRange)}℃</td></tr>)}</tbody></table></div></details>
         <details className="mt-4 rounded-2xl bg-slate-50 p-5"><summary className="cursor-pointer font-bold text-slate-900">固定データのバージョンと検証情報</summary><dl className="mt-4 space-y-3 break-all text-sm"><div><dt className="font-bold">データ版 / スキーマ</dt><dd>{climateLock.bundle_version} / {climateLock.bundle_schema_version}</dd></div><div><dt className="font-bold">SHA-256</dt><dd className="font-mono text-xs">{climateLock.bundle_sha256}</dd></div><div><dt className="font-bold">分析元のApps commit</dt><dd className="font-mono text-xs">{climateLock.apps_production_commit}</dd></div></dl><p className="mt-4 text-sm">公開データはビルド時にバイト数・SHA-256・集計値を照合し、不一致ならビルドを停止します。</p></details>
