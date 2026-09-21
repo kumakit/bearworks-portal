@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-09-22",
+    "daily_summary": "本日のAIニュースは、トランプ氏による超知能開発の強力な推進表明の一方で、AIの軍事利用における誤作動トラブルや暴走の危険性から国際的な規制と開発の減速を求める声が強く上がっており、安全性と開発速度のバランスが大きな議論となっています。また、教育分野での人間ならではの人材育成や、学研・自治体・九州地域などにおける実務的なAI活用・基盤構築の動きも進展しており、社会全体でAIとの向き合い方が模索されている一日となりました。",
+    "articles": [
+      {
+        "title": "ＡＩ開発「超知能を推進」 トランプ氏、慎重論を一蹴",
+        "content": "トランプ氏はAI開発における超知能の推進を強力に支持し、慎重論を全面的に一蹴しました。この発言は今後の米国のAI政策や技術革新の方向性に大きな影響を与える可能性があります。",
+        "source": "Google News",
+        "published_at": "2026-09-22",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE14UGdVWml6OUxfRTBaT0ZJOGREQUwzQnJWMDU0YWNKWmdjeXh1QktXOHc5NF93MGRMWU15Z19MMWh5dEV0eGY4WEVyYjNoY1ZxWFVXWTVB?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "AI開発「超知能を推進」 トランプ氏、慎重論を一蹴",
+        "content": "トランプ氏がAI開発において「超知能の推進」を掲げ、AIの急速な発展に対する慎重論を一蹴したことが報じられています。この方針は今後の米国のAI政策や産業競争力に大きな影響を与える可能性があります。",
+        "source": "Google News",
+        "published_at": "2026-09-22",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1XWnVZZjFRWnJxSk1hc2lSRmV4T20xLUxtbXJ0al92WXR0WnZBX1M2Y1Z0cVpLNDRKdHU5Z1dzTGs2T1p2NVpfSnBQZ2F6WUE1bTRjV3ZjUU9aUQ?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "AIが通訳する時代、東京外国語大学の役割は 5年一貫で高度人材育成",
+        "content": "AIの翻訳技術が急速に進化する現代において、東京外国語大学は新たな5年一貫教育プログラムを導入し、高度な言語運用能力と専門知識を持つ人材の育成に乗り出しています。AIには代替できない人間ならではの深い文化的理解や交渉力を備えたグローバル人材の輩出を目指す取り組みです。",
+        "source": "Google News",
+        "published_at": "2026-09-22",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9vVXR2RXNGRWRqMl8zUkZoNUV1U0pUZ1BKTTYtcVMzWnd4RF9yMk9hcHNWeTVUVVpzdkRvdktmZzRNRnM4azRLNmhBVGFwYXQzZnhIM1hHLTd0RGJ4MWNSSTNJVGQzRGdnVzczOQ?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "［社説］AIの軍事利用　暴走防ぐ国際的規制を",
+        "content": "人工知能（AI）の軍事利用が進む中、その暴走を防ぐための国際的な規制の必要性を訴える社説です。技術の急速な進化に対し、人間の制御を離れた兵器使用リスクへの懸念と、実効性のあるルール作りの重要性が論じられています。",
+        "source": "Google News",
+        "published_at": "2026-09-22",
+        "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOcWo3MnJPd2FFRU5US1pqMUhpb0E5NHdWSUl3ZmpfVGE1SGx0anZwOGM4UXZudjBGQ2JoOGV4TjVZa2RkQS1tWDlfanJvX0lpYVh5SEwwYVRDZGNLU09QOXc0a1NlMDZmN3BrYy1LZnI0blR6NllrNmlBTENHTXBNa0pWY9IBiAFBVV95cUxOVDJ2QUc3dkZrb25QRDdwQkszWWlOSlk1aGZtSEFVZ0JHdG5CYzRjczZqdmd3SkxMU0cySGI5eHFZUVREd3FSZ3R2b0pOLTFWdTRfU3V6dVYwMldtUkctM2NOQTBGbUtQbnd1V0xzZUlQSE9OeVByc3A3TDRZNmttdVlrdUhRWXYt?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "AIの誤った報告で戦争になるところだった…米軍、中国船舶爆撃直前に中止",
+        "content": "米軍がAIの誤った状況報告により、中国船舶の爆撃寸前まで至っていたことが報じられました。幸いにも直前で中止されたものの、軍事判断におけるAI活用の危険性と信頼性の問題が浮き彫りになっています。",
+        "source": "Google News",
+        "published_at": "2026-09-22",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFA2di1jWVV5Z2d3NkdwWTFBdHZseURPNTlSclI1MmQ5MVhaenp0dmZYMlI1Zl9jX1hPaVFtSFU5bUpCVFgtQ3FXYlZvZ05mLV8zeHBtc21UTFg3ZXdDUHhVandIQ1Zzb1N6QzNfVWJNbmcxLWRvM2VvWGt3d09KY28?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "［社説］AIの軍事利用 暴走防ぐ国際的規制を",
+        "content": "人工知能（AI）の軍事利用が進む中、その暴走を防ぐための国際的な規制の必要性を訴える社説です。技術の急速な発展に対する人間のコントロールや倫理的責任の重要性が論じられています。",
+        "source": "Google News",
+        "published_at": "2026-09-22",
+        "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE90RF9NMHQ5QWhrZ2RnbFd6cmstY3NnSXFLS3pBMDQyM0F0cmZvSnZlcWI0QVQxT0EweWt4WXRCVlpUelE0VkRqYjl5MA?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "学研ホールディングス、事業会社別にAI開発基盤を構築",
+        "content": "学研ホールディングスは、生成AIの活用を推進するため、事業会社別に独自の開発基盤を整備する方針を固めました。各社の業務特性に合わせたAI環境を構築することで、業務効率化や新規サービスの創出を加速させます。グループ全体でのノウハウ共有を図りつつ、柔軟かつ安全なAI活用を目指します。",
+        "source": "Google News",
+        "published_at": "2026-09-22",
+        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE56V0FPTndROVVxaWpEd0VyVXk2RmhkeW9pbmZRQ0NhV1Vwd0E2RnB1OFBxdk9Bem1WdjVFS3pYRTRxQ1hfX0VnZThmOW9nZGpoMHd2VWktV1A?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "直方市で生成AIを活用した見積書作成の実践セミナーが開催",
+        "content": "福岡県直方市において、生成AIを活用して実際に見積書の作成などを体験する実践的なセミナーが開催されました。参加者は最新のAI技術を業務に応用する方法を学びました。",
+        "source": "Google News",
+        "published_at": "2026-09-22",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBIX1Q5bjk1ZzJjYmgxWXNsbXpINW5iX3Zjc2ZLNDRGYzYxWFc0REV4WHVpOVJ0bE0xTllnMWxlUFNiSk1hVTdHRmFwMnpza2xPVVpOUkROSQ?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "【検証】NVIDIAが注目する「フィジカルAIランド九州」の可能性",
+        "content": "NVIDIAが注目を集める「フィジカルAIランド九州」の可能性について検証した記事です。九州におけるAI技術の発展やロボティクス、産業への応用について解説されています。",
+        "source": "Google News",
+        "published_at": "2026-09-22",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBnUzItaGZKaVpZQmUyR2tTdExvUnBmdWhXQVJpSkhrclQxN2N3OGdBeGJNV3VxUHRvYTQ2TGViUVVZbHRQUWZ6SXAwT3BVek16R0w5djdkV25VUQ?oc=5",
+        "category": "インフラ・半導体"
+      },
+      {
+        "title": "社説：AI「暴走」の脅威 開発減速へ協調が不可欠",
+        "content": "人工知能（AI）の急速な発展に伴う暴走の脅威について、開発の減速と国際的な協調が不可欠であると訴える社説です。規制や安全性の確保に向けた具体的な対策の必要性が指摘されています。",
+        "source": "Google News",
+        "published_at": "2026-09-22",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBlVHlyUVByYW1YWV93MFA2aXBhUVMxcUZJZ3cyRW1OS2RVUzg3ckpYS3pCZ2VhdDczbElZSlRtSE90TjhTMGpncnlDWFpDN2NQZTktdkNadks4cnFvM211U1R4Q0tBNk5p?oc=5",
+        "category": "政策・安全"
+      }
+    ]
+  },
+  {
     "date": "2026-09-21",
     "daily_summary": "本日のAIニュースは、米トランプ氏による「AIフォース」創設の表明や経済的リスクによるバブル終焉の懸念といった国家安全保障・経済動向に関する話題が目立ったほか、道徳的判断や人生の重大な決断におけるAIへの依存と「判断の外部化」がもたらす倫理的リスクへの警鐘、さらにクリエイティブ分野での共存論や個人の活用事例まで、AIが社会や人間の意思決定に与える多面的な影響と規制・活用を巡る議論の広がりを浮き彫りにしています。",
     "articles": [
