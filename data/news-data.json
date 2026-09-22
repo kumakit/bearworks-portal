@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-09-23",
+    "daily_summary": "本日のAIニュースは、書籍の大量購入による学習データ問題や生成AIをきっかけとした児童虐待の相談といった社会的な影響をはじめ、Googleの新AIパソコン発表やOpenAIのエージェント発表など技術・市場の急展開、さらには中国企業への調査や北朝鮮関与の不正面接といった安全保障上の懸念、そしてトランプ氏による「SI」への名称変更宣言や企業のソフトウェア内製化など、AIがビジネスや政治、社会構造のあらゆる側面に深い変革と波紋を広げている様子を伝えています。",
+    "articles": [
+      {
+        "title": "古書店に大量注文 AI学習目的か",
+        "content": "古書店に対して書籍の大量注文が行われており、その背景にAIの学習目的があるのではないかと報じられています。AI開発におけるデータ収集手法や著作権に関する議論への影響が懸念されます。",
+        "source": "Google News",
+        "published_at": "2026-09-23",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9xTmYtNHVKMEttT2c1VWstQlU1eS1Jb0lhVlN3ZUpMVUFLZzNpMnhWUWttRW82NEZjcnZaNjdsVUJIeVJQeC0xNWRGYkxNSDRQ?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "Googleが「AIパソコン」､スマホと連携強化 海外先行で14万円台から",
+        "content": "Googleがスマートフォンとの連携を強化した新型の「AIパソコン」を発表しました。海外市場で先行して発売され、価格は14万円台からの設定となっています。",
+        "source": "Google News",
+        "published_at": "2026-09-23",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9zMW84QktBNzNQMUQ0UnYxYl9RYzN5WVM4U1hTXzhCLU5FaXZKMHRxUmtCMmI2U0xmZXpkcEstRm0zdThuQVdBMGZEaUF6bnpGVGZjYmxKWUsyOVcwSkprUXM3Sm02ekdqWnZjVw?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "首相、国連演説でICC支持表明へ AIサミット開催も提唱",
+        "content": "日本の首相が国連演説にて国際刑事裁判所（ICC）への支持を表明する方針を固めました。また、AIに関する国際的なサミットの開催を新たに提唱し、技術の健全な発展と国際協調を促す姿勢を示しています。",
+        "source": "Google News",
+        "published_at": "2026-09-23",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1WcE42eUtFODlUc0k1QnRZWmtPblpSc3FDZTdxcnZaN1Rwb3JobXRtQll6MkFycDRXaDl0ak90LW9pbWhlek1COGlmSVNTclNrYVNmSlBBcWV5Y1VHcmc?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "「生成AIの勧め」で虐待被害相談する児童も 栃木県内児童相談所は県警と連携強化",
+        "content": "生成AIの助言をきっかけに、虐待被害を児童相談所に相談する子供が出てきていることが明らかになりました。これを受け、栃木県内の児童相談所は県警との連携をさらに強化し、早期発見と保護に向けた対応を進めています。関係機関は、周囲に気付いた際はためらわずに通報するよう呼びかけています。",
+        "source": "Google News",
+        "published_at": "2026-09-23",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE02U0M1dm96Y3ZWeGJJZGNablRlNUtGb2lEMHY0RmhYejVRVV84Y0xhWDE4NHpEcmFtQmcyZmxZTmNvSW5acFgwOE40QWIwYi1oMF9PT1dmekhUYVE?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "中国当局、ディープシークを調査か＝米AIに機密流出疑惑で",
+        "content": "中国当局が、AI開発企業「ディープシーク」に対する調査を行っていることが報じられました。米国AIへの機密流出疑惑が浮上したことが背景にあるとされています。今後の調査の行方や安全保障への影響に注目が集まっています。",
+        "source": "Google News",
+        "published_at": "2026-09-23",
+        "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5PMUV0UUNRVlpMcEQzcFo2cjN1a043Wmt6RjZpRWktR2tKWG9VRjUtSmFHOTdieU1sMlZoM3ZkYU1Ra2FtclRPeGVGVy1zSGNQUVpJOGhHM3lkTTcyb3h3dTVfUUxRM3dLX09FZk1fNTZRVjlISTJWemQ0dGjSAYIBQVVfeXFMT3luZlpoeUVCZzRMd0EyaWtJRjlPSWJQc2F3Yi16Rm80aTdCYUYtOUdUNkR2VTBZenVNb1ZsZ092eUtycS1HUk1NRGZkb1ZDbTJfTGxGT19KREdoVzVLZ29fSk56T013c2drd0RfUVV4bklGM3hBQlJBLVFpZ2h6WkpuQQ?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "AIが面接に参加する事案が発生、背後に北朝鮮関連グループの関与か",
+        "content": "企業の採用面接にAIの映像と音声が使用される事案が確認され、調査が進められています。その背景には、北朝鮮に関連するグループが関与している可能性が浮上しています。巧妙化するサイバー攻撃や不正行為の手口として警戒されています。",
+        "source": "Google News",
+        "published_at": "2026-09-23",
+        "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOMGotR3BrNEFIQUJZZ2VkenF4bmZvVUVZQ1RCaXRtcEltWXRJUHlOWlVIMldXMktMVmowZnE2VEE1T1FEdzhaa2w0cVRxdGpnV3ZUdnJtWkxuNVEzMmpQQUwycWhLV29QRnpFY29xNU9iRk5QRjJXT2VaMjByVWktejhR?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "OpenAI、9月29日に新AIエージェントを発表へ──ソフトウェア株のパニックは再来するか",
+        "content": "OpenAIが9月29日に新しいAIエージェントを発表する予定であることが報じられています。この発表により、市場における既存のソフトウェア企業への影響や株価の動向に再び注目が集まっています。",
+        "source": "Google News",
+        "published_at": "2026-09-23",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5xbTJYUjNXbG1GU2lnVV9tM2lKdFg2MktOR0VVNzVYYUZPT21vLTFHTEl3RmtTYjRNZGdXaUxfVjlfQnFJOGNHZ3hpTFVieWZ5MWxfaHlpSkpQZw?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "「そのソフトウェア、もう買う必要ない？」――AIで内製開発、企業の32％が“購入しない”",
+        "content": "生成AIの普及により、ソフトウェアを外部から購入せずに自社で内製開発する動きが加速しています。調査によると、すでに企業の32％がAIの活用によってソフトウェアの購入を見合わせる方針を示しています。今後は企業のIT投資や開発体制のあり方に大きな変化をもたらす可能性があります。",
+        "source": "Google News",
+        "published_at": "2026-09-23",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE94blRzZkdTSVctTXYtVnBTZy1PVUNyODVBNkRabWNUQ045d0kyVGJ3UHNHcEZ5Wm5nZDVIZ2hESllQNGd5aTFLSWhMdnlGTUlZY1VZY3BkMnk3azA5SGZibDRVbzFVVE5Mc2hMLTdqN0I2QQ?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "習近平はなぜ出入国を厳格化？中国AI好調の裏で「人民の不満」が消えないワケ",
+        "content": "中国ではAI技術の開発や導入が進む一方で、社会的な統制や出入国の厳格化が強化されています。経済的な停滞感や社会不安が広がる中、人民の不満がどのように蓄積し影響を与えているのかを解説しています。",
+        "source": "Google News",
+        "published_at": "2026-09-23",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5UYkJ3dlNCSkg3RmlwZTJpZkpZUU9jWHpXYUlMeVhrcmN0MUpDT0xzbzFibmtHZ042WGRxN2R3TGlVaWFsNXhzdGx0bldsTFo5M1RFYWtn0gFPQVVfeXFMT2ltY0RPZFQ5U0MzZkVPRTd1WUZkNEx2dXpwVURXVlh5eUhOV1ZuQ3dhYVhpdU5CcjRjbzE4RHpZWURfeTU0OU04UjlPcjA2Zw?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "AIは「SI」に改称、トランプ大統領が宣言「フェイクに聞こえる」",
+        "content": "トランプ米大統領は、人工知能（AI）の名称を「SI」に変更すると宣言しました。理由として「AI」という言葉がフェイク（偽物）に聞こえることを挙げています。この方針転換は関連業界や今後の政策に影響を与える可能性があります。",
+        "source": "Google News",
+        "published_at": "2026-09-23",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9ERk9oMThhU1dxU21pUFN1M0hEcWd1cjVmUTJxcTUxRGRWLVpIMEVJcmhIX2VYdlROQkZRYU4zTTZUNmV4S2lSUnQ0MWdESDZib3g5Q2F6ZGh3QVFoeFRIOGUzTGJQUEU?oc=5",
+        "category": "政策・安全"
+      }
+    ]
+  },
+  {
     "date": "2026-09-22",
     "daily_summary": "本日のAIニュースは、トランプ氏による超知能開発の強力な推進表明の一方で、AIの軍事利用における誤作動トラブルや暴走の危険性から国際的な規制と開発の減速を求める声が強く上がっており、安全性と開発速度のバランスが大きな議論となっています。また、教育分野での人間ならではの人材育成や、学研・自治体・九州地域などにおける実務的なAI活用・基盤構築の動きも進展しており、社会全体でAIとの向き合い方が模索されている一日となりました。",
     "articles": [
