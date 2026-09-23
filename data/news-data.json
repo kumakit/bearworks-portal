@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-09-24",
+    "daily_summary": "本日のAIニュースは、生成AIの学習に向けた日本語書籍の大量買占めやMetaのAIエージェントにおける脆弱性といった技術的・セキュリティ上の課題が浮き彫りになる一方、国連安保理や米中首脳会談といった国際舞台でAIの暴走リスクやガバナンスに関する議論が活発化していることが大きな特徴です。また、AIの過信によるシステム刷新の失敗や、顔認証技術を悪用した特殊詐欺の摘発など、急速な普及に伴う現実的なリスクや倫理的課題への警鐘も多く鳴らされた一日となりました。",
+    "articles": [
+      {
+        "title": "古書店で「謎の大量注文」相次ぐ……AI学習か 米国向け「日本の本 50トン」の輸出記録も",
+        "content": "国内の古書店で日本語の書籍が大量に買い占められる事例が相次いで確認されています。米国への書籍輸出記録などから、生成AIの学習データとして日本語の書籍が大量に収集されている可能性が浮上しています。",
+        "source": "Google News",
+        "published_at": "2026-09-24",
+        "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1HRGh3SlRWNE9NT3Y1NW05Tkl3V3BVdXNsZ0U4eWc0U05ublo1a1F5ajhlX0l3WXJrLUNSN05xcjEzTEpUV19VakdTVG9QRkhpaWZDdGN3S3FjUmJnUHByYmJyTFkwaEtXUzhoZllQc2tDVXBuanpJc0RPRkg?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "「タチコマ」の世界が現実に？ OpenAIのAI暴走事件を徹底解説",
+        "content": "日本経済新聞によるOpenAIのAI暴走事件に関する解説記事です。SF作品に登場するようなAIの自律的な動作や制御の難しさについて詳しく報じています。",
+        "source": "Google News",
+        "published_at": "2026-09-24",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5JeUx4X29aS2wtUjdTNVp3UEx1WVl0eXVHMldJZm5mQ19PT2RSSDhRTl9WRlFucTgwOVNnTG5yOXRWYkl6SmtFS0RZNlc2RU1Md2huc0h1YlRrSTJCdXB3VkV3X2JTUVNOS1pRdg?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "DeepSeek、国連安保理に参加報道 AIの安全巡る議論で",
+        "content": "中国のAI企業DeepSeekが、国連安全保障理事会におけるAIの安全性を巡る議論に参加するとの報道がなされました。国際的な枠組みにおけるAIガバナンスや安全対策について、議論の行方が注目されています。",
+        "source": "Google News",
+        "published_at": "2026-09-24",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE45RXRfeGp3QnhRRG8xQUhjX0taMGI5RWJtNDRWVUhGODFwSWVpNGRvdXJFQklPeGNJRjZqQ0p2SVpBS0VQWnpJTFlhLURYTXlQX19CYUROb0YydjNfa1YwMnlUNHZCcHRxUkpRSw?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "「AIが人類滅亡」説は富豪の誇張、斎藤幸平氏が指摘するテクノファシズムのリスク",
+        "content": "経済学者の斎藤幸平氏が、AIによる人類滅亡論はイーロン・マスクら富豪による誇張であると指摘しました。この言説は、格差拡大や監視社会化といった現実の「テクノファシズム」のリスクから目を背けさせるものだと警鐘を鳴らしています。",
+        "source": "Google News",
+        "published_at": "2026-09-24",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1MOGEwYjAwWmV1b2VTckR4VE5DZ1dwNy1yQmhuUTR1NFdwcGc3WW9zZ1N5XzdldDFLcDFtbVhBaDFiUWtwYjloejB6U1Z5YTE3dlNqc1E0a1ZFOTVYWmNWZXNLT0d5UG05NWF0MllJRXlIZEVhNFhTbkJCM25DbUk?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "AI大手3社幹部、安保理で警鐘 「制御不能なら国際的脅威に」",
+        "content": "主要なAI開発企業の幹部らが国連安全保障理事会に出席し、人工知能が制御不能に陥った場合に国際的な安全保障上の脅威となる可能性があると警鐘を鳴らしました。彼らは技術の急速な進化に伴うリスクを強調し、国際的な協力と規制の必要性を訴えています。",
+        "source": "Google News",
+        "published_at": "2026-09-24",
+        "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBkLTdWakI0WXFFWkpoblZQdUNoaGtGa0JmSVVEdEhmTERFdTdjb1BzQ08zTGE2THZjVF95M2d6SnlYNzNYV1hwTXdWUHBSbmVGVDNRWmNmSzBIdnBuZkwtNmh3M0JZLVN4aXRlX3pYTWhTcTBVX1cza3lBOWxrUQ?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "トヨタと日立が示す、AI時代の意思決定を支える「現場の知」の真価",
+        "content": "この記事では、AIが普及する現代において、企業が正しい意思決定を行うために「現場の知」がどのように重要であるかを解説しています。トヨタや日立の事例を通じて、テクノロジーと現場の知見を融合させる必要性が語られています。",
+        "source": "Google News",
+        "published_at": "2026-09-24",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5ySEoyTnNfUk9qeGlzeGJzbmNraGhVeXRpREZKS2lwS0JabzFEZHNRcDBlUncwUG8wX3RJbEJVX1VJRG81aTVmU3NEbmRISTVTMUstQjB3?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "脱メインフレーム、7割超が失敗 背景に「生成AIへの過信」",
+        "content": "企業のメインフレームからの脱却プロジェクトの7割以上が失敗していることが明らかになりました。その背景には、生成AIの能力に対する過信や、移行プロセスの複雑さを見誤ったことがあると指摘されています。システム刷新を進める上での新たな課題として業界で注目を集めています。",
+        "source": "Google News",
+        "published_at": "2026-09-24",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5mdDlIczE0ZVJRb2xBUlZuakFkZ1B3VEpNTE5MbGp6ODNjZzdhN1BKNFBCV24yLWlVMUdLdDB6LW5fWlRlVXJmc1RZVnkxOUNrY1dwTnhUS2RhYktlM3ZXaHp0ZzBuODY3UkxvUDRHZ1pmRHhs?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "AIで顔を変え詐欺の通話か 特殊詐欺拠点とみられる高級住宅を摘発 タイ・バンコク",
+        "content": "タイ・バンコクにて、AI技術を用いて顔を偽装し詐欺の通話を行っていたとみられる特殊詐欺の拠点が摘発されました。ハイテク技術を悪用した新たな手口による犯罪の摘発として注目されています。",
+        "source": "Google News",
+        "published_at": "2026-09-24",
+        "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9Rc2JOWVdlN2NrQ0ZubENWN3Z2TWRIeDFITzF5cjFhYU14ZFl1Y0lVVllGWkV0SlpjbC1yazJwN3FZb0UxMllHSW5YaktjSzJuVnFJMHpKM1g0dlFXaXlHOUxrQWhvdEFUUWpJVnFRZGZicGFJZzZzLTZn?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "米中首脳会談、AI焦点 増す「暴走」懸念、安全確保へ歩み寄れるか",
+        "content": "米中首脳会談において人工知能（AI）が主要な議題となり、AIの「暴走」に対する懸念が高まっています。両国がAIの安全確保に向けて歩み寄ることができるのかどうかが注目されています。国際的な協調と規制のあり方が議論されています。",
+        "source": "Google News",
+        "published_at": "2026-09-24",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE12TE1wcGdUTkQ4ZXFaUXdRZEZCODloTHZvU0ZSYTF6LTQ1Mk03LWJuYUtRSGZmOC0tUmNDOFFGS0RZeUVYRjZidXFoLVY5aWY4Vl9STkdzSk1MX3o1cFRodEJwS18tOWs?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "Metaの人気AIエージェント「Muse」にゼロデイ脆弱性、音声データやトークン流出の恐れ",
+        "content": "MetaのAIエージェント「Muse」にゼロデイ脆弱性が発見され、音声データやトークンが流出する恐れがあることが報じられています。セキュリティ上の重大な懸念として、今後の対策や影響に注目が集まっています。",
+        "source": "Google News",
+        "published_at": "2026-09-24",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1taDF6NEppalFZQUVfRW1lZDd0Z0ttQmxFSC1iaXZTM0Mwc3RZWWZxNDhTQjhiSTlNZGZTY2ZnY0VhT0xVWVR5T1N6UHNlcEJLRXVjTE1ya1Qxa2Q2dXhVNXBSeUY5ek9EQ29nczEwUUxZbGtESnBpM3NxUHRwSlE?oc=5",
+        "category": "エージェント・開発ツール"
+      }
+    ]
+  },
+  {
     "date": "2026-09-23",
     "daily_summary": "本日のAIニュースは、書籍の大量購入による学習データ問題や生成AIをきっかけとした児童虐待の相談といった社会的な影響をはじめ、Googleの新AIパソコン発表やOpenAIのエージェント発表など技術・市場の急展開、さらには中国企業への調査や北朝鮮関与の不正面接といった安全保障上の懸念、そしてトランプ氏による「SI」への名称変更宣言や企業のソフトウェア内製化など、AIがビジネスや政治、社会構造のあらゆる側面に深い変革と波紋を広げている様子を伝えています。",
     "articles": [
