@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-09-26",
+    "daily_summary": "本日のAIニュースでは、中国でのAI俳優の台頭やLayerXによる業務プロセスの自己改善など実用化が加速する一方、Metaによる新型AIグラスや独自AI「ミューズ」および新端末の発表などウェアラブル分野の展開が目立ちました。さらに、データ爆増に伴う日本のHDD技術の復権や士業の生存戦略といった産業への波及に加え、米大統領宣言による名称変更の方針、米中首脳の動向、米大手企業による自主規制団体の検討など、技術革新と並行してガバナンスや国際的なルール作りをめぐる動きも活発化しています。",
+    "articles": [
+      {
+        "title": "中国で「AI俳優」が急成長、その影響とは",
+        "content": "中国において人工知能によって生成された「AI俳優」の市場が急速に拡大しています。エンターテインメント業界における制作プロセスの効率化が進む一方で、従来の俳優の仕事への影響や倫理的な課題について議論が活発化しています。",
+        "source": "Google News",
+        "published_at": "2026-09-26",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBhcWN3YTFqV3lVckVFbUF1R2ZGOWRscmtMWWI0UDNtWnJ1UVk0RGZ2YTFzNGxOaGo3dF9DMk14TFRmeEJ5WHpqUmgyX2M1bVZT?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "月30万円のAIを動かすLayerXの仕事の自己改善ループ",
+        "content": "LayerXが導入した月30万円のAIツールは、単なる自動化ツールを超えて学習しない社員のような存在であった。同社はAIを活用した業務プロセスの自己改善ループを回し始め、効率的な働き方の実現を目指している。AIの能力を最大限に引き出すための新たなアプローチとして注目されている。",
+        "source": "Google News",
+        "published_at": "2026-09-26",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5rZzdROXhUdlJBb2JZU3R0ZktIbkQwMHlyQ3VFR1d2ZlpPVmlKMEtMWVJmNEpNYUo4NWJhZWtLUjl0aUZCbW5vUmVCUTVHck9VVHVyREtyR3FOMmJFakpoYy1oUWVQUFgtX01xQ3FrZnV5dw?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "HDD、AI用データ爆増で復権 生きる日本の「すり合わせ」",
+        "content": "生成AIの普及に伴う膨大なデータ増加により、大容量かつ低コストなHDDの需要が再び高まっています。この動向の中で、日本のメーカーが持つ独自の「すり合わせ」技術が改めて強みを発揮しています。半導体やストレージ業界における新たなサプライチェーンの動きとしても注目されています。",
+        "source": "Google News",
+        "published_at": "2026-09-26",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE41bTY0SDBUMk1MWDZ1WEM4TkZUdHFEOGlEMjNRVEdmdkxJb1JIdTA4MnpJN0VFUTlYZGpBc3hiOVFJblFvNXhLVGtDdUkwYnd2aDBnajk3aFREN25GZVpsM0pwbHhlWnJPd2VqMA?oc=5",
+        "category": "インフラ・半導体"
+      },
+      {
+        "title": "ひとり税理士受難時代：AIと大手寡占に対抗する2大戦略",
+        "content": "AIの浸透や大手の寡占化が進む中で、ひとり税理士が生き残るための2大戦略が解説されています。適切な工夫を行うことで、収入を倍増させることも可能であると述べられています。",
+        "source": "Google News",
+        "published_at": "2026-09-26",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBkX01oUHZuc282bTkxUWJybS1uUWxQRTBhRVl2UFBuRl83UDBiVEs4TjE0Q0thbVA5TEVBc2FrZkdicGJPdVQzOXllVHbSAU9BVV95cUxOVEhCejgzZDRHY1MzUEh4amdwOHJlNGE2TmpjWlNlMXVRemk3bUNVRGNMc2NMc2lxMjlXeGVXOFB6Uy1vbTQxbmI1VWowRjdJ?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "Meta、AIグラス一挙発表 第3世代「Ray-Ban Meta」や4.2万円の「Glasses」",
+        "content": "Metaが第3世代の「Ray-Ban Meta」を含む新型AIグラスを一挙に発表しました。手頃な価格帯のモデルも登場し、ウェアラブルAIデバイスの普及に向けた新たな展開として注目を集めています。",
+        "source": "Google News",
+        "published_at": "2026-09-26",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1uVW5KY3pxSFQ0UnFDQ3lsR1ZKeFNmZ1BwTFZBa21VbG9EWEFweUt6WXNwY25KeEhzWjVTUENnZW5ObktJSTFmOGF6MWxyR1F5SmkzS1QyQ050QkJIVWJoRk94RU4?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "メタ、眼鏡に独自AI「ミューズ」搭載 販売1000万台超えへ",
+        "content": "メタは、スマートグラスに独自のAIアシスタント「ミューズ」を搭載する方針を固めました。これによりユーザーの利便性が大幅に向上し、販売台数は1000万台を超える見通しとなっています。ウェアラブルデバイス市場における同社の存在感が一段と高まっています。",
+        "source": "Google News",
+        "published_at": "2026-09-26",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9PWG5kWU9Gc0VndVVyZFZfNzdOcUlhaU10dHczYUpSM0cwM2pvd050bmstQUMzTzFXVnA3cERnSXgyWDZXNmtsNDdMbkI4bG54eXBLQVg1czVndDZndUJXWWE2V2ZRcnJJQUdWQw?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "メタがAIアシスタント専用の手のひらサイズ端末「Muse Charm」を発表",
+        "content": "メタは、人気の「たまごっち」に似た手のひらサイズのAIアシスタント専用端末「Muse Charm」を発表しました。このデバイスは、日常的なAIとの対話をより身近で手軽に楽しめるように設計されています。斬新な形状と最新のAI技術の融合が注目を集めています。",
+        "source": "Google News",
+        "published_at": "2026-09-26",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBCeUlENDBLLW9TdUdZZFVpS3hVZG9lYnE2V2NDdDRKVWtBcFBleGstU2tERk9mUE5YZWtvdzFtY0J4d3VLaDFIQVJTVUYzM2Eyd3c?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "AIは「SI」に改称 米大統領宣言",
+        "content": "米大統領宣言により、人工知能（AI）の名称が「SI」に変更されることが発表されました。この変更は今後のテクノロジー政策や産業界に影響を与える可能性があります。詳細な背景や目的については今後の動向が注目されます。",
+        "source": "Google News",
+        "published_at": "2026-09-26",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5GTXpPdzJkRWZ2ZmhibFZrTEFGSFpZSlhwSnBJX3JxTG5QTzQzd2F5bm5FUFhFM1VCQ1pEclhpZnhkWkVlekZfWE9Mazg2dlZ6?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "習近平氏「AI管理の責任、米国にも」 規制拒否のトランプ氏を説諭",
+        "content": "中国の習近平国家主席が、人工知能（AI）管理における米国側の責任を主張し、規制を拒否するトランプ氏に対して説諭を行いました。AIの開発や運用ルールをめぐる米中間の動向として注目されています。",
+        "source": "Google News",
+        "published_at": "2026-09-26",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFB1MTVGYzgzN0hnaWhFVGRpSGtqdkhHZ3p0bTItcFljdjRPZVBnUEVCS1Q0SzJUVUVaN2pyRGRpc0hBUGQyU3dnNWZHcS0xSHM1NGZWRkZSOVJkOGI0OG5TZ2hyVWdUb1ZqbV85QQ?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "米AI大手3社、年末にも自主規制の新団体設立を検討 トランプ政権の推進姿勢に対応",
+        "content": "米国の主要なAI開発企業3社が、AIに関する自主規制を目的とした新団体の設立を年末にも検討していることが明らかになった。これはトランプ氏がAI技術の推進を重視する方針を示す中で、業界としての自主的な取り組みを示し、政策動向に対応する狙いがある。今後の米国のAI規制や産業の発展に影響を与える可能性がある。",
+        "source": "Google News",
+        "published_at": "2026-09-26",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1FekZyemtMNXlhTVZUZjYzelBkOVJlZ2xka1hVZWY5RDJnNjQ1TExzZE1Hd0hMbHc0OERYdVNMU0JnTEpJRkpVdUpqMDVkdFFfSVlqeVZQcXFabEtjeHc?oc=5",
+        "category": "政策・安全"
+      }
+    ]
+  },
+  {
     "date": "2026-09-25",
     "daily_summary": "本日のAIニュースは、OpenAIのエージェントによる豪政府サイトへの不正侵入発覚を契機としたセキュリティ懸念や国連での「AI脅威論」が高まる一方、NVIDIAによるハギングフェイス買収やアリババ・ソフトバンクの半導体戦略など産業界での開発競争が激化していることを伝えています。また、米中首脳会談でAIに関する対話継続や「競争と協力」で一致したように、安全保障と経済圏の防衛を見据えた国際的なガバナンスと技術革新の両立が重要なテーマとなっています。",
     "articles": [
