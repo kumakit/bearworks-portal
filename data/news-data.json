@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-09-28",
+    "daily_summary": "本日のAIニュースは、声優業界における生成AIの権利侵害問題や、米中首脳会談によるAIの「SI」呼称合意および開発競争といった国際的動向が報じられたほか、産業・造船・CAD分野でのAIロボットや熟練知見の活用、さらにはマイクロン社の株価急騰やアセマネOneのAI運用者への出資など、技術の産業実装と市場の双方において大きな動きが見られた一日となりました。",
+    "articles": [
+      {
+        "title": "声優業界、生成AIによる無断模倣の被害が深刻化 ベテラン声優らが権利保護を訴え",
+        "content": "生成AIによる声の無断模倣や権利侵害が声優業界で深刻な問題となっています。第三者が無断で生成した音声で報酬を得るケースも発生しており、ベテラン声優らが法的権利の認可と保護を強く求めています。AI技術の急激な普及に伴うクリエイターの権利保護が急務となっています。",
+        "source": "Google News",
+        "published_at": "2026-09-28",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5UWDVDZkQ3d3FJNDBNelpxbjFmU0FoVTAtZGJRNXNhdUIwVnViTkd6a1RtQzQzeWh0S19WdlN4UVFTOWZrc1dxQUMzYlgzX3VY?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "AIを「SI」と呼称 米中が合意",
+        "content": "アメリカと中国の間で、人工知能（AI）の新しい呼称として「SI」を採用することで合意がなされました。この新たな定義により、両国間における今後の技術的な対話や協力体制に影響を与える可能性があります。詳細については今後の動向が注目されます。",
+        "source": "Google News",
+        "published_at": "2026-09-28",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBQVjRVdWh2Y3doSlJzd0NiaWNGb0hOWmFfZ2IzX0l1ak15MzVmM2lhVXRrNEs0eGsxbWxaTnNGamIwOUM2ZEF2WkpsR2daTDVs?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "AIは「SI」と言い換え 米中首脳が合意と米ホワイトハウス発表",
+        "content": "米ホワイトハウスの発表によると、米中首脳会談において人工知能（AI）を「SI」と言い換えることで合意に至りました。この用語の変更は両国間の技術対話や議論に影響を与える可能性があります。詳細な意図や今後の運用については引き続き注目されています。",
+        "source": "Google News",
+        "published_at": "2026-09-28",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9LZUZNREJsSDFIQUhCZW92M2xJTFhYLWVKYnZWR3F6aWRTN1Y1UHVhTWJQeEpkX1BVOER6bGNhSkNuQ0dOSWo2S2F6dVlqc0FuemNDV0RCazE3a2J5V3VkWWtiUEI4UWtsLUJhXw?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "米大統領、ＡＩで対中リード維持を表明 対話強化と開発推進へ",
+        "content": "米大統領は人工知能（AI）分野において中国に対する優位性を維持する方針を示し、対話を強化しつつも開発を推進していく考えを明らかにしました。台湾を巡る問題についても触れ、習近平国家主席との意思疎通に言及しています。",
+        "source": "Google News",
+        "published_at": "2026-09-28",
+        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE0zQ0ozLXFmblpvQUlnVmt3QzJlVWRvd1N5QktnZVo4NDIyWk9PNTBKRE8ycHlJMU94aDdBaG5FZ3piVWp6VXJxMkhud1cxQWllTWR4MkVNOGxDNUJRUDVndUU5MA?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "産業ロボットの雄ファナックが貫くオープン化の肝",
+        "content": "ファナックはグーグルからの独占的な提携オファーを断り、産業用ロボット分野におけるオープン化の道を歩み続けています。工場でのフィジカルAIの実装が進む中、同社は独自の戦略でエコシステムの拡大を図っています。",
+        "source": "Google News",
+        "published_at": "2026-09-28",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9VVDlwNnNzd1ZmdUxjMkp5UUJtWXlmYmc5WlZ3cERQSjY0WnF2VUEtMXVtMF82dUtnRGFCUnBvaWRNX3ljLUVuZXFLQXdOSVVhRWVadnRPM1hDODFKXzVv?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "造船再生、カギはAIロボットか…国交省が日米で共同開発",
+        "content": "国土交通省は、日本の造船業の再生を目指し、AIやロボット技術の共同開発を日米間で進める方針を固めました。最先端のテクノロジーを導入することで、生産性の向上や国際競争力の強化を図ります。今後の具体的な技術協力の行方に注目が集まっています。",
+        "source": "Google News",
+        "published_at": "2026-09-28",
+        "url": "https://news.google.com/rss/articles/CBMiQkFVX3lxTE1aOTdnQllfMl9VVzNaUHFfNF9uQlJ0VXd0Q1cza1dsbjVpakF2MTE2dTQ3Zk1ISkhuY1lZR25ueEp0UQ?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "UEL、熟練者知見をAIで再現 3DCAD新機能",
+        "content": "UELは、熟練者のノウハウや知見をAIによって再現する3DCADの新機能を発表しました。設計業務の効率化や属人化の解消が期待されます。",
+        "source": "Google News",
+        "published_at": "2026-09-28",
+        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5oSHVfRFRZTUxlb3NXTURlTmZvM1psOVRCTHRKSm1DMDhfeUZLc0dyVXZmdW9LQkdlOGtMSHJkbjkzT0laMlVEWnVRZEZEVXdwSkJQVE1odU8?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "AI巡る投資家心理が急旋回－恐怖と強欲の間で揺れる米株市場",
+        "content": "人工知能（AI）関連の株式市場において、投資家の心理が急速に変化しています。市場は「恐怖」と「強欲」の間で大きく揺れ動いており、今後の動向に注目が集まっています。",
+        "source": "Google News",
+        "published_at": "2026-09-28",
+        "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1kWFk0Q0I4eDk2V0ZvVzgwN3FXZTZYM3hkY2ozMFZXRGg2U0QzS2RjeWI1TE9QWXVDdGlma1VGUVVQWkJKWGRkSk5wVzBFNHRfZml0dkgyeTJWUVhLZzE2b0RKY2tQUTU0dDdYSFJoSlkyX3NEVDJN?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "アセマネOneが「AI運用者」シンガポール新興に出資、国内大手で初",
+        "content": "資産運用会社のアセマネOneが、シンガポールの新興企業が開発する「AI運用者」に対して出資を行いました。国内の主要な資産運用会社によるAI技術を活用した運用体制への出資は、これが初めての事例となります。AIによる高度な市場分析や投資判断の導入が、今後の資産運用業界にどのような影響を与えるか注目されます。",
+        "source": "Google News",
+        "published_at": "2026-09-28",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5ZLUJnZW91dnhKQWFGdFNmMnBxQUFZZzBoOXcyUEZUbVVLTTBldEZ0QnBwaFJCbGJxaGoyQUxSbUw0TWtSUmotY3RZQTZycXNmQV84ZTdZUUJ3bkEyTW1ic000SldFY2tkMHBmdw?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "AI需要でマイクロン株が年初来260％超上昇、9月30日決算で問われる持続力",
+        "content": "AI需要の拡大に伴い、マイクロン・テクノロジーの株価が年初来で260%を超える大幅な上昇を記録しています。9月30日に予定されている決算発表では、この好業績の勢いとAI特需の持続可能性が投資家から厳しく問われることになります。",
+        "source": "Google News",
+        "published_at": "2026-09-28",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5pMzBlemN2X0ZTOUxqX1Njck9KTjJmVDVLOVh5Z2s4dDBUOWJBeS1SMkRLTkJPZDJjblVGNEczX0VNTXFtMnEtN3A1MDJQQ3YyLUhaX3FfY1Vvdw?oc=5",
+        "category": "事業・投資"
+      }
+    ]
+  },
+  {
     "date": "2026-09-27",
     "daily_summary": "本日のAIニュースでは、ビル・ゲイツ氏によるAIの潜在的脅威と法規制の必要性の訴えをはじめ、OpenAIにおける画像流出やシステム接続のトラブルなどセキュリティを巡る懸念が相次いで報じられました。また、ウクライナによるロシア製無人機の外国製部品規制の訴えや、米中首脳会談でのAI呼称変更の合意といった国際的な動きに加え、開発効率を高める新たなツール発表など、AI技術の急速な進化に伴う規制強化や安全管理の重要性が浮き彫りになる一日となりました。",
     "articles": [
