@@ -304,3 +304,57 @@ export function normalizeDashboardData(data: any): DashboardData {
 
   return normalized;
 }
+
+/** プロジェクト固定カラー定義 (Stitchデザイン・ダッシュボード統一) */
+export const DEFAULT_PROJECT_COLORS: Record<string, string> = {
+  "bearworks-prod": "#8b5cf6", // バイオレット
+  "bearworks-dev": "#c084fc", // ライトパープル
+  "Gemini API Key in OCI": "#3b82f6", // ブルー
+  "bearworks-calorie-staging": "#14b8a6", // ティール (Teal 500)
+  "bearworks-calorie-prod": "#0d9488", // ディープティール (Teal 600)
+  "bearworks-calorie": "#14b8a6", // ティール
+  "N100": "#10b981", // エメラルド
+  "bearworks-apps": "#ec4899", // ピンク
+  "mission-control": "#f59e0b", // アンバー
+};
+
+/** 未登録プロジェクト用の動的フォールバックカラーパレット (固定色と重複しない鮮明な色) */
+export const PROJECT_COLOR_FALLBACK_PALETTE = [
+  "#06b6d4", // シアン
+  "#f43f5e", // ローズ
+  "#84cc16", // ライム
+  "#6366f1", // インディゴ
+  "#0ea5e9", // スカイ
+  "#eab308", // イエロー
+  "#a855f7", // パープル
+  "#64748b", // スレート
+];
+
+/** プロジェクトキー一覧に対して重複しない色分けマップを生成する */
+export function getProjectColorsMap(projectKeys: string[]): Record<string, string> {
+  const map: Record<string, string> = { ...DEFAULT_PROJECT_COLORS };
+  const usedColors = new Set(Object.values(map));
+
+  let paletteIdx = 0;
+  projectKeys.forEach((key) => {
+    if (!map[key]) {
+      let assignedColor = "";
+      for (let i = 0; i < PROJECT_COLOR_FALLBACK_PALETTE.length; i++) {
+        const candidate = PROJECT_COLOR_FALLBACK_PALETTE[(paletteIdx + i) % PROJECT_COLOR_FALLBACK_PALETTE.length];
+        if (!usedColors.has(candidate)) {
+          assignedColor = candidate;
+          paletteIdx = (paletteIdx + i + 1) % PROJECT_COLOR_FALLBACK_PALETTE.length;
+          break;
+        }
+      }
+      if (!assignedColor) {
+        assignedColor = PROJECT_COLOR_FALLBACK_PALETTE[paletteIdx % PROJECT_COLOR_FALLBACK_PALETTE.length];
+        paletteIdx++;
+      }
+      map[key] = assignedColor;
+      usedColors.add(assignedColor);
+    }
+  });
+
+  return map;
+}

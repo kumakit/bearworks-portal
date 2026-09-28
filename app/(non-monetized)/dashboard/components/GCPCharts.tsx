@@ -25,6 +25,7 @@ import {
   GCPFreeTierUsage,
   formatNumber,
   formatJPY,
+  getProjectColorsMap,
 } from "../lib/dashboardUtils";
 
 interface GCPChartsProps {
@@ -72,6 +73,57 @@ function ChartTooltip({ active, payload, label, isCost = false }: any) {
   );
 }
 
+// プロジェクト別コスト比較の Y軸カスタムラベル (長い名前を適切に改行)
+function ProjectYAxisTick({ x, y, payload }: any) {
+  const value = String(payload?.value || "");
+
+  let lines: string[] = [value];
+  if (value.includes(" ")) {
+    // スペース区切りの場合 (例: "Gemini API Key in OCI")
+    const words = value.split(" ");
+    if (words.length > 2) {
+      lines = [words.slice(0, 2).join(" "), words.slice(2).join(" ")];
+    } else {
+      lines = words;
+    }
+  } else if (value.length > 16 && value.includes("-")) {
+    // 長いハイフン区切りの場合 (例: "bearworks-calorie-staging")
+    const parts = value.split("-");
+    if (parts.length >= 3) {
+      lines = [`${parts[0]}-`, parts.slice(1).join("-")];
+    } else if (parts.length === 2) {
+      lines = [`${parts[0]}-`, parts[1]];
+    }
+  }
+
+  const isMultiLine = lines.length > 1;
+
+  return (
+    <g transform={`translate(${x},${y})`}>
+      <text
+        x={-6}
+        y={0}
+        textAnchor="end"
+        fill="#4b5563"
+        fontSize={10}
+        fontWeight="bold"
+      >
+        {isMultiLine ? (
+          lines.map((line, idx) => (
+            <tspan key={idx} x={-6} dy={idx === 0 ? -2 : 12}>
+              {line}
+            </tspan>
+          ))
+        ) : (
+          <tspan x={-6} dy={4}>
+            {value}
+          </tspan>
+        )}
+      </text>
+    </g>
+  );
+}
+
 export function GCPCharts({
   googleBilling,
   dailyCosts30d,
@@ -107,38 +159,12 @@ export function GCPCharts({
   }, [dailyCosts30d]);
 
   const projectColorsMap = React.useMemo(() => {
-    const baseColors: { [key: string]: string } = {
-      "bearworks-prod": "#8b5cf6",
-      "bearworks-dev": "#c084fc",
-      "Gemini API Key in OCI": "#3b82f6",
-      "N100": "#10b981",
-      "bearworks-apps": "#ec4899",
-      "mission-control": "#f59e0b",
-    };
-
-    const palette = [
-      "#3b82f6", // ブルー
-      "#10b981", // エメラルド
-      "#f59e0b", // アンバー
-      "#ec4899", // ピンク
-      "#8b5cf6", // バイオレット
-      "#06b6d4", // シアン
-      "#f43f5e", // ローズ
-      "#14b8a6", // ティール
-    ];
-
-    const map: { [key: string]: string } = { ...baseColors };
-    
-    let colorIdx = 0;
-    projectKeys.forEach((key) => {
-      if (!map[key]) {
-        map[key] = palette[colorIdx % palette.length];
-        colorIdx++;
-      }
+    const allKeys = new Set(projectKeys);
+    (googleBilling.projects || []).forEach((p) => {
+      if (p.id) allKeys.add(p.id);
     });
-
-    return map;
-  }, [projectKeys]);
+    return getProjectColorsMap(Array.from(allKeys));
+  }, [projectKeys, googleBilling.projects]);
 
   return (
     <div className="flex flex-col gap-6">
@@ -212,7 +238,7 @@ export function GCPCharts({
               >
                 <CartesianGrid strokeDasharray="3 3" stroke="#f3f4f6" horizontal={false} />
                 <XAxis type="number" tickFormatter={(value) => `¥${value}`} tick={{ fontSize: 9, fill: "#9ca3af" }} />
-                <YAxis dataKey="name" type="category" tick={{ fontSize: 10, fill: "#4b5563", fontWeight: "bold" }} width={100} tickLine={false} axisLine={false} />
+                <YAxis dataKey="name" type="category" tick={<ProjectYAxisTick />} width={105} tickLine={false} axisLine={false} />
                 <Tooltip
                   formatter={(value: any) => [formatJPY(value), "コスト"]}
                   contentStyle={{ backgroundColor: "rgba(255, 255, 255, 0.9)", borderRadius: "1rem", border: "1px solid #f3f4f6" }}

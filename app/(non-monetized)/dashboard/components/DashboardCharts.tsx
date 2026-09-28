@@ -14,7 +14,7 @@ import {
   Bar,
   ReferenceLine,
 } from "recharts";
-import { HourlyMetric, DailyCost30d, DailyBigQueryUsage30d, formatNumber } from "../lib/dashboardUtils";
+import { HourlyMetric, DailyCost30d, DailyBigQueryUsage30d, formatNumber, getProjectColorsMap } from "../lib/dashboardUtils";
 
 interface DashboardChartsProps {
   hourlyData: HourlyMetric[];
@@ -85,16 +85,10 @@ export function DashboardCharts({ hourlyData, dailyCosts30d, bigqueryDailyUsage3
     return Array.from(keys);
   }, [dailyCosts30d]);
 
-  // プロジェクトの色分けマップ (Stitchデザインのパープル系)
-  const projectColors: { [key: string]: string } = {
-    "bearworks-prod": "#8b5cf6",
-    "bearworks-dev": "#c084fc",
-    "Gemini API Key in OCI": "#3b82f6",
-    "N100": "#10b981",
-    "bearworks-apps": "#ec4899",
-    "mission-control": "#f59e0b",
-    "default": "#94a3b8",
-  };
+  // プロジェクトの色分けマップ (Stitchデザイン・共通パレット)
+  const projectColors = React.useMemo(() => {
+    return getProjectColorsMap(projectKeys);
+  }, [projectKeys]);
 
   return (
     <div className="rounded-[2.5rem] p-6 md:p-8 border bg-white shadow-soft border-gray-100 flex flex-col gap-6">
@@ -269,7 +263,7 @@ export function DashboardCharts({ hourlyData, dailyCosts30d, bigqueryDailyUsage3
                   dataKey={`costs.${projKey}`}
                   name={projKey}
                   stackId="a"
-                  fill={projectColors[projKey] || projectColors["default"]}
+                  fill={projectColors[projKey] || "#94a3b8"}
                   radius={[2, 2, 0, 0]}
                 />
               ))}
