@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-10-01",
+    "daily_summary": "本日のAIニュースは、トランプ米政権による政府用語の「SI（超知能）」への変更命令や企業主導の自主規制方針、米FTCによるリスク調査など国家・産業レベルの動向が目立ちました。国内では、東京地裁が声の「パブリシティー権」を初めて認める司法判断を下したほか、NECのAI・安保分野を軸とした躍進や、台風予測、認知症予防、科学研究など多様な分野でのAI活用が進む一方、エンジニアの育成モデルの変革期にあることが示されています。",
+    "articles": [
+      {
+        "title": "トランプ大統領、AIに代わる「SI＝超知能」の使用を命じる大統領令に署名",
+        "content": "トランプ大統領は、政府の公式文書や発表において従来のAIという用語に代えて「SI（超知能）」を使用することを義務付ける大統領令に署名しました。この決定により、政府のテクノロジー戦略における呼称や位置づけに大きな変化が生じる可能性があります。今後の行政文書における表現の統一と、超知能技術の推進に注目が集まっています。",
+        "source": "Google News",
+        "published_at": "2026-10-01",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE80RUllVC1VbWdaQW0wYUtPNDFMVUs0N2E4N2FIekxueTRJaFpTTVktWmo0WGlxTHN0SUgydXR6TGdOS0t4VXRWeEdvYzNGUHlTdDFBWDZrZmRqYmRqLWRzRWlGckVodzAyY1BtZ1N2WDNNeEF4dUFKX3QtNlV3Yjg?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "トランプ氏、アンソロピックなどAI企業20社と自主規制で合意",
+        "content": "トランプ氏がアンソロピックをはじめとする主要なAI企業20社と人工知能に関する自主規制で合意しました。この協定は急速に発展するAI技術の安全性と信頼性を確保することを目的としています。",
+        "source": "Google News",
+        "published_at": "2026-10-01",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE04RDNPOVg4bG5kUjFaRzlCRlFZYTRUTHFrdUdObTJTUUgwbkVSOTFzOUEtNEQxeTJYTHpsMlBFMTRRYlljeTFOdXdPOUtFN3lwdGdjNzJvTmZQNUtFZHdwS2RQYlU4OFRTbk1PMA?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "ＡＩ開発減速、「企業が規制」協定 トランプ氏、国の関与には応ぜず",
+        "content": "トランプ氏はAI開発の減速を目的とした企業主導の規制協定について、国家の直接的な関与には応じない姿勢を示しました。企業の自主的な取り組みに委ねる方針が示されており、今後のAI政策や規制のあり方に影響を与える可能性があります。朝日新聞が報じています。",
+        "source": "Google News",
+        "published_at": "2026-10-01",
+        "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1YZnNXeFdKbUdoNVlSVDZWMTZxMVd2MmdlTVFBOC1IcjJRSHVsY2FJNVYzbGplUWUya2tseTdQN2pMQnRWdHdOYi1pNzRmcFFNUm42WEZ0YzhBQ2Jk?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "声にも「パブリシティー権」初判断 生成AIで模倣、人気声優訴え―削除請求は退ける・東京地裁",
+        "content": "生成AIによって声を無断で模倣された人気声優が提訴した裁判で、東京地裁は声にも「パブリシティー権」が認められるという初の司法判断を下しました。ただし、該当する音声データの削除請求については退けています。声の権利保護における重要な一歩として注目されています。",
+        "source": "Google News",
+        "published_at": "2026-10-01",
+        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5sU0RDMmUyZXRxQWI5UkpHR2dYM0NJMTRvVE5WLVpOSlFnaTVDeGtUdVpPbEZsVUoyUXZ5ZUpkNlpnUVkwbkZib05Od2RhUTkydV9BNUJZcVFxajJySzVYV0x4aw?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "NEC、富士通を20年ぶり逆転 AIと安全保障で挑む森田改革の正念場",
+        "content": "日本経済新聞によると、NECが時価総額などで富士通を約20年ぶりに逆転しました。人工知能（AI）や安全保障分野を軸にした構造改革が成果を上げており、今後の展開が注目されています。",
+        "source": "Google News",
+        "published_at": "2026-10-01",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFAwRWRRRGZuYUpyTGJCeHVDQjZoUENka01DT2VMNW8xREM4Y05hY2lUSzQyYlpZSWlLQnJkUXpHdGdXTzVGU3ZDeEtvUDRpYkhiS0Z5aWJRY2c5UmdPS29SZXNOcU5LZXRuUTRjVw?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "米連邦取引委員会がAIリスクの調査を開始 開発企業幹部らに証言求める方針",
+        "content": "米連邦取引委員会（FTC）は、急速に普及する人工知能（AI）に関連する潜在的なリスクについての調査を開始しました。主要なAI開発企業の幹部らに対し、安全性確保の取り組みやリスク管理体制について証言を求める方針です。この動きは、AI技術の急激な発展に伴う規制強化の第一歩として注目されています。",
+        "source": "Google News",
+        "published_at": "2026-10-01",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1RcXRRVHVOTk1JazF6MXE4OWZObFAydmZVdV9EdUNwajZobGd6NnFINkpHM2J5aUk1clM1V3Q0NEFpY3NlUHl0ZkJhUGhpMWJTbE55d2piX2ViWXJReUFtaFhjVzhxalJlVU5LbndVN2VHNmFH?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "大阪：認知症予防AI頼んます",
+        "content": "大阪における認知症予防の取り組みに人工知能（AI）を活用する話題を報じたニュースです。地域社会でのAI技術を用いた健康管理や予防医学への期待が示されています。",
+        "source": "Google News",
+        "published_at": "2026-10-01",
+        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5tY2ZiWEpIOWtacUpKYlRmUThiT0twaVRMTEh3TGNMbndvXzJpTkMwSzlmX1p4ZWNLbE9PakNTY1B4SDRLUDY2a2cwVVJ3Ui1JdjdtVVozaFN0bWthQ3k0eDVNdXJ4M3pEX2dvTG9xZEw?oc=5",
+        "category": "その他"
+      },
+      {
+        "title": "AIで「人月モデル」は崩壊する それでも“若手エンジニア不要論”が危険な誤解である理由",
+        "content": "AIの普及により従来の「人月モデル」は崩壊に向かうと指摘されています。しかし、自動化が進む現代においても、経験を積む土台となる若手エンジニアを軽視する「不要論」は大きな誤解であり危険です。これからの時代に求められるエンジニアの育成と役割の変化について解説しています。",
+        "source": "Google News",
+        "published_at": "2026-10-01",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBHYzZnRV9vSkdZd3hZU0VwUWVpdU1YMUhXSzVpTVd5and4RDNsYjNEUVFQTFBHYllUNmoxOGxRUklIbjd4ZGhmelFLR2N4WHRzYjRrNlI3RGgxejh5cm84Ty1FdzNidUlFbVJuOERGdUd2QQ?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "AI for Science革新的研究推進事業（ARiSE） 新規採択課題の決定について",
+        "content": "科学技術振興機構（JST）は、AIを活用した科学研究の推進を目指す「AI for Science革新的研究推進事業（ARiSE）」の新規採択課題を決定しました。本事業により、AI技術を駆使した新たな研究パラダイムの創出や、科学技術の各分野における革新的な成果の期待が高まります。",
+        "source": "Google News",
+        "published_at": "2026-10-01",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBCaUd0X0dBTHUzcXNMUHdhbWp4LWU3ZVdCT2JDYlQtUW9zdlY5VHQ4T3puQ1NsVkVMRkZ1eHM3Wm42QVJRMTQ2TklVLWNSclU3bkNhaGsxSllwOU1oNVE?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "台風予測にAI革命 その実力を徹底分析",
+        "content": "NHKニュースが台風予測におけるAI活用の最新動向とその実力を徹底的に分析した記事です。従来の気象予測モデルと比較して、AIがどのように精度や速度の向上をもたらしているのかを解説しています。",
+        "source": "Google News",
+        "published_at": "2026-10-01",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1XbFJJeEljOUl3VWpMREd2T2ktVmRCV2dibHVFdFF0TFYxWHRXM2ZVbTJkMGdQMnJUZzhWVnRNNnJHTkdiaUNQbzg2TDkyRUl1Wlg1ZW1uQXlCNmNKSXdN?oc=5",
+        "category": "モデル・研究"
+      }
+    ]
+  },
+  {
     "date": "2026-09-30",
     "daily_summary": "本日のAIニュースは、Anthropic社のIPO文書やAIエージェントの暴走事故を背景とした技術の安全性・存亡リスクへの懸念が高まる一方で、AWSの新ツール公開やクアルコムとアマゾンの提携によるインフラ開発が加速する様子が報じられました。また、米国のIPO延期に見られる市場の慎重姿勢や、トランプ氏による政府規制の拒否と米国の優位性維持を重視する政治的動向など、技術革新、リスク管理、そして市場・政策のバランスが大きな焦点となっています。",
     "articles": [
