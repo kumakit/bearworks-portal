@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-10-02",
+    "daily_summary": "本日のAIニュースでは、政府が高性能AIの社会実装や人手不足解消に向けた行動計画の策定を急ぐ一方、産業界でも企業のAI活用や組織のスリム化が進む動きが報じられました。技術面ではGoogleの新型モデル「Gemini 4 Argon」の発表と安全性を巡る議論、主要AIモデルの特性比較が注目されたほか、AIサーバー需要の急増に伴う日本企業への期待や、AI開発の「減速」を巡る課題など、国家戦略からビジネス、技術の安全性にいたるまで幅広い領域でAIの存在感が一層高まっています。",
+    "articles": [
+      {
+        "title": "高性能AIの社会実装「成長戦略実現に不可欠」、産業構造転換など行動計画へ",
+        "content": "高市首相は高性能AIの社会実装が成長戦略の実現に不可欠であるとし、産業構造転換などを盛り込んだ行動計画の策定を表明した。これにより、AI技術を活用した国家的な成長戦略と産業の抜本的な改革が推進される見通しである。",
+        "source": "Google News",
+        "published_at": "2026-10-02",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE83N2RRWXFSX0J1d1U2YVBwT1ktMEdHTWx2TjNiN25ndWJyRVRVOTFuQmhvbW8zelhnTEdpYjFnd293Q3RSM1Q0SWw5S0NTLUhhWnpKWjI4RjdrWE5PX3ZIT2lyc0xCNnBFS1gtRU9wS1FLOTB2eDI2TVlXZ3FGeEk?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "高性能AI普及へ年内に行動計画 高市首相、成長戦略会議で表明",
+        "content": "高市首相は成長戦略会議において、高性能AIの普及に向けた具体的な行動計画を年内に策定する方針を表明しました。AI技術の社会実装を加速させ、国の成長戦略として活用することを目指しています。",
+        "source": "Google News",
+        "published_at": "2026-10-02",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1vNjBKVEJ3WWdjR2ZRZ3hERnIzbDVWOS1TS0dxblJlYzhCUzVOek9PNTJfRWxUMVFfbWhFbktUYzQ2bE92NHFkNTc2c2Fmbm1FT2dQUFF4dHU5eWlGNEpRZ2g2cG0yXzROTXRTTw?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "建設業人手不足 解消を首相指示 ＡＩ導入計画も",
+        "content": "首相は深刻化する建設業の人手不足を解消するため、新たな対策の取りまとめを指示しました。この中には業務効率化に向けたAI導入計画なども含まれており、業界のデジタル化を推進する方針です。",
+        "source": "Google News",
+        "published_at": "2026-10-02",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5mcTJ3aVJXUkxsQVI1c3hfZU5qd20teTQ5RlJlWG03ZmdiNVlHU3BvcDZGUUVRSnRlT1RzdDZ4MVQ3QXQyeFROcEh1UmhhRmFTZ1hhTlVrVVFmNzlMUjdNUA?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "グーグル、最先端AI「ジェミニ4アルゴン」の一般公開見送り 安全上の懸念",
+        "content": "グーグルは、最先端の人工知能である「ジェミニ4アルゴン」について、安全上の懸念を理由に一般公開を見送ることを決定しました。AIの急速な進化に伴うリスク管理や安全性評価の重要性が改めて浮き彫りになっています。",
+        "source": "Google News",
+        "published_at": "2026-10-02",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFA5S1FiWWZFVVFnT0pGOWt0UWFsc19yZVhMVE4yb3pEcmdFZTd2S3FrSlJzY01xR1pUdEwtQnBLenlKbWxpWUItY19TWkczbGVmUWhWctIBVEFVX3lxTFA5S1FiWWZFVVFnT0pGOWt0UWFsc19yZVhMVE4yb3pEcmdFZTd2S3FrSlJzY01xR1pUdEwtQnBLenlKbWxpWUItY19TWkczbGVmUWhWcg?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "Google、7カ月ぶり上位AI更新で挽回狙う 「Gemini 4 Argon」",
+        "content": "Googleが7カ月ぶりとなる上位AIモデル「Gemini 4 Argon」を発表しました。競合他社に対抗し、AI市場での挽回を狙う重要なアップデートとなります。",
+        "source": "Google News",
+        "published_at": "2026-10-02",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5VTE45WnVnU0xCUDl4clVIZVRselJfX0lRMmhFWG5uelcxbUZuZFVsMEFic2dSMnhXZXpTUTVRS09ScWZiaS1ncHYybmdJa28zODBmUUtuWGNRUllZRGMtZkpVaVhsbU5IeGstVQ?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "ClaudeとGemini「AIコーディング解決率はほぼ同じ」でも解き方に表れた正反対の性格",
+        "content": "AnthropicのClaudeとGoogleのGeminiは、AIコーディングにおける問題解決率がほぼ同じであることが判明しました。しかし、両モデルがコードを導き出すアプローチやプロセスには、それぞれの「性格」とも言える明確な違いが見られました。それぞれのモデルの特性を理解することで、開発現場での適切な使い分けが期待されます。",
+        "source": "Google News",
+        "published_at": "2026-10-02",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE00R01fQUhoaDJkWmk5UVlJUW1yTHhtSWdtREN2OTdpSWJCTEpyLV92UG02VG5GWE4xQjQydENmLVZCQm4xOEtDRXBuZTFBRlgzOWlSbi1uVzVmOXF0Ri1VTTA3QzlRUTlMMzNMWlB4TU5XQQ?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "村田製作所やイビデンなど、AIサーバー向け電子部品の最強企業8社が需要急増で注目",
+        "content": "AIサーバーおよびデータセンター向け需要の爆発的拡大に伴い、村田製作所やイビデン、ミネベアミツミといった日本の電子部品メーカーが注目を集めています。記事では、最先端の技術と製品で市場を牽引する厳選された最強企業8社について解説しています。",
+        "source": "Google News",
+        "published_at": "2026-10-02",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9ldHljOGZZRjA3VXNDbTdwbkN5bkVVX2dKOWVDX0NENkg5b1RzVXJNcTR2bFFTNXZBLTRkR2FqVXVXcTFlbHc5Rm1palXSAU9BVV95cUxObGh4Vl9RUWdLa3A0TkJYNGk3bjMwTklWdTc4OEg2QXFBczgtU25HQmRNMnFpS1hwamFOMzBCa3NwdjdzVVlyYnlCd2xBRmZn?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "AI首脳陣が足並みそろえた「開発減速」とは？ 問われる実効性と対中覇権の壁",
+        "content": "AI業界のリーダーたちが足並みを揃えて検討している「開発減速」の動きについて報じられています。その実効性や、激化する対中覇権争いにおける課題について多角的な視点から問われています。",
+        "source": "Google News",
+        "published_at": "2026-10-02",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE8xVFVjLTA2QkxGOFBUM3NUQlM2V0Y4Y19FRVlBT3JXYXAxOWhwV3RDVWxUY3hUbmxFd2gwWHFJSWsyV0dXYzlrY1cwV0w2MzFacEtaWG1B?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "管理職の20％ BMW削減へ AI活用 経営合理化",
+        "content": "沖縄タイムス社は、AIを活用した経営合理化の一環として、管理職の20％削減およびBMWの削減を行う方針を発表しました。最新の技術導入により業務効率化を図り、組織のスリム化を進める狙いです。",
+        "source": "Google News",
+        "published_at": "2026-10-02",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE50b0czTUVsMHRXTmo1UFpxVjhHYkd6LS1zQUk2RUxoeTlkUnVKeTJfVlJoNkJHNTZXY0E2dll3UE9JQmRRQVByZTNINWpicFZDQTBHQlRZVW4zeFVLaUE?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "話題のAI書籍『超知能AIをつくれば人類は絶滅する』電子書籍版が99円で販売",
+        "content": "早川書房は、話題のAI書籍『超知能AIをつくれば人類は絶滅する』の電子書籍版を99円で販売するセールを実施する。期間は10月2日から10月4日までの3日間限定となっている。AIの未来と人類への影響を描いた注目作を安価に入手できる機会である。",
+        "source": "Google News",
+        "published_at": "2026-10-02",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBQRzdudUtFcTRBWFVaVXlDWU9SMkh2ZHJzLVJ2TjhTb2RYRmozeDhCMzdQOS1VYUw3NUIyRk5lX084QWNBZlRZQnhxX2ZHR2ItZWdXTmVBN2VWNnNIeE1MTjVDSE90V0FuNEE?oc=5",
+        "category": "事業・投資"
+      }
+    ]
+  },
+  {
     "date": "2026-10-01",
     "daily_summary": "本日のAIニュースは、トランプ米政権による政府用語の「SI（超知能）」への変更命令や企業主導の自主規制方針、米FTCによるリスク調査など国家・産業レベルの動向が目立ちました。国内では、東京地裁が声の「パブリシティー権」を初めて認める司法判断を下したほか、NECのAI・安保分野を軸とした躍進や、台風予測、認知症予防、科学研究など多様な分野でのAI活用が進む一方、エンジニアの育成モデルの変革期にあることが示されています。",
     "articles": [
