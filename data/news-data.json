@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-10-03",
+    "daily_summary": "本日のAIニュースは、国内での高性能AI普及に向けた行動計画の策定やPS5への新AI超解像技術「QSSR」の導入といった技術実装・応用の動きが進む一方で、グーグルの先端AI公開見送りやアマゾンのスマートグラスにおけるプライバシー懸念など、安全性や倫理面での慎重な姿勢も求められています。さらに、AIデータセンターの融資遅れやエヌビディアの担保構想を巡るウォール街との溝、相場の持続可能性に関する議論など、金融・経済の側面でもリスク管理や構造的な課題が浮き彫りになる一日となりました。",
+    "articles": [
+      {
+        "title": "高性能AI普及へ 年内に行動計画",
+        "content": "日本国内における高性能AIのさらなる普及を目指し、政府や関連機関が年内に行動計画を策定する方針が報じられました。AI技術の社会実装を加速させるための具体的な施策やガイドラインの整備が進められる見通しです。",
+        "source": "Google News",
+        "published_at": "2026-10-03",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1ya3dhX2hJdnBoVGVsLW45aS02MS1rQ3lpVDBkMHBQSVdITHZLSEdyZXhEaV8tNk9XODBDaDJDWGZhN1FsSnFJclE0dlIxVWx5?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "グーグル、最先端AI「ジェミニ4アルゴン」の一般公開を見送り",
+        "content": "グーグルは、安全上の懸念を理由に最先端AI「ジェミニ4アルゴン」の一般公開を見送ることを決定しました。AIの安全性やリスク管理に対する同社の慎重な姿勢を示す動きとなっています。",
+        "source": "Google News",
+        "published_at": "2026-10-03",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBYNm1YcUdaOGNIZDB0Z3hVZjhWQ2lZTTZLd0ltdHdRNXZiMVVqYlMydnBKMzdrdzEzQUpQOHZTcVZNcGFIcDB3bTVwYzZ1T2xCSEHSAVRBVV95cUxQOUtRYllmRVVRZ09KRjlrdFFhbHNfcmVYTFROMm96RHJnRWU3dktxa0pSc2NNcUdaVHRMLUJwS3p5Sm1saVlCLWNfU1pHM2xlZlFoVnI?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "米AIデータセンター融資に暗雲 オラクル認可遅れ、金融市場が警戒",
+        "content": "米国のAIデータセンター向け融資において、オラクルの認可遅れが原因で懸念が高まっています。この状況に金融市場も警戒感を強めており、今後の資金調達や投資動向への影響が懸念されています。",
+        "source": "Google News",
+        "published_at": "2026-10-03",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE82M0NRcGRCdnNwS0M5WFZJeEo0TUlUaU5Yc19fUV9LU21HcXRHUkFkZ0FPSEUteHdXTFYzVjdvMlBCZW5YWXFOS2Vkc2pVa3ZHNEhKWmxGN2ZwOFA4N2NZcmFjOFV0QjhocjhDXw?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "AIによる生産性向上の幻想、「テクノ封建制」での真実",
+        "content": "この記事では、人工知能（AI）による生産性向上という一般的な期待に疑問を投げかけ、現代社会が「テクノ封建制」に向かっているという現実を指摘しています。技術の進歩がもたらす経済的・社会的な構造変化について考察しています。",
+        "source": "Google News",
+        "published_at": "2026-10-03",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE9wWHNwWENZaUxWYkxBUDhUUm5KcUJsMXJZaXhMSVJDczNydWwwUnVFRmVpUXpWY0tBMlJPaHl0a1NMUDZ6dHJYTktiWWjSAU9BVV95cUxOTnU1QTVqWGJEWXZqbWJRc2VVdVJyYnVMQXhqSHZlTFppa1c5V3ZTMTNESXJUeDZZQlFMVzR3dWg1WWNxZzRpc3U3aklyYUpv?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "被爆者の「生きた声」残す AI使い応答装置制作 （下）",
+        "content": "被爆者の記憶や声を後世に残すため、AIを活用した応答装置の制作に関する記事の後半部分です。先端技術を用いて被爆体験を継承する取り組みについて報じています。",
+        "source": "Google News",
+        "published_at": "2026-10-03",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE15S0JJX2hBUGx0MkFYcnRDcDdpdDdDSjRfSlh1NlBTcFhvYkprcXdQRGY3Tll1T3BodFJvUWJUOWZuaFFXTWpWcUlldk9MbG1fcThfV1g1akFzWHFyS1E?oc=5",
+        "category": "その他"
+      },
+      {
+        "title": "アマゾン配達員のAIスマートグラス、視界を次々撮影 プライバシーに懸念",
+        "content": "アマゾンが配達員向けに導入を検討しているAI搭載スマートグラスが、周囲の視界を次々と撮影することに対してプライバシー上の懸念が高まっています。この技術は効率的な配達をサポートする一方で、一般市民の監視につながるリスクが指摘されています。専門家や利用者からは慎重な運用と規制を求める声が上がっています。",
+        "source": "Google News",
+        "published_at": "2026-10-03",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFAtd3B4ZU9mQW80U09GUHUwMDFYUHdJZXN2c0dRaUpfUW9Wcm4tNFd4eVpUQkdjamJoN2RtbkJMVGM1XzBLbHpJcndWZHRubmpTWEE?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "日経平均急伸始まった10月相場とAI相場の賞味期限 バブル崩壊の目安「25％ルール」から探る持続性",
+        "content": "10月相場での日経平均の急伸に伴い、AI関連相場の持続可能性について議論がなされています。バブル崩壊の目安とされる「25％ルール」を参考に、現在の株価上昇の賞味期限を探ります。市場の動向と今後の投資戦略に関する専門家の解説が含まれています。",
+        "source": "Google News",
+        "published_at": "2026-10-03",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBuaG04bkxDeWZMV05maU1Cb2R4d3ZMcS1fdy1XekdJdEx0UTBUQV91ZEtfWmI2UzFXR25ObzdSV0xHM0xRNXJSemhjX3FFNXNneEZBMGhGbmJzUQ?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "エヌビディア、AI半導体担保の巨大融資市場構想、資産価値巡りウォール街と溝",
+        "content": "エヌビディアがAI半導体を担保にした巨大な融資市場の構築を構想していることが明らかになった。しかし、半導体の資産価値の評価を巡り、同社とウォール街の間には意見の溝が存在している。この構想の行方は、今後のAI関連ビジネスの資金調達に大きな影響を与える可能性がある。",
+        "source": "Google News",
+        "published_at": "2026-10-03",
+        "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPcFpNWGttOUdVLVg5ekthOGRCYlNJd09tdy13TC1Mbm5oc3BFb2gwMGRHT1VzV0ZUNXl2bEUzcGFaZ0hSbWtmcHdrY1JNck5nbmJDUGFHRXdxWUhHSWlSZVdjZm1qVUtJVTIyOElIbXB2dkxuaE5ZakN1Tm5VQll0M0E3T2JlZw?oc=5",
+        "category": "インフラ・半導体"
+      },
+      {
+        "title": "PS5®にAIアップスケーリング技術QSSRが登場",
+        "content": "PlayStation 5に新たなAIアップスケーリング技術「QSSR」が登場しました。この技術により、ゲームのグラフィック品質とパフォーマンスの向上が期待されます。詳細はPlayStationの公式ブログで確認できます。",
+        "source": "Google News",
+        "published_at": "2026-10-03",
+        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE44eWJFUlZjWmZhWVJKZkpVYlBEN01hWWFvWmpjZks4SVZMUlJGNXV0ZGJnRzdyTloyZklBM3hSbVpwVS1MVmdyeVotblk4V3JIY1RqS0ltcTRZejRtWGc3S2xLaFlMY0tsWnNWUzBFLXI?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "通常PS5向けAI超解像「QSSR」発表、主要タイトルがパッチ対応へ",
+        "content": "通常版PS5向けの新しいAI超解像技術「QSSR」が発表され、海外メディアから高い評価を受けています。『Marvel’s Wolverine』や『Ghost of Yōtei』などの人気タイトルが本日10月2日より対応パッチの配信を予定しています。",
+        "source": "Google News",
+        "published_at": "2026-10-03",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE10eGFoaElHTzUzcDR1ZFRnMW9FendfQVhsVG9CU3haZmNoc2lLVTBIcHN3a0dIblF3UHNfem9rR29DWjZQVUo5RnFFN2xiV0hac29nbW96aHFfZWk0Y1ZvY0xPb29NWkVxTHcxdkFBY2pGbXVlUWVTazYwUmNzSGs?oc=5",
+        "category": "インフラ・半導体"
+      }
+    ]
+  },
+  {
     "date": "2026-10-02",
     "daily_summary": "本日のAIニュースでは、政府が高性能AIの社会実装や人手不足解消に向けた行動計画の策定を急ぐ一方、産業界でも企業のAI活用や組織のスリム化が進む動きが報じられました。技術面ではGoogleの新型モデル「Gemini 4 Argon」の発表と安全性を巡る議論、主要AIモデルの特性比較が注目されたほか、AIサーバー需要の急増に伴う日本企業への期待や、AI開発の「減速」を巡る課題など、国家戦略からビジネス、技術の安全性にいたるまで幅広い領域でAIの存在感が一層高まっています。",
     "articles": [
