@@ -1,0 +1,50 @@
+{
+  "planning": {
+    "status": "COMPLETED",
+    "input_fingerprint": "issue-377@2026-09-05T10:38:57Z|main:7da39a5c89e9e4f786913ed7bb452c08acdf20cb|quality-plan:2026-10-03.r2",
+    "artifacts": [
+      "docs/task/issue-377/quality-improvement-20261003/implementation_plan.md",
+      "docs/task/issue-377/quality-improvement-20261003/task.md",
+      "docs/task/issue-377/quality-improvement-20261003/plan-review-request.md"
+    ],
+    "acceptance_evidence": [
+      "2026-10-03: current Issue and repository baseline inspected; prior public audit mapped to five improvements",
+      "2026-10-03: Luna read-only inventory reviewed; source reproducibility, all-guide verification and sitemap count mismatch incorporated",
+      "Plan includes scope, data handling, acceptance criteria, review sequence, release boundaries and rollback",
+      "2026-10-03: root revalidated r2 metadata-pair requirement and implementation-base policy against reviewed r1 scope"
+    ]
+  },
+  "plan-review": {
+    "status": "COMPLETED",
+    "input_fingerprint": "issue-377@2026-09-05T10:38:57Z|main:7da39a5c89e9e4f786913ed7bb452c08acdf20cb|quality-plan:2026-10-03.r2",
+    "artifacts": [
+      "docs/history/20261003_issue-377_quality-plan-review.md",
+      "docs/task/issue-377/quality-improvement-20261003/implementation_plan.md"
+    ],
+    "acceptance_evidence": [
+      "2026-10-03: user supplied read-only r1 plan review with GO and one low-priority metadata-persistence suggestion",
+      "Root accepted suggestion, incorporated it into r2 and checked the scoped delta; independent reviewer did not review r2",
+      "Unverified implementation facts, past publication approval and Search Console state remain unverified; no execution authorization inferred"
+    ]
+  },
+  "implementation": {
+    "status": "IN_PROGRESS",
+    "input_fingerprint": "issue-377@2026-09-05T10:38:57Z|origin/main:9c934bc437e67921717f8847f960cc27721788cc|quality-plan:2026-10-03.r2|no-open-meteo-commercial-permission",
+    "artifacts": [
+      "docs/task/issue-377/quality-improvement-20261003/claim-evidence.md",
+      "docs/task/issue-377/quality-improvement-20261003/guide-review.md",
+      "docs/history/20261003_issue-377_quality-implementation-walkthrough.md"
+    ],
+    "acceptance_evidence": [
+      "2026-10-03: latest origin/main checked; scoped codex/issue-377-content-quality branch created",
+      "2026-10-03: original Open-Meteo input absent and user confirmed no commercial contract; no API reacquisition performed",
+      "2026-10-03: unsupported Takao weather and gear numbers removed from draft; 8 guides and sampling example corrected",
+      "2026-10-03: independent read-only semantic and code reviews received; findings incorporated",
+      "2026-10-03: final TypeScript, lint, Next.js build, fixed-bundle and local page verification passed after content and provenance updates",
+      "2026-10-03: operator approved revised public copy; climate approval recorded on this date without inferring a 2026-09-16 approval",
+      "2026-10-03: cross-article audit found Hachioji chill period and pair-count errors; JMA relocation notice and fixed bundle checked, correction approved by operator",
+      "2026-10-03: final local build generated 62 static pages; 52 sitemap URLs, 8 guides, 30 problems and ad boundaries verified",
+      "Linux CI, release and AdSense resubmission pending"
+    ]
+  }
+}

@@ -137,7 +137,7 @@ export default async function ProblemDetailPage({ params }: PageProps) {
             </span>
             <span className="flex items-center gap-1">
               <Clock size={14} />
-              最終確認日: {problem.reviewedAt}
+              内容更新日: {problem.reviewedAt}
             </span>
           </div>
         </header>

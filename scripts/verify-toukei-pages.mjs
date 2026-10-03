@@ -22,6 +22,10 @@ const bundle = await build({
 const { problems, guides, siteContent } = await import(
   `data:text/javascript;base64,${Buffer.from(bundle.outputFiles[0].text).toString("base64")}`
 );
+const initialSlugs = [
+  "confidence-interval", "hypothesis-test", "simple-regression",
+  "contingency-table", "sampling-bias",
+];
 const expectedNewSlugs = [
   "linear-transformation", "bayes-theorem-screening", "binomial-normal-approximation",
   "sample-proportion-distribution", "paired-t-test",
@@ -43,14 +47,34 @@ const batch5Slugs = [
   "time-series-moving-average-autocorrelation", "two-way-anova-interaction",
   "multiple-regression-multicollinearity-dummy",
 ];
+const expectedProblemSlugs = [
+  ...initialSlugs, ...expectedNewSlugs, ...batch2Slugs, ...batch3Slugs,
+  ...batch4Slugs, ...batch5Slugs,
+];
+const expectedGuideSlugs = [
+  "learning-roadmap", "cbt-time-management", "hypothesis-testing-basics",
+  "choosing-statistical-tests", "distribution-selection",
+  "regression-interpretation", "anova-and-chi-square", "sampling-and-bias",
+];
 assert.equal(problems.length, 30);
 assert.equal(new Set(problems.map(p => p.slug)).size, 30);
-assert.deepEqual(problems.slice(5, 10).map(p => p.slug), expectedNewSlugs);
-assert.deepEqual(problems.slice(10, 15).map(p => p.slug), batch2Slugs);
-assert.deepEqual(problems.slice(15, 20).map(p => p.slug), batch3Slugs);
-assert.deepEqual(problems.slice(20, 25).map(p => p.slug), batch4Slugs);
-assert.deepEqual(problems.slice(25, 30).map(p => p.slug), batch5Slugs);
-assert.equal(siteContent.length, 52);
+assert.deepEqual(problems.map(p => p.slug), expectedProblemSlugs, "approved problem slugs");
+assert.deepEqual(guides.map(g => g.slug), expectedGuideSlugs, "approved guide slugs");
+const expectedStaticPaths = [
+  "/", "/about", "/contact", "/privacy", "/toukei", "/toukei/guides",
+  "/toukei/problems", "/toukei/methodology", "/labs/hachioji-climate",
+  "/labs/hachioji-snow", "/labs/hachioji-heat", "/labs/hachioji-chill",
+  "/labs/takao-gear", "/labs/takao-weather-shift",
+];
+const expectedContentPaths = [
+  ...expectedStaticPaths,
+  ...expectedGuideSlugs.map(slug => `/toukei/guides/${slug}`),
+  ...expectedProblemSlugs.map(slug => `/toukei/problems/${slug}`),
+];
+assert.equal(siteContent.length, expectedContentPaths.length);
+assert.equal(new Set(expectedContentPaths).size, expectedContentPaths.length, "approved paths must be unique");
+assert.equal(new Set(siteContent.map(entry => entry.pathname)).size, siteContent.length, "siteContent paths must be unique");
+assert.deepEqual(siteContent.map(entry => entry.pathname).sort(), expectedContentPaths.sort());
 assert(siteContent.some(entry => entry.pathname === "/labs/takao-weather-shift"));
 assert(siteContent.some(entry => entry.pathname === "/labs/takao-gear"));
 assert(siteContent.some(entry => entry.pathname === "/labs/hachioji-chill"));
@@ -143,6 +167,26 @@ for (const problem of problems) {
   }
   console.log(`PASS ${path}: static, full text, canonical, ads, references`);
 }
+const guideIndex = await page("/toukei/guides");
+for (const guide of guides) {
+  const path = `/toukei/guides/${guide.slug}`;
+  assert(manifest.routes[path], `${path} must be statically generated`);
+  assert(guideIndex.includes(`href="${path}"`), `${path} index link`);
+  const html = await page(path);
+  assert(html.includes(`<link rel="canonical" href="https://bearworks.uk${path}"`), `${path} canonical`);
+  assert(adPattern.test(html), `${path} ads`);
+  for (const value of [guide.title, guide.question, guide.author, guide.publishedAt, guide.reviewedAt, guide.provenance.finalReviewedBy]) {
+    assert(html.includes(escape(value)), `${path} displayed content: ${value.slice(0, 30)}`);
+  }
+  for (const section of guide.sections) {
+    assert(html.includes(escape(section.heading)), `${path} section heading`);
+    assert(html.includes(escape(section.text.split("\n\n")[0].slice(0, 30))), `${path} section body`);
+  }
+  for (const ref of guide.references) {
+    assert(html.includes(`href="${escape(ref.url)}"`), `${path} reference link`);
+  }
+  console.log(`PASS ${path}: static, canonical, content, references`);
+}
 for (const path of ["/about", "/contact", "/privacy", "/weather", "/dashboard", "/ai-news"]) {
   assert(!adPattern.test(await page(path)), `${path} must have no ads`);
 }
@@ -151,7 +195,7 @@ for (const path of ["/toukei/problems/__invalid__", "/toukei/guides/__invalid__"
 }
 const xml = await page("/sitemap.xml");
 const urls = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map(match => match[1]);
-assert.equal(urls.length, 49);
-assert.equal(new Set(urls).size, 49);
-assert.deepEqual([...urls].sort(), siteContent.map(p => `https://bearworks.uk${p.pathname}`).sort());
-console.log("PASS: sitemap 49 unique URLs; 6 non-ad pages and 3 invalid/404 routes have no ads");
+assert.equal(urls.length, expectedContentPaths.length);
+assert.equal(new Set(urls).size, urls.length);
+assert.deepEqual([...urls].sort(), expectedContentPaths.map(path => `https://bearworks.uk${path}`).sort());
+console.log(`PASS: sitemap ${urls.length} unique URLs; 6 non-ad pages and 3 invalid/404 routes have no ads`);

@@ -32,8 +32,11 @@ async function validate() {
   // Annual summary check
   assert(bundle.annual_summary, "Bundle must have annual_summary");
   assert.equal(bundle.annual_summary.total_days, 366, "2024 is leap year, total days must be 366");
-  assert(bundle.annual_summary.gas_days > 200, "Gas days should be substantial");
-  assert(bundle.annual_summary.apparent_sunny_gas_days > 0, "Apparent sunny gas days must be > 0");
+  assert.equal(
+    bundle.annual_summary.apparent_sunny_gas_days_pct,
+    Math.round(bundle.annual_summary.apparent_sunny_gas_days / bundle.annual_summary.total_days * 1000) / 10,
+    "Annual percentage must use all calendar days as its denominator",
+  );
 
   // Monthly summary check
   assert.equal(bundle.monthly_summary.length, 12, "Monthly summary must contain 12 months");
@@ -45,8 +48,8 @@ async function validate() {
 
   for (const m of bundle.monthly_summary) {
     assert(m.month >= 1 && m.month <= 12);
-    assert(m.avg_summit_humidity > m.avg_base_humidity, `Summit humidity (${m.avg_summit_humidity}) should be higher than base (${m.avg_base_humidity}) in month ${m.month}`);
-    assert(m.humidity_gap > 0, `Humidity gap should be positive in month ${m.month}`);
+    assert(Number.isFinite(m.avg_summit_humidity) && Number.isFinite(m.avg_base_humidity));
+    assert.equal(m.humidity_gap, Math.round((m.avg_summit_humidity - m.avg_base_humidity) * 10) / 10);
   }
 
   // Summer hourly matrix check
@@ -57,19 +60,13 @@ async function validate() {
     assert(slot.gas_probability >= 0 && slot.gas_probability <= 100);
   }
 
-  // Afternoon peak rain check: 14:00 or 16:00 rain prob should be higher than 10:00 morning
-  const h10 = bundle.summer_hourly_matrix.find(s => s.hour === 10);
-  const h16 = bundle.summer_hourly_matrix.find(s => s.hour === 16);
-  assert(h16.rain_probability > h10.rain_probability, "Afternoon rain probability at 16:00 should exceed 10:00 morning");
-
   // Mechanisms check
   assert(Array.isArray(bundle.mechanisms) && bundle.mechanisms.length >= 4, "Must have at least 4 mechanism steps");
 
-  console.log("PASS: takao-weather-shift bundle validated successfully.");
+  console.log("PASS: archived takao-weather-shift r1 bundle integrity and internal arithmetic only.");
+  console.log("- Original hourly input is unavailable; this does not validate the weather claims or data licence.");
   console.log(`- Byte size: ${actualByteSize}`);
   console.log(`- SHA-256: ${actualSha256}`);
-  console.log(`- Annual gas days: ${bundle.annual_summary.gas_days} (${bundle.annual_summary.gas_days_pct}%)`);
-  console.log(`- Apparent sunny gas days: ${bundle.annual_summary.apparent_sunny_gas_days} (${bundle.annual_summary.apparent_sunny_gas_days_pct}%)`);
 }
 
 validate().catch(err => {

@@ -9,19 +9,19 @@ type SitemapEntry = Omit<MetadataRoute.Sitemap[number], "url"> & {
 const staticPaths: SitemapEntry[] = [
   {
     pathname: "/labs/takao-weather-shift",
-    lastModified: new Date("2026-09-17"),
+    lastModified: new Date("2026-10-03"),
     changeFrequency: "monthly",
     priority: 0.85,
   },
   {
     pathname: "/labs/takao-gear",
-    lastModified: new Date("2026-09-17"),
+    lastModified: new Date("2026-10-03"),
     changeFrequency: "monthly",
     priority: 0.85,
   },
   {
     pathname: "/labs/hachioji-chill",
-    lastModified: new Date("2026-09-18"),
+    lastModified: new Date("2026-10-03"),
     changeFrequency: "monthly",
     priority: 0.85,
   },
@@ -39,7 +39,7 @@ const staticPaths: SitemapEntry[] = [
   },
   {
     pathname: "/",
-    lastModified: new Date("2026-07-11"),
+    lastModified: new Date("2026-10-03"),
     changeFrequency: "weekly",
     priority: 1,
   },
@@ -75,13 +75,13 @@ const staticPaths: SitemapEntry[] = [
   },
   {
     pathname: "/labs/hachioji-climate",
-    lastModified: new Date("2026-09-13"),
+    lastModified: new Date("2026-10-03"),
     changeFrequency: "monthly",
     priority: 0.85,
   },
   {
     pathname: "/privacy",
-    lastModified: new Date("2026-07-11"),
+    lastModified: new Date("2026-10-03"),
     changeFrequency: "yearly",
     priority: 0.3,
   },

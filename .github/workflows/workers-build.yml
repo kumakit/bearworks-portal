@@ -174,11 +174,11 @@ jobs:
           assert_status 200 /labs/takao-weather-shift
           grep --quiet 'ca-pub-0000000000000000' /tmp/response-body
           grep --fixed-strings --quiet 'https://bearworks.uk/labs/takao-weather-shift' /tmp/response-body
-          assert_status 200 /images/takao-weather-shift/hero-illustration.webp
+          grep --fixed-strings --quiet '観測・再解析・予報を分ける' /tmp/response-body
           assert_status 200 /labs/takao-gear
           grep --quiet 'ca-pub-0000000000000000' /tmp/response-body
           grep --fixed-strings --quiet 'https://bearworks.uk/labs/takao-gear' /tmp/response-body
-          assert_status 200 /images/takao-gear/hero-illustration.webp
+          grep --fixed-strings --quiet 'ルート・天気・行動時間の確認手順' /tmp/response-body
           assert_status 200 /images/hachioji-snow/hero-illustration.webp
           assert_status 404 /toukei/problems/__invalid__
           if contains_ads; then

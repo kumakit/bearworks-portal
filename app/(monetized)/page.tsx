@@ -3,6 +3,11 @@ import Link from "@/components/InternalLink";
 import PublicSiteHeader from "@/components/PublicSiteHeader";
 import PublicSiteFooter from "@/components/PublicSiteFooter";
 import { BookOpen, BarChart3, Target, ArrowRight } from "lucide-react";
+import { guides } from "./toukei/guides/guide-data";
+import { problems } from "./toukei/problems/problem-data";
+import { siteContent } from "../site-content";
+
+const analysisCount = siteContent.filter((item) => item.pathname.startsWith("/labs/")).length;
 
 export const metadata: Metadata = {
   title: "統計検定2級の学習支援 | bearworks.uk",
@@ -28,6 +33,9 @@ export default function Home() {
           <p className="mt-4 text-muted leading-relaxed">
             掲載している演習問題は、公式問題集や出題範囲を研究し、頻出論点や計算プロセスを網羅するように独自に作成したオリジナル問題です。公式問題のそのままの転載ではなく、本質的な考え方を練習できるように数値や題材を設計しています。
           </p>
+          <p className="mt-4 text-muted leading-relaxed">
+            このサイトでは、{guides.length}本の学習ガイドで考え方を読み、{problems.length}問の例題で計算と誤答の理由を確かめ、{analysisCount}本の気象・統計の記事でデータの読み方を考えられます。
+          </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Link
               href="/toukei"
@@ -45,6 +53,31 @@ export default function Home() {
               模擬試験に挑戦する
               <ArrowRight size={16} />
             </a>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="content-path-heading" className="bg-white rounded-[2.5rem] p-8 md:p-12 shadow-soft border border-gray-100">
+        <h2 id="content-path-heading" className="text-2xl font-bold text-primary">学ぶ・解く・データを読む</h2>
+        <p className="mt-3 text-sm leading-relaxed text-muted">初めての方は、関心のある入口から始めてください。各教材はこのサイト内で読めます。</p>
+        <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-3">
+          <div className="rounded-2xl border border-gray-200 p-5">
+            <h3 className="font-bold text-primary">1. 考え方を学ぶ</h3>
+            <p className="mt-2 text-sm leading-relaxed text-muted">仮説検定の前提や、p値から言えることを短い例で確認します。</p>
+            <Link href="/toukei/guides/hypothesis-testing-basics" className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-accent-purple hover:underline">仮説検定のガイドを読む <ArrowRight size={14} /></Link>
+            <div><Link href="/toukei/guides" className="mt-2 inline-block text-xs text-muted hover:underline">ガイド{guides.length}本の一覧</Link></div>
+          </div>
+          <div className="rounded-2xl border border-gray-200 p-5">
+            <h3 className="font-bold text-primary">2. 例題で確かめる</h3>
+            <p className="mt-2 text-sm leading-relaxed text-muted">答えだけでなく、途中計算と選択肢の誤りを追えます。</p>
+            <Link href="/toukei/problems/bayes-theorem-screening" className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-accent-pink hover:underline">ベイズの例題を解く <ArrowRight size={14} /></Link>
+            <div><Link href="/toukei/problems" className="mt-2 inline-block text-xs text-muted hover:underline">例題{problems.length}問の一覧</Link></div>
+          </div>
+          <div className="rounded-2xl border border-gray-200 p-5">
+            <h3 className="font-bold text-primary">3. 実データで読む</h3>
+            <p className="mt-2 text-sm leading-relaxed text-muted">八王子の気候を題材に、比較期間や集計の定義を確かめます。</p>
+            <Link href="/labs/hachioji-climate" className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-accent-blue hover:underline">気候分析を読む <ArrowRight size={14} /></Link>
+            <div><Link href="/toukei/methodology" className="mt-2 inline-block text-xs text-muted hover:underline">データと制作方針</Link></div>
           </div>
         </div>
       </section>

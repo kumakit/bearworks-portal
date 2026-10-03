@@ -50,7 +50,7 @@ export default function HachiojiClimatePage() {
   const heatValues = recentAnnualRows.filter(row => row.station_key === "hachioji").map(row => row.metrics.heatstroke_days);
   const jsonLd = {
     "@context": "https://schema.org", "@type": "Article", headline: title,
-    datePublished: "2026-08-12", dateModified: "2026-09-16", mainEntityOfPage: canonicalUrl,
+    datePublished: "2026-08-12", dateModified: "2026-10-03", mainEntityOfPage: canonicalUrl,
     image: "https://bearworks.uk/images/hachioji-climate/hero-illustration.webp",
     author: { "@type": "Person", name: "kuma" },
     publisher: { "@type": "Organization", name: "bearworks.uk", url: "https://bearworks.uk" },
@@ -195,14 +195,14 @@ export default function HachiojiClimatePage() {
             <p className="mt-2 text-xs text-slate-300">朝7時の気温差中央値−3.4℃。24時間の時間構造と弱風・放射冷却条件を検証。</p>
           </Link>
           <Link href="/labs/takao-gear" className="group block rounded-2xl border border-slate-700 bg-slate-800 p-5 transition hover:border-slate-500">
-            <p className="text-xs font-bold text-emerald-300">第5弾 · 高尾山装備判定</p>
-            <h3 className="mt-1 text-base font-bold group-hover:text-emerald-200">高尾山に山装備は本当に必要か →</h3>
-            <p className="mt-2 text-xs text-slate-300">標高599mの体感温度ギャップ、年間装備必須日数を判定するシミュレーター。</p>
+            <p className="text-xs font-bold text-emerald-300">第5弾 · 高尾山の装備の考え方</p>
+            <h3 className="mt-1 text-base font-bold group-hover:text-emerald-200">高尾山の装備をどう決める？ →</h3>
+            <p className="mt-2 text-xs text-slate-300">現地の登山道情報、最新の天気、行動時間から準備を考える。</p>
           </Link>
           <Link href="/labs/takao-weather-shift" className="group block rounded-2xl border border-slate-700 bg-slate-800 p-5 transition hover:border-slate-500">
-            <p className="text-xs font-bold text-amber-300">第6弾 · 天候急変とガス</p>
-            <h3 className="mt-1 text-base font-bold group-hover:text-amber-200">高尾山頂はなぜガスるのか？ →</h3>
-            <p className="mt-2 text-xs text-slate-300">平野晴天でも山頂は濃霧。「見せかけの晴れ（年34日）」と午後急変リスクを解明。</p>
+            <p className="text-xs font-bold text-amber-300">第6弾 · 天気とデータの読み方</p>
+            <h3 className="mt-1 text-base font-bold group-hover:text-amber-200">高尾山の天気をどう読む？ →</h3>
+            <p className="mt-2 text-xs text-slate-300">観測と再解析の違い、条件付き確率の分母を学ぶ。</p>
           </Link>
         </div>
       </section>

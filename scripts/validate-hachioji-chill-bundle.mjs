@@ -52,6 +52,8 @@ async function validate() {
     assert(bundle.hourly_profile[h].hour === h, `hourly profile hour mismatch at index ${h}`);
     assert(bundle.hourly_profile[h].sample_size > 1000, `hourly profile sample size too low: ${bundle.hourly_profile[h].sample_size}`);
   }
+  const validHourlyPairCount = bundle.hourly_profile.reduce((total, hour) => total + hour.sample_size, 0);
+  assert(validHourlyPairCount === 25859, `valid hourly pair count mismatch: ${validHourlyPairCount}`);
 
   // Calendar days check
   assert(bundle.calendar_days.length === 1078, `expected 1078 calendar days, got ${bundle.calendar_days.length}`);
@@ -74,6 +76,20 @@ async function validate() {
   const countColder = deltas.filter(v => v < 0).length;
   const pctColder = Math.round((countColder / deltas.length) * 1000) / 10;
   assertClose(pctColder, bundle.summary.morning_7am.pct_hachioji_colder, "pct colder check");
+
+  // Tokyo moved on 2014-12-02 at 09:40. Its 7am values on Dec 1 and 2 use the old site.
+  assert(bundle.calendar_days[0].date === "2014-12-01", "unexpected first comparison date");
+  assert(bundle.calendar_days[1].date === "2014-12-02", "unexpected second comparison date");
+  const postMoveDeltas = bundle.calendar_days
+    .filter((day) => day.date >= "2014-12-03")
+    .map((day) => day.delta_7am)
+    .sort((a, b) => a - b);
+  assert(postMoveDeltas.length === 1076, `post-move 7am day count mismatch: ${postMoveDeltas.length}`);
+  assertClose(postMoveDeltas[Math.floor(postMoveDeltas.length / 2)], -3.4, "post-move median 7am gap");
+  const postMoveMean = Math.round((postMoveDeltas.reduce((total, delta) => total + delta, 0) / postMoveDeltas.length) * 10) / 10;
+  assertClose(postMoveMean, -3.3, "post-move mean 7am gap");
+  const postMovePctLeMinus3 = Math.round((postMoveDeltas.filter((delta) => delta <= -3).length / postMoveDeltas.length) * 1000) / 10;
+  assertClose(postMovePctLeMinus3, 60.8, "post-move pct <= -3C");
 
   // Verify diurnal range values
   assert(bundle.diurnal_range_comparison.hachioji.median === 11.5, "hachioji diurnal range median mismatch");
