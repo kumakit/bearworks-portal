@@ -136,6 +136,8 @@ export default function TakaoGearPage() {
 
         <nav aria-label="関連教材" className="flex flex-wrap gap-4 text-sm font-semibold">
           <InternalLink href="/labs/takao-weather-shift" className="text-amber-700 hover:underline">高尾山の天気の読み方</InternalLink>
+          <InternalLink href="/labs/hachioji-rain" className="text-amber-700 hover:underline">第7弾：雨の日数と量</InternalLink>
+          <InternalLink href="/labs/hachioji-autumn" className="text-amber-700 hover:underline">第8弾：気温で数える秋</InternalLink>
           <InternalLink href="/toukei/guides/sampling-and-bias" className="text-amber-700 hover:underline">標本と偏りのガイド</InternalLink>
           <InternalLink href="/toukei/problems" className="text-amber-700 hover:underline">例題一覧</InternalLink>
         </nav>

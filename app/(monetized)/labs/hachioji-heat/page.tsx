@@ -174,6 +174,10 @@ export default function HachiojiHeatPage() {
       </section>
 
       <ContentProvenance provenance={hachiojiHeatProvenance} />
+      <nav aria-label="新しい気候分析記事" className="grid gap-3 rounded-2xl border border-slate-200 bg-white p-5 text-sm font-semibold text-blue-800 sm:grid-cols-2">
+        <Link href="/labs/hachioji-rain" className="underline">第7弾：八王子は都心より雨が多い？ →</Link>
+        <Link href="/labs/hachioji-autumn" className="underline">第8弾：八王子の秋は本当に短くなった？ →</Link>
+      </nav>
       <section className="overflow-hidden rounded-3xl bg-slate-900 p-7 text-white md:p-10"><p className="text-sm font-bold tracking-wider text-orange-300">街のうわさを、統計でほどく シリーズ</p><h2 className="mt-2 text-2xl font-bold md:text-3xl">問いが変わると、見るデータも変わる。</h2><div className="mt-6 grid gap-5 md:grid-cols-2">{[
         ["hachioji-climate", "第1弾 · 気候の全体像", "夏は暑い。冬は寒い。それって、本当？", "昼夜の気温差と冬日。4地点比較で、八王子の気候を見渡します。", "hachioji-climate"],
         ["hachioji-snow", "第2弾 · 雪と気温", "雪のニュース。また、八王子だ。", "気温が低いことと、雪が多いこと。分布と相関から問い直します。", "hachioji-snow"],

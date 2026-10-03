@@ -520,6 +520,16 @@ export default function HachiojiChillPage() {
               <h3 className="mt-2 text-sm font-bold text-slate-900">高尾山の天気をどう読む？</h3>
               <p className="mt-1 text-xs text-slate-500">市街地と山の天気、データの種類を区別する</p>
             </Link>
+            <Link href="/labs/hachioji-rain" className="rounded-2xl border border-slate-200 p-4 hover:border-sky-400">
+              <p className="text-xs text-slate-500">07 · 降る日数と量</p>
+              <h3 className="mt-2 text-sm font-bold text-slate-900">八王子は都心より雨が多い？</h3>
+              <p className="mt-1 text-xs text-slate-500">年間雨量と日数、大雨への集中度を比べる</p>
+            </Link>
+            <Link href="/labs/hachioji-autumn" className="rounded-2xl border border-slate-200 p-4 hover:border-emerald-400">
+              <p className="text-xs text-slate-500">08 · 気温で数える秋</p>
+              <h3 className="mt-2 text-sm font-bold text-slate-900">八王子の秋は本当に短くなった？</h3>
+              <p className="mt-1 text-xs text-slate-500">温度帯の日数を、定義と品質条件から考える</p>
+            </Link>
           </div>
         </nav>
 

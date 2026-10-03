@@ -65,6 +65,7 @@ const expectedStaticPaths = [
   "/toukei/problems", "/toukei/methodology", "/labs/hachioji-climate",
   "/labs/hachioji-snow", "/labs/hachioji-heat", "/labs/hachioji-chill",
   "/labs/takao-gear", "/labs/takao-weather-shift",
+  "/labs/hachioji-rain", "/labs/hachioji-autumn",
 ];
 const expectedContentPaths = [
   ...expectedStaticPaths,

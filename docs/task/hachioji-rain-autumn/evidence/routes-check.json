@@ -1,0 +1,128 @@
+{
+  "checked_at": "2026-10-03T22:25:02.022Z",
+  "origin": "http://127.0.0.1:3107",
+  "results": [
+    {
+      "route": "/labs/hachioji-rain",
+      "status": 200,
+      "canonical": true,
+      "articleSchema": true
+    },
+    {
+      "route": "/labs/hachioji-autumn",
+      "status": 200,
+      "canonical": true,
+      "articleSchema": true
+    },
+    {
+      "route": "/",
+      "status": 200,
+      "linksToBoth": true
+    },
+    {
+      "route": "/labs/hachioji-climate",
+      "status": 200,
+      "linksToBoth": true
+    },
+    {
+      "route": "/labs/hachioji-snow",
+      "status": 200,
+      "linksToBoth": true
+    },
+    {
+      "route": "/labs/hachioji-heat",
+      "status": 200,
+      "linksToBoth": true
+    },
+    {
+      "route": "/labs/hachioji-chill",
+      "status": 200,
+      "linksToBoth": true
+    },
+    {
+      "route": "/labs/takao-gear",
+      "status": 200,
+      "linksToBoth": true
+    },
+    {
+      "route": "/labs/takao-weather-shift",
+      "status": 200,
+      "linksToBoth": true
+    },
+    {
+      "route": "/sitemap.xml",
+      "status": 200,
+      "linksToBoth": true
+    },
+    {
+      "route": "/_next/static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2",
+      "status": 200
+    },
+    {
+      "route": "/icon.png",
+      "status": 200
+    },
+    {
+      "route": "/_next/static/chunks/369c_1wlke-r7.css",
+      "status": 200
+    },
+    {
+      "route": "/_next/static/chunks/0jvhpaew_uadu.js",
+      "status": 200
+    },
+    {
+      "route": "/toukei",
+      "status": 200
+    },
+    {
+      "route": "/toukei/guides",
+      "status": 200
+    },
+    {
+      "route": "/toukei/problems",
+      "status": 200
+    },
+    {
+      "route": "/about",
+      "status": 200
+    },
+    {
+      "route": "/contact",
+      "status": 200
+    },
+    {
+      "route": "/toukei/problems/contingency-table",
+      "status": 200
+    },
+    {
+      "route": "/data/hachioji-rain-autumn/jma-daily-2009-2025-20261004.csv",
+      "status": 200,
+      "bytes": 502244,
+      "sha256": "69386719a3ad29b243d40a96ff7400dc8e9f2fd568af0b01e12764966d7dcf7b"
+    },
+    {
+      "route": "/data/hachioji-rain-autumn/source-manifest.json",
+      "status": 200
+    },
+    {
+      "route": "/toukei/methodology",
+      "status": 200
+    },
+    {
+      "route": "/labs/hachioji-rain",
+      "status": 200
+    },
+    {
+      "route": "/labs/hachioji-autumn",
+      "status": 200
+    },
+    {
+      "route": "/privacy",
+      "status": 200
+    },
+    {
+      "route": "/toukei/guides/sampling-and-bias",
+      "status": 200
+    }
+  ]
+}

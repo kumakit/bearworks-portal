@@ -1,0 +1,5171 @@
+{
+  "result": "PASS",
+  "source_sha256": "69386719a3ad29b243d40a96ff7400dc8e9f2fd568af0b01e12764966d7dcf7b",
+  "pages": 14,
+  "compared_values_and_quality": 844,
+  "mismatches": 0,
+  "checks": [
+    {
+      "url": "https://www.data.jma.go.jp/stats/etrn/view/daily_a1.php?prec_no=44&block_no=0366&year=2009&month=9&day=&view=",
+      "filename": "h-2009-09.html",
+      "sha256": "42c867bff3b3860614ca8681bd848e7d82468ddc2e4633d6033736a47f2094d9",
+      "observations": [
+        {
+          "date": "2009-09-01",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-01",
+          "field": "mean",
+          "value": 24.8,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-02",
+          "field": "rain",
+          "value": 5.5,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-02",
+          "field": "mean",
+          "value": 20.2,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-03",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-03",
+          "field": "mean",
+          "value": 21,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-04",
+          "field": "rain",
+          "value": 0.5,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-04",
+          "field": "mean",
+          "value": 21,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-05",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-05",
+          "field": "mean",
+          "value": 23.5,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-06",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-06",
+          "field": "mean",
+          "value": 23.8,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-07",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-07",
+          "field": "mean",
+          "value": 24.2,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-08",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-08",
+          "field": "mean",
+          "value": 24.4,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-09",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-09",
+          "field": "mean",
+          "value": 22.1,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-10",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-10",
+          "field": "mean",
+          "value": 21.5,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-11",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-11",
+          "field": "mean",
+          "value": 21.5,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-12",
+          "field": "rain",
+          "value": 4,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-12",
+          "field": "mean",
+          "value": 19.7,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-13",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-13",
+          "field": "mean",
+          "value": 21.8,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-14",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-14",
+          "field": "mean",
+          "value": 21.8,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-15",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-15",
+          "field": "mean",
+          "value": 20,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-16",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-16",
+          "field": "mean",
+          "value": 23,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-17",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-17",
+          "field": "mean",
+          "value": 21.5,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-18",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-18",
+          "field": "mean",
+          "value": 19.5,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-19",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-19",
+          "field": "mean",
+          "value": 20.7,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-20",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-20",
+          "field": "mean",
+          "value": 22.3,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-21",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-21",
+          "field": "mean",
+          "value": 20.2,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-22",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-22",
+          "field": "mean",
+          "value": 21.6,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-23",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-23",
+          "field": "mean",
+          "value": 22.5,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-24",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-24",
+          "field": "mean",
+          "value": 21.6,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-25",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-25",
+          "field": "mean",
+          "value": 21.6,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-26",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-26",
+          "field": "mean",
+          "value": 22,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-27",
+          "field": "rain",
+          "value": 0.5,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-27",
+          "field": "mean",
+          "value": 21.2,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-28",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-28",
+          "field": "mean",
+          "value": 21.6,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-29",
+          "field": "rain",
+          "value": 2,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-29",
+          "field": "mean",
+          "value": 21.3,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-30",
+          "field": "rain",
+          "value": 11,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-30",
+          "field": "mean",
+          "value": 18.7,
+          "quality": 8
+        }
+      ]
+    },
+    {
+      "url": "https://www.data.jma.go.jp/stats/etrn/view/daily_s1.php?prec_no=44&block_no=47662&year=2009&month=9&day=&view=",
+      "filename": "t-2009-09.html",
+      "sha256": "19facfb81493b3681ef9daa68836ba96c0f8ee29d567d9ce3e4dee528609fb95",
+      "observations": [
+        {
+          "date": "2009-09-01",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-01",
+          "field": "mean",
+          "value": 25.7,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-02",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-02",
+          "field": "mean",
+          "value": 22.3,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-03",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-03",
+          "field": "mean",
+          "value": 22.2,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-04",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-04",
+          "field": "mean",
+          "value": 23.2,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-05",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-05",
+          "field": "mean",
+          "value": 24.4,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-06",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-06",
+          "field": "mean",
+          "value": 24.4,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-07",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-07",
+          "field": "mean",
+          "value": 24.9,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-08",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-08",
+          "field": "mean",
+          "value": 24.8,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-09",
+          "field": "rain",
+          "value": 0.5,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-09",
+          "field": "mean",
+          "value": 22.6,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-10",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-10",
+          "field": "mean",
+          "value": 24.1,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-11",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-11",
+          "field": "mean",
+          "value": 23.9,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-12",
+          "field": "rain",
+          "value": 38,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-12",
+          "field": "mean",
+          "value": 21.4,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-13",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-13",
+          "field": "mean",
+          "value": 23.7,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-14",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-14",
+          "field": "mean",
+          "value": 23.2,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-15",
+          "field": "rain",
+          "value": 0.5,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-15",
+          "field": "mean",
+          "value": 21.9,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-16",
+          "field": "rain",
+          "value": 3.5,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-16",
+          "field": "mean",
+          "value": 23.7,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-17",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-17",
+          "field": "mean",
+          "value": 22.5,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-18",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-18",
+          "field": "mean",
+          "value": 20.9,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-19",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-19",
+          "field": "mean",
+          "value": 21.7,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-20",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-20",
+          "field": "mean",
+          "value": 22.4,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-21",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-21",
+          "field": "mean",
+          "value": 21.3,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-22",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-22",
+          "field": "mean",
+          "value": 23.3,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-23",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-23",
+          "field": "mean",
+          "value": 23.9,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-24",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-24",
+          "field": "mean",
+          "value": 23.3,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-25",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-25",
+          "field": "mean",
+          "value": 23.3,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-26",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-26",
+          "field": "mean",
+          "value": 23.4,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-27",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-27",
+          "field": "mean",
+          "value": 21.9,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-28",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-28",
+          "field": "mean",
+          "value": 23.4,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-29",
+          "field": "rain",
+          "value": 4,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-29",
+          "field": "mean",
+          "value": 23.1,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-30",
+          "field": "rain",
+          "value": 6.5,
+          "quality": 8
+        },
+        {
+          "date": "2009-09-30",
+          "field": "mean",
+          "value": 20.2,
+          "quality": 8
+        }
+      ]
+    },
+    {
+      "url": "https://www.data.jma.go.jp/stats/etrn/view/daily_a1.php?prec_no=44&block_no=0366&year=2015&month=9&day=&view=",
+      "filename": "h-2015-09.html",
+      "sha256": "ab564b6a16af635350a866ee5be06bf3844349384c9a87d852fd3e9b41d7ab45",
+      "observations": [
+        {
+          "date": "2015-09-01",
+          "field": "rain",
+          "value": 8,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-01",
+          "field": "mean",
+          "value": 23,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-02",
+          "field": "rain",
+          "value": 2.5,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-02",
+          "field": "mean",
+          "value": 26.3,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-03",
+          "field": "rain",
+          "value": 2,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-03",
+          "field": "mean",
+          "value": 24.4,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-04",
+          "field": "rain",
+          "value": 1.5,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-04",
+          "field": "mean",
+          "value": 24.6,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-05",
+          "field": "rain",
+          "value": 0.5,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-05",
+          "field": "mean",
+          "value": 24.4,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-06",
+          "field": "rain",
+          "value": 15.5,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-06",
+          "field": "mean",
+          "value": 22.4,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-07",
+          "field": "rain",
+          "value": 11,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-07",
+          "field": "mean",
+          "value": 21.3,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-08",
+          "field": "rain",
+          "value": 74.5,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-08",
+          "field": "mean",
+          "value": 19.3,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-09",
+          "field": "rain",
+          "value": 131.5,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-09",
+          "field": "mean",
+          "value": 21.9,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-10",
+          "field": "rain",
+          "value": 14.5,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-10",
+          "field": "mean",
+          "value": 21.5,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-11",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-11",
+          "field": "mean",
+          "value": 22.9,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-12",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-12",
+          "field": "mean",
+          "value": 23.6,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-13",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-13",
+          "field": "mean",
+          "value": 22.3,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-14",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-14",
+          "field": "mean",
+          "value": 22,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-15",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-15",
+          "field": "mean",
+          "value": 21.4,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-16",
+          "field": "rain",
+          "value": 6.5,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-16",
+          "field": "mean",
+          "value": 20,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-17",
+          "field": "rain",
+          "value": 63.5,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-17",
+          "field": "mean",
+          "value": 17.4,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-18",
+          "field": "rain",
+          "value": 5,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-18",
+          "field": "mean",
+          "value": 19.8,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-19",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-19",
+          "field": "mean",
+          "value": 23.4,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-20",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-20",
+          "field": "mean",
+          "value": 22.3,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-21",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-21",
+          "field": "mean",
+          "value": 21.6,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-22",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-22",
+          "field": "mean",
+          "value": 22.3,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-23",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-23",
+          "field": "mean",
+          "value": 21.1,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-24",
+          "field": "rain",
+          "value": 2.5,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-24",
+          "field": "mean",
+          "value": 18.6,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-25",
+          "field": "rain",
+          "value": 29,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-25",
+          "field": "mean",
+          "value": 17.1,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-26",
+          "field": "rain",
+          "value": 2.5,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-26",
+          "field": "mean",
+          "value": 20.6,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-27",
+          "field": "rain",
+          "value": 3,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-27",
+          "field": "mean",
+          "value": 21,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-28",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-28",
+          "field": "mean",
+          "value": 22.2,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-29",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-29",
+          "field": "mean",
+          "value": 20.6,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-30",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-30",
+          "field": "mean",
+          "value": 18.7,
+          "quality": 8
+        }
+      ]
+    },
+    {
+      "url": "https://www.data.jma.go.jp/stats/etrn/view/daily_s1.php?prec_no=44&block_no=47662&year=2015&month=9&day=&view=",
+      "filename": "t-2015-09.html",
+      "sha256": "a926f5fda91c6e5cfdb19495e32f3bd80390ef6264f7f0110c3a3244ed826b29",
+      "observations": [
+        {
+          "date": "2015-09-01",
+          "field": "rain",
+          "value": 12,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-01",
+          "field": "mean",
+          "value": 23.7,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-02",
+          "field": "rain",
+          "value": 5.5,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-02",
+          "field": "mean",
+          "value": 26.9,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-03",
+          "field": "rain",
+          "value": 1.5,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-03",
+          "field": "mean",
+          "value": 25.7,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-04",
+          "field": "rain",
+          "value": 14,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-04",
+          "field": "mean",
+          "value": 24.7,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-05",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-05",
+          "field": "mean",
+          "value": 25.4,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-06",
+          "field": "rain",
+          "value": 46.5,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-06",
+          "field": "mean",
+          "value": 23.8,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-07",
+          "field": "rain",
+          "value": 19,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-07",
+          "field": "mean",
+          "value": 23,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-08",
+          "field": "rain",
+          "value": 65.5,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-08",
+          "field": "mean",
+          "value": 20,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-09",
+          "field": "rain",
+          "value": 156.5,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-09",
+          "field": "mean",
+          "value": 22.4,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-10",
+          "field": "rain",
+          "value": 50,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-10",
+          "field": "mean",
+          "value": 21.8,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-11",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-11",
+          "field": "mean",
+          "value": 23.9,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-12",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-12",
+          "field": "mean",
+          "value": 24.7,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-13",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-13",
+          "field": "mean",
+          "value": 24.4,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-14",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-14",
+          "field": "mean",
+          "value": 22.9,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-15",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-15",
+          "field": "mean",
+          "value": 22.3,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-16",
+          "field": "rain",
+          "value": 4,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-16",
+          "field": "mean",
+          "value": 21.1,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-17",
+          "field": "rain",
+          "value": 74.5,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-17",
+          "field": "mean",
+          "value": 17.9,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-18",
+          "field": "rain",
+          "value": 5.5,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-18",
+          "field": "mean",
+          "value": 20.6,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-19",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-19",
+          "field": "mean",
+          "value": 24.1,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-20",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-20",
+          "field": "mean",
+          "value": 23.3,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-21",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-21",
+          "field": "mean",
+          "value": 22.7,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-22",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-22",
+          "field": "mean",
+          "value": 23,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-23",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-23",
+          "field": "mean",
+          "value": 22.4,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-24",
+          "field": "rain",
+          "value": 1,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-24",
+          "field": "mean",
+          "value": 20.4,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-25",
+          "field": "rain",
+          "value": 43,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-25",
+          "field": "mean",
+          "value": 17.7,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-26",
+          "field": "rain",
+          "value": 5,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-26",
+          "field": "mean",
+          "value": 20.5,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-27",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-27",
+          "field": "mean",
+          "value": 21.4,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-28",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-28",
+          "field": "mean",
+          "value": 23.3,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-29",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-29",
+          "field": "mean",
+          "value": 22.7,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-30",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2015-09-30",
+          "field": "mean",
+          "value": 20.9,
+          "quality": 8
+        }
+      ]
+    },
+    {
+      "url": "https://www.data.jma.go.jp/stats/etrn/view/daily_a1.php?prec_no=44&block_no=0366&year=2019&month=1&day=&view=",
+      "filename": "h-2019-01.html",
+      "sha256": "f52a601fb2cc74abf12c2df6272fd541ad88c766314d07e1c9cb2ea86a29db42",
+      "observations": [
+        {
+          "date": "2019-01-01",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-01",
+          "field": "mean",
+          "value": 3.1,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-02",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-02",
+          "field": "mean",
+          "value": 2.9,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-03",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-03",
+          "field": "mean",
+          "value": 2.5,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-04",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-04",
+          "field": "mean",
+          "value": 2.5,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-05",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-05",
+          "field": "mean",
+          "value": 4.9,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-06",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-06",
+          "field": "mean",
+          "value": 2.3,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-07",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-07",
+          "field": "mean",
+          "value": 2.9,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-08",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-08",
+          "field": "mean",
+          "value": 2.8,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-09",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-09",
+          "field": "mean",
+          "value": 2.7,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-10",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-10",
+          "field": "mean",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-11",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-11",
+          "field": "mean",
+          "value": 4.3,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-12",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-12",
+          "field": "mean",
+          "value": 3.3,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-13",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-13",
+          "field": "mean",
+          "value": 4.8,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-14",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-14",
+          "field": "mean",
+          "value": 3.1,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-15",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-15",
+          "field": "mean",
+          "value": 2.2,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-16",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-16",
+          "field": "mean",
+          "value": 4.5,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-17",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-17",
+          "field": "mean",
+          "value": 4.3,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-18",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-18",
+          "field": "mean",
+          "value": 3.1,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-19",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-19",
+          "field": "mean",
+          "value": 3.4,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-20",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-20",
+          "field": "mean",
+          "value": 4.9,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-21",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-21",
+          "field": "mean",
+          "value": 4.5,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-22",
+          "field": "rain",
+          "value": 0,
+          "quality": 5
+        },
+        {
+          "date": "2019-01-22",
+          "field": "mean",
+          "value": 2.9,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-23",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-23",
+          "field": "mean",
+          "value": 4.1,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-24",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-24",
+          "field": "mean",
+          "value": 3.6,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-25",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-25",
+          "field": "mean",
+          "value": 3.2,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-26",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-26",
+          "field": "mean",
+          "value": 3.1,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-27",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-27",
+          "field": "mean",
+          "value": 2.8,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-28",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-28",
+          "field": "mean",
+          "value": 4,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-29",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-29",
+          "field": "mean",
+          "value": 4.6,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-30",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-30",
+          "field": "mean",
+          "value": 2.6,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-31",
+          "field": "rain",
+          "value": 12.5,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-31",
+          "field": "mean",
+          "value": 3.7,
+          "quality": 8
+        }
+      ]
+    },
+    {
+      "url": "https://www.data.jma.go.jp/stats/etrn/view/daily_s1.php?prec_no=44&block_no=47662&year=2019&month=1&day=&view=",
+      "filename": "t-2019-01.html",
+      "sha256": "3cbc4f33dc36c80ba95d71e0dfb14e8c791d041f8391571fbb7796fd912dcd3f",
+      "observations": [
+        {
+          "date": "2019-01-01",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-01",
+          "field": "mean",
+          "value": 5.3,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-02",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-02",
+          "field": "mean",
+          "value": 6.2,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-03",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-03",
+          "field": "mean",
+          "value": 4.9,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-04",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-04",
+          "field": "mean",
+          "value": 5.1,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-05",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-05",
+          "field": "mean",
+          "value": 7.4,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-06",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-06",
+          "field": "mean",
+          "value": 5.3,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-07",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-07",
+          "field": "mean",
+          "value": 5.4,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-08",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-08",
+          "field": "mean",
+          "value": 4.6,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-09",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-09",
+          "field": "mean",
+          "value": 4.5,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-10",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-10",
+          "field": "mean",
+          "value": 2,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-11",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-11",
+          "field": "mean",
+          "value": 6.4,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-12",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-12",
+          "field": "mean",
+          "value": 4.6,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-13",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-13",
+          "field": "mean",
+          "value": 6.2,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-14",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-14",
+          "field": "mean",
+          "value": 5.6,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-15",
+          "field": "rain",
+          "value": 0.5,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-15",
+          "field": "mean",
+          "value": 5.6,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-16",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-16",
+          "field": "mean",
+          "value": 6.6,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-17",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-17",
+          "field": "mean",
+          "value": 6.6,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-18",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-18",
+          "field": "mean",
+          "value": 5.9,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-19",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-19",
+          "field": "mean",
+          "value": 6.6,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-20",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-20",
+          "field": "mean",
+          "value": 7.1,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-21",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-21",
+          "field": "mean",
+          "value": 5.8,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-22",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-22",
+          "field": "mean",
+          "value": 5,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-23",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-23",
+          "field": "mean",
+          "value": 6.7,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-24",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-24",
+          "field": "mean",
+          "value": 6.2,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-25",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-25",
+          "field": "mean",
+          "value": 6,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-26",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-26",
+          "field": "mean",
+          "value": 4.5,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-27",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-27",
+          "field": "mean",
+          "value": 4.6,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-28",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-28",
+          "field": "mean",
+          "value": 6.5,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-29",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-29",
+          "field": "mean",
+          "value": 6,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-30",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-30",
+          "field": "mean",
+          "value": 5.2,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-31",
+          "field": "rain",
+          "value": 15.5,
+          "quality": 8
+        },
+        {
+          "date": "2019-01-31",
+          "field": "mean",
+          "value": 5.1,
+          "quality": 8
+        }
+      ]
+    },
+    {
+      "url": "https://www.data.jma.go.jp/stats/etrn/view/daily_a1.php?prec_no=44&block_no=0366&year=2020&month=2&day=&view=",
+      "filename": "h-2020-02.html",
+      "sha256": "3bde3ac0d3acdd35ffcc438fa8de85e927c08cca77f8502bff1961673420c9ee",
+      "observations": [
+        {
+          "date": "2020-02-01",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-01",
+          "field": "mean",
+          "value": 5.2,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-02",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-02",
+          "field": "mean",
+          "value": 6.5,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-03",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-03",
+          "field": "mean",
+          "value": 7.5,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-04",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-04",
+          "field": "mean",
+          "value": 5.8,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-05",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-05",
+          "field": "mean",
+          "value": 5.8,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-06",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-06",
+          "field": "mean",
+          "value": 1.6,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-07",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-07",
+          "field": "mean",
+          "value": 0.7,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-08",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-08",
+          "field": "mean",
+          "value": 4.4,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-09",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-09",
+          "field": "mean",
+          "value": 2.3,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-10",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-10",
+          "field": "mean",
+          "value": 2.4,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-11",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-11",
+          "field": "mean",
+          "value": 4.2,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-12",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-12",
+          "field": "mean",
+          "value": 5.9,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-13",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-13",
+          "field": "mean",
+          "value": 11.1,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-14",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-14",
+          "field": "mean",
+          "value": 10.3,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-15",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-15",
+          "field": "mean",
+          "value": 9.3,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-16",
+          "field": "rain",
+          "value": 4,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-16",
+          "field": "mean",
+          "value": 8.1,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-17",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-17",
+          "field": "mean",
+          "value": 9.2,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-18",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-18",
+          "field": "mean",
+          "value": 5.4,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-19",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-19",
+          "field": "mean",
+          "value": 5.7,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-20",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-20",
+          "field": "mean",
+          "value": 7.7,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-21",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-21",
+          "field": "mean",
+          "value": 8.8,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-22",
+          "field": "rain",
+          "value": 1.5,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-22",
+          "field": "mean",
+          "value": 10.9,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-23",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-23",
+          "field": "mean",
+          "value": 8.7,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-24",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-24",
+          "field": "mean",
+          "value": 7.1,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-25",
+          "field": "rain",
+          "value": 0.5,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-25",
+          "field": "mean",
+          "value": 8.5,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-26",
+          "field": "rain",
+          "value": 2.5,
+          "quality": 5
+        },
+        {
+          "date": "2020-02-26",
+          "field": "mean",
+          "value": 7.3,
+          "quality": 5
+        },
+        {
+          "date": "2020-02-27",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-27",
+          "field": "mean",
+          "value": 5.7,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-28",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-28",
+          "field": "mean",
+          "value": 5.1,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-29",
+          "field": "rain",
+          "value": 0.5,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-29",
+          "field": "mean",
+          "value": 8.4,
+          "quality": 8
+        }
+      ]
+    },
+    {
+      "url": "https://www.data.jma.go.jp/stats/etrn/view/daily_s1.php?prec_no=44&block_no=47662&year=2020&month=2&day=&view=",
+      "filename": "t-2020-02.html",
+      "sha256": "c321a1ab345fbfe59c8b450abc342259c8b924cda4593474233cf72d42dfb111",
+      "observations": [
+        {
+          "date": "2020-02-01",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-01",
+          "field": "mean",
+          "value": 7.9,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-02",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-02",
+          "field": "mean",
+          "value": 8.7,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-03",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-03",
+          "field": "mean",
+          "value": 9.3,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-04",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-04",
+          "field": "mean",
+          "value": 7.9,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-05",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-05",
+          "field": "mean",
+          "value": 7.6,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-06",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-06",
+          "field": "mean",
+          "value": 2.9,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-07",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-07",
+          "field": "mean",
+          "value": 2.4,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-08",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-08",
+          "field": "mean",
+          "value": 6.2,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-09",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-09",
+          "field": "mean",
+          "value": 3.9,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-10",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-10",
+          "field": "mean",
+          "value": 4.6,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-11",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-11",
+          "field": "mean",
+          "value": 6.3,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-12",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-12",
+          "field": "mean",
+          "value": 8.7,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-13",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-13",
+          "field": "mean",
+          "value": 11.7,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-14",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-14",
+          "field": "mean",
+          "value": 12,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-15",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-15",
+          "field": "mean",
+          "value": 12.4,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-16",
+          "field": "rain",
+          "value": 8.5,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-16",
+          "field": "mean",
+          "value": 9.3,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-17",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-17",
+          "field": "mean",
+          "value": 10.3,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-18",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-18",
+          "field": "mean",
+          "value": 7.6,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-19",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-19",
+          "field": "mean",
+          "value": 8.1,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-20",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-20",
+          "field": "mean",
+          "value": 9,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-21",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-21",
+          "field": "mean",
+          "value": 10,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-22",
+          "field": "rain",
+          "value": 2.5,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-22",
+          "field": "mean",
+          "value": 12.5,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-23",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-23",
+          "field": "mean",
+          "value": 10.4,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-24",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-24",
+          "field": "mean",
+          "value": 9.8,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-25",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-25",
+          "field": "mean",
+          "value": 10.5,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-26",
+          "field": "rain",
+          "value": 3,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-26",
+          "field": "mean",
+          "value": 8.1,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-27",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-27",
+          "field": "mean",
+          "value": 7,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-28",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-28",
+          "field": "mean",
+          "value": 7,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-29",
+          "field": "rain",
+          "value": 1,
+          "quality": 8
+        },
+        {
+          "date": "2020-02-29",
+          "field": "mean",
+          "value": 9.4,
+          "quality": 8
+        }
+      ]
+    },
+    {
+      "url": "https://www.data.jma.go.jp/stats/etrn/view/daily_a1.php?prec_no=44&block_no=0366&year=2021&month=9&day=&view=",
+      "filename": "h-2021-09.html",
+      "sha256": "160abf33bb2a2fe8f9a979862762d8cba19d1372cbf17e2c1814f86cdc86284b",
+      "observations": [
+        {
+          "date": "2021-09-01",
+          "field": "rain",
+          "value": 0.5,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-01",
+          "field": "mean",
+          "value": 20,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-02",
+          "field": "rain",
+          "value": 33,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-02",
+          "field": "mean",
+          "value": 18.9,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-03",
+          "field": "rain",
+          "value": 9,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-03",
+          "field": "mean",
+          "value": 19.2,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-04",
+          "field": "rain",
+          "value": 34,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-04",
+          "field": "mean",
+          "value": 19.8,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-05",
+          "field": "rain",
+          "value": 2.5,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-05",
+          "field": "mean",
+          "value": 20.3,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-06",
+          "field": "rain",
+          "value": 2,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-06",
+          "field": "mean",
+          "value": 18.8,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-07",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-07",
+          "field": "mean",
+          "value": 19.8,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-08",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-08",
+          "field": "mean",
+          "value": 19.8,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-09",
+          "field": "rain",
+          "value": 11,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-09",
+          "field": "mean",
+          "value": 20.5,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-10",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-10",
+          "field": "mean",
+          "value": 24.3,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-11",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-11",
+          "field": "mean",
+          "value": 23.9,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-12",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-12",
+          "field": "mean",
+          "value": 23.5,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-13",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-13",
+          "field": "mean",
+          "value": 24.3,
+          "quality": 5
+        },
+        {
+          "date": "2021-09-14",
+          "field": "rain",
+          "value": 4,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-14",
+          "field": "mean",
+          "value": 22.1,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-15",
+          "field": "rain",
+          "value": 3.5,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-15",
+          "field": "mean",
+          "value": 22.6,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-16",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-16",
+          "field": "mean",
+          "value": 21.5,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-17",
+          "field": "rain",
+          "value": 5.5,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-17",
+          "field": "mean",
+          "value": 21.1,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-18",
+          "field": "rain",
+          "value": 35.5,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-18",
+          "field": "mean",
+          "value": 22.5,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-19",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-19",
+          "field": "mean",
+          "value": 23.6,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-20",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-20",
+          "field": "mean",
+          "value": 21.2,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-21",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-21",
+          "field": "mean",
+          "value": 21.7,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-22",
+          "field": "rain",
+          "value": 7,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-22",
+          "field": "mean",
+          "value": 24.3,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-23",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-23",
+          "field": "mean",
+          "value": 25.4,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-24",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-24",
+          "field": "mean",
+          "value": 23.7,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-25",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-25",
+          "field": "mean",
+          "value": 20.4,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-26",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-26",
+          "field": "mean",
+          "value": 18.3,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-27",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-27",
+          "field": "mean",
+          "value": 18.9,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-28",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-28",
+          "field": "mean",
+          "value": 20.6,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-29",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-29",
+          "field": "mean",
+          "value": 22,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-30",
+          "field": "rain",
+          "value": 0.5,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-30",
+          "field": "mean",
+          "value": 21.6,
+          "quality": 8
+        }
+      ]
+    },
+    {
+      "url": "https://www.data.jma.go.jp/stats/etrn/view/daily_s1.php?prec_no=44&block_no=47662&year=2021&month=9&day=&view=",
+      "filename": "t-2021-09.html",
+      "sha256": "572001208f20c72428f8f527f574f5d3d9d2f6ca71938c793c8e2f0f3f801a09",
+      "observations": [
+        {
+          "date": "2021-09-01",
+          "field": "rain",
+          "value": 3,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-01",
+          "field": "mean",
+          "value": 20.7,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-02",
+          "field": "rain",
+          "value": 18.5,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-02",
+          "field": "mean",
+          "value": 19.4,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-03",
+          "field": "rain",
+          "value": 17,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-03",
+          "field": "mean",
+          "value": 19.7,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-04",
+          "field": "rain",
+          "value": 14,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-04",
+          "field": "mean",
+          "value": 20.6,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-05",
+          "field": "rain",
+          "value": 10,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-05",
+          "field": "mean",
+          "value": 21,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-06",
+          "field": "rain",
+          "value": 8.5,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-06",
+          "field": "mean",
+          "value": 19.9,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-07",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-07",
+          "field": "mean",
+          "value": 20.4,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-08",
+          "field": "rain",
+          "value": 0.5,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-08",
+          "field": "mean",
+          "value": 20.3,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-09",
+          "field": "rain",
+          "value": 14,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-09",
+          "field": "mean",
+          "value": 20.5,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-10",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-10",
+          "field": "mean",
+          "value": 24.8,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-11",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-11",
+          "field": "mean",
+          "value": 25,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-12",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-12",
+          "field": "mean",
+          "value": 24.4,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-13",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-13",
+          "field": "mean",
+          "value": 25.2,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-14",
+          "field": "rain",
+          "value": 5.5,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-14",
+          "field": "mean",
+          "value": 22.8,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-15",
+          "field": "rain",
+          "value": 1.5,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-15",
+          "field": "mean",
+          "value": 22.9,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-16",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-16",
+          "field": "mean",
+          "value": 22.3,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-17",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-17",
+          "field": "mean",
+          "value": 22.3,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-18",
+          "field": "rain",
+          "value": 124.5,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-18",
+          "field": "mean",
+          "value": 23.7,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-19",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-19",
+          "field": "mean",
+          "value": 23.9,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-20",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-20",
+          "field": "mean",
+          "value": 22.4,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-21",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-21",
+          "field": "mean",
+          "value": 22.7,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-22",
+          "field": "rain",
+          "value": 1,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-22",
+          "field": "mean",
+          "value": 24.9,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-23",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-23",
+          "field": "mean",
+          "value": 26.6,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-24",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-24",
+          "field": "mean",
+          "value": 25.4,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-25",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-25",
+          "field": "mean",
+          "value": 22.1,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-26",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-26",
+          "field": "mean",
+          "value": 19.9,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-27",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-27",
+          "field": "mean",
+          "value": 20.1,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-28",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-28",
+          "field": "mean",
+          "value": 21.1,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-29",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-29",
+          "field": "mean",
+          "value": 21.9,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-30",
+          "field": "rain",
+          "value": 4.5,
+          "quality": 8
+        },
+        {
+          "date": "2021-09-30",
+          "field": "mean",
+          "value": 23.2,
+          "quality": 8
+        }
+      ]
+    },
+    {
+      "url": "https://www.data.jma.go.jp/stats/etrn/view/daily_a1.php?prec_no=44&block_no=0366&year=2024&month=12&day=&view=",
+      "filename": "h-2024-12.html",
+      "sha256": "bfcd764b08d46772e36948613a7b08970d7c320d3ae8e4f279bb7ea99ff04425",
+      "observations": [
+        {
+          "date": "2024-12-01",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-01",
+          "field": "mean",
+          "value": 8.3,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-02",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-02",
+          "field": "mean",
+          "value": 10.1,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-03",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-03",
+          "field": "mean",
+          "value": 10.1,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-04",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-04",
+          "field": "mean",
+          "value": 10.3,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-05",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-05",
+          "field": "mean",
+          "value": 10.1,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-06",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-06",
+          "field": "mean",
+          "value": 8.6,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-07",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-07",
+          "field": "mean",
+          "value": 6.7,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-08",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-08",
+          "field": "mean",
+          "value": 5.9,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-09",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-09",
+          "field": "mean",
+          "value": 4.8,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-10",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-10",
+          "field": "mean",
+          "value": 5.9,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-11",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-11",
+          "field": "mean",
+          "value": 6.7,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-12",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-12",
+          "field": "mean",
+          "value": 4.8,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-13",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-13",
+          "field": "mean",
+          "value": 3.1,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-14",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-14",
+          "field": "mean",
+          "value": 5.1,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-15",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-15",
+          "field": "mean",
+          "value": 4.4,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-16",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-16",
+          "field": "mean",
+          "value": 5.3,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-17",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-17",
+          "field": "mean",
+          "value": 5.5,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-18",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-18",
+          "field": "mean",
+          "value": 5.6,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-19",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-19",
+          "field": "mean",
+          "value": 3.8,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-20",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-20",
+          "field": "mean",
+          "value": 4.3,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-21",
+          "field": "rain",
+          "value": 0,
+          "quality": 4
+        },
+        {
+          "date": "2024-12-21",
+          "field": "mean",
+          "value": 1.7,
+          "quality": 4
+        },
+        {
+          "date": "2024-12-22",
+          "field": "rain",
+          "value": null,
+          "quality": 1
+        },
+        {
+          "date": "2024-12-22",
+          "field": "mean",
+          "value": null,
+          "quality": 1
+        },
+        {
+          "date": "2024-12-23",
+          "field": "rain",
+          "value": 0,
+          "quality": 4
+        },
+        {
+          "date": "2024-12-23",
+          "field": "mean",
+          "value": 2.4,
+          "quality": 4
+        },
+        {
+          "date": "2024-12-24",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-24",
+          "field": "mean",
+          "value": 3.6,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-25",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-25",
+          "field": "mean",
+          "value": 3.9,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-26",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-26",
+          "field": "mean",
+          "value": 6.3,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-27",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-27",
+          "field": "mean",
+          "value": 4.3,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-28",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-28",
+          "field": "mean",
+          "value": 3.4,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-29",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-29",
+          "field": "mean",
+          "value": 3.1,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-30",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-30",
+          "field": "mean",
+          "value": 3,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-31",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-31",
+          "field": "mean",
+          "value": 6.1,
+          "quality": 8
+        }
+      ]
+    },
+    {
+      "url": "https://www.data.jma.go.jp/stats/etrn/view/daily_s1.php?prec_no=44&block_no=47662&year=2024&month=12&day=&view=",
+      "filename": "t-2024-12.html",
+      "sha256": "2db413d7ba2511670661892ed52215bafa6348dd8f4313161cbd21b3b5bd60a2",
+      "observations": [
+        {
+          "date": "2024-12-01",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-01",
+          "field": "mean",
+          "value": 11.2,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-02",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-02",
+          "field": "mean",
+          "value": 11.4,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-03",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-03",
+          "field": "mean",
+          "value": 11.9,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-04",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-04",
+          "field": "mean",
+          "value": 12.7,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-05",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-05",
+          "field": "mean",
+          "value": 11.5,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-06",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-06",
+          "field": "mean",
+          "value": 11,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-07",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-07",
+          "field": "mean",
+          "value": 8.9,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-08",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-08",
+          "field": "mean",
+          "value": 7.7,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-09",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-09",
+          "field": "mean",
+          "value": 7.7,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-10",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-10",
+          "field": "mean",
+          "value": 8.5,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-11",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-11",
+          "field": "mean",
+          "value": 8.7,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-12",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-12",
+          "field": "mean",
+          "value": 7.1,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-13",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-13",
+          "field": "mean",
+          "value": 5.3,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-14",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-14",
+          "field": "mean",
+          "value": 7.2,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-15",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-15",
+          "field": "mean",
+          "value": 6.6,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-16",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-16",
+          "field": "mean",
+          "value": 7.7,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-17",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-17",
+          "field": "mean",
+          "value": 8,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-18",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-18",
+          "field": "mean",
+          "value": 7.6,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-19",
+          "field": "rain",
+          "value": 0.5,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-19",
+          "field": "mean",
+          "value": 5.2,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-20",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-20",
+          "field": "mean",
+          "value": 6.5,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-21",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-21",
+          "field": "mean",
+          "value": 9.4,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-22",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-22",
+          "field": "mean",
+          "value": 6.9,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-23",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-23",
+          "field": "mean",
+          "value": 6.1,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-24",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-24",
+          "field": "mean",
+          "value": 6.7,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-25",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-25",
+          "field": "mean",
+          "value": 7.7,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-26",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-26",
+          "field": "mean",
+          "value": 8.9,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-27",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-27",
+          "field": "mean",
+          "value": 7.4,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-28",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-28",
+          "field": "mean",
+          "value": 5.4,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-29",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-29",
+          "field": "mean",
+          "value": 6,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-30",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-30",
+          "field": "mean",
+          "value": 6.2,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-31",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2024-12-31",
+          "field": "mean",
+          "value": 8,
+          "quality": 8
+        }
+      ]
+    },
+    {
+      "url": "https://www.data.jma.go.jp/stats/etrn/view/daily_a1.php?prec_no=44&block_no=0366&year=2025&month=9&day=&view=",
+      "filename": "h-2025-09.html",
+      "sha256": "d1bfdff7a0ba3b36c703022a6dc435c45c19de3b5ac90060c035efd696484760",
+      "observations": [
+        {
+          "date": "2025-09-01",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-01",
+          "field": "mean",
+          "value": 30.4,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-02",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-02",
+          "field": "mean",
+          "value": 31.2,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-03",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-03",
+          "field": "mean",
+          "value": 29.9,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-04",
+          "field": "rain",
+          "value": 1,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-04",
+          "field": "mean",
+          "value": 25.9,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-05",
+          "field": "rain",
+          "value": 131,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-05",
+          "field": "mean",
+          "value": 23.8,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-06",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-06",
+          "field": "mean",
+          "value": 25.9,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-07",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-07",
+          "field": "mean",
+          "value": 26.9,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-08",
+          "field": "rain",
+          "value": 6,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-08",
+          "field": "mean",
+          "value": 28.2,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-09",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-09",
+          "field": "mean",
+          "value": 28.8,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-10",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-10",
+          "field": "mean",
+          "value": 28.9,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-11",
+          "field": "rain",
+          "value": 34,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-11",
+          "field": "mean",
+          "value": 26.1,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-12",
+          "field": "rain",
+          "value": 17.5,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-12",
+          "field": "mean",
+          "value": 23.4,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-13",
+          "field": "rain",
+          "value": 4,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-13",
+          "field": "mean",
+          "value": 24.6,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-14",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-14",
+          "field": "mean",
+          "value": 27.1,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-15",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-15",
+          "field": "mean",
+          "value": 26.5,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-16",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-16",
+          "field": "mean",
+          "value": 27.6,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-17",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-17",
+          "field": "mean",
+          "value": 29,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-18",
+          "field": "rain",
+          "value": 5.5,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-18",
+          "field": "mean",
+          "value": 27.9,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-19",
+          "field": "rain",
+          "value": 39.5,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-19",
+          "field": "mean",
+          "value": 21.2,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-20",
+          "field": "rain",
+          "value": 7,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-20",
+          "field": "mean",
+          "value": 21.4,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-21",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-21",
+          "field": "mean",
+          "value": 24.5,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-22",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-22",
+          "field": "mean",
+          "value": 21.9,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-23",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-23",
+          "field": "mean",
+          "value": 20.5,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-24",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-24",
+          "field": "mean",
+          "value": 21.8,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-25",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-25",
+          "field": "mean",
+          "value": 23.2,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-26",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-26",
+          "field": "mean",
+          "value": 25.6,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-27",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-27",
+          "field": "mean",
+          "value": 24.5,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-28",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-28",
+          "field": "mean",
+          "value": 24,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-29",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-29",
+          "field": "mean",
+          "value": 26,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-30",
+          "field": "rain",
+          "value": 3,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-30",
+          "field": "mean",
+          "value": 22.9,
+          "quality": 8
+        }
+      ]
+    },
+    {
+      "url": "https://www.data.jma.go.jp/stats/etrn/view/daily_s1.php?prec_no=44&block_no=47662&year=2025&month=9&day=&view=",
+      "filename": "t-2025-09.html",
+      "sha256": "0ea7c758f3d7e354b27e90a0cd31081d50a0b90f464a36e9323d247c8f32e356",
+      "observations": [
+        {
+          "date": "2025-09-01",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-01",
+          "field": "mean",
+          "value": 30.4,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-02",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-02",
+          "field": "mean",
+          "value": 31.2,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-03",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-03",
+          "field": "mean",
+          "value": 30.3,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-04",
+          "field": "rain",
+          "value": 6.5,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-04",
+          "field": "mean",
+          "value": 26.8,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-05",
+          "field": "rain",
+          "value": 95,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-05",
+          "field": "mean",
+          "value": 24.7,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-06",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-06",
+          "field": "mean",
+          "value": 27.1,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-07",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-07",
+          "field": "mean",
+          "value": 27.4,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-08",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-08",
+          "field": "mean",
+          "value": 29.6,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-09",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-09",
+          "field": "mean",
+          "value": 29.3,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-10",
+          "field": "rain",
+          "value": 0.5,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-10",
+          "field": "mean",
+          "value": 28.3,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-11",
+          "field": "rain",
+          "value": 37.5,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-11",
+          "field": "mean",
+          "value": 27.2,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-12",
+          "field": "rain",
+          "value": 1.5,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-12",
+          "field": "mean",
+          "value": 24.7,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-13",
+          "field": "rain",
+          "value": 12.5,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-13",
+          "field": "mean",
+          "value": 26.3,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-14",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-14",
+          "field": "mean",
+          "value": 28.6,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-15",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-15",
+          "field": "mean",
+          "value": 27.4,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-16",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-16",
+          "field": "mean",
+          "value": 28.5,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-17",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-17",
+          "field": "mean",
+          "value": 29.2,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-18",
+          "field": "rain",
+          "value": 0.5,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-18",
+          "field": "mean",
+          "value": 28.3,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-19",
+          "field": "rain",
+          "value": 41.5,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-19",
+          "field": "mean",
+          "value": 22.4,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-20",
+          "field": "rain",
+          "value": 1,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-20",
+          "field": "mean",
+          "value": 23.8,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-21",
+          "field": "rain",
+          "value": 6.5,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-21",
+          "field": "mean",
+          "value": 25.7,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-22",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-22",
+          "field": "mean",
+          "value": 21.9,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-23",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-23",
+          "field": "mean",
+          "value": 22,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-24",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-24",
+          "field": "mean",
+          "value": 22.5,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-25",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-25",
+          "field": "mean",
+          "value": 23.8,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-26",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-26",
+          "field": "mean",
+          "value": 26.3,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-27",
+          "field": "rain",
+          "value": 0.5,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-27",
+          "field": "mean",
+          "value": 24.6,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-28",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-28",
+          "field": "mean",
+          "value": 24.8,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-29",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-29",
+          "field": "mean",
+          "value": 27,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-30",
+          "field": "rain",
+          "value": 0,
+          "quality": 8
+        },
+        {
+          "date": "2025-09-30",
+          "field": "mean",
+          "value": 24.3,
+          "quality": 8
+        }
+      ]
+    }
+  ]
+}

@@ -100,6 +100,8 @@ export default function SnowPage() {
           <Link href="/labs/hachioji-chill">第4弾：八王子の朝はなぜ寒い？（冬の冷え込み・放射冷却） →</Link>
           <Link href="/labs/takao-gear">第5弾：高尾山の装備をどう決める？ →</Link>
           <Link href="/labs/takao-weather-shift">第6弾：高尾山の天気をどう読む？ →</Link>
+          <Link href="/labs/hachioji-rain">第7弾：八王子は都心より雨が多い？ →</Link>
+          <Link href="/labs/hachioji-autumn">第8弾：八王子の秋は本当に短くなった？ →</Link>
           <Link href="/toukei">統計検定2級の学習へ →</Link>
         </div>
       </section>
