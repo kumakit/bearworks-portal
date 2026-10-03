@@ -15,8 +15,12 @@
 - [x] 運営者による最終原稿承認（2026-10-04、公開準備の進行指示）
 - [x] 公開時の検証を整備（新記事/配布原本、既存検証のsitemap登録数）
 - [x] 公開対象のローカルcommit（codex/hachioji-rain-autumn）
-- [ ] 対象ブランチのpush・PRまたは手動Linux CI（明示承認待ち）
-- [ ] 同じcommitのLinux Workers build/dry-run/previewが成功
-- [ ] 本番公開（別途承認）・公開URLの検証
+- [x] push・PR・merge・本番deployの明示承認（2026-10-04）
+- [x] 対象ブランチのpush・PR #16作成とCodex添付
+- [x] 同じcommitのLinux Workers build/dry-run/previewが成功
+- [x] 既存依存関係警告の本番適用条件を点検・記録
+- [x] PR #16をmerge、main同期・CI対象とのtree一致確認
+- [x] 本番公開・公開URLの検証・ブラウザー操作確認
+- [x] 公開結果、配信version、更新前の復旧先を記録
 
 結果の詳細は `walkthrough.md`、検算・公式画面照合・ローカルHTTP確認は `evidence/` に保存。

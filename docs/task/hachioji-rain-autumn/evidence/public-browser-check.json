@@ -1,0 +1,28 @@
+{
+  "checkedOnJst": "2026-10-04",
+  "base": "https://bearworks.uk",
+  "releaseCommit": "d94195f9e6cc83fc41777cde4c136f2ec8efb432",
+  "workerVersion": "03588ad3-25ef-49a3-9829-739199e0eb4a",
+  "rain": {
+    "url": "https://bearworks.uk/labs/hachioji-rain",
+    "metricSwitches": ["降水量", "降水日数", "上位5日の割合"],
+    "pressedStateAndChartChanged": true,
+    "question1Expanded": true,
+    "browserErrorsSinceDeployment": 0,
+    "screenshot": "rain-public.jpg"
+  },
+  "autumn": {
+    "url": "https://bearworks.uk/labs/hachioji-autumn",
+    "temperatureRanges": ["14-24", "15-25", "16-26"],
+    "periodComparisonChanged": true,
+    "year2021NormalDays": 90,
+    "year2021ExcludedDayShown": "09-13",
+    "yearRestoredTo": 2025,
+    "rangeRestoredTo": "15-25",
+    "question1Expanded": true,
+    "browserErrorsSinceDeployment": 0,
+    "screenshot": "autumn-public.jpg"
+  },
+  "tabsMarkedDeliverable": true,
+  "temporaryViewportOverrideReset": true
+}

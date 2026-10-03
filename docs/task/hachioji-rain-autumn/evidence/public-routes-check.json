@@ -1,0 +1,115 @@
+{
+  "checkedAt": "2026-10-03T23:08:11.255Z",
+  "base": "https://bearworks.uk",
+  "releaseCommit": "d94195f9e6cc83fc41777cde4c136f2ec8efb432",
+  "newArticleVerifier": "PASS: 12 routes, body/schema/canonical/data hashes/approval/questions/downloads/links/sitemap",
+  "checks": [
+    {
+      "path": "/",
+      "status": 200,
+      "ads": true,
+      "pass": true
+    },
+    {
+      "path": "/labs/hachioji-rain",
+      "status": 200,
+      "ads": true,
+      "pass": true
+    },
+    {
+      "path": "/labs/hachioji-autumn",
+      "status": 200,
+      "ads": true,
+      "pass": true
+    },
+    {
+      "path": "/toukei",
+      "status": 200,
+      "ads": true,
+      "pass": true
+    },
+    {
+      "path": "/toukei/problems/contingency-table",
+      "status": 200,
+      "ads": true,
+      "pass": true
+    },
+    {
+      "path": "/toukei/guides/sampling-and-bias",
+      "status": 200,
+      "ads": true,
+      "pass": true
+    },
+    {
+      "path": "/about",
+      "status": 200,
+      "ads": false,
+      "pass": true
+    },
+    {
+      "path": "/contact",
+      "status": 200,
+      "ads": false,
+      "pass": true
+    },
+    {
+      "path": "/privacy",
+      "status": 200,
+      "ads": false,
+      "pass": true
+    },
+    {
+      "path": "/weather",
+      "status": 200,
+      "ads": false,
+      "pass": true
+    },
+    {
+      "path": "/dashboard",
+      "status": 200,
+      "ads": false,
+      "pass": true
+    },
+    {
+      "path": "/ai-news",
+      "status": 200,
+      "ads": false,
+      "pass": true
+    },
+    {
+      "path": "/toukei/problems/__invalid__",
+      "status": 404,
+      "ads": false,
+      "pass": true
+    },
+    {
+      "path": "/toukei/guides/__invalid__",
+      "status": 404,
+      "ads": false,
+      "pass": true
+    },
+    {
+      "path": "/route-that-does-not-exist",
+      "status": 404,
+      "ads": false,
+      "pass": true
+    },
+    {
+      "path": "/api/dashboard-data",
+      "status": 302,
+      "redirectHost": "bearworks-uk.cloudflareaccess.com",
+      "pass": true
+    },
+    {
+      "path": "/ads.txt",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "uniqueUrls": 54,
+      "pass": true
+    }
+  ]
+}

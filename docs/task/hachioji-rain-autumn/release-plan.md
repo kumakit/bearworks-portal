@@ -4,9 +4,9 @@
 
 ## 現在の状態
 
-原稿承認とローカル公開準備は許可済み。pushの明示承認は会話でまだ受けていない。pushは共通AGENTSの「pushはユーザーの明示承認後に行う」に従う。本番deployはREADMEと既存runbookの別ゲートに従う。完成済みの差分を先にローカルcommitへまとめる。
+2026-10-04、ユーザーの「はい、本番公開まで実施してください」により、提示済みのpush、PR作成、Linux CI、merge、本番deployを明示承認された。各工程を実施し、公開URLの検証も完了。実施結果は `release-result.md` に記録した。
 
-ローカルのlint/build、独立検算、公式HTMLの標本照合、PC/スマホ操作、新記事12ルート、例題30・ガイド8と54 URL sitemap・広告境界の検証は成功。Linux/Workersと公開URLの確認は未実施。
+ローカルのlint/build、独立検算、公式HTMLの標本照合、PC/スマホ操作、新記事12ルート、例題30・ガイド8と54 URL sitemap・広告境界の検証は成功。同じ内容のLinux/Workers CIと公開URLでの新記事検証・代表18確認・ブラウザー操作も成功。
 
 ## 1. GitHubでのLinux検証
 

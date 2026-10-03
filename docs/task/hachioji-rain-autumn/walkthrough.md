@@ -1,6 +1,6 @@
-# 八王子シリーズ第7・8弾 ローカル制作結果
+# 八王子シリーズ第7・8弾 制作・公開結果
 
-2026-10-04。本文、図表、数値表、確認問題、出典と原本ダウンロード、シリーズ導線を実装した。完成稿へのOKと公開準備の進行指示を受け、原稿承認表示を更新した。公開操作は未実施。
+2026-10-04。本文、図表、数値表、確認問題、出典と原本ダウンロード、シリーズ導線を実装した。完成稿と公開準備の承認後、ユーザーから本番公開までの明示承認を受け、PR #16・Linux CI・merge・Workers公開・公開URL確認まで完了。公開SHA、配信version、復旧先、検証結果は `release-result.md` を参照。
 
 ## 記事と読みどころ
 
@@ -42,7 +42,7 @@
 
 証拠: `evidence/independent-check.json`、`evidence/jma/check.json`、`evidence/routes-check.json`、`evidence/browser-check.json`。画面画像も同ディレクトリに保存。
 
-## 未実施・公開前の確認
+## 公開準備時点の記録（その後の完了結果は release-result.md）
 
 運営者は2026-10-04に「OK、公開へ向けて進めてください」と指示した。この承認を完成稿とローカル公開準備へ反映し、記事の制作・検証情報を更新した。対象ブランチのpush、PR/Issueへの書き込み、本番deployは未実施。WindowsのNext.js build成功はCloudflare向けLinux CIや本番動作の確認を代替しない。
 
