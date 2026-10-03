@@ -19,6 +19,7 @@ const canonicalUrl = "https://bearworks.uk/labs/hachioji-chill";
 const title = "八王子の朝はなぜ寒い？ ―― 冬の冷え込みと放射冷却をデータで検証する";
 const card = "min-w-0 rounded-3xl border border-slate-200 bg-white p-5 md:p-8";
 const heading = "text-2xl font-bold tracking-tight text-slate-900 md:text-3xl";
+const validHourlyPairCount = chillBundle.hourly_profile.reduce((total, hour) => total + hour.sample_size, 0);
 
 export const metadata: Metadata = {
   title: `${title} | bearworks.uk`,
@@ -91,7 +92,7 @@ export default function HachiojiChillPage() {
     "@type": "Article",
     headline: title,
     datePublished: "2026-09-18",
-    dateModified: "2026-09-18",
+    dateModified: "2026-10-03",
     mainEntityOfPage: canonicalUrl,
     author: { "@type": "Person", name: "kuma" },
     publisher: { "@type": "Organization", name: "bearworks.uk", url: "https://bearworks.uk" },
@@ -124,7 +125,7 @@ export default function HachiojiChillPage() {
                 <Snowflake size={16} /> 冬季12シーズン（2014-2026年）
               </span>
               <span className="inline-flex items-center gap-1.5">
-                <Thermometer size={16} /> 計25,920観測点の実測ペア
+                <Thermometer size={16} /> 1時間値の有効な地点間ペア {validHourlyPairCount.toLocaleString()}組
               </span>
               <span className="inline-flex items-center gap-1.5">
                 <Wind size={16} /> 夜間風速・降水条件分析
@@ -416,7 +417,7 @@ export default function HachiojiChillPage() {
               <strong>一次データ出典：</strong> 気象庁（JMA）「過去の気象データ・ダウンロード」より取得したアメダス八王子（地点記号 a0366, block 0366）および気象官署東京（地点記号 s47662, block 47662）の1時間値観測データ。
             </p>
             <p>
-              <strong>対象期間と均質性：</strong> 東京観測所は2014年12月2日に大手町から北の丸公園へ移転しました。観測環境の同一性を確保するため、1時間値の比較対象期間は移転完了直後の2014年12月1日から2026年2月28日までの冬季（12月〜2月、計12シーズン・1,078日）を採用しています。長期の日較差比較（36年間）については、既存の検証済み固定データ（1990〜2025年）を参照しています。
+              <strong>対象期間と均質性：</strong> 東京観測所は<a href="https://www.jma.go.jp/jma/kishou/know/kansoku/info/20141202_tokyo_rojo.html" className="underline hover:text-cyan-700" target="_blank" rel="noopener noreferrer">2014年12月2日9時40分に大手町から北の丸公園へ移転</a>しました。固定データの対象は2014年12月1日から2026年2月28日までの冬季（12月〜2月、計12シーズン・朝7時の有効日1,078日）で、移転前の12月1日と移転当日7時の12月2日を含みます。この2日を除く1,076日の朝7時差では中央値−3.4℃、平均値−3.3℃は変わらず、−3℃以下の割合は60.7%から60.8%になります。24時間プロファイルや条件別集計は除外後の再集計をしていないため、全期間を同一の観測環境とはみなしません。長期の日較差比較（36年間）は、既存の固定データ（1990〜2025年）を参照しています。
             </p>
             <p>
               <strong>品質フラグと欠測処理：</strong> 気象庁の品質情報フラグが8（正常値）または5（準正常値）のペアのみを集計に採用しています。欠測値や疑わしい値を0℃や平均値で埋める補完は一切行っていません。
@@ -501,11 +502,11 @@ export default function HachiojiChillPage() {
               className="group rounded-2xl border border-slate-200 p-4 transition-all hover:border-slate-400 hover:bg-slate-50"
             >
               <div className="flex items-center justify-between text-xs text-slate-400">
-                <span>05 · 高尾山装備判定</span>
+                <span>05 · 高尾山の装備の考え方</span>
                 <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
               </div>
-              <h3 className="mt-2 text-sm font-bold text-slate-900">高尾山装備シミュレーター</h3>
-              <p className="mt-1 text-xs text-slate-500">標高599mの体感温度ギャップと必須装備を判定</p>
+              <h3 className="mt-2 text-sm font-bold text-slate-900">高尾山の装備をどう考える？</h3>
+              <p className="mt-1 text-xs text-slate-500">登山道、最新の天気、行動時間を確かめる</p>
             </Link>
 
             <Link
@@ -513,11 +514,11 @@ export default function HachiojiChillPage() {
               className="group rounded-2xl border border-slate-200 p-4 transition-all hover:border-slate-400 hover:bg-slate-50"
             >
               <div className="flex items-center justify-between text-xs text-slate-400">
-                <span>06 · 天候急変とガス</span>
+                <span>06 · 天気とデータの読み方</span>
                 <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
               </div>
-              <h3 className="mt-2 text-sm font-bold text-slate-900">高尾山頂の濃霧・急変検証</h3>
-              <p className="mt-1 text-xs text-slate-500">平野晴天でも山頂は濃霧？見せかけの晴れを解明</p>
+              <h3 className="mt-2 text-sm font-bold text-slate-900">高尾山の天気をどう読む？</h3>
+              <p className="mt-1 text-xs text-slate-500">市街地と山の天気、データの種類を区別する</p>
             </Link>
           </div>
         </nav>

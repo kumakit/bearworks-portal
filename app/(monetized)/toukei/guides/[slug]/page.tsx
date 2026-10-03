@@ -93,7 +93,7 @@ export default async function GuideDetailPage({ params }: PageProps) {
             </span>
             <span className="flex items-center gap-1">
               <Clock size={14} />
-              最終確認日: {guide.reviewedAt}
+              内容更新日: {guide.reviewedAt}
             </span>
           </div>
         </header>

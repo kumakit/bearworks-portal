@@ -24,12 +24,12 @@ export interface ContentProvenance {
 
 export const toukeiGuideProvenance: ContentProvenance = {
   writtenBy: "kuma / bearworks.uk",
-  checkedBy: "kuma / bearworks.uk（参照資料、数値例、説明の整合性を確認）",
-  finalReviewedBy: "kuma / bearworks.uk",
+  checkedBy: "初版：kuma / bearworks.uk。2026-10-03改訂：Codex（統計的な説明・数値例・参照資料を点検）、Luna（読み取り専用の一次監査）",
+  finalReviewedBy: "kuma / bearworks.uk（2026-10-03に改訂内容を確認し、公開原稿として承認）",
   aiUsage:
-    "構成案の整理、実装補助、文章表現の点検、レビュー補助にAIを使用しました。AIの出力をそのまま解説として公開していません。",
+    "初版の構成案や実装補助にAIを使用しました。2026-10-03改訂の監査と文章修正にAI（Codex、Luna）を使用しました。",
   humanReview:
-    "運営者が題材と説明範囲を決め、公式情報との照合、数値例と論理の再確認、公開可否の最終判断を行いました。専門家による第三者査読ではありません。",
+    "初版は運営者が公開を判断しました。2026-10-03に運営者が8ガイドの改訂内容を確認し、公開原稿として承認しました。専門家による第三者査読ではありません。",
   evidenceLinks: [
     {
       title: "学習ガイドの実装コード",
@@ -57,6 +57,11 @@ export const toukeiGuideProvenance: ContentProvenance = {
       date: "2026-07-11",
       kind: "初版",
       summary: "8本の統計学習ガイドを公開し、数値例と参照情報を確認しました。",
+    },
+    {
+      date: "2026-10-03",
+      kind: "訂正",
+      summary: "8本の説明を点検し、p値・信頼区間・検定の前提・標本抽出・多重比較などの表現を訂正。運営者が公開原稿として確認しました。",
     },
   ],
 };
@@ -239,12 +244,12 @@ export const toukeiProblemBatch5Provenance: ContentProvenance = {
 
 export const hachiojiClimateProvenance: ContentProvenance = {
   writtenBy: "kuma / bearworks.uk",
-  checkedBy: "既存分析：kuma / bearworks.uk（公式画面との照合、独立計算、品質判定）。2026-09-16改訂案：Codex（図表・数値例・実装の確認）",
-  finalReviewedBy: "kuma / bearworks.uk（2026-09-16改訂案は公開前の確認待ち）",
+  checkedBy: "既存分析：kuma / bearworks.uk（公式画面との照合、独立計算、品質判定）。2026-09-16改訂：Codex（図表・数値例・実装の確認）。2026-10-03：固定データとの代表値・設問を再照合",
+  finalReviewedBy: "kuma / bearworks.uk（2026-10-03に2026-09-16改訂稿を確認し、公開原稿として承認）",
   aiUsage:
     "仮説と分析手順の整理、実装補助、文章の推敲、レビュー補助にAIを使用しました。2026-09-16改訂案では、Codexが既存の固定データを用いて構成・図表・確認問題を作成し、導入イラストをAIで生成しました。イラストは観測の証拠ではありません。",
   humanReview:
-    "既存分析では、運営者が気象庁データを取得し、公式画面との照合、独立計算、品質判断、公開内容の最終確認を行いました。2026-09-16改訂案の文章・図表・確認問題は運営者の最終確認待ちです。専門家による第三者査読ではありません。",
+    "既存分析では、運営者が気象庁データを取得し、公式画面との照合、独立計算、品質判断、公開内容の最終確認を行いました。2026-09-16改訂稿の文章・図表・確認問題は、2026-10-03に運営者が公開原稿として承認しました。2026-09-16時点で承認されていたかは未確認です。専門家による第三者査読ではありません。",
   evidenceLinks: [
     {
       title: "固定した公開データ",
@@ -282,6 +287,11 @@ export const hachiojiClimateProvenance: ContentProvenance = {
       date: "2026-09-16",
       kind: "更新",
       summary: "改訂案：第2弾と共通のシリーズ構成に変更し、比較グラフ・統計の読み方・確認問題5問・AI生成イラストを追加。固定データと既存の仮説判定は維持。公開前の運営者確認待ちです。",
+    },
+    {
+      date: "2026-10-03",
+      kind: "更新",
+      summary: "2026-09-16改訂稿の文章・図表・確認問題について、運営者が公開原稿として確認しました。過去の承認日を推定した記録ではありません。",
     },
   ],
 };
@@ -337,22 +347,22 @@ export const hachiojiHeatProvenance: ContentProvenance = {
 
 export const takaoGearProvenance: ContentProvenance = {
   writtenBy: "kuma / bearworks.uk",
-  checkedBy: "Antigravity（Open-Meteo標高モデル・気象庁アメダスデータの抽出、固定bundle作成、独立バリデーション）",
-  finalReviewedBy: "kuma / bearworks.uk（2026-09-17に公開内容を承認）",
+  checkedBy: "2026-10-03改訂：Codex（旧版の出典・数値主張と現地の一次案内を照合）",
+  finalReviewedBy: "kuma / bearworks.uk（2026-10-03に改訂内容を確認し、公開原稿として承認）",
   aiUsage:
-    "記事の構成案、気象データ処理スクリプト、SVGグラフ実装、高尾山装備シミュレーターコンポーネント、確認問題作成にAI（Antigravity）を使用しました。AI出力を無検証で公開せず、固定bundleのバイト数・SHA-256・検算コードで整合性を確認しています。",
+    "初版の構成・集計・シミュレーターにAI（Antigravity）を使用しました。2026-10-03改訂の文章にはAI（Codex）を使用しました。旧版の数値から装備の必要性や事故確率は導けません。",
   humanReview:
-    "運営者が気象データ（気温減率・体感温度式）、高尾山の各登山ルート（1号路・6号路・稲荷山・陣馬縦走）の環境特性、装備判定ルールの妥当性を確認し、2026-09-17に公開内容を承認しました。専門家による第三者査読ではありません。",
+    "初版は2026-09-17に運営者が公開を承認しました。2026-10-03に運営者が改訂内容を確認し、公開原稿として承認しました。専門家による第三者査読ではありません。",
   evidenceLinks: [
     {
-      title: "固定した公開データ（takao-gear）",
+      title: "初版の固定集計（現行記事の数値根拠には使用しない）",
       url: "https://github.com/kumakit/bearworks-portal/blob/main/app/%28monetized%29/labs/takao-gear/data/takao-gear-2026-09-17.r1.json",
-      description: "高尾山頂・八王子・都心の月別気候比較および年間装備必須日数の固定bundleです。",
+      description: "初版の集計を変更せず保存した資料です。旧版の装備必須判定の根拠として採用しません。",
     },
     {
       title: "bundle検証コード",
       url: "https://github.com/kumakit/bearworks-portal/blob/main/scripts/validate-takao-gear-bundle.mjs",
-      description: "byte size、SHA-256、スキーマ、集計値整合性をfail-closedで検証します。",
+      description: "初版bundleのバイト数、SHA-256などを照合します。装備判断の妥当性を証明するものではありません。",
     },
     {
       title: "Open-Meteo Weather API",
@@ -366,27 +376,32 @@ export const takaoGearProvenance: ContentProvenance = {
       kind: "初版",
       summary: "高尾山装備シミュレーター＆気象データ検証ページ（シリーズ第5弾）の初版を作成し、運営者が公開内容を承認しました。",
     },
+    {
+      date: "2026-10-03",
+      kind: "更新",
+      summary: "原本と妥当性を追えない装備必須日数・事故確率・判定シミュレーターを外し、現地案内と最新情報の確認手順へ変更。運営者が公開原稿として確認しました。",
+    },
   ],
 };
 
 export const takaoWeatherShiftProvenance: ContentProvenance = {
   writtenBy: "kuma / bearworks.uk",
-  checkedBy: "Antigravity（Open-Meteo標高モデル・アメダス八王子データの抽出、固定bundle作成、独立バリデーション）",
-  finalReviewedBy: "kuma / bearworks.uk（2026-09-17に公開内容を承認）",
+  checkedBy: "2026-10-03改訂：Codex（旧版の生成コード・固定集計・本文の不一致と、資料との対応を確認）",
+  finalReviewedBy: "kuma / bearworks.uk（2026-10-03に改訂内容を確認し、公開原稿として承認）",
   aiUsage:
-    "記事の構成案、気象データ処理スクリプト、SVGグラフ実装、天候急変・ガス発生リスク判定メーターコンポーネント、確認問題作成にAI（Antigravity）を使用しました。AI出力を無検証で公開せず、固定bundleのバイト数・SHA-256・検算コードで整合性を確認しています。",
+    "初版の構成・集計・図表・確認問題にAI（Antigravity）を使用しました。2026-10-03改訂の文章と学習用表示にはAI（Codex）を使用しました。旧版の取得原本は残っておらず、固定bundleのハッシュ照合は原本からの再計算や内容の正しさを保証しません。",
   humanReview:
-    "運営者が気象データ（地形性上昇気流・断熱冷却・熱雷発生率）、見せかけの晴れの判定条件、天候急変リスク判定エンジンの妥当性を確認し、2026-09-17に公開内容を承認しました。専門家による第三者査読ではありません。",
+    "初版は2026-09-17に運営者が公開を承認しました。2026-10-03改訂では旧版の数値主張と危険度判定を除去し、運営者が公開原稿として確認しました。専門家による第三者査読ではありません。",
   evidenceLinks: [
     {
-      title: "固定した公開データ（takao-weather-shift）",
+      title: "初版の固定集計（現行記事の数値根拠には使用しない）",
       url: "https://github.com/kumakit/bearworks-portal/blob/main/app/%28monetized%29/labs/takao-weather-shift/data/takao-weather-shift-2026-09-17.r1.json",
-      description: "高尾山頂・八王子の月別ガス発生日数・見せかけの晴れ・夏期時間帯別急変マトリクスの固定bundleです。",
+      description: "初版の集計を変更せず保存した資料です。取得原本がなく、元データから独立に再計算できません。",
     },
     {
       title: "bundle検証コード",
       url: "https://github.com/kumakit/bearworks-portal/blob/main/scripts/validate-takao-weather-bundle.mjs",
-      description: "byte size、SHA-256、スキーマ、集計値整合性をfail-closedで検証します。",
+      description: "初版bundleのバイト数とSHA-256などを照合します。元データや主張の正しさを検証するものではありません。",
     },
     {
       title: "Open-Meteo Weather API",
@@ -400,22 +415,27 @@ export const takaoWeatherShiftProvenance: ContentProvenance = {
       kind: "初版",
       summary: "高尾山頂の天候急変・ガス発生リスク検証ページ（シリーズ第6弾）の初版を作成し、運営者が公開内容を承認しました。",
     },
+    {
+      date: "2026-10-03",
+      kind: "更新",
+      summary: "原本を追跡できない数値主張と危険度判定を外し、観測・再解析・予報と確率の分母を区別する教材へ変更。運営者が公開原稿として確認しました。",
+    },
   ],
 };
 
 export const hachiojiChillProvenance: ContentProvenance = {
   writtenBy: "kuma / bearworks.uk",
-  checkedBy: "Antigravity（気象庁アメダス八王子・東京観測所の12シーズン時間値・36年分冬季日較差の抽出、固定bundle作成、独立バリデーション）",
-  finalReviewedBy: "kuma / bearworks.uk（2026-09-18に公開内容を承認）",
+  checkedBy: "Antigravity（気象庁アメダス八王子・東京観測所の12シーズン時間値・36年分冬季日較差の抽出、固定bundle作成、独立バリデーション）。2026-10-03にCodexが移転日の説明と有効ペア数を再点検",
+  finalReviewedBy: "kuma / bearworks.uk（2026-09-18の初版と2026-10-03の訂正稿をそれぞれ承認）",
   aiUsage:
     "記事の構成案、気象庁オープンデータ取得・集計スクリプト、SVGグラフ実装、確認問題作成にAI（Antigravity）を使用しました。AI出力を無検証で公開せず、固定bundleのバイト数・SHA-256・検算コードで整合性を確認しています。",
   humanReview:
-    "運営者が気象データ（朝7時差・24時間気温プロファイル・日較差・夜間弱風条件）、均質性境界（東京の北の丸公園移転）、解釈の妥当性を確認し、2026-09-18に公開内容を承認しました。専門家による第三者査読ではありません。",
+    "運営者は2026-09-18の初版を承認しました。2026-10-03に、東京観測所の移転前の2日を含む点と有効な1時間値ペア数を訂正し、運営者が訂正稿を公開原稿として承認しました。専門家による第三者査読ではありません。",
   evidenceLinks: [
     {
       title: "固定した公開データ（hachioji-chill）",
       url: "https://github.com/kumakit/bearworks-portal/blob/main/app/%28monetized%29/labs/hachioji-chill/data/hachioji-chill-2026-09-18.r1.json",
-      description: "2014-2026冬の12シーズン・1,078日分の朝7時気温差・24時間プロファイル・条件別集計の固定bundleです。",
+      description: "2014-2026冬の12シーズン・朝7時の有効日1,078日分の気温差・24時間プロファイル・条件別集計の固定bundleです。初めの2日の7時値は東京観測所の移転前です。",
     },
     {
       title: "bundle検証コード",
@@ -425,7 +445,12 @@ export const hachiojiChillProvenance: ContentProvenance = {
     {
       title: "気象庁：過去の気象データ・ダウンロード",
       url: "https://www.data.jma.go.jp/risk/obsdl/",
-      description: "本記事で使用したアメダス八王子および東京（北の丸公園）の一次データ出典です。",
+      description: "本記事で使用したアメダス八王子および東京観測地点の一次データ出典です。東京は対象期間の最初の2日が移転前に当たります。",
+    },
+    {
+      title: "気象庁：地上観測地点「東京」の移転の実施について",
+      url: "https://www.jma.go.jp/jma/kishou/know/kansoku/info/20141202_tokyo_rojo.html",
+      description: "2014年12月2日9時40分から北の丸公園で気温等の観測を開始したことを確認できます。",
     },
   ],
   revisions: [
@@ -433,6 +458,11 @@ export const hachiojiChillProvenance: ContentProvenance = {
       date: "2026-09-18",
       kind: "初版",
       summary: "八王子の朝の冷え込み・日較差・放射冷却検証ページ（八王子気候シリーズ第4弾）の初版を作成し、運営者が公開内容を承認しました。",
+    },
+    {
+      date: "2026-10-03",
+      kind: "訂正",
+      summary: "東京観測所の移転前を含む期間の説明を訂正し、有効な1時間値ペア数を固定集計と一致させました。運営者が訂正稿を公開原稿として確認しました。",
     },
   ],
 };

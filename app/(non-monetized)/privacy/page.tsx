@@ -51,10 +51,21 @@ export default function PrivacyPolicy() {
               当サイト（bearworks.uk およびそのサブドメインのサービス）では、環境設定に応じて、第三者配信の広告サービス「Google AdSense」による広告を掲載する場合があります。
             </p>
             <p className="mb-3">
-              広告が有効化されている場合、広告配信事業者はユーザーの興味に応じた広告を表示するためにCookie（クッキー）を使用することがあります。これによってユーザーのブラウザを識別できるようになりますが、個人を特定するものではありません。
+              Google などの第三者配信事業者は Cookie（クッキー）を使用し、当サイトや他のサイトへの過去のアクセスに基づいて広告を配信することがあります。Google が広告 Cookie を使用すると、Google とそのパートナーは、これらのアクセス情報に基づいて利用者に適した広告を表示できます。
+            </p>
+            <p className="mb-3">
+              利用者は「
+              <a href="https://adssettings.google.com/" target="_blank" rel="noopener noreferrer" className="text-accent-cyan hover:text-cyan-600 hover:underline transition-colors">
+                Google の広告設定
+              </a>
+              」でパーソナライズド広告を無効にできます。第三者配信事業者による Cookie を利用したパーソナライズド広告は「
+              <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener noreferrer" className="text-accent-cyan hover:text-cyan-600 hover:underline transition-colors">
+                aboutads.info
+              </a>
+              」でも無効化できます。ブラウザー側で Cookie を管理することもできます。
             </p>
             <p>
-              Cookie（クッキー）を無効にする設定およびGoogleアドセンスに関する詳細は「
+              広告配信と Cookie の詳細は「
               <a
                 href="https://policies.google.com/technologies/ads"
                 target="_blank"
@@ -96,7 +107,7 @@ export default function PrivacyPolicy() {
 
           <div className="pt-8 border-t border-gray-100 flex flex-col gap-1 text-sm font-mono text-muted/60">
             <p>初出掲載日：2026年6月14日</p>
-            <p>最終更新日：2026年7月12日</p>
+            <p>最終更新日：2026年10月3日</p>
           </div>
         </div>
       </div>
