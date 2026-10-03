@@ -204,6 +204,16 @@ export default function HachiojiClimatePage() {
             <h3 className="mt-1 text-base font-bold group-hover:text-amber-200">高尾山の天気をどう読む？ →</h3>
             <p className="mt-2 text-xs text-slate-300">観測と再解析の違い、条件付き確率の分母を学ぶ。</p>
           </Link>
+          <Link href="/labs/hachioji-rain" className="group block rounded-2xl border border-slate-700 bg-slate-800 p-5 transition hover:border-slate-500">
+            <p className="text-xs font-bold text-sky-200">第7弾 · 降る日数と量</p>
+            <h3 className="mt-1 text-base font-bold">八王子は都心より雨が多い？ →</h3>
+            <p className="mt-2 text-xs text-slate-300">年ごとの雨量と日数、上位5日への集中、同日降水を比べる。</p>
+          </Link>
+          <Link href="/labs/hachioji-autumn" className="group block rounded-2xl border border-slate-700 bg-slate-800 p-5 transition hover:border-slate-500">
+            <p className="text-xs font-bold text-emerald-200">第8弾 · 気温で数える秋</p>
+            <h3 className="mt-1 text-base font-bold">八王子の秋は本当に短くなった？ →</h3>
+            <p className="mt-2 text-xs text-slate-300">温度の区切りを動かし、日数の合計と続いた長さを分ける。</p>
+          </Link>
         </div>
       </section>
       <div className="text-center"><Link href="/toukei" className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-white px-6 py-3 font-bold text-blue-800 hover:bg-blue-50">統計検定2級の学習へ<ArrowRight size={18} aria-hidden="true" /></Link></div>

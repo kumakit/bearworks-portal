@@ -93,6 +93,7 @@ jobs:
           fi
 
           node scripts/verify-toukei-pages.mjs http://127.0.0.1:8788
+          node scripts/verify-hachioji-rain-autumn-pages.mjs http://127.0.0.1:8788 --ads
 
           assert_status() {
             expected=$1

@@ -157,6 +157,8 @@ export default function TakaoWeatherShiftPage() {
           <InternalLink href="/toukei/guides" className="text-amber-700 hover:underline">統計ガイド一覧</InternalLink>
           <InternalLink href="/toukei/problems" className="text-amber-700 hover:underline">例題一覧</InternalLink>
           <InternalLink href="/labs/hachioji-climate" className="text-amber-700 hover:underline">八王子の気候分析</InternalLink>
+          <InternalLink href="/labs/hachioji-rain" className="text-amber-700 hover:underline">第7弾：雨の日数と量</InternalLink>
+          <InternalLink href="/labs/hachioji-autumn" className="text-amber-700 hover:underline">第8弾：気温で数える秋</InternalLink>
         </nav>
       </article>
       <PublicSiteFooter />

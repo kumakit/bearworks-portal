@@ -82,6 +82,22 @@ export default function Home() {
         </div>
       </section>
 
+      <section aria-labelledby="new-climate-articles" className="rounded-[2rem] border border-gray-100 bg-white p-6 sm:p-8">
+        <h2 id="new-climate-articles" className="text-xl font-bold text-primary">八王子の気候シリーズに、二つの問い。</h2>
+        <div className="mt-5 grid gap-4 sm:grid-cols-2">
+          <Link href="/labs/hachioji-rain" className="rounded-2xl border border-sky-100 bg-sky-50 p-5 transition hover:border-sky-400">
+            <p className="text-xs font-bold text-sky-800">第7弾 · 降る日数と、降る量</p>
+            <h3 className="mt-2 font-bold text-slate-900">八王子は都心より雨が多い？ →</h3>
+            <p className="mt-3 text-sm leading-7 text-slate-600">年ごとの雨量、上位5日への集中、同じ日に降る割合を実測から読みます。</p>
+          </Link>
+          <Link href="/labs/hachioji-autumn" className="rounded-2xl border border-emerald-100 bg-emerald-50 p-5 transition hover:border-emerald-400">
+            <p className="text-xs font-bold text-emerald-800">第8弾 · 気温で数える秋</p>
+            <h3 className="mt-2 font-bold text-slate-900">八王子の秋は本当に短くなった？ →</h3>
+            <p className="mt-3 text-sm leading-7 text-slate-600">温度の区切りと年を切り替えて、日数・連続性・データの採用条件を確かめます。</p>
+          </Link>
+        </div>
+      </section>
+
       {/* Features Section */}
       <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div className="bg-white rounded-[2rem] p-8 shadow-soft border border-gray-100 flex flex-col justify-between">

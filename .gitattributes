@@ -10,3 +10,12 @@ app/(monetized)/labs/takao-weather-shift/data/*.json text eol=lf
 scripts/validate-takao-weather-bundle.mjs text eol=lf
 app/(monetized)/labs/hachioji-chill/data/*.json text eol=lf
 scripts/validate-hachioji-chill-bundle.mjs text eol=lf
+app/(monetized)/labs/hachioji-rain/data/*.json text eol=lf
+app/(monetized)/labs/hachioji-autumn/data/*.json text eol=lf
+# Preserve Shift_JIS originals, including their CRLF, as byte sequences.
+data/hachioji-rain-autumn/*.csv -text -diff
+data/hachioji-rain-autumn/*.json text eol=lf
+public/data/hachioji-rain-autumn/*.csv -text -diff
+public/data/hachioji-rain-autumn/*.json text eol=lf
+docs/task/hachioji-rain-autumn/evidence/jma/*.html -text -diff
+docs/task/hachioji-rain-autumn/evidence/**/*.json text eol=lf

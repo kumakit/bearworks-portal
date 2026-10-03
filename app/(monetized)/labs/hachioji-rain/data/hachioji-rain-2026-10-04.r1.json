@@ -1,0 +1,4575 @@
+{
+  "schema_version": "1.0.0",
+  "version": "2026-10-04.r1",
+  "source_sha256": "69386719a3ad29b243d40a96ff7400dc8e9f2fd568af0b01e12764966d7dcf7b",
+  "retrieved_at": "2026-10-03T15:45:11.190Z",
+  "source_url": "https://www.data.jma.go.jp/risk/obsdl/",
+  "quality_policy": "Main: quality 8 only; sensitivity: quality 8 and 5. No missing-value imputation. Complete years/seasons only.",
+  "stations": {
+    "h": {
+      "name": "八王子",
+      "block": "0366",
+      "obsdl": "a0366"
+    },
+    "t": {
+      "name": "東京都心",
+      "block": "47662",
+      "obsdl": "s47662",
+      "note": "気象庁の東京観測所。東京都全域や23区の平均ではない。"
+    }
+  },
+  "period": "2015-2025",
+  "threshold_mm": 1,
+  "main": {
+    "included_years": [
+      2015,
+      2016,
+      2017,
+      2018,
+      2021,
+      2022,
+      2023,
+      2025
+    ],
+    "excluded": [
+      {
+        "year": 2019,
+        "expected": 365,
+        "valid": 364,
+        "invalid_dates": [
+          "2019-01-22"
+        ]
+      },
+      {
+        "year": 2020,
+        "expected": 366,
+        "valid": 365,
+        "invalid_dates": [
+          "2020-02-26"
+        ]
+      },
+      {
+        "year": 2024,
+        "expected": 366,
+        "valid": 363,
+        "invalid_dates": [
+          "2024-12-21",
+          "2024-12-22",
+          "2024-12-23"
+        ]
+      }
+    ],
+    "annual": [
+      {
+        "year": 2015,
+        "days": 365,
+        "h": {
+          "total": 1740,
+          "wet_days": 117,
+          "wet_mean": 14.7949,
+          "top5_total": 546.5,
+          "top5_share": 31.408,
+          "top5": [
+            {
+              "date": "2015-07-16",
+              "mm": 200.5
+            },
+            {
+              "date": "2015-09-09",
+              "mm": 131.5
+            },
+            {
+              "date": "2015-07-03",
+              "mm": 76
+            },
+            {
+              "date": "2015-09-08",
+              "mm": 74.5
+            },
+            {
+              "date": "2015-12-11",
+              "mm": 64
+            }
+          ],
+          "monthly": [
+            {
+              "month": 1,
+              "total": 74.5,
+              "wet_days": 7
+            },
+            {
+              "month": 2,
+              "total": 38.5,
+              "wet_days": 6
+            },
+            {
+              "month": 3,
+              "total": 89.5,
+              "wet_days": 10
+            },
+            {
+              "month": 4,
+              "total": 107,
+              "wet_days": 9
+            },
+            {
+              "month": 5,
+              "total": 85.5,
+              "wet_days": 6
+            },
+            {
+              "month": 6,
+              "total": 139,
+              "wet_days": 14
+            },
+            {
+              "month": 7,
+              "total": 410.5,
+              "wet_days": 15
+            },
+            {
+              "month": 8,
+              "total": 144.5,
+              "wet_days": 12
+            },
+            {
+              "month": 9,
+              "total": 373.5,
+              "wet_days": 16
+            },
+            {
+              "month": 10,
+              "total": 58.5,
+              "wet_days": 5
+            },
+            {
+              "month": 11,
+              "total": 145,
+              "wet_days": 13
+            },
+            {
+              "month": 12,
+              "total": 74,
+              "wet_days": 4
+            }
+          ],
+          "thresholds": [
+            {
+              "threshold": 0.5,
+              "days": 135
+            },
+            {
+              "threshold": 1,
+              "days": 117
+            },
+            {
+              "threshold": 5,
+              "days": 71
+            },
+            {
+              "threshold": 10,
+              "days": 46
+            }
+          ]
+        },
+        "t": {
+          "total": 1781.5,
+          "wet_days": 115,
+          "wet_mean": 15.4304,
+          "top5_total": 428,
+          "top5_share": 24.0247,
+          "top5": [
+            {
+              "date": "2015-09-09",
+              "mm": 156.5
+            },
+            {
+              "date": "2015-09-17",
+              "mm": 74.5
+            },
+            {
+              "date": "2015-07-03",
+              "mm": 67.5
+            },
+            {
+              "date": "2015-09-08",
+              "mm": 65.5
+            },
+            {
+              "date": "2015-12-11",
+              "mm": 64
+            }
+          ],
+          "monthly": [
+            {
+              "month": 1,
+              "total": 92.5,
+              "wet_days": 7
+            },
+            {
+              "month": 2,
+              "total": 62,
+              "wet_days": 8
+            },
+            {
+              "month": 3,
+              "total": 94,
+              "wet_days": 7
+            },
+            {
+              "month": 4,
+              "total": 129,
+              "wet_days": 12
+            },
+            {
+              "month": 5,
+              "total": 88,
+              "wet_days": 6
+            },
+            {
+              "month": 6,
+              "total": 195.5,
+              "wet_days": 12
+            },
+            {
+              "month": 7,
+              "total": 234.5,
+              "wet_days": 12
+            },
+            {
+              "month": 8,
+              "total": 103.5,
+              "wet_days": 12
+            },
+            {
+              "month": 9,
+              "total": 503.5,
+              "wet_days": 15
+            },
+            {
+              "month": 10,
+              "total": 57,
+              "wet_days": 5
+            },
+            {
+              "month": 11,
+              "total": 139.5,
+              "wet_days": 12
+            },
+            {
+              "month": 12,
+              "total": 82.5,
+              "wet_days": 7
+            }
+          ],
+          "thresholds": [
+            {
+              "threshold": 0.5,
+              "days": 129
+            },
+            {
+              "threshold": 1,
+              "days": 115
+            },
+            {
+              "threshold": 5,
+              "days": 77
+            },
+            {
+              "threshold": 10,
+              "days": 51
+            }
+          ]
+        }
+      },
+      {
+        "year": 2016,
+        "days": 366,
+        "h": {
+          "total": 1487,
+          "wet_days": 114,
+          "wet_mean": 12.9649,
+          "top5_total": 433.5,
+          "top5_share": 29.1527,
+          "top5": [
+            {
+              "date": "2016-08-22",
+              "mm": 175.5
+            },
+            {
+              "date": "2016-08-20",
+              "mm": 75.5
+            },
+            {
+              "date": "2016-09-20",
+              "mm": 74
+            },
+            {
+              "date": "2016-06-13",
+              "mm": 56
+            },
+            {
+              "date": "2016-01-18",
+              "mm": 52.5
+            }
+          ],
+          "monthly": [
+            {
+              "month": 1,
+              "total": 72.5,
+              "wet_days": 4
+            },
+            {
+              "month": 2,
+              "total": 55.5,
+              "wet_days": 6
+            },
+            {
+              "month": 3,
+              "total": 67.5,
+              "wet_days": 7
+            },
+            {
+              "month": 4,
+              "total": 91.5,
+              "wet_days": 10
+            },
+            {
+              "month": 5,
+              "total": 60,
+              "wet_days": 7
+            },
+            {
+              "month": 6,
+              "total": 108,
+              "wet_days": 12
+            },
+            {
+              "month": 7,
+              "total": 102,
+              "wet_days": 10
+            },
+            {
+              "month": 8,
+              "total": 412,
+              "wet_days": 15
+            },
+            {
+              "month": 9,
+              "total": 274.5,
+              "wet_days": 16
+            },
+            {
+              "month": 10,
+              "total": 47.5,
+              "wet_days": 7
+            },
+            {
+              "month": 11,
+              "total": 118.5,
+              "wet_days": 13
+            },
+            {
+              "month": 12,
+              "total": 77.5,
+              "wet_days": 7
+            }
+          ],
+          "thresholds": [
+            {
+              "threshold": 0.5,
+              "days": 132
+            },
+            {
+              "threshold": 1,
+              "days": 114
+            },
+            {
+              "threshold": 5,
+              "days": 67
+            },
+            {
+              "threshold": 10,
+              "days": 46
+            }
+          ]
+        },
+        "t": {
+          "total": 1779,
+          "wet_days": 113,
+          "wet_mean": 15.677,
+          "top5_total": 445.5,
+          "top5_share": 25.0422,
+          "top5": [
+            {
+              "date": "2016-08-22",
+              "mm": 106.5
+            },
+            {
+              "date": "2016-06-13",
+              "mm": 98.5
+            },
+            {
+              "date": "2016-09-20",
+              "mm": 91.5
+            },
+            {
+              "date": "2016-08-20",
+              "mm": 82
+            },
+            {
+              "date": "2016-01-18",
+              "mm": 67
+            }
+          ],
+          "monthly": [
+            {
+              "month": 1,
+              "total": 85,
+              "wet_days": 4
+            },
+            {
+              "month": 2,
+              "total": 57,
+              "wet_days": 3
+            },
+            {
+              "month": 3,
+              "total": 103,
+              "wet_days": 6
+            },
+            {
+              "month": 4,
+              "total": 120,
+              "wet_days": 12
+            },
+            {
+              "month": 5,
+              "total": 137.5,
+              "wet_days": 8
+            },
+            {
+              "month": 6,
+              "total": 174.5,
+              "wet_days": 13
+            },
+            {
+              "month": 7,
+              "total": 81.5,
+              "wet_days": 10
+            },
+            {
+              "month": 8,
+              "total": 414,
+              "wet_days": 13
+            },
+            {
+              "month": 9,
+              "total": 287,
+              "wet_days": 14
+            },
+            {
+              "month": 10,
+              "total": 96.5,
+              "wet_days": 9
+            },
+            {
+              "month": 11,
+              "total": 139,
+              "wet_days": 13
+            },
+            {
+              "month": 12,
+              "total": 84,
+              "wet_days": 8
+            }
+          ],
+          "thresholds": [
+            {
+              "threshold": 0.5,
+              "days": 128
+            },
+            {
+              "threshold": 1,
+              "days": 113
+            },
+            {
+              "threshold": 5,
+              "days": 72
+            },
+            {
+              "threshold": 10,
+              "days": 50
+            }
+          ]
+        }
+      },
+      {
+        "year": 2017,
+        "days": 365,
+        "h": {
+          "total": 1514.5,
+          "wet_days": 92,
+          "wet_mean": 16.3913,
+          "top5_total": 541.5,
+          "top5_share": 35.7544,
+          "top5": [
+            {
+              "date": "2017-10-22",
+              "mm": 175
+            },
+            {
+              "date": "2017-10-23",
+              "mm": 152.5
+            },
+            {
+              "date": "2017-10-29",
+              "mm": 80
+            },
+            {
+              "date": "2017-08-19",
+              "mm": 74.5
+            },
+            {
+              "date": "2017-06-21",
+              "mm": 59.5
+            }
+          ],
+          "monthly": [
+            {
+              "month": 1,
+              "total": 27,
+              "wet_days": 2
+            },
+            {
+              "month": 2,
+              "total": 14.5,
+              "wet_days": 2
+            },
+            {
+              "month": 3,
+              "total": 89,
+              "wet_days": 8
+            },
+            {
+              "month": 4,
+              "total": 84.5,
+              "wet_days": 7
+            },
+            {
+              "month": 5,
+              "total": 70,
+              "wet_days": 5
+            },
+            {
+              "month": 6,
+              "total": 100,
+              "wet_days": 11
+            },
+            {
+              "month": 7,
+              "total": 130,
+              "wet_days": 9
+            },
+            {
+              "month": 8,
+              "total": 176,
+              "wet_days": 13
+            },
+            {
+              "month": 9,
+              "total": 162.5,
+              "wet_days": 11
+            },
+            {
+              "month": 10,
+              "total": 626,
+              "wet_days": 16
+            },
+            {
+              "month": 11,
+              "total": 22.5,
+              "wet_days": 6
+            },
+            {
+              "month": 12,
+              "total": 12.5,
+              "wet_days": 2
+            }
+          ],
+          "thresholds": [
+            {
+              "threshold": 0.5,
+              "days": 105
+            },
+            {
+              "threshold": 1,
+              "days": 92
+            },
+            {
+              "threshold": 5,
+              "days": 55
+            },
+            {
+              "threshold": 10,
+              "days": 41
+            }
+          ]
+        },
+        "t": {
+          "total": 1430,
+          "wet_days": 95,
+          "wet_mean": 14.9526,
+          "top5_total": 396.5,
+          "top5_share": 27.7273,
+          "top5": [
+            {
+              "date": "2017-10-22",
+              "mm": 147.5
+            },
+            {
+              "date": "2017-10-29",
+              "mm": 105.5
+            },
+            {
+              "date": "2017-09-17",
+              "mm": 52
+            },
+            {
+              "date": "2017-04-11",
+              "mm": 46
+            },
+            {
+              "date": "2017-06-21",
+              "mm": 45.5
+            }
+          ],
+          "monthly": [
+            {
+              "month": 1,
+              "total": 26,
+              "wet_days": 2
+            },
+            {
+              "month": 2,
+              "total": 15.5,
+              "wet_days": 2
+            },
+            {
+              "month": 3,
+              "total": 85.5,
+              "wet_days": 9
+            },
+            {
+              "month": 4,
+              "total": 122,
+              "wet_days": 10
+            },
+            {
+              "month": 5,
+              "total": 49,
+              "wet_days": 6
+            },
+            {
+              "month": 6,
+              "total": 106.5,
+              "wet_days": 11
+            },
+            {
+              "month": 7,
+              "total": 81,
+              "wet_days": 6
+            },
+            {
+              "month": 8,
+              "total": 141.5,
+              "wet_days": 12
+            },
+            {
+              "month": 9,
+              "total": 209.5,
+              "wet_days": 14
+            },
+            {
+              "month": 10,
+              "total": 531.5,
+              "wet_days": 16
+            },
+            {
+              "month": 11,
+              "total": 47,
+              "wet_days": 5
+            },
+            {
+              "month": 12,
+              "total": 15,
+              "wet_days": 2
+            }
+          ],
+          "thresholds": [
+            {
+              "threshold": 0.5,
+              "days": 114
+            },
+            {
+              "threshold": 1,
+              "days": 95
+            },
+            {
+              "threshold": 5,
+              "days": 64
+            },
+            {
+              "threshold": 10,
+              "days": 41
+            }
+          ]
+        }
+      },
+      {
+        "year": 2018,
+        "days": 365,
+        "h": {
+          "total": 1436,
+          "wet_days": 91,
+          "wet_mean": 15.6319,
+          "top5_total": 367,
+          "top5_share": 25.5571,
+          "top5": [
+            {
+              "date": "2018-09-30",
+              "mm": 87
+            },
+            {
+              "date": "2018-07-28",
+              "mm": 82.5
+            },
+            {
+              "date": "2018-03-08",
+              "mm": 78
+            },
+            {
+              "date": "2018-09-25",
+              "mm": 62.5
+            },
+            {
+              "date": "2018-08-06",
+              "mm": 57
+            }
+          ],
+          "monthly": [
+            {
+              "month": 1,
+              "total": 38,
+              "wet_days": 4
+            },
+            {
+              "month": 2,
+              "total": 11.5,
+              "wet_days": 2
+            },
+            {
+              "month": 3,
+              "total": 235.5,
+              "wet_days": 11
+            },
+            {
+              "month": 4,
+              "total": 64,
+              "wet_days": 5
+            },
+            {
+              "month": 5,
+              "total": 123.5,
+              "wet_days": 10
+            },
+            {
+              "month": 6,
+              "total": 112,
+              "wet_days": 10
+            },
+            {
+              "month": 7,
+              "total": 139,
+              "wet_days": 5
+            },
+            {
+              "month": 8,
+              "total": 181.5,
+              "wet_days": 10
+            },
+            {
+              "month": 9,
+              "total": 399.5,
+              "wet_days": 19
+            },
+            {
+              "month": 10,
+              "total": 66,
+              "wet_days": 6
+            },
+            {
+              "month": 11,
+              "total": 21,
+              "wet_days": 4
+            },
+            {
+              "month": 12,
+              "total": 44.5,
+              "wet_days": 5
+            }
+          ],
+          "thresholds": [
+            {
+              "threshold": 0.5,
+              "days": 118
+            },
+            {
+              "threshold": 1,
+              "days": 91
+            },
+            {
+              "threshold": 5,
+              "days": 65
+            },
+            {
+              "threshold": 10,
+              "days": 45
+            }
+          ]
+        },
+        "t": {
+          "total": 1445.5,
+          "wet_days": 103,
+          "wet_mean": 13.9709,
+          "top5_total": 266,
+          "top5_share": 18.4019,
+          "top5": [
+            {
+              "date": "2018-03-09",
+              "mm": 58
+            },
+            {
+              "date": "2018-04-25",
+              "mm": 57
+            },
+            {
+              "date": "2018-07-28",
+              "mm": 52
+            },
+            {
+              "date": "2018-06-11",
+              "mm": 50
+            },
+            {
+              "date": "2018-05-13",
+              "mm": 49
+            }
+          ],
+          "monthly": [
+            {
+              "month": 1,
+              "total": 48.5,
+              "wet_days": 4
+            },
+            {
+              "month": 2,
+              "total": 20,
+              "wet_days": 5
+            },
+            {
+              "month": 3,
+              "total": 220,
+              "wet_days": 11
+            },
+            {
+              "month": 4,
+              "total": 109,
+              "wet_days": 6
+            },
+            {
+              "month": 5,
+              "total": 165.5,
+              "wet_days": 10
+            },
+            {
+              "month": 6,
+              "total": 155.5,
+              "wet_days": 12
+            },
+            {
+              "month": 7,
+              "total": 107,
+              "wet_days": 7
+            },
+            {
+              "month": 8,
+              "total": 86.5,
+              "wet_days": 8
+            },
+            {
+              "month": 9,
+              "total": 365,
+              "wet_days": 19
+            },
+            {
+              "month": 10,
+              "total": 61.5,
+              "wet_days": 8
+            },
+            {
+              "month": 11,
+              "total": 63,
+              "wet_days": 9
+            },
+            {
+              "month": 12,
+              "total": 44,
+              "wet_days": 4
+            }
+          ],
+          "thresholds": [
+            {
+              "threshold": 0.5,
+              "days": 116
+            },
+            {
+              "threshold": 1,
+              "days": 103
+            },
+            {
+              "threshold": 5,
+              "days": 64
+            },
+            {
+              "threshold": 10,
+              "days": 44
+            }
+          ]
+        }
+      },
+      {
+        "year": 2021,
+        "days": 365,
+        "h": {
+          "total": 1448.5,
+          "wet_days": 102,
+          "wet_mean": 14.1225,
+          "top5_total": 313.5,
+          "top5_share": 21.6431,
+          "top5": [
+            {
+              "date": "2021-08-15",
+              "mm": 80
+            },
+            {
+              "date": "2021-07-02",
+              "mm": 63.5
+            },
+            {
+              "date": "2021-11-09",
+              "mm": 59
+            },
+            {
+              "date": "2021-07-01",
+              "mm": 58
+            },
+            {
+              "date": "2021-10-01",
+              "mm": 53
+            }
+          ],
+          "monthly": [
+            {
+              "month": 1,
+              "total": 51,
+              "wet_days": 5
+            },
+            {
+              "month": 2,
+              "total": 51,
+              "wet_days": 2
+            },
+            {
+              "month": 3,
+              "total": 111.5,
+              "wet_days": 7
+            },
+            {
+              "month": 4,
+              "total": 81,
+              "wet_days": 7
+            },
+            {
+              "month": 5,
+              "total": 78.5,
+              "wet_days": 10
+            },
+            {
+              "month": 6,
+              "total": 81.5,
+              "wet_days": 12
+            },
+            {
+              "month": 7,
+              "total": 273,
+              "wet_days": 16
+            },
+            {
+              "month": 8,
+              "total": 307.5,
+              "wet_days": 12
+            },
+            {
+              "month": 9,
+              "total": 148,
+              "wet_days": 11
+            },
+            {
+              "month": 10,
+              "total": 114.5,
+              "wet_days": 10
+            },
+            {
+              "month": 11,
+              "total": 82,
+              "wet_days": 5
+            },
+            {
+              "month": 12,
+              "total": 69,
+              "wet_days": 5
+            }
+          ],
+          "thresholds": [
+            {
+              "threshold": 0.5,
+              "days": 118
+            },
+            {
+              "threshold": 1,
+              "days": 102
+            },
+            {
+              "threshold": 5,
+              "days": 60
+            },
+            {
+              "threshold": 10,
+              "days": 39
+            }
+          ]
+        },
+        "t": {
+          "total": 2052.5,
+          "wet_days": 107,
+          "wet_mean": 19.1028,
+          "top5_total": 543.5,
+          "top5_share": 26.4799,
+          "top5": [
+            {
+              "date": "2021-08-15",
+              "mm": 138.5
+            },
+            {
+              "date": "2021-09-18",
+              "mm": 124.5
+            },
+            {
+              "date": "2021-10-01",
+              "mm": 113
+            },
+            {
+              "date": "2021-08-08",
+              "mm": 90.5
+            },
+            {
+              "date": "2021-08-14",
+              "mm": 77
+            }
+          ],
+          "monthly": [
+            {
+              "month": 1,
+              "total": 43.5,
+              "wet_days": 5
+            },
+            {
+              "month": 2,
+              "total": 88.5,
+              "wet_days": 2
+            },
+            {
+              "month": 3,
+              "total": 173,
+              "wet_days": 7
+            },
+            {
+              "month": 4,
+              "total": 156,
+              "wet_days": 8
+            },
+            {
+              "month": 5,
+              "total": 99.5,
+              "wet_days": 15
+            },
+            {
+              "month": 6,
+              "total": 168.5,
+              "wet_days": 12
+            },
+            {
+              "month": 7,
+              "total": 310,
+              "wet_days": 11
+            },
+            {
+              "month": 8,
+              "total": 382.5,
+              "wet_days": 12
+            },
+            {
+              "month": 9,
+              "total": 222.5,
+              "wet_days": 12
+            },
+            {
+              "month": 10,
+              "total": 199.5,
+              "wet_days": 11
+            },
+            {
+              "month": 11,
+              "total": 93,
+              "wet_days": 6
+            },
+            {
+              "month": 12,
+              "total": 116,
+              "wet_days": 6
+            }
+          ],
+          "thresholds": [
+            {
+              "threshold": 0.5,
+              "days": 124
+            },
+            {
+              "threshold": 1,
+              "days": 107
+            },
+            {
+              "threshold": 5,
+              "days": 69
+            },
+            {
+              "threshold": 10,
+              "days": 49
+            }
+          ]
+        }
+      },
+      {
+        "year": 2022,
+        "days": 365,
+        "h": {
+          "total": 1473.5,
+          "wet_days": 108,
+          "wet_mean": 13.5787,
+          "top5_total": 405.5,
+          "top5_share": 27.5195,
+          "top5": [
+            {
+              "date": "2022-09-18",
+              "mm": 119.5
+            },
+            {
+              "date": "2022-08-13",
+              "mm": 83.5
+            },
+            {
+              "date": "2022-06-06",
+              "mm": 77
+            },
+            {
+              "date": "2022-05-27",
+              "mm": 64.5
+            },
+            {
+              "date": "2022-09-23",
+              "mm": 61
+            }
+          ],
+          "monthly": [
+            {
+              "month": 1,
+              "total": 15.5,
+              "wet_days": 2
+            },
+            {
+              "month": 2,
+              "total": 42,
+              "wet_days": 5
+            },
+            {
+              "month": 3,
+              "total": 91,
+              "wet_days": 4
+            },
+            {
+              "month": 4,
+              "total": 198,
+              "wet_days": 14
+            },
+            {
+              "month": 5,
+              "total": 136,
+              "wet_days": 10
+            },
+            {
+              "month": 6,
+              "total": 151.5,
+              "wet_days": 14
+            },
+            {
+              "month": 7,
+              "total": 119,
+              "wet_days": 12
+            },
+            {
+              "month": 8,
+              "total": 142.5,
+              "wet_days": 10
+            },
+            {
+              "month": 9,
+              "total": 355,
+              "wet_days": 13
+            },
+            {
+              "month": 10,
+              "total": 112,
+              "wet_days": 12
+            },
+            {
+              "month": 11,
+              "total": 66.5,
+              "wet_days": 5
+            },
+            {
+              "month": 12,
+              "total": 44.5,
+              "wet_days": 7
+            }
+          ],
+          "thresholds": [
+            {
+              "threshold": 0.5,
+              "days": 122
+            },
+            {
+              "threshold": 1,
+              "days": 108
+            },
+            {
+              "threshold": 5,
+              "days": 67
+            },
+            {
+              "threshold": 10,
+              "days": 42
+            }
+          ]
+        },
+        "t": {
+          "total": 1615.5,
+          "wet_days": 109,
+          "wet_mean": 14.7477,
+          "top5_total": 359.5,
+          "top5_share": 22.2532,
+          "top5": [
+            {
+              "date": "2022-09-24",
+              "mm": 112.5
+            },
+            {
+              "date": "2022-09-18",
+              "mm": 72.5
+            },
+            {
+              "date": "2022-07-15",
+              "mm": 61.5
+            },
+            {
+              "date": "2022-05-27",
+              "mm": 59.5
+            },
+            {
+              "date": "2022-04-04",
+              "mm": 53.5
+            }
+          ],
+          "monthly": [
+            {
+              "month": 1,
+              "total": 22.5,
+              "wet_days": 2
+            },
+            {
+              "month": 2,
+              "total": 71,
+              "wet_days": 6
+            },
+            {
+              "month": 3,
+              "total": 110.5,
+              "wet_days": 9
+            },
+            {
+              "month": 4,
+              "total": 224.5,
+              "wet_days": 15
+            },
+            {
+              "month": 5,
+              "total": 198,
+              "wet_days": 13
+            },
+            {
+              "month": 6,
+              "total": 64,
+              "wet_days": 6
+            },
+            {
+              "month": 7,
+              "total": 233,
+              "wet_days": 11
+            },
+            {
+              "month": 8,
+              "total": 105,
+              "wet_days": 12
+            },
+            {
+              "month": 9,
+              "total": 310,
+              "wet_days": 10
+            },
+            {
+              "month": 10,
+              "total": 118,
+              "wet_days": 12
+            },
+            {
+              "month": 11,
+              "total": 102.5,
+              "wet_days": 7
+            },
+            {
+              "month": 12,
+              "total": 56.5,
+              "wet_days": 6
+            }
+          ],
+          "thresholds": [
+            {
+              "threshold": 0.5,
+              "days": 125
+            },
+            {
+              "threshold": 1,
+              "days": 109
+            },
+            {
+              "threshold": 5,
+              "days": 65
+            },
+            {
+              "threshold": 10,
+              "days": 40
+            }
+          ]
+        }
+      },
+      {
+        "year": 2023,
+        "days": 365,
+        "h": {
+          "total": 1249.5,
+          "wet_days": 80,
+          "wet_mean": 15.5375,
+          "top5_total": 444,
+          "top5_share": 35.5342,
+          "top5": [
+            {
+              "date": "2023-06-02",
+              "mm": 174.5
+            },
+            {
+              "date": "2023-09-22",
+              "mm": 78.5
+            },
+            {
+              "date": "2023-09-08",
+              "mm": 72.5
+            },
+            {
+              "date": "2023-06-03",
+              "mm": 71
+            },
+            {
+              "date": "2023-11-17",
+              "mm": 47.5
+            }
+          ],
+          "monthly": [
+            {
+              "month": 1,
+              "total": 10,
+              "wet_days": 2
+            },
+            {
+              "month": 2,
+              "total": 38,
+              "wet_days": 3
+            },
+            {
+              "month": 3,
+              "total": 106.5,
+              "wet_days": 10
+            },
+            {
+              "month": 4,
+              "total": 66,
+              "wet_days": 7
+            },
+            {
+              "month": 5,
+              "total": 142,
+              "wet_days": 10
+            },
+            {
+              "month": 6,
+              "total": 355,
+              "wet_days": 14
+            },
+            {
+              "month": 7,
+              "total": 37,
+              "wet_days": 6
+            },
+            {
+              "month": 8,
+              "total": 143,
+              "wet_days": 12
+            },
+            {
+              "month": 9,
+              "total": 198,
+              "wet_days": 6
+            },
+            {
+              "month": 10,
+              "total": 93,
+              "wet_days": 7
+            },
+            {
+              "month": 11,
+              "total": 52.5,
+              "wet_days": 2
+            },
+            {
+              "month": 12,
+              "total": 8.5,
+              "wet_days": 1
+            }
+          ],
+          "thresholds": [
+            {
+              "threshold": 0.5,
+              "days": 93
+            },
+            {
+              "threshold": 1,
+              "days": 80
+            },
+            {
+              "threshold": 5,
+              "days": 48
+            },
+            {
+              "threshold": 10,
+              "days": 37
+            }
+          ]
+        },
+        "t": {
+          "total": 1396.5,
+          "wet_days": 90,
+          "wet_mean": 15.4611,
+          "top5_total": 476.5,
+          "top5_share": 34.121,
+          "top5": [
+            {
+              "date": "2023-06-02",
+              "mm": 168.5
+            },
+            {
+              "date": "2023-09-08",
+              "mm": 107.5
+            },
+            {
+              "date": "2023-06-03",
+              "mm": 92.5
+            },
+            {
+              "date": "2023-09-22",
+              "mm": 59.5
+            },
+            {
+              "date": "2023-08-13",
+              "mm": 48.5
+            }
+          ],
+          "monthly": [
+            {
+              "month": 1,
+              "total": 15.5,
+              "wet_days": 4
+            },
+            {
+              "month": 2,
+              "total": 40.5,
+              "wet_days": 3
+            },
+            {
+              "month": 3,
+              "total": 145,
+              "wet_days": 10
+            },
+            {
+              "month": 4,
+              "total": 90,
+              "wet_days": 8
+            },
+            {
+              "month": 5,
+              "total": 159,
+              "wet_days": 12
+            },
+            {
+              "month": 6,
+              "total": 347,
+              "wet_days": 15
+            },
+            {
+              "month": 7,
+              "total": 30,
+              "wet_days": 4
+            },
+            {
+              "month": 8,
+              "total": 132.5,
+              "wet_days": 12
+            },
+            {
+              "month": 9,
+              "total": 229,
+              "wet_days": 9
+            },
+            {
+              "month": 10,
+              "total": 147,
+              "wet_days": 6
+            },
+            {
+              "month": 11,
+              "total": 41.5,
+              "wet_days": 3
+            },
+            {
+              "month": 12,
+              "total": 19.5,
+              "wet_days": 4
+            }
+          ],
+          "thresholds": [
+            {
+              "threshold": 0.5,
+              "days": 100
+            },
+            {
+              "threshold": 1,
+              "days": 90
+            },
+            {
+              "threshold": 5,
+              "days": 51
+            },
+            {
+              "threshold": 10,
+              "days": 41
+            }
+          ]
+        }
+      },
+      {
+        "year": 2025,
+        "days": 365,
+        "h": {
+          "total": 1219,
+          "wet_days": 90,
+          "wet_mean": 13.5111,
+          "top5_total": 417,
+          "top5_share": 34.2084,
+          "top5": [
+            {
+              "date": "2025-09-05",
+              "mm": 131
+            },
+            {
+              "date": "2025-05-02",
+              "mm": 107.5
+            },
+            {
+              "date": "2025-07-15",
+              "mm": 85.5
+            },
+            {
+              "date": "2025-10-31",
+              "mm": 53.5
+            },
+            {
+              "date": "2025-09-19",
+              "mm": 39.5
+            }
+          ],
+          "monthly": [
+            {
+              "month": 1,
+              "total": 26.5,
+              "wet_days": 2
+            },
+            {
+              "month": 2,
+              "total": 6,
+              "wet_days": 1
+            },
+            {
+              "month": 3,
+              "total": 131,
+              "wet_days": 10
+            },
+            {
+              "month": 4,
+              "total": 152.5,
+              "wet_days": 10
+            },
+            {
+              "month": 5,
+              "total": 238.5,
+              "wet_days": 14
+            },
+            {
+              "month": 6,
+              "total": 58,
+              "wet_days": 7
+            },
+            {
+              "month": 7,
+              "total": 189.5,
+              "wet_days": 8
+            },
+            {
+              "month": 8,
+              "total": 13,
+              "wet_days": 5
+            },
+            {
+              "month": 9,
+              "total": 248.5,
+              "wet_days": 10
+            },
+            {
+              "month": 10,
+              "total": 112.5,
+              "wet_days": 12
+            },
+            {
+              "month": 11,
+              "total": 9,
+              "wet_days": 5
+            },
+            {
+              "month": 12,
+              "total": 34,
+              "wet_days": 6
+            }
+          ],
+          "thresholds": [
+            {
+              "threshold": 0.5,
+              "days": 96
+            },
+            {
+              "threshold": 1,
+              "days": 90
+            },
+            {
+              "threshold": 5,
+              "days": 53
+            },
+            {
+              "threshold": 10,
+              "days": 30
+            }
+          ]
+        },
+        "t": {
+          "total": 1152.5,
+          "wet_days": 84,
+          "wet_mean": 13.625,
+          "top5_total": 265.5,
+          "top5_share": 23.0369,
+          "top5": [
+            {
+              "date": "2025-09-05",
+              "mm": 95
+            },
+            {
+              "date": "2025-05-02",
+              "mm": 50.5
+            },
+            {
+              "date": "2025-09-19",
+              "mm": 41.5
+            },
+            {
+              "date": "2025-04-01",
+              "mm": 41
+            },
+            {
+              "date": "2025-09-11",
+              "mm": 37.5
+            }
+          ],
+          "monthly": [
+            {
+              "month": 1,
+              "total": 26,
+              "wet_days": 1
+            },
+            {
+              "month": 2,
+              "total": 6.5,
+              "wet_days": 1
+            },
+            {
+              "month": 3,
+              "total": 153,
+              "wet_days": 9
+            },
+            {
+              "month": 4,
+              "total": 154.5,
+              "wet_days": 11
+            },
+            {
+              "month": 5,
+              "total": 206,
+              "wet_days": 13
+            },
+            {
+              "month": 6,
+              "total": 100,
+              "wet_days": 8
+            },
+            {
+              "month": 7,
+              "total": 74.5,
+              "wet_days": 5
+            },
+            {
+              "month": 8,
+              "total": 68.5,
+              "wet_days": 7
+            },
+            {
+              "month": 9,
+              "total": 203.5,
+              "wet_days": 8
+            },
+            {
+              "month": 10,
+              "total": 106.5,
+              "wet_days": 12
+            },
+            {
+              "month": 11,
+              "total": 17,
+              "wet_days": 3
+            },
+            {
+              "month": 12,
+              "total": 36.5,
+              "wet_days": 6
+            }
+          ],
+          "thresholds": [
+            {
+              "threshold": 0.5,
+              "days": 100
+            },
+            {
+              "threshold": 1,
+              "days": 84
+            },
+            {
+              "threshold": 5,
+              "days": 60
+            },
+            {
+              "threshold": 10,
+              "days": 40
+            }
+          ]
+        }
+      }
+    ],
+    "summary": {
+      "h": {
+        "total": 1446,
+        "wet_days": 99.25,
+        "wet_mean": 14.5666,
+        "top5_share": 30.0972,
+        "monthly": [
+          {
+            "month": 1,
+            "total": 39.375,
+            "wet_days": 3.5
+          },
+          {
+            "month": 2,
+            "total": 32.125,
+            "wet_days": 3.375
+          },
+          {
+            "month": 3,
+            "total": 115.1875,
+            "wet_days": 8.375
+          },
+          {
+            "month": 4,
+            "total": 105.5625,
+            "wet_days": 8.625
+          },
+          {
+            "month": 5,
+            "total": 116.75,
+            "wet_days": 9
+          },
+          {
+            "month": 6,
+            "total": 138.125,
+            "wet_days": 11.75
+          },
+          {
+            "month": 7,
+            "total": 175,
+            "wet_days": 10.125
+          },
+          {
+            "month": 8,
+            "total": 190,
+            "wet_days": 11.125
+          },
+          {
+            "month": 9,
+            "total": 269.9375,
+            "wet_days": 12.75
+          },
+          {
+            "month": 10,
+            "total": 153.75,
+            "wet_days": 9.375
+          },
+          {
+            "month": 11,
+            "total": 64.625,
+            "wet_days": 6.625
+          },
+          {
+            "month": 12,
+            "total": 45.5625,
+            "wet_days": 4.625
+          }
+        ],
+        "thresholds": [
+          {
+            "threshold": 0.5,
+            "days": 114.875
+          },
+          {
+            "threshold": 1,
+            "days": 99.25
+          },
+          {
+            "threshold": 5,
+            "days": 60.75
+          },
+          {
+            "threshold": 10,
+            "days": 40.75
+          }
+        ]
+      },
+      "t": {
+        "total": 1581.625,
+        "wet_days": 102,
+        "wet_mean": 15.3709,
+        "top5_share": 25.1359,
+        "monthly": [
+          {
+            "month": 1,
+            "total": 44.9375,
+            "wet_days": 3.625
+          },
+          {
+            "month": 2,
+            "total": 45.125,
+            "wet_days": 3.75
+          },
+          {
+            "month": 3,
+            "total": 135.5,
+            "wet_days": 8.5
+          },
+          {
+            "month": 4,
+            "total": 138.125,
+            "wet_days": 10.25
+          },
+          {
+            "month": 5,
+            "total": 137.8125,
+            "wet_days": 10.375
+          },
+          {
+            "month": 6,
+            "total": 163.9375,
+            "wet_days": 11.125
+          },
+          {
+            "month": 7,
+            "total": 143.9375,
+            "wet_days": 8.25
+          },
+          {
+            "month": 8,
+            "total": 179.25,
+            "wet_days": 11
+          },
+          {
+            "month": 9,
+            "total": 291.25,
+            "wet_days": 12.625
+          },
+          {
+            "month": 10,
+            "total": 164.6875,
+            "wet_days": 9.875
+          },
+          {
+            "month": 11,
+            "total": 80.3125,
+            "wet_days": 7.25
+          },
+          {
+            "month": 12,
+            "total": 56.75,
+            "wet_days": 5.375
+          }
+        ],
+        "thresholds": [
+          {
+            "threshold": 0.5,
+            "days": 117
+          },
+          {
+            "threshold": 1,
+            "days": 102
+          },
+          {
+            "threshold": 5,
+            "days": 65.25
+          },
+          {
+            "threshold": 10,
+            "days": 44.5
+          }
+        ]
+      }
+    },
+    "contingency": {
+      "both": 665,
+      "h_only": 129,
+      "t_only": 151,
+      "neither": 1976,
+      "total": 2921
+    },
+    "h_given_t": 81.4951,
+    "t_given_h": 83.7531,
+    "greater_total_years": 2,
+    "greater_wet_years": 3
+  },
+  "sensitivity_quality5": {
+    "included_years": [
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2025
+    ],
+    "excluded": [
+      {
+        "year": 2024,
+        "expected": 366,
+        "valid": 363,
+        "invalid_dates": [
+          "2024-12-21",
+          "2024-12-22",
+          "2024-12-23"
+        ]
+      }
+    ],
+    "annual": [
+      {
+        "year": 2015,
+        "days": 365,
+        "h": {
+          "total": 1740,
+          "wet_days": 117,
+          "wet_mean": 14.7949,
+          "top5_total": 546.5,
+          "top5_share": 31.408,
+          "top5": [
+            {
+              "date": "2015-07-16",
+              "mm": 200.5
+            },
+            {
+              "date": "2015-09-09",
+              "mm": 131.5
+            },
+            {
+              "date": "2015-07-03",
+              "mm": 76
+            },
+            {
+              "date": "2015-09-08",
+              "mm": 74.5
+            },
+            {
+              "date": "2015-12-11",
+              "mm": 64
+            }
+          ],
+          "monthly": [
+            {
+              "month": 1,
+              "total": 74.5,
+              "wet_days": 7
+            },
+            {
+              "month": 2,
+              "total": 38.5,
+              "wet_days": 6
+            },
+            {
+              "month": 3,
+              "total": 89.5,
+              "wet_days": 10
+            },
+            {
+              "month": 4,
+              "total": 107,
+              "wet_days": 9
+            },
+            {
+              "month": 5,
+              "total": 85.5,
+              "wet_days": 6
+            },
+            {
+              "month": 6,
+              "total": 139,
+              "wet_days": 14
+            },
+            {
+              "month": 7,
+              "total": 410.5,
+              "wet_days": 15
+            },
+            {
+              "month": 8,
+              "total": 144.5,
+              "wet_days": 12
+            },
+            {
+              "month": 9,
+              "total": 373.5,
+              "wet_days": 16
+            },
+            {
+              "month": 10,
+              "total": 58.5,
+              "wet_days": 5
+            },
+            {
+              "month": 11,
+              "total": 145,
+              "wet_days": 13
+            },
+            {
+              "month": 12,
+              "total": 74,
+              "wet_days": 4
+            }
+          ],
+          "thresholds": [
+            {
+              "threshold": 0.5,
+              "days": 135
+            },
+            {
+              "threshold": 1,
+              "days": 117
+            },
+            {
+              "threshold": 5,
+              "days": 71
+            },
+            {
+              "threshold": 10,
+              "days": 46
+            }
+          ]
+        },
+        "t": {
+          "total": 1781.5,
+          "wet_days": 115,
+          "wet_mean": 15.4304,
+          "top5_total": 428,
+          "top5_share": 24.0247,
+          "top5": [
+            {
+              "date": "2015-09-09",
+              "mm": 156.5
+            },
+            {
+              "date": "2015-09-17",
+              "mm": 74.5
+            },
+            {
+              "date": "2015-07-03",
+              "mm": 67.5
+            },
+            {
+              "date": "2015-09-08",
+              "mm": 65.5
+            },
+            {
+              "date": "2015-12-11",
+              "mm": 64
+            }
+          ],
+          "monthly": [
+            {
+              "month": 1,
+              "total": 92.5,
+              "wet_days": 7
+            },
+            {
+              "month": 2,
+              "total": 62,
+              "wet_days": 8
+            },
+            {
+              "month": 3,
+              "total": 94,
+              "wet_days": 7
+            },
+            {
+              "month": 4,
+              "total": 129,
+              "wet_days": 12
+            },
+            {
+              "month": 5,
+              "total": 88,
+              "wet_days": 6
+            },
+            {
+              "month": 6,
+              "total": 195.5,
+              "wet_days": 12
+            },
+            {
+              "month": 7,
+              "total": 234.5,
+              "wet_days": 12
+            },
+            {
+              "month": 8,
+              "total": 103.5,
+              "wet_days": 12
+            },
+            {
+              "month": 9,
+              "total": 503.5,
+              "wet_days": 15
+            },
+            {
+              "month": 10,
+              "total": 57,
+              "wet_days": 5
+            },
+            {
+              "month": 11,
+              "total": 139.5,
+              "wet_days": 12
+            },
+            {
+              "month": 12,
+              "total": 82.5,
+              "wet_days": 7
+            }
+          ],
+          "thresholds": [
+            {
+              "threshold": 0.5,
+              "days": 129
+            },
+            {
+              "threshold": 1,
+              "days": 115
+            },
+            {
+              "threshold": 5,
+              "days": 77
+            },
+            {
+              "threshold": 10,
+              "days": 51
+            }
+          ]
+        }
+      },
+      {
+        "year": 2016,
+        "days": 366,
+        "h": {
+          "total": 1487,
+          "wet_days": 114,
+          "wet_mean": 12.9649,
+          "top5_total": 433.5,
+          "top5_share": 29.1527,
+          "top5": [
+            {
+              "date": "2016-08-22",
+              "mm": 175.5
+            },
+            {
+              "date": "2016-08-20",
+              "mm": 75.5
+            },
+            {
+              "date": "2016-09-20",
+              "mm": 74
+            },
+            {
+              "date": "2016-06-13",
+              "mm": 56
+            },
+            {
+              "date": "2016-01-18",
+              "mm": 52.5
+            }
+          ],
+          "monthly": [
+            {
+              "month": 1,
+              "total": 72.5,
+              "wet_days": 4
+            },
+            {
+              "month": 2,
+              "total": 55.5,
+              "wet_days": 6
+            },
+            {
+              "month": 3,
+              "total": 67.5,
+              "wet_days": 7
+            },
+            {
+              "month": 4,
+              "total": 91.5,
+              "wet_days": 10
+            },
+            {
+              "month": 5,
+              "total": 60,
+              "wet_days": 7
+            },
+            {
+              "month": 6,
+              "total": 108,
+              "wet_days": 12
+            },
+            {
+              "month": 7,
+              "total": 102,
+              "wet_days": 10
+            },
+            {
+              "month": 8,
+              "total": 412,
+              "wet_days": 15
+            },
+            {
+              "month": 9,
+              "total": 274.5,
+              "wet_days": 16
+            },
+            {
+              "month": 10,
+              "total": 47.5,
+              "wet_days": 7
+            },
+            {
+              "month": 11,
+              "total": 118.5,
+              "wet_days": 13
+            },
+            {
+              "month": 12,
+              "total": 77.5,
+              "wet_days": 7
+            }
+          ],
+          "thresholds": [
+            {
+              "threshold": 0.5,
+              "days": 132
+            },
+            {
+              "threshold": 1,
+              "days": 114
+            },
+            {
+              "threshold": 5,
+              "days": 67
+            },
+            {
+              "threshold": 10,
+              "days": 46
+            }
+          ]
+        },
+        "t": {
+          "total": 1779,
+          "wet_days": 113,
+          "wet_mean": 15.677,
+          "top5_total": 445.5,
+          "top5_share": 25.0422,
+          "top5": [
+            {
+              "date": "2016-08-22",
+              "mm": 106.5
+            },
+            {
+              "date": "2016-06-13",
+              "mm": 98.5
+            },
+            {
+              "date": "2016-09-20",
+              "mm": 91.5
+            },
+            {
+              "date": "2016-08-20",
+              "mm": 82
+            },
+            {
+              "date": "2016-01-18",
+              "mm": 67
+            }
+          ],
+          "monthly": [
+            {
+              "month": 1,
+              "total": 85,
+              "wet_days": 4
+            },
+            {
+              "month": 2,
+              "total": 57,
+              "wet_days": 3
+            },
+            {
+              "month": 3,
+              "total": 103,
+              "wet_days": 6
+            },
+            {
+              "month": 4,
+              "total": 120,
+              "wet_days": 12
+            },
+            {
+              "month": 5,
+              "total": 137.5,
+              "wet_days": 8
+            },
+            {
+              "month": 6,
+              "total": 174.5,
+              "wet_days": 13
+            },
+            {
+              "month": 7,
+              "total": 81.5,
+              "wet_days": 10
+            },
+            {
+              "month": 8,
+              "total": 414,
+              "wet_days": 13
+            },
+            {
+              "month": 9,
+              "total": 287,
+              "wet_days": 14
+            },
+            {
+              "month": 10,
+              "total": 96.5,
+              "wet_days": 9
+            },
+            {
+              "month": 11,
+              "total": 139,
+              "wet_days": 13
+            },
+            {
+              "month": 12,
+              "total": 84,
+              "wet_days": 8
+            }
+          ],
+          "thresholds": [
+            {
+              "threshold": 0.5,
+              "days": 128
+            },
+            {
+              "threshold": 1,
+              "days": 113
+            },
+            {
+              "threshold": 5,
+              "days": 72
+            },
+            {
+              "threshold": 10,
+              "days": 50
+            }
+          ]
+        }
+      },
+      {
+        "year": 2017,
+        "days": 365,
+        "h": {
+          "total": 1514.5,
+          "wet_days": 92,
+          "wet_mean": 16.3913,
+          "top5_total": 541.5,
+          "top5_share": 35.7544,
+          "top5": [
+            {
+              "date": "2017-10-22",
+              "mm": 175
+            },
+            {
+              "date": "2017-10-23",
+              "mm": 152.5
+            },
+            {
+              "date": "2017-10-29",
+              "mm": 80
+            },
+            {
+              "date": "2017-08-19",
+              "mm": 74.5
+            },
+            {
+              "date": "2017-06-21",
+              "mm": 59.5
+            }
+          ],
+          "monthly": [
+            {
+              "month": 1,
+              "total": 27,
+              "wet_days": 2
+            },
+            {
+              "month": 2,
+              "total": 14.5,
+              "wet_days": 2
+            },
+            {
+              "month": 3,
+              "total": 89,
+              "wet_days": 8
+            },
+            {
+              "month": 4,
+              "total": 84.5,
+              "wet_days": 7
+            },
+            {
+              "month": 5,
+              "total": 70,
+              "wet_days": 5
+            },
+            {
+              "month": 6,
+              "total": 100,
+              "wet_days": 11
+            },
+            {
+              "month": 7,
+              "total": 130,
+              "wet_days": 9
+            },
+            {
+              "month": 8,
+              "total": 176,
+              "wet_days": 13
+            },
+            {
+              "month": 9,
+              "total": 162.5,
+              "wet_days": 11
+            },
+            {
+              "month": 10,
+              "total": 626,
+              "wet_days": 16
+            },
+            {
+              "month": 11,
+              "total": 22.5,
+              "wet_days": 6
+            },
+            {
+              "month": 12,
+              "total": 12.5,
+              "wet_days": 2
+            }
+          ],
+          "thresholds": [
+            {
+              "threshold": 0.5,
+              "days": 105
+            },
+            {
+              "threshold": 1,
+              "days": 92
+            },
+            {
+              "threshold": 5,
+              "days": 55
+            },
+            {
+              "threshold": 10,
+              "days": 41
+            }
+          ]
+        },
+        "t": {
+          "total": 1430,
+          "wet_days": 95,
+          "wet_mean": 14.9526,
+          "top5_total": 396.5,
+          "top5_share": 27.7273,
+          "top5": [
+            {
+              "date": "2017-10-22",
+              "mm": 147.5
+            },
+            {
+              "date": "2017-10-29",
+              "mm": 105.5
+            },
+            {
+              "date": "2017-09-17",
+              "mm": 52
+            },
+            {
+              "date": "2017-04-11",
+              "mm": 46
+            },
+            {
+              "date": "2017-06-21",
+              "mm": 45.5
+            }
+          ],
+          "monthly": [
+            {
+              "month": 1,
+              "total": 26,
+              "wet_days": 2
+            },
+            {
+              "month": 2,
+              "total": 15.5,
+              "wet_days": 2
+            },
+            {
+              "month": 3,
+              "total": 85.5,
+              "wet_days": 9
+            },
+            {
+              "month": 4,
+              "total": 122,
+              "wet_days": 10
+            },
+            {
+              "month": 5,
+              "total": 49,
+              "wet_days": 6
+            },
+            {
+              "month": 6,
+              "total": 106.5,
+              "wet_days": 11
+            },
+            {
+              "month": 7,
+              "total": 81,
+              "wet_days": 6
+            },
+            {
+              "month": 8,
+              "total": 141.5,
+              "wet_days": 12
+            },
+            {
+              "month": 9,
+              "total": 209.5,
+              "wet_days": 14
+            },
+            {
+              "month": 10,
+              "total": 531.5,
+              "wet_days": 16
+            },
+            {
+              "month": 11,
+              "total": 47,
+              "wet_days": 5
+            },
+            {
+              "month": 12,
+              "total": 15,
+              "wet_days": 2
+            }
+          ],
+          "thresholds": [
+            {
+              "threshold": 0.5,
+              "days": 114
+            },
+            {
+              "threshold": 1,
+              "days": 95
+            },
+            {
+              "threshold": 5,
+              "days": 64
+            },
+            {
+              "threshold": 10,
+              "days": 41
+            }
+          ]
+        }
+      },
+      {
+        "year": 2018,
+        "days": 365,
+        "h": {
+          "total": 1436,
+          "wet_days": 91,
+          "wet_mean": 15.6319,
+          "top5_total": 367,
+          "top5_share": 25.5571,
+          "top5": [
+            {
+              "date": "2018-09-30",
+              "mm": 87
+            },
+            {
+              "date": "2018-07-28",
+              "mm": 82.5
+            },
+            {
+              "date": "2018-03-08",
+              "mm": 78
+            },
+            {
+              "date": "2018-09-25",
+              "mm": 62.5
+            },
+            {
+              "date": "2018-08-06",
+              "mm": 57
+            }
+          ],
+          "monthly": [
+            {
+              "month": 1,
+              "total": 38,
+              "wet_days": 4
+            },
+            {
+              "month": 2,
+              "total": 11.5,
+              "wet_days": 2
+            },
+            {
+              "month": 3,
+              "total": 235.5,
+              "wet_days": 11
+            },
+            {
+              "month": 4,
+              "total": 64,
+              "wet_days": 5
+            },
+            {
+              "month": 5,
+              "total": 123.5,
+              "wet_days": 10
+            },
+            {
+              "month": 6,
+              "total": 112,
+              "wet_days": 10
+            },
+            {
+              "month": 7,
+              "total": 139,
+              "wet_days": 5
+            },
+            {
+              "month": 8,
+              "total": 181.5,
+              "wet_days": 10
+            },
+            {
+              "month": 9,
+              "total": 399.5,
+              "wet_days": 19
+            },
+            {
+              "month": 10,
+              "total": 66,
+              "wet_days": 6
+            },
+            {
+              "month": 11,
+              "total": 21,
+              "wet_days": 4
+            },
+            {
+              "month": 12,
+              "total": 44.5,
+              "wet_days": 5
+            }
+          ],
+          "thresholds": [
+            {
+              "threshold": 0.5,
+              "days": 118
+            },
+            {
+              "threshold": 1,
+              "days": 91
+            },
+            {
+              "threshold": 5,
+              "days": 65
+            },
+            {
+              "threshold": 10,
+              "days": 45
+            }
+          ]
+        },
+        "t": {
+          "total": 1445.5,
+          "wet_days": 103,
+          "wet_mean": 13.9709,
+          "top5_total": 266,
+          "top5_share": 18.4019,
+          "top5": [
+            {
+              "date": "2018-03-09",
+              "mm": 58
+            },
+            {
+              "date": "2018-04-25",
+              "mm": 57
+            },
+            {
+              "date": "2018-07-28",
+              "mm": 52
+            },
+            {
+              "date": "2018-06-11",
+              "mm": 50
+            },
+            {
+              "date": "2018-05-13",
+              "mm": 49
+            }
+          ],
+          "monthly": [
+            {
+              "month": 1,
+              "total": 48.5,
+              "wet_days": 4
+            },
+            {
+              "month": 2,
+              "total": 20,
+              "wet_days": 5
+            },
+            {
+              "month": 3,
+              "total": 220,
+              "wet_days": 11
+            },
+            {
+              "month": 4,
+              "total": 109,
+              "wet_days": 6
+            },
+            {
+              "month": 5,
+              "total": 165.5,
+              "wet_days": 10
+            },
+            {
+              "month": 6,
+              "total": 155.5,
+              "wet_days": 12
+            },
+            {
+              "month": 7,
+              "total": 107,
+              "wet_days": 7
+            },
+            {
+              "month": 8,
+              "total": 86.5,
+              "wet_days": 8
+            },
+            {
+              "month": 9,
+              "total": 365,
+              "wet_days": 19
+            },
+            {
+              "month": 10,
+              "total": 61.5,
+              "wet_days": 8
+            },
+            {
+              "month": 11,
+              "total": 63,
+              "wet_days": 9
+            },
+            {
+              "month": 12,
+              "total": 44,
+              "wet_days": 4
+            }
+          ],
+          "thresholds": [
+            {
+              "threshold": 0.5,
+              "days": 116
+            },
+            {
+              "threshold": 1,
+              "days": 103
+            },
+            {
+              "threshold": 5,
+              "days": 64
+            },
+            {
+              "threshold": 10,
+              "days": 44
+            }
+          ]
+        }
+      },
+      {
+        "year": 2019,
+        "days": 365,
+        "h": {
+          "total": 1966,
+          "wet_days": 109,
+          "wet_mean": 17.9541,
+          "top5_total": 733,
+          "top5_share": 37.2838,
+          "top5": [
+            {
+              "date": "2019-10-12",
+              "mm": 392.5
+            },
+            {
+              "date": "2019-05-21",
+              "mm": 105.5
+            },
+            {
+              "date": "2019-10-25",
+              "mm": 96.5
+            },
+            {
+              "date": "2019-09-09",
+              "mm": 70.5
+            },
+            {
+              "date": "2019-06-10",
+              "mm": 68
+            }
+          ],
+          "monthly": [
+            {
+              "month": 1,
+              "total": 12.5,
+              "wet_days": 1
+            },
+            {
+              "month": 2,
+              "total": 23.5,
+              "wet_days": 4
+            },
+            {
+              "month": 3,
+              "total": 119.5,
+              "wet_days": 10
+            },
+            {
+              "month": 4,
+              "total": 86,
+              "wet_days": 7
+            },
+            {
+              "month": 5,
+              "total": 128.5,
+              "wet_days": 5
+            },
+            {
+              "month": 6,
+              "total": 211,
+              "wet_days": 13
+            },
+            {
+              "month": 7,
+              "total": 212,
+              "wet_days": 19
+            },
+            {
+              "month": 8,
+              "total": 200,
+              "wet_days": 12
+            },
+            {
+              "month": 9,
+              "total": 152.5,
+              "wet_days": 8
+            },
+            {
+              "month": 10,
+              "total": 673,
+              "wet_days": 16
+            },
+            {
+              "month": 11,
+              "total": 97,
+              "wet_days": 9
+            },
+            {
+              "month": 12,
+              "total": 50.5,
+              "wet_days": 5
+            }
+          ],
+          "thresholds": [
+            {
+              "threshold": 0.5,
+              "days": 127
+            },
+            {
+              "threshold": 1,
+              "days": 109
+            },
+            {
+              "threshold": 5,
+              "days": 63
+            },
+            {
+              "threshold": 10,
+              "days": 45
+            }
+          ]
+        },
+        "t": {
+          "total": 1874,
+          "wet_days": 111,
+          "wet_mean": 16.7928,
+          "top5_total": 623.5,
+          "top5_share": 33.2711,
+          "top5": [
+            {
+              "date": "2019-10-12",
+              "mm": 209.5
+            },
+            {
+              "date": "2019-10-25",
+              "mm": 120.5
+            },
+            {
+              "date": "2019-09-09",
+              "mm": 119
+            },
+            {
+              "date": "2019-06-10",
+              "mm": 92.5
+            },
+            {
+              "date": "2019-05-21",
+              "mm": 82
+            }
+          ],
+          "monthly": [
+            {
+              "month": 1,
+              "total": 16,
+              "wet_days": 1
+            },
+            {
+              "month": 2,
+              "total": 42,
+              "wet_days": 4
+            },
+            {
+              "month": 3,
+              "total": 117.5,
+              "wet_days": 9
+            },
+            {
+              "month": 4,
+              "total": 90.5,
+              "wet_days": 10
+            },
+            {
+              "month": 5,
+              "total": 120.5,
+              "wet_days": 5
+            },
+            {
+              "month": 6,
+              "total": 225,
+              "wet_days": 12
+            },
+            {
+              "month": 7,
+              "total": 193,
+              "wet_days": 17
+            },
+            {
+              "month": 8,
+              "total": 110,
+              "wet_days": 10
+            },
+            {
+              "month": 9,
+              "total": 197,
+              "wet_days": 9
+            },
+            {
+              "month": 10,
+              "total": 529.5,
+              "wet_days": 16
+            },
+            {
+              "month": 11,
+              "total": 156.5,
+              "wet_days": 11
+            },
+            {
+              "month": 12,
+              "total": 76.5,
+              "wet_days": 7
+            }
+          ],
+          "thresholds": [
+            {
+              "threshold": 0.5,
+              "days": 131
+            },
+            {
+              "threshold": 1,
+              "days": 111
+            },
+            {
+              "threshold": 5,
+              "days": 72
+            },
+            {
+              "threshold": 10,
+              "days": 45
+            }
+          ]
+        }
+      },
+      {
+        "year": 2020,
+        "days": 366,
+        "h": {
+          "total": 1604.5,
+          "wet_days": 108,
+          "wet_mean": 14.7685,
+          "top5_total": 425.5,
+          "top5_share": 26.5192,
+          "top5": [
+            {
+              "date": "2020-04-18",
+              "mm": 115
+            },
+            {
+              "date": "2020-04-13",
+              "mm": 90
+            },
+            {
+              "date": "2020-09-06",
+              "mm": 81
+            },
+            {
+              "date": "2020-10-10",
+              "mm": 70
+            },
+            {
+              "date": "2020-07-25",
+              "mm": 69.5
+            }
+          ],
+          "monthly": [
+            {
+              "month": 1,
+              "total": 107,
+              "wet_days": 8
+            },
+            {
+              "month": 2,
+              "total": 9,
+              "wet_days": 3
+            },
+            {
+              "month": 3,
+              "total": 101,
+              "wet_days": 7
+            },
+            {
+              "month": 4,
+              "total": 257,
+              "wet_days": 7
+            },
+            {
+              "month": 5,
+              "total": 67,
+              "wet_days": 9
+            },
+            {
+              "month": 6,
+              "total": 217.5,
+              "wet_days": 14
+            },
+            {
+              "month": 7,
+              "total": 350,
+              "wet_days": 28
+            },
+            {
+              "month": 8,
+              "total": 37,
+              "wet_days": 3
+            },
+            {
+              "month": 9,
+              "total": 233.5,
+              "wet_days": 17
+            },
+            {
+              "month": 10,
+              "total": 213,
+              "wet_days": 8
+            },
+            {
+              "month": 11,
+              "total": 11.5,
+              "wet_days": 3
+            },
+            {
+              "month": 12,
+              "total": 1,
+              "wet_days": 1
+            }
+          ],
+          "thresholds": [
+            {
+              "threshold": 0.5,
+              "days": 127
+            },
+            {
+              "threshold": 1,
+              "days": 108
+            },
+            {
+              "threshold": 5,
+              "days": 62
+            },
+            {
+              "threshold": 10,
+              "days": 43
+            }
+          ]
+        },
+        "t": {
+          "total": 1590,
+          "wet_days": 108,
+          "wet_mean": 14.5972,
+          "top5_total": 405,
+          "top5_share": 25.4717,
+          "top5": [
+            {
+              "date": "2020-04-13",
+              "mm": 132
+            },
+            {
+              "date": "2020-04-18",
+              "mm": 89.5
+            },
+            {
+              "date": "2020-10-10",
+              "mm": 73.5
+            },
+            {
+              "date": "2020-01-28",
+              "mm": 55.5
+            },
+            {
+              "date": "2020-05-19",
+              "mm": 54.5
+            }
+          ],
+          "monthly": [
+            {
+              "month": 1,
+              "total": 135,
+              "wet_days": 10
+            },
+            {
+              "month": 2,
+              "total": 15,
+              "wet_days": 4
+            },
+            {
+              "month": 3,
+              "total": 131,
+              "wet_days": 10
+            },
+            {
+              "month": 4,
+              "total": 296.5,
+              "wet_days": 9
+            },
+            {
+              "month": 5,
+              "total": 118,
+              "wet_days": 9
+            },
+            {
+              "month": 6,
+              "total": 212.5,
+              "wet_days": 14
+            },
+            {
+              "month": 7,
+              "total": 270.5,
+              "wet_days": 20
+            },
+            {
+              "month": 8,
+              "total": 61.5,
+              "wet_days": 3
+            },
+            {
+              "month": 9,
+              "total": 117.5,
+              "wet_days": 13
+            },
+            {
+              "month": 10,
+              "total": 205,
+              "wet_days": 9
+            },
+            {
+              "month": 11,
+              "total": 14.5,
+              "wet_days": 4
+            },
+            {
+              "month": 12,
+              "total": 13,
+              "wet_days": 3
+            }
+          ],
+          "thresholds": [
+            {
+              "threshold": 0.5,
+              "days": 135
+            },
+            {
+              "threshold": 1,
+              "days": 108
+            },
+            {
+              "threshold": 5,
+              "days": 68
+            },
+            {
+              "threshold": 10,
+              "days": 42
+            }
+          ]
+        }
+      },
+      {
+        "year": 2021,
+        "days": 365,
+        "h": {
+          "total": 1448.5,
+          "wet_days": 102,
+          "wet_mean": 14.1225,
+          "top5_total": 313.5,
+          "top5_share": 21.6431,
+          "top5": [
+            {
+              "date": "2021-08-15",
+              "mm": 80
+            },
+            {
+              "date": "2021-07-02",
+              "mm": 63.5
+            },
+            {
+              "date": "2021-11-09",
+              "mm": 59
+            },
+            {
+              "date": "2021-07-01",
+              "mm": 58
+            },
+            {
+              "date": "2021-10-01",
+              "mm": 53
+            }
+          ],
+          "monthly": [
+            {
+              "month": 1,
+              "total": 51,
+              "wet_days": 5
+            },
+            {
+              "month": 2,
+              "total": 51,
+              "wet_days": 2
+            },
+            {
+              "month": 3,
+              "total": 111.5,
+              "wet_days": 7
+            },
+            {
+              "month": 4,
+              "total": 81,
+              "wet_days": 7
+            },
+            {
+              "month": 5,
+              "total": 78.5,
+              "wet_days": 10
+            },
+            {
+              "month": 6,
+              "total": 81.5,
+              "wet_days": 12
+            },
+            {
+              "month": 7,
+              "total": 273,
+              "wet_days": 16
+            },
+            {
+              "month": 8,
+              "total": 307.5,
+              "wet_days": 12
+            },
+            {
+              "month": 9,
+              "total": 148,
+              "wet_days": 11
+            },
+            {
+              "month": 10,
+              "total": 114.5,
+              "wet_days": 10
+            },
+            {
+              "month": 11,
+              "total": 82,
+              "wet_days": 5
+            },
+            {
+              "month": 12,
+              "total": 69,
+              "wet_days": 5
+            }
+          ],
+          "thresholds": [
+            {
+              "threshold": 0.5,
+              "days": 118
+            },
+            {
+              "threshold": 1,
+              "days": 102
+            },
+            {
+              "threshold": 5,
+              "days": 60
+            },
+            {
+              "threshold": 10,
+              "days": 39
+            }
+          ]
+        },
+        "t": {
+          "total": 2052.5,
+          "wet_days": 107,
+          "wet_mean": 19.1028,
+          "top5_total": 543.5,
+          "top5_share": 26.4799,
+          "top5": [
+            {
+              "date": "2021-08-15",
+              "mm": 138.5
+            },
+            {
+              "date": "2021-09-18",
+              "mm": 124.5
+            },
+            {
+              "date": "2021-10-01",
+              "mm": 113
+            },
+            {
+              "date": "2021-08-08",
+              "mm": 90.5
+            },
+            {
+              "date": "2021-08-14",
+              "mm": 77
+            }
+          ],
+          "monthly": [
+            {
+              "month": 1,
+              "total": 43.5,
+              "wet_days": 5
+            },
+            {
+              "month": 2,
+              "total": 88.5,
+              "wet_days": 2
+            },
+            {
+              "month": 3,
+              "total": 173,
+              "wet_days": 7
+            },
+            {
+              "month": 4,
+              "total": 156,
+              "wet_days": 8
+            },
+            {
+              "month": 5,
+              "total": 99.5,
+              "wet_days": 15
+            },
+            {
+              "month": 6,
+              "total": 168.5,
+              "wet_days": 12
+            },
+            {
+              "month": 7,
+              "total": 310,
+              "wet_days": 11
+            },
+            {
+              "month": 8,
+              "total": 382.5,
+              "wet_days": 12
+            },
+            {
+              "month": 9,
+              "total": 222.5,
+              "wet_days": 12
+            },
+            {
+              "month": 10,
+              "total": 199.5,
+              "wet_days": 11
+            },
+            {
+              "month": 11,
+              "total": 93,
+              "wet_days": 6
+            },
+            {
+              "month": 12,
+              "total": 116,
+              "wet_days": 6
+            }
+          ],
+          "thresholds": [
+            {
+              "threshold": 0.5,
+              "days": 124
+            },
+            {
+              "threshold": 1,
+              "days": 107
+            },
+            {
+              "threshold": 5,
+              "days": 69
+            },
+            {
+              "threshold": 10,
+              "days": 49
+            }
+          ]
+        }
+      },
+      {
+        "year": 2022,
+        "days": 365,
+        "h": {
+          "total": 1473.5,
+          "wet_days": 108,
+          "wet_mean": 13.5787,
+          "top5_total": 405.5,
+          "top5_share": 27.5195,
+          "top5": [
+            {
+              "date": "2022-09-18",
+              "mm": 119.5
+            },
+            {
+              "date": "2022-08-13",
+              "mm": 83.5
+            },
+            {
+              "date": "2022-06-06",
+              "mm": 77
+            },
+            {
+              "date": "2022-05-27",
+              "mm": 64.5
+            },
+            {
+              "date": "2022-09-23",
+              "mm": 61
+            }
+          ],
+          "monthly": [
+            {
+              "month": 1,
+              "total": 15.5,
+              "wet_days": 2
+            },
+            {
+              "month": 2,
+              "total": 42,
+              "wet_days": 5
+            },
+            {
+              "month": 3,
+              "total": 91,
+              "wet_days": 4
+            },
+            {
+              "month": 4,
+              "total": 198,
+              "wet_days": 14
+            },
+            {
+              "month": 5,
+              "total": 136,
+              "wet_days": 10
+            },
+            {
+              "month": 6,
+              "total": 151.5,
+              "wet_days": 14
+            },
+            {
+              "month": 7,
+              "total": 119,
+              "wet_days": 12
+            },
+            {
+              "month": 8,
+              "total": 142.5,
+              "wet_days": 10
+            },
+            {
+              "month": 9,
+              "total": 355,
+              "wet_days": 13
+            },
+            {
+              "month": 10,
+              "total": 112,
+              "wet_days": 12
+            },
+            {
+              "month": 11,
+              "total": 66.5,
+              "wet_days": 5
+            },
+            {
+              "month": 12,
+              "total": 44.5,
+              "wet_days": 7
+            }
+          ],
+          "thresholds": [
+            {
+              "threshold": 0.5,
+              "days": 122
+            },
+            {
+              "threshold": 1,
+              "days": 108
+            },
+            {
+              "threshold": 5,
+              "days": 67
+            },
+            {
+              "threshold": 10,
+              "days": 42
+            }
+          ]
+        },
+        "t": {
+          "total": 1615.5,
+          "wet_days": 109,
+          "wet_mean": 14.7477,
+          "top5_total": 359.5,
+          "top5_share": 22.2532,
+          "top5": [
+            {
+              "date": "2022-09-24",
+              "mm": 112.5
+            },
+            {
+              "date": "2022-09-18",
+              "mm": 72.5
+            },
+            {
+              "date": "2022-07-15",
+              "mm": 61.5
+            },
+            {
+              "date": "2022-05-27",
+              "mm": 59.5
+            },
+            {
+              "date": "2022-04-04",
+              "mm": 53.5
+            }
+          ],
+          "monthly": [
+            {
+              "month": 1,
+              "total": 22.5,
+              "wet_days": 2
+            },
+            {
+              "month": 2,
+              "total": 71,
+              "wet_days": 6
+            },
+            {
+              "month": 3,
+              "total": 110.5,
+              "wet_days": 9
+            },
+            {
+              "month": 4,
+              "total": 224.5,
+              "wet_days": 15
+            },
+            {
+              "month": 5,
+              "total": 198,
+              "wet_days": 13
+            },
+            {
+              "month": 6,
+              "total": 64,
+              "wet_days": 6
+            },
+            {
+              "month": 7,
+              "total": 233,
+              "wet_days": 11
+            },
+            {
+              "month": 8,
+              "total": 105,
+              "wet_days": 12
+            },
+            {
+              "month": 9,
+              "total": 310,
+              "wet_days": 10
+            },
+            {
+              "month": 10,
+              "total": 118,
+              "wet_days": 12
+            },
+            {
+              "month": 11,
+              "total": 102.5,
+              "wet_days": 7
+            },
+            {
+              "month": 12,
+              "total": 56.5,
+              "wet_days": 6
+            }
+          ],
+          "thresholds": [
+            {
+              "threshold": 0.5,
+              "days": 125
+            },
+            {
+              "threshold": 1,
+              "days": 109
+            },
+            {
+              "threshold": 5,
+              "days": 65
+            },
+            {
+              "threshold": 10,
+              "days": 40
+            }
+          ]
+        }
+      },
+      {
+        "year": 2023,
+        "days": 365,
+        "h": {
+          "total": 1249.5,
+          "wet_days": 80,
+          "wet_mean": 15.5375,
+          "top5_total": 444,
+          "top5_share": 35.5342,
+          "top5": [
+            {
+              "date": "2023-06-02",
+              "mm": 174.5
+            },
+            {
+              "date": "2023-09-22",
+              "mm": 78.5
+            },
+            {
+              "date": "2023-09-08",
+              "mm": 72.5
+            },
+            {
+              "date": "2023-06-03",
+              "mm": 71
+            },
+            {
+              "date": "2023-11-17",
+              "mm": 47.5
+            }
+          ],
+          "monthly": [
+            {
+              "month": 1,
+              "total": 10,
+              "wet_days": 2
+            },
+            {
+              "month": 2,
+              "total": 38,
+              "wet_days": 3
+            },
+            {
+              "month": 3,
+              "total": 106.5,
+              "wet_days": 10
+            },
+            {
+              "month": 4,
+              "total": 66,
+              "wet_days": 7
+            },
+            {
+              "month": 5,
+              "total": 142,
+              "wet_days": 10
+            },
+            {
+              "month": 6,
+              "total": 355,
+              "wet_days": 14
+            },
+            {
+              "month": 7,
+              "total": 37,
+              "wet_days": 6
+            },
+            {
+              "month": 8,
+              "total": 143,
+              "wet_days": 12
+            },
+            {
+              "month": 9,
+              "total": 198,
+              "wet_days": 6
+            },
+            {
+              "month": 10,
+              "total": 93,
+              "wet_days": 7
+            },
+            {
+              "month": 11,
+              "total": 52.5,
+              "wet_days": 2
+            },
+            {
+              "month": 12,
+              "total": 8.5,
+              "wet_days": 1
+            }
+          ],
+          "thresholds": [
+            {
+              "threshold": 0.5,
+              "days": 93
+            },
+            {
+              "threshold": 1,
+              "days": 80
+            },
+            {
+              "threshold": 5,
+              "days": 48
+            },
+            {
+              "threshold": 10,
+              "days": 37
+            }
+          ]
+        },
+        "t": {
+          "total": 1396.5,
+          "wet_days": 90,
+          "wet_mean": 15.4611,
+          "top5_total": 476.5,
+          "top5_share": 34.121,
+          "top5": [
+            {
+              "date": "2023-06-02",
+              "mm": 168.5
+            },
+            {
+              "date": "2023-09-08",
+              "mm": 107.5
+            },
+            {
+              "date": "2023-06-03",
+              "mm": 92.5
+            },
+            {
+              "date": "2023-09-22",
+              "mm": 59.5
+            },
+            {
+              "date": "2023-08-13",
+              "mm": 48.5
+            }
+          ],
+          "monthly": [
+            {
+              "month": 1,
+              "total": 15.5,
+              "wet_days": 4
+            },
+            {
+              "month": 2,
+              "total": 40.5,
+              "wet_days": 3
+            },
+            {
+              "month": 3,
+              "total": 145,
+              "wet_days": 10
+            },
+            {
+              "month": 4,
+              "total": 90,
+              "wet_days": 8
+            },
+            {
+              "month": 5,
+              "total": 159,
+              "wet_days": 12
+            },
+            {
+              "month": 6,
+              "total": 347,
+              "wet_days": 15
+            },
+            {
+              "month": 7,
+              "total": 30,
+              "wet_days": 4
+            },
+            {
+              "month": 8,
+              "total": 132.5,
+              "wet_days": 12
+            },
+            {
+              "month": 9,
+              "total": 229,
+              "wet_days": 9
+            },
+            {
+              "month": 10,
+              "total": 147,
+              "wet_days": 6
+            },
+            {
+              "month": 11,
+              "total": 41.5,
+              "wet_days": 3
+            },
+            {
+              "month": 12,
+              "total": 19.5,
+              "wet_days": 4
+            }
+          ],
+          "thresholds": [
+            {
+              "threshold": 0.5,
+              "days": 100
+            },
+            {
+              "threshold": 1,
+              "days": 90
+            },
+            {
+              "threshold": 5,
+              "days": 51
+            },
+            {
+              "threshold": 10,
+              "days": 41
+            }
+          ]
+        }
+      },
+      {
+        "year": 2025,
+        "days": 365,
+        "h": {
+          "total": 1219,
+          "wet_days": 90,
+          "wet_mean": 13.5111,
+          "top5_total": 417,
+          "top5_share": 34.2084,
+          "top5": [
+            {
+              "date": "2025-09-05",
+              "mm": 131
+            },
+            {
+              "date": "2025-05-02",
+              "mm": 107.5
+            },
+            {
+              "date": "2025-07-15",
+              "mm": 85.5
+            },
+            {
+              "date": "2025-10-31",
+              "mm": 53.5
+            },
+            {
+              "date": "2025-09-19",
+              "mm": 39.5
+            }
+          ],
+          "monthly": [
+            {
+              "month": 1,
+              "total": 26.5,
+              "wet_days": 2
+            },
+            {
+              "month": 2,
+              "total": 6,
+              "wet_days": 1
+            },
+            {
+              "month": 3,
+              "total": 131,
+              "wet_days": 10
+            },
+            {
+              "month": 4,
+              "total": 152.5,
+              "wet_days": 10
+            },
+            {
+              "month": 5,
+              "total": 238.5,
+              "wet_days": 14
+            },
+            {
+              "month": 6,
+              "total": 58,
+              "wet_days": 7
+            },
+            {
+              "month": 7,
+              "total": 189.5,
+              "wet_days": 8
+            },
+            {
+              "month": 8,
+              "total": 13,
+              "wet_days": 5
+            },
+            {
+              "month": 9,
+              "total": 248.5,
+              "wet_days": 10
+            },
+            {
+              "month": 10,
+              "total": 112.5,
+              "wet_days": 12
+            },
+            {
+              "month": 11,
+              "total": 9,
+              "wet_days": 5
+            },
+            {
+              "month": 12,
+              "total": 34,
+              "wet_days": 6
+            }
+          ],
+          "thresholds": [
+            {
+              "threshold": 0.5,
+              "days": 96
+            },
+            {
+              "threshold": 1,
+              "days": 90
+            },
+            {
+              "threshold": 5,
+              "days": 53
+            },
+            {
+              "threshold": 10,
+              "days": 30
+            }
+          ]
+        },
+        "t": {
+          "total": 1152.5,
+          "wet_days": 84,
+          "wet_mean": 13.625,
+          "top5_total": 265.5,
+          "top5_share": 23.0369,
+          "top5": [
+            {
+              "date": "2025-09-05",
+              "mm": 95
+            },
+            {
+              "date": "2025-05-02",
+              "mm": 50.5
+            },
+            {
+              "date": "2025-09-19",
+              "mm": 41.5
+            },
+            {
+              "date": "2025-04-01",
+              "mm": 41
+            },
+            {
+              "date": "2025-09-11",
+              "mm": 37.5
+            }
+          ],
+          "monthly": [
+            {
+              "month": 1,
+              "total": 26,
+              "wet_days": 1
+            },
+            {
+              "month": 2,
+              "total": 6.5,
+              "wet_days": 1
+            },
+            {
+              "month": 3,
+              "total": 153,
+              "wet_days": 9
+            },
+            {
+              "month": 4,
+              "total": 154.5,
+              "wet_days": 11
+            },
+            {
+              "month": 5,
+              "total": 206,
+              "wet_days": 13
+            },
+            {
+              "month": 6,
+              "total": 100,
+              "wet_days": 8
+            },
+            {
+              "month": 7,
+              "total": 74.5,
+              "wet_days": 5
+            },
+            {
+              "month": 8,
+              "total": 68.5,
+              "wet_days": 7
+            },
+            {
+              "month": 9,
+              "total": 203.5,
+              "wet_days": 8
+            },
+            {
+              "month": 10,
+              "total": 106.5,
+              "wet_days": 12
+            },
+            {
+              "month": 11,
+              "total": 17,
+              "wet_days": 3
+            },
+            {
+              "month": 12,
+              "total": 36.5,
+              "wet_days": 6
+            }
+          ],
+          "thresholds": [
+            {
+              "threshold": 0.5,
+              "days": 100
+            },
+            {
+              "threshold": 1,
+              "days": 84
+            },
+            {
+              "threshold": 5,
+              "days": 60
+            },
+            {
+              "threshold": 10,
+              "days": 40
+            }
+          ]
+        }
+      }
+    ],
+    "summary": {
+      "h": {
+        "total": 1513.85,
+        "wet_days": 101.1,
+        "wet_mean": 14.9255,
+        "top5_share": 30.458,
+        "monthly": [
+          {
+            "month": 1,
+            "total": 43.45,
+            "wet_days": 3.7
+          },
+          {
+            "month": 2,
+            "total": 28.95,
+            "wet_days": 3.4
+          },
+          {
+            "month": 3,
+            "total": 114.2,
+            "wet_days": 8.4
+          },
+          {
+            "month": 4,
+            "total": 118.75,
+            "wet_days": 8.3
+          },
+          {
+            "month": 5,
+            "total": 112.95,
+            "wet_days": 8.6
+          },
+          {
+            "month": 6,
+            "total": 153.35,
+            "wet_days": 12.1
+          },
+          {
+            "month": 7,
+            "total": 196.2,
+            "wet_days": 12.8
+          },
+          {
+            "month": 8,
+            "total": 175.7,
+            "wet_days": 10.4
+          },
+          {
+            "month": 9,
+            "total": 254.55,
+            "wet_days": 12.7
+          },
+          {
+            "month": 10,
+            "total": 211.6,
+            "wet_days": 9.9
+          },
+          {
+            "month": 11,
+            "total": 62.55,
+            "wet_days": 6.5
+          },
+          {
+            "month": 12,
+            "total": 41.6,
+            "wet_days": 4.3
+          }
+        ],
+        "thresholds": [
+          {
+            "threshold": 0.5,
+            "days": 117.3
+          },
+          {
+            "threshold": 1,
+            "days": 101.1
+          },
+          {
+            "threshold": 5,
+            "days": 61.1
+          },
+          {
+            "threshold": 10,
+            "days": 41.4
+          }
+        ]
+      },
+      "t": {
+        "total": 1611.7,
+        "wet_days": 103.5,
+        "wet_mean": 15.4357,
+        "top5_share": 25.983,
+        "monthly": [
+          {
+            "month": 1,
+            "total": 51.05,
+            "wet_days": 4
+          },
+          {
+            "month": 2,
+            "total": 41.8,
+            "wet_days": 3.8
+          },
+          {
+            "month": 3,
+            "total": 133.25,
+            "wet_days": 8.7
+          },
+          {
+            "month": 4,
+            "total": 149.2,
+            "wet_days": 10.1
+          },
+          {
+            "month": 5,
+            "total": 134.1,
+            "wet_days": 9.7
+          },
+          {
+            "month": 6,
+            "total": 174.9,
+            "wet_days": 11.5
+          },
+          {
+            "month": 7,
+            "total": 161.5,
+            "wet_days": 10.3
+          },
+          {
+            "month": 8,
+            "total": 160.55,
+            "wet_days": 10.1
+          },
+          {
+            "month": 9,
+            "total": 264.45,
+            "wet_days": 12.3
+          },
+          {
+            "month": 10,
+            "total": 205.2,
+            "wet_days": 10.4
+          },
+          {
+            "month": 11,
+            "total": 81.35,
+            "wet_days": 7.3
+          },
+          {
+            "month": 12,
+            "total": 54.35,
+            "wet_days": 5.3
+          }
+        ],
+        "thresholds": [
+          {
+            "threshold": 0.5,
+            "days": 120.2
+          },
+          {
+            "threshold": 1,
+            "days": 103.5
+          },
+          {
+            "threshold": 5,
+            "days": 66.2
+          },
+          {
+            "threshold": 10,
+            "days": 44.3
+          }
+        ]
+      }
+    },
+    "contingency": {
+      "both": 848,
+      "h_only": 163,
+      "t_only": 187,
+      "neither": 2454,
+      "total": 3652
+    },
+    "h_given_t": 81.9324,
+    "t_given_h": 83.8773,
+    "greater_total_years": 4,
+    "greater_wet_years": 3
+  },
+  "quality": {
+    "h": {
+      "mean": {
+        "counts": {
+          "1": 1,
+          "4": 2,
+          "5": 3,
+          "8": 4012
+        },
+        "segments": [
+          {
+            "from": "2015-01-01",
+            "to": "2025-12-31",
+            "number": 1
+          }
+        ]
+      },
+      "max": {
+        "counts": {
+          "1": 1,
+          "4": 2,
+          "5": 13,
+          "8": 4002
+        },
+        "segments": [
+          {
+            "from": "2015-01-01",
+            "to": "2025-12-31",
+            "number": 1
+          }
+        ]
+      },
+      "min": {
+        "counts": {
+          "1": 1,
+          "4": 2,
+          "5": 13,
+          "8": 4002
+        },
+        "segments": [
+          {
+            "from": "2015-01-01",
+            "to": "2025-12-31",
+            "number": 1
+          }
+        ]
+      },
+      "rain": {
+        "counts": {
+          "1": 1,
+          "4": 2,
+          "5": 2,
+          "8": 4013
+        },
+        "segments": [
+          {
+            "from": "2015-01-01",
+            "to": "2025-12-31",
+            "number": 1
+          }
+        ]
+      }
+    },
+    "t": {
+      "mean": {
+        "counts": {
+          "5": 4,
+          "8": 4014
+        },
+        "segments": [
+          {
+            "from": "2015-01-01",
+            "to": "2025-12-31",
+            "number": 2
+          }
+        ]
+      },
+      "max": {
+        "counts": {
+          "5": 6,
+          "8": 4012
+        },
+        "segments": [
+          {
+            "from": "2015-01-01",
+            "to": "2025-12-31",
+            "number": 2
+          }
+        ]
+      },
+      "min": {
+        "counts": {
+          "8": 4018
+        },
+        "segments": [
+          {
+            "from": "2015-01-01",
+            "to": "2025-12-31",
+            "number": 2
+          }
+        ]
+      },
+      "rain": {
+        "counts": {
+          "8": 4018
+        },
+        "segments": [
+          {
+            "from": "2015-01-01",
+            "to": "2025-12-31",
+            "number": 1
+          }
+        ]
+      }
+    }
+  }
+}

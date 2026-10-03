@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "filename": "jma-daily-2009-2025-20261004.csv",
+  "encoding": "shift-jis",
+  "bytes": 502244,
+  "sha256": "69386719a3ad29b243d40a96ff7400dc8e9f2fd568af0b01e12764966d7dcf7b",
+  "source_url": "https://www.data.jma.go.jp/risk/obsdl/show/table",
+  "source_landing": "https://www.data.jma.go.jp/risk/obsdl/",
+  "retrieved_at": "2026-10-03T15:45:11.190Z",
+  "source_download_heading": "ダウンロードした時刻：2026/10/04 00:45:10",
+  "request": {
+    "stationNumList": "[\"a0366\",\"s47662\"]",
+    "aggrgPeriod": "1",
+    "elementNumList": "[[\"201\",\"\"],[\"202\",\"\"],[\"203\",\"\"],[\"101\",\"\"]]",
+    "interAnnualType": "1",
+    "ymdList": "[\"2009\",\"2025\",\"1\",\"12\",\"1\",\"31\"]",
+    "optionNumList": "[]",
+    "downloadFlag": "true",
+    "rmkFlag": "1",
+    "disconnectFlag": "1",
+    "youbiFlag": "0",
+    "fukenFlag": "0",
+    "kijiFlag": "0",
+    "csvFlag": "1",
+    "jikantaiFlag": "0",
+    "jikantaiList": "[1,24]",
+    "ymdLiteral": "1"
+  },
+  "records": 6209,
+  "start": "2009-01-01",
+  "end": "2025-12-31",
+  "description": "Original JMA bytes; unmodified. Observation values, quality and homogeneity columns retained."
+}
