@@ -44,22 +44,17 @@ jobs:
       - name: Audit production dependencies
         run: npm audit --omit=dev --json > "$RUNNER_TEMP/npm-audit-production.json"
 
-      - name: Record full dependency audit
+      - name: Test dependency audit gate
+        run: node --test scripts/check-dependency-audit.test.mjs
+
+      - name: Verify full dependency audit policy
         run: |
           if npm audit --json > "$RUNNER_TEMP/npm-audit-full.json"; then
             audit_status=0
           else
             audit_status=$?
           fi
-          node --input-type=module - "$RUNNER_TEMP/npm-audit-full.json" "$audit_status" <<'NODE'
-          import assert from "node:assert/strict";
-          import { readFile } from "node:fs/promises";
-          const report = JSON.parse(await readFile(process.argv[2], "utf8"));
-          const status = Number(process.argv[3]);
-          assert(!report.error && Number.isInteger(report.metadata?.vulnerabilities?.total), "Valid audit report required");
-          assert(status === 0 || (status === 1 && report.metadata.vulnerabilities.total > 0), "Audit transport or execution failure");
-          console.log(JSON.stringify(report.metadata.vulnerabilities));
-          NODE
+          node scripts/check-dependency-audit.mjs "$RUNNER_TEMP/npm-audit-full.json" "$audit_status"
 
       - name: Save dependency verification reports
         if: always()
@@ -262,6 +257,20 @@ jobs:
           method_status=$(curl --silent --request POST --dump-header /tmp/method-headers --output /tmp/method-body --write-out '%{http_code}' http://127.0.0.1:8788/api/dashboard-data)
           test "$method_status" = 405
           grep --ignore-case --quiet '^cache-control: no-store' /tmp/method-headers
+
+          node --input-type=module <<'NODE'
+          import assert from "node:assert/strict";
+          const paths = ["/", "/toukei", "/toukei/guides/learning-roadmap", "/toukei/problems/confidence-interval", "/labs/hachioji-rain", "/labs/hachioji-autumn"];
+          for (let round = 0; round < 3; round++) {
+            await Promise.all(paths.map(async path => {
+              const response = await fetch(`http://127.0.0.1:8788${path}`, { signal: AbortSignal.timeout(30000) });
+              assert.equal(response.status, 200, path);
+              assert((await response.text()).includes("ca-pub-0000000000000000"), `${path}: rendered content`);
+            }));
+          }
+          console.log("PASS: 18 repeated concurrent Workers preview requests.");
+          NODE
+          kill -0 "$preview_pid"
 
           if grep --fixed-strings --quiet 'env.IMAGES binding is not defined' /tmp/workers-preview.log; then
             echo 'Unexpected Cloudflare Images binding warning'

@@ -1,0 +1,11 @@
+
+ ⛅️ wrangler 4.147.0
+────────────────────
+✨ Read 64 files from the assets directory C:\Users\kumat\dev\bearworks-portal\.open-next\assets
+Total Upload: 10017.33 KiB / gzip: 1966.59 KiB
+Your Worker has access to the following bindings:
+Binding                                                             Resource
+env.ASSETS                                                          Assets
+env.TOUKEI_ORIGIN ("https://099741b3.bearworks-toukei.pag...")      Environment Variable
+
+--dry-run: exiting now.

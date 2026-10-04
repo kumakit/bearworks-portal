@@ -1,0 +1,25 @@
+✔ accepts the reviewed warning and an audit with no warnings or exceptions (2.2771ms)
+✔ rejects another advisory with the same count (1.2458ms)
+✔ rejects a severity change (0.1853ms)
+✔ rejects a new dependency path (0.3064ms)
+✔ rejects a changed locked version (0.2216ms)
+✔ rejects new remediation information (0.1524ms)
+✔ rejects an additional moderate warning (5.1428ms)
+✔ rejects a production dependency (0.7264ms)
+✔ rejects an expired exception (0.134ms)
+✔ rejects an exception longer than 14 days (0.1343ms)
+✔ rejects a future review date (0.0857ms)
+✔ rejects an audit execution failure (0.1088ms)
+✔ rejects an audit transport error (0.1338ms)
+✔ rejects a malformed report (0.0697ms)
+✔ rejects a stale exception after the warning disappears (0.0761ms)
+✔ rejects a critical entry hidden by aggregate metadata even when the policy matches (0.2973ms)
+✔ rejects a critical advisory hidden by a high parent entry even when the policy matches (0.4192ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 95.6334

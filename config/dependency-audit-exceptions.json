@@ -1,0 +1,179 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-04T00:00:00Z",
+  "expiresAt": "2026-10-18T00:00:00Z",
+  "owner": "kumakit",
+  "issue": "https://github.com/kumakit/bearworks-portal/issues/17",
+  "reason": "GHSA-vfj7-8cjw-p6xm has no patched braces release. Remaining warnings propagate through Tailwind and the Next ESLint plugin. This is an unresolved warning, not remediation.",
+  "mitigation": "Use only reviewed repository glob/content patterns in local builds and CI. Do not feed request parameters, uploaded files, third-party custom stats/config or untrusted patterns into these build tools. Production audit must remain zero; review or remove this exception within 14 days.",
+  "advisory": "https://github.com/advisories/GHSA-vfj7-8cjw-p6xm",
+  "exceptions": [
+    {
+      "name": "@next/eslint-plugin-next",
+      "severity": "high",
+      "isDirect": false,
+      "range": ">=14.3.0-canary.0",
+      "fixAvailable": {
+        "name": "eslint-config-next",
+        "version": "14.2.35",
+        "isSemVerMajor": true
+      },
+      "via": [
+        {
+          "dependency": "fast-glob"
+        }
+      ],
+      "nodes": [
+        {
+          "path": "node_modules/@next/eslint-plugin-next",
+          "version": "16.3.8"
+        }
+      ]
+    },
+    {
+      "name": "braces",
+      "severity": "high",
+      "isDirect": false,
+      "range": "*",
+      "fixAvailable": {
+        "name": "tailwindcss",
+        "version": "4.3.3",
+        "isSemVerMajor": true
+      },
+      "via": [
+        {
+          "name": "braces",
+          "url": "https://github.com/advisories/GHSA-vfj7-8cjw-p6xm",
+          "severity": "high",
+          "range": "<=3.0.3"
+        }
+      ],
+      "nodes": [
+        {
+          "path": "node_modules/braces",
+          "version": "3.0.3"
+        }
+      ]
+    },
+    {
+      "name": "chokidar",
+      "severity": "high",
+      "isDirect": false,
+      "range": "2.0.0 - 3.6.0",
+      "fixAvailable": {
+        "name": "tailwindcss",
+        "version": "4.3.3",
+        "isSemVerMajor": true
+      },
+      "via": [
+        {
+          "dependency": "braces"
+        }
+      ],
+      "nodes": [
+        {
+          "path": "node_modules/chokidar",
+          "version": "3.6.0"
+        }
+      ]
+    },
+    {
+      "name": "eslint-config-next",
+      "severity": "high",
+      "isDirect": true,
+      "range": ">=14.3.0-canary.0",
+      "fixAvailable": {
+        "name": "eslint-config-next",
+        "version": "14.2.35",
+        "isSemVerMajor": true
+      },
+      "via": [
+        {
+          "dependency": "@next/eslint-plugin-next"
+        }
+      ],
+      "nodes": [
+        {
+          "path": "node_modules/eslint-config-next",
+          "version": "16.3.8"
+        }
+      ]
+    },
+    {
+      "name": "fast-glob",
+      "severity": "high",
+      "isDirect": false,
+      "range": "*",
+      "fixAvailable": {
+        "name": "eslint-config-next",
+        "version": "14.2.35",
+        "isSemVerMajor": true
+      },
+      "via": [
+        {
+          "dependency": "micromatch"
+        }
+      ],
+      "nodes": [
+        {
+          "path": "node_modules/@next/eslint-plugin-next/node_modules/fast-glob",
+          "version": "3.3.1"
+        },
+        {
+          "path": "node_modules/fast-glob",
+          "version": "3.3.3"
+        }
+      ]
+    },
+    {
+      "name": "micromatch",
+      "severity": "high",
+      "isDirect": false,
+      "range": ">=0.2.0",
+      "fixAvailable": {
+        "name": "tailwindcss",
+        "version": "4.3.3",
+        "isSemVerMajor": true
+      },
+      "via": [
+        {
+          "dependency": "braces"
+        }
+      ],
+      "nodes": [
+        {
+          "path": "node_modules/micromatch",
+          "version": "4.0.8"
+        }
+      ]
+    },
+    {
+      "name": "tailwindcss",
+      "severity": "high",
+      "isDirect": true,
+      "range": "<=0.0.0-oxide-insiders.ff2c25f || 2.1.0-canary.1 - 3.4.19",
+      "fixAvailable": {
+        "name": "tailwindcss",
+        "version": "4.3.3",
+        "isSemVerMajor": true
+      },
+      "via": [
+        {
+          "dependency": "chokidar"
+        },
+        {
+          "dependency": "fast-glob"
+        },
+        {
+          "dependency": "micromatch"
+        }
+      ],
+      "nodes": [
+        {
+          "path": "node_modules/tailwindcss",
+          "version": "3.4.19"
+        }
+      ]
+    }
+  ]
+}

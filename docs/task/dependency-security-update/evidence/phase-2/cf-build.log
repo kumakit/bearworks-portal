@@ -1,0 +1,197 @@
+
+> bearworks.uk@0.1.0 cf:build
+> npm run validate:bundles && opennextjs-cloudflare build
+
+
+> bearworks.uk@0.1.0 validate:bundles
+> npm run validate:hachioji-climate && npm run validate:hachioji-snow && npm run validate:hachioji-heat && npm run validate:hachioji-chill && npm run validate:takao-gear && npm run validate:takao-weather && npm run validate:hachioji-rain-autumn
+
+
+> bearworks.uk@0.1.0 validate:hachioji-climate
+> node scripts/validate-hachioji-climate-bundle.mjs
+
+Validated hachioji-climate-2026-08-11.r1.json (405549 bytes, sha256 8992cb17df3dabb3f56b359c097dbb817e4a744e40f43a502ae2896fb9c817dd)
+
+> bearworks.uk@0.1.0 validate:hachioji-snow
+> node scripts/validate-hachioji-snow-bundle.mjs
+
+Validated snow bundle (285428 bytes, 3ed2217036d5be5631b80fd1e171900138317f73f6ae6b6ab0f982dec6117c6d)
+
+> bearworks.uk@0.1.0 validate:hachioji-heat
+> node scripts/validate-hachioji-heat-bundle.mjs
+
+PASS: hachioji-heat integrity, 144 station-years, 16 averages, 8 intervals, 90 timestamp pairs and 6 cooling calculations.
+
+> bearworks.uk@0.1.0 validate:hachioji-chill
+> node scripts/validate-hachioji-chill-bundle.mjs
+
+PASS: hachioji-chill bundle validated successfully.
+- Byte size: 313650
+- SHA-256: c6208e688ad68c9c856e26a245f6a5f425c7b45fdfb85e5c80673578a3b54580
+- Total days analyzed: 1078
+- 7am median gap: -3.4℃
+- <= -3℃ pct: 60.7%
+- <= -5℃ pct: 18.5%
+
+> bearworks.uk@0.1.0 validate:takao-gear
+> node scripts/validate-takao-gear-bundle.mjs
+
+PASS: takao-gear bundle validated successfully.
+
+> bearworks.uk@0.1.0 validate:takao-weather
+> node scripts/validate-takao-weather-bundle.mjs
+
+PASS: archived takao-weather-shift r1 bundle integrity and internal arithmetic only.
+- Original hourly input is unavailable; this does not validate the weather claims or data licence.
+- Byte size: 7584
+- SHA-256: edc513aeaa3bd5ce1ced6e3e69d414feb8d56e0cd7d94ad4200e2a75f2ceac24
+
+> bearworks.uk@0.1.0 validate:hachioji-rain-autumn
+> node scripts/validate-hachioji-rain-autumn.mjs
+
+PASS: 6,209 dates; source/download hashes; 2 deterministic bundles; complete-year policies; headline values; chart domains.
+
+┌─────────────────────────────┐
+│ OpenNext — Cloudflare build │
+└─────────────────────────────┘
+
+WARN OpenNext is not fully compatible with Windows.
+WARN For optimal performance, it is recommended to use Windows Subsystem for Linux (WSL).
+WARN While OpenNext may function on Windows, it could encounter unpredictable failures during runtime.
+App directory: C:\Users\kumat\dev\bearworks-portal
+Next.js version : 16.3.8
+@opennextjs/cloudflare version: 1.20.2
+@opennextjs/aws version: 4.1.0
+workerd compatibility_date: 2026-07-28
+
+┌─────────────────────────────────┐
+│ OpenNext — Building Next.js app │
+└─────────────────────────────────┘
+
+
+> bearworks.uk@0.1.0 build
+> npm run validate:bundles && next build
+
+
+> bearworks.uk@0.1.0 validate:bundles
+> npm run validate:hachioji-climate && npm run validate:hachioji-snow && npm run validate:hachioji-heat && npm run validate:hachioji-chill && npm run validate:takao-gear && npm run validate:takao-weather && npm run validate:hachioji-rain-autumn
+
+
+> bearworks.uk@0.1.0 validate:hachioji-climate
+> node scripts/validate-hachioji-climate-bundle.mjs
+
+Validated hachioji-climate-2026-08-11.r1.json (405549 bytes, sha256 8992cb17df3dabb3f56b359c097dbb817e4a744e40f43a502ae2896fb9c817dd)
+
+> bearworks.uk@0.1.0 validate:hachioji-snow
+> node scripts/validate-hachioji-snow-bundle.mjs
+
+Validated snow bundle (285428 bytes, 3ed2217036d5be5631b80fd1e171900138317f73f6ae6b6ab0f982dec6117c6d)
+
+> bearworks.uk@0.1.0 validate:hachioji-heat
+> node scripts/validate-hachioji-heat-bundle.mjs
+
+PASS: hachioji-heat integrity, 144 station-years, 16 averages, 8 intervals, 90 timestamp pairs and 6 cooling calculations.
+
+> bearworks.uk@0.1.0 validate:hachioji-chill
+> node scripts/validate-hachioji-chill-bundle.mjs
+
+PASS: hachioji-chill bundle validated successfully.
+- Byte size: 313650
+- SHA-256: c6208e688ad68c9c856e26a245f6a5f425c7b45fdfb85e5c80673578a3b54580
+- Total days analyzed: 1078
+- 7am median gap: -3.4℃
+- <= -3℃ pct: 60.7%
+- <= -5℃ pct: 18.5%
+
+> bearworks.uk@0.1.0 validate:takao-gear
+> node scripts/validate-takao-gear-bundle.mjs
+
+PASS: takao-gear bundle validated successfully.
+
+> bearworks.uk@0.1.0 validate:takao-weather
+> node scripts/validate-takao-weather-bundle.mjs
+
+PASS: archived takao-weather-shift r1 bundle integrity and internal arithmetic only.
+- Original hourly input is unavailable; this does not validate the weather claims or data licence.
+- Byte size: 7584
+- SHA-256: edc513aeaa3bd5ce1ced6e3e69d414feb8d56e0cd7d94ad4200e2a75f2ceac24
+
+> bearworks.uk@0.1.0 validate:hachioji-rain-autumn
+> node scripts/validate-hachioji-rain-autumn.mjs
+
+PASS: 6,209 dates; source/download hashes; 2 deterministic bundles; complete-year policies; headline values; chart domains.
+▲ Next.js 16.3.8 (Turbopack)
+✓ Running next.config.mjs took 10ms
+- Experiments (use with caution):
+  ✓ globalNotFound
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 1373ms
+  Running TypeScript ...
+  Finished TypeScript in 4.6s ...
+  Collecting page data using 23 workers ...
+  Generating static pages using 23 workers (0/64) ...
+  Generating static pages using 23 workers (16/64)
+  Generating static pages using 23 workers (32/64)
+  Generating static pages using 23 workers (48/64)
+✓ Generating static pages using 23 workers (64/64) in 1304ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ○ /about
+├ ○ /ai-news
+├ ƒ /api/dashboard-data
+├ ○ /contact
+├ ○ /dashboard
+├ ○ /dashboard/cloudflare
+├ ○ /dashboard/gcp
+├ ○ /labs/hachioji-autumn
+├ ○ /labs/hachioji-chill
+├ ○ /labs/hachioji-climate
+├ ○ /labs/hachioji-heat
+├ ○ /labs/hachioji-rain
+├ ○ /labs/hachioji-snow
+├ ○ /labs/takao-gear
+├ ○ /labs/takao-weather-shift
+├ ○ /privacy
+├ ○ /robots.txt
+├ ○ /sitemap.xml
+├ ○ /toukei
+├ ○ /toukei/guides
+├   /toukei/guides/[slug]
+│ ├ ● /toukei/guides/learning-roadmap
+│ ├ ● /toukei/guides/cbt-time-management
+│ ├ ● /toukei/guides/hypothesis-testing-basics
+│ └ ● [+5 more paths]
+├ ○ /toukei/methodology
+├ ○ /toukei/problems
+├   /toukei/problems/[slug]
+│ ├ ● /toukei/problems/confidence-interval
+│ ├ ● /toukei/problems/hypothesis-test
+│ ├ ● /toukei/problems/simple-regression
+│ └ ● [+27 more paths]
+└ ○ /weather
+
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses generateStaticParams)
+ƒ  (Dynamic)  server-rendered on demand
+
+
+┌──────────────────────────────┐
+│ OpenNext — Generating bundle │
+└──────────────────────────────┘
+
+Bundling middleware function...
+Bundling static assets...
+Bundling cache assets...
+Building server function: default...
+Applying code patches: 3.184s
+# copyPackageTemplateFiles
+[35m⚙️ Bundling the OpenNext server...
+[0m
+[35mWorker saved in `.open-next\worker.js` 🚀
+[0m
+OpenNext build complete.
