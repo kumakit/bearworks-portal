@@ -11,7 +11,7 @@ const analysisCount = siteContent.filter((item) => item.pathname.startsWith("/la
 
 export const metadata: Metadata = {
   title: "統計検定2級の学習支援 | bearworks.uk",
-  description: "Toukei Kentei Drillの模擬試験、分野別ドリル、学習分析、チートシート、暗記カードを案内する統計検定2級の学習支援サイトです。",
+  description: "Toukei Kentei Drillの模擬試験、分野別ドリル、学習分析、チートシート、暗記カードを案内する統計検定2級の学習サポートサイトです。",
 };
 
 export default function Home() {
@@ -24,17 +24,17 @@ export default function Home() {
         <div className="max-w-3xl">
           <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-primary leading-tight">
             統計検定2級の学習を、<br />
-            <span className="text-accent-purple">解いて理解する。</span>
+            <span className="text-accent-purple">解いて納得する。</span>
           </h1>
           <p className="mt-6 text-muted text-lg leading-relaxed">
-            Toukei Kentei Drill（統計検定ドリル）は、統計検定2級のCBT試験対策を目的とした個人開発の学習支援アプリです。
-            模擬試験、分野別ドリル、学習分析、チートシート、暗記カードを組み合わせて、効率的な復習ループを回せるように設計されています。
+            Toukei Kentei Drill（統計検定ドリル）は、統計検定2級のCBT対策を応援する個人開発の学習サイトです。
+            模擬試験や分野別ドリル、弱点がわかる学習分析、チートシートや暗記カードを組み合わせ、無理のない復習ループをつくれます。
           </p>
           <p className="mt-4 text-muted leading-relaxed">
-            掲載している演習問題は、公式問題集や出題範囲を研究し、頻出論点や計算プロセスを網羅するように独自に作成したオリジナル問題です。公式問題のそのままの転載ではなく、本質的な考え方を練習できるように数値や題材を設計しています。
+            演習問題は、公式の出題傾向を研究して独自に作成したオリジナル問題です。公式問題の丸写しではなく、考え方の本質やつまずきやすい計算プロセスを自分の手で確かめられるよう設計しています。
           </p>
           <p className="mt-4 text-muted leading-relaxed">
-            このサイトでは、{guides.length}本の学習ガイドで考え方を読み、{problems.length}問の例題で計算と誤答の理由を確かめ、{analysisCount}本の気象・統計の記事でデータの読み方を考えられます。
+            このサイトでは、{guides.length}本のガイドで考え方を整理し、{problems.length}問の例題で誤答の理由を確かめ、{analysisCount}本の気象・統計記事で実データの読み解きを体験できます。
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Link
@@ -59,23 +59,23 @@ export default function Home() {
 
       <section aria-labelledby="content-path-heading" className="bg-white rounded-[2.5rem] p-8 md:p-12 shadow-soft border border-gray-100">
         <h2 id="content-path-heading" className="text-2xl font-bold text-primary">学ぶ・解く・データを読む</h2>
-        <p className="mt-3 text-sm leading-relaxed text-muted">初めての方は、関心のある入口から始めてください。各教材はこのサイト内で読めます。</p>
+        <p className="mt-3 text-sm leading-relaxed text-muted">初めての方も、気になるところから気軽にどうぞ。各教材はサイト内ですぐに読めます。</p>
         <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-3">
           <div className="rounded-2xl border border-gray-200 p-5">
             <h3 className="font-bold text-primary">1. 考え方を学ぶ</h3>
-            <p className="mt-2 text-sm leading-relaxed text-muted">仮説検定の前提や、p値から言えることを短い例で確認します。</p>
+            <p className="mt-2 text-sm leading-relaxed text-muted">仮説検定の前提や、p値から言えることを短い例で分かりやすく確認します。</p>
             <Link href="/toukei/guides/hypothesis-testing-basics" className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-accent-purple hover:underline">仮説検定のガイドを読む <ArrowRight size={14} /></Link>
             <div><Link href="/toukei/guides" className="mt-2 inline-block text-xs text-muted hover:underline">ガイド{guides.length}本の一覧</Link></div>
           </div>
           <div className="rounded-2xl border border-gray-200 p-5">
             <h3 className="font-bold text-primary">2. 例題で確かめる</h3>
-            <p className="mt-2 text-sm leading-relaxed text-muted">答えだけでなく、途中計算と選択肢の誤りを追えます。</p>
+            <p className="mt-2 text-sm leading-relaxed text-muted">答えだけでなく、途中計算や「なぜ誤答なのか」の理由まで丁寧に追えます。</p>
             <Link href="/toukei/problems/bayes-theorem-screening" className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-accent-pink hover:underline">ベイズの例題を解く <ArrowRight size={14} /></Link>
             <div><Link href="/toukei/problems" className="mt-2 inline-block text-xs text-muted hover:underline">例題{problems.length}問の一覧</Link></div>
           </div>
           <div className="rounded-2xl border border-gray-200 p-5">
             <h3 className="font-bold text-primary">3. 実データで読む</h3>
-            <p className="mt-2 text-sm leading-relaxed text-muted">八王子の気候を題材に、比較期間や集計の定義を確かめます。</p>
+            <p className="mt-2 text-sm leading-relaxed text-muted">八王子の気候データを題材に、比較期間や集計の定義を実践的に確かめます。</p>
             <Link href="/labs/hachioji-climate" className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-accent-blue hover:underline">気候分析を読む <ArrowRight size={14} /></Link>
             <div><Link href="/toukei/methodology" className="mt-2 inline-block text-xs text-muted hover:underline">データと制作方針</Link></div>
           </div>
@@ -88,12 +88,12 @@ export default function Home() {
           <Link href="/labs/hachioji-rain" className="rounded-2xl border border-sky-100 bg-sky-50 p-5 transition hover:border-sky-400">
             <p className="text-xs font-bold text-sky-800">第7弾 · 降る日数と、降る量</p>
             <h3 className="mt-2 font-bold text-slate-900">八王子は都心より雨が多い？ →</h3>
-            <p className="mt-3 text-sm leading-7 text-slate-600">年ごとの雨量、上位5日への集中、同じ日に降る割合を実測から読みます。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-600">年ごとの雨量や上位5日への集中度、同じ日に降る割合を実測から読みます。</p>
           </Link>
           <Link href="/labs/hachioji-autumn" className="rounded-2xl border border-emerald-100 bg-emerald-50 p-5 transition hover:border-emerald-400">
             <p className="text-xs font-bold text-emerald-800">第8弾 · 気温で数える秋</p>
             <h3 className="mt-2 font-bold text-slate-900">八王子の秋は本当に短くなった？ →</h3>
-            <p className="mt-3 text-sm leading-7 text-slate-600">温度の区切りと年を切り替えて、日数・連続性・データの採用条件を確かめます。</p>
+            <p className="mt-3 text-sm leading-7 text-slate-600">温度の区切りと年を切り替えながら、日数・連続性・データの採用条件を確かめます。</p>
           </Link>
         </div>
       </section>
@@ -107,7 +107,7 @@ export default function Home() {
             </div>
             <h3 className="text-xl font-bold text-primary mb-3">模擬試験・分野別ドリル</h3>
             <p className="text-muted text-sm leading-relaxed mb-6">
-              本番に近い90分の制限時間で行うCBT模擬試験と、特定の苦手分野をピンポイントで反復演習できる分野別ドリルを提供しています。
+              本番と同じ90分のCBT模擬試験と、苦手分野をピンポイントで反復できる分野別ドリル。日々の復習から総仕上げまで役立ちます。
             </p>
           </div>
           <Link
@@ -126,7 +126,7 @@ export default function Home() {
             </div>
             <h3 className="text-xl font-bold text-primary mb-3">学習分析ダッシュボード</h3>
             <p className="text-muted text-sm leading-relaxed mb-6">
-              解答履歴や正答率、分野別の演習量をグラフで可視化。自分の弱点を一目で把握し、次にどの分野を学習すべきかを明確にします。
+              正答率や演習量をグラフで可視化。自分の弱点が一目でわかるので、「今日どこを学習すべきか」に迷いません。
             </p>
           </div>
           <a
@@ -147,7 +147,7 @@ export default function Home() {
             </div>
             <h3 className="text-xl font-bold text-primary mb-3">チートシート・暗記カード</h3>
             <p className="text-muted text-sm leading-relaxed mb-6">
-              試験によく出る公式や各種確率分布の性質、検定の判断ルールをすばやく確認できるチートシートと、一問一答形式の暗記カードを用意しています。
+              頻出公式や検定ルールの早見表（チートシート）と、移動中やすきま時間にサクサク回せる一問一答の暗記カードを用意しています。
             </p>
           </div>
           <a
@@ -169,22 +169,22 @@ export default function Home() {
           <div className="flex gap-4">
             <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center font-bold text-primary text-sm">1</div>
             <div>
-              <h4 className="font-bold text-primary mb-2">実力と時間感覚の把握</h4>
-              <p className="text-muted text-sm leading-relaxed">まずは90分の模擬試験を受け、CBT試験での時間配分と、現在の正答状況を確認します。</p>
+              <h4 className="font-bold text-primary mb-2">1. 実力と時間配分を知る</h4>
+              <p className="text-muted text-sm leading-relaxed">まずは90分の模擬試験を受け、CBT試験での時間感覚と現在の実力を確認します。</p>
             </div>
           </div>
           <div className="flex gap-4">
             <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center font-bold text-primary text-sm">2</div>
             <div>
-              <h4 className="font-bold text-primary mb-2">苦手分野の集中演習</h4>
-              <p className="text-muted text-sm leading-relaxed">学習分析で判明した正答率の低い分野を、分野別ドリルで重点的に復習します。</p>
+              <h4 className="font-bold text-primary mb-2">2. 苦手分野の集中演習</h4>
+              <p className="text-muted text-sm leading-relaxed">学習分析でわかった正答率の低い分野を、分野別ドリルで重点的に復習します。</p>
             </div>
           </div>
           <div className="flex gap-4">
             <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center font-bold text-primary text-sm">3</div>
             <div>
-              <h4 className="font-bold text-primary mb-2">要点の暗記と知識定着</h4>
-              <p className="text-muted text-sm leading-relaxed">公式や検定の定義などは、暗記カードを用いて隙間時間に反復してインプットします。</p>
+              <h4 className="font-bold text-primary mb-2">3. すきま時間で知識定着</h4>
+              <p className="text-muted text-sm leading-relaxed">押さえておきたい公式や定義などは、暗記カードを使って隙間時間に反復して定着させます。</p>
             </div>
           </div>
         </div>
