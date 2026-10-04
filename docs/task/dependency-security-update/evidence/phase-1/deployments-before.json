@@ -1,0 +1,122 @@
+[
+  {
+    "id": "423851b1-7705-45a1-8cbd-e6cc19ffca65",
+    "source": "wrangler",
+    "strategy": "percentage",
+    "versions": [
+      {
+        "version_id": "88df001b-691c-4a8a-8270-59b371ade673",
+        "percentage": 100
+      }
+    ],
+    "created_on": "2026-09-19T09:45:09.04923Z"
+  },
+  {
+    "id": "2509bc0e-5221-4366-839d-750b1dcb1785",
+    "source": "wrangler",
+    "strategy": "percentage",
+    "versions": [
+      {
+        "version_id": "cc843e79-775b-4425-9c48-956260fb7723",
+        "percentage": 100
+      }
+    ],
+    "created_on": "2026-09-19T09:45:50.912686Z"
+  },
+  {
+    "id": "f3010788-acee-4c60-bcbd-cb3624faa7f5",
+    "source": "wrangler",
+    "strategy": "percentage",
+    "versions": [
+      {
+        "version_id": "9795f2bd-2f31-4c85-aa1d-59939d35917f",
+        "percentage": 100
+      }
+    ],
+    "created_on": "2026-09-19T09:59:05.951195Z"
+  },
+  {
+    "id": "dbd8ede8-771d-4e73-829a-6c6b8cb97c7e",
+    "source": "wrangler",
+    "strategy": "percentage",
+    "versions": [
+      {
+        "version_id": "b7fbc75c-7837-4306-8b64-a0f91452ea2e",
+        "percentage": 100
+      }
+    ],
+    "created_on": "2026-09-20T10:04:41.038325Z"
+  },
+  {
+    "id": "2314ba83-10a2-4101-82e5-3d6c3786659c",
+    "source": "wrangler",
+    "strategy": "percentage",
+    "versions": [
+      {
+        "version_id": "28f49f6e-5771-4e7f-bd28-11897fddfe84",
+        "percentage": 100
+      }
+    ],
+    "created_on": "2026-09-20T13:14:15.285462Z"
+  },
+  {
+    "id": "2368281c-6d3c-4ae3-a545-c6c1080b2544",
+    "source": "wrangler",
+    "strategy": "percentage",
+    "versions": [
+      {
+        "version_id": "24889576-20d7-4925-b12b-8c4fefe4d4ac",
+        "percentage": 100
+      }
+    ],
+    "created_on": "2026-09-28T14:04:26.767312Z"
+  },
+  {
+    "id": "8f9428f7-8c6d-4eff-a973-55b267b5f51c",
+    "source": "wrangler",
+    "strategy": "percentage",
+    "versions": [
+      {
+        "version_id": "1e0cd158-0ea7-4e6f-b2d6-6427406c860e",
+        "percentage": 100
+      }
+    ],
+    "created_on": "2026-10-03T11:44:46.557602Z"
+  },
+  {
+    "id": "82dcdbb9-db24-45af-b264-c8182c7a528a",
+    "source": "wrangler",
+    "strategy": "percentage",
+    "versions": [
+      {
+        "version_id": "03588ad3-25ef-49a3-9829-739199e0eb4a",
+        "percentage": 100
+      }
+    ],
+    "created_on": "2026-10-03T23:05:12.546349Z"
+  },
+  {
+    "id": "3892be9b-371d-434d-811a-7fabba0ffe52",
+    "source": "wrangler",
+    "strategy": "percentage",
+    "versions": [
+      {
+        "version_id": "1b947b51-b17e-469e-aee3-62db5c7c4f6e",
+        "percentage": 100
+      }
+    ],
+    "created_on": "2026-10-04T01:44:43.583114Z"
+  },
+  {
+    "id": "bb2c03d0-c9be-4be7-8be5-81bb9434dd06",
+    "source": "wrangler",
+    "strategy": "percentage",
+    "versions": [
+      {
+        "version_id": "2e400ff0-da08-47be-a797-ee084b461b69",
+        "percentage": 100
+      }
+    ],
+    "created_on": "2026-10-04T01:53:06.058684Z"
+  }
+]

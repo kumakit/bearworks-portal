@@ -1,0 +1,26 @@
+{
+  "checkedAt": "2026-10-04T05:38:21.893Z",
+  "qaStarted": "2026-10-04T05:37:04.480Z",
+  "rain": {
+    "daysSelection": "PASS",
+    "top5Selection": "PASS",
+    "quiz": "PASS",
+    "mobileOverflow": false,
+    "viewportWidth": 501,
+    "documentWidth": 486
+  },
+  "autumn": {
+    "temperatureRanges": "PASS",
+    "year2021": "PASS",
+    "quiz": "PASS",
+    "desktopOverflow": false,
+    "mobileOverflow": false
+  },
+  "browserErrors": 0,
+  "viewportReset": true,
+  "screenshots": [
+    "autumn-public-desktop.jpg",
+    "autumn-public-mobile.jpg",
+    "rain-public-mobile.jpg"
+  ]
+}

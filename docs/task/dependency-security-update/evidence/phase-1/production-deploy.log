@@ -1,0 +1,309 @@
+
+> bearworks.uk@0.1.0 deploy
+> npm run validate:bundles && opennextjs-cloudflare build && opennextjs-cloudflare deploy
+
+
+> bearworks.uk@0.1.0 validate:bundles
+> npm run validate:hachioji-climate && npm run validate:hachioji-snow && npm run validate:hachioji-heat && npm run validate:hachioji-chill && npm run validate:takao-gear && npm run validate:takao-weather && npm run validate:hachioji-rain-autumn
+
+
+> bearworks.uk@0.1.0 validate:hachioji-climate
+> node scripts/validate-hachioji-climate-bundle.mjs
+
+Validated hachioji-climate-2026-08-11.r1.json (405549 bytes, sha256 8992cb17df3dabb3f56b359c097dbb817e4a744e40f43a502ae2896fb9c817dd)
+
+> bearworks.uk@0.1.0 validate:hachioji-snow
+> node scripts/validate-hachioji-snow-bundle.mjs
+
+Validated snow bundle (285428 bytes, 3ed2217036d5be5631b80fd1e171900138317f73f6ae6b6ab0f982dec6117c6d)
+
+> bearworks.uk@0.1.0 validate:hachioji-heat
+> node scripts/validate-hachioji-heat-bundle.mjs
+
+PASS: hachioji-heat integrity, 144 station-years, 16 averages, 8 intervals, 90 timestamp pairs and 6 cooling calculations.
+
+> bearworks.uk@0.1.0 validate:hachioji-chill
+> node scripts/validate-hachioji-chill-bundle.mjs
+
+PASS: hachioji-chill bundle validated successfully.
+- Byte size: 313650
+- SHA-256: c6208e688ad68c9c856e26a245f6a5f425c7b45fdfb85e5c80673578a3b54580
+- Total days analyzed: 1078
+- 7am median gap: -3.4℃
+- <= -3℃ pct: 60.7%
+- <= -5℃ pct: 18.5%
+
+> bearworks.uk@0.1.0 validate:takao-gear
+> node scripts/validate-takao-gear-bundle.mjs
+
+PASS: takao-gear bundle validated successfully.
+
+> bearworks.uk@0.1.0 validate:takao-weather
+> node scripts/validate-takao-weather-bundle.mjs
+
+PASS: archived takao-weather-shift r1 bundle integrity and internal arithmetic only.
+- Original hourly input is unavailable; this does not validate the weather claims or data licence.
+- Byte size: 7584
+- SHA-256: edc513aeaa3bd5ce1ced6e3e69d414feb8d56e0cd7d94ad4200e2a75f2ceac24
+
+> bearworks.uk@0.1.0 validate:hachioji-rain-autumn
+> node scripts/validate-hachioji-rain-autumn.mjs
+
+PASS: 6,209 dates; source/download hashes; 2 deterministic bundles; complete-year policies; headline values; chart domains.
+
+┌─────────────────────────────┐
+│ OpenNext — Cloudflare build │
+└─────────────────────────────┘
+
+WARN OpenNext is not fully compatible with Windows.
+WARN For optimal performance, it is recommended to use Windows Subsystem for Linux (WSL).
+WARN While OpenNext may function on Windows, it could encounter unpredictable failures during runtime.
+App directory: C:\Users\kumat\dev\bearworks-portal
+Next.js version : 16.3.8
+@opennextjs/cloudflare version: 1.20.2
+@opennextjs/aws version: 4.1.0
+workerd compatibility_date: 2026-07-28
+
+┌─────────────────────────────────┐
+│ OpenNext — Building Next.js app │
+└─────────────────────────────────┘
+
+
+> bearworks.uk@0.1.0 build
+> npm run validate:bundles && next build
+
+
+> bearworks.uk@0.1.0 validate:bundles
+> npm run validate:hachioji-climate && npm run validate:hachioji-snow && npm run validate:hachioji-heat && npm run validate:hachioji-chill && npm run validate:takao-gear && npm run validate:takao-weather && npm run validate:hachioji-rain-autumn
+
+
+> bearworks.uk@0.1.0 validate:hachioji-climate
+> node scripts/validate-hachioji-climate-bundle.mjs
+
+Validated hachioji-climate-2026-08-11.r1.json (405549 bytes, sha256 8992cb17df3dabb3f56b359c097dbb817e4a744e40f43a502ae2896fb9c817dd)
+
+> bearworks.uk@0.1.0 validate:hachioji-snow
+> node scripts/validate-hachioji-snow-bundle.mjs
+
+Validated snow bundle (285428 bytes, 3ed2217036d5be5631b80fd1e171900138317f73f6ae6b6ab0f982dec6117c6d)
+
+> bearworks.uk@0.1.0 validate:hachioji-heat
+> node scripts/validate-hachioji-heat-bundle.mjs
+
+PASS: hachioji-heat integrity, 144 station-years, 16 averages, 8 intervals, 90 timestamp pairs and 6 cooling calculations.
+
+> bearworks.uk@0.1.0 validate:hachioji-chill
+> node scripts/validate-hachioji-chill-bundle.mjs
+
+PASS: hachioji-chill bundle validated successfully.
+- Byte size: 313650
+- SHA-256: c6208e688ad68c9c856e26a245f6a5f425c7b45fdfb85e5c80673578a3b54580
+- Total days analyzed: 1078
+- 7am median gap: -3.4℃
+- <= -3℃ pct: 60.7%
+- <= -5℃ pct: 18.5%
+
+> bearworks.uk@0.1.0 validate:takao-gear
+> node scripts/validate-takao-gear-bundle.mjs
+
+PASS: takao-gear bundle validated successfully.
+
+> bearworks.uk@0.1.0 validate:takao-weather
+> node scripts/validate-takao-weather-bundle.mjs
+
+PASS: archived takao-weather-shift r1 bundle integrity and internal arithmetic only.
+- Original hourly input is unavailable; this does not validate the weather claims or data licence.
+- Byte size: 7584
+- SHA-256: edc513aeaa3bd5ce1ced6e3e69d414feb8d56e0cd7d94ad4200e2a75f2ceac24
+
+> bearworks.uk@0.1.0 validate:hachioji-rain-autumn
+> node scripts/validate-hachioji-rain-autumn.mjs
+
+PASS: 6,209 dates; source/download hashes; 2 deterministic bundles; complete-year policies; headline values; chart domains.
+▲ Next.js 16.3.8 (Turbopack)
+✓ Running next.config.mjs took 9ms
+- Experiments (use with caution):
+  ✓ globalNotFound
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 498ms
+  Running TypeScript ...
+  Finished TypeScript in 2.5s ...
+  Collecting page data using 23 workers ...
+  Generating static pages using 23 workers (0/64) ...
+  Generating static pages using 23 workers (16/64)
+  Generating static pages using 23 workers (32/64)
+  Generating static pages using 23 workers (48/64)
+✓ Generating static pages using 23 workers (64/64) in 1192ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ○ /about
+├ ○ /ai-news
+├ ƒ /api/dashboard-data
+├ ○ /contact
+├ ○ /dashboard
+├ ○ /dashboard/cloudflare
+├ ○ /dashboard/gcp
+├ ○ /labs/hachioji-autumn
+├ ○ /labs/hachioji-chill
+├ ○ /labs/hachioji-climate
+├ ○ /labs/hachioji-heat
+├ ○ /labs/hachioji-rain
+├ ○ /labs/hachioji-snow
+├ ○ /labs/takao-gear
+├ ○ /labs/takao-weather-shift
+├ ○ /privacy
+├ ○ /robots.txt
+├ ○ /sitemap.xml
+├ ○ /toukei
+├ ○ /toukei/guides
+├   /toukei/guides/[slug]
+│ ├ ● /toukei/guides/learning-roadmap
+│ ├ ● /toukei/guides/cbt-time-management
+│ ├ ● /toukei/guides/hypothesis-testing-basics
+│ └ ● [+5 more paths]
+├ ○ /toukei/methodology
+├ ○ /toukei/problems
+├   /toukei/problems/[slug]
+│ ├ ● /toukei/problems/confidence-interval
+│ ├ ● /toukei/problems/hypothesis-test
+│ ├ ● /toukei/problems/simple-regression
+│ └ ● [+27 more paths]
+└ ○ /weather
+
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses generateStaticParams)
+ƒ  (Dynamic)  server-rendered on demand
+
+
+┌──────────────────────────────┐
+│ OpenNext — Generating bundle │
+└──────────────────────────────┘
+
+Bundling middleware function...
+Bundling static assets...
+Bundling cache assets...
+Building server function: default...
+Applying code patches: 3.040s
+# copyPackageTemplateFiles
+[35m⚙️ Bundling the OpenNext server...
+[0m
+[35mWorker saved in `.open-next\worker.js` 🚀
+[0m
+OpenNext build complete.
+
+┌──────────────────────────────┐
+│ OpenNext — Cloudflare deploy │
+└──────────────────────────────┘
+
+WARN OpenNext is not fully compatible with Windows.
+WARN For optimal performance, it is recommended to use Windows Subsystem for Linux (WSL).
+WARN While OpenNext may function on Windows, it could encounter unpredictable failures during runtime.
+
+Populating Workers static assets...
+Successfully populated static assets cache
+Tag cache does not need populating
+
+ ⛅️ wrangler 4.114.0 (update available 4.147.0)
+───────────────────────────────────────────────
+🌀 Building list of assets...
+✨ Read 135 files from the assets directory C:\Users\kumat\dev\bearworks-portal\.open-next\assets
+🌀 Starting asset upload...
+🌀 Found 70 new or modified static assets to upload. Proceeding with upload...
++ /BUILD_ID
++ /cdn-cgi/_next_cache/VUcxsr046p5I6ryPnL4mv/sitemap.xml.cache
++ /cdn-cgi/_next_cache/VUcxsr046p5I6ryPnL4mv/_global-error.cache
++ /cdn-cgi/_next_cache/VUcxsr046p5I6ryPnL4mv/dashboard.cache
++ /_next/static/chunks/13vwjr-uociib.js
++ /cdn-cgi/_next_cache/VUcxsr046p5I6ryPnL4mv/about.cache
++ /cdn-cgi/_next_cache/VUcxsr046p5I6ryPnL4mv/labs/takao-weather-shift.cache
++ /cdn-cgi/_next_cache/VUcxsr046p5I6ryPnL4mv/toukei/guides.cache
++ /cdn-cgi/_next_cache/VUcxsr046p5I6ryPnL4mv/toukei/problems/binomial-normal-approximation.cache
++ /cdn-cgi/_next_cache/VUcxsr046p5I6ryPnL4mv/toukei/problems/poisson-distribution-calculation.cache
++ /cdn-cgi/_next_cache/VUcxsr046p5I6ryPnL4mv/toukei/problems/sample-proportion-confidence-interval.cache
++ /cdn-cgi/_next_cache/VUcxsr046p5I6ryPnL4mv/toukei/problems/adjusted-r-squared.cache
++ /cdn-cgi/_next_cache/VUcxsr046p5I6ryPnL4mv/toukei/problems/exponential-distribution-waiting-time.cache
++ /cdn-cgi/_next_cache/VUcxsr046p5I6ryPnL4mv/toukei/problems/geometric-distribution.cache
++ /cdn-cgi/_next_cache/VUcxsr046p5I6ryPnL4mv/toukei/problems/hypothesis-test.cache
++ /cdn-cgi/_next_cache/VUcxsr046p5I6ryPnL4mv/toukei/problems/contingency-table.cache
++ /cdn-cgi/_next_cache/VUcxsr046p5I6ryPnL4mv/toukei/problems/type-1-type-2-errors-power.cache
++ /cdn-cgi/_next_cache/VUcxsr046p5I6ryPnL4mv/toukei.cache
++ /cdn-cgi/_next_cache/VUcxsr046p5I6ryPnL4mv/toukei/guides/regression-interpretation.cache
++ /cdn-cgi/_next_cache/VUcxsr046p5I6ryPnL4mv/toukei/guides/distribution-selection.cache
++ /cdn-cgi/_next_cache/VUcxsr046p5I6ryPnL4mv/toukei/guides/hypothesis-testing-basics.cache
++ /cdn-cgi/_next_cache/VUcxsr046p5I6ryPnL4mv/toukei/problems.cache
++ /cdn-cgi/_next_cache/VUcxsr046p5I6ryPnL4mv/labs/hachioji-autumn.cache
++ /cdn-cgi/_next_cache/VUcxsr046p5I6ryPnL4mv/ai-news.cache
++ /cdn-cgi/_next_cache/VUcxsr046p5I6ryPnL4mv/robots.txt.cache
++ /cdn-cgi/_next_cache/VUcxsr046p5I6ryPnL4mv/_not-found.cache
++ /_next/static/chunks/1qakyi1feu512.js
++ /cdn-cgi/_next_cache/VUcxsr046p5I6ryPnL4mv/dashboard/cloudflare.cache
++ /cdn-cgi/_next_cache/VUcxsr046p5I6ryPnL4mv/contact.cache
++ /cdn-cgi/_next_cache/VUcxsr046p5I6ryPnL4mv/labs/takao-gear.cache
++ /cdn-cgi/_next_cache/VUcxsr046p5I6ryPnL4mv/index.cache
++ /cdn-cgi/_next_cache/VUcxsr046p5I6ryPnL4mv/toukei/problems/sample-proportion-distribution.cache
++ /cdn-cgi/_next_cache/VUcxsr046p5I6ryPnL4mv/toukei/guides/cbt-time-management.cache
++ /cdn-cgi/_next_cache/VUcxsr046p5I6ryPnL4mv/toukei/problems/correlation-coefficient.cache
++ /_next/static/chunks/2lm6ee1ot3_cu.js
++ /cdn-cgi/_next_cache/VUcxsr046p5I6ryPnL4mv/toukei/problems/confidence-interval.cache
++ /cdn-cgi/_next_cache/VUcxsr046p5I6ryPnL4mv/toukei/problems/two-sample-f-test-variance.cache
++ /cdn-cgi/_next_cache/VUcxsr046p5I6ryPnL4mv/toukei/problems/sampling-bias.cache
++ /cdn-cgi/_next_cache/VUcxsr046p5I6ryPnL4mv/toukei/problems/chebyshev-inequality.cache
++ /cdn-cgi/_next_cache/VUcxsr046p5I6ryPnL4mv/toukei/problems/two-sample-proportion-test.cache
++ /cdn-cgi/_next_cache/VUcxsr046p5I6ryPnL4mv/toukei/problems/multiple-regression-multicollinearity-dummy.cache
++ /cdn-cgi/_next_cache/VUcxsr046p5I6ryPnL4mv/toukei/problems/one-way-anova.cache
++ /cdn-cgi/_next_cache/VUcxsr046p5I6ryPnL4mv/toukei/problems/laspeyres-paasche-price-index.cache
++ /cdn-cgi/_next_cache/VUcxsr046p5I6ryPnL4mv/toukei/problems/two-way-anova-interaction.cache
++ /cdn-cgi/_next_cache/VUcxsr046p5I6ryPnL4mv/toukei/guides/choosing-statistical-tests.cache
++ /cdn-cgi/_next_cache/VUcxsr046p5I6ryPnL4mv/labs/hachioji-rain.cache
++ /cdn-cgi/_next_cache/VUcxsr046p5I6ryPnL4mv/labs/hachioji-climate.cache
++ /_next/static/chunks/turbopack-1_qrjaucyi7-l.js
++ /_next/static/chunks/3lejw60w_a8y0.js
++ /cdn-cgi/_next_cache/VUcxsr046p5I6ryPnL4mv/weather.cache
++ /cdn-cgi/_next_cache/VUcxsr046p5I6ryPnL4mv/dashboard/gcp.cache
++ /cdn-cgi/_next_cache/VUcxsr046p5I6ryPnL4mv/privacy.cache
++ /cdn-cgi/_next_cache/VUcxsr046p5I6ryPnL4mv/toukei/methodology.cache
++ /_next/static/chunks/0ply9q4v8rgpu.js
++ /cdn-cgi/_next_cache/VUcxsr046p5I6ryPnL4mv/toukei/problems/linear-transformation.cache
++ /cdn-cgi/_next_cache/VUcxsr046p5I6ryPnL4mv/toukei/problems/sum-and-difference-variance.cache
++ /cdn-cgi/_next_cache/VUcxsr046p5I6ryPnL4mv/toukei/problems/bayes-theorem-screening.cache
++ /cdn-cgi/_next_cache/VUcxsr046p5I6ryPnL4mv/toukei/guides/sampling-and-bias.cache
++ /cdn-cgi/_next_cache/VUcxsr046p5I6ryPnL4mv/toukei/problems/paired-t-test.cache
++ /cdn-cgi/_next_cache/VUcxsr046p5I6ryPnL4mv/toukei/problems/time-series-moving-average-autocorrelation.cache
++ /cdn-cgi/_next_cache/VUcxsr046p5I6ryPnL4mv/toukei/problems/chi-square-variance-confidence-interval.cache
++ /cdn-cgi/_next_cache/VUcxsr046p5I6ryPnL4mv/toukei/problems/simple-regression.cache
++ /cdn-cgi/_next_cache/VUcxsr046p5I6ryPnL4mv/toukei/problems/two-sample-t-test-pooled.cache
++ /cdn-cgi/_next_cache/VUcxsr046p5I6ryPnL4mv/toukei/problems/fishers-three-principles-experiment.cache
++ /cdn-cgi/_next_cache/VUcxsr046p5I6ryPnL4mv/toukei/guides/anova-and-chi-square.cache
++ /cdn-cgi/_next_cache/VUcxsr046p5I6ryPnL4mv/toukei/guides/learning-roadmap.cache
++ /cdn-cgi/_next_cache/VUcxsr046p5I6ryPnL4mv/toukei/problems/chi-square-goodness-of-fit.cache
++ /cdn-cgi/_next_cache/VUcxsr046p5I6ryPnL4mv/labs/hachioji-heat.cache
++ /cdn-cgi/_next_cache/VUcxsr046p5I6ryPnL4mv/labs/hachioji-chill.cache
++ /cdn-cgi/_next_cache/VUcxsr046p5I6ryPnL4mv/labs/hachioji-snow.cache
+Uploaded 23 of 70 assets
+Uploaded 46 of 70 assets
+Uploaded 70 of 70 assets
+✨ Success! Uploaded 70 files (42 already uploaded) (10.34 sec)
+
+Total Upload: 10017.22 KiB / gzip: 1966.56 KiB
+Worker Startup Time: 20 ms
+Your Worker has access to the following bindings:
+Binding                                                             Resource
+env.ASSETS                                                          Assets
+env.TOUKEI_ORIGIN ("https://099741b3.bearworks-toukei.pag...")      Environment Variable
+
+Uploaded bearworks-portal (16.71 sec)
+No targets deployed for bearworks-portal (0.46 sec)
+Current Version ID: ce390af0-fd25-41bd-8794-76a07fed29a7
+▲ [WARNING] Multiple environments are defined in the Wrangler configuration file, but no target environment was specified for the deploy command.
+
+  To avoid unintentional changes to the wrong environment, it is recommended to explicitly specify the target environment using the `-e|--env` flag or CLOUDFLARE_ENV env variable.
+  If your intention is to use the top-level environment of your configuration simply pass an empty string to the flag to target such environment. For example `--env=""`.
+
+
+(node:58944) [DEP0190] DeprecationWarning: Passing args to a child process with shell option true can lead to security vulnerabilities, as the arguments are not escaped, only concatenated.
+(Use `node --trace-deprecation ...` to show where the warning was created)

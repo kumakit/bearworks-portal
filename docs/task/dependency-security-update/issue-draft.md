@@ -1,4 +1,6 @@
-# Issue登録文案（未登録）
+# Issue登録文案（登録済み）
+
+登録結果：[Issue #17](https://github.com/kumakit/bearworks-portal/issues/17)。以下は初回登録時点の文案。第1段階公開後の進捗はIssue本文と `release-result.md` に反映。
 
 登録先：公開リポジトリ `kumakit/bearworks-portal`。重複するopen Issueはconnector検索で返されなかった。成熟度：3段階の実装計画作成済み、第1段階のみローカル検証完了。Issue番号は未確定。以下を同じIssueで追跡し、段階ごとに再登録しない。
 

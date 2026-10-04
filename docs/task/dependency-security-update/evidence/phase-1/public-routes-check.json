@@ -1,0 +1,118 @@
+{
+  "checkedAt": "2026-10-04T05:36:50.707Z",
+  "target": "https://bearworks.uk",
+  "status": "PASS",
+  "checks": [
+    {
+      "route": "/",
+      "status": 200,
+      "advertising": "production publisher"
+    },
+    {
+      "route": "/labs/hachioji-rain",
+      "status": 200,
+      "advertising": "production publisher"
+    },
+    {
+      "route": "/labs/hachioji-autumn",
+      "status": 200,
+      "advertising": "production publisher"
+    },
+    {
+      "route": "/toukei",
+      "status": 200,
+      "advertising": "production publisher"
+    },
+    {
+      "route": "/toukei/guides/learning-roadmap",
+      "status": 200,
+      "advertising": "production publisher"
+    },
+    {
+      "route": "/toukei/problems/confidence-interval",
+      "status": 200,
+      "advertising": "production publisher"
+    },
+    {
+      "route": "/about",
+      "status": 200,
+      "advertising": false
+    },
+    {
+      "route": "/ai-news",
+      "status": 200,
+      "advertising": false
+    },
+    {
+      "route": "/contact",
+      "status": 200,
+      "advertising": false
+    },
+    {
+      "route": "/privacy",
+      "status": 200,
+      "advertising": false
+    },
+    {
+      "route": "/weather",
+      "status": 200,
+      "advertising": false
+    },
+    {
+      "route": "/route-that-does-not-exist",
+      "status": 404,
+      "advertising": false
+    },
+    {
+      "route": "/toukei/problems/__invalid__",
+      "status": 404,
+      "advertising": false
+    },
+    {
+      "route": "/labs/__invalid__",
+      "status": 404,
+      "advertising": false
+    },
+    {
+      "route": "/ads.txt",
+      "status": 200
+    },
+    {
+      "route": "/sitemap.xml",
+      "status": 200,
+      "urls": 54
+    },
+    {
+      "route": "/icon.png",
+      "status": 200,
+      "bytes": 3744,
+      "type": "image/png"
+    },
+    {
+      "route": "/images/hachioji-snow/hero-illustration.webp",
+      "status": 200,
+      "bytes": 427558,
+      "type": "image/webp"
+    },
+    {
+      "route": "/_next/static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2",
+      "status": 200,
+      "cache": "immutable",
+      "sha256": "c940764593d0fe5d596be327ca7558855e018039fb78509aa21921fd3644c3e4",
+      "matchesLocalBuild": true
+    },
+    {
+      "route": "/api/dashboard-data",
+      "status": 302,
+      "redirectHost": "bearworks-uk.cloudflareaccess.com",
+      "followed": false
+    },
+    {
+      "route": "/dashboard",
+      "status": 302,
+      "redirectHost": "bearworks-uk.cloudflareaccess.com",
+      "followed": false
+    }
+  ],
+  "limitation": "Authenticated production API not tested; 401/405 and no-store passed in Linux Workers CI"
+}

@@ -1,6 +1,6 @@
 # 依存関係警告の解消計画
 
-2026-10-04作成・更新。状態：第1段階のローカル実装・検証完了、Linux CI待ち。対象：`C:\Users\kumat\dev\bearworks-portal`。依存とCIをローカルで更新済み。push・Issue/PR登録・merge・本番deployは未実施。結果は `phase-1-walkthrough.md`。
+2026-10-04作成・更新。状態：第1段階はLinux CI・本番公開・公開後確認まで完了。対象：`C:\Users\kumat\dev\bearworks-portal`。Issue #17、PR #18で先行更新を反映した。第2・3段階と全警告解消は未完了。結果は `release-result.md`。
 
 ## 目的と方針
 
@@ -102,7 +102,7 @@ deploy直前に最新mainの追加変更、実配信deployment/versionとbinding
 - ビルド用の修正可能な警告の解消：第2段階の対象一覧が消え、検証合格。
 - 全警告の解消：production・全体の両監査0、期限付き例外なし、必要な移行と公開確認まで。修正版のない残件を例外管理しただけでは、この区分を完了にしない。
 
-第1段階でNext.js/Lint設定16.3.8、sharp 0.35.5、baseline-browser-mapping 2.11.27へ解決し、本番用監査0、全体17件を確認した。未確認：Ubuntu/Node 22のWorkers実動作、本番反映後の確認、CSS移行時のブラウザー方針、braces代替の実用性。Issue番号は未登録。GitHub connectorでopen Issueを確認し、該当する重複は返されなかった。`issue-draft.md` を保存し、登録後は同じIssueで3段階を追跡する。
+第1段階でNext.js/Lint設定16.3.8、sharp 0.35.5、baseline-browser-mapping 2.11.27へ解決し、本番用監査0、全体17件を確認した。Ubuntu/Node 22のWorkers CIと本番公開後の確認は完了。未確認：CSS移行時のブラウザー方針、braces代替の実用性、本番の認証済みAPI（未認証のAccess境界は確認済み）。GitHub connectorで重複するopen Issueが返されないことを確認し、保存済み文案からIssue #17を登録した。同じIssueで残る段階を追跡する。
 
 ## 一次資料
 

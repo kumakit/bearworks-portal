@@ -1,4 +1,6 @@
-# PR文案（未登録）
+# PR文案（登録・merge済み）
+
+登録結果：[PR #18](https://github.com/kumakit/bearworks-portal/pull/18)。以下は初回登録時点の文案。実際の本文へRefs #17を付記した。
 
 登録先：`kumakit/bearworks-portal`。head：`codex/dependency-security-runtime`、base：`main`。先にIssueを登録したら、その番号を本文へ参照として追加する。全体Issueをcloseする文言は付けない。
 

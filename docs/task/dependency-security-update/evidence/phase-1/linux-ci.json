@@ -1,0 +1,140 @@
+{
+  "runId": 37179736913,
+  "url": "https://github.com/kumakit/bearworks-portal/actions/runs/37179736913",
+  "prHead": "d775b33b83c06d85a5aa0aca2d4e336745a5bb9b",
+  "checkoutCommit": "66d81bca56f6b08fa87c71df34f22401ebf20ce6",
+  "mergedCommit": "ce19a0b7a61167cb38edfb3d29c7a4683e833539",
+  "matchingTree": "474fe432deb084a8131d998676d2de3149d19e07",
+  "conclusion": "success",
+  "jobs": [
+    {
+      "id": 111369693642,
+      "name": "build",
+      "status": "completed",
+      "conclusion": "success",
+      "run_id": 37179736913,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Checkout",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Set up Node.js",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Install dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Verify dependency tree and native image package",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        },
+        {
+          "name": "Audit production dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6
+        },
+        {
+          "name": "Record full dependency audit",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7
+        },
+        {
+          "name": "Save dependency verification reports",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8
+        },
+        {
+          "name": "Validate publication bundles",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9
+        },
+        {
+          "name": "Lint",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10
+        },
+        {
+          "name": "Build Next.js",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11
+        },
+        {
+          "name": "Verify internal link prefetch policy",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12
+        },
+        {
+          "name": "Build Workers bundle",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13
+        },
+        {
+          "name": "Validate Workers bundle",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14
+        },
+        {
+          "name": "Validate staging Workers bundle",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15
+        },
+        {
+          "name": "Verify Workers preview routes",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16
+        },
+        {
+          "name": "Post Set up Node.js",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 31
+        },
+        {
+          "name": "Post Checkout",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 32
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 33
+        }
+      ]
+    }
+  ],
+  "artifact": {
+    "id": 11294706468,
+    "name": "dependency-audit-66d81bca56f6b08fa87c71df34f22401ebf20ce6",
+    "sha256": "85229ee6ee5f523adc8188c6ffb90a264dc637d2aad7954e2cc71ea710bcf8c1"
+  }
+}
