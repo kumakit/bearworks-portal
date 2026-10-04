@@ -27,6 +27,51 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Verify dependency tree and native image package
+        run: |
+          npm ls --all --json > "$RUNNER_TEMP/dependency-tree.json"
+          node --input-type=module <<'NODE'
+          import assert from "node:assert/strict";
+          import { readFile } from "node:fs/promises";
+          import sharp from "sharp";
+          const lock = JSON.parse(await readFile("package-lock.json", "utf8"));
+          assert.equal(sharp.versions.sharp, lock.packages["node_modules/sharp"].version);
+          const png = await sharp({ create: { width: 1, height: 1, channels: 3, background: "#ffffff" } }).png().toBuffer();
+          assert(png.length > 0, "Linux native sharp can generate a PNG");
+          console.log(`Native sharp ${sharp.versions.sharp}: PASS`);
+          NODE
+
+      - name: Audit production dependencies
+        run: npm audit --omit=dev --json > "$RUNNER_TEMP/npm-audit-production.json"
+
+      - name: Record full dependency audit
+        run: |
+          if npm audit --json > "$RUNNER_TEMP/npm-audit-full.json"; then
+            audit_status=0
+          else
+            audit_status=$?
+          fi
+          node --input-type=module - "$RUNNER_TEMP/npm-audit-full.json" "$audit_status" <<'NODE'
+          import assert from "node:assert/strict";
+          import { readFile } from "node:fs/promises";
+          const report = JSON.parse(await readFile(process.argv[2], "utf8"));
+          const status = Number(process.argv[3]);
+          assert(!report.error && Number.isInteger(report.metadata?.vulnerabilities?.total), "Valid audit report required");
+          assert(status === 0 || (status === 1 && report.metadata.vulnerabilities.total > 0), "Audit transport or execution failure");
+          console.log(JSON.stringify(report.metadata.vulnerabilities));
+          NODE
+
+      - name: Save dependency verification reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dependency-audit-${{ github.sha }}
+          path: |
+            ${{ runner.temp }}/dependency-tree.json
+            ${{ runner.temp }}/npm-audit-production.json
+            ${{ runner.temp }}/npm-audit-full.json
+          retention-days: 14
+
       - name: Validate publication bundles
         run: npm run validate:bundles
 

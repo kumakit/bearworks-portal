@@ -1,0 +1,29 @@
+{
+  "checkedAt": "2026-10-04T04:58:46.906Z",
+  "checks": [
+    {
+      "method": "GET",
+      "path": "/api/dashboard-data",
+      "status": 401,
+      "noStore": true,
+      "noSecretEcho": true
+    },
+    {
+      "method": "POST",
+      "path": "/api/dashboard-data",
+      "status": 405,
+      "noStore": true,
+      "noSecretEcho": true
+    },
+    {
+      "path": "/_next/static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2",
+      "status": 200,
+      "immutable": true
+    },
+    {
+      "path": "/icon.png",
+      "status": 200,
+      "png": true
+    }
+  ]
+}

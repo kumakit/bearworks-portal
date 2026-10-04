@@ -1,0 +1,40 @@
+
+┌─────────────────────────────┐
+│ OpenNext — Cloudflare build │
+└─────────────────────────────┘
+
+WARN OpenNext is not fully compatible with Windows.
+WARN For optimal performance, it is recommended to use Windows Subsystem for Linux (WSL).
+WARN While OpenNext may function on Windows, it could encounter unpredictable failures during runtime.
+App directory: C:\Users\kumat\dev\bearworks-portal
+Next.js version : 16.3.8
+@opennextjs/cloudflare version: 1.20.2
+@opennextjs/aws version: 4.1.0
+workerd compatibility_date: 2026-07-28
+WARN Skipping Next.js build
+
+┌──────────────────────────────┐
+│ OpenNext — Generating bundle │
+└──────────────────────────────┘
+
+Bundling middleware function...
+Bundling static assets...
+Bundling cache assets...
+node:fs:440
+    return binding.readFileUtf8(path, stringToFlags(options.flag));
+                   ^
+
+Error: ENOENT: no such file or directory, open 'C:\Users\kumat\dev\bearworks-portal\.next\standalone\.next\server\pages-manifest.json'
+    at Object.readFileSync (node:fs:440:20)
+    at Module.getHtmlPages (file:///C:/Users/kumat/dev/bearworks-portal/node_modules/@opennextjs/aws/dist/build/helper.js:193:25)
+    at createCacheAssets (file:///C:/Users/kumat/dev/bearworks-portal/node_modules/@opennextjs/aws/dist/build/createAssets.js:77:35)
+    at build (file:///C:/Users/kumat/dev/bearworks-portal/node_modules/@opennextjs/cloudflare/dist/cli/build/build.js:82:44)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async buildCommand (file:///C:/Users/kumat/dev/bearworks-portal/node_modules/@opennextjs/cloudflare/dist/cli/commands/build.js:40:5) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\kumat\\dev\\bearworks-portal\\.next\\standalone\\.next\\server\\pages-manifest.json'
+}
+
+Node.js v24.14.1
