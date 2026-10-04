@@ -1,0 +1,7 @@
+{
+  "platform": "win32",
+  "node": "v24.14.1",
+  "sharp": "0.35.5",
+  "pngBytes": 90,
+  "status": "PASS"
+}

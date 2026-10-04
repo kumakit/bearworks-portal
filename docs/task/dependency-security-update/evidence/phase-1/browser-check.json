@@ -1,0 +1,26 @@
+{
+  "recordedDate": "2026-10-04",
+  "target": "http://127.0.0.1:3108",
+  "method": "Codex in-app browser DOM and screenshot observation",
+  "environment": "Windows local Next production server, test AdSense ID",
+  "checks": {
+    "rainDayCountSelectionAndFigure": "PASS",
+    "rainTop5SelectionAndFigure": "PASS",
+    "rainQuizExpansion": "PASS",
+    "autumn14to24Comparison": {"status": "PASS", "beforeDays": 48, "afterDays": 43.8, "differenceDays": -4.3},
+    "autumn16to26Comparison": {"status": "PASS", "beforeDays": 45, "afterDays": 40.3, "differenceDays": -4.8},
+    "autumn2021YearSelection": "PASS: September 13 not adopted is visible",
+    "autumnQuizExpansion": "PASS",
+    "home": "PASS",
+    "guideSamplingAndBias": "PASS",
+    "problemContingencyTable": "PASS",
+    "desktopHorizontalOverflow": false,
+    "mobileRainHorizontalOverflow": false,
+    "mobileAutumnHorizontalOverflow": false,
+    "browserErrorsSinceQaStart": 0
+  },
+  "screenshots": ["autumn-desktop.jpg", "autumn-mobile.jpg", "rain-mobile.jpg"],
+  "viewportWidths": [1280, 390],
+  "cleanup": "temporary viewport reset, local server stopped, QA tab closed",
+  "limitations": "Linux Workers CI and production deployment have not been executed"
+}
