@@ -1,6 +1,6 @@
 # 依存関係警告の解消計画
 
-2026-10-04作成・更新。状態：第1段階は本番公開まで完了、第2段階はローカル更新・検証・レビューまで完了。対象：`C:\Users\kumat\dev\bearworks-portal`。Issue #17、PR #18で先行更新を反映した。第2段階のLinux CI・公開、第3段階と全警告解消は未完了。結果は `release-result.md`、`phase-2-walkthrough.md`。
+2026-10-04作成・更新。状態：第1・2段階は本番公開・公開後確認まで完了。対象：`C:\Users\kumat\dev\bearworks-portal`。Issue #17、PR #18/#19で反映した。第3段階と全警告解消は未完了。結果は `release-result.md`、`phase-2-release-result.md`。
 
 ## 目的と方針
 

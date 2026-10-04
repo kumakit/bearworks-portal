@@ -1,0 +1,10 @@
+2026-10-04T06:51:37.7849789Z HEAD is now at bd94f8f Merge 85008fe5bd03d80feb07b4fca7dc7f9654bf473a into 301518e1858c6336e7eacb5535cd2c4938568e3e
+2026-10-04T06:52:03.0727802Z Native sharp 0.35.5: PASS
+2026-10-04T06:52:03.7703913Z # tests 17
+2026-10-04T06:52:03.7705165Z # fail 0
+2026-10-04T06:52:04.7905329Z PASS: 7 unresolved development warnings match reviewed exceptions until 2026-10-18T00:00:00Z.
+2026-10-04T06:53:02.8948949Z console.log("PASS: 18 repeated concurrent Workers preview requests.");
+2026-10-04T06:53:09.0478957Z PASS: sitemap 54 unique URLs; 6 non-ad pages and 3 invalid/404 routes have no ads
+2026-10-04T06:53:09.3236738Z PASS: 12 routes; article body/schema/canonical/data hashes/approval/questions; downloads; series links and sitemap; CI ad layout.
+2026-10-04T06:53:10.3285051Z PASS: 18 repeated concurrent Workers preview requests.
+2026-10-04T06:53:12.5718471Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

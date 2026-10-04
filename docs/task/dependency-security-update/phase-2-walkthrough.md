@@ -46,6 +46,6 @@ Wrangler候補に含まれるMiniflare alphaについて、[旧版のpreview停�
 
 ## 公開受入
 
-Linux CI、merge、直前配信版の取得、本番deploy、実URL確認は本記録作成時点では未実施。実結果は第2段階の公開記録へ追記する。復旧は直前の配信版を使う。Route/DNS/Access/secretを変更しない。本番の認証済みAPIは、既存セッションが使える場合以外は未確認として保持する。
+Linux CI、merge、直前配信版の取得、本番deploy、実URL確認は完了。実結果は `phase-2-release-result.md`。復旧先は直前の配信版 `ce390af0-fd25-41bd-8794-76a07fed29a7`。Route/DNS/Access/secretに変更はない。本番の認証済みAPIは未確認として保持する。
 
 一次資料：[Wrangler 4.147.0](https://github.com/cloudflare/workers-sdk/releases/tag/wrangler%404.147.0)、[esbuild 0.28.2](https://github.com/evanw/esbuild/releases/tag/v0.28.2)。監査・registry・log・lock差分は `evidence/phase-2/`。

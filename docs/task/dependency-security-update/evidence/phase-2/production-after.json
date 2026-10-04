@@ -1,0 +1,56 @@
+{
+  "checkedAt": "2026-10-04T06:57:25.572Z",
+  "worker": "bearworks-portal",
+  "deployment": {
+    "id": "b2f73568-dec6-4ad4-8a90-bf83ebc26786",
+    "created_on": "2026-10-04T06:56:22.086737Z",
+    "versions": [
+      {
+        "version_id": "f0551790-912b-4369-a399-0d8f8ea58318",
+        "percentage": 100
+      }
+    ]
+  },
+  "version": {
+    "id": "f0551790-912b-4369-a399-0d8f8ea58318",
+    "runtime": {
+      "assets": {
+        "headers": {
+          "version": 2,
+          "rules": {
+            "/_next/static/*": {
+              "set": {
+                "cache-control": "public, max-age=31536000, immutable"
+              },
+              "unset": []
+            }
+          }
+        },
+        "raw_headers": "/_next/static/*\r\n  Cache-Control: public, max-age=31536000, immutable\r\n",
+        "serve_directly": true,
+        "raw_run_worker_first": false,
+        "base_path": "/"
+      },
+      "compatibility_date": "2026-07-28",
+      "compatibility_flags": [
+        "nodejs_compat",
+        "global_fetch_strictly_public"
+      ],
+      "usage_model": "standard"
+    },
+    "bindings": [
+      {
+        "name": "ASSETS",
+        "type": "assets"
+      },
+      {
+        "name": "DASHBOARD_API_TOKEN",
+        "type": "secret_text"
+      },
+      {
+        "name": "TOUKEI_ORIGIN",
+        "type": "plain_text"
+      }
+    ]
+  }
+}
