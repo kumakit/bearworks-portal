@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-10-07",
+    "daily_summary": "本日のAIニュースは、出版物のデータ利用や著作権に関する議論、AI法の見直しに向けた動きといった法制度・ガバナンスの話題に加え、川崎重工や安川電機によるフィジカルAIを活用したロボット開発、神戸市やドコモビジネスにおける業務効率化・マネジメントへの導入といった産業・行政での実用化が広く報じられました。さらに、日本のAI開発における独自の理論の重要性や、安全保障上の動向まで、AI技術の進化に伴う社会的影響と多方面での活用が浮き彫りになる一日となりました。",
+    "articles": [
+      {
+        "title": "AI企業への書籍販売めぐり日販に質問状",
+        "content": "日本出版販売（日販）が生成AI企業へ書籍データを販売する動きに関して、関係各所から質問状が提出されました。AIの学習における著作権やデータ利用のあり方に注目が集まっています。",
+        "source": "Google News",
+        "published_at": "2026-10-07",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9uV1ZMSFZ1amNhdzd6Z0dUQ0NpaXpQbFo5blV5dEtMbVdvZ2R1enVpUnJiSGw3a1ZyVVZpem9udHRQa2xXdkd4VzlEZTRndFZV?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "川崎重工、ロボット企業へトランスフォーム 全事業にフィジカルAI",
+        "content": "川崎重工業は全ての事業においてフィジカルAIを活用し、ロボット企業への全面的なトランスフォームを目指す方針を明らかにしました。産業用ロボットの知能化や自動化技術を深化させ、グループ全体での事業構造改革を推進します。",
+        "source": "Google News",
+        "published_at": "2026-10-07",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1lLXpsRnhyb1dUaWR3akp6czg2Z1pOUTFkbHhJMHZ3TkVISlVWT0RCbnhsSFZfWHF0OVR6SXR5YXk4cDV3T0xtRkx3VjItaS1rVk1EVlZZUmhaZlRBNGg1TWlLVzlSRFBkZ2lWcw?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "川崎重工、造船向けのフィジカルAI活用ロボットの試作機を公開",
+        "content": "川崎重工業は造船現場での作業を効率化するため、フィジカルAIを活用した新型ロボットの試作機を公開しました。人手不足が深刻化する造船業界において、熟練作業の自動化や生産性向上への貢献が期待されています。今後、実証実験を重ねて早期の実用化を目指す方針です。",
+        "source": "Google News",
+        "published_at": "2026-10-07",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1yZGlUMHJjUWUzanNnVE1OVWZiZkJtYWpFa2NBNV8yTnJKSEt4azMtRG1zS0Zxb2czbGpfWFdmVk5DV1BkUXppWFBhbGZaX3E5aE5TV25Yc3BSMXg0azM4?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "船体を垂直に登る「次世代造船AIロボット」川崎重工業が公開 フィジカルAIで技術伝承や人手不足に対応へ",
+        "content": "川崎重工業は、船体を垂直に登ることができる次世代の造船AIロボットを公開しました。フィジカルAIを活用することで、造船業界における深刻な人手不足の解消や、熟練工の技術伝承に対応することを目指しています。",
+        "source": "Google News",
+        "published_at": "2026-10-07",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1RcW5qeFVndEdveVhTUVYtVms2Y0hUdnk2MHdSQi16dGJ2SGZJWEcyRDNnMl80WlpQMVFJeGd4M2gwaU1CaVd2ZHRVOTVvQnlFeDJjVHJTN3VYUDh4N0lialFPNXE?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "AI巨大化競争の中、日本が進むべき2つの道 甘利俊一氏が語る「量ではなく理論」で勝負するAI",
+        "content": "AIの巨大化が進む中、日本が取るべき戦略について甘利俊一氏が解説しています。単なる「量」ではなく独自の「理論」で勝負することの重要性が語られています。日本独自の強みを活かしたAI開発のあり方を提示しています。",
+        "source": "Google News",
+        "published_at": "2026-10-07",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9YdlNvY1piWVpoVExRME1qZkZ6QWV0aWhrdThJdy1rZG1BQ2V1Y0RmSl9VSFctWXdwZjBVSXgwbEl1U1NTb3JUaTZmaHhzc3VWQV9jQjdR?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "自治体の業務効率化にAI 神戸市、工事の図面審査で活用",
+        "content": "神戸市は、工事の図面審査にAIを活用し、業務の効率化を図る取り組みを進めています。こうした自治体でのAI活用や最適化に向けて、総務省も調査研究を行っています。行政手続きの負担軽減や効率化への期待が高まっています。",
+        "source": "Google News",
+        "published_at": "2026-10-07",
+        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBlMnc4cXZFUzBhS1AzVUM2YURJemFUa0VZLTVGUnNFU25xeTd4Tno4OVVTWEtPRFNlY2x5NW9tUmY1MHd0anpyTUo5OUltbWRWOWZWdE9vdEFzcWNRYzBQaGRsdmIzMGF4X01nSW9JNA?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "信頼・安全で世界に挑む 安川電機 AIロボ担当役員・久保田由美恵氏",
+        "content": "北九州市の安川電機でAIロボットを担当する役員、久保田由美恵氏へのインタビュー記事です。信頼性と安全性を武器に、同社がグローバル市場に挑む姿勢や今後の展望について語られています。",
+        "source": "Google News",
+        "published_at": "2026-10-07",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1wSHBnWjNZZlBjdTA4U0N5a25peDhCWVhvdW1icUtvTGplQmJhMENZaGhRSWFOWW11SDBSSERmRW1ETW04a1REMm1BSHVQTXpTVnhPVWVB?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "もう「AI上司」で十分？ ドコモビジネスで200超導入、部長も課長も",
+        "content": "ドコモビジネスにおいて「AI上司」が200件以上導入され、部長や課長といった管理職の役割に変化が生じています。AIを活用した業務効率化やマネジメントの変革が進む事例として注目を集めています。",
+        "source": "Google News",
+        "published_at": "2026-10-07",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1SQ3lBYWFZbFVPeEtLZ1ZxTHJSZi04b0wxQmFJaHhxMVFUVTJMUzhqS1NsYXRDMmwxOFZGUHhyUzZQOURpaTg4OXdza0FWSjVnYW4xeU1HR2tpUlhfaERla3oyM3QzU1E5a2VWeg?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "【速報】AI法の見直し、今月下旬からとデジタル相",
+        "content": "デジタル相は、人工知能（AI）に関する法規制の見直しを今月下旬から開始すると表明しました。AI技術の急激な発展や社会的な影響を踏まえ、実態に合わせた法整備や運用方針の再検討が進められる見通しです。今後の議論の行方に注目が集まっています。",
+        "source": "Google News",
+        "published_at": "2026-10-07",
+        "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBvVXVKWnVwVG5hV3lqWlB3WnpGcm1nRVp2SzA0RDA3NmFqajJNT3VMYjFsdmtQU1loenBJc0ZqbGRaNEh6dk5CaU13cw?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "［深層NEWS］「AI導入」の北朝鮮ミサイル、「独自の生産は考えられない」…安全保障ジャーナリスト・吉永ケンジ氏",
+        "content": "北朝鮮が開発を進めるAI導入ミサイルについて、安全保障ジャーナリストの吉永ケンジ氏が読売新聞の「深層NEWS」で独自の生産は考えられないとの見解を示しました。外部からの技術支援や部品調達の可能性が示唆されており、国際的な安全保障の観点から動向が注目されています。",
+        "source": "Google News",
+        "published_at": "2026-10-07",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE4zWUJRSGZCd0tPV1oyN0N4dW9hVkthUWhIYlJnczNsV2N5Ym9ZRTB6dU9USFRGRzNVYnBDVjdsbXZJMmlLTFhVNG05Z3Z0elBVOHNaUGpBZnpDXzU3Vk5ILUx3?oc=5",
+        "category": "政策・安全"
+      }
+    ]
+  },
+  {
     "date": "2026-10-06",
     "daily_summary": "本日のAIニュースは、政府の後押しを受けた異業種連携や日本独自の強みを生かした「フィジカルAI」の開発加速や自動化の動きが目立ちました。また、AIによるコード生成の効率化に伴うレビュー負担への新たな解決策の提示や、生成AIの利用履歴が裁判の証拠として採用されるなど実社会への浸透が進む一方で、米中間の安全保障を巡るジレンマや、半導体依存による日本株の下落リスクといった懸念も浮き彫りになりました。さらに、ノーベル物理学賞を通じたAIの科学的貢献への再評価や、プライバシー保護の徹底が市場の信頼につながる事例など、技術革新の光と影が多角的に報じられた一日となりました。",
     "articles": [
