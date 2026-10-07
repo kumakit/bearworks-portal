@@ -25,6 +25,6 @@ Miniflareのみのoverrideはローカルnpmで旧nested lockを残し、npm ls�
 - Cloudflare契約/UI/API: 18 PASS。
 - 依存監査ゲート: 17 PASS。
 - lint: エラー0、既存の別画面警告3件。
-- Linux native sharp、publication bundle、Next/Workers build、dry-run、preview: PR CIで確認する。
+- Linux native sharp、publication bundle、Next/Workers build、dry-run、preview: [PR CI 37642130747](https://github.com/kumakit/bearworks-portal/actions/runs/37642130747)で全工程PASS。
 
-適用後のLinux CIが通るまでPortalの受入れを完了としない。既存の静的コードレビュー以降に加えた依存変更は、この資料と差分レビュー・CIで別途検証する。
+適用後のLinux CIは成功。既存の静的コードレビュー以降に加えた依存変更を、この資料と差分レビュー・CIで別途検証した。本番の受入れは未実施。

@@ -53,7 +53,7 @@
 | 通常webpack build | PASS。設定・依存は変えず`npm run build -- --webpack`。全64ページ生成 |
 | IAB画面 | 合成データだけでPC1280px/mobile390pxを確認。横はみ出しなし、partialで主要WAFを保持、failureで値なし、legacyで旧999999値なし、demoを明示 |
 | 全dashboardの広い確認 | その時点の195 PASS / 4 FAIL。既存catalog配備ファイル欠落。対象結果と分離 |
-| Linux/Python3.12・Workers CI | Appsは137 PASSと既存CI成功。Portalは依存監査FAILで後続未実施。[CI確認記録](ci-verification.md) |
+| Linux/Python3.12・Workers CI | Appsは137 PASSと既存CI成功。Portalは依存最小更新後に全工程PASS。[CI確認記録](ci-verification.md) |
 | 本番・実データ | 未確認 |
 
 Windowsのvenv起動はアプリ制御で拒否された。セキュリティ設定を変えず、同じuv Python3.14.3の基底実行ファイルと既存venvライブラリでpytestを実行。.env読込は無効化し、外部API/LLM/サービスはモック。Linux CIはPython3.12とuv.lockで別に再現する。
@@ -79,6 +79,6 @@ IAB検証は一時的なloopback限定previewと合成API proxy。sandbox内prev
 
 2026-10-07に独立コードレビューを受領。承認可能、P1/P2なし。R01/R02は運用説明へ反映し、コード変更不要と判断。静的確認と本番検証を区別した。採否は[code-review-resolution.md](code-review-resolution.md)。
 
-残る工程はPortalの依存監査とLinux受入れ、運用条件確認、別々のRelease承認。危険度判定が残るため#397をcloseしない。具体的な次工程は[verification-plan.md](verification-plan.md)。
+2026-10-08（JST）にPortalの依存最小更新後のLinux CIが成功。残る工程は運用条件確認、実データ受入れ、別々のRelease承認。危険度判定が残るため#397をcloseしない。具体的な次工程は[verification-plan.md](verification-plan.md)。
 
 レビュー用は[code-review-request.md](code-review-request.md)と[code-review-bundle.md](code-review-bundle.md)。

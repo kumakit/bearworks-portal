@@ -1,6 +1,6 @@
 # Issue #397 工程・受入条件
 
-更新日: 2026-10-07（JST）
+更新日: 2026-10-08（JST）
 
 正本Issue: https://github.com/kumakit/mission-control/issues/397  
 設計: [implementation_plan.md](implementation_plan.md) v4  
@@ -23,7 +23,7 @@
 | Semantic Fact Check | COMPLETED | Codexが期間・集計単位・推計・未評価範囲を照合 |
 | Editorial Fix | COMPLETED | API失敗の案内と短い見出しを修正 |
 | Code Review | COMPLETED | 独立レビュー承認可能。P1/P2なし。R01/R02の資料補足と採否を記録 |
-| Verification | IN_PROGRESS | ローカル証跡取得済み。Linux CI・運用値・本番は未了 |
+| Verification | IN_PROGRESS | 両repoのローカル・Linux CI成功。運用値と本番確認が未了 |
 | Release | PENDING | 司令塔Codex。操作ごとの承認・反映確認 |
 
 Plan Review完了は受領条件の反映とCodexによる採否判断を表す。外部レビュアーによるv3再承認、実装・テスト合格、本番状態の確認を意味しない。
@@ -40,7 +40,7 @@ Plan Review完了は受領条件の反映とCodexによる採否判断を表す�
 - [x] 説明文の編集・意味照合を完了する。
 - [x] 独立コードレビューを完了する（初回範囲の静的確認）。
 - [x] R01/R02を運用確認項目へ反映する（コード変更なし）。
-- [ ] 対象テスト・lint・Linux build/Workers previewと既存境界を確認する。
+- [x] 対象テスト・lint・Linux build/Workers previewと既存境界を確認する。
 
 ## 初回の本番反映
 
@@ -57,9 +57,9 @@ Plan Review完了は受領条件の反映とCodexによる採否判断を表す�
 - [ ] 履歴・前期間比・閾値の必要性と実装範囲を判断する。
 - [ ] Issue全体の受入条件が揃うまでDone/closeにしない。
 
-限定commit・push・ドラフトPR作成を承認範囲内で実施。[CI確認記録](ci-verification.md)を参照。Appsの対象Linuxテスト137 PASS、既存CIも全job PASS。Portalは依存監査で停止。
+限定commit・push・ドラフトPR作成と依存最小更新を承認範囲内で実施。[CI確認記録](ci-verification.md)を参照。Appsの対象Linuxテスト137 PASS、既存CIも全job PASS。Portalも依存更新後のWorkers CI全工程PASS。
 
 NEXT ACTOR: ROOT CODEX / HUMAN
 NEXT MODEL: Luna evidence / Root Codex final acceptance  
-NEXT TASK: verification/linux-ci  
-BLOCKERS: Portalの依存監査が失敗し、Workers検証へ到達していない。依存最小更新の範囲追加はユーザー確認中。運用設定・本番確認・Releaseは別段階。
+NEXT TASK: verification/operational-readiness
+BLOCKERS: 自動検証の阻害要因は解消。収集間隔・許容遅延・時刻同期と実データは未確認。merge・配備・本番設定変更は未承認。危険度等は次段階。
