@@ -62,10 +62,17 @@ export async function GET(request: NextRequest) {
       throw new Error(`Upstream returned status ${res.status}`);
     }
 
-    const data = await res.json();
+    const data: unknown = await res.json();
+    if (!data || typeof data !== "object" || Array.isArray(data)) {
+      throw new Error("InvalidDashboardResponse");
+    }
 
     // 4. 成功時もキャッシュ無効化ヘッダーを付与して返却
-    return NextResponse.json(data, {
+    return NextResponse.json({ ...data, responseMeta: {
+      clockMaxUncertaintySeconds: positiveSeconds(process.env.DASHBOARD_CLOCK_MAX_UNCERTAINTY_SECONDS),
+      clockResyncIntervalSeconds: positiveSeconds(process.env.DASHBOARD_CLOCK_RESYNC_INTERVAL_SECONDS),
+      servedAt: new Date().toISOString(),
+    } }, {
       headers: {
         ...NO_CACHE_HEADERS,
       },
@@ -86,6 +93,12 @@ export async function GET(request: NextRequest) {
       }
     );
   }
+}
+
+function positiveSeconds(value: string | undefined): number | null {
+  if (!value || !/^[1-9]\d*$/.test(value)) return null;
+  const seconds = Number(value);
+  return Number.isSafeInteger(seconds * 1000) ? seconds : null;
 }
 
 // GET以外のリクエストは405 Method Not Allowedを返す

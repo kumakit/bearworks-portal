@@ -7,6 +7,7 @@
   },
   "scripts": {
     "dev": "next dev",
+    "test:cloudflare": "node --experimental-strip-types --test scripts/cloudflare-collection.test.mjs",
     "validate:hachioji-climate": "node scripts/validate-hachioji-climate-bundle.mjs",
     "validate:hachioji-snow": "node scripts/validate-hachioji-snow-bundle.mjs",
     "validate:hachioji-heat": "node scripts/validate-hachioji-heat-bundle.mjs",

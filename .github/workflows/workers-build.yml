@@ -73,6 +73,9 @@ jobs:
       - name: Lint
         run: npm run lint
 
+      - name: Verify Cloudflare collection contract and display
+        run: npm run test:cloudflare
+
       - name: Build Next.js
         run: npm run build
 

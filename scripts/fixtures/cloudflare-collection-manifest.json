@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "generatorRevision": "issue397-fixtures-v1",
+  "files": {
+    "cloudflare-collection-v1.json": "3757f22e8bd84d3c5dedcbb814d1b8c871956d198bc86463b3f410d6cc695b14"
+  },
+  "evaluationTime": "2026-10-06T00:00:00Z",
+  "expectedTrafficThreatEvents": 4,
+  "expectedPagesQuota": "UNAVAILABLE",
+  "synthetic": true
+}
