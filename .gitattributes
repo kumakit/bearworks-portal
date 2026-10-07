@@ -19,3 +19,4 @@ public/data/hachioji-rain-autumn/*.csv -text -diff
 public/data/hachioji-rain-autumn/*.json text eol=lf
 docs/task/hachioji-rain-autumn/evidence/jma/*.html -text -diff
 docs/task/hachioji-rain-autumn/evidence/**/*.json text eol=lf
+scripts/fixtures/cloudflare-collection-*.json text eol=lf
