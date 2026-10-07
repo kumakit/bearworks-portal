@@ -31,7 +31,7 @@ Plan Review完了は受領条件の反映とCodexによる採否判断を表す�
 ## 初回の実装・検証
 
 - [x] 実装の指示を受領する。
-- [x] 両repoのbranch・HEAD・dirty状態と既存変更を確認し基点を固定する（portal追跡参照より1コミット遅れは保持）。
+- [x] 両repoのbranch・HEAD・dirty状態と既存変更を確認。PR作成時に最新mainへ対象commitだけを載せ替えた。
 - [x] 新data、runId、取得状態・有効組合せ表を実装する。
 - [x] 旧形式・モック・失敗を正常にしない2軸表示を実装する。
 - [x] API応答時刻・単調時計による鮮度評価を実装する。
@@ -57,7 +57,9 @@ Plan Review完了は受領条件の反映とCodexによる採否判断を表す�
 - [ ] 履歴・前期間比・閾値の必要性と実装範囲を判断する。
 - [ ] Issue全体の受入条件が揃うまでDone/closeにしない。
 
-NEXT ACTOR: HUMAN  
+限定commit・push・ドラフトPR作成を承認範囲内で実施。[CI確認記録](ci-verification.md)を参照。Appsの対象Linuxテスト137 PASS、既存CIも全job PASS。Portalは依存監査で停止。
+
+NEXT ACTOR: ROOT CODEX / HUMAN
 NEXT MODEL: Luna evidence / Root Codex final acceptance  
 NEXT TASK: verification/linux-ci  
-BLOCKERS: 利用可能なローカルLinux環境を確認できず。CI実行には対象commit・push・ドラフトPR作成の明示承認が必要。運用設定・本番確認・Releaseは別段階。
+BLOCKERS: Portalの依存監査が失敗し、Workers検証へ到達していない。依存最小更新の範囲追加はユーザー確認中。運用設定・本番確認・Releaseは別段階。
