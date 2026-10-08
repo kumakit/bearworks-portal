@@ -19,7 +19,7 @@
 
 WAF系は、収集と同じGraphQL要求がHTTP 200で返り、`errors`内に認可失敗の表現が1件あった。Cloudflareの`settings.firewallEventsAdaptiveGroups.enabled`は、このトークン・ゾーンの組合せで`false`。無効理由（権限か提供範囲か）は未確定。認証値と応答本文は記録せず、API tokenの権限変更も行っていない。
 
-Pagesの`UPSTREAM_ERROR`は、実装が一覧APIへ`per_page=100`を指定し、APIがHTTP 400を返すためと特定した。同じ認証・APIで`per_page=10`を指定すると、2プロジェクトの全19ページを正常取得できた。修正と回帰テストはAppsの[PR #15](https://github.com/kumakit/bearworks-apps/pull/15)に分離。対象テスト59件とDashboard tests/Validate Streamlit CIが成功し、独立レビューでP1/P2指摘なし。レビュー可能な状態でmerge待ち。本番収集コードは未修正のため、Pagesを取得正常にしない。
+Pagesの`UPSTREAM_ERROR`は、実装が一覧APIへ`per_page=100`を指定し、APIがHTTP 400を返すためと特定した。同じ認証・APIで`per_page=10`を指定すると、2プロジェクトの全19ページを正常取得できた。修正と回帰テストを分離したAppsの[PR #15](https://github.com/kumakit/bearworks-apps/pull/15)はsquash merge済み（main commit `3912f9cb2cc70d11b6572bc031be535e94a232d7`）。対象テスト59件とPRのDashboard tests/Validate Streamlit CIが成功し、独立レビューでP1/P2指摘なし。本番収集コードは未修正のため、Pagesを取得正常にしない。
 
 Cloudflareの現行公式資料では、GraphQL Analyticsの認可エラーは対象アカウント/ゾーンへの権限不足を示す場合があり、該当リソースの`Analytics Read`を確認するよう案内している。今回のWAF系失敗も認可表現を含むが、必要な権限・データセットの提供範囲はまだ特定していない。Pages一覧APIは`Pages Read`または`Pages Write`を受け付け、今回の件数10の読み取りは成功した。権限を推測で広げず、対象リソースと契約の範囲を確認する。
 
