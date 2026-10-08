@@ -280,3 +280,12 @@ jobs:
             cat /tmp/workers-preview.log
             exit 1
           fi
+
+      - name: Save verified Workers bundle for staging
+        uses: actions/upload-artifact@v4
+        with:
+          name: workers-staging-${{ github.event.pull_request.head.sha || github.sha }}
+          path: .open-next/
+          include-hidden-files: true
+          if-no-files-found: error
+          retention-days: 3
