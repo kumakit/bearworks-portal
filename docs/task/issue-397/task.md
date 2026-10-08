@@ -23,8 +23,8 @@
 | Semantic Fact Check | COMPLETED | Codexが期間・集計単位・推計・未評価範囲を照合 |
 | Editorial Fix | COMPLETED | API失敗の案内と短い見出しを修正 |
 | Code Review | COMPLETED | 独立レビュー承認可能。P1/P2なし。R01/R02の資料補足と採否を記録 |
-| Verification | IN_PROGRESS | 両repoのローカル・Linux CI成功。運用値と本番確認が未了 |
-| Release | PENDING | 司令塔Codex。操作ごとの承認・反映確認 |
+| Verification | IN_PROGRESS | 両repoのローカル・Linux CI成功。stagingの旧形式表示を確認。実測RTT・新形式実データ・本番確認が未了 |
+| Release | IN_PROGRESS | Portal staging配備と5秒/30秒設定を承認範囲内で実施。本番はPENDING |
 
 Plan Review完了は受領条件の反映とCodexによる採否判断を表す。外部レビュアーによるv3再承認、実装・テスト合格、本番状態の確認を意味しない。
 
@@ -61,5 +61,5 @@ Plan Review完了は受領条件の反映とCodexによる採否判断を表す�
 
 NEXT ACTOR: ROOT CODEX / HUMAN
 NEXT MODEL: Luna evidence / Root Codex final acceptance  
-NEXT TASK: verification/operational-readiness
-BLOCKERS: 自動検証の阻害要因は解消。収集は毎時0分、NTP同期を確認。[運用確認と反映案](operational-readiness.md)を作成。遅延許容方針・認証後RTT・staging確認が残る。既存本番Digest修正を保持し、merge・配備・設定変更は別承認。危険度等は次段階。
+NEXT TASK: verification/live-clock-and-production-readiness
+BLOCKERS: 自動検証の阻害要因は解消。[staging配備・旧形式表示を確認](staging-verification.md)。収集側の許容遅延方針・認証後RTT・新形式実データが残る。既存本番Digest修正を保持し、merge・本番配備・本番設定変更は別承認。危険度等は次段階。

@@ -1,10 +1,10 @@
 # Issue #397 初回実装・ローカル検証
 
-更新日: 2026-10-07（JST）
+更新日: 2026-10-08（JST）
 
 ## 範囲と基点
 
-初回は取得状態、必要な操作、WAFの事実説明。危険度判定・履歴・前期間比は次段階で、#397全体は継続する。commit、push、Issue更新、CI起動、本番反映、Cloudflare設定変更は未実施。
+初回は取得状態、必要な操作、WAFの事実説明。危険度判定・履歴・前期間比は次段階で、#397全体は継続する。限定commit・push・draft PR・Linux CIと、承認済みPortal staging配備・時計設定5秒/30秒を実施。本番反映・本番設定変更・merge・Issue更新は未実施。以下の基点とローカル結果は初回実装時の記録。
 
 - portal: main / `030b0f7b74bd21bc4cd809e4d34edd38af98cca5`。既存#397文書を保持。追跡参照より1コミット遅れ（AI newsデータ更新）。
 - apps: feature/issue-389-phase1-gemini / `3ca59154020c818ff7ba1805b1ab9a4f9548d285`。変更前clean。通常のGit読取は拒否されたため昇格読取で確認。
@@ -79,6 +79,6 @@ IAB検証は一時的なloopback限定previewと合成API proxy。sandbox内prev
 
 2026-10-07に独立コードレビューを受領。承認可能、P1/P2なし。R01/R02は運用説明へ反映し、コード変更不要と判断。静的確認と本番検証を区別した。採否は[code-review-resolution.md](code-review-resolution.md)。
 
-2026-10-08（JST）にPortalの依存最小更新後のLinux CIが成功。残る工程は運用条件確認、実データ受入れ、別々のRelease承認。危険度判定が残るため#397をcloseしない。具体的な次工程は[verification-plan.md](verification-plan.md)。
+2026-10-08（JST）にPortalの依存最小更新後のLinux CIが成功。その後、検証済みLinux artifactをstagingへ配備し、5秒/30秒設定・認証境界・旧形式の未確認表示を確認。本番は変更していない。[staging確認記録](staging-verification.md)を参照。残る工程は認証後の同期RTT、運用条件、新形式実データ受入れ、別々の本番Release承認。危険度判定が残るため#397をcloseしない。
 
 レビュー用は[code-review-request.md](code-review-request.md)と[code-review-bundle.md](code-review-bundle.md)。

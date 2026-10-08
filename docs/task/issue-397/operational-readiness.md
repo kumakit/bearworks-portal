@@ -1,6 +1,6 @@
 # Issue #397 運用確認と反映案
 
-確認日: 2026-10-08（JST）。本番は読み取りのみ。merge・配備・設定変更・収集の手動実行・Issue更新は未実施。
+確認日: 2026-10-08（JST）。本番は読み取りのみ。承認済みのPortal staging配備と時計設定5秒/30秒を実施。[staging確認記録](staging-verification.md)を参照。merge・本番配備・本番設定変更・収集の手動実行・Issue更新は未実施。
 
 ## 確認済み
 
@@ -25,24 +25,24 @@
 
 Digest環境ファイルは一般ユーザーでは読めなかった。権限拡大やsudoをせず未確認とした。cron・環境ファイル原文、トークン、API本文、アカウント識別子は記録していない。
 
-## 設定候補（未承認・未設定）
+## 設定候補と反映状態
 
 | 設定 | 候補 | 条件 |
 | --- | --- | --- |
 | CLOUDFLARE_COLLECTION_MAX_AGE_SECONDS | 4200秒（70分） | 毎時収集＋遅延許容10分という運用方針をユーザーが選ぶ場合。5分許容なら3900秒。許容遅延は確認依頼中 |
-| DASHBOARD_CLOCK_MAX_UNCERTAINTY_SECONDS | staging候補5秒 | 本番の認証後RTTを測っていない。stagingで同期・RTT・上限超過時の未確認表示を確認し、その結果から本番値を決める |
-| DASHBOARD_CLOCK_RESYNC_INTERVAL_SECONDS | staging候補30秒 | 15秒タイムアウトと同時fetchのキャンセルがある設計で再同期を確認する。負荷・実挙動をstagingで見てから本番値を決める |
+| DASHBOARD_CLOCK_MAX_UNCERTAINTY_SECONDS | staging承認済み5秒、反映済み | 認証後RTTの実測は未確認。本番値は未承認・未設定 |
+| DASHBOARD_CLOCK_RESYNC_INTERVAL_SECONDS | staging承認済み30秒、反映済み | 実際の定期通信の間隔は未確認。本番値は未承認・未設定 |
 
 設定がないまま新コードを配備しても鮮度は未確認になる。本番値を推測で入れて取得正常と見せない。匿名アクセスの測定はログイン画面への往復であり、認証後の同期RTTの根拠にしない。
 
 ## 推奨手順
 
-### 1. stagingでPortalを確認する（次の承認対象候補）
+### 1. stagingでPortalを確認する（配備・旧形式表示を確認済み）
 
 - 配備前に現在のstaging版・binding・Access保護・data到達経路を読み取り確認する。
 - 既存の認証設定・bindingを保持し、Portal PR #20の候補版と時計設定5秒/30秒をstagingへ反映する。秘密値をコピー表示せず、既存の正規の設定経路を使う。
 - 旧形式を未確認として表示できること、認証後のservedAt/RTT、非広告境界、失敗時に値を消すことを確認する。
-- 本番値・反映版・承認範囲を記録する。stagingの配備・設定も未実施で、実行承認が必要。
+- 配備・設定反映・認証後の旧形式未確認表示を確認済み。servedAt/RTTと新形式実データの受入れは残る。[staging確認記録](staging-verification.md)に反映版と確認範囲を記録。
 
 ### 2. 本番Portalを先行する（別承認）
 
@@ -83,4 +83,4 @@ cronとDigestが部分更新を読むのを避ける実行時間・更新手順�
 
 ## 残る確認
 
-遅延許容方針、認証後RTT、stagingの実binding/Access、実際のPython/依存、更新中のcron/Digest競合回避、Pages契約境界、本番の反映・設定承認。自動検証の阻害要因は解消したが、本番Releaseは未完了。
+遅延許容方針、認証後RTT、新形式実データ、実際のPython/依存、更新中のcron/Digest競合回避、Pages契約境界、本番の反映・設定承認。stagingのbinding/Accessと旧形式表示を確認済み。自動検証の阻害要因は解消したが、本番Releaseは未完了。
