@@ -11,15 +11,20 @@
 | Portal設定 | `DASHBOARD_CLOCK_MAX_UNCERTAINTY_SECONDS=5`、`DASHBOARD_CLOCK_RESYNC_INTERVAL_SECONDS=30`。既存認証binding保持 |
 | Apps PR #14 | squash merge済み。main commit `3d5fb1344406aca4d6bbbc6dd709f2f7f8ba4249`、post-merge workflow 37715116022成功 |
 | Apps本番反映 | 指定した5つの実行ファイルのみを反映。既存のdirty変更を保管し、checkout全体のpull/resetは実施せず |
+| Apps PR #15 | Pages一覧を1ページ10件とする修正をsquash merge済み。main commit `3912f9cb2cc70d11b6572bc031be535e94a232d7`。対象59テスト、PRの両CI、mainのValidate Streamlitが成功 |
+| Pages修正の本番反映 | 旧collectorがPR #14のGit blobと一致することを確認。現行collectorと公開JSON・課金キャッシュを非公開領域へ退避し、`dashboard/cloudflare_collect.py`の1ファイルだけをPR #15のGit blobと完全一致する内容へ原子的に差し替えた。所有者・権限を維持。checkout全体・設定・他の実行コードは変更していない |
 | 収集期限 | 既存`.env`へ `CLOUDFLARE_COLLECTION_MAX_AGE_SECONDS=4200` を追加。既存設定を保持 |
 | 初回cron収集 | 2026-10-08 02:00:01 UTCに実行。`traffic24h=LIVE/OK/FULL`。WAF系5項目は`LIVE/ERROR/UNKNOWN/ACCESS_DENIED`、`pagesMonth`は`LIVE/ERROR/UNKNOWN/UPSTREAM_ERROR`。失敗項目にデータ・有効期限なし |
-| 本番UI | `traffic24h`を取得正常、残り6項目を判定不能と表示。危険度とPages利用枠は未確認。偽の0件・上限値なし |
+| 初回本番UI | `traffic24h`を取得正常、残り6項目を判定不能と表示。危険度とPages利用枠は未確認。偽の0件・上限値なし。Pages修正後の認証済みUIは別途確認 |
 | Digest定期実行 | 02:13:47 UTCにtimer起動、02:13:55 UTCに`Result=success`で終了。公開状態は`partial`、last_success時刻あり、Cloudflare未取得フラグ・固定案内あり。Pages値はnull |
 | 継続観測 | 10:00:02 UTCのcronでも同じ項目別状態。10:29:08 UTCのDigest timerは10:29:18 UTCに成功終了し、公開状態は`partial`、`stale=false`、Cloudflare未取得フラグと固定案内を維持 |
+| Pages修正後の手動収集 | 1回実行し、2026-10-08 13:30:54 UTCに検証済み一時JSONを公開ファイルへ原子的に切替。`traffic24h`と`pagesMonth`は`LIVE/OK/FULL`、WAF系5項目は`ERROR/ACCESS_DENIED`でデータ・有効期限なし。7項目のrunId一致、Pages件数が非負整数、`scopeConfirmed=false`、利用枠・使用率はnull、JSON有効、所有者・権限維持を確認 |
+| Pages修正後の定期運転 | 次のcronとDigestは未観測。手動収集1回の成功を継続運転の証拠にしない |
+| Portal PR #22 | コードレビュー資料のLiquid構文衝突だけを修正してsquash merge。GitHub Pages自動ビルドと公開ジョブは成功。Portal Workersの追加配備は行っていない |
 
 WAF系は、収集と同じGraphQL要求がHTTP 200で返り、`errors`内に認可失敗の表現が1件あった。Cloudflareの`settings.firewallEventsAdaptiveGroups.enabled`は、このトークン・ゾーンの組合せで`false`。無効理由（権限か提供範囲か）は未確定。認証値と応答本文は記録せず、API tokenの権限変更も行っていない。
 
-Pagesの`UPSTREAM_ERROR`は、実装が一覧APIへ`per_page=100`を指定し、APIがHTTP 400を返すためと特定した。同じ認証・APIで`per_page=10`を指定すると、2プロジェクトの全19ページを正常取得できた。修正と回帰テストを分離したAppsの[PR #15](https://github.com/kumakit/bearworks-apps/pull/15)はsquash merge済み（main commit `3912f9cb2cc70d11b6572bc031be535e94a232d7`）。対象テスト59件とPRのDashboard tests/Validate Streamlit CIが成功し、独立レビューでP1/P2指摘なし。本番収集コードは未修正のため、Pagesを取得正常にしない。
+Pagesの旧`UPSTREAM_ERROR`は、実装が一覧APIへ`per_page=100`を指定し、APIがHTTP 400を返すためと特定した。同じ認証・APIで`per_page=10`を指定すると、2プロジェクトの全19ページを正常取得できた。修正と回帰テストを分離したAppsの[PR #15](https://github.com/kumakit/bearworks-apps/pull/15)はsquash merge済み。対象テスト59件とPRのDashboard tests/Validate Streamlit CIが成功し、独立レビューでP1/P2指摘なし。本番collectorの限定反映後、手動収集でPagesの取得正常を確認した。Pagesの対象・契約・利用枠は依然未確認のため、デプロイ件数をビルド枠消費や安全判定として扱わない。
 
 Cloudflareの現行公式資料では、GraphQL Analyticsの認可エラーは対象アカウント/ゾーンへの権限不足を示す場合があり、該当リソースの`Analytics Read`を確認するよう案内している。今回のWAF系失敗も認可表現を含むが、必要な権限・データセットの提供範囲はまだ特定していない。Pages一覧APIは`Pages Read`または`Pages Write`を受け付け、今回の件数10の読み取りは成功した。権限を推測で広げず、対象リソースと契約の範囲を確認する。
 
