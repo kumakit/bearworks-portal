@@ -972,6 +972,7 @@ export function CloudflareCollectionView({ collection, nowUpper, loading = false
 
 SHA-256: `719fb7d8d7da333e8fd7eeaa6927cdae6aebb269646b3ec5932a12b158f17213`
 
+{% raw %}
 ```typescript
 "use client";
 
@@ -1026,6 +1027,7 @@ export function CloudflareEventTimeline({ data }: { data: WAFHourlyEvent[] }) {
   </div>;
 }
 ```
+{% endraw %}
 
 ## bearworks-portal/scripts/cloudflare-collection.test.mjs
 
@@ -1761,6 +1763,7 @@ index fb38dd4..3f7c9ec 100644
 
 ## bearworks-portal 既存コードの対象差分
 
+{% raw %}
 ```diff
 diff --git a/.github/workflows/workers-build.yml b/.github/workflows/workers-build.yml
 index da2996a..9e75cec 100644
@@ -2143,3 +2146,4 @@ index 5db9c76..16bd8d0 100644
      "validate:hachioji-snow": "node scripts/validate-hachioji-snow-bundle.mjs",
      "validate:hachioji-heat": "node scripts/validate-hachioji-heat-bundle.mjs",
 ```
+{% endraw %}
