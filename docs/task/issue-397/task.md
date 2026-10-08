@@ -62,4 +62,4 @@ Plan Review完了は受領条件の反映とCodexによる採否判断を表す�
 NEXT ACTOR: ROOT CODEX / HUMAN
 NEXT MODEL: Luna evidence / Root Codex final acceptance  
 NEXT TASK: verification/operational-readiness
-BLOCKERS: 自動検証の阻害要因は解消。収集間隔・許容遅延・時刻同期と実データは未確認。merge・配備・本番設定変更は未承認。危険度等は次段階。
+BLOCKERS: 自動検証の阻害要因は解消。収集は毎時0分、NTP同期を確認。[運用確認と反映案](operational-readiness.md)を作成。遅延許容方針・認証後RTT・staging確認が残る。既存本番Digest修正を保持し、merge・配備・設定変更は別承認。危険度等は次段階。
