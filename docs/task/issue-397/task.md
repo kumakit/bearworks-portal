@@ -2,6 +2,22 @@
 
 更新日: 2026-10-08（JST）
 
+## 現在の反映状況（2026-10-08追補）
+
+- Portal PR #20 / Apps PR #14: merge済み。両方のmain CI成功。
+- Portal: 本番配備済み。取得状態と危険度の2軸表示、APIのAccess/no-store境界、時計設定5秒/30秒を確認。
+- Apps: 承認された5実行ファイルを本番へ反映。収集期限4200秒を設定。checkout全体のpull/resetはせず、既存変更は保全。
+- 初回cron: traffic24hは`LIVE/OK/FULL`。WAF系5項目が`ACCESS_DENIED`、Pages当月件数が`UPSTREAM_ERROR`で`ERROR/UNKNOWN`。Portalは6/7項目を判定不能と表示し、取得正常に見せていない。
+- Digest timerは02:13:47 UTCに起動し、02:13:55 UTCに`Result=success`で終了。公開状態は`partial`、last_successあり、Cloudflare未取得フラグと固定案内あり、Pages値はnull。継続運転は次回以降も観測が必要。
+- 10:00 UTCのcronと10:29 UTCのDigestまで継続を確認。Digestは`partial`・`stale=false`・Cloudflare未取得案内を維持。
+- Pagesの失敗原因は一覧APIへの`per_page=100`（HTTP 400）。件数10なら全ページを取得でき、修正したAppsの[PR #15](https://github.com/kumakit/bearworks-apps/pull/15)はsquash merge済み（main commit `3912f9cb2cc70d11b6572bc031be535e94a232d7`）。対象59テスト・PRの両CI成功、独立レビューP1/P2なし。本番collectorは未反映。WAF系はGraphQLのHTTP 200内に認可失敗表現があり、settings nodeの`firewallEventsAdaptiveGroups.enabled=false`を確認。権限・データセットの提供範囲は未確定。
+- Pagesの対象・契約は未確定。権限変更や契約推定は行っていない。
+- Issue #397は未更新・未クローズ。危険度判定・履歴・前期間比は次段階。
+
+NEXT MODEL: Root Codex（Lunaの証拠確認済み）
+NEXT TASK: release/pages-collector-hotfix-and-waf-access-follow-up
+BLOCKERS: PR #15修正の本番collectorへの限定反映と再収集、WAF系の認可条件、Pagesの対象・契約境界、clock運転の継続観測。これらを確認するまでは該当データを未確認のまま維持。
+
 正本Issue: https://github.com/kumakit/mission-control/issues/397  
 設計: [implementation_plan.md](implementation_plan.md) v4  
 レビュー採否: [review-resolution.md](review-resolution.md)
@@ -23,8 +39,8 @@
 | Semantic Fact Check | COMPLETED | Codexが期間・集計単位・推計・未評価範囲を照合 |
 | Editorial Fix | COMPLETED | API失敗の案内と短い見出しを修正 |
 | Code Review | COMPLETED | 独立レビュー承認可能。P1/P2なし。R01/R02の資料補足と採否を記録 |
-| Verification | IN_PROGRESS | 両repoのローカル・Linux CI成功。stagingの旧形式表示を確認。実測RTT・新形式実データ・本番確認が未了 |
-| Release | IN_PROGRESS | Portal staging配備と5秒/30秒設定を承認範囲内で実施。本番はPENDING |
+| Verification | IN_PROGRESS | 両repoのCIと本番配備を確認。traffic24hの新形式とPortal表示は一致。Digest timerはpartial success。PagesのHTTP 400原因を特定し、PR #15をmerge。本番認証RTTの継続観測、WAF認可条件、新形式全項目の受入れが未了 |
+| Release | PARTIAL | PR #20/#14/#15をmergeし、Portal本番とAppsの初回対象5ファイルを反映。PR #15の修正は本番未反映。初回cronとDigestは実行されたが、6項目はERROR/UNKNOWNのため全項目受入れは保留 |
 
 Plan Review完了は受領条件の反映とCodexによる採否判断を表す。外部レビュアーによるv3再承認、実装・テスト合格、本番状態の確認を意味しない。
 
@@ -44,12 +60,14 @@ Plan Review完了は受領条件の反映とCodexによる採否判断を表す�
 
 ## 初回の本番反映
 
-- [ ] U01（収集間隔・許容遅延・時刻同期等）を確認する。
+- [x] U01の許容遅延方針を毎時cron＋10分の遅延許容（4200秒）として選び、Portalの5秒/30秒時計設定を本番反映する。
 - [ ] U02（月境界・Pages対象・契約）を確認し、未確認ルールは無効にする。
-- [ ] 反映順・戻し方・配備版を確認する。
-- [ ] commit・push・CI・配備をそれぞれ承認範囲内で行う。
-- [ ] 実データ、取得状態、2軸表示の一致を確認する。
-- [ ] 初回の受入結果を記録し、#397を継続する。
+- [x] 反映順・戻し方・配備版を確認する。
+- [x] commit・push・CI・配備をそれぞれ承認範囲内で行う。
+- [x] 初回実データの取得状態と2軸表示が一致し、欠損項目が正常表示されないことを確認する。
+- [x] 初回の部分受入れ結果を記録し、#397を継続する。
+- [ ] WAF系の読み取り権限・提供範囲を確認し、merge済みのPages修正を本番へ限定反映した後に再受入れする。
+- [ ] 認証後RTT・clock再同期の実運用観測と次回cron/Digest継続成功を確認する。
 
 ## 次段階
 
@@ -57,9 +75,9 @@ Plan Review完了は受領条件の反映とCodexによる採否判断を表す�
 - [ ] 履歴・前期間比・閾値の必要性と実装範囲を判断する。
 - [ ] Issue全体の受入条件が揃うまでDone/closeにしない。
 
-限定commit・push・ドラフトPR作成と依存最小更新を承認範囲内で実施。[CI確認記録](ci-verification.md)を参照。Appsの対象Linuxテスト137 PASS、既存CIも全job PASS。Portalも依存更新後のWorkers CI全工程PASS。
+限定commit・push・ドラフトPR作成と依存最小更新を承認範囲内で実施。[CI確認記録](ci-verification.md)と[本番反映追補](operational-readiness.md#2026-10-08-本番反映追補)を参照。Appsの対象Linuxテスト137 PASS、post-merge main workflow成功。PortalもWorkers CI全工程PASS、本番100% traffic。
 
 NEXT ACTOR: ROOT CODEX / HUMAN
-NEXT MODEL: Luna evidence / Root Codex final acceptance  
-NEXT TASK: verification/live-clock-and-production-readiness
-BLOCKERS: 自動検証の阻害要因は解消。[staging配備・旧形式表示を確認](staging-verification.md)。収集側の許容遅延方針・認証後RTT・新形式実データが残る。既存本番Digest修正を保持し、merge・本番配備・本番設定変更は別承認。危険度等は次段階。
+NEXT MODEL: Root Codex（Lunaの本番証跡レビュー済み）
+NEXT TASK: release/pages-collector-hotfix-and-waf-access-follow-up
+BLOCKERS: PR #15修正の本番collectorへの限定反映と再収集、GraphQL WAF系の認可条件、Pagesの契約・対象範囲、clock運転確認。Issue更新・closeは未実施。危険度・履歴・前期間比は次段階。
