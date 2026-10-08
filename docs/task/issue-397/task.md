@@ -12,13 +12,13 @@
 - 10:00 UTCのcronと10:29 UTCのDigestまで継続を確認。Digestは`partial`・`stale=false`・Cloudflare未取得案内を維持。
 - Pagesの失敗原因は一覧APIへの`per_page=100`（HTTP 400）。件数10へ修正したAppsの[PR #15](https://github.com/kumakit/bearworks-apps/pull/15)をmergeし、本番collectorの1ファイルだけを退避・ハッシュ照合後に差し替えた。手動収集1回ではPagesとtrafficが`LIVE/OK/FULL`、WAF系5項目が`ERROR/ACCESS_DENIED`。Pages利用枠・危険度は未評価。WAFの権限・データセット提供範囲は未確定。
 - Portal [PR #22](https://github.com/kumakit/bearworks-portal/pull/22)のmerge後、GitHub Pagesのビルド・公開ジョブは成功。Portal Workersの追加配備はなし。
-- Pages修正後の定期cron/Digestと認証済みUIは未確認。手動収集1回の成功と継続運転を分ける。
+- Pages修正後の14:00 UTC定期cronはログ上の出力成功と公開JSON更新を確認。Pages/trafficの`LIVE/OK/FULL`、WAF系5項目の`ERROR/ACCESS_DENIED`、共通runIdと利用枠未評価を再確認した。次のDigestと認証済みUIは未確認。
 - Pagesの対象・契約は未確定。権限変更や契約推定は行っていない。
 - Issue #397は未更新・未クローズ。危険度判定・履歴・前期間比は次段階。
 
 NEXT MODEL: Root Codex（Lunaの証拠確認済み）
 NEXT TASK: verification/next-cron-digest-and-waf-access-follow-up
-BLOCKERS: Pages修正後の定期cron/Digest・認証済みUI、WAF系の認可条件、Pagesの対象・契約境界、clock運転の継続観測。未評価の項目は未確認のまま維持。
+BLOCKERS: Pages修正後の定期Digest・認証済みUI、WAF系の認可条件、Pagesの対象・契約境界、clock運転の継続観測。未評価の項目は未確認のまま維持。
 
 正本Issue: https://github.com/kumakit/mission-control/issues/397  
 設計: [implementation_plan.md](implementation_plan.md) v4  
@@ -41,7 +41,7 @@ BLOCKERS: Pages修正後の定期cron/Digest・認証済みUI、WAF系の認可�
 | Semantic Fact Check | COMPLETED | Codexが期間・集計単位・推計・未評価範囲を照合 |
 | Editorial Fix | COMPLETED | API失敗の案内と短い見出しを修正 |
 | Code Review | COMPLETED | 独立レビュー承認可能。P1/P2なし。R01/R02の資料補足と採否を記録 |
-| Verification | IN_PROGRESS | 両repoのCIと本番配備を確認。Pages修正の手動収集では2項目がOK/FULL、WAF系5項目がERROR/UNKNOWN。定期cron/Digestと認証済みUI、本番認証RTT、WAF認可条件が未了 |
+| Verification | IN_PROGRESS | 両repoのCIと本番配備を確認。Pages修正の手動収集と次の定期cronでは2項目がOK/FULL、WAF系5項目がERROR/UNKNOWN。次のDigestと認証済みUI、本番認証RTT、WAF認可条件が未了 |
 | Release | PARTIAL | PR #20/#14/#15/#22をmerge。Portal本番とAppsの初回対象5ファイルに加え、PR #15のcollector1ファイルを限定反映。手動収集は成功したが、WAF系5項目の取得と定期運転の受入れは保留 |
 
 Plan Review完了は受領条件の反映とCodexによる採否判断を表す。外部レビュアーによるv3再承認、実装・テスト合格、本番状態の確認を意味しない。
@@ -83,4 +83,4 @@ Plan Review完了は受領条件の反映とCodexによる採否判断を表す�
 NEXT ACTOR: ROOT CODEX / HUMAN
 NEXT MODEL: Root Codex（Lunaの本番証跡レビュー済み）
 NEXT TASK: verification/next-cron-digest-and-waf-access-follow-up
-BLOCKERS: Pages修正後の定期cron/Digest・認証済みUI、GraphQL WAF系の認可条件、Pagesの契約・対象範囲、clock運転確認。Issue更新・closeは未実施。危険度・履歴・前期間比は次段階。
+BLOCKERS: Pages修正後の定期Digest・認証済みUI、GraphQL WAF系の認可条件、Pagesの契約・対象範囲、clock運転確認。Issue更新・closeは未実施。危険度・履歴・前期間比は次段階。

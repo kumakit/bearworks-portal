@@ -19,7 +19,7 @@
 | Digest定期実行 | 02:13:47 UTCにtimer起動、02:13:55 UTCに`Result=success`で終了。公開状態は`partial`、last_success時刻あり、Cloudflare未取得フラグ・固定案内あり。Pages値はnull |
 | 継続観測 | 10:00:02 UTCのcronでも同じ項目別状態。10:29:08 UTCのDigest timerは10:29:18 UTCに成功終了し、公開状態は`partial`、`stale=false`、Cloudflare未取得フラグと固定案内を維持 |
 | Pages修正後の手動収集 | 1回実行し、2026-10-08 13:30:54 UTCに検証済み一時JSONを公開ファイルへ原子的に切替。`traffic24h`と`pagesMonth`は`LIVE/OK/FULL`、WAF系5項目は`ERROR/ACCESS_DENIED`でデータ・有効期限なし。7項目のrunId一致、Pages件数が非負整数、`scopeConfirmed=false`、利用枠・使用率はnull、JSON有効、所有者・権限維持を確認 |
-| Pages修正後の定期運転 | 次のcronとDigestは未観測。手動収集1回の成功を継続運転の証拠にしない |
+| Pages修正後の定期運転 | 14:00 UTCのcronログに出力成功1件を確認。公開JSONは14:00:23 UTCに更新され、`traffic24h`と`pagesMonth`は再び`LIVE/OK/FULL`、WAF系5項目は`ERROR/ACCESS_DENIED`でデータ・有効期限なし。7項目のrunId一致、Pages件数の非負整数と利用枠未評価を再確認。次のDigest timerと認証済みUIは未観測 |
 | Portal PR #22 | コードレビュー資料のLiquid構文衝突だけを修正してsquash merge。GitHub Pages自動ビルドと公開ジョブは成功。Portal Workersの追加配備は行っていない |
 
 WAF系は、収集と同じGraphQL要求がHTTP 200で返り、`errors`内に認可失敗の表現が1件あった。Cloudflareの`settings.firewallEventsAdaptiveGroups.enabled`は、このトークン・ゾーンの組合せで`false`。無効理由（権限か提供範囲か）は未確定。認証値と応答本文は記録せず、API tokenの権限変更も行っていない。
