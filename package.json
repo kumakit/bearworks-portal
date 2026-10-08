@@ -7,6 +7,7 @@
   },
   "scripts": {
     "dev": "next dev",
+    "test:cloudflare": "node --experimental-strip-types --test scripts/cloudflare-collection.test.mjs",
     "validate:hachioji-climate": "node scripts/validate-hachioji-climate-bundle.mjs",
     "validate:hachioji-snow": "node scripts/validate-hachioji-snow-bundle.mjs",
     "validate:hachioji-heat": "node scripts/validate-hachioji-heat-bundle.mjs",
@@ -44,5 +45,11 @@
     "tailwindcss": "^3.4.1",
     "typescript": "^5",
     "wrangler": "4.147.0"
+  },
+  "overrides": {
+    "source-map-js": "1.2.2",
+    "proxy-addr": "2.0.8",
+    "postcss-selector-parser": "7.1.6",
+    "sharp": "0.35.5"
   }
 }

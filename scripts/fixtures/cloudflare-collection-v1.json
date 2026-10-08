@@ -1,0 +1,157 @@
+{
+  "schemaVersion": 1,
+  "runId": "fixture-run-397",
+  "traffic24h": {
+    "runId": "fixture-run-397",
+    "data": {
+      "requests": 100,
+      "threatEvents": 4,
+      "cachedRequests": 60,
+      "cacheRate": 60
+    },
+    "source": "LIVE",
+    "status": "OK",
+    "errorCode": null,
+    "coverage": "FULL",
+    "sampling": "UNKNOWN",
+    "attemptedAt": "2026-10-06T00:00:00Z",
+    "collectedAt": "2026-10-06T00:00:00Z",
+    "windowStart": "2026-10-05T00:00:00Z",
+    "windowEnd": "2026-10-06T00:00:00Z",
+    "validUntil": "2026-10-06T03:00:00Z",
+    "scope": {
+      "kind": "ZONE",
+      "label": "合成テスト対象"
+    }
+  },
+  "pagesMonth": {
+    "runId": "fixture-run-397",
+    "data": {
+      "deploymentCount": 0,
+      "buildCount": null,
+      "limitBuilds": null,
+      "usagePercent": null,
+      "scopeConfirmed": false,
+      "aggregationTimezone": "UTC"
+    },
+    "source": "LIVE",
+    "status": "OK",
+    "errorCode": null,
+    "coverage": "FULL",
+    "sampling": "UNKNOWN",
+    "attemptedAt": "2026-10-06T00:00:00Z",
+    "collectedAt": "2026-10-06T00:00:00Z",
+    "windowStart": "2026-10-01T00:00:00Z",
+    "windowEnd": "2026-10-06T00:00:00Z",
+    "validUntil": "2026-10-06T03:00:00Z",
+    "scope": {
+      "kind": "ACCOUNT",
+      "label": "合成テスト対象"
+    }
+  },
+  "waf7d": {
+    "summary": {
+      "runId": "fixture-run-397",
+      "data": {
+        "actionCounts": {
+          "block": 10,
+          "managed_challenge": 2,
+          "log": 3
+        },
+        "totalEvents": 15
+      },
+      "source": "LIVE",
+      "status": "OK",
+      "errorCode": null,
+      "coverage": "FULL",
+      "sampling": "ADAPTIVE",
+      "attemptedAt": "2026-10-06T00:00:00Z",
+      "collectedAt": "2026-10-06T00:00:00Z",
+      "windowStart": "2026-09-29T00:00:00Z",
+      "windowEnd": "2026-10-06T00:00:00Z",
+      "validUntil": "2026-10-06T03:00:00Z",
+      "scope": {
+        "kind": "ZONE",
+        "label": "合成テスト対象"
+      }
+    },
+    "topRules": {
+      "runId": "fixture-run-397",
+      "data": [],
+      "source": "LIVE",
+      "status": "OK",
+      "errorCode": null,
+      "coverage": "TOP_N",
+      "sampling": "ADAPTIVE",
+      "attemptedAt": "2026-10-06T00:00:00Z",
+      "collectedAt": "2026-10-06T00:00:00Z",
+      "windowStart": "2026-09-29T00:00:00Z",
+      "windowEnd": "2026-10-06T00:00:00Z",
+      "validUntil": "2026-10-06T03:00:00Z",
+      "scope": {
+        "kind": "ZONE",
+        "label": "合成テスト対象"
+      }
+    },
+    "topPaths": {
+      "runId": "fixture-run-397",
+      "data": [
+        {
+          "path": "/wp-login.php",
+          "action": "block",
+          "count": 10
+        }
+      ],
+      "source": "LIVE",
+      "status": "OK",
+      "errorCode": null,
+      "coverage": "TOP_N",
+      "sampling": "ADAPTIVE",
+      "attemptedAt": "2026-10-06T00:00:00Z",
+      "collectedAt": "2026-10-06T00:00:00Z",
+      "windowStart": "2026-09-29T00:00:00Z",
+      "windowEnd": "2026-10-06T00:00:00Z",
+      "validUntil": "2026-10-06T03:00:00Z",
+      "scope": {
+        "kind": "ZONE",
+        "label": "合成テスト対象"
+      }
+    },
+    "topASNs": {
+      "runId": "fixture-run-397",
+      "data": [],
+      "source": "LIVE",
+      "status": "OK",
+      "errorCode": null,
+      "coverage": "TOP_N",
+      "sampling": "ADAPTIVE",
+      "attemptedAt": "2026-10-06T00:00:00Z",
+      "collectedAt": "2026-10-06T00:00:00Z",
+      "windowStart": "2026-09-29T00:00:00Z",
+      "windowEnd": "2026-10-06T00:00:00Z",
+      "validUntil": "2026-10-06T03:00:00Z",
+      "scope": {
+        "kind": "ZONE",
+        "label": "合成テスト対象"
+      }
+    },
+    "timeline": {
+      "runId": "fixture-run-397",
+      "data": [],
+      "source": "LIVE",
+      "status": "OK",
+      "errorCode": null,
+      "coverage": "FULL",
+      "sampling": "ADAPTIVE",
+      "attemptedAt": "2026-10-06T00:00:00Z",
+      "collectedAt": "2026-10-06T00:00:00Z",
+      "windowStart": "2026-09-29T00:00:00Z",
+      "windowEnd": "2026-10-06T00:00:00Z",
+      "validUntil": "2026-10-06T03:00:00Z",
+      "scope": {
+        "kind": "ZONE",
+        "label": "合成テスト対象"
+      }
+    }
+  }
+}

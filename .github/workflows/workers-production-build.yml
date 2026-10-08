@@ -1,0 +1,55 @@
+name: Production Workers artifact
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      NEXT_PUBLIC_ADSENSE_CLIENT_ID: ca-pub-9560028085973137
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Validate publication bundles
+        run: npm run validate:bundles
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Verify Cloudflare collection contract and display
+        run: npm run test:cloudflare
+
+      - name: Build Next.js
+        run: npm run build
+
+      - name: Build production Workers bundle
+        run: npm run cf:build
+
+      - name: Validate production Workers bundle
+        run: npx wrangler deploy --dry-run --env=""
+
+      - name: Save production Workers bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: workers-production-${{ github.sha }}
+          path: .open-next/
+          include-hidden-files: true
+          if-no-files-found: error
+          retention-days: 3
