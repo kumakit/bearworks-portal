@@ -1,5 +1,28 @@
 # Issue #397 運用確認と反映案
 
+## 2026-10-09 継続確認
+
+以下の表はPR #16反映前の本番読み取り確認。時刻はUTCで記録し、画面表示はJSTで照合した。この時点では設定変更・再収集・配備は行っていない。同日の後続反映は次の追補に記録する。
+
+### PR #16のDigest修正反映（同日追補）
+
+承認済みのApps [PR #16](https://github.com/kumakit/bearworks-apps/pull/16)をsquash mergeし、mainの`Validate Streamlit`でDigestを含む全ジョブが成功した。稼働中の`dashboard/ai_operations/collect_metrics.py`が修正前mainのGit blobとバイト単位で一致することを確認し、現行ファイルと公開Digest出力をアクセス制限された領域へ退避した。PR #16を含むmainの同ファイルだけを原子的に差し替え、ハッシュ一致と所有者・権限維持を確認した。checkout全体、環境設定、収集コード、タイマー設定は変更していない。
+
+13:45:13 UTCの手動Digest実行は13:45:22 UTCに終了コード0、`Result=success`。公開`ai_status.json`は`status=partial`、`stale=false`、`errors=[CLOUDFLARE_DATA_UNAVAILABLE]`へ更新された。`generated_at`は今回の実行、`last_success_at`は直前の成功実行（13:36 UTC）のまま。安全を断定しない固定案内が出ており、正常なtrafficの脅威イベント、Googleのエラー率、サーバーCPU指標は引き続き値を持つ。WAF系5項目の取得失敗自体は解消していない。タイマーはactive/waitingで、次の定期実行による継続確認は未了。
+
+| 項目 | 確認結果 |
+| --- | --- |
+| Pages修正後のDigest | 2026-10-08 14:38:25 UTCにtimer起動、14:38:34 UTCに`Result=success`、終了コード0。公開JSONは14:38:34 UTCに更新され、`generated_at`と`last_success_at`が今回の実行時刻、`status=ok`、`stale=false`、`errors=[]` |
+| 翌日のDigest | 2026-10-09 12:36:18 UTCに起動、12:36:28 UTCに`Result=success`、終了コード0。公開JSONも同時刻の生成・最終成功、`status=ok`、`stale=false`、`errors=[]`。本文は「Cloudflareの利用枠と危険度は判定していません」と明記 |
+| 翌日の収集出力 | 公開`data.json`は2026-10-09 13:00:22 UTCに更新。Pagesとtrafficは`LIVE/OK`、WAFの5項目は`LIVE/ERROR/ACCESS_DENIED`。7項目のrunIdは一致。Pagesの`scopeConfirmed=false`、`usagePercent=null` |
+| 認証済み本番画面 | Cloudflare Accessで本人ログイン後、2026-10-09 22時台JSTのデータを表示。「一部未取得 5/7」、trafficとPagesは取得正常、WAFの5項目は取得失敗で数値補完なし。Pagesは0件と表示する一方、利用枠は未確認と明示。通信RTTの数値とclock再同期は未測定 |
+
+Digestの`ok`はWAF取得成功を意味しない。反映済みの`collect_metrics.extract_dashboard_snapshot()`はtrafficとPagesの2項目だけでCloudflareの可用性を決めるため、WAFの5項目が失敗しても`collector_errors`に反映されない。設計書の「実際の取得失敗はcollector_errorsへ伝え、partialへ接続する」という記述との不一致を確認した。Appsの[PR #16](https://github.com/kumakit/bearworks-apps/pull/16)にWAF 5項目の可用性を含める修正と回帰テストを分離し、squash mergeした。対象80テスト、PRのDashboard testsとValidate Streamlit、mainのValidate StreamlitがPASSし、独立レビューでP1/P2の残存指摘はない。本番反映は未実施であり、修正前の`ok`をCloudflare全体の取得正常または安全の証拠にしない。
+
+WAFの5項目は同じGraphQLデータセット`firewallEventsAdaptiveGroups`を参照する。既存の読み取り診断では、このトークン・ゾーンの組合せで同データセットの`settings.enabled=false`だった。CloudflareのSettings nodeは`enabled`をリクエスト主体から見た利用可否として定義するため、これだけでトークン権限とプラン・ゾーン側の条件は区別できない。現行コードの7日間要求が許容範囲内かも、同じ主体で`maxDuration`と`notOlderThan`を確認するまで未確定。権限やプランを推測で変更しない。
+
+同日、Cloudflare管理画面でも対象ゾーンのセキュリティイベント画面に記録が表示され、期間選択に7日があることを読み取り確認した。これは管理画面側の表示であり、収集コードが使うGraphQLデータセットの利用可否の証明ではない。API収集主体の権限とデータセットの提供条件は引き続き確認が必要。権限変更は行っていない。
+
 ## 2026-10-08 本番反映追補
 
 以下は後続の承認済み反映後の状態であり、下記の事前確認表・未実施欄より新しい。本番反映・受入れは実施済みだが、取得データが部分状態のためIssue全体の完了ではない。
