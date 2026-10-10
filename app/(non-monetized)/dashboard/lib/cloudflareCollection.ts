@@ -138,10 +138,12 @@ export function assessBlock(block: CollectionBlock<unknown>, nowUpper: number | 
   if (block.invalid) return result("未確認", "取得形式・実行識別子・期間の整合性を確認できません。", "収集処理の出力形式を確認する", false, "C01");
   if (block.status === "DEMO") return result("デモ", "収集側が明示したデモ値です。本番の状態を表しません。", "", true);
   if (block.status === "ERROR") {
-    const config = ["ACCESS_DENIED", "MISSING_CONFIG"].includes(block.errorCode!);
-    const reasons: Record<string, string> = { ACCESS_DENIED: "アクセス条件を満たせませんでした", MISSING_CONFIG: "必要な収集設定が不足していました", TIMEOUT: "応答の待ち時間を超えました", UPSTREAM_ERROR: "取得先の応答が失敗しました", INVALID_RESPONSE: "取得先の応答形式を確認できませんでした", UNKNOWN_ERROR: "原因を特定できない取得失敗がありました" };
+    const accessDenied = block.errorCode === "ACCESS_DENIED";
+    const missingConfig = block.errorCode === "MISSING_CONFIG";
+    const reasons: Record<string, string> = { ACCESS_DENIED: "指定された条件でデータを取得できませんでした。原因はこの情報だけでは特定できません", MISSING_CONFIG: "必要な収集設定が不足していました", TIMEOUT: "応答の待ち時間を超えました", UPSTREAM_ERROR: "取得先の応答が失敗しました", INVALID_RESPONSE: "取得先の応答形式を確認できませんでした", UNKNOWN_ERROR: "原因を特定できない取得失敗がありました" };
     return result("取得失敗", `最後の取得試行では、${reasons[block.errorCode!] ?? "取得できませんでした"}。現在も続いているかは未確認です。`,
-      config ? "収集処理の設定とアクセス条件を確認する" : "時間をおいて再取得する", false, config ? "C02" : "C03");
+      accessDenied ? "収集処理の設定・応答と取得元の提供状況を確認する" : missingConfig ? "必要な収集設定を確認する" : "時間をおいて再取得する",
+      false, accessDenied || missingConfig ? "C02" : "C03");
   }
   if (block.status === "UNKNOWN") return result("未確認", "取得状態が不明です。", "収集処理の取得状態を確認する");
   if (block.status === "PARTIAL" && block.data === null) return result("一部未取得", "取得は完了せず、表示できる部分データもありません。", "取得範囲と収集処理の応答を確認する");

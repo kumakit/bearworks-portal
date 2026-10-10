@@ -92,12 +92,36 @@ test("optional failure keeps valid summary, counts the missing detail and gives 
   assert.equal(result.blocks.topPaths.usable, false);
   assert.equal(result.state, "一部未取得");
   assert.equal(result.counts.unavailable, 1);
-  assert.match(result.actions[0], /設定とアクセス条件/);
+  assert.match(result.actions[0], /設定・応答と取得元の提供状況/);
   const output = html(root);
   assert.match(output, /総イベント 15 件/);
   assert.doesNotMatch(output, /\/wp-login.php ·/);
   assert.match(output, /最後の取得試行/);
   assert.doesNotMatch(output, /継続失敗|攻撃への対応/);
+});
+
+test("unavailable WAF groups keep five failures and describe the unknown cause neutrally", () => {
+  const root = clone();
+  const wafKeys = ["summary", "topRules", "topPaths", "topASNs", "timeline"];
+  for (const key of wafKeys) Object.assign(root.waf7d[key], {
+    status: "ERROR", coverage: "UNKNOWN", errorCode: "ACCESS_DENIED",
+    data: null, collectedAt: null, validUntil: null,
+  });
+  const collection = parsed(root);
+  const result = assessCollection(collection, NOW);
+  assert.equal(result.state, "一部未取得");
+  assert.equal(result.counts.unavailable, 5);
+  for (const key of wafKeys) {
+    assert.equal(collection[key].data, null);
+    assert.equal(result.blocks[key].state, "取得失敗");
+    assert.equal(result.blocks[key].usable, false);
+    assert.match(result.blocks[key].reason, /原因はこの情報だけでは特定できません/);
+    assert.match(result.blocks[key].action, /取得元の提供状況/);
+  }
+  const output = html(root);
+  assert.doesNotMatch(output, /権限がありません|プラン対象外|アクセス条件を満たせませんでした|総イベント 15 件/);
+  assert.match(output, /データ収集について必要な操作<\/h2><ul[^>]*><li>収集処理の設定・応答と取得元の提供状況を確認する<\/li>/);
+  assert.match(output, /Security Events/);
 });
 
 test("PARTIAL with verified data is reference-only, null remains unavailable", () => {
