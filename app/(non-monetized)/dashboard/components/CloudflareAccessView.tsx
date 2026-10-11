@@ -81,28 +81,43 @@ function CountryMap({ data, selected }: { data: CountryTrafficData; selected: st
   </>;
 }
 
-export function CloudflareAccessView({ collection, nowUpper }: { collection: Collection; nowUpper: number | null }) {
+export function CloudflareAccessView({ collection, nowUpper, defaultPeriod = "24h" }: { collection: Collection; nowUpper: number | null; defaultPeriod?: "24h" | "7d" | "30d" }) {
   const [selected, setSelected] = useState<string | null>(null);
+  const [period, setPeriod] = useState<"24h" | "7d" | "30d">(defaultPeriod);
   if (collection.schemaVersion !== 2) return null;
-  const seriesCheck = assessBlock(collection.trafficSeries, nowUpper);
-  const countryCheck = assessBlock(collection.countryTraffic, nowUpper);
-  const series = seriesCheck.usable && collection.trafficSeries.status === "OK" ? collection.trafficSeries.data : null;
-  const countries = countryCheck.usable && collection.countryTraffic.status === "OK" ? collection.countryTraffic.data : null;
+  const seriesBlock = period === "24h" ? collection.trafficSeries : period === "7d" ? collection.trafficSeries7d : collection.trafficSeries30d;
+  const countryBlock = period === "24h" ? collection.countryTraffic : period === "7d" ? collection.countryTraffic7d : collection.countryTraffic30d;
+  const previousBlock = period === "24h" ? collection.trafficPrevious24h : period === "7d" ? collection.trafficPrevious7d : null;
+  const seriesCheck = assessBlock(seriesBlock, nowUpper);
+  const countryCheck = assessBlock(countryBlock, nowUpper);
+  const previousCheck = previousBlock ? assessBlock(previousBlock, nowUpper) : null;
+  const series = seriesCheck.usable && seriesBlock.status === "OK" ? seriesBlock.data : null;
+  const countries = countryCheck.usable && countryBlock.status === "OK" ? countryBlock.data : null;
+  const previous = previousCheck?.usable && previousBlock?.status === "OK" ? previousBlock.data : null;
   const points = series?.points.map(point => ({ time: timestamp(point.hour)!, requests: point.requests })) ?? [];
   const selectedCountry = countries?.countries.find(item => item.code === selected);
+  const periodLabel = period === "24h" ? "24時間" : period === "7d" ? "7日間" : "30日間";
+  const compareText = period === "30d" ? "この期間は前期間比較に対応していません。" : previous && series
+    ? `前期間との差 ${series.totalRequests - previous.totalRequests >= 0 ? "+" : "−"}${number(Math.abs(series.totalRequests - previous.totalRequests))} 件${previous.totalRequests > 0 ? `（${series.totalRequests - previous.totalRequests >= 0 ? "+" : ""}${((series.totalRequests - previous.totalRequests) / previous.totalRequests * 100).toFixed(1)}%）` : "（前期間が0件のため増減率は算出できません）"}。${seriesBlock.precision === "estimated" ? "推計値同士の参考比較です。" : "同じ集計条件で比較しています。"}`
+    : period === "24h" && !previousBlock?.attemptedAt ? "比較データを準備中です。"
+      : previousCheck ? `${previousCheck.state}：${previousCheck.reason}` : "比較データを準備中です。";
   return <>
+    <fieldset className={`${panel} flex flex-wrap items-center gap-3`}>
+      <legend className="px-1 text-sm font-semibold">表示期間</legend>
+      {([ ["24h", "24時間"], ["7d", "7日間"], ["30d", "30日間"] ] as const).map(([value, labelText]) => <button key={value} type="button" onClick={() => { setPeriod(value); setSelected(null); }} aria-pressed={period === value} className={`rounded-lg border px-4 py-2 text-sm focus:outline-2 focus:outline-blue-700 ${period === value ? "border-blue-700 bg-blue-50 font-semibold text-blue-900" : "border-gray-300"}`}>{labelText}</button>)}
+    </fieldset>
     <section className="grid gap-4 sm:grid-cols-3" aria-label="アクセスの概要">
-      <div className={panel}><h2 className="text-sm font-semibold text-muted">アクセス数（完了した24時間）</h2><p className="text-2xl font-bold mt-2">{series ? `${number(series.totalRequests)} 件` : "未確認"}</p><p className="text-xs mt-2">HTTP リクエスト数</p></div>
-      <div className={panel}><h2 className="text-sm font-semibold text-muted">前の24時間との比較</h2><p className="text-xl font-bold mt-2">{series ? "比較データの準備中" : "未確認"}</p><p className="text-xs mt-2">同じ条件の値が揃ってから表示します</p></div>
-      <div className={panel}><h2 className="text-sm font-semibold text-muted">キャッシュ率（同じ24時間）</h2><p className="text-2xl font-bold mt-2">{series ? series.cacheRate === null ? "算出不能" : `${series.cacheRate}%` : "未確認"}</p><p className="text-xs mt-2">キャッシュ配信したリクエストの割合</p></div>
+      <div className={panel}><h2 className="text-sm font-semibold text-muted">アクセス数（{periodLabel}）</h2><p className="text-2xl font-bold mt-2">{series ? `${number(series.totalRequests)} 件` : "未確認"}</p><p className="text-xs mt-2">HTTP リクエスト数</p></div>
+      <div className={panel}><h2 className="text-sm font-semibold text-muted">{period === "30d" ? "前期間との比較" : `前の${periodLabel}との比較`}</h2><p className="text-sm font-bold mt-2">{period === "30d" ? compareText : series ? compareText : "未確認"}</p><p className="text-xs mt-2">{period === "30d" ? "履歴の保存と比較は別フェーズで設計します" : "同じ条件の値が揃った場合に表示します"}</p></div>
+      <div className={panel}><h2 className="text-sm font-semibold text-muted">集計方法（{periodLabel}）</h2><p className="text-base font-bold mt-2">{series ? seriesBlock.precision === "estimated" ? "サンプルから推計" : "今回の取得ではサンプリングなし" : "未確認"}</p><p className="text-xs mt-2">{period === "24h" ? `キャッシュ率：${series ? series.cacheRate === null || series.cacheRate === undefined ? "算出不能" : `${series.cacheRate}%` : "未確認"}` : "24時間の集計とは別の取得結果です"}</p></div>
     </section>
     <section className={panel} aria-labelledby="access-trend-title">
-      <h2 id="access-trend-title" className="text-xl font-bold">アクセス推移（直近24時間）</h2>
+      <h2 id="access-trend-title" className="text-xl font-bold">アクセス推移（{period === "24h" ? "直近24時間" : periodLabel}）</h2>
       <p className="text-sm mt-2">bearworks.uk とサブドメインを含むゾーン全体の HTTP リクエスト数です。訪問人数ではありません。</p>
       {series ? <>
-        <p className="text-sm mt-2">この24時間には {number(series.totalRequests)} 件の HTTP リクエストがありました。{collection.trafficSeries.precision === "estimated" ? "サンプルからの推計値です。" : "今回の取得ではサンプリングされていません。"}</p>
-        <p className="text-xs mt-1">期間：{new Date(timestamp(collection.trafficSeries.windowStart)!).toLocaleString("ja-JP", { timeZone: "Asia/Tokyo" })} ～ {new Date(timestamp(collection.trafficSeries.windowEnd)!).toLocaleString("ja-JP", { timeZone: "Asia/Tokyo" })} JST。末尾の進行中の時間は含めません。</p>
-        <div className="h-64 mt-4" role="img" aria-label="完了した24時間の時間別リクエスト数。各時刻の値は下の表で確認できます。">
+        <p className="text-sm mt-2">この{periodLabel}には {number(series.totalRequests)} 件の HTTP リクエストがありました。{seriesBlock.precision === "estimated" ? "サンプルからの推計値です。" : "今回の取得ではサンプリングされていません。"}</p>
+        <p className="text-xs mt-1">期間：{new Date(timestamp(seriesBlock.windowStart)!).toLocaleString("ja-JP", { timeZone: "Asia/Tokyo" })} ～ {new Date(timestamp(seriesBlock.windowEnd)!).toLocaleString("ja-JP", { timeZone: "Asia/Tokyo" })} JST。末尾の進行中の時間は含めません。</p>
+        <div className="h-64 mt-4" role="img" aria-label={`${periodLabel}の時間別リクエスト数。各時刻の値は下の表で確認できます。`}>
           <ResponsiveContainer width="100%" height="100%" initialDimension={{ width: 320, height: 256 }}>
             <AreaChart data={points} margin={{ left: 0, right: 12, top: 8, bottom: 4 }}><CartesianGrid strokeDasharray="3 3" />
               <XAxis dataKey="time" type="number" scale="time" domain={["dataMin", "dataMax"]} tickFormatter={timeLabel} minTickGap={40} />
@@ -111,18 +126,18 @@ export function CloudflareAccessView({ collection, nowUpper }: { collection: Col
           </ResponsiveContainer>
         </div>
         <details className="mt-3"><summary className="cursor-pointer text-sm underline">時間別の件数を表で見る</summary><div className="max-h-64 overflow-auto"><table className="w-full text-sm mt-2"><thead><tr><th className="text-left">開始時刻（JST）</th><th className="text-right">件数</th></tr></thead><tbody>{points.map(point => <tr key={point.time} className="border-t"><td>{timeLabel(point.time)}</td><td className="text-right">{number(point.requests)}</td></tr>)}</tbody></table></div></details>
-      </> : <p className="text-sm mt-3">{collection.trafficSeries.status === "UNKNOWN" && collection.trafficSeries.attemptedAt ? "未配信：この項目は収集設定で無効です。" : `${seriesCheck.state}：${seriesCheck.reason}`}</p>}
+      </> : <p className="text-sm mt-3">{seriesBlock.status === "UNKNOWN" && !seriesBlock.attemptedAt ? "未配信：この期間のデータはありません。" : seriesBlock.status === "UNKNOWN" && seriesBlock.attemptedAt ? "未配信：この項目は収集設定で無効です。" : `${seriesCheck.state}：${seriesCheck.reason}`}</p>}
     </section>
     <section className={panel} aria-labelledby="country-traffic-title">
-      <h2 id="country-traffic-title" className="text-xl font-bold">国別アクセス（直近24時間）</h2>
+      <h2 id="country-traffic-title" className="text-xl font-bold">国別アクセス（{period === "24h" ? "直近24時間" : periodLabel}）</h2>
       <p className="text-sm mt-2">国は接続元 IP から推定した場所です。VPN などを使うと実際の所在地と異なる場合があります。</p>
       {countries ? <>
-        <p className="text-sm mt-2">合計：<strong>{number(countries.totalRequests)} 件</strong>。{collection.countryTraffic.precision === "estimated" ? "サンプルからの推計値です。" : "今回の取得ではサンプリングされていません。"}</p>
+        <p className="text-sm mt-2">合計：<strong>{number(countries.totalRequests)} 件</strong>。{countryBlock.precision === "estimated" ? "サンプルからの推計値です。" : "今回の取得ではサンプリングされていません。"}</p>
         <div className="grid gap-5 lg:grid-cols-[minmax(0,2fr)_minmax(220px,1fr)] mt-4">
           <div><CountryMap data={countries} selected={selected} />{selectedCountry && <p className="text-sm mt-2">選択中：{label(selectedCountry.code)} {number(selectedCountry.requests)} 件{countries.totalRequests > 0 ? `（${(selectedCountry.requests / countries.totalRequests * 100).toFixed(1)}%）` : ""}</p>}</div>
           <div><h3 className="font-semibold">国・地域の件数順一覧</h3><p className="text-xs mt-1">一覧には地図に載らない国・地域も含みます。</p><ol className="mt-2 max-h-80 overflow-auto divide-y">{countries.countries.map(item => <li key={item.code}><button type="button" onClick={() => setSelected(item.code)} className="w-full py-2 text-left rounded focus:outline-2 focus:outline-blue-700" aria-pressed={selected === item.code}><span className="block font-medium">{label(item.code)} <span className="text-xs">({item.code})</span></span><span className="text-sm">{number(item.requests)} 件{countries.totalRequests > 0 ? ` · ${(item.requests / countries.totalRequests * 100).toFixed(1)}%` : ""}</span></button></li>)}</ol></div>
         </div>
-      </> : <p className="text-sm mt-3">{collection.countryTraffic.status === "UNKNOWN" && collection.countryTraffic.attemptedAt ? "未配信：この項目は収集設定で無効です。" : `${countryCheck.state}：${countryCheck.reason}`}</p>}
+      </> : <p className="text-sm mt-3">{countryBlock.status === "UNKNOWN" && !countryBlock.attemptedAt ? "未配信：この期間のデータはありません。" : countryBlock.status === "UNKNOWN" && countryBlock.attemptedAt ? "未配信：この項目は収集設定で無効です。" : `${countryCheck.state}：${countryCheck.reason}`}</p>}
     </section>
   </>;
 }

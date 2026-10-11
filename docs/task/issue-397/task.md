@@ -75,6 +75,16 @@ Plan Review完了は受領条件の反映とCodexによる採否判断を表す�
 - [ ] 履歴・前期間比・閾値の必要性と実装範囲を判断する。
 - [ ] Issue全体の受入条件が揃うまでDone/closeにしない。
 
+## Phase 2（2026-10-12 追補）
+
+- [x] Free 実環境で前24時間、現行・前7日、現行30日の取得可能範囲と集計値を読み取り確認する。
+- [x] 7日・30日の時間別・国別・全体値の整合、精度区分、失敗時の分離を Apps と Portal に実装する。
+- [x] 24時間・7日・30日の表示切り替えと、24時間・7日の前期間比較を実装する。
+- [x] 30日比較と履歴保存を別フェーズに分け、画面でも未対応と示す。
+- [x] 両 repo の共通 fixture、対象テスト、Portal 型検査・lint をローカルで確認する。
+- [ ] Phase 2 の Portal / Apps draft PR と CI を確認する。
+- [ ] Portal を先に配備し、Apps 配備・機能有効化後に定期収集、Digest、認証済み PC / スマートフォン表示を確認する。
+
 限定commit・push・ドラフトPR作成と依存最小更新を承認範囲内で実施。[CI確認記録](ci-verification.md)と[本番反映追補](operational-readiness.md#2026-10-08-本番反映追補)を参照。Appsの対象Linuxテスト137 PASS、post-merge main workflow成功。PortalもWorkers CI全工程PASS、本番100% traffic。
 
 NEXT ACTOR: ROOT CODEX / HUMAN

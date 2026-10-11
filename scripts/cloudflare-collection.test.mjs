@@ -13,6 +13,8 @@ const fixtureBytes = await readFile(new URL("./fixtures/cloudflare-collection-v1
 const fixture = JSON.parse(fixtureBytes);
 const fixtureV2Bytes = await readFile(new URL("./fixtures/cloudflare-collection-v2.json", import.meta.url));
 const fixtureV2 = JSON.parse(fixtureV2Bytes);
+const fixtureV2Phase2Bytes = await readFile(new URL("./fixtures/cloudflare-collection-v2-phase2.json", import.meta.url));
+const fixtureV2Phase2 = JSON.parse(fixtureV2Phase2Bytes);
 const manifest = JSON.parse(await readFile(new URL("./fixtures/cloudflare-collection-manifest.json", import.meta.url)));
 const NOW = Date.parse("2026-10-06T00:00:00Z");
 const UNTIL = Date.parse("2026-10-06T03:00:00Z");
@@ -32,12 +34,16 @@ function load(code, resolver = require) {
 }
 const route = load(await compile("app/api/dashboard-data/route.ts"));
 const view = load(await compile("app/(non-monetized)/dashboard/components/CloudflareCollectionView.tsx")).CloudflareCollectionView;
+const accessView = load(await compile("app/(non-monetized)/dashboard/components/CloudflareAccessView.tsx")).CloudflareAccessView;
 const pageCode = await compile("app/(non-monetized)/dashboard/cloudflare/page.tsx");
 const html = (root, now = NOW, extra = {}) => renderToStaticMarkup(React.createElement(view, { collection: parsed(root), nowUpper: now, ...extra }));
+const accessHtml = (root, period, now = NOW) => renderToStaticMarkup(React.createElement(accessView, { collection: parsed(root), nowUpper: now, defaultPeriod: period }));
+const withPhase2Periods = () => structuredClone(fixtureV2Phase2);
 
 test("shared fixture hash and independently specified expectations", () => {
   assert.equal(createHash("sha256").update(fixtureBytes).digest("hex"), manifest.files["cloudflare-collection-v1.json"]);
   assert.equal(createHash("sha256").update(fixtureV2Bytes).digest("hex"), manifest.files["cloudflare-collection-v2.json"]);
+  assert.equal(createHash("sha256").update(fixtureV2Phase2Bytes).digest("hex"), manifest.files["cloudflare-collection-v2-phase2.json"]);
   assert.equal(manifest.schemaVersion, 1);
   assert.equal(manifest.evaluationTime, "2026-10-06T00:00:00Z");
   const result = assessCollection(parsed(fixture), NOW);
@@ -81,10 +87,86 @@ test("v2 validates the same full hourly denominator for trend and country list",
   const output = html(fixtureV2);
   assert.match(output, /アクセス推移（直近24時間）/);
   assert.match(output, /国別アクセス（直近24時間）/);
-  assert.match(output, /キャッシュ率（同じ24時間）/);
-  assert.match(output, /比較データの準備中/);
+  assert.match(output, /キャッシュ率：40%/);
+  assert.match(output, /比較データを準備中/);
   assert.match(output, /訪問人数ではありません/);
   assert.match(output, /日本/);
+});
+
+test("period selector renders 24h, adaptive 7d and adaptive 30d data with period-specific comparison", () => {
+  const root = withPhase2Periods();
+  const parsedRoot = parsed(root);
+  assert.equal(parsedRoot.trafficSeries7d.data.points.length, 168);
+  assert.equal(parsedRoot.trafficSeries30d.data.points.length, 720);
+  assert.equal(parsedRoot.trafficSeries7d.precision, "estimated");
+  assert.equal(parsedRoot.trafficPrevious24h.status, "OK");
+  assert.equal(assessBlock(parsedRoot.trafficPrevious24h, NOW).usable, true);
+  assert.equal(parsedRoot.trafficPrevious7d.data.totalRequests, 84);
+  const sevenDay = accessHtml(root, "7d");
+  assert.match(sevenDay, /aria-pressed="true"[^>]*>7日間/);
+  assert.match(sevenDay, /アクセス推移（7日間）/);
+  assert.match(sevenDay, /サンプルからの推計値です/);
+  assert.match(sevenDay, /前期間との差 \+84 件（\+100\.0%）/);
+  assert.match(sevenDay, /国別アクセス（7日間）/);
+  assert.match(sevenDay, /23\.8%/);
+  const thirtyDay = accessHtml(root, "30d");
+  assert.match(thirtyDay, /aria-pressed="true"[^>]*>30日間/);
+  assert.match(thirtyDay, /この期間は前期間比較に対応していません/);
+  assert.match(thirtyDay, /履歴の保存と比較は別フェーズで設計します/);
+  assert.match(thirtyDay, /国別アクセス（30日間）/);
+  const oneDay = accessHtml(root, "24h");
+  assert.match(oneDay, /キャッシュ率：40%/);
+  assert.match(oneDay, /前期間との差 \+20 件（\+25\.0%）/);
+});
+
+test("unsampled adaptive periods remain exact and the comparison describes them accurately", () => {
+  const root = withPhase2Periods();
+  for (const key of ["trafficSeries7d", "countryTraffic7d", "trafficPrevious7d", "trafficSeries30d", "countryTraffic30d"]) {
+    root[key].sampling = "NONE";
+    root[key].precision = "exact";
+  }
+  const result = parsed(root);
+  assert.equal(result.trafficSeries7d.status, "OK");
+  assert.equal(result.countryTraffic7d.status, "OK");
+  assert.equal(result.trafficPrevious7d.status, "OK");
+  const output = accessHtml(root, "7d");
+  assert.match(output, /前期間との差 \+84 件/);
+  assert.match(output, /同じ集計条件で比較しています/);
+  assert.doesNotMatch(output, /推計値同士の参考比較/);
+});
+
+test("phase 2 blocks reject incomplete buckets, inconsistent denominators and non-estimated data independently", () => {
+  const changes = [
+    root => { root.trafficSeries7d.data.points.pop(); },
+    root => { root.trafficSeries30d.data.points[12].hour = root.trafficSeries30d.data.points[11].hour; },
+    root => { root.countryTraffic7d.data.totalRequests += 1; },
+    root => { root.countryTraffic30d.data.countries[0].code = root.countryTraffic30d.data.countries[1].code; },
+    root => { root.trafficPrevious7d.windowEnd = "2026-09-28T00:00:00Z"; },
+    root => { root.trafficSeries7d.sampling = "UNKNOWN"; },
+  ];
+  for (const change of changes) {
+    const root = withPhase2Periods(); change(root);
+    const result = parsed(root);
+    if (root.trafficSeries7d.sampling === "UNKNOWN") assert.equal(result.trafficSeries7d.data, null);
+    if (root.countryTraffic7d.data.totalRequests !== 168) assert.equal(result.countryTraffic7d.data, null);
+    if (root.countryTraffic30d.data.countries[0].code === root.countryTraffic30d.data.countries[1].code) assert.equal(result.countryTraffic30d.data, null);
+    if (root.trafficPrevious7d.windowEnd !== root.trafficSeries7d.windowStart) assert.equal(result.trafficPrevious7d.data, null);
+  }
+});
+
+test("a missing period block stays isolated and absent optional blocks do not affect legacy health", () => {
+  const root = withPhase2Periods();
+  delete root.countryTraffic7d;
+  const parsedRoot = parsed(root);
+  assert.equal(parsedRoot.trafficSeries7d.status, "OK");
+  assert.equal(parsedRoot.countryTraffic7d.status, "UNKNOWN");
+  const output = accessHtml(root, "7d");
+  assert.match(output, /アクセス推移（7日間）/);
+  assert.match(output, /未配信：この期間のデータはありません/);
+  assert.doesNotMatch(output, /国・地域の件数順一覧/);
+  const result = assessCollection(parsed(root), NOW);
+  assert.equal(result.blocks.trafficSeries7d.state, "取得正常");
+  assert.equal(result.blocks.countryTraffic7d.state, "未確認");
 });
 
 test("v2 access failures affect collection health while explicitly disabled blocks do not", () => {
