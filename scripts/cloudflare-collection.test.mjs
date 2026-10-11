@@ -87,6 +87,36 @@ test("v2 validates the same full hourly denominator for trend and country list",
   assert.match(output, /日本/);
 });
 
+test("v2 access failures affect collection health while explicitly disabled blocks do not", () => {
+  const failed = structuredClone(fixtureV2);
+  Object.assign(failed.countryTraffic, { status: "ERROR", coverage: "UNKNOWN", errorCode: "UPSTREAM_ERROR",
+    data: null, collectedAt: null, validUntil: null });
+  const assessment = assessCollection(parsed(failed), NOW);
+  assert.equal(assessment.state, "一部未取得");
+  assert.equal(assessment.counts.total, 4);
+  assert.equal(assessment.counts.unavailable, 1);
+  assert.equal(assessment.blocks.countryTraffic.state, "取得失敗");
+  assert.match(html(failed), /必須項目の判定不能 1 件 \/ 対象 4 件/);
+  assert.match(html(failed), /国別アクセス（完了した24時間）：取得失敗/);
+
+  const disabled = structuredClone(fixtureV2);
+  Object.assign(disabled.countryTraffic, { source: "UNKNOWN", status: "UNKNOWN", coverage: "UNKNOWN",
+    errorCode: null, data: null, collectedAt: null, validUntil: null });
+  const disabledAssessment = assessCollection(parsed(disabled), NOW);
+  assert.equal(disabledAssessment.state, "取得正常");
+  assert.equal(disabledAssessment.counts.total, 3);
+  assert.equal(disabledAssessment.counts.unavailable, 0);
+  assert.doesNotMatch(html(disabled), /国別アクセス（完了した24時間）：未確認/);
+
+  const retiredWaf = structuredClone(fixtureV2);
+  Object.assign(retiredWaf.waf7d.summary, { status: "ERROR", coverage: "UNKNOWN", errorCode: "ACCESS_DENIED",
+    data: null, collectedAt: null, validUntil: null });
+  const wafAssessment = assessCollection(parsed(retiredWaf), NOW);
+  assert.equal(wafAssessment.state, "取得正常");
+  assert.equal(wafAssessment.counts.unavailable, 0);
+  assert.equal(wafAssessment.blocks.summary.state, "取得失敗");
+});
+
 test("unknown country code remains visible as an unknown region", () => {
   const root = structuredClone(fixtureV2);
   root.countryTraffic.data.countries[1].code = "XX";

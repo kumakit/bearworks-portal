@@ -186,14 +186,17 @@ export function assessBlock(block: CollectionBlock<unknown>, nowUpper: number | 
   return result("取得正常", block.coverage === "TOP_N" ? "要求した上位一覧を取得しました。全体件数ではありません。" : "要求した集計範囲の取得を確認しました。安全の判定ではありません。", "", true);
 }
 export function assessCollection(collection: Collection, nowUpper: number | null) {
-  const blocks = Object.fromEntries(BLOCK_KEYS.map(key => [key, assessBlock(collection[key], nowUpper)])) as Record<BlockKey, BlockAssessment>;
-  const counts = { unavailable: 0, total: BLOCK_KEYS.length };
-  for (const key of BLOCK_KEYS) if (blocks[key].state !== "取得正常" && blocks[key].state !== "デモ") counts.unavailable++;
-  const states = BLOCK_KEYS.map(key => blocks[key].state);
+  const blocks = Object.fromEntries([...BLOCK_KEYS, ...ACCESS_KEYS].map(key => [key, assessBlock(collection[key], nowUpper)])) as Record<BlockKey, BlockAssessment>;
+  const enabledAccess = collection.schemaVersion === 2 ? ACCESS_KEYS.filter(key =>
+    !(collection[key].status === "UNKNOWN" && !collection[key].invalid && collection[key].attemptedAt !== null)) : [];
+  const monitoredKeys: BlockKey[] = collection.schemaVersion === 2 ? ["traffic24h", "pagesMonth", ...enabledAccess] : BLOCK_KEYS;
+  const counts = { unavailable: 0, total: monitoredKeys.length };
+  for (const key of monitoredKeys) if (blocks[key].state !== "取得正常" && blocks[key].state !== "デモ") counts.unavailable++;
+  const states = monitoredKeys.map(key => blocks[key].state);
   const state: DisplayState = states.every(s => s === "デモ") ? "デモ" : states.every(s => s === "取得正常") ? "取得正常" :
     states.includes("取得正常") || states.includes("一部未取得") ? "一部未取得" : states.includes("取得失敗") ? "取得失敗" : states.includes("期限切れ") ? "期限切れ" : "未確認";
-  const actions = [...new Set(BLOCK_KEYS.filter(k => collection[k].status !== "DEMO").sort((a, b) => Number(["ACCESS_DENIED", "MISSING_CONFIG"].includes(collection[b].errorCode!)) - Number(["ACCESS_DENIED", "MISSING_CONFIG"].includes(collection[a].errorCode!))).map(k => blocks[k].action).filter(Boolean))];
-  return { state, blocks, counts, actions,
+  const actions = [...new Set(monitoredKeys.filter(k => collection[k].status !== "DEMO").sort((a, b) => Number(["ACCESS_DENIED", "MISSING_CONFIG"].includes(collection[b].errorCode!)) - Number(["ACCESS_DENIED", "MISSING_CONFIG"].includes(collection[a].errorCode!))).map(k => blocks[k].action).filter(Boolean))];
+  return { state, blocks, counts, actions, monitoredKeys,
     signals: { domain: "SIGNALS" as const, state: "判定ルール未設定" as const, total: 0, unavailable: 0, configured: 0 },
     pagesQuota: { domain: "COLLECTION" as const, ruleId: "P01", state: "未確認" as const, unavailable: 1, total: 1 },
     wafFacts: { domain: "FACT" as const, ruleId: "W01", usable: blocks.summary.usable },

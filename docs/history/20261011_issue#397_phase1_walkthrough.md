@@ -12,9 +12,10 @@
 ## 確認
 
 - Apps 収集・Digest テスト: 85 件成功。
-- Portal 契約・API テスト: 24 件成功。TypeScript 型検査と全体 ESLint 成功（既存の警告 3 件）。
+- Portal 契約・API テスト: 25 件成功。TypeScript 型検査と全体 ESLint 成功（既存の警告 3 件）。
 - Portal の Webpack 本番ビルド成功。既定の Turbopack ビルドはこの環境で Google Fonts への通信と内部プロセスエラーで完了しなかった。
 - GitHub Actions は Apps の「Validate Streamlit」「Dashboard tests」と Portal の「Workers build」が成功。国別内訳だけが欠損したときの独立判定を Apps PR へ追加し、対象テスト 85 件と Apps CI 2 件が再成功した。Portal の記録更新後の Workers build も成功した。
+- 独立レビューで、v2 の新アクセス項目が上部の取得状態へ反映されない点を発見。Portal の必須データ集計を `traffic24h`、`pagesMonth` と有効な新アクセス項目に揃え、旧 WAF 5 項目だけの失敗で上部を異常扱いしないよう修正した。詳細欄も同じ対象を表示する。
 - `git diff --check` は両 repo とも成功。地図の一時プレビューを目視確認し、一時ファイルは削除した。
 - 合成データの開発専用プレビューで概要カード・グラフ・地図・国別一覧を目視確認した。確認後、プレビュー用ルートは製品差分から削除した。
 
