@@ -4,7 +4,8 @@ import React from "react";
 import Link from "@/components/InternalLink";
 import { RefreshCw } from "lucide-react";
 import { CloudflareActionDistribution, CloudflareEventTimeline } from "./CloudflareCollectionCharts";
-import { BLOCK_KEYS, BLOCK_LABELS, actionLabel, assessCollection, samplingNote, timestamp, type Collection } from "../lib/cloudflareCollection";
+import { CloudflareAccessView } from "./CloudflareAccessView";
+import { BLOCK_KEYS, BLOCK_LABELS, actionLabel, assessCollection, samplingNote, timestamp, type BlockKey, type Collection } from "../lib/cloudflareCollection";
 
 const panel = "rounded-2xl border border-gray-200 bg-white p-5 shadow-soft";
 const number = (n: number) => n.toLocaleString("ja-JP");
@@ -21,14 +22,15 @@ export function CloudflareCollectionView({ collection, nowUpper, loading = false
   const paths = assessment.blocks.topPaths.usable ? collection.topPaths.data : null;
   const asns = assessment.blocks.topASNs.usable ? collection.topASNs.data : null;
   const timeline = assessment.blocks.timeline.usable ? collection.timeline.data : null;
-  const note = (key: keyof Collection) => assessment.blocks[key].usable && <p className="text-xs mt-2">{assessment.blocks[key].state}{collection[key].status === "PARTIAL" ? "・今回の部分データを参考表示" : ""} · {samplingNote(collection[key].sampling)}</p>;
-  const unavailable = (key: keyof Collection) => <p className="text-sm mt-3">{failed ? "APIから取得できなかったため、この項目の値は確認できません。" : `${assessment.blocks[key].state}：${assessment.blocks[key].reason}`}</p>;
+  const note = (key: BlockKey) => assessment.blocks[key].usable && <p className="text-xs mt-2">{assessment.blocks[key].state}{collection[key].status === "PARTIAL" ? "・今回の部分データを参考表示" : ""} · {samplingNote(collection[key].sampling)}</p>;
+  const unavailable = (key: BlockKey) => <p className="text-sm mt-3">{failed ? "APIから取得できなかったため、この項目の値は確認できません。" : `${assessment.blocks[key].state}：${assessment.blocks[key].reason}`}</p>;
   const actions = failed ? ["時間をおいて再読込する。続く場合は収集APIの応答と接続を確認する"] : assessment.actions;
 
   return <main className="max-w-5xl mx-auto px-4 py-8 space-y-6">
     <header className="flex flex-wrap items-center justify-between gap-4"><div><Link href="/dashboard" className="text-sm text-muted underline">ダッシュボード</Link><h1 className="text-3xl font-bold mt-2">Cloudflare</h1></div><button onClick={onRefresh} disabled={refreshing} className="flex gap-2 items-center rounded-xl border px-4 py-2 bg-white disabled:opacity-50"><RefreshCw size={16} className={refreshing ? "animate-spin" : ""} />{refreshing ? "取得中" : "再読込"}</button></header>
     {loading && <p role="status">取得状態を確認中です。</p>}
     {failed && <p role="alert" className="rounded-xl border border-amber-300 bg-amber-50 p-4">APIからデータを取得できませんでした。値は表示できません。時間をおいて再読込してください。</p>}
+    <CloudflareAccessView collection={collection} nowUpper={nowUpper} />
     <div className="grid gap-4 md:grid-cols-2" aria-live="polite">
       <section className={panel}><h2 className="text-sm font-bold text-muted">データ状態</h2><p className="text-2xl font-bold my-2">{failed ? "取得失敗" : assessment.state}</p><p className="text-sm">取得項目の判定不能 {assessment.counts.unavailable} 件 / 対象 {assessment.counts.total} 件</p><p className="text-sm mt-2">取得成功は、サイトの安全や無停止を保証するものではありません。</p><a href="#collection-details" className="text-sm underline mt-2 block">欠けた項目・期間・取得状態を見る</a></section>
       <section className={panel}><h2 className="text-sm font-bold text-muted">セキュリティ・トラフィックの兆候</h2><p className="text-2xl font-bold my-2">危険度判定は次段階</p><p className="text-sm">判定不能 0 件 / 自動判定の対象 0 件</p><p className="text-sm mt-2">初回版では取得状態とWAFの処理結果を確認できます。危険度の自動判定は次の段階で対応します。</p><a href="#waf-facts" className="text-sm underline mt-2 block">確認できたWAFの事実を見る</a></section>

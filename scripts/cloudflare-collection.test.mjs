@@ -11,6 +11,8 @@ import { BLOCK_KEYS, parseCollection, assessCollection, assessBlock, timestamp, 
 const require = createRequire(import.meta.url);
 const fixtureBytes = await readFile(new URL("./fixtures/cloudflare-collection-v1.json", import.meta.url));
 const fixture = JSON.parse(fixtureBytes);
+const fixtureV2Bytes = await readFile(new URL("./fixtures/cloudflare-collection-v2.json", import.meta.url));
+const fixtureV2 = JSON.parse(fixtureV2Bytes);
 const manifest = JSON.parse(await readFile(new URL("./fixtures/cloudflare-collection-manifest.json", import.meta.url)));
 const NOW = Date.parse("2026-10-06T00:00:00Z");
 const UNTIL = Date.parse("2026-10-06T03:00:00Z");
@@ -35,6 +37,7 @@ const html = (root, now = NOW, extra = {}) => renderToStaticMarkup(React.createE
 
 test("shared fixture hash and independently specified expectations", () => {
   assert.equal(createHash("sha256").update(fixtureBytes).digest("hex"), manifest.files["cloudflare-collection-v1.json"]);
+  assert.equal(createHash("sha256").update(fixtureV2Bytes).digest("hex"), manifest.files["cloudflare-collection-v2.json"]);
   assert.equal(manifest.schemaVersion, 1);
   assert.equal(manifest.evaluationTime, "2026-10-06T00:00:00Z");
   const result = assessCollection(parsed(fixture), NOW);
@@ -52,10 +55,71 @@ test("shared fixture hash and independently specified expectations", () => {
 });
 
 test("legacy, unknown version, root runId and malformed input never reuse old numeric values", () => {
-  for (const input of [null, [], { summary: { cloudflareTotalThreats24h: 99999 }, wafDetails: { total_events: 88888 } }, { cloudflareCollection: { ...fixture, schemaVersion: 2 } }, { cloudflareCollection: { ...fixture, runId: " " } }]) {
+  for (const input of [null, [], { summary: { cloudflareTotalThreats24h: 99999 }, wafDetails: { total_events: 88888 } }, { cloudflareCollection: { ...fixture, schemaVersion: 3 } }, { cloudflareCollection: { ...fixture, runId: " " } }]) {
     const result = parseCollection(input);
     for (const key of BLOCK_KEYS) assert.equal(result[key].data, null);
     assert.equal(assessCollection(result, NOW).state, "未確認");
+  }
+});
+
+test("v1 remains usable while new access blocks stay undistributed", () => {
+  const result = parsed(fixture);
+  assert.equal(result.schemaVersion, 1);
+  assert.equal(result.traffic24h.data.requests, 100);
+  assert.equal(result.trafficSeries.data, null);
+  assert.equal(result.countryTraffic.data, null);
+  assert.doesNotMatch(html(fixture), /国別アクセス（直近24時間）/);
+});
+
+test("v2 validates the same full hourly denominator for trend and country list", () => {
+  const result = parsed(fixtureV2);
+  assert.equal(result.schemaVersion, 2);
+  assert.equal(result.trafficSeries.data.points.length, 24);
+  assert.equal(result.trafficSeries.data.totalRequests, result.countryTraffic.data.totalRequests);
+  assert.equal(result.trafficSeries.data.cacheRate, 40);
+  assert.equal(result.countryTraffic.data.countries.reduce((sum, row) => sum + row.requests, 0), 100);
+  const output = html(fixtureV2);
+  assert.match(output, /アクセス推移（直近24時間）/);
+  assert.match(output, /国別アクセス（直近24時間）/);
+  assert.match(output, /キャッシュ率（同じ24時間）/);
+  assert.match(output, /比較データの準備中/);
+  assert.match(output, /訪問人数ではありません/);
+  assert.match(output, /日本/);
+});
+
+test("unknown country code remains visible as an unknown region", () => {
+  const root = structuredClone(fixtureV2);
+  root.countryTraffic.data.countries[1].code = "XX";
+  const output = html(root);
+  assert.match(output, /不明な地域/);
+  assert.match(output, /40 件/);
+});
+
+test("pinned Natural Earth map has explicit join exceptions and no duplicate usable codes", async () => {
+  const map = JSON.parse(await readFile(new URL("../public/maps/ne_110m_admin_0_countries_v5.1.1.geojson", import.meta.url)));
+  const codes = map.features.map(feature => feature.properties.ISO_A2_EH).filter(code => /^[A-Z]{2}$/.test(code));
+  assert.equal(new Set(codes).size, codes.length);
+  assert.ok(map.features.length > 100);
+  assert.equal(map.features.find(feature => feature.properties.NAME === "France").properties.ISO_A2, "-99");
+  assert.equal(map.features.find(feature => feature.properties.NAME === "France").properties.ISO_A2_EH, "FR");
+  assert.equal(map.features.find(feature => feature.properties.NAME === "Taiwan").properties.ISO_A2_EH, "TW");
+  assert.equal(codes.includes("HK"), false);
+  assert.equal(codes.includes("SG"), false);
+});
+
+test("v2 missing, mismatched or incomplete access data does not fabricate the affected block", () => {
+  for (const change of [
+    root => { delete root.countryTraffic; },
+    root => { root.countryTraffic.data.totalRequests = 101; },
+    root => { root.trafficSeries.data.points.pop(); },
+    root => { root.trafficSeries.data.cacheRate = 90; },
+    root => { root.countryTraffic.windowEnd = "2026-10-05T23:00:00Z"; },
+  ]) {
+    const root = structuredClone(fixtureV2); change(root);
+    const parsedRoot = parsed(root);
+    assert.equal(parsedRoot.countryTraffic.data === null || parsedRoot.trafficSeries.data === null, true);
+    if (parsedRoot.countryTraffic.data === null) assert.doesNotMatch(html(root), /国・地域の件数順一覧/);
+    if (parsedRoot.trafficSeries.data === null) assert.doesNotMatch(html(root), /時間別の件数を表で見る/);
   }
 });
 
