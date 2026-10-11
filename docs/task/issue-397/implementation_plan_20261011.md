@@ -6,7 +6,7 @@
 
 実装基点: bearworks-portal `main` `3a05635185f9ed8e212d01b715d71e2655f61c44`、bearworks-apps `main` `c35e7dd0bfb29133b226904883575dd227d722a3`。両ローカルに `codex/issue-397-access-visualization` を作成済み。OCI 稼働 checkout は別 HEAD で未コミット変更があり、変更していない。
 
-状態: Antigravity 一次設計レビュー、追加の実測報告、Codex の照合を反映。**Phase 1 の 24 時間時系列と同一 1h 応答による国別集計は着手可**。地図の固定素材とコード対応は検証済みでローカル実装済み。7/30 日の国別割合と前期間比は追加検証後。push・リリースは未実施。
+状態: Antigravity 一次設計レビュー、追加の実測報告、Codex の照合を反映。**Phase 1 の 24 時間時系列と同一 1h 応答による国別集計を実装し、Apps draft PR #18 と Portal draft PR #25 を作成済み**。地図の固定素材とコード対応は検証済み。7/30 日の国別割合と前期間比は追加検証後。リリースは未実施。
 
 ## 1. 目的と今回の範囲
 
