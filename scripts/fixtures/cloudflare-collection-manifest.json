@@ -1,9 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatorRevision": "issue397-fixtures-v2",
+  "generatorRevision": "issue397-fixtures-v2-phase2",
   "files": {
     "cloudflare-collection-v1.json": "3757f22e8bd84d3c5dedcbb814d1b8c871956d198bc86463b3f410d6cc695b14",
-    "cloudflare-collection-v2.json": "c196d4c8bf2af3c1f21647b1cbab855f4514b918b0891e55a1e44500cd3f1c1b"
+    "cloudflare-collection-v2.json": "c196d4c8bf2af3c1f21647b1cbab855f4514b918b0891e55a1e44500cd3f1c1b",
+    "cloudflare-collection-v2-phase2.json": "a04e958a8c466017029e308c2abbd3878714f5bc2a843f5617092f294cfc7706"
   },
   "evaluationTime": "2026-10-06T00:00:00Z",
   "expectedTrafficThreatEvents": 4,

@@ -1,15 +1,15 @@
 import type { WAFTopRule, WAFTopPath, WAFTopASN, WAFHourlyEvent } from "./dashboardUtils";
 
 export type Sampling = "ADAPTIVE" | "NONE" | "UNKNOWN";
-export type BlockKey = "traffic24h" | "summary" | "topRules" | "topPaths" | "topASNs" | "timeline" | "pagesMonth" | "trafficSeries" | "countryTraffic";
-export type AccessKey = "trafficSeries" | "countryTraffic";
+export type BlockKey = "traffic24h" | "summary" | "topRules" | "topPaths" | "topASNs" | "timeline" | "pagesMonth" | "trafficSeries" | "countryTraffic" | "trafficPrevious24h" | "trafficSeries7d" | "countryTraffic7d" | "trafficPrevious7d" | "trafficSeries30d" | "countryTraffic30d";
+export type AccessKey = "trafficSeries" | "countryTraffic" | "trafficPrevious24h" | "trafficSeries7d" | "countryTraffic7d" | "trafficPrevious7d" | "trafficSeries30d" | "countryTraffic30d";
 export type BlockStatus = "OK" | "PARTIAL" | "ERROR" | "UNKNOWN" | "DEMO";
 export interface TrafficData { requests: number; threatEvents: number; cachedRequests: number; cacheRate: number | null }
 export interface SummaryData { totalEvents: number; actionCounts: Record<string, number> }
 export interface PagesData { deploymentCount: number; buildCount: null; limitBuilds: null; usagePercent: null; aggregationTimezone: "UTC"; scopeConfirmed: false }
-export interface TrafficSeriesData { granularity: "HOUR"; totalRequests: number; cachedRequests: number; cacheRate: number | null; points: { hour: string; requests: number }[] }
+export interface TrafficSeriesData { granularity: "HOUR"; totalRequests: number; cachedRequests?: number; cacheRate?: number | null; points: { hour: string; requests: number }[] }
 export interface CountryTrafficData { mode: "FULL"; totalRequests: number; countries: { code: string; requests: number }[] }
-interface DataByKey { traffic24h: TrafficData; summary: SummaryData; topRules: WAFTopRule[]; topPaths: WAFTopPath[]; topASNs: WAFTopASN[]; timeline: WAFHourlyEvent[]; pagesMonth: PagesData; trafficSeries: TrafficSeriesData; countryTraffic: CountryTrafficData }
+interface DataByKey { traffic24h: TrafficData; summary: SummaryData; topRules: WAFTopRule[]; topPaths: WAFTopPath[]; topASNs: WAFTopASN[]; timeline: WAFHourlyEvent[]; pagesMonth: PagesData; trafficSeries: TrafficSeriesData; countryTraffic: CountryTrafficData; trafficPrevious24h: TrafficSeriesData; trafficSeries7d: TrafficSeriesData; countryTraffic7d: CountryTrafficData; trafficPrevious7d: TrafficSeriesData; trafficSeries30d: TrafficSeriesData; countryTraffic30d: CountryTrafficData }
 export interface CollectionBlock<T> {
   status: BlockStatus; source: "LIVE" | "MOCK" | "UNKNOWN";
   coverage: "FULL" | "TOP_N" | "INCOMPLETE" | "POSSIBLY_TRUNCATED" | "UNKNOWN";
@@ -21,8 +21,8 @@ export interface CollectionBlock<T> {
 }
 export type Collection = { [K in BlockKey]: CollectionBlock<DataByKey[K]> } & { schemaVersion: 1 | 2 | null };
 export const BLOCK_KEYS: BlockKey[] = ["traffic24h", "summary", "topRules", "topPaths", "topASNs", "timeline", "pagesMonth"];
-export const ACCESS_KEYS: AccessKey[] = ["trafficSeries", "countryTraffic"];
-export const BLOCK_LABELS: Record<BlockKey, string> = { traffic24h: "アクセス統計（24時間）", summary: "WAF処理集計（7日間）", topRules: "上位ルール", topPaths: "上位パス", topASNs: "上位ネットワーク", timeline: "WAF時系列", pagesMonth: "Pages当月デプロイ", trafficSeries: "アクセス推移（完了した24時間）", countryTraffic: "国別アクセス（完了した24時間）" };
+export const ACCESS_KEYS: AccessKey[] = ["trafficSeries", "countryTraffic", "trafficPrevious24h", "trafficSeries7d", "countryTraffic7d", "trafficPrevious7d", "trafficSeries30d", "countryTraffic30d"];
+export const BLOCK_LABELS: Record<BlockKey, string> = { traffic24h: "アクセス統計（24時間）", summary: "WAF処理集計（7日間）", topRules: "上位ルール", topPaths: "上位パス", topASNs: "上位ネットワーク", timeline: "WAF時系列", pagesMonth: "Pages当月デプロイ", trafficSeries: "アクセス推移（完了した24時間）", countryTraffic: "国別アクセス（完了した24時間）", trafficPrevious24h: "前の24時間のアクセス推移", trafficSeries7d: "アクセス推移（7日間）", countryTraffic7d: "国別アクセス（7日間）", trafficPrevious7d: "前の7日間のアクセス推移", trafficSeries30d: "アクセス推移（30日間）", countryTraffic30d: "国別アクセス（30日間）" };
 const FAILURE_CODES = ["TIMEOUT", "ACCESS_DENIED", "UPSTREAM_ERROR", "INVALID_RESPONSE", "MISSING_CONFIG", "UNKNOWN_ERROR"];
 const ERROR_CODES = [...FAILURE_CODES, "PARTIAL_RESPONSE", "RESULT_LIMIT"];
 const record = (x: unknown): x is Record<string, unknown> => !!x && typeof x === "object" && !Array.isArray(x);
@@ -51,8 +51,19 @@ function dataValid(key: BlockKey, x: unknown): boolean {
     return x.points.every(p => record(p) && timestamp(p.hour) !== null && count(p.requests)) &&
       new Set(x.points.map(p => p.hour)).size === 24 && x.points.reduce<number>((sum, p) => sum + p.requests, 0) === x.totalRequests;
   }
-  if (key === "countryTraffic") {
-    if (!record(x) || x.mode !== "FULL" || !count(x.totalRequests) || !Array.isArray(x.countries) || x.countries.length > 300) return false;
+  if (key === "trafficPrevious24h") {
+    if (!record(x) || x.granularity !== "HOUR" || !count(x.totalRequests) || !Array.isArray(x.points) || x.points.length !== 24) return false;
+    return x.points.every(p => record(p) && timestamp(p.hour) !== null && count(p.requests)) && new Set(x.points.map(p => p.hour)).size === 24 && x.points.reduce<number>((sum, p) => sum + p.requests, 0) === x.totalRequests;
+  }
+  if (["trafficSeries7d", "trafficSeries30d", "trafficPrevious7d"].includes(key)) {
+    const expectedPoints = key === "trafficSeries30d" ? 720 : 168;
+    if (!record(x) || x.granularity !== "HOUR" || !count(x.totalRequests) || !Array.isArray(x.points) || x.points.length !== expectedPoints) return false;
+    return x.points.every(p => record(p) && timestamp(p.hour) !== null && count(p.requests)) &&
+      new Set(x.points.map(p => p.hour)).size === expectedPoints && x.points.reduce<number>((sum, p) => sum + p.requests, 0) === x.totalRequests;
+  }
+  if (["countryTraffic", "countryTraffic7d", "countryTraffic30d"].includes(key)) {
+    const limit = key === "countryTraffic" ? 300 : 500;
+    if (!record(x) || x.mode !== "FULL" || !count(x.totalRequests) || !Array.isArray(x.countries) || x.countries.length > limit || key !== "countryTraffic" && x.countries.length === limit) return false;
     return x.countries.every(c => record(c) && typeof c.code === "string" && /^[A-Z0-9-]{2,5}$/.test(c.code) && count(c.requests)) &&
       new Set(x.countries.map(c => c.code)).size === x.countries.length && x.countries.reduce<number>((sum, c) => sum + c.requests, 0) === x.totalRequests;
   }
@@ -85,7 +96,7 @@ function parseBlock<K extends BlockKey>(key: K, x: unknown, runId: string): Coll
   if (!record(x) || x.runId !== runId || !member(x.source, ["LIVE", "MOCK", "UNKNOWN"]) || !member(x.status, ["OK", "PARTIAL", "ERROR", "UNKNOWN", "DEMO"]) ||
     !member(x.coverage, ["FULL", "TOP_N", "INCOMPLETE", "POSSIBLY_TRUNCATED", "UNKNOWN"]) || !member(x.sampling, ["ADAPTIVE", "NONE", "UNKNOWN"]) ||
     !(x.errorCode === null || member(x.errorCode, ERROR_CODES))) return bad();
-  const access = key === "trafficSeries" || key === "countryTraffic";
+  const access = ACCESS_KEYS.includes(key as AccessKey);
   if (access && !member(x.precision, ["exact", "estimated", "unknown"])) return bad();
   if (!record(x.scope) || x.scope.kind !== (key === "pagesMonth" ? "ACCOUNT" : "ZONE") || !str(x.scope.label)) return bad();
   const fields = ["attemptedAt", "collectedAt", "windowStart", "windowEnd", "validUntil"] as const;
@@ -96,26 +107,33 @@ function parseBlock<K extends BlockKey>(key: K, x: unknown, runId: string): Coll
   const unknown = x.source === "UNKNOWN" && x.status === "UNKNOWN" && x.coverage === "UNKNOWN" && x.data === null && x.errorCode === null;
   const demo = x.source === "MOCK" && x.status === "DEMO" && member(x.coverage, ["FULL", "TOP_N"]) && x.errorCode === null && x.validUntil === null;
   if (!(success || partial || error || unknown || demo)) return bad();
+  const adaptiveAccess = ["trafficSeries7d", "countryTraffic7d", "trafficPrevious7d", "trafficSeries30d", "countryTraffic30d"].includes(key);
+  if (access && (success || demo) && x.coverage !== "FULL") return bad();
+  if (adaptiveAccess && (success || demo) && !member(x.sampling, ["ADAPTIVE", "NONE"])) return bad();
   if (x.coverage === "TOP_N" && !["topRules", "topPaths", "topASNs"].includes(key)) return bad();
   if ((success || demo || partial && x.data !== null) && !dataValid(key, x.data)) return bad();
   if ((error || unknown || partial && x.data === null) && (x.data !== null || x.collectedAt !== null || x.validUntil !== null)) return bad();
   if ((success || partial || demo) && x.data !== null) {
     const start = timestamp(x.windowStart), end = timestamp(x.windowEnd), collected = timestamp(x.collectedAt), attempted = timestamp(x.attemptedAt);
-    if (start === null || end === null || collected === null || attempted === null || start > end || end > collected || attempted > collected || x.source === "LIVE" && (access ? !(end <= attempted && attempted < end + 3600000) : end !== attempted)) return bad();
+    const priorWindow = key === "trafficPrevious24h" || key === "trafficPrevious7d";
+    if (start === null || end === null || collected === null || attempted === null || start > end || end > collected || attempted > collected || x.source === "LIVE" && (priorWindow ? end > attempted : access ? !(end <= attempted && attempted < end + 3600000) : end !== attempted)) return bad();
     if (access && (x.precision !== (x.sampling === "NONE" ? "exact" : x.sampling === "ADAPTIVE" ? "estimated" : "unknown") || x.precision === "unknown")) return bad();
     const until = timestamp(x.validUntil);
     if (until !== null && until < collected) return bad();
     if (!demo) {
-      if ((key === "traffic24h" || access) && end - start !== 24 * 60 * 60 * 1000) return bad();
+      const expectedHours: Partial<Record<AccessKey, number>> = { trafficSeries: 24, countryTraffic: 24, trafficPrevious24h: 24, trafficSeries7d: 168, countryTraffic7d: 168, trafficPrevious7d: 168, trafficSeries30d: 720, countryTraffic30d: 720 };
+      if ((key === "traffic24h" || access) && end - start !== (key === "traffic24h" ? 24 : expectedHours[key as AccessKey] ?? 0) * 60 * 60 * 1000) return bad();
       if (key !== "traffic24h" && !access && key !== "pagesMonth" && end - start !== 7 * 24 * 60 * 60 * 1000) return bad();
       if (key === "pagesMonth") {
         const endDate = new Date(end);
         if (start !== Date.UTC(endDate.getUTCFullYear(), endDate.getUTCMonth(), 1)) return bad();
       }
-      if (until !== null && until > end + 86400 * 1000) return bad();
+      if (until !== null && !["trafficPrevious24h", "trafficPrevious7d"].includes(key) && until > end + 86400 * 1000) return bad();
     }
     if (key === "timeline" && (x.data as WAFHourlyEvent[]).some(item => timestamp(item.hour)! < start || timestamp(item.hour)! > end)) return bad();
-    if (key === "trafficSeries" && (x.data as TrafficSeriesData).points.some((point, index) => timestamp(point.hour) !== start + index * 3600000)) return bad();
+    if (["trafficSeries", "trafficPrevious24h", "trafficSeries7d", "trafficPrevious7d", "trafficSeries30d"].includes(key) && (x.data as TrafficSeriesData).points.some((point, index) => timestamp(point.hour) !== start + index * 3600000)) return bad();
+    if (access && (start % 3600000 !== 0 || end % 3600000 !== 0)) return bad();
+    if (["trafficSeries", "countryTraffic", "trafficSeries7d", "countryTraffic7d", "trafficSeries30d", "countryTraffic30d"].includes(key) && !(end <= attempted && attempted < end + 3600000)) return bad();
   }
   return { status: x.status, source: x.source, coverage: x.coverage, sampling: x.sampling, errorCode: x.errorCode, data: x.data,
     precision: access ? x.precision : undefined,
@@ -128,12 +146,25 @@ export function parseCollection(payload: unknown): Collection {
   const valid = record(root) && (root.schemaVersion === 1 || root.schemaVersion === 2) && str(root.runId) && root.runId.length <= 128;
   const waf = valid && record(root.waf7d) ? root.waf7d : {};
   const old = Object.fromEntries(BLOCK_KEYS.map(key => [key, valid ? parseBlock(key, key === "traffic24h" || key === "pagesMonth" ? root[key] : waf[key], root.runId as string) : unknownBlock()]));
-  const access = Object.fromEntries(ACCESS_KEYS.map(key => [key, valid && root.schemaVersion === 2 ? parseBlock(key, root[key], root.runId as string) : unknownBlock()]));
+  const access = Object.fromEntries(ACCESS_KEYS.map(key => {
+    if (!valid || root.schemaVersion !== 2) return [key, unknownBlock()];
+    if (!Object.hasOwn(root, key) && key !== "trafficSeries" && key !== "countryTraffic") return [key, { ...unknownBlock(), invalid: false }];
+    return [key, parseBlock(key, root[key], root.runId as string)];
+  }));
   const result = { ...old, ...access, schemaVersion: valid ? root.schemaVersion : null } as Collection;
-  if (result.schemaVersion === 2 && ACCESS_KEYS.every(key => result[key].status === "OK" && !result[key].invalid)) {
-    const series = result.trafficSeries, countries = result.countryTraffic;
-    if (series.windowStart !== countries.windowStart || series.windowEnd !== countries.windowEnd || series.data?.totalRequests !== countries.data?.totalRequests || series.sampling !== countries.sampling || series.precision !== countries.precision) {
-      result.trafficSeries = unknownBlock(); result.countryTraffic = unknownBlock();
+  if (result.schemaVersion === 2) {
+    const pairs: [AccessKey, AccessKey][] = [["trafficSeries", "countryTraffic"], ["trafficSeries7d", "countryTraffic7d"], ["trafficSeries30d", "countryTraffic30d"]];
+    for (const [seriesKey, countryKey] of pairs) {
+      const series = result[seriesKey], countries = result[countryKey];
+      if (series.status === "OK" && countries.status === "OK" && !series.invalid && !countries.invalid &&
+        (timestamp(series.windowStart) !== timestamp(countries.windowStart) || timestamp(series.windowEnd) !== timestamp(countries.windowEnd) || series.data?.totalRequests !== countries.data?.totalRequests || series.scope?.label !== countries.scope?.label)) {
+        result[seriesKey] = unknownBlock(); result[countryKey] = unknownBlock();
+      }
+    }
+    for (const [currentKey, previousKey] of [["trafficSeries", "trafficPrevious24h"], ["trafficSeries7d", "trafficPrevious7d"]] as const) {
+      const current = result[currentKey], previous = result[previousKey];
+      if (current.status === "OK" && previous.status === "OK" && !current.invalid && !previous.invalid &&
+        (timestamp(previous.windowEnd) !== timestamp(current.windowStart) || previous.sampling !== current.sampling || previous.precision !== current.precision || previous.scope?.label !== current.scope?.label)) result[previousKey] = unknownBlock();
     }
   }
   return result;
@@ -188,7 +219,7 @@ export function assessBlock(block: CollectionBlock<unknown>, nowUpper: number | 
 export function assessCollection(collection: Collection, nowUpper: number | null) {
   const blocks = Object.fromEntries([...BLOCK_KEYS, ...ACCESS_KEYS].map(key => [key, assessBlock(collection[key], nowUpper)])) as Record<BlockKey, BlockAssessment>;
   const enabledAccess = collection.schemaVersion === 2 ? ACCESS_KEYS.filter(key =>
-    !(collection[key].status === "UNKNOWN" && !collection[key].invalid && collection[key].attemptedAt !== null)) : [];
+    !(collection[key].status === "UNKNOWN" && !collection[key].invalid)) : [];
   const monitoredKeys: BlockKey[] = collection.schemaVersion === 2 ? ["traffic24h", "pagesMonth", ...enabledAccess] : BLOCK_KEYS;
   const counts = { unavailable: 0, total: monitoredKeys.length };
   for (const key of monitoredKeys) if (blocks[key].state !== "取得正常" && blocks[key].state !== "デモ") counts.unavailable++;
