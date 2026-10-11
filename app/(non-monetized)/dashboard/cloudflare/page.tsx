@@ -57,6 +57,7 @@ export default function CloudflareWafPage() {
       if (document.visibilityState !== "visible" || fetching.current) return;
       if (interrupted) { void fetchData(true); return; }
       const base = clock.current;
+      // A missing clock anchor is an error state; retry it sooner than the normal hourly sync.
       if (base ? clockUpperBound(base, current) === null : current - lastFetchMono.current >= 60_000) void fetchData();
     }, 1000);
     document.addEventListener("visibilitychange", onVisibility); window.addEventListener("pageshow", onPageShow);

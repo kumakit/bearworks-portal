@@ -6,11 +6,12 @@
 - 30日の直前30日比較と履歴保存は別フェーズとし、画面には「この期間は前期間比較に対応していません」と表示する。
 - Apps は前24時間、現行7日・前7日、現行30日の取得結果を v2 の独立ブロックへ格納する。Adaptive の時間別・国別・全体を同一区間で照会し、欠損、重複、母数不一致、部分エラー、行上限をブロックごとに拒否する。サンプリングの有無をブロックごとに表示する。
 - `CLOUDFLARE_PHASE2_ENABLED` は既定 `false`。明示有効化後は `CLOUDFLARE_PREVIOUS24H_ENABLED`、`CLOUDFLARE_7D_ENABLED`、`CLOUDFLARE_30D_ENABLED` で期間別に停止できる。Apps の収集と Digest は同じ設定を読む。旧24時間ブロックは維持する。
+- ダッシュボードの通常の API 再取得は、Workers の時計再同期設定を30秒から3600秒へ変更して約1時間とする。1秒タイマーは画面内の鮮度判定だけを更新し、通信しない。画面の再表示・復帰、手動再読込、時計が途切れた場合は必要に応じて再取得する。時計情報を取得できない失敗状態は60秒後に再試行する。
 
 ## ローカル確認
 
 - Apps: `uv run python -m pytest tests/test_cloudflare_collection.py tests/ai_operations -q`、157件成功。既知の依存ライブラリ由来の警告1件。
-- Portal: `npm run test:cloudflare`、29件成功。`npx tsc --noEmit` と変更箇所の `npx eslint` 成功。
+- Portal: `npm run test:cloudflare`、30件成功。`npx tsc --noEmit` と変更箇所の `npx eslint` 成功。
 - Portal と Apps の合成 fixture は同じ SHA-256 で検証。旧 v1/v2、追加ブロックの未配信、7日・30日の欠損、推計と非サンプリング、前期間の不一致を回帰確認。
 
 ## 次の配備判断

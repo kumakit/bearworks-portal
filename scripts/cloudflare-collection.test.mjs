@@ -22,6 +22,7 @@ const clone = () => structuredClone(fixture);
 const parsed = root => parseCollection({ cloudflareCollection: root });
 const block = (root, key) => ["traffic24h", "pagesMonth"].includes(key) ? root[key] : root.waf7d[key];
 const meta = { servedAt: "2026-10-06T00:00:00Z", clockMaxUncertaintySeconds: 5, clockResyncIntervalSeconds: 30 };
+const hourlyMeta = { ...meta, clockResyncIntervalSeconds: 3600 };
 
 async function compile(path) {
   const result = await build({ entryPoints: [path], bundle: true, platform: "node", format: "cjs", packages: "external", write: false, logLevel: "silent" });
@@ -440,6 +441,12 @@ test("monotonic clock includes RTT and uncertainty, expires at resync and ignore
   assert.equal(assessBlock(parsed(fixture).traffic24h, clockUpperBound(nearExpiry, 100)).state, "期限切れ");
 });
 
+test("Worker clock settings keep production and staging on hourly sync", async () => {
+  const config = JSON.parse(await readFile(new URL("../wrangler.jsonc", import.meta.url)));
+  assert.equal(config.vars.DASHBOARD_CLOCK_RESYNC_INTERVAL_SECONDS, "3600");
+  assert.equal(config.env.staging.vars.DASHBOARD_CLOCK_RESYNC_INTERVAL_SECONDS, "3600");
+});
+
 test("clock rejects missing config, excessive latency and contradictory resync", () => {
   for (const bad of [null, {}, { ...meta, servedAt: fixture.traffic24h.windowStart }, { ...meta, clockMaxUncertaintySeconds: null }, { ...meta, clockMaxUncertaintySeconds: 0 }, { ...meta, clockResyncIntervalSeconds: -1 }, { ...meta, clockResyncIntervalSeconds: "30" }]) {
     const previous = bad?.servedAt === fixture.traffic24h.windowStart ? syncClock(meta, 0, 100, null) : null;
@@ -464,9 +471,9 @@ test("API auth/config, successful servedAt, no-store and all explicit method rej
   let response = await route.GET(authenticated); assert.equal(response.status, 500); noStore(response); assert.equal(calls, 0);
   process.env.DASHBOARD_API_TOKEN = "synthetic-only-token";
   response = await route.GET(new Request(authenticated.url)); assert.equal(response.status, 401); noStore(response); assert.equal(calls, 0);
-  process.env.DASHBOARD_CLOCK_MAX_UNCERTAINTY_SECONDS = "5"; process.env.DASHBOARD_CLOCK_RESYNC_INTERVAL_SECONDS = "30";
+  process.env.DASHBOARD_CLOCK_MAX_UNCERTAINTY_SECONDS = "5"; process.env.DASHBOARD_CLOCK_RESYNC_INTERVAL_SECONDS = "3600";
   const before = Date.now(); response = await route.GET(authenticated); const after = Date.now(); noStore(response); assert.equal(response.status, 200);
-  const body = await response.json(); assert.ok(timestamp(body.responseMeta.servedAt) >= before && timestamp(body.responseMeta.servedAt) <= after); assert.match(body.responseMeta.servedAt, /Z$/); assert.equal(body.responseMeta.clockMaxUncertaintySeconds, 5); assert.equal(body.responseMeta.clockResyncIntervalSeconds, 30); assert.deepEqual(body.cloudflareCollection, fixture);
+  const body = await response.json(); assert.ok(timestamp(body.responseMeta.servedAt) >= before && timestamp(body.responseMeta.servedAt) <= after); assert.match(body.responseMeta.servedAt, /Z$/); assert.equal(body.responseMeta.clockMaxUncertaintySeconds, 5); assert.equal(body.responseMeta.clockResyncIntervalSeconds, 3600); assert.deepEqual(body.cloudflareCollection, fixture);
   for (const value of [undefined, "0", "-1", "1.5", "01", "NaN", "9007199254740991"]) {
     if (value === undefined) delete process.env.DASHBOARD_CLOCK_MAX_UNCERTAINTY_SECONDS; else process.env.DASHBOARD_CLOCK_MAX_UNCERTAINTY_SECONDS = value;
     const body = await (await route.GET(authenticated)).json(); assert.equal(body.responseMeta.clockMaxUncertaintySeconds, null);
@@ -485,7 +492,7 @@ test("page refetches on visibility/pageshow/resume and periodic sync; fetch fail
   globalThis.window = { ...listeners(), setInterval: cb => (timers.push(cb), timers.length), clearInterval: () => {} };
   globalThis.document = { ...listeners(), visibilityState: "visible" };
   globalThis.performance = { now: () => mono };
-  globalThis.fetch = async (_url, options) => { calls++; assert.equal(options.cache, "no-store"); if (error) throw new Error("failed"); mono += 100; return Response.json({ cloudflareCollection: fixture, responseMeta: { ...meta, servedAt: new Date(NOW + mono).toISOString() } }); };
+  globalThis.fetch = async (_url, options) => { calls++; assert.equal(options.cache, "no-store"); if (error) throw new Error("failed"); mono += 100; return Response.json({ cloudflareCollection: fixture, responseMeta: { ...hourlyMeta, servedAt: new Date(NOW + mono).toISOString() } }); };
   const hooks = { ...React, useState: initial => { const index = stateIndex++; states[index] = typeof initial === "function" ? initial() : initial; return [states[index], next => { states[index] = next; }]; }, useRef: current => ({ current }), useCallback: cb => cb, useEffect: cb => effects.push(cb) };
   const page = load(pageCode, name => name === "react" ? hooks : require(name));
   page.default(); const cleanup = effects[0](); const flush = () => new Promise(resolve => setImmediate(resolve)); await flush();
@@ -494,8 +501,9 @@ test("page refetches on visibility/pageshow/resume and periodic sync; fetch fail
   globalThis.document.visibilityState = "visible"; globalThis.document.map.get("visibilitychange")(); await flush(); assert.equal(calls, 2);
   globalThis.window.map.get("pageshow")(); assert.equal(states[1], null); await flush(); assert.equal(calls, 3);
   globalThis.document.map.get("resume")(); await flush(); assert.equal(calls, 4);
-  for (let i = 0; i < 30; i++) { mono += 1000; timers[0](); await flush(); }
-  assert.equal(calls, 5);
+  for (let i = 0; i < 3599; i++) { mono += 1000; timers[0](); }
+  await flush(); assert.equal(calls, 4);
+  mono += 1000; timers[0](); await flush(); assert.equal(calls, 5);
   mono += 5000; timers[0](); assert.equal(states[1], null); await flush(); assert.equal(calls, 6);
   error = true; globalThis.window.map.get("focus")(); await flush(); assert.equal(states[0].traffic24h.data, null); assert.equal(states[1], null); assert.equal(states[5], true);
   cleanup(); assert.equal(globalThis.document.map.size, 0); assert.equal(globalThis.window.map.size, 0);
