@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-10-13",
+    "daily_summary": "本日のAIニュースは、マイクロソフトによる「Maia 300」などの新型AI半導体発表やNTTの米国新拠点設立といったインフラ・開発競争の加速が伝えられる一方で、生成AIによる新聞記事の無断利用やサイバー攻撃の激化といった法的・セキュリティ上の課題も浮き彫りになりました。また、堀井雄二氏によるAIを活用した30分でのゲーム制作が話題となるなどクリエイティブ分野での新たな可能性が示される一方で、不十分な情報に基づく登山遭難事故など技術の過信に対する警鐘も鳴らされています。",
+    "articles": [
+      {
+        "title": "マイクロソフト 新型AI半導体発表",
+        "content": "マイクロソフトが新たなAI半導体を発表しました。このプロセッサーは同社のクラウドおよびAIサービスの処理能力を高めることを目的としています。今後のAI開発やインフラ整備における重要な発表として注目を集めています。",
+        "source": "Google News",
+        "published_at": "2026-10-13",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1PaG9YWDlTUGNXX2F1WllfZE9Ec2JsNXZTZ3lyUWlwZTV6UHVlRHFmbXBYVXRidTV0cFdKTnRMdGYwbXJSTUprOEtrRUgxM2Vl?oc=5",
+        "category": "インフラ・半導体"
+      },
+      {
+        "title": "マイクロソフトが新型AI半導体　27年米で導入、日本にも配備",
+        "content": "マイクロソフトはAI向けの新型半導体を開発し、2027年にも米国での導入を計画していることが明らかになりました。さらに、日本国内への配備も視野に入れています。AIサービスの需要拡大に対応するためのインフラ強化の一環です。",
+        "source": "Google News",
+        "published_at": "2026-10-13",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNdHY0di1LZTdoeUhQWS1XX1FEeWtHaTNtQXJyTnZEbkttVDB1aUxseUxCTnk0MGVKZ0VvaWJvdWw1SW1KaDg3c0lyT05ndVNrNk5ZWXNfamREel9uVnZOUVI1Wkt1SkN6OXpOSVdJU0tNMElzUVY2ZmlJYkdyb1FJS21UVk9zbzJCSHdyQ29B0gGTAUFVX3lxTE5FdHEzLWZ0MllROW92R1R3RS1nbU9xd21qY092bUNtUHVMeG1HengyN2VGcHBLcXZsUFhyTm4xUFpxYi1NeVNDWEFjMWxJWEpXSE5KX0lLMWw1QVF4Z19BN0NYNjJfM2taQkdSZnNYVE9QOEZqQnBxLWxocFpCLUs3c1MyNFliWTRtY2JPaVpiODA3dw?oc=5",
+        "category": "インフラ・半導体"
+      },
+      {
+        "title": "脱NVIDIAを急ぐMicrosoft、わずか9カ月で次世代AIチップ「Maia 300」",
+        "content": "MicrosoftはNVIDIA製チップへの依存度を減らすため、わずか9カ月の開発期間で次世代AIチップ「Maia 300」を発表しました。自社製半導体の調達を加速させることで、AIインフラストラクチャのコスト削減と供給の安定化を図る狙いがあります。この動きは、AI業界全体におけるハードウェアの独自開発競争をさらに激化させるとみられています。",
+        "source": "Google News",
+        "published_at": "2026-10-13",
+        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5vMEZqQjdLVFRnZ0J4UlBRbmo1YjZ3VmJuRjRvQi1Fa2tLU05KWm5DQ3o5N0hKVE1sZzF3SmxNelFXUm1YdlZPTjNIMUx6VHFueFJyUGdmQWpYR1dFRTNEYmdRQQ?oc=5",
+        "category": "インフラ・半導体"
+      },
+      {
+        "title": "登山で遭難招いたAI SNSの冒険談学習、天気や体力は考慮しきれず",
+        "content": "SNSの冒険談を学習したAIを活用した登山で遭難事故が発生しました。AIは天候の変化や個人の体力を十分に考慮しきれず、危険な判断を導いたと指摘されています。AI技術の過信に対する注意喚起がなされています。",
+        "source": "Google News",
+        "published_at": "2026-10-13",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE0wbWJpSHYzOWo4MEd1d1c5X0pydWRscERvbjJUMUZDNUxOVWdUYVY5RXhfU1lkQTYySW9PQ1VobF8wNWVsN0phX080aWoxVVFqc0JoQVZ5LWJZd1JaenYwMU85bmNkRHFwbWlpdQ?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "NTTがAIブームの震源地に新設した｢AI開発拠点｣の正体",
+        "content": "NTTがAIブームの震源地である米国に新たなAI開発拠点を設立しました。GAFAM出身のエリートなど多様な人材が集結し、独自のAI開発を進めるその異色集団の全貌に迫ります。",
+        "source": "Google News",
+        "published_at": "2026-10-13",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1HekRUS083T3JBeUpxTFhNUVRsVXJBWWE3QkVJVk9Sd0hnNzNYcm5mal94enZ4QUNQMFBaTnVGb0xuQlllQm93bC1nOTVvbFJ6djlJQ2lTQVVrdTI1NVlz?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "生成AIが普及しても「技術書」を手放せないエンジニアの本音：『リーダブルコード』の次に何を読む？",
+        "content": "生成AIが普及する現在でも、エンジニアにとって技術書を読む重要性は変わらないという記事です。名著『リーダブルコード』の次に読むべき書籍を通じて、基礎固めや深い理解の必要性について言及しています。",
+        "source": "Google News",
+        "published_at": "2026-10-13",
+        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBMWTB2djY4b3dianBjVk52QnVvSEZhWlVPRmtXTnRCTjBaOWJ1MmdPNEMxWFkyRXRQNkZwSlpYd3NJUWRDX0lEVWZYTktmSWUxVW5yRXRFQ2k0VVBwYlRWYlQzQ05wR3NVWWtHLVIydk0?oc=5",
+        "category": "その他"
+      },
+      {
+        "title": "AI回答が新聞記事「ただ乗り」 企業・行政で相次ぐ無断利用 メディア業界に広がる危機感",
+        "content": "生成AIの回答に新聞記事が無断で利用される事例が、企業や行政の間で相次いでいる。メディア業界では著作権侵害や収益悪化への懸念から強い危機感が広がっており、対策が急務となっている。",
+        "source": "Google News",
+        "published_at": "2026-10-13",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1wVFRUeFl4S2FSWVBvcWl3dDZoVWhBdnpvX3VmVVdTbjFudWp1cGZ4ZGE3X3Z3eTJpVDloeDZiSDJQZDBXSEdsenpjSVRyRHlnRnRmbFowbEllYkRpMGc?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "闇市場での個人情報売買の実態と急増するサイバー攻撃の背景",
+        "content": "サイバー攻撃が1日あたり1500万回を超えるなど、個人情報の流出が急増しています。闇市場におけるデータ売買の実態が報じられており、AIの悪用がその背景にあると指摘されています。",
+        "source": "Google News",
+        "published_at": "2026-10-13",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE8xOFozaFUtQWNwVVVzU1lXNVZXUXl1alRHaEs4a1NDdGhDVjMxYkNobVZWSzZhTUhpRFV3aFVpYWNRTkthaHkxZ3I3bE1MeXJoOEJBQURmY1NkT0xvMEF3MzJNbHJyUURDNEd5ZzB2U2dOUQ?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "堀江貴文氏も期待　AIが約30分でゲーム制作　「ポートピア連続殺人事件」超える？",
+        "content": "AIを活用することで約30分という短時間でのゲーム制作が可能になり、実業家の堀江貴文氏からも高い期待が寄せられています。名作として知られる「ポートピア連続殺人事件」を超えるような革新的な作品の誕生につながるか、注目が集まっています。",
+        "source": "Google News",
+        "published_at": "2026-10-13",
+        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5nY2EtSnk1QjBBRWFBeWpvb1Jpal9KX0lyQUkwX2VHUWFOMUhlZVRGSnhFdzJjSnI5RTdvaktPZU5lNkpRVHhLN3lZa2VsWkE1QkhwQWk2LVBaQzdGMzlQQTBrdHBmZVU2cGxvamJ0Z19jSDVPM0HSAYoBQVVfeXFMT1BTOFlQOFJLOVJoVW83d3dXY1pUa3ZnZ2FiVU5tMHFaT1h3OUJBZ09WZVB0V0hHUkVXQm5pNVVoVEkwM1I5OTNZWlR2NDBMMTd4UDRnRm5WZ0pZNUhBSERhT2poMzNmWDZPcW8xalk3bUEtTlFpUWFzN24wODJLdkR6cy0zUXZKMFBn?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "堀井雄二氏、AIを駆使してわずか30分で制作した短編ADV『取調室の小宮』を公開",
+        "content": "ドラゴンクエストシリーズの生みの親である堀井雄二氏が、AIを活用してわずか約30分で制作した短編アドベンチャーゲーム『取調室の小宮』を公開しました。AI技術を手軽に利用したゲーム制作の新たな試みとして、大きな注目を集めています。",
+        "source": "Google News",
+        "published_at": "2026-10-13",
+        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1WQUFDTkRKNzZhR0FpYWVkV0tDaXZKYjY2S3dBOHZuZnk2V2FwcDYzcllRd3B5LWhCVGhHb1VWYTZQWVpULV9QT1VweXNOQ0RwdEtGRlEyTzRWbFNlbTNIRjE2NGcwQQ?oc=5",
+        "category": "エージェント・開発ツール"
+      }
+    ]
+  },
+  {
     "date": "2026-10-12",
     "daily_summary": "本日のAIニュースでは、生成AIの安全性評価システムや行政・ゲーム制作などでの実用的な活用が進む一方で、中国製AIツール「ARTEX」の悪用による韓国の銀行へのサイバー攻撃や、AIを利用した不正アクセスの急増など、セキュリティ上の新たな脅威が浮き彫りとなりました。技術の急速な普及に伴い、ガバナンスのあり方や強固なサイバー対策の必要性が一段と高まっています。",
     "articles": [
