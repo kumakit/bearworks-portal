@@ -92,7 +92,7 @@ Plan Review完了は受領条件の反映とCodexによる採否判断を表す�
 - [x] 収集・Digest の既存判定とログ保存場所を調査し、[診断証跡計画](diagnostic-evidence-plan_20261012.md)と[手動レビュー依頼](diagnostic-evidence-review-request_20261012.md)を作成する。
 - [x] ユーザーがレビュー依頼の5確認点をすべて採用し、計画へ記録する。独立した外部レビューは未実施。
 - [x] Sonnetの条件付きレビューを受領し、[指摘の採否](../../history/20261013_issue397_diagnostic_review.md)を記録する。
-- [x] Apps の状態のみの収集・Digest ログをローカル実装し、診断失敗の隔離・実際の実行ID伝播・秘密値非出力を含む対象テスト108件、CIと同じdashboard環境の全対象テスト181件を通す。
+- [x] Apps の状態のみの収集・Digest ログをローカル実装し、診断失敗の隔離・実際の実行ID伝播・秘密値非出力を含む対象テスト108件、CIと同じdashboard環境の全対象テスト182件を通す。
 - [ ] 対象差分、CI、限定配備、定期実行と Digest の相関を個別の承認境界で確認する。
 
 限定commit・push・ドラフトPR作成と依存最小更新を承認範囲内で実施。[CI確認記録](ci-verification.md)と[本番反映追補](operational-readiness.md#2026-10-08-本番反映追補)を参照。Appsの対象Linuxテスト137 PASS、post-merge main workflow成功。PortalもWorkers CI全工程PASS、本番100% traffic。
