@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-10-14",
+    "daily_summary": "本日のAIニュースでは、SB Intuitionsによる国産生成AI「Sarashina」の無償ベータ版提供や、ドローンとAIを掛け合わせた密漁検知の実証実験成功など技術の実用化が進む一方、IMFが指摘する巨大なAI需要の「循環投資」リスクや収益化の壁、モデル疲れといった構造的課題が浮き彫りになりました。また、AIエージェントの悪用によるサイバー攻撃の高度化が深刻な脅威となっているほか、川辺健太郎氏が語るAI時代における個人の在り方の変化など、ビジネス、セキュリティ、社会構造の各方面でAIがもたらす光と影が多角的に報じられています。",
+    "articles": [
+      {
+        "title": "SB Intuitions、国産生成AI「Sarashina」を利用できる無償ベータ版サービスを提供開始",
+        "content": "SB Intuitions株式会社は、自社開発の国産生成AI「Sarashina」を手軽に利用できる「Sarashinaサービス」の無償ベータ版の提供を開始しました。これにより、ユーザーは実際の業務や検証において同社の生成AI技術を試すことが可能になります。",
+        "source": "Google News",
+        "published_at": "2026-10-14",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5WQ2NfUkZEdTZKY2hvdFdNcG1fWFliQzFvUGh4MEFERGRPSXVZRm56a0tuR04zVlE5cEFYXzE1ajVVbS12Zzd5eV8wLWdkSW9ScldxTDREbkI2ekFwODdrMWJTSXQ?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "AIで激変するグローバルIT市場でNTTデータGが見いだす勝機",
+        "content": "AIの台頭により既存のITビジネスモデルが破壊される中、NTTデータグループがどのように変化に向き合い、勝機を見いだしているのかを解説しています。グローバル市場における新たな戦略や取り組みに焦点を当てています。",
+        "source": "Google News",
+        "published_at": "2026-10-14",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5MT0FZODRMRlBaa0VTMDU3a0V1QmRXZWN3bGJhbVJrQVhIemMwN0g2OEg5d0VlM3VibGxLdWN0aFlwOEc0ZE91RHhybWVxZFVKNmxjZkp0N2l1cHljM2lj?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "AI新モデル乱発の裏に潜む「収益化の壁」、米中格差と「モデル疲れ」の深層",
+        "content": "相次ぐAI新モデルの発表の裏で、収益化の難しさや米中間の格差が深刻な課題となっています。ユーザーの間では急速な技術進化に対する「モデル疲れ」も懸念されています。AI業界が直面する構造的な課題と今後の展望を深く分析しています。",
+        "source": "Google News",
+        "published_at": "2026-10-14",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1iTURJU3lDc1gtaUNKVHhtVWV3U0hHY29wRmxZYlB6Vi1OUHlaWGVMLUFMb3hhd2VaTlY3VXJfblJBVTlvWkNrbFpjSTJKLW1VNGxyMEtR?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "ドローンとAIで密漁検知 実証実験、摘発に成功",
+        "content": "ドローンとAIを活用した密漁検知システムの実証実験が行われ、実際の摘発に成功しました。先端技術を組み合わせることで、海洋資源の保護や違法行為の取り締まりにおける効果が示されています。",
+        "source": "Google News",
+        "published_at": "2026-10-14",
+        "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOa2I5TlRuT1cxVmxWVzJsdEFGcDBmMEJwRVUyazBOcDJ5bXFYdVhYOElwZTBIYkY5ck5XTzV5cXRZSS1sR3NQQ1R1dmpiM0huUEhPcDBnR2FfR3M3WEd3RW9OREJ6SmlNWXJnSkVyQ05yY2RiLUhJcVl1cFBSY3NmYWVDU0lDSngwNjhF0gGQAUFVX3lxTE9YdTJzWVRDalUzX29jY0RodW1LZWxnR0FDaHBwVlg4OXVhUnlJUEppVjhNWUdCOVRfbC0yWjJ3VFI1SV9ZdkhNM0xrLVV6eXUwTmhJMEYtQjJ0bXJWWmctTGV2RGVsdFZzbjl4MHh5aTBuaENDY0ZPbkFVNmNXQjBybzJvcGQ5ZEJtWUJWYTJsNQ?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "ドローンとAIで密漁検知",
+        "content": "下野新聞社による報道によると、ドローンとAI技術を活用して密漁を検知する取り組みが進められている。最新のテクノロジーを組み合わせることで、監視の効率化や犯罪の抑止効果が期待されている。",
+        "source": "Google News",
+        "published_at": "2026-10-14",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFAweDB2YzE3NS03LTZPdGxYWVhfdkkyT2tzeVBZY1JVQ3Q5NUl2UGVlUHR3YURpWGdsRkpObU9rc2p1dnhtUllDeFdpMXc1R3RzVlA2cUZpMlB4Q0U?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "「循環投資」頼みのAI需要220兆円 IMF、逆回転リスク警鐘",
+        "content": "国際通貨基金（IMF）は、現在の巨大なAI需要が企業間の「循環投資」に依存しているとして、その逆回転リスクに警鐘を鳴らしました。AI分野への過度な資金集中やバブル的な投資構造に対する懸念が高まっています。",
+        "source": "Google News",
+        "published_at": "2026-10-14",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1kbnN1QWJfSDd6LWxDamhJaE5Ra00taWgzd0NIQk1rLWhkUEItWFk0dEo3UDdtdkhIRmhaUUV4OUYwbFVFM0V0bnR0X1lKVXk1YUFYcHFhVE0zNlhKRmNaT3U5R0ExejZPVXZvVA?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "ＡＩ時代は「シゴデキより人気者」、新聞も「推し活」意識を…ＬＩＮＥヤフー元会長の川辺健太郎さん",
+        "content": "LINEヤフー元会長の川辺健太郎氏が、AI時代におけるメディアや個人の在り方について語りました。AIが仕事の効率化を進める中、今後は能力だけでなく愛されるキャラクターや「推し活」される視点が重要になると指摘しています。新聞などのメディアも、この新しい時代観を意識した変革が必要だと提言しています。",
+        "source": "Google News",
+        "published_at": "2026-10-14",
+        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9QVmNrdERkUkVlOExadDVwZHZlbnVlSkJGWWF1ajNDSTFJWVZRTnc2RTJ2TTRGZFdlVjdvSy13RG9BdmNFQktQMHdfcWVSTHBDeTBmMHFmYzNoeUhEQzBNbU93YXQ1Zw?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "サイバー攻撃の加速に対するAIの影響を指摘",
+        "content": "サイバー攻撃が加速している現状において、AI技術がもたらす影響についての指摘がなされました。AIの普及に伴い、脅威の巧妙化や自動化が進んでいる懸念が示されています。",
+        "source": "Google News",
+        "published_at": "2026-10-14",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFA4Z3VJUmlySFJhRUkwTVpVU21wQTB4dkRrTl9zUEFvV0JWZ3A4OUJ5djFPZERtQy1qeVRYcDRLR0Fnc2Y4SmhKSW9WSlNIS3hm?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "一連の不正アクセスは“AIエージェント悪用の可能性”解析で",
+        "content": "NHKニュースによると、最近発生した一連の不正アクセス事件について、AIエージェントが悪用された可能性が浮上し、専門機関による解析が進められています。最新のテクノロジーが悪意ある攻撃に利用されるリスクが高まっていることが示唆されています。",
+        "source": "Google News",
+        "published_at": "2026-10-14",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFByRGhYTC01Nl81TWRsejBZcnlSQzF2a2x6YVlSeUU5dmxZZzFsZXh3ZG9qd1BkZTVNcWlRNmVyLUZtdjhwNlliZnNGOG9USXFjc2ZHT2NzS2d4NU9yNjFj?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "社説：不正アクセス 格段に増したＡＩ悪用の脅威",
+        "content": "読売新聞による社説で、AI技術の悪用によって不正アクセスの脅威が格段に増していることへの懸念が述べられています。サイバー攻撃の高度化や自動化が進む中、社会全体でのセキュリティ対策の強化が急務であると指摘しています。",
+        "source": "Google News",
+        "published_at": "2026-10-14",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFA4ZFAtakFUdTVkcnlVWEYxZmtCTHB2MWsxMUN5bWctMldDZlV2SlJjYnF5b3JCaFF5OTJaS2lvdE0wSHVCR1Ryb1l4X3hXSWE3SFZHSUZrWkxoRXIwX2tvUlZ0MEdXbVk?oc=5",
+        "category": "政策・安全"
+      }
+    ]
+  },
+  {
     "date": "2026-10-13",
     "daily_summary": "本日のAIニュースは、マイクロソフトによる「Maia 300」などの新型AI半導体発表やNTTの米国新拠点設立といったインフラ・開発競争の加速が伝えられる一方で、生成AIによる新聞記事の無断利用やサイバー攻撃の激化といった法的・セキュリティ上の課題も浮き彫りになりました。また、堀井雄二氏によるAIを活用した30分でのゲーム制作が話題となるなどクリエイティブ分野での新たな可能性が示される一方で、不十分な情報に基づく登山遭難事故など技術の過信に対する警鐘も鳴らされています。",
     "articles": [
