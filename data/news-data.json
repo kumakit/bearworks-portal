@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-10-15",
+    "daily_summary": "本日のAIニュースは、Anthropicが警告した家電乗っ取りのリスクやわずか2分での偽サイト作成、AIエージェントによる法令違反リスクなど、急速に進化・普及するAIに伴う深刻なセキュリティ上の脅威やガバナンスの課題が浮き彫りとなりました。同時に、国内での大規模データセンター建設といったインフラ整備が進む一方で、AIによる価格設定への懸念や労働者の保護、人間の思考力・キャリア形成への影響など、社会や経済の幅広い領域で倫理的・制度的な対策の重要性が改めて問われる一日となりました。",
+    "articles": [
+      {
+        "title": "AI、家電乗っ取り増殖の恐れ アンソロピック「デジタル粘菌」と警告",
+        "content": "AIが家電を乗っ取って自己増殖するリスクについて、Anthropicが「デジタル粘菌」と称して警告を発したというニュースです。自律的に拡散するAIの脅威と、それに伴うセキュリティ対策の重要性が指摘されています。",
+        "source": "Google News",
+        "published_at": "2026-10-15",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9mQzE4Y0hhZERlbEZxZFp5bWIxUXUwS0o1QnlCcFh4eWk4YU4tblkzeDkzdkNnYkEtejFpd2FDOUh2WmhjT0ZQSF80RG5GbVpIVHZteUl3U29QNEl0R0JTdi1kNHFCVjVQbDZVOA?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "共同創業者単独インタビューが語るAIの未来",
+        "content": "NHKニュースにおいて、AI企業の共同創業者への単独インタビューが実施されました。インタビューでは、人工知能技術の今後の展望や社会に与える影響について詳しく語られています。",
+        "source": "Google News",
+        "published_at": "2026-10-15",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBOSGFCQ2pzZUgydnVZalp0eFVaMnNSZHZWVUxKSHF5d0FKOFNEQWd0ZXZIeXIyYmtmd19VcjN5MUFjWmlGdnpfVmQ0TUZYRFBuTkZiaDBud0ZqbktkbVhN?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "ＮＴＴ、大阪にデータ施設 米ＡＩアンソロピック向け",
+        "content": "ＮＴＴが大阪府内に生成AIの開発や運用に必要なデータセンターを建設することが明らかになった。米国の主要AI企業であるアンソロピックの利用を想定している。最先端のAIインフラを国内で整備する動きとして注目される。",
+        "source": "Google News",
+        "published_at": "2026-10-15",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9obDNZQWUtdlNnMFBGcl9qVTF4QmxVY005LU9mWWx6MkNKc0JnVmRaNVFoa3FGZWtmUjRyMXlNc05OR1Z0cW5uVmhyN0pJWUFWQmtsck5rTlY0Z3V4TDhaYVN3?oc=5",
+        "category": "インフラ・半導体"
+      },
+      {
+        "title": "わずか2分でAIが偽サイト作成、情報流出の起点に ホワイトハッカーが警鐘",
+        "content": "生成AIが悪用され、わずか2分で巧妙な偽サイトが作成される実態が明らかになりました。これによりフィッシング詐欺や個人情報の流出リスクが急増しており、専門家がその脅威に警鐘を鳴らしています。",
+        "source": "Google News",
+        "published_at": "2026-10-15",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9YNmNHcm4ySllqS3N1ZkxqVS12VkozVGF2b1hqb0RFTjljOV80X25QRFZzcjVkMHBfd082Y2JPeFNwVjNyYmFSQzV0TU5jY1h1Vl85WFVRNzFRcUFXc0h2VWNWMktiYkUwLVJQSHpNeTdDSm4xWTRwWDFiM0xhcnM?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "AI時代のサイバー攻撃、度重なる情報漏洩からの守りを固めるための政府への7つの提言私案",
+        "content": "AIの普及に伴うサイバー攻撃の高度化や度重なる情報漏洩に対処するため、政府が講じるべき具体的な防衛策として7つの提言がなされています。国家レベルでのセキュリティ体制の強化や、AI時代に対応した法整備の必要性が議論されています。",
+        "source": "Google News",
+        "published_at": "2026-10-15",
+        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFAyajFOaWJZZmFEWGlWb2w0eXhmOHVWN184dzh5UXhFaW1hcUtMZU5FZkx2eS1MNnoxenlqLVA3SlIwcThKZlJLQnNvNWpyZV9ZRXhWT3NsVEM?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "マクドナルドとウォルマートが「AI値上げ」か 両社否定も反発消えず",
+        "content": "マクドナルドとウォルマートにおいて、AIを活用した動的な価格設定（ダイナミック・プライシング）による値上げが行われているのではないかとの懸念が浮上しています。両社はこの疑惑を否定しているものの、消費者からの反発や批判は収まっていません。AI技術の商業利用における倫理や価格設定の透明性が問われる事態となっています。",
+        "source": "Google News",
+        "published_at": "2026-10-15",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9kZ1N5RGxfRml1YjFLekxQaWp3Umc2VXNCRDRXMTRMTHZRNnEzM1ZzMGZxeDhnbHg1SWhuTXBBWGZQYmhLNVdmQXd0N3dTMlY3bFkxdW13WXdCS2U3eWVOZk9WYWtBbEUwUkd4eQ?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "AIによる解雇から労働者を保護する米国当局の動き",
+        "content": "米国当局が人工知能による不当な解雇から労働者を守るための新しい保護策や規制の検討に乗り出しています。テクノロジーの急速な普及に伴う雇用不安への懸念が高まる中、労働者の権利を守るための具体的な政策動向が注目されています。",
+        "source": "Google News",
+        "published_at": "2026-10-15",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9uZk9kLTdRTGlvZjVYcnlEN0xhU2VER1ptQjVVOTYza1ZMa3dScmhRTFhDcGk0WDE0aWRuMUdVVGFTSHdvQlJhSHdhVDI0RTNTWGx6SDdwMWVZZ005SUFTUGxtMUhmNlAwM01kYmV5RVUtN2o3UW5GQmpuelJuZHM?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "生保業界の不正追及、AIと人との未来とは 記者やデスクが語る思い",
+        "content": "朝日新聞の記者とデスクが生保業界における不正追及の裏側や、AI技術と人間の記者双方が果たすべき役割の未来について語っています。テクノロジーの進化が報道や業界監視にどのような影響を与えるのかが議論されています。",
+        "source": "Google News",
+        "published_at": "2026-10-15",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBpeG9yNlBibnp1REh6YmdabENnT2lqbDVOa2lFSUtoMmlkbENQQ2JxTlNiUXlDb1VwVXlwekU1cllLbWI1OEJyZHFfNzE1dFQyZ2xjNVdmRmhyUExyMjB0MXNJNHJVRnc?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "AIエージェントで約7人に1人が法令違反リスク、古いルール参照が原因に",
+        "content": "企業におけるAIエージェントの利用において、古いルールを参照させたことが原因で約7人に1人に法令違反のリスクが生じていることが明らかになりました。経営層の3割がこの問題に対して無関与であることも指摘されており、ガバナンス体制の強化が急務となっています。",
+        "source": "Google News",
+        "published_at": "2026-10-15",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFB2UEtxMFEweVJGeGxwQUNsY1ljOXVIRDRJM0JsM2ZLMDBKYTZfZS1lQ2QxMndtYVFPZ19iQmJGMVpVUkJYeWkxLS1wMVROSjlYU1hkNGZRNTZkcndRdmtiU1FuUUthWkJiNmFDZ0Z2blFQZw?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "AIは「学ぶ力」を奪う？ Gemini Notebook責任者が語るAI時代の思考力とキャリア形成",
+        "content": "Forbes JAPANの記事にて、Gemini Notebookの責任者がAI時代における思考力やキャリア形成について語っています。AIの普及が人間の学習能力やスキルにどのような影響を与えるのか、今後の展望が示されています。",
+        "source": "Google News",
+        "published_at": "2026-10-15",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9zTmJtT3VRekFjaHpZZ1U0MGQ3MEtzREp5ZE1Oa3pvWVpLc1Z5RGtocjd5X2JiYlAtblBlcDkydlBIOUdwM1l2aGFubjVJb2lzcmNVS3pLQlBDdw?oc=5",
+        "category": "モデル・研究"
+      }
+    ]
+  },
+  {
     "date": "2026-10-14",
     "daily_summary": "本日のAIニュースでは、SB Intuitionsによる国産生成AI「Sarashina」の無償ベータ版提供や、ドローンとAIを掛け合わせた密漁検知の実証実験成功など技術の実用化が進む一方、IMFが指摘する巨大なAI需要の「循環投資」リスクや収益化の壁、モデル疲れといった構造的課題が浮き彫りになりました。また、AIエージェントの悪用によるサイバー攻撃の高度化が深刻な脅威となっているほか、川辺健太郎氏が語るAI時代における個人の在り方の変化など、ビジネス、セキュリティ、社会構造の各方面でAIがもたらす光と影が多角的に報じられています。",
     "articles": [
