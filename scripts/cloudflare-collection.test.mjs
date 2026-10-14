@@ -58,7 +58,7 @@ test("shared fixture hash and independently specified expectations", () => {
   assert.equal(result.blocks.summary.domain, "COLLECTION");
   assert.equal(result.wafFacts.domain, "FACT");
   assert.equal(result.pagesQuota.ruleId, "P01");
-  assert.match(html(fixture), /利用枠は未確認/);
+  assert.doesNotMatch(html(fixture), /利用枠は未確認/);
 });
 
 test("legacy, unknown version, root runId and malformed input never reuse old numeric values", () => {
@@ -179,7 +179,7 @@ test("v2 access failures affect collection health while explicitly disabled bloc
   assert.equal(assessment.counts.total, 4);
   assert.equal(assessment.counts.unavailable, 1);
   assert.equal(assessment.blocks.countryTraffic.state, "取得失敗");
-  assert.match(html(failed), /必須項目の判定不能 1 件 \/ 対象 4 件/);
+  assert.match(html(failed), /データについて（要確認の項目があります）/);
   assert.match(html(failed), /国別アクセス（完了した24時間）：取得失敗/);
 
   const disabled = structuredClone(fixtureV2);
@@ -262,7 +262,7 @@ test("LIVE error and UNKNOWN combinations validate; failures cannot carry old va
   assert.equal(parsed(root).traffic24h.invalid, false);
 });
 
-test("optional failure keeps valid summary, counts the missing detail and gives collection action", () => {
+test("retired detail failure stays in the contract but outside the access screen", () => {
   const root = clone(); Object.assign(root.waf7d.topPaths, { status: "ERROR", coverage: "UNKNOWN", errorCode: "ACCESS_DENIED", data: null, collectedAt: null, validUntil: null });
   const result = assessCollection(parsed(root), NOW);
   assert.equal(result.blocks.summary.usable, true);
@@ -271,10 +271,8 @@ test("optional failure keeps valid summary, counts the missing detail and gives 
   assert.equal(result.counts.unavailable, 1);
   assert.match(result.actions[0], /設定・応答と取得元の提供状況/);
   const output = html(root);
-  assert.match(output, /総イベント 15 件/);
-  assert.doesNotMatch(output, /\/wp-login.php ·/);
-  assert.match(output, /最後の取得試行/);
-  assert.doesNotMatch(output, /継続失敗|攻撃への対応/);
+  assert.match(output, /アクセス推移と国別アクセスのデータはまだ確認できません/);
+  assert.doesNotMatch(output, /総イベント|\/wp-login.php|上位パス|取得元の提供状況/);
 });
 
 test("unavailable WAF groups keep five failures and describe the unknown cause neutrally", () => {
@@ -297,8 +295,7 @@ test("unavailable WAF groups keep five failures and describe the unknown cause n
   }
   const output = html(root);
   assert.doesNotMatch(output, /権限がありません|プラン対象外|アクセス条件を満たせませんでした|総イベント 15 件/);
-  assert.match(output, /データ収集について必要な操作<\/h2><ul[^>]*><li>収集処理の設定・応答と取得元の提供状況を確認する<\/li>/);
-  assert.match(output, /Security Events/);
+  assert.doesNotMatch(output, /データ収集について必要な操作|Security Events|WAFの処理結果/);
 });
 
 test("PARTIAL with verified data is reference-only, null remains unavailable", () => {
@@ -322,7 +319,7 @@ test("MOCK plus DEMO is explicitly demo, never produces production actions or si
   assert.deepEqual(result.actions, []);
   assert.equal(result.signals.state, "判定ルール未設定");
   const output = html(root, null);
-  assert.match(output, /本番の状態を表しません/);
+  assert.match(output, /アクセス推移と国別アクセスのデータはまだ確認できません/);
   assert.doesNotMatch(output, /必要な操作：Cloudflare/);
 });
 
@@ -330,7 +327,7 @@ test("zero events, empty arrays, sampling and zero-denominator cache rate stay d
   const root = clone(); root.traffic24h.data = { requests: 0, threatEvents: 0, cachedRequests: 0, cacheRate: null }; root.waf7d.summary.data = { actionCounts: {}, totalEvents: 0 };
   assert.equal(assessCollection(parsed(root), NOW).state, "取得正常");
   const output = html(root);
-  assert.match(output, /算出不能/); assert.match(output, /この集計では観測されず（推計）/); assert.match(output, /この集計では観測されず（集計方法未確認）/);
+  assert.doesNotMatch(output, /算出不能|総イベント|キャッシュ率/);
   assert.doesNotMatch(output, /攻撃0件|攻撃ゼロ|平常|正常稼働中/);
   assert.equal(samplingNote("NONE", true), "この集計では観測されず");
   root.waf7d.topRules.data = null;
@@ -401,30 +398,44 @@ test("unknown actions preserve count under Other, scope identifiers are not expo
   assert.equal(parsed(root).summary.data.totalEvents, 9);
   assert.equal(actionLabel("brand_new_action"), "その他（処理種別未確認）");
   const output = html(root);
-  assert.match(output, /その他（処理種別未確認）/);
+  assert.doesNotMatch(output, /その他（処理種別未確認）/);
   assert.doesNotMatch(output, /brand_new_action|do-not-display-zone-id/);
 });
 
-test("graphs use valid summary and timeline independently; missing blocks never become zero graphs", () => {
-  const root = clone(); root.waf7d.timeline.data = [{ hour: "2026-10-05T00:00:00Z", action: "block", count: 2 }];
-  let output = html(root);
-  assert.match(output, /処理種別分布。件数は下の一覧/);
-  assert.match(output, /時間別WAFイベント件数/);
-  Object.assign(root.waf7d.summary, { status: "ERROR", coverage: "UNKNOWN", errorCode: "TIMEOUT", data: null, collectedAt: null, validUntil: null });
-  output = html(root);
-  assert.doesNotMatch(output, /処理種別分布。件数は下の一覧/);
-  assert.match(output, /時間別WAFイベント件数/);
-  Object.assign(root.waf7d.timeline, { status: "PARTIAL", coverage: "INCOMPLETE", errorCode: "PARTIAL_RESPONSE" });
-  output = html(root); assert.match(output, /今回の部分データを参考表示/);
-  Object.assign(root.waf7d.timeline, { status: "ERROR", coverage: "UNKNOWN", errorCode: "TIMEOUT", data: null, collectedAt: null, validUntil: null });
-  output = html(root); assert.doesNotMatch(output, /時間別WAFイベント件数|時系列グラフは表示できません/);
+test("access trend and country failures remain independent on the main screen", () => {
+  const noCountry = structuredClone(fixtureV2);
+  Object.assign(noCountry.countryTraffic, { status: "ERROR", coverage: "UNKNOWN", errorCode: "TIMEOUT", data: null, collectedAt: null, validUntil: null });
+  let output = html(noCountry);
+  assert.match(output, /この24時間には 100 件の HTTP リクエスト/);
+  assert.match(output, /国別アクセス（直近24時間）/);
+  assert.match(output, /取得失敗：最後の取得試行では、応答の待ち時間を超えました/);
+  assert.doesNotMatch(output, /国・地域の件数順一覧/);
+  const noTrend = structuredClone(fixtureV2);
+  Object.assign(noTrend.trafficSeries, { status: "ERROR", coverage: "UNKNOWN", errorCode: "TIMEOUT", data: null, collectedAt: null, validUntil: null });
+  output = html(noTrend);
+  assert.match(output, /国・地域の件数順一覧/);
+  assert.match(output, /アクセス推移（直近24時間）/);
+  assert.doesNotMatch(output, /この24時間には 100 件の HTTP リクエスト/);
+});
+
+test("collapsed data details flag a separate Pages failure and expired access stays hidden", () => {
+  const pagesFailed = structuredClone(fixtureV2);
+  Object.assign(pagesFailed.pagesMonth, { status: "ERROR", coverage: "UNKNOWN", errorCode: "TIMEOUT", data: null, collectedAt: null, validUntil: null });
+  const output = html(pagesFailed);
+  assert.match(output, /<details[^>]*><summary[^>]*>データについて（要確認の項目があります）<\/summary>/);
+  assert.match(output, /別の監視項目：Pages の取得状態：取得失敗/);
+  assert.doesNotMatch(output, /Pages当月デプロイ|利用枠は未確認|危険度判定は次段階|WAFの処理結果/);
+  const expired = html(fixtureV2, timestamp(fixtureV2.trafficSeries.validUntil));
+  assert.match(expired, /アクセス推移（直近24時間）/);
+  assert.match(expired, /期限切れ：データの有効期限に達しています/);
+  assert.doesNotMatch(expired, /この24時間には 100 件の HTTP リクエスト/);
 });
 
 test("transport failure recommends retry instead of inventing a malformed collector result", () => {
   const output = html(null, null, { failed: true });
-  assert.match(output, /収集APIの応答と接続を確認する/);
-  assert.doesNotMatch(output, /必要な操作：収集処理の出力形式を確認する/);
-  assert.match(output, /危険度判定は次段階/);
+  assert.match(output, /APIからデータを取得できませんでした。値は表示できません/);
+  assert.doesNotMatch(output, /必要な操作：収集処理の出力形式を確認する|危険度判定は次段階|100 件/);
+  assert.doesNotMatch(html(fixtureV2, NOW, { failed: true }), /アクセス数（24時間）|100 件|データについて/);
 });
 
 test("monotonic clock includes RTT and uncertainty, expires at resync and ignores wall clock", () => {

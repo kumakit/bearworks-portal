@@ -101,3 +101,17 @@ NEXT ACTOR: ROOT CODEX / HUMAN
 NEXT MODEL: Root Codex（Lunaの本番証跡レビュー済み）
 NEXT TASK: release/pages-collector-hotfix-and-waf-access-follow-up
 BLOCKERS: PR #15修正の本番collectorへの限定反映と再収集、GraphQL WAF系の認可条件、Pagesの契約・対象範囲、clock運転確認。Issue更新・closeは未実施。危険度・履歴・前期間比は次段階。
+
+## Phase 3A 画面整理（2026-10-14 追補）
+
+上の旧 NEXT TASK と未チェック欄には、更新前の Issue に基づく履歴が含まれる。現行の範囲判断は [Phase 3A 計画](phase3-display-plan_20261014.md)と Issue #397 の更新後要件を優先する。
+
+- [x] 認証済み本番画面で 24 時間・7 日・30 日のアクセス推移、国別表示、残っている旧カードを確認する。
+- [x] 最新 main から画面整理用ブランチを作り、Portal に限る変更計画と[手動レビュー依頼](phase3-display-review-request_20261014.md)を作成する。
+- [x] Sonnet の手動計画レビューを受領し、[採否](../../history/20261014_issue397_phase3_display_review.md)を現行コードと照合する。
+- [x] 旧 WAF・危険度・Pages 利用枠の通常表示を撤去し、アクセス関連と Pages の取得状態を「データについて」に整理する。
+- [/] 契約・表示テスト31件、型検査、lint、webpack本番ビルド、合成データのローカルPC・スマートフォン表示を確認。Workers CI とキーボード・フォーカスの最終確認は未実施。
+- [ ] 対象差分をレビューし、commit、push、PR、CI、本番配備をそれぞれ判断する。
+- [ ] セキュリティ参考系列は実測で意味を確定してから採否を決める。30 日比較と履歴保持は別フェーズとする。
+
+実装と検証の範囲は[Phase 3A 作業記録](../../history/20261014_issue397_phase3_display_walkthrough.md)を参照。
