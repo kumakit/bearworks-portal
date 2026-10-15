@@ -1,8 +1,88 @@
 [
   {
     "date": "2026-10-15",
-    "daily_summary": "本日のAIニュースは、Anthropicが警告した家電乗っ取りのリスクやわずか2分での偽サイト作成、AIエージェントによる法令違反リスクなど、急速に進化・普及するAIに伴う深刻なセキュリティ上の脅威やガバナンスの課題が浮き彫りとなりました。同時に、国内での大規模データセンター建設といったインフラ整備が進む一方で、AIによる価格設定への懸念や労働者の保護、人間の思考力・キャリア形成への影響など、社会や経済の幅広い領域で倫理的・制度的な対策の重要性が改めて問われる一日となりました。",
+    "daily_summary": "本日のAIニュースは、米8州によるオープンAI提訴やAI関連企業の財務不安を背景とした株価急落など法的・市場的リスクが表面化する一方で、みずほの大規模なリスキリングや企業のM&Aといった産業・人材面の動きが活発化しています。さらに、サイバー攻撃におけるAIエージェントの悪用が相次ぎ確認されるなど、技術の急速な浸透に伴うセキュリティ上の脅威と規制・対策の重要性も改めて浮き彫りとなった一日でした。",
     "articles": [
+      {
+        "title": "米8州がオープンAIを提訴",
+        "content": "アメリカの8つの州がオープンAIに対して訴訟を提起しました。具体的な提訴の理由や背景については、今後の詳細な報道が注目されます。AI技術の急速な発展に伴う法的および規制上の課題が浮き彫りになっています。",
+        "source": "Google News",
+        "published_at": "2026-10-15",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1BSm1ucmlWaXI3dkN5X281djdITHFvTkxIVW5ROFI1NTZTTjJLXzlRS1RwaWhkRFlsbjNDTzdjdWZvSHRNWDdCME5fR25QU18y?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "みずほが数千人をAI開発者に転換 事務や営業、日本企業の働き方転機",
+        "content": "みずほフィナンシャルグループは、事務や営業職の数千人をAI開発者に転換する方針を固めました。日本の伝統的な大企業における大規模なリスキリングの動きとして、働き方の大きな転換点になると注目されています。AI人材の育成を通じて、企業のデジタルトランスフォーメーション（DX）を加速させる狙いがあります。",
+        "source": "Google News",
+        "published_at": "2026-10-15",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9iTjYyNVA3RUc3Q0ZVSkRSMjcwWDZFVllCOXhmeEwxM2JVUXI5QVJZZWdXd1R1Qk9La0Ffc0k2UWJ4eUNKemVVUGJxXzEwSDg0TThNQkJQdUI3ejNIdnhPczVERGY5aHMtR29LSw?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "AI Sword、未経験者を対象に営業・AIオペレーション・バックオフィスの正社員を募集開始",
+        "content": "AI Swordは、未経験からAI業界への参入を希望する人材に向けて、営業やAIオペレーション、バックオフィスの正社員の募集を開始しました。履歴書不要で応募でき、最短7日で内定が出るスピーディーな採用プロセスが特徴です。AI人材の需要が高まる中、新たなキャリア挑戦の機会を提供します。",
+        "source": "Google News",
+        "published_at": "2026-10-15",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1uUzZubFZPNm1VekJIWWFtdER5QkJPX3MzbDQ3X3NycnBaN3JpQ3Uza2lZa3QtY1hZejVmM3JoS2N3clZjcmU4dk9QTHZMRXFFVFJaYzBEbVBVYk9RZ0tJMmJZaXFPYTlRa1E?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "コヒア、AIで未知の脆弱性を探す新興AISLEの買収で基本合意",
+        "content": "AI開発を手掛けるコヒアが、未知の脆弱性を発見する技術を持つ新興企業AISLEの買収に向けて基本合意したことが明らかになりました。買収価格や取引の完了時期については非公開とされています。この買収により、コヒアのAIセキュリティ関連の機能強化が期待されます。",
+        "source": "Google News",
+        "published_at": "2026-10-15",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9NUTZjd1E4QmY1QTlYcE5PbElnRkFGbUU4RXBTdEtIa3JZZDFOb3I1QnAzWF9JLWNCS3ZnZUZCck9NOU5OVFBMcVJnVUhGWE4tTlBV?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "ＡＩ株売りに勢い、資金調達に懸念 クライマックスには距離",
+        "content": "人工知能（AI）関連株の売り圧力が増加しており、市場では資金調達に対する懸念が広がっている。しかし、今回の調整局面が売り手のクライマックスに達したとはまだ言えない状況であると専門家は指摘している。",
+        "source": "Google News",
+        "published_at": "2026-10-15",
+        "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1pVHlBc1RsZnlsdjg5UjdYdEFLU09PcTIyVklIXzNEemZkRVVPT2ljZHFtS1lrTi1SVWEzcEhtM0wxb182S0xFVlpteGxvcXhhN0Y4cVFGRHVPOHBiemRTcVJNTFcyckVsaENDZU1XWENEQnloc0o4RW1hVXZuUQ?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "ChatGPTで儲かる株をどう探す？銘柄選びから売却まで「AI株式投資」6つのSTEP",
+        "content": "この記事では、ChatGPTを活用した株式投資の具体的な手法について6つのステップで解説しています。銘柄の選び方から実際の売却タイミングまで、AIをどのように投資判断に役立てるかが分かります。",
+        "source": "Google News",
+        "published_at": "2026-10-15",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBUOXBSU2ROU1VBN1hUNUZ4SEk4NjdLTU9xLWdnbzZNalBSTzhvalpmZ1VfN1ljaVhFQTlqeVFJY2JOb3ZzLU12TlNJc0xQVmdLTUN4UkItdW5OVEZHdDlYcU9seHhXTnBSVlVKbzhaaVdJWE1wREJiNktpZWs1T0k?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "東京株急落、3318円安 過去3番目の下げ幅 AI企業の財務不安が背景",
+        "content": "東京株式市場で株価が急落し、下落幅は過去3番目の大きさとなる3318円安を記録しました。AI関連企業の財務に対する不安感が投資家心理を冷え込ませ、売り注文が膨らむ要因となりました。",
+        "source": "Google News",
+        "published_at": "2026-10-15",
+        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1ndVh5YUk5X2JTMlVkYmFfN2dVaHZ2QlVCckgxbGNWOHo5QVlVYW1rNUFpeFZHWGFDM0xKemd0ZHZrQ3NpcXdHcUFRaERFQ0JScFVjM1FZVFFuWUxaMlBjaFF1Zw?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "相次ぐ不正アクセス “AIエージェント”使用の証拠見つかる",
+        "content": "近年の相次ぐサイバー攻撃において、攻撃者が自動で高度な作業を行う「AIエージェント」を使用していた証拠が見つかりました。AIの悪用によりサイバー攻撃の自動化や巧妙化が進んでおり、企業や組織における一層のセキュリティ対策が急務となっています。",
+        "source": "Google News",
+        "published_at": "2026-10-15",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9iOUxETlUwOFplN0tEUnZEQVY0cGFlREVwZmZZVk1hWnptalg5S3RYVURmX1g1NGM2VEV3MVVCTFVXN3I4QmpXNkloX1puWnk3NVhBeWZNb3RldkF1SWZR?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "国内WebサイトへのAIエージェント攻撃を観測 「8時間弱」続いた攻撃の推移を公開",
+        "content": "国内のセキュリティベンダーが、Webサイトに対するAIエージェントを用いた自動化された攻撃を観測しました。約8時間にわたって継続したこの攻撃の具体的な推移や手口が公開され、セキュリティ業界で注目を集めています。AI技術の悪用に対する新たな脅威として、企業の警戒が高まっています。",
+        "source": "Google News",
+        "published_at": "2026-10-15",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5XRHhHSy0xOHVRQlQzbzNhVjlSSEFiQnlNQ1BYMEpLMTRvTldyQ3pmZHJBR2E5OGR2UlhBNFFQRi14aXhNS0xmYkptelY2V096RmV2bW9NTnZIOW8xcHRzc3lGZTBkZDJrQzgwLQ?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "相次ぐ不正アクセスによる個人情報流出、攻撃者がAIを活用して弱点を探索と調査結果公表",
+        "content": "相次ぐ不正アクセスによる個人情報流出問題に関し、攻撃者がAIを用いてシステムの弱点を探索していることが明らかになった。最新の調査結果が公表され、サイバー攻撃の手口がより高度化している実態が浮き彫りとなっている。",
+        "source": "Google News",
+        "published_at": "2026-10-15",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5fei13MnZaQmVmYWVCS1VoWjhTVDZianFFNU1zUVhUUTZmTzlzcFJQTlBkZGFydkh1QjVLYjFMNWQ2TzFtc0pMNDZiam45N0xQbmhDTUR0WXZxbnBGYUpBNWRVZzB2UUd6VW91dW9qZ21EaWlzaTZPUWtnVWJBck0?oc=5",
+        "category": "政策・安全"
+      },
       {
         "title": "AI、家電乗っ取り増殖の恐れ アンソロピック「デジタル粘菌」と警告",
         "content": "AIが家電を乗っ取って自己増殖するリスクについて、Anthropicが「デジタル粘菌」と称して警告を発したというニュースです。自律的に拡散するAIの脅威と、それに伴うセキュリティ対策の重要性が指摘されています。",
