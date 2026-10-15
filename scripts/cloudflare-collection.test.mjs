@@ -7,6 +7,7 @@ import { build } from "esbuild";
 import React from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { BLOCK_KEYS, parseCollection, assessCollection, assessBlock, timestamp, syncClock, clockUpperBound, samplingNote, actionLabel } from "../app/(non-monetized)/dashboard/lib/cloudflareCollection.ts";
+import { parseSecurityCollection, assessSecurityBlock } from "../app/(non-monetized)/dashboard/lib/cloudflareSecurity.ts";
 
 const require = createRequire(import.meta.url);
 const fixtureBytes = await readFile(new URL("./fixtures/cloudflare-collection-v1.json", import.meta.url));
@@ -40,6 +41,52 @@ const pageCode = await compile("app/(non-monetized)/dashboard/cloudflare/page.ts
 const html = (root, now = NOW, extra = {}) => renderToStaticMarkup(React.createElement(view, { collection: parsed(root), nowUpper: now, ...extra }));
 const accessHtml = (root, period, now = NOW) => renderToStaticMarkup(React.createElement(accessView, { collection: parsed(root), nowUpper: now, defaultPeriod: period }));
 const withPhase2Periods = () => structuredClone(fixtureV2Phase2);
+const withSecurity = () => {
+  const root = withPhase2Periods();
+  for (const [key, hours] of [["securityTrend24h", 24], ["securityTrend7d", 168], ["securityTrend30d", 720]]) {
+    root[key] = { runId: root.runId, source: "LIVE", status: "OK", coverage: "FULL", sampling: "ADAPTIVE", precision: "estimated",
+      errorCode: null, attemptedAt: "2026-10-06T00:00:00Z", collectedAt: "2026-10-06T00:00:00Z", validUntil: "2026-10-06T03:00:00Z",
+      windowStart: new Date(NOW - hours * 3600000).toISOString(), windowEnd: "2026-10-06T00:00:00Z", scope: { kind: "ZONE", label: "bearworks.uk" },
+      data: { granularity: "HOUR", points: [{ hour: new Date(NOW - hours * 3600000).toISOString(), count: 0, sampleInterval: 1 },
+        { hour: "2026-10-05T23:00:00Z", count: 7, sampleInterval: 2 }] } };
+  }
+  return root;
+};
+
+test("sparse Firewall reference keeps API counts and cannot change access health", () => {
+  const root = withSecurity();
+  const original = assessCollection(parsed(root), NOW);
+  const security = parseSecurityCollection({ cloudflareCollection: root });
+  assert.deepEqual(security.securityTrend24h.points.map(p => p.count), [0, 7]);
+  assert.equal(assessSecurityBlock(security.securityTrend24h, NOW).usable, true);
+  const output = html(root, NOW, { security });
+  assert.match(output, /Firewall イベントの記録数（参考）/);
+  assert.match(output, /値を取得できた時間 2 \/ 24/);
+  assert.match(output, /推計を含みます/);
+  assert.match(output, /返らなかった時間は未確認/);
+  assert.equal(assessCollection(parsed(root), NOW).counts.unavailable, original.counts.unavailable);
+  root.securityTrend24h.data.points[1].count = -1;
+  assert.equal(assessSecurityBlock(parseSecurityCollection({ cloudflareCollection: root }).securityTrend24h, NOW).state, "利用不可");
+  assert.equal(assessCollection(parsed(root), NOW).counts.unavailable, original.counts.unavailable);
+});
+
+test("missing, expired and malformed Firewall periods stay local", () => {
+  const root = withSecurity();
+  delete root.securityTrend7d;
+  assert.equal(assessSecurityBlock(parseSecurityCollection({ cloudflareCollection: root }).securityTrend7d, NOW).state, "未収集");
+  assert.equal(assessSecurityBlock(parseSecurityCollection({ cloudflareCollection: root }).securityTrend24h, UNTIL).state, "期限切れ");
+  for (const variant of ["duplicate", "outOfRange", "badInterval", "badCount"]) {
+    const candidate = structuredClone(root);
+    const points = candidate.securityTrend24h.data.points;
+    if (variant === "duplicate") points[1].hour = points[0].hour;
+    if (variant === "outOfRange") points[1].hour = candidate.securityTrend24h.windowEnd;
+    if (variant === "badInterval") points[1].sampleInterval = 0;
+    if (variant === "badCount") points[1].count = 1.5;
+    const parsedSecurity = parseSecurityCollection({ cloudflareCollection: candidate });
+    assert.equal(parsedSecurity.securityTrend24h.invalid, true, variant);
+    assert.equal(assessSecurityBlock(parsedSecurity.securityTrend30d, NOW).usable, true);
+  }
+});
 
 test("shared fixture hash and independently specified expectations", () => {
   assert.equal(createHash("sha256").update(fixtureBytes).digest("hex"), manifest.files["cloudflare-collection-v1.json"]);
@@ -507,15 +554,15 @@ test("page refetches on visibility/pageshow/resume and periodic sync; fetch fail
   const hooks = { ...React, useState: initial => { const index = stateIndex++; states[index] = typeof initial === "function" ? initial() : initial; return [states[index], next => { states[index] = next; }]; }, useRef: current => ({ current }), useCallback: cb => cb, useEffect: cb => effects.push(cb) };
   const page = load(pageCode, name => name === "react" ? hooks : require(name));
   page.default(); const cleanup = effects[0](); const flush = () => new Promise(resolve => setImmediate(resolve)); await flush();
-  assert.equal(calls, 1); assert.ok(states[1]); assert.equal(states[0].traffic24h.status, "OK");
-  globalThis.document.visibilityState = "hidden"; globalThis.document.map.get("visibilitychange")(); assert.equal(states[1], null);
+  assert.equal(calls, 1); assert.ok(states[2]); assert.equal(states[0].traffic24h.status, "OK");
+  globalThis.document.visibilityState = "hidden"; globalThis.document.map.get("visibilitychange")(); assert.equal(states[2], null);
   globalThis.document.visibilityState = "visible"; globalThis.document.map.get("visibilitychange")(); await flush(); assert.equal(calls, 2);
-  globalThis.window.map.get("pageshow")(); assert.equal(states[1], null); await flush(); assert.equal(calls, 3);
+  globalThis.window.map.get("pageshow")(); assert.equal(states[2], null); await flush(); assert.equal(calls, 3);
   globalThis.document.map.get("resume")(); await flush(); assert.equal(calls, 4);
   for (let i = 0; i < 3599; i++) { mono += 1000; timers[0](); }
   await flush(); assert.equal(calls, 4);
   mono += 1000; timers[0](); await flush(); assert.equal(calls, 5);
-  mono += 5000; timers[0](); assert.equal(states[1], null); await flush(); assert.equal(calls, 6);
-  error = true; globalThis.window.map.get("focus")(); await flush(); assert.equal(states[0].traffic24h.data, null); assert.equal(states[1], null); assert.equal(states[5], true);
+  mono += 5000; timers[0](); assert.equal(states[2], null); await flush(); assert.equal(calls, 6);
+  error = true; globalThis.window.map.get("focus")(); await flush(); assert.equal(states[0].traffic24h.data, null); assert.equal(states[2], null); assert.equal(states[6], true);
   cleanup(); assert.equal(globalThis.document.map.size, 0); assert.equal(globalThis.window.map.size, 0);
 });

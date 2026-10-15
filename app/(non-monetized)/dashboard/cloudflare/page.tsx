@@ -2,12 +2,14 @@
 
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import { CloudflareCollectionView } from "../components/CloudflareCollectionView";
+import { parseSecurityCollection, type SecurityCollection } from "../lib/cloudflareSecurity";
 
 import { clockUpperBound, parseCollection, syncClock, type ClockAnchor, type Collection } from "../lib/cloudflareCollection";
 
 
 export default function CloudflareWafPage() {
   const [collection, setCollection] = useState<Collection>(() => parseCollection(null));
+  const [security, setSecurity] = useState<SecurityCollection>(() => parseSecurityCollection(null));
   const [anchor, setAnchor] = useState<ClockAnchor | null>(null);
   const [mono, setMono] = useState(0);
   const [loading, setLoading] = useState(true);
@@ -31,10 +33,10 @@ export default function CloudflareWafPage() {
       if (controller.signal.aborted || !mounted.current) return;
       const meta = payload && typeof payload === "object" && "responseMeta" in payload ? payload.responseMeta : null;
       const next = syncClock(meta, start, receive, clock.current); clock.current = next;
-      setCollection(parseCollection(payload)); setAnchor(next); setMono(receive); setFailed(false);
+      setCollection(parseCollection(payload)); setSecurity(parseSecurityCollection(payload)); setAnchor(next); setMono(receive); setFailed(false);
     } catch {
       if (controller.signal.aborted || !mounted.current) return;
-      clock.current = null; setAnchor(null); setCollection(parseCollection(null)); setFailed(true);
+      clock.current = null; setAnchor(null); setCollection(parseCollection(null)); setSecurity(parseSecurityCollection(null)); setFailed(true);
     } finally {
       if (!controller.signal.aborted && mounted.current) { fetching.current = false; setLoading(false); setRefreshing(false); }
     }
@@ -66,5 +68,5 @@ export default function CloudflareWafPage() {
     return () => { mounted.current = false; active.current?.abort(); window.clearInterval(timer); document.removeEventListener("visibilitychange", onVisibility); window.removeEventListener("pageshow", onPageShow); window.removeEventListener("focus", onPageShow); document.removeEventListener("resume", onPageShow); };
   }, [fetchData]);
 
-  return <CloudflareCollectionView collection={collection} nowUpper={clockUpperBound(anchor, mono)} loading={loading} refreshing={refreshing} failed={failed} onRefresh={() => void fetchData()} />;
+  return <CloudflareCollectionView collection={collection} security={security} nowUpper={clockUpperBound(anchor, mono)} loading={loading} refreshing={refreshing} failed={failed} onRefresh={() => void fetchData()} />;
 }
