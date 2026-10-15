@@ -4,6 +4,8 @@ import React from "react";
 import Link from "@/components/InternalLink";
 import { RefreshCw } from "lucide-react";
 import { CloudflareAccessView } from "./CloudflareAccessView";
+import { CloudflareSecurityView } from "./CloudflareSecurityView";
+import type { SecurityCollection } from "../lib/cloudflareSecurity";
 import {
   ACCESS_KEYS,
   BLOCK_LABELS,
@@ -19,8 +21,9 @@ const dateLabel = (value: string | null) => {
   return time === null ? "未確認" : `${new Date(time).toLocaleString("ja-JP", { timeZone: "Asia/Tokyo", hour12: false })} JST`;
 };
 
-export function CloudflareCollectionView({ collection, nowUpper, loading = false, refreshing = false, failed = false, onRefresh }: {
+export function CloudflareCollectionView({ collection, security, nowUpper, loading = false, refreshing = false, failed = false, onRefresh }: {
   collection: Collection;
+  security?: SecurityCollection;
   nowUpper: number | null;
   loading?: boolean;
   refreshing?: boolean;
@@ -48,7 +51,7 @@ export function CloudflareCollectionView({ collection, nowUpper, loading = false
     {failed && <p role="alert" className="rounded-xl border border-amber-300 bg-amber-50 p-4">APIからデータを取得できませんでした。値は表示できません。時間をおいて再読込してください。</p>}
     {!loading && !failed && collection.schemaVersion !== 2 && <p role="status" className={panel}>アクセス推移と国別アクセスのデータはまだ確認できません。時間をおいて再読込してください。</p>}
     {!failed && <CloudflareAccessView collection={collection} nowUpper={nowUpper} />}
-    <p className="text-sm text-muted">この画面はアクセスの推移と国別の表示です。セキュリティの判定は含みません。</p>
+    <p className="text-sm text-muted">アクセスの推移と国別の表示に加え、Firewall イベントの記録数を参考表示します。セキュリティの判定は含みません。</p>
     {!failed && collection.schemaVersion === 2 && <details className={panel}>
       <summary className="cursor-pointer rounded font-semibold focus:outline-2 focus:outline-blue-700">データについて{needsAttention ? "（要確認の項目があります）" : ""}</summary>
       <div className="mt-4 space-y-4 text-sm">
@@ -69,6 +72,7 @@ export function CloudflareCollectionView({ collection, nowUpper, loading = false
         <p>Digest はこの画面とは別に、アクセス項目と Pages の取得状態を確認します。旧 WAF 詳細は必須監視対象ではありません。</p>
       </div>
     </details>}
+    {!failed && security && <CloudflareSecurityView security={security} nowUpper={nowUpper} />}
     <footer><Link href="/dashboard/gcp" className="text-sm underline">GCPコスト分析を見る</Link></footer>
   </main>;
 }
