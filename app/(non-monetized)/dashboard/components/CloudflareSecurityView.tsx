@@ -24,9 +24,9 @@ export function CloudflareSecurityView({ security, nowUpper }: { security: Secur
     return { ...point, x: 34 + (hour - start) / (period.hours * 3600000) * 646, y: 154 - point.count / maximum * 124 };
   });
   return <details className="rounded-2xl border border-gray-200 bg-white p-5 shadow-soft">
-    <summary className="cursor-pointer rounded font-semibold focus:outline-2 focus:outline-blue-700">Firewall イベントの記録数（参考）</summary>
+    <summary className="cursor-pointer rounded font-semibold focus:outline-2 focus:outline-blue-700">Firewall イベントの時間別集計（参考）</summary>
     <div className="mt-4 space-y-4 text-sm">
-      <p>Cloudflare が抽出を含めて集計した時間別の記録です。HTTP リクエスト数や訪問人数とは別の値です。攻撃・遮断・安全性の判定ではありません。</p>
+      <p>各数値は、Cloudflare がその1時間について返した Firewall 関連イベントの集計値です。たとえば「7件」は、7件の攻撃・遮断や7人の訪問を意味せず、安全性も判定できません。一部のデータを使って集計した時間は推計を含みます。</p>
       <div className="flex flex-wrap gap-2" role="group" aria-label="参考データの期間">
         {periods.map(item => <button key={item.key} type="button" aria-pressed={selected === item.key} onClick={() => setSelected(item.key)}
           className="rounded-lg border px-3 py-2 focus:outline-2 focus:outline-blue-700 aria-pressed:bg-blue-100">{item.label}</button>)}
@@ -41,10 +41,10 @@ export function CloudflareSecurityView({ security, nowUpper }: { security: Secur
           {dots.map(point => <circle key={point.hour} cx={point.x} cy={point.y} r="3.5" fill={point.sampleInterval > 1 ? "#075985" : "#334155"} stroke={point.sampleInterval > 1 ? "#075985" : "none"} strokeWidth="2"><title>{`${date(point.hour)}：${point.count} 件${point.sampleInterval > 1 ? "（推計）" : ""}`}</title></circle>)}
           <text x="34" y="177" fontSize="12" fill="#334155">開始</text><text x="650" y="177" fontSize="12" fill="#334155">終了</text>
         </svg>
-        <p>点のない時間を 0 件とは扱いません。返却値が 0 の点も、実際のイベントがなかった証明ではありません。</p>
+        <p>点のない時間を 0 件とは扱いません。集計値が 0 の点も、実際のイベントがなかった証明ではありません。</p>
         <div className="max-h-72 overflow-auto rounded border">
           <table className="w-full text-left"><caption className="sr-only">値が返った時間の一覧</caption>
-            <thead className="sticky top-0 bg-slate-100"><tr><th scope="col" className="p-2">時間（日本時間）</th><th scope="col" className="p-2">返却値</th><th scope="col" className="p-2">集計</th></tr></thead>
+            <thead className="sticky top-0 bg-slate-100"><tr><th scope="col" className="p-2">時間（日本時間）</th><th scope="col" className="p-2">イベントの集計値</th><th scope="col" className="p-2">値の扱い</th></tr></thead>
             <tbody>{points.map(point => <tr key={point.hour} className="border-t"><td className="p-2">{date(point.hour)}</td><td className="p-2">{point.count.toLocaleString("ja-JP")} 件</td><td className="p-2">{point.sampleInterval > 1 ? "推計" : "今回の取得では抽出なし"}</td></tr>)}</tbody>
           </table>
         </div>
