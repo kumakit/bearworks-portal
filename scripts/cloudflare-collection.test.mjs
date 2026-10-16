@@ -60,7 +60,9 @@ test("sparse Firewall reference keeps API counts and cannot change access health
   assert.deepEqual(security.securityTrend24h.points.map(p => p.count), [0, 7]);
   assert.equal(assessSecurityBlock(security.securityTrend24h, NOW).usable, true);
   const output = html(root, NOW, { security });
-  assert.match(output, /Firewall イベントの記録数（参考）/);
+  assert.match(output, /Firewall イベントの時間別集計（参考）/);
+  assert.match(output, /イベントの集計値/);
+  assert.match(output, /7件の攻撃・遮断や7人の訪問を意味せず/);
   assert.match(output, /値を取得できた時間 2 \/ 24/);
   assert.match(output, /推計を含みます/);
   assert.match(output, /返らなかった時間は未確認/);
