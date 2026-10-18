@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "reviewedAt": "2026-10-04T00:00:00Z",
-  "expiresAt": "2026-10-18T00:00:00Z",
+  "reviewedAt": "2026-10-18T01:33:51Z",
+  "expiresAt": "2026-10-25T00:00:00Z",
   "owner": "kumakit",
   "issue": "https://github.com/kumakit/bearworks-portal/issues/17",
-  "reason": "GHSA-vfj7-8cjw-p6xm has no patched braces release. Remaining warnings propagate through Tailwind and the Next ESLint plugin. This is an unresolved warning, not remediation.",
-  "mitigation": "Use only reviewed repository glob/content patterns in local builds and CI. Do not feed request parameters, uploaded files, third-party custom stats/config or untrusted patterns into these build tools. Production audit must remain zero; review or remove this exception within 14 days.",
+  "reason": "Rechecked 2026-10-18: GHSA-vfj7-8cjw-p6xm still has no patched braces release. All seven warnings exactly match the reviewed development-only Tailwind and Next ESLint dependency paths. This is an unresolved warning, not remediation.",
+  "mitigation": "Use only reviewed repository glob/content patterns in local builds and CI. Do not feed request parameters, uploaded files, third-party custom stats/config or untrusted patterns into these build tools. Production audit must remain zero; review or remove this exception by 2026-10-25 09:00 JST.",
   "advisory": "https://github.com/advisories/GHSA-vfj7-8cjw-p6xm",
   "exceptions": [
     {
