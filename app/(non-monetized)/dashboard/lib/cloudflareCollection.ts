@@ -19,7 +19,10 @@ export interface CollectionBlock<T> {
   scope: { kind: "ZONE" | "ACCOUNT"; label: string } | null;
   invalid: boolean;
 }
-export type Collection = { [K in BlockKey]: CollectionBlock<DataByKey[K]> } & { schemaVersion: 1 | 2 | null };
+export interface HistoryWindow30d { state: string; windowStart: string; windowEnd: string; totalRequests: number | null; points: { hour: string; requests: number }[] | null }
+export interface History30d { generatedAt: string; referenceEnd: string; current: HistoryWindow30d; previous: HistoryWindow30d; comparison: { state: "READY"; difference: number; percent: number | null } | { state: "UNAVAILABLE"; reason: string } }
+export type HistoryParse = { state: "ABSENT" | "INVALID" | "OK"; value: History30d | null };
+export type Collection = { [K in BlockKey]: CollectionBlock<DataByKey[K]> } & { schemaVersion: 1 | 2 | null; history30d?: HistoryParse };
 export const BLOCK_KEYS: BlockKey[] = ["traffic24h", "summary", "topRules", "topPaths", "topASNs", "timeline", "pagesMonth"];
 export const ACCESS_KEYS: AccessKey[] = ["trafficSeries", "countryTraffic", "trafficPrevious24h", "trafficSeries7d", "countryTraffic7d", "trafficPrevious7d", "trafficSeries30d", "countryTraffic30d"];
 export const BLOCK_LABELS: Record<BlockKey, string> = { traffic24h: "アクセス統計（24時間）", summary: "WAF処理集計（7日間）", topRules: "上位ルール", topPaths: "上位パス", topASNs: "上位ネットワーク", timeline: "WAF時系列", pagesMonth: "Pages当月デプロイ", trafficSeries: "アクセス推移（完了した24時間）", countryTraffic: "国別アクセス（完了した24時間）", trafficPrevious24h: "前の24時間のアクセス推移", trafficSeries7d: "アクセス推移（7日間）", countryTraffic7d: "国別アクセス（7日間）", trafficPrevious7d: "前の7日間のアクセス推移", trafficSeries30d: "アクセス推移（30日間）", countryTraffic30d: "国別アクセス（30日間）" };
@@ -141,6 +144,62 @@ function parseBlock<K extends BlockKey>(key: K, x: unknown, runId: string): Coll
     scope: { kind: x.scope.kind, label: x.scope.label }, invalid: false } as CollectionBlock<DataByKey[K]>;
 }
 
+const HISTORY_STATES = ["READY", "ACCUMULATING", "MISSING", "SAMPLED", "INVALID", "IDENTITY_MISMATCH", "UNAVAILABLE"];
+const historyAbsent = (): HistoryParse => ({ state: "ABSENT", value: null });
+const historyInvalid = (): HistoryParse => ({ state: "INVALID", value: null });
+
+function historyWindow(raw: unknown, expectedEnd: number): HistoryWindow30d | null {
+  if (!record(raw) || !member(raw.state, HISTORY_STATES)) return null;
+  const start = timestamp(raw.windowStart), end = timestamp(raw.windowEnd);
+  if (start === null || end !== expectedEnd || start !== end - 720 * 3600000 || start % 3600000) return null;
+  if (raw.state !== "READY") {
+    return raw.totalRequests === null && raw.points === null
+      ? raw as unknown as HistoryWindow30d : null;
+  }
+  if (!count(raw.totalRequests) || !Array.isArray(raw.points) || raw.points.length !== 720) return null;
+  let total = 0;
+  for (let i = 0; i < 720; i++) {
+    const point = raw.points[i];
+    if (!record(point) || timestamp(point.hour) !== start + i * 3600000 || !count(point.requests)) return null;
+    total += point.requests;
+    if (!Number.isSafeInteger(total)) return null;
+  }
+  return total === raw.totalRequests ? raw as unknown as HistoryWindow30d : null;
+}
+
+/** Extra history data is optional and cannot invalidate the existing Cloudflare blocks. */
+export function parseHistory30d(raw: unknown, expectedRunId: string): HistoryParse {
+  if (raw === undefined) return historyAbsent();
+  if (!record(raw) || raw.schemaVersion !== 1 || raw.runId !== expectedRunId ||
+      raw.dataset !== "httpRequests1hGroups" || raw.aggregation !== "UTC_HOUR_SUM_REQUESTS" ||
+      !record(raw.scope) || raw.scope.kind !== "ZONE" || raw.scope.label !== "設定されたCloudflareゾーン全体") return historyInvalid();
+  const generated = timestamp(raw.generatedAt), end = timestamp(raw.referenceEnd);
+  if (generated === null || end === null || end % 3600000 || generated - end < 3600000 || generated - end >= 7200000) return historyInvalid();
+  const current = historyWindow(raw.current, end);
+  const previous = historyWindow(raw.previous, end - 720 * 3600000);
+  if (!current || !previous || !record(raw.comparison)) return historyInvalid();
+  const comparison = raw.comparison;
+  if (current.state === "READY" && previous.state === "READY") {
+    const difference = current.totalRequests! - previous.totalRequests!;
+    const expectedPercent = previous.totalRequests! === 0 ? null : difference / previous.totalRequests! * 100;
+    if (comparison.state !== "READY" || comparison.difference !== difference ||
+        (expectedPercent === null ? comparison.percent !== null :
+          typeof comparison.percent !== "number" || !Number.isFinite(comparison.percent) || Math.abs(comparison.percent - expectedPercent) > 0.051)) return historyInvalid();
+  } else {
+    const expected = current.state !== "READY" ? `CURRENT_${current.state}` : `PREVIOUS_${previous.state}`;
+    const common = current.state === previous.state && current.state !== "READY" ? current.state : null;
+    if (comparison.state !== "UNAVAILABLE" || comparison.reason !== expected && comparison.reason !== common) return historyInvalid();
+  }
+  return { state: "OK", value: { generatedAt: raw.generatedAt as string, referenceEnd: raw.referenceEnd as string,
+    current, previous, comparison: comparison as unknown as History30d["comparison"] } };
+}
+
+export function historyFresh(history: HistoryParse | undefined, nowUpper: number | null): history is HistoryParse & { value: History30d } {
+  if (history?.state !== "OK" || !history.value || nowUpper === null) return false;
+  const generated = timestamp(history.value.generatedAt);
+  return generated !== null && generated <= nowUpper && nowUpper - generated < 2 * 3600000;
+}
+
 export function parseCollection(payload: unknown): Collection {
   const root = record(payload) ? payload.cloudflareCollection : null;
   const valid = record(root) && (root.schemaVersion === 1 || root.schemaVersion === 2) && str(root.runId) && root.runId.length <= 128;
@@ -151,7 +210,8 @@ export function parseCollection(payload: unknown): Collection {
     if (!Object.hasOwn(root, key) && key !== "trafficSeries" && key !== "countryTraffic") return [key, { ...unknownBlock(), invalid: false }];
     return [key, parseBlock(key, root[key], root.runId as string)];
   }));
-  const result = { ...old, ...access, schemaVersion: valid ? root.schemaVersion : null } as Collection;
+  const history30d = valid && root.schemaVersion === 2 ? parseHistory30d(root.history30d, root.runId as string) : historyAbsent();
+  const result = { ...old, ...access, history30d, schemaVersion: valid ? root.schemaVersion : null } as Collection;
   if (result.schemaVersion === 2) {
     const pairs: [AccessKey, AccessKey][] = [["trafficSeries", "countryTraffic"], ["trafficSeries7d", "countryTraffic7d"], ["trafficSeries30d", "countryTraffic30d"]];
     for (const [seriesKey, countryKey] of pairs) {

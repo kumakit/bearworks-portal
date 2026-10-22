@@ -6,7 +6,7 @@ import { createRequire } from "node:module";
 import { build } from "esbuild";
 import React from "react";
 import { renderToStaticMarkup } from "react-dom/server";
-import { BLOCK_KEYS, parseCollection, assessCollection, assessBlock, timestamp, syncClock, clockUpperBound, samplingNote, actionLabel } from "../app/(non-monetized)/dashboard/lib/cloudflareCollection.ts";
+import { BLOCK_KEYS, parseCollection, assessCollection, assessBlock, historyFresh, timestamp, syncClock, clockUpperBound, samplingNote, actionLabel } from "../app/(non-monetized)/dashboard/lib/cloudflareCollection.ts";
 import { parseSecurityCollection, assessSecurityBlock } from "../app/(non-monetized)/dashboard/lib/cloudflareSecurity.ts";
 
 const require = createRequire(import.meta.url);
@@ -41,6 +41,20 @@ const pageCode = await compile("app/(non-monetized)/dashboard/cloudflare/page.ts
 const html = (root, now = NOW, extra = {}) => renderToStaticMarkup(React.createElement(view, { collection: parsed(root), nowUpper: now, ...extra }));
 const accessHtml = (root, period, now = NOW) => renderToStaticMarkup(React.createElement(accessView, { collection: parsed(root), nowUpper: now, defaultPeriod: period }));
 const withPhase2Periods = () => structuredClone(fixtureV2Phase2);
+const withHistory = () => {
+  const root = withPhase2Periods();
+  const end = NOW - 3600000;
+  const window = endAt => {
+    const start = endAt - 720 * 3600000;
+    return { state: "READY", windowStart: new Date(start).toISOString(), windowEnd: new Date(endAt).toISOString(),
+      totalRequests: 720, points: Array.from({ length: 720 }, (_, index) => ({ hour: new Date(start + index * 3600000).toISOString(), requests: 1 })) };
+  };
+  root.history30d = { schemaVersion: 1, runId: root.runId, dataset: "httpRequests1hGroups", aggregation: "UTC_HOUR_SUM_REQUESTS",
+    scope: { kind: "ZONE", label: "設定されたCloudflareゾーン全体" }, generatedAt: new Date(NOW).toISOString(),
+    referenceEnd: new Date(end).toISOString(), current: window(end), previous: window(end - 720 * 3600000),
+    comparison: { state: "READY", difference: 0, percent: 0 } };
+  return root;
+};
 const withSecurity = () => {
   const root = withPhase2Periods();
   for (const [key, hours] of [["securityTrend24h", 24], ["securityTrend7d", 168], ["securityTrend30d", 720]]) {
@@ -162,11 +176,72 @@ test("period selector renders 24h, adaptive 7d and adaptive 30d data with period
   const thirtyDay = accessHtml(root, "30d");
   assert.match(thirtyDay, /aria-pressed="true"[^>]*>30日間/);
   assert.match(thirtyDay, /この期間は前期間比較に対応していません/);
-  assert.match(thirtyDay, /履歴の保存と比較は別フェーズで設計します/);
+  assert.match(thirtyDay, /履歴が揃うまでは比較できません/);
   assert.match(thirtyDay, /国別アクセス（30日間）/);
   const oneDay = accessHtml(root, "24h");
   assert.match(oneDay, /キャッシュ率：40%/);
   assert.match(oneDay, /前期間との差 \+20 件（\+25\.0%）/);
+});
+
+test("hourly history is optional and a malformed block cannot alter existing access results", () => {
+  const root = withHistory();
+  assert.equal(parsed(root).history30d.state, "OK");
+  assert.equal(historyFresh(parsed(root).history30d, NOW), true);
+  assert.equal(historyFresh(parsed(root).history30d, NOW + 2 * 3600000), false);
+  assert.match(accessHtml(root, "30d"), /この期間は前期間比較に対応していません/);
+  const malformed = structuredClone(root);
+  malformed.history30d.current.points[1].hour = malformed.history30d.current.points[0].hour;
+  assert.equal(parsed(malformed).history30d.state, "INVALID");
+  assert.equal(parsed(malformed).trafficSeries30d.status, "OK");
+  assert.equal(assessCollection(parsed(malformed), NOW).state, assessCollection(parsed(root), NOW).state);
+  const wrongRun = structuredClone(root);
+  wrongRun.history30d.runId = "another-run";
+  assert.equal(parsed(wrongRun).history30d.state, "INVALID");
+});
+
+test("30-day hourly display and same-source comparison require separate flags and fresh complete windows", () => {
+  const root = withHistory();
+  const oldDisplay = process.env.NEXT_PUBLIC_CLOUDFLARE_HISTORY_30D_ENABLED;
+  const oldCompare = process.env.NEXT_PUBLIC_CLOUDFLARE_HISTORY_COMPARE_ENABLED;
+  try {
+    process.env.NEXT_PUBLIC_CLOUDFLARE_HISTORY_30D_ENABLED = "true";
+    process.env.NEXT_PUBLIC_CLOUDFLARE_HISTORY_COMPARE_ENABLED = "false";
+    const displayOnly = accessHtml(root, "30d");
+    assert.match(displayOnly, /保存した時間別集計（抽出なし）/);
+    assert.match(displayOnly, /前期間比較を準備中/);
+    assert.match(displayOnly, /合計が一致しない場合があります/);
+    process.env.NEXT_PUBLIC_CLOUDFLARE_HISTORY_COMPARE_ENABLED = "true";
+    assert.match(accessHtml(root, "30d"), /前の30日間との差 \+0 件（\+0\.0%）/);
+    const incomplete = structuredClone(root);
+    incomplete.history30d.previous = { ...incomplete.history30d.previous, state: "ACCUMULATING", totalRequests: null, points: null };
+    incomplete.history30d.comparison = { state: "UNAVAILABLE", reason: "PREVIOUS_ACCUMULATING" };
+    assert.match(accessHtml(incomplete, "30d"), /前の30日間の履歴を蓄積中/);
+    incomplete.history30d.previous.state = "MISSING";
+    incomplete.history30d.comparison.reason = "PREVIOUS_MISSING";
+    assert.match(accessHtml(incomplete, "30d"), /欠測があるため比較できません/);
+    const sampled = structuredClone(root);
+    sampled.history30d.current = { ...sampled.history30d.current, state: "SAMPLED", totalRequests: null, points: null };
+    sampled.history30d.comparison = { state: "UNAVAILABLE", reason: "CURRENT_SAMPLED" };
+    assert.match(accessHtml(sampled, "30d"), /抽出された値があるため/);
+    assert.match(accessHtml(sampled, "30d"), /従来の30日集計を表示しています/);
+    assert.doesNotMatch(accessHtml(sampled, "30d"), /保存した時間別集計（抽出なし）/);
+    const accumulating = structuredClone(root);
+    accumulating.history30d.current = { ...accumulating.history30d.current, state: "ACCUMULATING", totalRequests: null, points: null };
+    accumulating.history30d.comparison = { state: "UNAVAILABLE", reason: "CURRENT_ACCUMULATING" };
+    assert.match(accessHtml(accumulating, "30d"), /30日分の時間別履歴を蓄積中/);
+    const missing = structuredClone(accumulating);
+    missing.history30d.current.state = "MISSING";
+    missing.history30d.comparison.reason = "CURRENT_MISSING";
+    assert.match(accessHtml(missing, "30d"), /時間別履歴に欠測/);
+    const stale = accessHtml(root, "30d", NOW + 2 * 3600000);
+    assert.match(stale, /時間別履歴の更新が遅れています/);
+    assert.doesNotMatch(stale, /保存した時間別集計（抽出なし）/);
+  } finally {
+    if (oldDisplay === undefined) delete process.env.NEXT_PUBLIC_CLOUDFLARE_HISTORY_30D_ENABLED;
+    else process.env.NEXT_PUBLIC_CLOUDFLARE_HISTORY_30D_ENABLED = oldDisplay;
+    if (oldCompare === undefined) delete process.env.NEXT_PUBLIC_CLOUDFLARE_HISTORY_COMPARE_ENABLED;
+    else process.env.NEXT_PUBLIC_CLOUDFLARE_HISTORY_COMPARE_ENABLED = oldCompare;
+  }
 });
 
 test("unsampled adaptive periods remain exact and the comparison describes them accurately", () => {

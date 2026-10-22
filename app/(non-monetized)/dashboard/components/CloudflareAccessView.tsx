@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { Area, AreaChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
-import { assessBlock, timestamp, type Collection, type CountryTrafficData } from "../lib/cloudflareCollection";
+import { assessBlock, historyFresh, timestamp, type Collection, type CountryTrafficData } from "../lib/cloudflareCollection";
 
 const panel = "rounded-2xl border border-gray-200 bg-white p-5 shadow-soft";
 const number = (value: number) => value.toLocaleString("ja-JP");
@@ -13,6 +13,17 @@ const label = (code: string) => {
   return name && name !== code ? name : `不明な地域（${code}）`;
 };
 const timeLabel = (value: unknown) => new Date(Number(value)).toLocaleString("ja-JP", { timeZone: "Asia/Tokyo", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", hour12: false });
+const historyComparisonNote = (reason: string) => reason === "PREVIOUS_ACCUMULATING"
+  ? "前の30日間の履歴を蓄積中です。"
+  : reason === "PREVIOUS_MISSING" ? "前の30日間の履歴に欠測があるため比較できません。"
+    : reason === "PREVIOUS_SAMPLED" ? "前の30日間に抽出された値があるため比較できません。"
+      : "前の30日間の履歴を確認できないため比較できません。";
+const historyCurrentNote = (state: string) => state === "ACCUMULATING"
+  ? "30日分の時間別履歴を蓄積中です。"
+  : state === "MISSING" ? "時間別履歴に欠測があるため、履歴を使った30日表示はできません。"
+    : state === "SAMPLED" ? "時間別履歴に抽出された値があるため、履歴を使った30日表示はできません。"
+      : state === "IDENTITY_MISMATCH" ? "時間別履歴の対象を確認できません。"
+        : "時間別履歴を確認できません。";
 
 interface MapFeature { code: string; path: string }
 const WIDTH = 720;
@@ -91,13 +102,27 @@ export function CloudflareAccessView({ collection, nowUpper, defaultPeriod = "24
   const seriesCheck = assessBlock(seriesBlock, nowUpper);
   const countryCheck = assessBlock(countryBlock, nowUpper);
   const previousCheck = previousBlock ? assessBlock(previousBlock, nowUpper) : null;
-  const series = seriesCheck.usable && seriesBlock.status === "OK" ? seriesBlock.data : null;
+  const history = collection.history30d;
+  const historyDisplayEnabled = process.env.NEXT_PUBLIC_CLOUDFLARE_HISTORY_30D_ENABLED === "true";
+  const freshHistory = period === "30d" && historyFresh(history, nowUpper) ? history.value : null;
+  const historyCurrent = historyDisplayEnabled && freshHistory?.current.state === "READY" ? freshHistory.current : null;
+  const historyUnavailable = nowUpper === null ? "表示時刻を確認中です。"
+    : history?.state === "ABSENT" || !history ? "時間別履歴の配信を待っています。"
+      : history.state === "INVALID" ? "時間別履歴の形式を確認できません。"
+        : !freshHistory ? "時間別履歴の更新が遅れています。"
+          : historyCurrentNote(freshHistory.current.state);
+  const historyComparison = process.env.NEXT_PUBLIC_CLOUDFLARE_HISTORY_COMPARE_ENABLED === "true" && historyCurrent && freshHistory?.comparison.state === "READY" ? freshHistory.comparison : null;
+  const series = historyCurrent ? { totalRequests: historyCurrent.totalRequests!, points: historyCurrent.points! } : seriesCheck.usable && seriesBlock.status === "OK" ? seriesBlock.data : null;
   const countries = countryCheck.usable && countryBlock.status === "OK" ? countryBlock.data : null;
   const previous = previousCheck?.usable && previousBlock?.status === "OK" ? previousBlock.data : null;
   const points = series?.points.map(point => ({ time: timestamp(point.hour)!, requests: point.requests })) ?? [];
   const selectedCountry = countries?.countries.find(item => item.code === selected);
   const periodLabel = period === "24h" ? "24時間" : period === "7d" ? "7日間" : "30日間";
-  const compareText = period === "30d" ? "この期間は前期間比較に対応していません。" : previous && series
+  const compareText = period === "30d" ? historyComparison
+    ? `前の30日間との差 ${historyComparison.difference >= 0 ? "+" : "−"}${number(Math.abs(historyComparison.difference))} 件${historyComparison.percent === null ? "（前期間が0件のため増減率は算出できません）" : `（${historyComparison.percent >= 0 ? "+" : ""}${historyComparison.percent.toFixed(1)}%）`}。保存した1時間集計同士の比較です。`
+    : historyCurrent ? process.env.NEXT_PUBLIC_CLOUDFLARE_HISTORY_COMPARE_ENABLED === "true" && freshHistory?.comparison.state === "UNAVAILABLE"
+      ? historyComparisonNote(freshHistory.comparison.reason) : "前期間比較を準備中です。"
+      : historyDisplayEnabled ? `${historyUnavailable} 前期間比較は利用できません。` : "この期間は前期間比較に対応していません。" : previous && series
     ? `前期間との差 ${series.totalRequests - previous.totalRequests >= 0 ? "+" : "−"}${number(Math.abs(series.totalRequests - previous.totalRequests))} 件${previous.totalRequests > 0 ? `（${series.totalRequests - previous.totalRequests >= 0 ? "+" : ""}${((series.totalRequests - previous.totalRequests) / previous.totalRequests * 100).toFixed(1)}%）` : "（前期間が0件のため増減率は算出できません）"}。${seriesBlock.precision === "estimated" ? "推計値同士の参考比較です。" : "同じ集計条件で比較しています。"}`
     : period === "24h" && !previousBlock?.attemptedAt ? "比較データを準備中です。"
       : previousCheck ? `${previousCheck.state}：${previousCheck.reason}` : "比較データを準備中です。";
@@ -108,15 +133,17 @@ export function CloudflareAccessView({ collection, nowUpper, defaultPeriod = "24
     </fieldset>
     <section className="grid gap-4 sm:grid-cols-3" aria-label="アクセスの概要">
       <div className={panel}><h2 className="text-sm font-semibold text-muted">アクセス数（{periodLabel}）</h2><p className="text-2xl font-bold mt-2">{series ? `${number(series.totalRequests)} 件` : "未確認"}</p><p className="text-xs mt-2">HTTP リクエスト数</p></div>
-      <div className={panel}><h2 className="text-sm font-semibold text-muted">{period === "30d" ? "前期間との比較" : `前の${periodLabel}との比較`}</h2><p className="text-sm font-bold mt-2">{period === "30d" ? compareText : series ? compareText : "未確認"}</p><p className="text-xs mt-2">{period === "30d" ? "履歴の保存と比較は別フェーズで設計します" : "同じ条件の値が揃った場合に表示します"}</p></div>
-      <div className={panel}><h2 className="text-sm font-semibold text-muted">集計方法（{periodLabel}）</h2><p className="text-base font-bold mt-2">{series ? seriesBlock.precision === "estimated" ? "サンプルから推計" : "今回の取得ではサンプリングなし" : "未確認"}</p><p className="text-xs mt-2">{period === "24h" ? `キャッシュ率：${series ? series.cacheRate === null || series.cacheRate === undefined ? "算出不能" : `${series.cacheRate}%` : "未確認"}` : "24時間の集計とは別の取得結果です"}</p></div>
+      <div className={panel}><h2 className="text-sm font-semibold text-muted">{period === "30d" ? "前期間との比較" : `前の${periodLabel}との比較`}</h2><p className="text-sm font-bold mt-2">{period === "30d" ? compareText : series ? compareText : "未確認"}</p><p className="text-xs mt-2">{period === "30d" ? historyComparison ? "両期間の時間別履歴が揃った場合に表示します" : historyCurrent ? "同じ集計条件の前期間が揃うと表示します" : "履歴が揃うまでは比較できません" : "同じ条件の値が揃った場合に表示します"}</p></div>
+      <div className={panel}><h2 className="text-sm font-semibold text-muted">集計方法（{periodLabel}）</h2><p className="text-base font-bold mt-2">{series ? historyCurrent ? "保存した時間別集計（抽出なし）" : seriesBlock.precision === "estimated" ? "サンプルから推計" : "今回の取得ではサンプリングなし" : "未確認"}</p><p className="text-xs mt-2">{period === "24h" ? `キャッシュ率：${series && "cacheRate" in series ? series.cacheRate === null || series.cacheRate === undefined ? "算出不能" : `${series.cacheRate}%` : "未確認"}` : "24時間の集計とは別の取得結果です"}</p></div>
     </section>
     <section className={panel} aria-labelledby="access-trend-title">
       <h2 id="access-trend-title" className="text-xl font-bold">アクセス推移（{period === "24h" ? "直近24時間" : periodLabel}）</h2>
       <p className="text-sm mt-2">bearworks.uk とサブドメインを含むゾーン全体の HTTP リクエスト数です。訪問人数ではありません。</p>
+      {period === "30d" && !historyCurrent && historyDisplayEnabled && <p className="text-xs mt-2">{historyUnavailable} {series ? "従来の30日集計を表示しています。" : "従来の30日集計も利用できません。"}</p>}
       {series ? <>
-        <p className="text-sm mt-2">この{periodLabel}には {number(series.totalRequests)} 件の HTTP リクエストがありました。{seriesBlock.precision === "estimated" ? "サンプルからの推計値です。" : "今回の取得ではサンプリングされていません。"}</p>
-        <p className="text-xs mt-1">期間：{new Date(timestamp(seriesBlock.windowStart)!).toLocaleString("ja-JP", { timeZone: "Asia/Tokyo" })} ～ {new Date(timestamp(seriesBlock.windowEnd)!).toLocaleString("ja-JP", { timeZone: "Asia/Tokyo" })} JST。末尾の進行中の時間は含めません。</p>
+        <p className="text-sm mt-2">この{periodLabel}には {number(series.totalRequests)} 件の HTTP リクエストがありました。{historyCurrent ? "保存した時間別集計です。今回の取得ではサンプリングされていません。" : seriesBlock.precision === "estimated" ? "サンプルからの推計値です。" : "今回の取得ではサンプリングされていません。"}</p>
+        <p className="text-xs mt-1">期間：{new Date(timestamp(historyCurrent?.windowStart ?? seriesBlock.windowStart)!).toLocaleString("ja-JP", { timeZone: "Asia/Tokyo" })} ～ {new Date(timestamp(historyCurrent?.windowEnd ?? seriesBlock.windowEnd)!).toLocaleString("ja-JP", { timeZone: "Asia/Tokyo" })} JST。末尾の進行中の時間は含めません。</p>
+        {historyCurrent && <p className="text-xs mt-1">この推移と国別アクセスは取得方法と時間の区切りが異なるため、合計が一致しない場合があります。</p>}
         <div className="h-64 mt-4" role="img" aria-label={`${periodLabel}の時間別リクエスト数。各時刻の値は下の表で確認できます。`}>
           <ResponsiveContainer width="100%" height="100%" initialDimension={{ width: 320, height: 256 }}>
             <AreaChart data={points} margin={{ left: 0, right: 12, top: 8, bottom: 4 }}><CartesianGrid strokeDasharray="3 3" />
