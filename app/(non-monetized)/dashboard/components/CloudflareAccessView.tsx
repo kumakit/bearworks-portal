@@ -18,6 +18,12 @@ const historyComparisonNote = (reason: string) => reason === "PREVIOUS_ACCUMULAT
   : reason === "PREVIOUS_MISSING" ? "前の30日間の履歴に欠測があるため比較できません。"
     : reason === "PREVIOUS_SAMPLED" ? "前の30日間に抽出された値があるため比較できません。"
       : "前の30日間の履歴を確認できないため比較できません。";
+const historyCurrentNote = (state: string) => state === "ACCUMULATING"
+  ? "30日分の時間別履歴を蓄積中です。"
+  : state === "MISSING" ? "時間別履歴に欠測があるため、履歴を使った30日表示はできません。"
+    : state === "SAMPLED" ? "時間別履歴に抽出された値があるため、履歴を使った30日表示はできません。"
+      : state === "IDENTITY_MISMATCH" ? "時間別履歴の対象を確認できません。"
+        : "時間別履歴を確認できません。";
 
 interface MapFeature { code: string; path: string }
 const WIDTH = 720;
@@ -97,8 +103,14 @@ export function CloudflareAccessView({ collection, nowUpper, defaultPeriod = "24
   const countryCheck = assessBlock(countryBlock, nowUpper);
   const previousCheck = previousBlock ? assessBlock(previousBlock, nowUpper) : null;
   const history = collection.history30d;
+  const historyDisplayEnabled = process.env.NEXT_PUBLIC_CLOUDFLARE_HISTORY_30D_ENABLED === "true";
   const freshHistory = period === "30d" && historyFresh(history, nowUpper) ? history.value : null;
-  const historyCurrent = process.env.NEXT_PUBLIC_CLOUDFLARE_HISTORY_30D_ENABLED === "true" && freshHistory?.current.state === "READY" ? freshHistory.current : null;
+  const historyCurrent = historyDisplayEnabled && freshHistory?.current.state === "READY" ? freshHistory.current : null;
+  const historyUnavailable = nowUpper === null ? "表示時刻を確認中です。"
+    : history?.state === "ABSENT" || !history ? "時間別履歴の配信を待っています。"
+      : history.state === "INVALID" ? "時間別履歴の形式を確認できません。"
+        : !freshHistory ? "時間別履歴の更新が遅れています。"
+          : historyCurrentNote(freshHistory.current.state);
   const historyComparison = process.env.NEXT_PUBLIC_CLOUDFLARE_HISTORY_COMPARE_ENABLED === "true" && historyCurrent && freshHistory?.comparison.state === "READY" ? freshHistory.comparison : null;
   const series = historyCurrent ? { totalRequests: historyCurrent.totalRequests!, points: historyCurrent.points! } : seriesCheck.usable && seriesBlock.status === "OK" ? seriesBlock.data : null;
   const countries = countryCheck.usable && countryBlock.status === "OK" ? countryBlock.data : null;
@@ -110,7 +122,7 @@ export function CloudflareAccessView({ collection, nowUpper, defaultPeriod = "24
     ? `前の30日間との差 ${historyComparison.difference >= 0 ? "+" : "−"}${number(Math.abs(historyComparison.difference))} 件${historyComparison.percent === null ? "（前期間が0件のため増減率は算出できません）" : `（${historyComparison.percent >= 0 ? "+" : ""}${historyComparison.percent.toFixed(1)}%）`}。保存した1時間集計同士の比較です。`
     : historyCurrent ? process.env.NEXT_PUBLIC_CLOUDFLARE_HISTORY_COMPARE_ENABLED === "true" && freshHistory?.comparison.state === "UNAVAILABLE"
       ? historyComparisonNote(freshHistory.comparison.reason) : "前期間比較を準備中です。"
-      : "この期間は前期間比較に対応していません。" : previous && series
+      : historyDisplayEnabled ? `${historyUnavailable} 前期間比較は利用できません。` : "この期間は前期間比較に対応していません。" : previous && series
     ? `前期間との差 ${series.totalRequests - previous.totalRequests >= 0 ? "+" : "−"}${number(Math.abs(series.totalRequests - previous.totalRequests))} 件${previous.totalRequests > 0 ? `（${series.totalRequests - previous.totalRequests >= 0 ? "+" : ""}${((series.totalRequests - previous.totalRequests) / previous.totalRequests * 100).toFixed(1)}%）` : "（前期間が0件のため増減率は算出できません）"}。${seriesBlock.precision === "estimated" ? "推計値同士の参考比較です。" : "同じ集計条件で比較しています。"}`
     : period === "24h" && !previousBlock?.attemptedAt ? "比較データを準備中です。"
       : previousCheck ? `${previousCheck.state}：${previousCheck.reason}` : "比較データを準備中です。";
@@ -127,7 +139,7 @@ export function CloudflareAccessView({ collection, nowUpper, defaultPeriod = "24
     <section className={panel} aria-labelledby="access-trend-title">
       <h2 id="access-trend-title" className="text-xl font-bold">アクセス推移（{period === "24h" ? "直近24時間" : periodLabel}）</h2>
       <p className="text-sm mt-2">bearworks.uk とサブドメインを含むゾーン全体の HTTP リクエスト数です。訪問人数ではありません。</p>
-      {period === "30d" && !historyCurrent && process.env.NEXT_PUBLIC_CLOUDFLARE_HISTORY_30D_ENABLED === "true" && <p className="text-xs mt-2">保存履歴の30日分が利用できないため、従来の30日集計を表示しています。</p>}
+      {period === "30d" && !historyCurrent && historyDisplayEnabled && <p className="text-xs mt-2">{historyUnavailable} {series ? "従来の30日集計を表示しています。" : "従来の30日集計も利用できません。"}</p>}
       {series ? <>
         <p className="text-sm mt-2">この{periodLabel}には {number(series.totalRequests)} 件の HTTP リクエストがありました。{historyCurrent ? "保存した時間別集計です。今回の取得ではサンプリングされていません。" : seriesBlock.precision === "estimated" ? "サンプルからの推計値です。" : "今回の取得ではサンプリングされていません。"}</p>
         <p className="text-xs mt-1">期間：{new Date(timestamp(historyCurrent?.windowStart ?? seriesBlock.windowStart)!).toLocaleString("ja-JP", { timeZone: "Asia/Tokyo" })} ～ {new Date(timestamp(historyCurrent?.windowEnd ?? seriesBlock.windowEnd)!).toLocaleString("ja-JP", { timeZone: "Asia/Tokyo" })} JST。末尾の進行中の時間は含めません。</p>

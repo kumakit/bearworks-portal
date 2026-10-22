@@ -222,10 +222,20 @@ test("30-day hourly display and same-source comparison require separate flags an
     const sampled = structuredClone(root);
     sampled.history30d.current = { ...sampled.history30d.current, state: "SAMPLED", totalRequests: null, points: null };
     sampled.history30d.comparison = { state: "UNAVAILABLE", reason: "CURRENT_SAMPLED" };
-    assert.match(accessHtml(sampled, "30d"), /この期間は前期間比較に対応していません/);
+    assert.match(accessHtml(sampled, "30d"), /抽出された値があるため/);
     assert.match(accessHtml(sampled, "30d"), /従来の30日集計を表示しています/);
     assert.doesNotMatch(accessHtml(sampled, "30d"), /保存した時間別集計（抽出なし）/);
-    assert.doesNotMatch(accessHtml(root, "30d", NOW + 2 * 3600000), /保存した時間別集計（抽出なし）/);
+    const accumulating = structuredClone(root);
+    accumulating.history30d.current = { ...accumulating.history30d.current, state: "ACCUMULATING", totalRequests: null, points: null };
+    accumulating.history30d.comparison = { state: "UNAVAILABLE", reason: "CURRENT_ACCUMULATING" };
+    assert.match(accessHtml(accumulating, "30d"), /30日分の時間別履歴を蓄積中/);
+    const missing = structuredClone(accumulating);
+    missing.history30d.current.state = "MISSING";
+    missing.history30d.comparison.reason = "CURRENT_MISSING";
+    assert.match(accessHtml(missing, "30d"), /時間別履歴に欠測/);
+    const stale = accessHtml(root, "30d", NOW + 2 * 3600000);
+    assert.match(stale, /時間別履歴の更新が遅れています/);
+    assert.doesNotMatch(stale, /保存した時間別集計（抽出なし）/);
   } finally {
     if (oldDisplay === undefined) delete process.env.NEXT_PUBLIC_CLOUDFLARE_HISTORY_30D_ENABLED;
     else process.env.NEXT_PUBLIC_CLOUDFLARE_HISTORY_30D_ENABLED = oldDisplay;
