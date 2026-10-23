@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-10-24",
+    "daily_summary": "本日のAIニュースでは、パナソニックHDでの従業員情報誤送信や中国系ハッカー集団によるAI悪用などセキュリティ上の深刻な課題が浮き彫りになる一方で、過熱するAI投資への収益化懸念から日米の株式市場で下落や警戒ムードが広がりました。他方で、台風予測や半導体設計におけるAI活用の高度化が進み、軍事分野でのAI統制を巡る議論や政府のデジタル改革推進会議の開催など、技術の利活用とリスク管理の両面で社会的な注目が集まる一日となりました。",
+    "articles": [
+      {
+        "title": "パナソニックHD、利用禁止の生成AIに従業員らの情報送出 33万人分",
+        "content": "パナソニックホールディングスは、社内で利用が禁止されている生成AIに、約33万人分の従業員らの情報が誤って送信されていたことを発表しました。情報漏洩やセキュリティ管理の徹底に向けた企業の対応が改めて問われています。今後は利用ルールの周知徹底やシステム面での対策強化が進められる見通しです。",
+        "source": "Google News",
+        "published_at": "2026-10-24",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1JR0xRMms3cUlIbHJTVkFSckliejBwUGJMaTR1LWJZQTdoaVRpQXliblctRlROelZnY0tVNGZUS3pka2psZVFvM2kySXFXdFFwV1VEWjV4YU1EdnFyZy1NNExUbUlTcTR3UFJ3VA?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "【Pro限定】台風進路、世界各国の物理気象モデル・AI予測モデル22本を比較できる",
+        "content": "ウェザーニュースは、世界各国の物理気象モデルやAI予測モデルなど計22本の台風進路予測を比較できる新機能をPro限定で公開しました。多様なモデルの予測結果を横断的に確認することで、台風の進路予測精度を高めることが可能になります。",
+        "source": "Google News",
+        "published_at": "2026-10-24",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBjNHJFQkpFN1hUcTgxeS1YM0tIbHo0Z2Q1am9ydnhUMEpERDhUZGFkTFNEckYyMzEyeFp2eGlmRnF1TlZYUXZRMzdxUjFvdjJETk5mTQ?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "菊花賞ロブチェン三冠の可能性、予想AIが出した“答え”は？ 阻止1番手にはあの穴馬を指名！",
+        "content": "この記事では、菊花賞におけるロブチェン三冠の達成可能性について予想AIが分析した結果を紹介しています。AIが導き出した見解に加え、三冠を阻止する筆頭候補として挙げられた穴馬についても言及されています。",
+        "source": "Google News",
+        "published_at": "2026-10-24",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9uMmxJOG1ZdlFTYXRkeUItWTI3aHdVMzZZUm8xczdkRWR4V3U4UVFXSm4yLVZqbVBjSlgzb08yc2RBbHR5MnJ0WjdrS192c3JmQURYMUZmZFJrc2xtMEM3X0dUYzRyTi04Q1F2YUdR?oc=5",
+        "category": "その他"
+      },
+      {
+        "title": "中国系ハッカー集団 AIでサイバー攻撃 世界数百の組織を標的 マイクロソフト発表",
+        "content": "マイクロソフトは、中国系のハッカー集団が人工知能（AI）を活用してサイバー攻撃を行っていると発表しました。世界中の数百もの組織が標的となっており、警戒が強まっています。",
+        "source": "Google News",
+        "published_at": "2026-10-24",
+        "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9idXQwZVo3aDB3YUs4U1QtSDV2M1BjdjFqQ2Fwb3hnOTVqbFBGSHQ5c19qQV9oV1Y3dzdrN2NxSkk4eFBXT2ZyM0JqcjV0T1V4MWxMa3ppa3dkdnEyTTlfbTRFSlg4RjZZYVBOUTNQMzFadXRLdXc5Z1BB?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "日経平均終値214円安 拭えぬAIへの疑心、ともる需給警戒サイン",
+        "content": "日経平均株価はAI関連への警戒感や需給面の懸念から214円安となり下落した。市場では人工知能ブームに対する投資家の疑心暗鬼が拭えず、慎重なムードが広がっている。今後の株式市場の動向には、AI産業の成長持続性を見極める慎重な姿勢が影響を与えそうだ。",
+        "source": "Google News",
+        "published_at": "2026-10-24",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE4xbDFtMnVYenNMWFREcUZ1OUVJSXQyYzN4WWdTNEk2a1ExS0szTGhiODg2alk1S2U5X1h3czlac0hHdXgwak5OMUVCTUxuYU5SSHd6emV5Tkt2Yk5NUVZITEJOek9MQUlkNmdfdQ?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "米中間選挙で株価はどう動く、シナリオ別に分析－AIの追い風続くか",
+        "content": "米中間選挙における株価の動向をシナリオ別に分析した記事です。AI関連の追い風が今後も継続するかどうかに注目が集まっています。政治情勢の変化が市場やテクノロジーセクターに与える影響が議論されています。",
+        "source": "Google News",
+        "published_at": "2026-10-24",
+        "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBQZm5NdU9nOE9LRHd1RENfdlJjZG1mMU5LVldEbnJzQ055ZUJzLUM0ZFo1UEd5bGpXS0R0cjFfbmZFWkx3OUtoM21zdWxIaS1BN2YzamRMQm1vS2xXODVvb3IzRjdOMXJ0WjFpZjl0N3pZTGlsd1pz?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "米国株式市場＝Ｓ＆Ｐ・ナスダック急落、ＡＩ投資巡る懸念再燃",
+        "content": "米国の株式市場において、Ｓ＆Ｐ総合５００種とナスダック総合が急落しました。背景には、過熱する人工知能（ＡＩ）投資に対する収益化への懸念が再び燃え上がったことがあります。投資家の間でハイテク株を中心としたリスク回避の動きが強まっています。",
+        "source": "Google News",
+        "published_at": "2026-10-24",
+        "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQRXZMbU5DRXVrcU9IS3hrQ1Q1R3dxenk4MnlEZTlScDFXWi0xeTJlNEcwdWlyYTdQejg1X0ljNGhZQXlQUm1fR0xwSHZNX2JqdlFCb3BfWXdjaXp6MnphNjFJb3E5U2pKeE5qNGZtZnRfTVFNenZQMEU0ZTJ3WHlBRmN0UUo3Zw?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "SynopsysとAnsysの技術統合が切り開く、AI時代の新たな設計／解析プロセス",
+        "content": "SynopsysとAnsysの技術統合により、AI時代に対応した新たな設計および解析プロセスが切り開かれています。両社の先端技術を組み合わせることで、複雑化する半導体やシステムの開発効率を大幅に向上させることが期待されています。",
+        "source": "Google News",
+        "published_at": "2026-10-24",
+        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1LM05KSmVFUzQySlBmdmVjbEtZM0ZfeVVYVGU4czM4QTRRdzhsaVJUdERtWTl5NGFfNk9vMTgzdjJRemhNR1V6bmhUZjlTSkt3QnhOdGp5azNKaHpJWjhQdWJ3a01wY0RHSjlwejBGWQ?oc=5",
+        "category": "インフラ・半導体"
+      },
+      {
+        "title": "パランティア、NATO軍事AIは米国側から停止できないとEUに説明──スターシールド報道「極めて憂慮」",
+        "content": "パランティア社は、NATOの軍事AIが米国側から一方的に停止されることはないとEUに説明しました。しかし、スターシールドに関する報道を受け、EU内ではその影響に対して極めて憂慮する声が高まっています。軍事分野におけるAI技術の依存と統制を巡る議論が注目されています。",
+        "source": "Google News",
+        "published_at": "2026-10-24",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE85OVRfWU9OdFk5NE9LdU5LMmRsSG1fbUR3Z1NRcGNZR0JodUNqNmUtZ21nVmZseERsRzFfeEoyeENIQVhlcWVfS0EtQUJHVEVaam9PaXZ5ZFg1UQ?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "ＡＩ・デジタル改革推進会議 - 首相官邸",
+        "content": "首相官邸で開催されたＡＩ・デジタル改革推進会議に関する情報をお届けします。政府による人工知能およびデジタル分野の改革動向について伝えています。",
+        "source": "Google News",
+        "published_at": "2026-10-24",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1ueFFFcDZtNGpVckhtdmNPWEx2Y19QSUJTSUhGNTV5alNfV2NrLWl5Z0R1YklFOWF1SFhiZFgtUE81S2tRYy04T3FWbVc5MEN0MC1ORHRIOWhRN2YzRmt1SHJESVJKWEVGSlZVZTFZSjFJdw?oc=5",
+        "category": "政策・安全"
+      }
+    ]
+  },
+  {
     "date": "2026-10-23",
     "daily_summary": "本日のAIニュースでは、AIの進化がもたらす「セキュリティの光と影」が大きくクローズアップされました。オープンソースの重大な脆弱性発見やオラクルの新基盤発表など業務効率化や解析での活用が進む一方で、わずか15秒での個人情報抽出や、中国政府系ハッカー集団によるAIを活用した大規模なサイバー攻撃など、悪用リスクの増大に対する警戒と対策の急務さが浮き彫りになっています。また、AIエージェントを前提としたSaaSへの転換やGoogle「Gemini」の新機能など、ビジネスや利便性の面でも新たな展開が見られる一日となりました。",
     "articles": [
