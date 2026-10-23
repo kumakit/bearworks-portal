@@ -1,5 +1,521 @@
 [
   {
+    "date": "2026-10-24",
+    "daily_summary": "本日のAIニュースでは、パナソニックHDでの従業員情報誤送信や中国系ハッカー集団によるAI悪用などセキュリティ上の深刻な課題が浮き彫りになる一方で、過熱するAI投資への収益化懸念から日米の株式市場で下落や警戒ムードが広がりました。他方で、台風予測や半導体設計におけるAI活用の高度化が進み、軍事分野でのAI統制を巡る議論や政府のデジタル改革推進会議の開催など、技術の利活用とリスク管理の両面で社会的な注目が集まる一日となりました。",
+    "articles": [
+      {
+        "title": "パナソニックHD、利用禁止の生成AIに従業員らの情報送出 33万人分",
+        "content": "パナソニックホールディングスは、社内で利用が禁止されている生成AIに、約33万人分の従業員らの情報が誤って送信されていたことを発表しました。情報漏洩やセキュリティ管理の徹底に向けた企業の対応が改めて問われています。今後は利用ルールの周知徹底やシステム面での対策強化が進められる見通しです。",
+        "source": "Google News",
+        "published_at": "2026-10-24",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1JR0xRMms3cUlIbHJTVkFSckliejBwUGJMaTR1LWJZQTdoaVRpQXliblctRlROelZnY0tVNGZUS3pka2psZVFvM2kySXFXdFFwV1VEWjV4YU1EdnFyZy1NNExUbUlTcTR3UFJ3VA?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "【Pro限定】台風進路、世界各国の物理気象モデル・AI予測モデル22本を比較できる",
+        "content": "ウェザーニュースは、世界各国の物理気象モデルやAI予測モデルなど計22本の台風進路予測を比較できる新機能をPro限定で公開しました。多様なモデルの予測結果を横断的に確認することで、台風の進路予測精度を高めることが可能になります。",
+        "source": "Google News",
+        "published_at": "2026-10-24",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBjNHJFQkpFN1hUcTgxeS1YM0tIbHo0Z2Q1am9ydnhUMEpERDhUZGFkTFNEckYyMzEyeFp2eGlmRnF1TlZYUXZRMzdxUjFvdjJETk5mTQ?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "菊花賞ロブチェン三冠の可能性、予想AIが出した“答え”は？ 阻止1番手にはあの穴馬を指名！",
+        "content": "この記事では、菊花賞におけるロブチェン三冠の達成可能性について予想AIが分析した結果を紹介しています。AIが導き出した見解に加え、三冠を阻止する筆頭候補として挙げられた穴馬についても言及されています。",
+        "source": "Google News",
+        "published_at": "2026-10-24",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9uMmxJOG1ZdlFTYXRkeUItWTI3aHdVMzZZUm8xczdkRWR4V3U4UVFXSm4yLVZqbVBjSlgzb08yc2RBbHR5MnJ0WjdrS192c3JmQURYMUZmZFJrc2xtMEM3X0dUYzRyTi04Q1F2YUdR?oc=5",
+        "category": "その他"
+      },
+      {
+        "title": "中国系ハッカー集団 AIでサイバー攻撃 世界数百の組織を標的 マイクロソフト発表",
+        "content": "マイクロソフトは、中国系のハッカー集団が人工知能（AI）を活用してサイバー攻撃を行っていると発表しました。世界中の数百もの組織が標的となっており、警戒が強まっています。",
+        "source": "Google News",
+        "published_at": "2026-10-24",
+        "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9idXQwZVo3aDB3YUs4U1QtSDV2M1BjdjFqQ2Fwb3hnOTVqbFBGSHQ5c19qQV9oV1Y3dzdrN2NxSkk4eFBXT2ZyM0JqcjV0T1V4MWxMa3ppa3dkdnEyTTlfbTRFSlg4RjZZYVBOUTNQMzFadXRLdXc5Z1BB?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "日経平均終値214円安 拭えぬAIへの疑心、ともる需給警戒サイン",
+        "content": "日経平均株価はAI関連への警戒感や需給面の懸念から214円安となり下落した。市場では人工知能ブームに対する投資家の疑心暗鬼が拭えず、慎重なムードが広がっている。今後の株式市場の動向には、AI産業の成長持続性を見極める慎重な姿勢が影響を与えそうだ。",
+        "source": "Google News",
+        "published_at": "2026-10-24",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE4xbDFtMnVYenNMWFREcUZ1OUVJSXQyYzN4WWdTNEk2a1ExS0szTGhiODg2alk1S2U5X1h3czlac0hHdXgwak5OMUVCTUxuYU5SSHd6emV5Tkt2Yk5NUVZITEJOek9MQUlkNmdfdQ?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "米中間選挙で株価はどう動く、シナリオ別に分析－AIの追い風続くか",
+        "content": "米中間選挙における株価の動向をシナリオ別に分析した記事です。AI関連の追い風が今後も継続するかどうかに注目が集まっています。政治情勢の変化が市場やテクノロジーセクターに与える影響が議論されています。",
+        "source": "Google News",
+        "published_at": "2026-10-24",
+        "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBQZm5NdU9nOE9LRHd1RENfdlJjZG1mMU5LVldEbnJzQ055ZUJzLUM0ZFo1UEd5bGpXS0R0cjFfbmZFWkx3OUtoM21zdWxIaS1BN2YzamRMQm1vS2xXODVvb3IzRjdOMXJ0WjFpZjl0N3pZTGlsd1pz?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "米国株式市場＝Ｓ＆Ｐ・ナスダック急落、ＡＩ投資巡る懸念再燃",
+        "content": "米国の株式市場において、Ｓ＆Ｐ総合５００種とナスダック総合が急落しました。背景には、過熱する人工知能（ＡＩ）投資に対する収益化への懸念が再び燃え上がったことがあります。投資家の間でハイテク株を中心としたリスク回避の動きが強まっています。",
+        "source": "Google News",
+        "published_at": "2026-10-24",
+        "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQRXZMbU5DRXVrcU9IS3hrQ1Q1R3dxenk4MnlEZTlScDFXWi0xeTJlNEcwdWlyYTdQejg1X0ljNGhZQXlQUm1fR0xwSHZNX2JqdlFCb3BfWXdjaXp6MnphNjFJb3E5U2pKeE5qNGZtZnRfTVFNenZQMEU0ZTJ3WHlBRmN0UUo3Zw?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "SynopsysとAnsysの技術統合が切り開く、AI時代の新たな設計／解析プロセス",
+        "content": "SynopsysとAnsysの技術統合により、AI時代に対応した新たな設計および解析プロセスが切り開かれています。両社の先端技術を組み合わせることで、複雑化する半導体やシステムの開発効率を大幅に向上させることが期待されています。",
+        "source": "Google News",
+        "published_at": "2026-10-24",
+        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1LM05KSmVFUzQySlBmdmVjbEtZM0ZfeVVYVGU4czM4QTRRdzhsaVJUdERtWTl5NGFfNk9vMTgzdjJRemhNR1V6bmhUZjlTSkt3QnhOdGp5azNKaHpJWjhQdWJ3a01wY0RHSjlwejBGWQ?oc=5",
+        "category": "インフラ・半導体"
+      },
+      {
+        "title": "パランティア、NATO軍事AIは米国側から停止できないとEUに説明──スターシールド報道「極めて憂慮」",
+        "content": "パランティア社は、NATOの軍事AIが米国側から一方的に停止されることはないとEUに説明しました。しかし、スターシールドに関する報道を受け、EU内ではその影響に対して極めて憂慮する声が高まっています。軍事分野におけるAI技術の依存と統制を巡る議論が注目されています。",
+        "source": "Google News",
+        "published_at": "2026-10-24",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE85OVRfWU9OdFk5NE9LdU5LMmRsSG1fbUR3Z1NRcGNZR0JodUNqNmUtZ21nVmZseERsRzFfeEoyeENIQVhlcWVfS0EtQUJHVEVaam9PaXZ5ZFg1UQ?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "ＡＩ・デジタル改革推進会議 - 首相官邸",
+        "content": "首相官邸で開催されたＡＩ・デジタル改革推進会議に関する情報をお届けします。政府による人工知能およびデジタル分野の改革動向について伝えています。",
+        "source": "Google News",
+        "published_at": "2026-10-24",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1ueFFFcDZtNGpVckhtdmNPWEx2Y19QSUJTSUhGNTV5alNfV2NrLWl5Z0R1YklFOWF1SFhiZFgtUE81S2tRYy04T3FWbVc5MEN0MC1ORHRIOWhRN2YzRmt1SHJESVJKWEVGSlZVZTFZSjFJdw?oc=5",
+        "category": "政策・安全"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-23",
+    "daily_summary": "本日のAIニュースでは、AIの進化がもたらす「セキュリティの光と影」が大きくクローズアップされました。オープンソースの重大な脆弱性発見やオラクルの新基盤発表など業務効率化や解析での活用が進む一方で、わずか15秒での個人情報抽出や、中国政府系ハッカー集団によるAIを活用した大規模なサイバー攻撃など、悪用リスクの増大に対する警戒と対策の急務さが浮き彫りになっています。また、AIエージェントを前提としたSaaSへの転換やGoogle「Gemini」の新機能など、ビジネスや利便性の面でも新たな展開が見られる一日となりました。",
+    "articles": [
+      {
+        "title": "情報抜き取りに15秒 悪用指摘のAI",
+        "content": "わずか15秒で個人情報を抜き取ることができるAIが登場し、その悪用リスクについて専門家から指摘が上がっています。セキュリティ上の脅威が増大する中、対策の強化が急務となっています。",
+        "source": "Google News",
+        "published_at": "2026-10-23",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9RZXBmT1RiR3BkaDYxMjdaQ0dsWjJaQnRuNk5PVHNKblBtYmstY2R1cnJkVnlEUEF5cmxxc2VIaTRoSUVTd3Z6WERpN09wV3BG?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "PHPの重大な脆弱性を米OpenAIのAIが発見、長年放置されていた欠陥を露呈",
+        "content": "プログラミング言語PHPに長年放置されていた重大な欠陥が、米OpenAIのAIを活用して発見されました。この脆弱性の発覚により世界中でサイトが一時停止するなどの影響が出ており、AIがセキュリティ分野の解析において強力なツールとなることを示しています。",
+        "source": "Google News",
+        "published_at": "2026-10-23",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1PbUtOcnZIdG1TbVBsU25tZlNCeFBVeXJBNjQ0UTMwZjJLejhaS0ZqWUg2UEdoVExJRy12bEgtcHFBVjZNQ3pPT3dfbE9rVGYx?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "シリコンバレーの話題の主役｢AIエージェントスタートアップ｣に立ちはだかる",
+        "content": "シリコンバレーで注目を集めるAIエージェント関連のスタートアップ企業が、市場において直面する課題について解説しています。顧客からの信頼を獲得することの難しさや、既存のシステムや市場の「門番」を突破するハードルが浮き彫りになっています。",
+        "source": "Google News",
+        "published_at": "2026-10-23",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBqM2EyWVFiZG1wM0FlbUQtSEkzSzhZMV96TDJpTUtoN0hfd3ZJRFBJbG4tNUNULWJBdWlIajVBcFhKa3JndHZ6WXZrRHBmM2lZU05rZ0EtXzFNenhocXJB?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "オラクル、業種別アプリ向けにAIエージェント基盤を発表 8業種に対応しMCPも利用可",
+        "content": "オラクルは、8つの業種別アプリケーション向けにAIエージェント基盤を発表しました。この新しい基盤ではMCP（Model Context Protocol）も利用可能となっており、業務効率化や自動化の高度化が期待されます。",
+        "source": "Google News",
+        "published_at": "2026-10-23",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBjMHVjMzNKWFlFaVJkalFTZk91ZHAzTGs3N2ZEc1V0SFNKdG1JNF85bnVRVTZ6ZG1pWGZYbGQxVkRLQkluUVNLbml5NDFiUWJnMlJ4a3pwTHNlalJoR1NBVzFLTHhrQkNzWjhWSWVpam5BOEM2VURnRU5zTWh4LTQ?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "SaaSは死なずAIエージェント前提に転生、データ不足や高コストに注意",
+        "content": "従来のSaaSはAIエージェントを前提としたビジネスモデルへと進化を遂げつつあります。しかしその一方で、学習データの不足や運用に伴う高コストといった課題にも注意が必要です。今後のITビジネスにおいて、エージェント活用とコスト・データのバランスが重要な鍵となります。",
+        "source": "Google News",
+        "published_at": "2026-10-23",
+        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPU0N3MEJKU0pzdGlaSkFnSTB4UFpkcTEySURnZE5vRmJOR1RiU3ZGWUlYRUd4WGFLa0RPNXN1OS1GTklqUW9LdHR1WGpSb29QcUZBc1pTLU96ZFdjRHlnay1TZDdrR1loLXZYbDh4cTBpUFVaMENqM0c4MF9tSlg4dHR6OGZDWGtMN01FSFk1Mlo?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "Google「Gemini」に新メニュー「Customize」、AIの指示や外部アプリ連携を一元管理",
+        "content": "GoogleのAIアシスタント「Gemini」に新メニュー「Customize」が追加されました。これにより、AIへの指示や外部アプリケーションとの連携を一元管理できるようになり、ユーザビリティが向上します。設定のカスタマイズがよりスムーズに行えるようになります。",
+        "source": "Google News",
+        "published_at": "2026-10-23",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9sdEthZ2d5ZVBDQXk3Tm4yQ2FKalp3Z3RGeUVoT2tHQlZwcndIaEpycTJmejRhSXAwektUZVAxMkpLUGFjeFN0eEZicy1TTDRZa3RYZzVKaXdQWS0tdmF6NVUydHN3elE?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "世界のAI研究者・開発者は何を追っているか、9月の人気論文2000本超を分析",
+        "content": "この記事では、9月に発表された2000本を超えるAI関連の論文を分析し、世界の研究者や開発者が注目しているトレンドを明らかにしています。最先端のAI研究における関心の向かう先や、技術的な動向が詳しく解説されています。",
+        "source": "Google News",
+        "published_at": "2026-10-23",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE53WllFZWg2bVNMQnltbktzNWxvYXpnbm9PeU8xMDZ5cTlVdzRxZXpBQTE4UjlQaEc3YlhZd2tuTUhYcFczc0FSc0tqcmVKRmVSQUg3TkNVcDdFNnhSTTFsQVVsLU1kaWp3MFlIcg?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "中国政府関係のハッカー集団が大規模サイバー攻撃、AIで世界数百の企業・組織に",
+        "content": "中国政府に関連するハッカー集団が、人工知能（AI）を活用して世界中の数百に及ぶ企業や組織に対して大規模なサイバー攻撃を行っていたことが、米マイクロソフトの記録により確認されました。AIの導入により、攻撃の効率化や高度化が懸念されており、国際的な警戒が強まっています。",
+        "source": "Google News",
+        "published_at": "2026-10-23",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5MNUdDN3NDbEdWVHQwSWJpTXowcDFCVW5vdkh0RzJzVkxqSEVtNDJIMU8yTTNpeHhHcUI4WDZiNGw2NFFBX3pvTV8zU21ubDBPc2xCTGVlLUZ5aDFpZnZQdWZ3?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "中国政府系ハッカー集団、AI「ARTEX」で攻撃 マイクロソフトが確認",
+        "content": "マイクロソフト社は、中国政府系のハッカー集団が人工知能（AI）ツール「ARTEX」を利用してサイバー攻撃を行っていることを確認したと発表しました。AI技術の悪用による脅威の高度化が懸念されており、セキュリティ対策の強化が急務となっています。",
+        "source": "Google News",
+        "published_at": "2026-10-23",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE0xOGp5M2JJUnZqQmRoUmJHMWRsSFpUOU5TYmV5WVNBOGtpazFKRm5VR3QzSDZJTGt5MU9rTmItdGZ1cWpacG4zUUFocTZIVTRONVZGZHJieUxVT3BfUDlZWE9zRTJOTVdyYk5jNA?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "中国政府系組織がAIを活用してサイバー攻撃を行っているとマイクロソフトが発表",
+        "content": "マイクロソフトは、中国政府に関連する攻撃グループが生成AI技術をサイバー攻撃や情報工作に悪用していると発表しました。攻撃者は標的の調査や不正コードの作成、世論誘導などにAIを利用していると警鐘を鳴らしています。AI技術の急速な発展に伴うセキュリティ上の脅威について、警戒感が高まっています。",
+        "source": "Google News",
+        "published_at": "2026-10-23",
+        "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFB4R2o3Q3BhWFRRLUVaWG45Wi1YVE85cTI5VzY4X2ZhbnE2bU5wNUt6UlV1SjZ5enhKUDNWVlNmQkVtOUREQ0tsa3V3OA?oc=5",
+        "category": "政策・安全"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-22",
+    "daily_summary": "本日のAIニュースでは、ゲーム開発における人員削減や週休3日制の検討といった労働環境への影響が示される一方、AIを活用したプログラミング言語PHPの脆弱性発見などセキュリティ分野での大きな進展が報じられました。また、米メタの巨額なAI投資や株式市場の好転といった経済的な動きに加え、政府による「AI・デジタル改革原則」の策定方針や、米政府による中国製AIの排除方針など、技術の急速な普及に伴う安全保障や規制の重要性が改めて浮き彫りになる一日となりました。",
+    "articles": [
+      {
+        "title": "「来週から週休3日」AI活用迫る劇薬 ゲーム開発人員30分の1に",
+        "content": "AIの急速な活用により、ゲーム開発における人員数が従来の30分の1にまで減少する可能性が指摘されています。このような技術革新は労働環境の劇的な変化を促し、週休3日制の導入など働き方の見直しを迫る劇薬となっています。",
+        "source": "Google News",
+        "published_at": "2026-10-22",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1pZmtlQzZncS1LZ1VDb3BSQXNObFZVVDNmVFlTSk15dzE4eExaMm9jdlhUQ1k3TmV5SzM1aWNXUjRkb3FuTUtVdDlsQXhuUW1TNnZ1WUVSYzhvV3EwZ2g0cHNpVWxrY3VVcGFaYw?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "【速報】AIの支援を得てPHPの欠陥を発見",
+        "content": "47NEWSによると、AIの支援を活用することでプログラミング言語PHPの欠陥が発見されたとのことです。AI技術の進化がソフトウェアのセキュリティ向上や脆弱性の早期発見にどのように貢献しているかを示す事例です。",
+        "source": "Google News",
+        "published_at": "2026-10-22",
+        "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5UNmphMXFfYkd0cW8wWWVjdjBCb2w1blEyQnhOek5DLUdnSERZV3FBVmFJZlp2MHBjcGZSMjFxcVhTeHdXVENlSi1jTQ?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "「AI・デジタル改革原則」、政府が策定へ…活用と安全対策を強化",
+        "content": "政府は人工知能（AI）やデジタルの活用と安全対策を強化するため、「AI・デジタル改革原則」を策定する方針を固めました。技術革新の推進とリスク管理のバランスを取るための新たな指針となります。",
+        "source": "Google News",
+        "published_at": "2026-10-22",
+        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9GYXVwUUVVZkNYUG9VYXNUbGptblFnMWdvdG1XNkxRZGdUWnhKZmE0bG1XYXJsTndTdFRIVms5Z1hJU19VaGl5SnFfMGVXdGE0ZFlsRWlGbGJ0Q0s2aGlfaC1iRHQwdw?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "米国株式市場はナスダック主導で上昇、決算発表でAI投資への心理が改善",
+        "content": "米国の株式市場はナスダックを中心に上昇しました。企業の決算発表を通じてAI投資に対する市場の心理が改善されたことが背景にあります。投資家の間に前向きな見方が広がっています。",
+        "source": "Google News",
+        "published_at": "2026-10-22",
+        "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQSHR3VTg3U0dpTk9jT240WjZqOTY5TUxhRFk0Ykx4Sm1PQ3hadUZFMzYxUk5nWE1JTlhHdzlWdGNSdlJsQl9DX2ZLbDVzSHcyZ2Q5WU9GeDFldjdJb2VRcEF0dXhlUnlZeVFHR25oVWxpeXdic1FxLVM5b0FoQ1JZS1ZYZ0Y5Zw?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "米メタ、AI投資拡大へ無議決権株発行へ 設備投資下限引き上げ",
+        "content": "米メタはAI関連の投資をさらに拡大するため、無議決権株の発行を計画している。これに伴い、今後の設備投資の下限額を引き上げる方針である。AI分野での競争力強化に向けた同社の積極的な資金調達の動きとして注目されている。",
+        "source": "Google News",
+        "published_at": "2026-10-22",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5JVnVXZGtESmpkNy04NVd3ZDk4bGpkekUyRmRvLVRBVDQ5SWMxTTlmdTBsSDR4OHZ3VllxbG9KOWxvVGlna2J5RmxYNjBSR2wycm5kdnRRcEJIMzc2SU9kSGc4WWZNT3VwUTB0XzE5TFgwV3pmSThkWHdtWndrRWs?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "PHPの脆弱性をOpenAIのAIが発見、今後数カ月で同様の事例が急増する見込み",
+        "content": "OpenAIの人工知能を活用してPHPの脆弱性が発見されました。専門家は、このようなAIによる脆弱性発見の事例が今後数カ月で急増すると予測しています。セキュリティの分野におけるAIの活用とリスク管理の重要性が改めて注目されています。",
+        "source": "Google News",
+        "published_at": "2026-10-22",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBicUUzVEZMLWtJZ21kZGxoY2dicURLZHNPVVg4bE1Vd21URUt0WGRyLTIxMnVYSG5SdlMzTUdkS0cwbXg0UGJhNkIyaW1WLXhkQldNYkRQRkdXb2RCWVFPSGxQYzhXcHJJbUw5cUVVTUtSeWNwQ0hpMGpZdjkxbG8?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "「PHP」の脆弱性、米オープンAIのAIで発見 グーグル傘下企業も独自発見を主張",
+        "content": "プログラミング言語「PHP」の脆弱性が、米オープンAIの人工知能によって発見されたことが報じられました。さらに、米グーグル傘下の企業も同様の脆弱性を独自に発見していたと主張しています。AIの活用がセキュリティ分野の脆弱性発見において重要な役割を果たし始めている事を示しています。",
+        "source": "Google News",
+        "published_at": "2026-10-22",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE0xNWpaUC1sdHFIV2RHN3RyUHota0xXU3dGVHFpLW9QRVlzLWswLU9mdkpHZVdRekhHLU5jQlVlSndqSW5DSUF3aDZmZHhGS0xNQWEyT3lvQmtiSWVsa0JqR254RUJ2YnZSVTBjZHpKXzJEUnFfMnBvT2Z2dnNqSVk?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "PHPの重大脆弱性「PHP2Shell」はAIを活用して発見・対策されていたことが判明",
+        "content": "PHPの重大な脆弱性である「PHP2Shell」は、セキュリティ企業のCalifとWizがAIを用いて発見しました。さらに、その対策にはOpenAIの枠組みが使用されていたことが明らかになっています。",
+        "source": "Google News",
+        "published_at": "2026-10-22",
+        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9Bc3Y5OUtYd2hlQndPQ2ZsNmZMNnNPem1vQURRRGU2NHAzd3U1OVdndVNyOEpEc3JjV3FGWGR5MzF2MTRKblhpV3UzeGc4c3NRcl91WHZreVljSU1BakxiMVdFU0NlekJNbkN0eHNzaw?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "台風30号の数値シミュレーションの変化：AI予測モデルの計算結果が安定",
+        "content": "ウェザーニュースは、台風30号に関する数値シミュレーションの変化を報じた。今回の発表では、AIを活用した予測モデルによる計算結果が安定してきたことが示されている。",
+        "source": "Google News",
+        "published_at": "2026-10-22",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBPY3Z4SnZVV0x5R3JXTGlzSm93RmU4R241Z0N6TEZHdDdnamtkRmpVbVZseDcwWFhuY1NEVjJ5LWFhRjhTUDRTeUNDSDFSb1JSM212dw?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "ディープシーク製AI排除、機密情報漏えい懸念で米政府が方針 中国は反発",
+        "content": "米政府は中国のディープシーク製AIの排除に動き出し、機密情報の漏えいに対する懸念を示している。これに対し、中国側は強く反発している。AI技術をめぐる米中間の安全保障上の緊張がさらに高まっている。",
+        "source": "Google News",
+        "published_at": "2026-10-22",
+        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9ubU5WQ3lTRDY5aEhaZkxtRmxWcHBuOGs2ZGdZQmtlY1UtdVVPeUxCWjVfUFlDMkZmaUs4UV9sM3BoZFFHZHN2TDFCSXgwS3U5OU1OVVRacmhqUng3dTFSX3lROA?oc=5",
+        "category": "政策・安全"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-21",
+    "daily_summary": "本日のAIニュースは、中国系AIによるサイバー攻撃の激化や、米中市場におけるAI関連株の投資過熱への警戒感・信用不安といった負の側面がクローズアップされ、国内外の株式市場や為替に下落圧力を与えました。一方で、AI議事録ツールの企業浸透の課題やLINEマンガによるAI二次創作機能の発表といった実用・エンタメ分野での模索が進むほか、政治的なインフラ整備の動きも見られ、AI技術の急激な発展と社会実装の間で、安全性、収益性、倫理面をめぐる様々な課題と警戒感が交錯する一日となりました。",
+    "articles": [
+      {
+        "title": "不正アクセス、中国系AI「ARTEX」で日本標的に 金融など業種絞り攻撃",
+        "content": "中国系のAIエージェント「ARTEX」が悪用され、金融などの特定業種を標的にしたサイバー攻撃が国内で行われていることが判明しました。国内の複数企業で情報漏えいや不正アクセスの痕跡が確認されており、AI時代における新たなセキュリティ上の脅威として警戒が強まっています。",
+        "source": "Google News",
+        "published_at": "2026-10-21",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9EV1lhdjROM0R3Y1oybGNpcDVsUUFBTGlMaTAxNTlKd2xjaVp0bV9xYTJUcTF6WEctY3dvZ1BvYW9VNzBVUUJnZ1BVaXlGM0I2QVBheDFIUVE3YXZDcS1EQ3JfQW1fdl9QTXhydg?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "ＮＹ外為市場＝ドル下落、ＡＩ懸念が重し 円は20年債入札好調で上昇",
+        "content": "ニューヨーク外国為替市場では、AIに関する懸念が重しとなりドルが下落しました。一方、円は良好な結果となった20年債入札を背景に上昇しました。",
+        "source": "Google News",
+        "published_at": "2026-10-21",
+        "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE42QVJtanZGVTlGdUdwd1pqZW5zcnN1NGZuM2MyQXE2bnR2bXAxNEFMTE9VRGRzeGFoWHZaa2d2MGNUWGhwTk5HalQtYUVWODctR0dENjJTZ3FtMnlxcEtWdHloYUxlTnNuOElTV3FCNGlwRnZTMlpHTUxGYW9VUQ?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "トランプ氏とAI首脳の「自主基準」合意が映す思惑、データセンター推進と迫る中間選挙",
+        "content": "トランプ氏とAI業界の首脳らが自主基準に関する合意に至った背景には、データセンターの推進や迫る中間選挙に向けた政治的思惑が影響しています。AIの発展とインフラ整備をめぐる動向として注目されています。",
+        "source": "Google News",
+        "published_at": "2026-10-21",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9lczJYT3JfT1NnelVDbnhkYUNYbUVNUUxqZ2N6bkZWSTA1UXpvaVRLNzNERVA5Vy0wODI5Z0k3a1o0b0I3emVmOHVFQVlPYm42dzVQekFR?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "会議の記録を残さない人が50.2％ AI議事録が便利でも企業に浸透しない理由",
+        "content": "キーマンズネットの調査によると、会議の記録を残さない人が50.2％に達することが明らかになりました。AIを活用した便利な議事録ツールが存在するにもかかわらず、なぜ企業への浸透が進まないのか、その背景にある理由について解説しています。",
+        "source": "Google News",
+        "published_at": "2026-10-21",
+        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE0tSkw5cVFxU2U3UzZTa2JXb0RSMmRJTHd4bGY3Vmk5SWhtRUdONkZyVGhMNDAxUHlHb0lZVXRJMVlLWEFZRW96OGs3bDJ6LW53bU15aDNPQUl3U2V0bnBFMXNHemRoQQ?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "LINEマンガ、原作者公認でAIによる二次創作が可能になる新機能を発表",
+        "content": "LINEマンガが、原作者の公認のもとでAIを使用したマンガの二次創作を可能にする新機能を発表しました。これにより、ユーザーは指定された作品をベースにAIを活用した新しい創作活動を手軽に楽しめるようになります。AI技術を活用したコンテンツ展開の新たな試みとして注目されています。",
+        "source": "Google News",
+        "published_at": "2026-10-21",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1Wbk5CZEYyVm5VR3dvYUI1Njl3elowSEVzSTY4MkVyT0oxVDdYLVh5VDZNUXZHRFhhNjBxMWY5ajUxc0VmZnV0cndObExDYTR0Y0E?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "TSMCにも売りが波及、マイクロソフトなどAI投資の採算が問われる",
+        "content": "マイクロソフトなどの大手企業によるAI投資の採算性に対する懸念が強まっており、関連銘柄であるTSMCにも売り注文が波及しています。市場では過剰投資への警戒感が高まり、今後のAI関連ビジネスの収益化に向けた動向が注目されています。",
+        "source": "Google News",
+        "published_at": "2026-10-21",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBITzhuRXRNWDRuT01xYUdyRGRBdTZQQ25JS2FJVUt2UjNoaFlWYkVySEVvUWVNREdDQUxqTk1NLTJPcjZFNUNsTERCVEZHTDd5ZUwwNURyOHNLZw?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "AI投資減速に警戒感、コアウィーブ巡り米株式市場で信用不安",
+        "content": "米株式市場において、AI特化型クラウド企業であるコアウィーブを巡る信用不安が浮上しています。この懸念からAI投資の過熱に対する減速への警戒感が強まっています。市場参加者の間で今後の動向を注視する動きが広がっています。",
+        "source": "Google News",
+        "published_at": "2026-10-21",
+        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9JdGFSUURtSzdSSkVZQjBNLXpwT0xuSmdDeVI4Yk1mRFplRXdId2pCYllIVGFVOVUwOUxKcTh6d28zaXJ3SEVDelp0bTZhRmVHWE54MnI4OHF4NjdkOHlvTjhnRQ?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "日経平均は続落、AI関連株中心に売り優勢で終日軟調推移",
+        "content": "本日の株式市場では、日経平均株価が続落となりました。AI関連株を中心に売りが優勢となり、終日軟調な推移が見られました。",
+        "source": "Google News",
+        "published_at": "2026-10-21",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9mYzRRbG50dy00QXg5bS1NYWV0a3NmVU5Dd1hESWNjZFU5RkE3a0NZZHlCMF9tc1ZRNzR0VFo4ZFlVZFNRdm9HUnFaakFnY2Rnb2J5THBmY3BDRnZEMkxKTQ?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "中国でAI株安、調達ラッシュに変調 「自立自強」戦略の急所に",
+        "content": "中国市場においてAI関連の株式が下落し、過熱していた資金調達の動きに変調が見え始めている。米国の規制に対抗する「自立自強」を掲げる中国のAI戦略にとって、今回の資金調達の停滞は大きな急所となり得る。市場の冷え込みが今後の技術開発や産業全体の成長に影響を与える懸念が強まっている。",
+        "source": "Google News",
+        "published_at": "2026-10-21",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE13b1ZtQmRQTWdJWGtWbDVMVXoyeHRmQXhVX0lzS1AtdHM1ZUVXVlBySm5RRUhTdDhZUTItVlRQeHFRRFlscXRYZ0JwYnFzMXNOQW50aUY0TVNuWWwzNkR2SEpwc2dONWt5M09YVQ?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "日経平均は続落、AI株含め全体的に低調 安値もみ合いに終始",
+        "content": "東京株式市場で日経平均株価は続落し、AI関連銘柄を含む市場全体が低調な値動きとなりました。終日を通じて安値圏でのもみ合いに終始する展開となりました。",
+        "source": "Google News",
+        "published_at": "2026-10-21",
+        "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNbHByT3RybzkySmx0VVBzdGgxLTc2VVRrV1ZyM28zb3d0MHliQ2JIaWdJek9GeWUxWkpiRUFjXzd6WTY4ZFBMQWswYm9sWmd4aGF2TXhFM29kN1pxQVlKSmthYWdpeUUyU3l6OTJYVzNScU5kbXhnVnZ4ajU4d0l5U00wcHQtQQ?oc=5",
+        "category": "事業・投資"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-20",
+    "daily_summary": "本日のAIニュースでは、中国語のAIエージェントが悪用されたサイバー攻撃や生成AIが生む倫理的・実務的課題（人間関係の錯覚や行政での確認負担増）といったリスクが浮き彫りになる一方で、自動運転レースでの技術者獲得競争、英会話学習や気象予測での実用化が進んでいます。また、経済・市場面ではAI関連株の反発や中国のAI輸出による経済下支え、先端半導体への投資機会が注目されるなど、AI技術の急激な浸透がもたらす光と影が多方面で顕著になった一日となりました。",
+    "articles": [
+      {
+        "title": "サイバー攻撃受け情報漏えい、中国語のAIエージェント悪用か",
+        "content": "国内約80社を狙った一連のサイバー攻撃において、中国語のAIエージェントが悪用された痕跡がセキュリティ企業により確認されました。AIの活用により言語の壁が低くなり、日本企業に対するサイバー攻撃が急増している実態が明らかになっています。",
+        "source": "Google News",
+        "published_at": "2026-10-20",
+        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1MZGpyMVV6RVg4VlZXLVRPdE15LWdaUkxBRVBsUzlmc2RxcUxmYXAxYWl5a1Q4RURvNVJrZzN2SGlDVE9vd18tbVF0WVBNSHpJTkxSb0NhODI5WWlZQ3l3RzEwb3BtZw?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "AIが生成した「実在しない女性」に会いに男性が2,000km近く移動、AI作成者は販売目的",
+        "content": "AIによって生成された実在しない女性に会うために、ある男性が2,000km近く移動する事態が発生しました。このAI画像・コンテンツの作成者は商業的な目的でこれを行っていました。生成AI技術の進展に伴う人間関係や倫理的な課題が浮き彫りになっています。",
+        "source": "Google News",
+        "published_at": "2026-10-20",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBYTkNJdkFicDlSSXkxN2xnN1VNM0RtRDBERldLc29VSGI3YTV4dUJIVG9NV3hHWVlSeWVvRDc4YVh4eXFCaVktcEVoTzM2cVJZd2ZtdjFKX2JVQU5XUU9lOWwyV21RR21WY0dCdm1TYmhBdmpqRFhIQlZfTmVfWDA?oc=5",
+        "category": "その他"
+      },
+      {
+        "title": "AI自動運転レースに650人参戦 トヨタやホンダ、敏腕技術者に熱視線",
+        "content": "AIを用いた自動運転の技術を競うレースに650人が参戦しました。自動車業界からはトヨタ自動車や本田技研工業なども注目しており、優秀な技術者の獲得に向けた熱視線が注がれています。",
+        "source": "Google News",
+        "published_at": "2026-10-20",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBnNmEyWHdQdnpRclRJdkpPT1Z1MTFIeW5MMnFtVFVTLVM4c1pZSFVaaTNBb1BiM2MwX1hybXRRYU5pUUVnd0NIdjBUQlNQQVlud19ETVAwUDdZMVcxT2NMaURUcG5pME5FRV9kQw?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "英会話学習で使用しているAIアプリの一つ - ［福岡県］AI頼って英会話学習",
+        "content": "福岡県において、英語学習の場にAIアプリを取り入れた学習方法が紹介されています。最新のAI技術を活用することで、より実践的で効果的な英会話の習得を目指す取り組みとなっています。",
+        "source": "Google News",
+        "published_at": "2026-10-20",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE4ybHFhelluZTRWVWZ6QVJySS1CdGtZWVFzbGtxS3hSMG81bXJJYUg4M19HUHlFRU1YMWlpSDU0UzIzN1p6R1hManJ2eW5mNEQzelh5dUwxRQ?oc=5",
+        "category": "その他"
+      },
+      {
+        "title": "台風30号、物理モデルとAI予測に大きな差が判明",
+        "content": "ウェザーニュースによると、台風30号の進路予測において従来の物理モデルとAIモデルの間で大きな乖離が見られています。特にAIモデルの一部では、台風が北東へ転向する可能性を計算しているとのことです。気象予測におけるAI活用の動向として注目されています。",
+        "source": "Google News",
+        "published_at": "2026-10-20",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9jdkY1RXZCeTNkcGZrZUtnaEJYd0FlUDk0Qks1VmJQMW9HdkY4cDlyZUhka0t2N1hvRW11cndaelhudTEybVlpZHp0aWk0OW5rWXRSUw?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "米国株式市場・午前＝Ｓ＆Ｐ・ナスダック上昇、ＡＩ関連が反発",
+        "content": "米国の午前中の株式市場では、S&P 500とナスダックが上昇しました。直近で下落していたAI関連の銘柄が買い戻され、市場全体の押し上げに寄与しています。",
+        "source": "Google News",
+        "published_at": "2026-10-20",
+        "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQNnUxZDdGRFdWUTFSOWQtdHNnaDJnX0FVbXlxZjZHTnE2YWNVUXJEOEdZWWVPTGNIZmIwUS1rSnJjSW9VNWhrTFRMWk1VeFd6dnZSUnNpNmhpV3lBZ3R5R2syV2N2ZHRZVXZVbDZ5R2FaTmt2cjdZaklhWldoVk9JZUpkMVF1Zw?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "コアウィーブ株急落は「さざ波」 AI揺るがす規制リスク、焦点は米中間選挙",
+        "content": "コアウィーブの株価急落を通じて、AI業界を取り巻く規制リスクと今後の市場への影響が議論されています。米中間選挙が今後の政策や投資判断における大きな焦点になると指摘されています。",
+        "source": "Google News",
+        "published_at": "2026-10-20",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1HSExkbi01blFhWTVnS09UQVRPME1XYVJubHBDT3Vfbk5fcXN6Z0NKUTNTb0ZDcFNyZ0NYdERoam9VZmVXVEQzSkwtOHV4cy0wWDE4TGFNSVNjN1ZhY0t1dUU4VkNYUFk?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "悲観は好機に変わる！「先端AI半導体ニッチトップ」最強6銘柄を拾え",
+        "content": "この記事では、先端AI半導体市場において独自の強みを持つニッチトップ企業の中から、投資妙味のある最強の6銘柄を紹介しています。市場の悲観ムードを好機と捉え、今後の成長が期待される注目銘柄にスポットを当てています。",
+        "source": "Google News",
+        "published_at": "2026-10-20",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQY09SRW1TZkt2Y0E3WHhXRHcyMTBkZHg5WVlybmRsdEZOV2E1al9MT3lCMmdfV2M5TThjQm9CTUhPTC1zdmZ0QmZQamEzOTdYaDl0Q3hwMkJUeVYtbFFCYnd3bmsyNk10TU5RMnd5MHY1dVBjSUFScEphQjhjU1NXVy1vd1JKZWs?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "世田谷区、AI活用で約2900時間の業務削減を達成するも「確認と修正の負担」が新たな課題に",
+        "content": "世田谷区では生成AIの活用によって約2900時間の業務時間削減に成功しました。一方で、AIが生成した内容の確認や修正を行う負担が増加するという新たな課題が浮き彫りになっています。今後はこうした運用面の課題に対してどのように対応していくかが注目されています。",
+        "source": "Google News",
+        "published_at": "2026-10-20",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1TTzJWQi0tcjlZLS15UW50ZkRZekE5a1pBUkdBX1NQRlcwbWhtOWxZVXFtT2xtMUFrUk9SN1BISU55OEpjM1pucUFvRmJmazBzM0RERGYyZ0dnN2ZyVmRoYTNpM2dyXzFRWGdBb0Zud3Jmdw?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "中国の経済成長が加速、AI輸出ブームが国内消費の低迷を上回る",
+        "content": "中国の経済成長が加速しており、人工知能（AI）関連の輸出ブームが国内消費の低迷を補う形となっている。BBCの報道によると、世界的なAI需要の拡大が中国経済を下支えしているという。",
+        "source": "Google News",
+        "published_at": "2026-10-20",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1HbTI4ak85ZklQamI2VVEtVms1R1ZBV21fbjgxS1NBaFYtYjNHSi1TRG9XUE9FdFpzY0twVUxpTE1nV2tfZjE2NkpyNjl5OW1sa0tfSHlRMk1MSjhqX1c2Q9IBZkFVX3lxTFBFSFpqZXRYVUZrX0xfMllHWF9vdDE3RVlrUl9nM2tHN00yQUZicUVOWFR6NHd6VnZkU2NpMFNuZnR5b0g5SEtNZWNBZXowM1V5S29lQkg5RkJBR1JQVWJ0NFZzNmN0dw?oc=5",
+        "category": "事業・投資"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-19",
+    "daily_summary": "本日のAIニュースは、就職活動での面接対策や小売業の変革、株式投資といった身近な活用事例が広がる一方で、検索エンジンの変化に伴うウェブ集客の低下や、AIを活用したサイバー攻撃の急増といった深刻なセキュリティの脅威が浮き彫りになっています。さらに、新興国の雇用への影響や、巨額投資と生産性の隔たり、過熱する市場の逆回転リスクなど、経済や国際社会における構造的な課題や財務不安も指摘されており、AIの急速な普及が光と影の両面で大きな変革と警鐘をもたらしている一日となりました。",
+    "articles": [
+      {
+        "title": "AI面接拡大 突破口は「まず結論」",
+        "content": "就職活動や転職活動で導入が広がるAI面接では、回答の構成力が重要な評価ポイントとなります。評価を高めるための突破口として、結論から先に述べる話し方が有効であると紹介されています。",
+        "source": "Google News",
+        "published_at": "2026-10-19",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1jemU1Vk84anZDSHRXZC1DRXJIYzQ3Zl9Ja0dMSFNoZy0wQnJSaHpOYlVON2ZjVEJ0Z1J1NXhCUFRWV0htVTVkTFRmQkI2aThF?oc=5",
+        "category": "その他"
+      },
+      {
+        "title": "AI検索普及、ゼロクリック率68%に上昇 揺らぐサイト集客",
+        "content": "AI検索の普及に伴い、検索結果ページで完結してリンクがクリックされない「ゼロクリック率」が68%へと上昇しました。これにより、従来のウェブサイトへの集客構造が大きく揺らいでいます。",
+        "source": "Google News",
+        "published_at": "2026-10-19",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBxWGtXeTJXWXBiR3p5UHR3N0YyWVJOWEZnZ0ZPOFpjWWtuUkMtOHp3OTNuWG9naS1haUM0RDNIQS12Z1BZc21zNUdXTjNQb01YUWNBZnI5OFhoZEE4M3lSb0pURnYyNFd0Yy1DTA?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "「AIの脅威」が現実に、グローバル経済を牽引するはずだったインドとベトナムで起きていること",
+        "content": "AIの急速な進化と普及により、グローバル経済の成長を牽引すると期待されていたインドやベトナムなどの新興国で新たな脅威が現実化しています。従来のアウトソーシングや製造業中心の経済モデルがAIによる自動化の影響を受けており、雇用のあり方や産業構造の変換が迫られています。これらの国々が直面する課題は、世界の労働市場や経済のバランスに大きな影響を与えつつあります。",
+        "source": "Google News",
+        "published_at": "2026-10-19",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE80Q2d0VmNval9FNVpHUTZxS01ldk1UaERXeDQ0ZXpKLTMtRjBoVVo2cUREUTVKWlZDV3FNQy1BX0FtMEtPSFkzOVVUTHQ4bHp2ZVJzOVh3?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "ＡＩで企業に無限の可能性…ＦＬＵＸ ＣＥＯ 永井元治さん",
+        "content": "FLUXのCEOである永井元治氏が、AIを活用して企業に無限の可能性をもたらす事業展開について語っています。若いリーダーの視点から、次代を創るビジネスの展望が紹介されています。",
+        "source": "Google News",
+        "published_at": "2026-10-19",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBUazZEa2tNWjViMlJNTGpWQWJ4QUNVY3BsVndPZkctMlZVc1FBSnJoQ2pDSnJzdVRLWTRjNzJKRjJDT2lzOEFJUTVySkgtbG9mczlCZU52V2pfbTBfNkNCOGlNRWlieEVub3YySmZB?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "小売業にAIを適用する「エージェンティック・コマース」が迫る変革",
+        "content": "AIを活用して小売業の業務や購買体験を変革する「エージェンティック・コマース」について解説しています。自律型のエージェントが消費者のニーズを先読みし、新たな商取引の形をもたらす可能性について論じています。",
+        "source": "Google News",
+        "published_at": "2026-10-19",
+        "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1GTVI1UWUyb01ROXpBYnJ1QzdlOWF6blBneThURHNBRXg5MnZhRGFOS2wxeElmdHV3X0FMdUNpakIwNXltRUlkYTlMMl94UnRQZDEzWTlUZEdUU3V0WE1qaERrUmRKUnQxczRjZ2RSYWtzeHNqUDBLVQ?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "G20で浮かび上がった「AI一本足」の世界経済―AIへの巨額投資と生産性向上の隔たりが広げる国際格差",
+        "content": "G20において、AIへの巨額投資と実際の生産性向上との間に大きな隔たりがあることが国際的な課題として浮き彫りになりました。この投資と効果のギャップは、各国間の経済格差をさらに広げる要因として懸念されています。世界経済におけるAI依存の歪みと国際格差の実態について専門家が解説しています。",
+        "source": "Google News",
+        "published_at": "2026-10-19",
+        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNandlNjZBVGY4MU9aVHh3QlltVHJKX1RnaGlZMTBybmhPTnlJNnJBaXBDYnpWYmhUa3dCVHozMlhUR0NCcE9VWWxoZ3FtWmRnY1M3dlh3ZHhsckphVDdoVnNYR2Vwa3J5U3c3LWEyZ2otWUtuMkt6QlR5M2tudjcxemJPal9vcEFa?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "狂騒AIに歴史の警鐘 膨張する投資、逆回転のリスク",
+        "content": "この記事では、過熱するAI関連の巨大投資に対する歴史的な教訓と、市場の逆回転リスクについて警鐘を鳴らしています。膨張を続けるAIブームの裏に潜む経済的な脆弱性を分析し、今後の動向に注意を促しています。",
+        "source": "Google News",
+        "published_at": "2026-10-19",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9qUFpnaDVnaE5RX0JEd1NUekVMQ0RaR1pIMzczb0JJOGE0SkFzS090elJDZmQ3NERuWV9uZ3RUUjBBQW5mRTFhd1V0dVRaMVRQRlJxUklPRnd5eVEyRGV1TTlYZTZWcE5zOElXVQ?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "『AIに9割まかせる ほぼほったらかし株式投資』【書籍紹介】",
+        "content": "本書は、AIを活用して手間をかけずに株式投資を行う方法を紹介する書籍です。投資の大部分をAIに任せることで、初心者でも手軽に取り組める運用術を解説しています。",
+        "source": "Google News",
+        "published_at": "2026-10-19",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1fZ18xMTlnMU5LY1M1ZWM1Tkk3SGxaR0hUYnFLbTc5QUFvbFdaMUx0bHRLaFBxOE1KenlOT1k1OEJ0LThDR0NWT2RaM2pnc0pkUXk5OGk5WXd3Zw?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "16兆円の受注残でも赤字の衝撃、AI企業コアウィーブの負債リスク",
+        "content": "膨大な受注残を抱えるAI企業のコアウィーブが赤字に陥っており、財務面での負債リスクが懸念されています。急速に拡大するAI市場において、インフラ投資と収益化のバランスが大きな課題となっています。今後の事業継続や資金調達の動向に注目が集まっています。",
+        "source": "Google News",
+        "published_at": "2026-10-19",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1sV0JxZ19xTUVSN05CRmZBNTR5WXBOY1RfZ0Qyd0kxSjV6SXY0R2lGUlBMa3V2UVgzeHFGYmFXWG9fdWlsRFk5VmxqYW9DTkZlaUY1d1lfbldxUQ?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "不正アクセス急増の背景に中国製LLMの台頭、AIを活用した自動サイバー攻撃に専門家が警鐘",
+        "content": "中国製の大規模言語モデル（LLM）の台頭により、AIが自動で標的の偵察やシステム侵入、情報奪取を行う不正アクセスが急増しています。専門家は情報の漏洩リスクに対する深刻な警鐘を鳴らしており、適切な対策が急務となっています。",
+        "source": "Google News",
+        "published_at": "2026-10-19",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFB6dmQwNlg1bGFVX2sxM3VnSVNqQlkzbmlBMFB2aEFfNkdZYXFCQXdYU3JCUlBjSThnSV9YVUtnWVdySjFVbWNoZjdmYU9hRjluZTNEenFuMmpQSWUtQUhmc2JLTUs?oc=5",
+        "category": "政策・安全"
+      }
+    ]
+  },
+  {
     "date": "2026-10-18",
     "daily_summary": "本日のAIニュースでは、故人声優の声のAI再現を原則禁止とする日俳連の新指針やテレビ業界での生成AI活用などクリエイターの権利と仕事に関する議論が浮き彫りになったほか、中国によるAI技術の輸出規制強化や米国の自主規制への懸念など安全保障・ガバナンスの動きが目立ちました。また、地域交通でのAI活用やメタの自律型AIによる新たな自動化事例が報じられる一方で、AIを悪用したサイバー攻撃の急増といったセキュリティ上の脅威も深刻化しており、社会全体でAIの規制と活用のバランスが強く問われています。",
     "articles": [
