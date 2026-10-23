@@ -1,0 +1,61 @@
+{
+  "main": "1396c14171d9206d09277741896d7c35a6d17b37",
+  "sourceTree": "6ea378e4f597758b6029cb5276f8a15d049548ac",
+  "version": "5ac751ef-eb4e-4478-b013-2100ad69b4ca",
+  "deployment": "f323fb38-efb5-48b0-ad4f-e1a8680dc9ca",
+  "createdOn": "2026-10-23T23:07:23.77671Z",
+  "percentage": 100,
+  "rollback": "22bd4196-2419-42aa-97c6-828bc6572b58",
+  "prCi": 40036494103,
+  "productionCi": 40037009316,
+  "artifact": 12536504659,
+  "zipSha256": "a87d40b33ef154495e2015aa9dc4d843dc3030f6bbe8b3477270afc6cc44e13e",
+  "prodAudit": 0,
+  "fullAudit": 0,
+  "exceptions": false,
+  "gateTests": 20,
+  "cloudflareTests": 35,
+  "bindings": [
+    {
+      "name": "ASSETS",
+      "type": "assets"
+    },
+    {
+      "name": "DASHBOARD_API_TOKEN",
+      "type": "secret_text"
+    },
+    {
+      "name": "DASHBOARD_CLOCK_MAX_UNCERTAINTY_SECONDS",
+      "type": "plain_text"
+    },
+    {
+      "name": "DASHBOARD_CLOCK_RESYNC_INTERVAL_SECONDS",
+      "type": "plain_text"
+    },
+    {
+      "name": "TOUKEI_ORIGIN",
+      "type": "plain_text"
+    }
+  ],
+  "runtimeUnchanged": true,
+  "publicVarsUnchanged": true,
+  "articleRoutes": 12,
+  "publicBoundaryChecks": 24,
+  "repeatedConcurrentRequests": 18,
+  "browser": {
+    "rainMetricSwitch": true,
+    "autumnThresholdAndYearSwitch": true,
+    "desktopAndMobile": true,
+    "errorCount": 0
+  },
+  "authenticatedProductionApi": "Not verified; existing browser session showed Access login. Linux preview401/405/no-store and public Access302 verified.",
+  "issue17": {
+    "state": "closed",
+    "reason": "completed",
+    "label": "Status: Done"
+  },
+  "automation": {
+    "id": "issue-17-braces",
+    "status": "PAUSED"
+  }
+}

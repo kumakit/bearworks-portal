@@ -24,9 +24,9 @@
 - [x] production・全体監査0、例外なし、全severityの警告を拒否する監査ゲート
 - [x] clean install、依存ツリー、監査20テスト、Cloudflare35テスト、Lint、Next/Workers build、両環境dry-run
 - [x] ローカルWorkersで記事・例題・ガイド・広告/404/画像/API境界、反復並列リクエスト、代表画面操作
-- [ ] push承認・PR #33の実装内容更新
-- [ ] 同じ変更のUbuntu/Node 22 Workers CI（native sharp・preview含む）
-- [ ] merge・本番deploy・公開後確認
-- [ ] Issue #17の完了条件を実証し、close・追跡停止
+- [x] push承認・PR #33の実装内容更新
+- [x] 同じ変更のUbuntu/Node 22 Workers CI（native sharp・preview含む）
+- [x] merge・本番deploy・公開後確認
+- [x] Issue #17の完了条件を実証し、close・追跡停止
 
-第1・2段階は本番公開・公開後確認まで完了。2026-10-23にbraces勧告が公式撤回され、10月24日の実装で新規警告も修正した。ローカルでは両監査0・期限付き例外なし。push以降のLinux CIと本番確認は未実施のため、Issue #17は進行中。現在の計画は `phase-3-implementation-20261024.md`、検証記録は `phase-3-walkthrough-20261024.md`。10月18日時点の調査は `phase-3-options-20261018.md` に履歴として保持する。
+第1〜3段階は本番公開・公開後確認まで完了。2026-10-23にbraces勧告が公式撤回され、10月24日の実装で新規警告も修正した。両監査0・期限付き例外なし、Linux CIと本番の必要な確認が合格し、Issue #17を完了としてcloseした。定期追跡はPAUSED。認証済み本番API成功応答は既存ログイン状態がなく未確認で、Linux previewのAPI拒否・no-storeと本番Access境界までを確認済みとする。最終記録は `phase-3-release-result.md`。以前の計画・ローカル検証・10月18日の調査は時点を区別して履歴として保持する。

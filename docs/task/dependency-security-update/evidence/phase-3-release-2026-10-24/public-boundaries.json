@@ -1,0 +1,141 @@
+{
+  "result": "PASS",
+  "checkedAt": "2026-10-23T23:08:50.683Z",
+  "checks": [
+    {
+      "path": "/",
+      "status": 200,
+      "ads": true
+    },
+    {
+      "path": "/toukei",
+      "status": 200,
+      "ads": true
+    },
+    {
+      "path": "/toukei/guides/learning-roadmap",
+      "status": 200,
+      "ads": true
+    },
+    {
+      "path": "/toukei/problems/confidence-interval",
+      "status": 200,
+      "ads": true
+    },
+    {
+      "path": "/labs/hachioji-climate",
+      "status": 200,
+      "ads": true
+    },
+    {
+      "path": "/labs/hachioji-snow",
+      "status": 200,
+      "ads": true
+    },
+    {
+      "path": "/labs/hachioji-heat",
+      "status": 200,
+      "ads": true
+    },
+    {
+      "path": "/labs/hachioji-chill",
+      "status": 200,
+      "ads": true
+    },
+    {
+      "path": "/labs/takao-gear",
+      "status": 200,
+      "ads": true
+    },
+    {
+      "path": "/labs/takao-weather-shift",
+      "status": 200,
+      "ads": true
+    },
+    {
+      "path": "/labs/hachioji-rain",
+      "status": 200,
+      "ads": true
+    },
+    {
+      "path": "/labs/hachioji-autumn",
+      "status": 200,
+      "ads": true
+    },
+    {
+      "path": "/about",
+      "status": 200,
+      "ads": false
+    },
+    {
+      "path": "/ai-news",
+      "status": 200,
+      "ads": false
+    },
+    {
+      "path": "/contact",
+      "status": 200,
+      "ads": false
+    },
+    {
+      "path": "/privacy",
+      "status": 200,
+      "ads": false
+    },
+    {
+      "path": "/weather",
+      "status": 200,
+      "ads": false
+    },
+    {
+      "path": "/toukei/problems/__invalid__",
+      "status": 404,
+      "ads": false
+    },
+    {
+      "path": "/toukei/guides/__invalid__",
+      "status": 404,
+      "ads": false
+    },
+    {
+      "path": "/labs/__invalid__",
+      "status": 404,
+      "ads": false
+    },
+    {
+      "path": "/route-that-does-not-exist",
+      "status": 404,
+      "ads": false
+    },
+    {
+      "path": "/dashboard",
+      "status": 302,
+      "accessBoundary": true
+    },
+    {
+      "path": "/dashboard/cloudflare",
+      "status": 302,
+      "accessBoundary": true
+    },
+    {
+      "path": "/api/dashboard-data",
+      "status": 302,
+      "accessBoundary": true
+    }
+  ],
+  "artifactMatches": [
+    {
+      "path": "/icon.png",
+      "sha256": "0eaf8a0a328e28d5a782e1e961adb605450091e0964b5e308a31991717a60e5e"
+    },
+    {
+      "path": "/_next/static/media/07c7676b89ed2778-s.p.2bn3s6zvc0dyp.woff2",
+      "sha256": "c940764593d0fe5d596be327ca7558855e018039fb78509aa21921fd3644c3e4"
+    }
+  ],
+  "adsTxt": true,
+  "robots": true,
+  "sitemap": true,
+  "repeatedConcurrentRequests": 18,
+  "authenticatedProductionApi": "not verified"
+}

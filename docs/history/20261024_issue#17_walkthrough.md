@@ -1,5 +1,7 @@
 # Issue #17 第3段階のローカル実装
 
+公開完了追記：ユーザー承認を受けてpush・Linux CI・merge・本番公開を完了し、新version `5ac751ef-eb4e-4478-b013-2100ad69b4ca` の100%配信と必要な公開後確認が成功した。Issue #17はclosed / Status: Done、定期追跡はPAUSED。最終結果は `docs/task/dependency-security-update/phase-3-release-result.md`。以下は公開前の時点記録。
+
 braces勧告の公式撤回を受け、Next/Lint 16.4.3と修正可能な間接依存を更新した。Workers previewでNext 16.4との互換問題を検出したため、OpenNext 1.20.13・Wrangler 4.148.0へ更新して404/APIを再検証した。上流minifierの固定globは対象親に限って公式修正版10.5.0へ解決した。
 
 production/full監査0、期限付き例外ファイル削除、例外を許容しない監査ゲートへ変更。ローカルのテスト・Lint・build・Workers dry-run/preview・代表画面操作は合格。Linux CI・公開後確認は未実施で、Issueは未完了。
