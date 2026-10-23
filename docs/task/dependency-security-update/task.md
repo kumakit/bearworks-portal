@@ -17,9 +17,16 @@
 - [x] 第2段階：同一内容のLinux CI・merge・本番公開・公開後確認
 - [x] 2026-10-18：上流修正版、production・全体監査、固定版・経路、開発用限定の条件を再評価
 - [x] 第3段階の選択肢と両依存経路、CSS移行の判断条件を整理
-- [ ] 2026-10-25 09:00 JSTまで：bracesの修正版・代替と残件を再評価し、例外を除去または再判断
-- [ ] 第3段階：braces修正版/代替とCSS移行案を確定
-- [ ] 第3段階：ブラウザー要件・移行差分の受入を確認
-- [ ] 全体監査0、例外なし、Linux CI・公開後確認
+- [x] 2026-10-24：braces勧告の公式撤回を確認し、期限付き例外を削除
+- [x] 第3段階：Tailwind 3・CSS・対応ブラウザーを維持する方針を確定（撤回によりCSS移行不要）
+- [x] 新規警告を修正：Next/Lint 16.4.3、Zod 4.6.7、body-parser 2.4.0
+- [x] Next 16.4互換対応：OpenNext 1.20.13、Wrangler 4.148.0、限定glob 10.5.0修正版
+- [x] production・全体監査0、例外なし、全severityの警告を拒否する監査ゲート
+- [x] clean install、依存ツリー、監査20テスト、Cloudflare35テスト、Lint、Next/Workers build、両環境dry-run
+- [x] ローカルWorkersで記事・例題・ガイド・広告/404/画像/API境界、反復並列リクエスト、代表画面操作
+- [ ] push承認・PR #33の実装内容更新
+- [ ] 同じ変更のUbuntu/Node 22 Workers CI（native sharp・preview含む）
+- [ ] merge・本番deploy・公開後確認
+- [ ] Issue #17の完了条件を実証し、close・追跡停止
 
-第1・2段階は本番公開・公開後確認まで完了。2026-10-18の再評価でもproduction監査0、全体監査high7を確認。braces連鎖7件は未解消で、次の例外期限は2026-10-25 09:00 JST。Issue #17を進行中のまま保持する。第3段階のbraces/CSS判断と全警告解消が残る。選択肢は `phase-3-options-20261018.md`、監査結果は `docs/history/20261018_issue#17_exception_reevaluation.md` に記録した。
+第1・2段階は本番公開・公開後確認まで完了。2026-10-23にbraces勧告が公式撤回され、10月24日の実装で新規警告も修正した。ローカルでは両監査0・期限付き例外なし。push以降のLinux CIと本番確認は未実施のため、Issue #17は進行中。現在の計画は `phase-3-implementation-20261024.md`、検証記録は `phase-3-walkthrough-20261024.md`。10月18日時点の調査は `phase-3-options-20261018.md` に履歴として保持する。
