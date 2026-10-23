@@ -1,0 +1,1370 @@
+[
+  {
+    "path": "node_modules/@ast-grep/napi",
+    "before": "0.40.5",
+    "after": "0.45.3",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@ast-grep/napi-darwin-arm64",
+    "before": "0.40.5",
+    "after": "0.45.3",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@ast-grep/napi-darwin-x64",
+    "before": "0.40.5",
+    "after": "0.45.3",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@ast-grep/napi-linux-arm64-gnu",
+    "before": "0.40.5",
+    "after": "0.45.3",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@ast-grep/napi-linux-arm64-musl",
+    "before": "0.40.5",
+    "after": "0.45.3",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@ast-grep/napi-linux-x64-gnu",
+    "before": "0.40.5",
+    "after": "0.45.3",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@ast-grep/napi-linux-x64-musl",
+    "before": "0.40.5",
+    "after": "0.45.3",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@ast-grep/napi-win32-arm64-msvc",
+    "before": "0.40.5",
+    "after": "0.45.3",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@ast-grep/napi-win32-ia32-msvc",
+    "before": "0.40.5",
+    "after": "0.45.3",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@ast-grep/napi-win32-x64-msvc",
+    "before": "0.40.5",
+    "after": "0.45.3",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@aws-sdk/checksums",
+    "before": "3.1000.21",
+    "after": "3.1001.5",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@aws-sdk/core",
+    "before": "3.977.1",
+    "after": "3.978.5",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@aws-sdk/credential-provider-env",
+    "before": "3.972.62",
+    "after": "3.972.76",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@aws-sdk/credential-provider-http",
+    "before": "3.972.64",
+    "after": "3.972.78",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@aws-sdk/credential-provider-ini",
+    "before": "3.973.7",
+    "after": "3.973.21",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@aws-sdk/credential-provider-login",
+    "before": "3.972.69",
+    "after": "3.972.83",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@aws-sdk/credential-provider-node",
+    "before": "3.972.73",
+    "after": "3.972.88",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@aws-sdk/credential-provider-process",
+    "before": "3.972.62",
+    "after": "3.972.76",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@aws-sdk/credential-provider-sso",
+    "before": "3.973.6",
+    "after": "3.973.20",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@aws-sdk/credential-provider-web-identity",
+    "before": "3.972.68",
+    "after": "3.972.82",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@aws-sdk/dynamodb-codec",
+    "before": "3.973.36",
+    "after": "3.973.50",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@aws-sdk/endpoint-cache",
+    "before": "3.972.9",
+    "after": "3.972.11",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@aws-sdk/middleware-bucket-endpoint",
+    "before": "3.972.40",
+    "after": "3.972.54",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@aws-sdk/middleware-endpoint-discovery",
+    "before": "3.972.26",
+    "after": "3.972.34",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@aws-sdk/middleware-expect-continue",
+    "before": "3.972.36",
+    "after": "3.972.50",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@aws-sdk/middleware-flexible-checksums",
+    "before": "3.974.46",
+    "after": "3.974.60",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@aws-sdk/middleware-host-header",
+    "before": "3.972.37",
+    "after": "3.972.51",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@aws-sdk/middleware-location-constraint",
+    "before": "3.972.33",
+    "after": "3.972.47",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@aws-sdk/middleware-logger",
+    "before": "3.972.36",
+    "after": "3.972.50",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@aws-sdk/middleware-recursion-detection",
+    "before": "3.972.38",
+    "after": "3.972.52",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@aws-sdk/middleware-sdk-s3",
+    "before": "3.972.67",
+    "after": "3.972.81",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@aws-sdk/middleware-sdk-s3/node_modules/@aws-sdk/signature-v4-multi-region",
+    "before": "3.996.42",
+    "after": "3.996.49",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@aws-sdk/middleware-sdk-sqs",
+    "before": "3.972.38",
+    "after": "3.972.46",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@aws-sdk/middleware-ssec",
+    "before": "3.972.33",
+    "after": "3.972.47",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@aws-sdk/middleware-user-agent",
+    "before": "3.972.66",
+    "after": "3.972.80",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@aws-sdk/nested-clients",
+    "before": "3.997.36",
+    "after": "3.997.50",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@aws-sdk/nested-clients/node_modules/@aws-sdk/signature-v4-multi-region",
+    "before": "3.996.42",
+    "after": "3.996.49",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@aws-sdk/region-config-resolver",
+    "before": "3.972.40",
+    "after": "3.972.54",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@aws-sdk/token-providers",
+    "before": "3.1096.0",
+    "after": "3.1155.0",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@aws-sdk/types",
+    "before": "3.974.2",
+    "after": "3.975.0",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@aws-sdk/util-locate-window",
+    "before": "3.965.8",
+    "after": "3.965.10",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@aws-sdk/util-user-agent-browser",
+    "before": "3.972.37",
+    "after": "3.972.51",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@aws-sdk/util-user-agent-node",
+    "before": "3.973.52",
+    "after": "3.973.66",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@aws-sdk/xml-builder",
+    "before": "3.972.37",
+    "after": "3.972.41",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@cloudflare/workerd-darwin-64",
+    "before": "1.20261001.1",
+    "after": "1.20261006.1",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@cloudflare/workerd-darwin-arm64",
+    "before": "1.20261001.1",
+    "after": "1.20261006.1",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@cloudflare/workerd-linux-64",
+    "before": "1.20261001.1",
+    "after": "1.20261006.1",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@cloudflare/workerd-linux-arm64",
+    "before": "1.20261001.1",
+    "after": "1.20261006.1",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@cloudflare/workerd-windows-64",
+    "before": "1.20261001.1",
+    "after": "1.20261006.1",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@dotenvx/dotenvx",
+    "before": "1.31.0",
+    "after": "2.38.2",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@dotenvx/dotenvx/node_modules/commander",
+    "before": "11.1.0",
+    "after": null,
+    "dev": false
+  },
+  {
+    "path": "node_modules/@dotenvx/dotenvx/node_modules/fdir",
+    "before": "6.5.0",
+    "after": null,
+    "dev": false
+  },
+  {
+    "path": "node_modules/@dotenvx/dotenvx/node_modules/isexe",
+    "before": "3.1.5",
+    "after": null,
+    "dev": false
+  },
+  {
+    "path": "node_modules/@dotenvx/dotenvx/node_modules/picomatch",
+    "before": "4.0.5",
+    "after": null,
+    "dev": false
+  },
+  {
+    "path": "node_modules/@dotenvx/dotenvx/node_modules/which",
+    "before": "4.0.0",
+    "after": null,
+    "dev": false
+  },
+  {
+    "path": "node_modules/@ecies/ciphers",
+    "before": "0.2.6",
+    "after": null,
+    "dev": false
+  },
+  {
+    "path": "node_modules/@esbuild/aix-ppc64",
+    "before": "0.25.4",
+    "after": "0.28.1",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@esbuild/android-arm64",
+    "before": "0.25.4",
+    "after": "0.28.1",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@esbuild/android-x64",
+    "before": "0.25.4",
+    "after": "0.28.1",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@esbuild/darwin-arm64",
+    "before": "0.25.4",
+    "after": "0.28.1",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@esbuild/darwin-x64",
+    "before": "0.25.4",
+    "after": "0.28.1",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@esbuild/freebsd-arm64",
+    "before": "0.25.4",
+    "after": "0.28.1",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@esbuild/freebsd-x64",
+    "before": "0.25.4",
+    "after": "0.28.1",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@esbuild/linux-arm",
+    "before": "0.25.4",
+    "after": "0.28.1",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@esbuild/linux-arm64",
+    "before": "0.25.4",
+    "after": "0.28.1",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@esbuild/linux-ia32",
+    "before": "0.25.4",
+    "after": "0.28.1",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@esbuild/linux-mips64el",
+    "before": "0.25.4",
+    "after": "0.28.1",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@esbuild/linux-ppc64",
+    "before": "0.25.4",
+    "after": "0.28.1",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@esbuild/linux-riscv64",
+    "before": "0.25.4",
+    "after": "0.28.1",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@esbuild/linux-s390x",
+    "before": "0.25.4",
+    "after": "0.28.1",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@esbuild/linux-x64",
+    "before": "0.25.4",
+    "after": "0.28.1",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@esbuild/netbsd-arm64",
+    "before": "0.25.4",
+    "after": "0.28.1",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@esbuild/netbsd-x64",
+    "before": "0.25.4",
+    "after": "0.28.1",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@esbuild/openbsd-arm64",
+    "before": "0.25.4",
+    "after": "0.28.1",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@esbuild/openbsd-x64",
+    "before": "0.25.4",
+    "after": "0.28.1",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@esbuild/sunos-x64",
+    "before": "0.25.4",
+    "after": "0.28.1",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@esbuild/win32-arm64",
+    "before": "0.25.4",
+    "after": "0.28.1",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@esbuild/win32-ia32",
+    "before": "0.25.4",
+    "after": "0.28.1",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@esbuild/win32-x64",
+    "before": "0.25.4",
+    "after": "0.28.1",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@isaacs/cliui",
+    "before": "9.0.0",
+    "after": "8.0.2",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@next/env",
+    "before": "16.3.8",
+    "after": "16.4.3",
+    "dev": false
+  },
+  {
+    "path": "node_modules/@next/eslint-plugin-next",
+    "before": "16.3.8",
+    "after": "16.4.3",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@next/swc-darwin-arm64",
+    "before": "16.3.8",
+    "after": "16.4.3",
+    "dev": false
+  },
+  {
+    "path": "node_modules/@next/swc-darwin-x64",
+    "before": "16.3.8",
+    "after": "16.4.3",
+    "dev": false
+  },
+  {
+    "path": "node_modules/@next/swc-linux-arm64-gnu",
+    "before": "16.3.8",
+    "after": "16.4.3",
+    "dev": false
+  },
+  {
+    "path": "node_modules/@next/swc-linux-arm64-musl",
+    "before": "16.3.8",
+    "after": "16.4.3",
+    "dev": false
+  },
+  {
+    "path": "node_modules/@next/swc-linux-x64-gnu",
+    "before": "16.3.8",
+    "after": "16.4.3",
+    "dev": false
+  },
+  {
+    "path": "node_modules/@next/swc-linux-x64-musl",
+    "before": "16.3.8",
+    "after": "16.4.3",
+    "dev": false
+  },
+  {
+    "path": "node_modules/@next/swc-win32-arm64-msvc",
+    "before": "16.3.8",
+    "after": "16.4.3",
+    "dev": false
+  },
+  {
+    "path": "node_modules/@next/swc-win32-x64-msvc",
+    "before": "16.3.8",
+    "after": "16.4.3",
+    "dev": false
+  },
+  {
+    "path": "node_modules/@noble/ciphers",
+    "before": "1.3.0",
+    "after": null,
+    "dev": false
+  },
+  {
+    "path": "node_modules/@noble/curves",
+    "before": "1.9.7",
+    "after": null,
+    "dev": false
+  },
+  {
+    "path": "node_modules/@noble/hashes",
+    "before": "1.8.0",
+    "after": null,
+    "dev": false
+  },
+  {
+    "path": "node_modules/@node-minify/core",
+    "before": "8.0.6",
+    "after": "9.0.2",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@node-minify/core/node_modules/glob",
+    "before": "9.3.5",
+    "after": "10.5.0",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@node-minify/core/node_modules/minimatch",
+    "before": "8.0.7",
+    "after": "9.0.9",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@node-minify/core/node_modules/minipass",
+    "before": "4.2.8",
+    "after": null,
+    "dev": false
+  },
+  {
+    "path": "node_modules/@node-minify/core/node_modules/path-scurry/node_modules/minipass",
+    "before": "7.1.3",
+    "after": null,
+    "dev": false
+  },
+  {
+    "path": "node_modules/@node-minify/terser",
+    "before": "8.0.6",
+    "after": "9.0.1",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@node-minify/utils",
+    "before": "8.0.6",
+    "after": "9.0.1",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@opennextjs/aws",
+    "before": "4.1.0",
+    "after": "4.1.12",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@opennextjs/aws/node_modules/@esbuild/android-arm",
+    "before": "0.25.4",
+    "after": null,
+    "dev": false
+  },
+  {
+    "path": "node_modules/@opennextjs/aws/node_modules/@esbuild/linux-loong64",
+    "before": "0.25.4",
+    "after": null,
+    "dev": false
+  },
+  {
+    "path": "node_modules/@opennextjs/aws/node_modules/esbuild",
+    "before": "0.25.4",
+    "after": null,
+    "dev": false
+  },
+  {
+    "path": "node_modules/@opennextjs/cloudflare",
+    "before": "1.20.2",
+    "after": "1.20.13",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@smithy/config-resolver",
+    "before": "4.6.15",
+    "after": "4.7.2",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@smithy/core",
+    "before": "3.31.0",
+    "after": "3.36.2",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@smithy/credential-provider-imds",
+    "before": "4.4.15",
+    "after": "4.5.2",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@smithy/eventstream-serde-browser",
+    "before": "4.4.15",
+    "after": "4.5.2",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@smithy/eventstream-serde-config-resolver",
+    "before": "4.5.15",
+    "after": "4.6.2",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@smithy/eventstream-serde-node",
+    "before": "4.4.15",
+    "after": "4.5.2",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@smithy/fetch-http-handler",
+    "before": "5.6.12",
+    "after": "5.8.0",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@smithy/hash-blob-browser",
+    "before": "4.4.15",
+    "after": "4.5.2",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@smithy/hash-node",
+    "before": "4.4.15",
+    "after": "4.5.2",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@smithy/hash-stream-node",
+    "before": "4.4.15",
+    "after": "4.5.2",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@smithy/invalid-dependency",
+    "before": "4.4.15",
+    "after": "4.5.2",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@smithy/md5-js",
+    "before": "4.4.15",
+    "after": "4.5.2",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@smithy/middleware-content-length",
+    "before": "4.4.15",
+    "after": "4.5.2",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@smithy/middleware-endpoint",
+    "before": "4.6.15",
+    "after": "4.7.2",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@smithy/middleware-retry",
+    "before": "4.7.15",
+    "after": "4.8.2",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@smithy/middleware-serde",
+    "before": "4.4.15",
+    "after": "4.5.2",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@smithy/middleware-stack",
+    "before": "4.4.15",
+    "after": "4.5.2",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@smithy/node-config-provider",
+    "before": "4.5.15",
+    "after": "4.6.2",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@smithy/node-http-handler",
+    "before": "4.9.12",
+    "after": "4.12.1",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@smithy/protocol-http",
+    "before": "5.5.15",
+    "after": "5.6.2",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@smithy/signature-v4",
+    "before": "5.6.11",
+    "after": "5.7.4",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@smithy/smithy-client",
+    "before": "4.14.15",
+    "after": "4.15.2",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@smithy/types",
+    "before": "4.16.1",
+    "after": "4.19.0",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@smithy/url-parser",
+    "before": "4.4.15",
+    "after": "4.5.2",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@smithy/util-base64",
+    "before": "4.5.15",
+    "after": "4.6.2",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@smithy/util-body-length-browser",
+    "before": "4.4.15",
+    "after": "4.5.2",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@smithy/util-body-length-node",
+    "before": "4.4.15",
+    "after": "4.5.2",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@smithy/util-defaults-mode-browser",
+    "before": "4.5.15",
+    "after": "4.6.2",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@smithy/util-defaults-mode-node",
+    "before": "4.4.15",
+    "after": "4.5.2",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@smithy/util-endpoints",
+    "before": "3.6.15",
+    "after": "3.7.2",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@smithy/util-middleware",
+    "before": "4.4.15",
+    "after": "4.5.2",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@smithy/util-retry",
+    "before": "4.5.15",
+    "after": "4.6.2",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@smithy/util-stream",
+    "before": "4.7.15",
+    "after": "4.8.2",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@smithy/util-utf8",
+    "before": "4.4.15",
+    "after": "4.5.2",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@smithy/util-waiter",
+    "before": "4.5.15",
+    "after": "4.6.2",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@tsconfig/node18",
+    "before": "1.0.3",
+    "after": "18.2.7",
+    "dev": true
+  },
+  {
+    "path": "node_modules/body-parser",
+    "before": "2.3.0",
+    "after": "2.4.0",
+    "dev": true
+  },
+  {
+    "path": "node_modules/body-parser/node_modules/content-type",
+    "before": "2.0.0",
+    "after": null,
+    "dev": false
+  },
+  {
+    "path": "node_modules/cliui/node_modules/ansi-regex",
+    "before": "6.2.2",
+    "after": "6.4.0",
+    "dev": true
+  },
+  {
+    "path": "node_modules/content-disposition",
+    "before": "1.1.0",
+    "after": "2.0.1",
+    "dev": true
+  },
+  {
+    "path": "node_modules/content-type",
+    "before": "1.0.5",
+    "after": "2.1.0",
+    "dev": true
+  },
+  {
+    "path": "node_modules/dotenv",
+    "before": "16.6.1",
+    "after": null,
+    "dev": false
+  },
+  {
+    "path": "node_modules/eciesjs",
+    "before": "0.4.18",
+    "after": null,
+    "dev": false
+  },
+  {
+    "path": "node_modules/eslint-config-next",
+    "before": "16.3.8",
+    "after": "16.4.3",
+    "dev": true
+  },
+  {
+    "path": "node_modules/execa",
+    "before": "5.1.1",
+    "after": null,
+    "dev": false
+  },
+  {
+    "path": "node_modules/express",
+    "before": "5.2.1",
+    "after": "5.3.0",
+    "dev": true
+  },
+  {
+    "path": "node_modules/foreground-child/node_modules/signal-exit",
+    "before": "4.1.0",
+    "after": null,
+    "dev": false
+  },
+  {
+    "path": "node_modules/fs.realpath",
+    "before": "1.0.0",
+    "after": null,
+    "dev": false
+  },
+  {
+    "path": "node_modules/get-east-asian-width",
+    "before": "1.6.0",
+    "after": "1.7.0",
+    "dev": true
+  },
+  {
+    "path": "node_modules/get-stream",
+    "before": "6.0.1",
+    "after": null,
+    "dev": false
+  },
+  {
+    "path": "node_modules/glob",
+    "before": "12.0.0",
+    "after": "13.0.6",
+    "dev": true
+  },
+  {
+    "path": "node_modules/human-signals",
+    "before": "2.1.0",
+    "after": null,
+    "dev": false
+  },
+  {
+    "path": "node_modules/is-stream",
+    "before": "2.0.1",
+    "after": null,
+    "dev": false
+  },
+  {
+    "path": "node_modules/jackspeak",
+    "before": "4.2.3",
+    "after": "3.4.3",
+    "dev": true
+  },
+  {
+    "path": "node_modules/lru-cache",
+    "before": "11.5.2",
+    "after": "11.5.3",
+    "dev": true
+  },
+  {
+    "path": "node_modules/merge-stream",
+    "before": "2.0.0",
+    "after": null,
+    "dev": false
+  },
+  {
+    "path": "node_modules/mimic-fn",
+    "before": "2.1.0",
+    "after": null,
+    "dev": false
+  },
+  {
+    "path": "node_modules/miniflare",
+    "before": "5.20261001.0-alpha",
+    "after": "5.20261006.0-alpha",
+    "dev": true
+  },
+  {
+    "path": "node_modules/mkdirp",
+    "before": "1.0.4",
+    "after": "3.0.1",
+    "dev": true
+  },
+  {
+    "path": "node_modules/negotiator",
+    "before": "1.0.0",
+    "after": "1.1.0",
+    "dev": true
+  },
+  {
+    "path": "node_modules/next",
+    "before": "16.3.8",
+    "after": "16.4.3",
+    "dev": false
+  },
+  {
+    "path": "node_modules/npm-run-path",
+    "before": "4.0.1",
+    "after": null,
+    "dev": false
+  },
+  {
+    "path": "node_modules/object-treeify",
+    "before": "1.1.33",
+    "after": null,
+    "dev": false
+  },
+  {
+    "path": "node_modules/on-finished",
+    "before": "2.4.1",
+    "after": "2.4.2",
+    "dev": true
+  },
+  {
+    "path": "node_modules/onetime",
+    "before": "5.1.2",
+    "after": null,
+    "dev": false
+  },
+  {
+    "path": "node_modules/qs",
+    "before": "6.16.0",
+    "after": "6.16.1",
+    "dev": true
+  },
+  {
+    "path": "node_modules/signal-exit",
+    "before": "3.0.7",
+    "after": "4.1.0",
+    "dev": true
+  },
+  {
+    "path": "node_modules/string-width",
+    "before": "8.2.2",
+    "after": "8.3.0",
+    "dev": true
+  },
+  {
+    "path": "node_modules/string-width/node_modules/ansi-regex",
+    "before": "6.2.2",
+    "after": "6.4.0",
+    "dev": true
+  },
+  {
+    "path": "node_modules/strip-final-newline",
+    "before": "2.0.0",
+    "after": null,
+    "dev": false
+  },
+  {
+    "path": "node_modules/terser",
+    "before": "5.16.9",
+    "after": "5.36.0",
+    "dev": true
+  },
+  {
+    "path": "node_modules/type-is/node_modules/content-type",
+    "before": "2.0.0",
+    "after": null,
+    "dev": false
+  },
+  {
+    "path": "node_modules/undici",
+    "before": "7.29.1",
+    "after": "6.29.1",
+    "dev": true
+  },
+  {
+    "path": "node_modules/workerd",
+    "before": "1.20261001.1",
+    "after": "1.20261006.1",
+    "dev": true
+  },
+  {
+    "path": "node_modules/wrangler",
+    "before": "4.147.0",
+    "after": "4.148.0",
+    "dev": true
+  },
+  {
+    "path": "node_modules/wrangler/node_modules/@esbuild/aix-ppc64",
+    "before": "0.28.1",
+    "after": null,
+    "dev": false
+  },
+  {
+    "path": "node_modules/wrangler/node_modules/@esbuild/android-arm64",
+    "before": "0.28.1",
+    "after": null,
+    "dev": false
+  },
+  {
+    "path": "node_modules/wrangler/node_modules/@esbuild/android-x64",
+    "before": "0.28.1",
+    "after": null,
+    "dev": false
+  },
+  {
+    "path": "node_modules/wrangler/node_modules/@esbuild/darwin-arm64",
+    "before": "0.28.1",
+    "after": null,
+    "dev": false
+  },
+  {
+    "path": "node_modules/wrangler/node_modules/@esbuild/darwin-x64",
+    "before": "0.28.1",
+    "after": null,
+    "dev": false
+  },
+  {
+    "path": "node_modules/wrangler/node_modules/@esbuild/freebsd-arm64",
+    "before": "0.28.1",
+    "after": null,
+    "dev": false
+  },
+  {
+    "path": "node_modules/wrangler/node_modules/@esbuild/freebsd-x64",
+    "before": "0.28.1",
+    "after": null,
+    "dev": false
+  },
+  {
+    "path": "node_modules/wrangler/node_modules/@esbuild/linux-arm",
+    "before": "0.28.1",
+    "after": null,
+    "dev": false
+  },
+  {
+    "path": "node_modules/wrangler/node_modules/@esbuild/linux-arm64",
+    "before": "0.28.1",
+    "after": null,
+    "dev": false
+  },
+  {
+    "path": "node_modules/wrangler/node_modules/@esbuild/linux-ia32",
+    "before": "0.28.1",
+    "after": null,
+    "dev": false
+  },
+  {
+    "path": "node_modules/wrangler/node_modules/@esbuild/linux-mips64el",
+    "before": "0.28.1",
+    "after": null,
+    "dev": false
+  },
+  {
+    "path": "node_modules/wrangler/node_modules/@esbuild/linux-ppc64",
+    "before": "0.28.1",
+    "after": null,
+    "dev": false
+  },
+  {
+    "path": "node_modules/wrangler/node_modules/@esbuild/linux-riscv64",
+    "before": "0.28.1",
+    "after": null,
+    "dev": false
+  },
+  {
+    "path": "node_modules/wrangler/node_modules/@esbuild/linux-s390x",
+    "before": "0.28.1",
+    "after": null,
+    "dev": false
+  },
+  {
+    "path": "node_modules/wrangler/node_modules/@esbuild/linux-x64",
+    "before": "0.28.1",
+    "after": null,
+    "dev": false
+  },
+  {
+    "path": "node_modules/wrangler/node_modules/@esbuild/netbsd-arm64",
+    "before": "0.28.1",
+    "after": null,
+    "dev": false
+  },
+  {
+    "path": "node_modules/wrangler/node_modules/@esbuild/netbsd-x64",
+    "before": "0.28.1",
+    "after": null,
+    "dev": false
+  },
+  {
+    "path": "node_modules/wrangler/node_modules/@esbuild/openbsd-arm64",
+    "before": "0.28.1",
+    "after": null,
+    "dev": false
+  },
+  {
+    "path": "node_modules/wrangler/node_modules/@esbuild/openbsd-x64",
+    "before": "0.28.1",
+    "after": null,
+    "dev": false
+  },
+  {
+    "path": "node_modules/wrangler/node_modules/@esbuild/sunos-x64",
+    "before": "0.28.1",
+    "after": null,
+    "dev": false
+  },
+  {
+    "path": "node_modules/wrangler/node_modules/@esbuild/win32-arm64",
+    "before": "0.28.1",
+    "after": null,
+    "dev": false
+  },
+  {
+    "path": "node_modules/wrangler/node_modules/@esbuild/win32-ia32",
+    "before": "0.28.1",
+    "after": null,
+    "dev": false
+  },
+  {
+    "path": "node_modules/wrangler/node_modules/@esbuild/win32-x64",
+    "before": "0.28.1",
+    "after": null,
+    "dev": false
+  },
+  {
+    "path": "node_modules/wrap-ansi/node_modules/ansi-regex",
+    "before": "6.2.2",
+    "after": "6.4.0",
+    "dev": true
+  },
+  {
+    "path": "node_modules/yaml",
+    "before": "2.9.0",
+    "after": "2.9.1",
+    "dev": true
+  },
+  {
+    "path": "node_modules/yargs",
+    "before": "18.1.0",
+    "after": "18.2.0",
+    "dev": true
+  },
+  {
+    "path": "node_modules/zod",
+    "before": "4.4.3",
+    "after": "4.6.7",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@dotenvx/primitives",
+    "before": null,
+    "after": "3.3.1",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@dotenvx/providers",
+    "before": null,
+    "after": "0.3.11",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@dotenvx/tooling",
+    "before": null,
+    "after": "1.0.6",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@isaacs/cliui/node_modules/ansi-regex",
+    "before": null,
+    "after": "6.4.0",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@isaacs/cliui/node_modules/ansi-styles",
+    "before": null,
+    "after": "6.2.3",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@isaacs/cliui/node_modules/string-width",
+    "before": null,
+    "after": "5.1.2",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@isaacs/cliui/node_modules/strip-ansi",
+    "before": null,
+    "after": "7.2.0",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@isaacs/cliui/node_modules/wrap-ansi",
+    "before": null,
+    "after": "8.1.0",
+    "dev": true
+  },
+  {
+    "path": "node_modules/@pkgjs/parseargs",
+    "before": null,
+    "after": "0.11.0",
+    "dev": true
+  },
+  {
+    "path": "node_modules/eastasianwidth",
+    "before": null,
+    "after": "0.2.0",
+    "dev": true
+  },
+  {
+    "path": "node_modules/is-fullwidth-code-point",
+    "before": null,
+    "after": "3.0.0",
+    "dev": true
+  },
+  {
+    "path": "node_modules/miniflare/node_modules/undici",
+    "before": null,
+    "after": "7.29.1",
+    "dev": true
+  },
+  {
+    "path": "node_modules/string-width-cjs",
+    "before": null,
+    "after": "4.2.3",
+    "dev": true
+  },
+  {
+    "path": "node_modules/string-width-cjs/node_modules/emoji-regex",
+    "before": null,
+    "after": "8.0.0",
+    "dev": true
+  },
+  {
+    "path": "node_modules/strip-ansi-cjs",
+    "before": null,
+    "after": "6.0.1",
+    "dev": true
+  },
+  {
+    "path": "node_modules/wrap-ansi-cjs",
+    "before": null,
+    "after": "7.0.0",
+    "dev": true
+  },
+  {
+    "path": "node_modules/wrap-ansi-cjs/node_modules/emoji-regex",
+    "before": null,
+    "after": "8.0.0",
+    "dev": true
+  },
+  {
+    "path": "node_modules/wrap-ansi-cjs/node_modules/string-width",
+    "before": null,
+    "after": "4.2.3",
+    "dev": true
+  },
+  {
+    "path": "node_modules/write-file-atomic",
+    "before": null,
+    "after": "5.0.1",
+    "dev": true
+  },
+  {
+    "path": "node_modules/yocto-spinner",
+    "before": null,
+    "after": "1.2.2",
+    "dev": true
+  },
+  {
+    "path": "node_modules/yoctocolors",
+    "before": null,
+    "after": "2.2.0",
+    "dev": true
+  }
+]

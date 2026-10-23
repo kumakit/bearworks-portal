@@ -47,7 +47,7 @@ jobs:
       - name: Test dependency audit gate
         run: node --test scripts/check-dependency-audit.test.mjs
 
-      - name: Verify full dependency audit policy
+      - name: Require zero warnings in full dependency audit
         run: |
           if npm audit --json > "$RUNNER_TEMP/npm-audit-full.json"; then
             audit_status=0

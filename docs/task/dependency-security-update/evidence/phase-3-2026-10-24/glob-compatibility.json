@@ -1,0 +1,12 @@
+{
+  "core": "9.0.2",
+  "glob": "10.5.0",
+  "checks": [
+    "single-pattern",
+    "pattern-array",
+    "brace-expansion",
+    "no-match",
+    "real-terser-minification-single-and-array"
+  ],
+  "result": "PASS"
+}
