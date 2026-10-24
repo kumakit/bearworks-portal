@@ -24,7 +24,7 @@
 - `npm audit` が提示する `fixAvailable`（`wrangler@4.35.0` / `@opennextjs/cloudflare@1.8.4`）は、`miniflare` が `undici` 7系を使用する前の古い版への破壊的ダウングレードであり、Next.js `16.4.3`（`preview-props.json` 対応等）と非互換のため採用しない。
 - npm registry 上の最新 `wrangler@4.152.0`（`miniflare@5.20261019.2-beta`）でも、`miniflare` が `"undici": "7.29.1"` を固定指定しているため、`wrangler` の更新だけでは解消しない。
 - `package.json` の `overrides` に `miniflare` 配下の `undici` 限定override（`"miniflare": { "undici": "7.30.1" }`）を追加し、同7系の公式修正版 `7.30.1` を解決した。
-- `package-lock.json` の差分は `node_modules/miniflare/node_modules/undici` の `version` / `resolved` / `integrity`（`7.29.1` → `7.30.1`）の1パッケージのみ。
+- `package-lock.json` ではoverride後の依存経路を `miniflare` の依存指定とネストした `undici` の `version` / `resolved` / `integrity` に反映した。npm 10.9.9 が `npm ci` 時に整合と判定することをローカルのdry-runでも確認した。
 - 上流 `miniflare` / `wrangler` が `undici >= 7.30.1` を通常解決するようになった段階でこの override を除去する。
 
 ## 3. ローカル検証結果
@@ -36,6 +36,7 @@
 | 更新前 production / full 監査 | production 0件 / full 4件（high 1, moderate 3） | `audit-production-before.json`, `audit-full-before.json` |
 | 更新後 production / full 監査 | 両方 **0件**（exit 0）、`check-dependency-audit.mjs` 合格 | `audit-production-after.json`, `audit-full-after.json` |
 | `npm ci` / `npm ls --all` | exit 0、`miniflare` 配下 `undici@7.30.1` 解決確認 | `undici-compatibility.json` |
+| npm 10.9.9 の `npm ci --dry-run` | exit 0、lockfile整合確認（Node 24 / Windows、audit・scripts無効） | `npm10-ci-dry-run.log` |
 | 監査ゲート単体テスト | 20テスト成功 | `audit-gate-tests.log` |
 | Cloudflare 収集・表示テスト | 35テスト成功 | `cloudflare-tests.log` |
 | Lint (`npm run lint`) | exit 0（error 0、既存warning 3） | `lint.log` |
@@ -46,6 +47,6 @@
 
 ## 4. 次のステップ（Codex 引き継ぎ事項）
 
-1. 専用作業ツリー `.wrangler/issue411-undici-audit`（ブランチ `codex/issue-411-undici-audit`）の差分を確認・commit・push し、`main` 向けの独立PRを作成する。
-2. GitHub Actions（Ubuntu / Node 22 `Workers build`）で `Require zero warnings in full dependency audit` を含む全ステップの通過を確認し、PRをマージする。
-3. マージ後の `origin/main` を Issue #410 の各ブランチ（PR #35 `codex/issue-410-data`、PR #36 `codex/issue-410-article`、PR #37 `codex/issue-410-navigation`）へ取り込み、draft PR の CI を再評価する。
+1. [x] 専用作業ツリーの変更をcommit・pushし、`main` 向けのdraft PR #38を作成した。
+2. [ ] GitHub Actions（Ubuntu / Node 22 `Workers build`）の必須job通過を確認する。初回runはnpm 10.9.9のlockfile整合エラーで失敗し、lockfileと依存参照を修正済み。
+3. [ ] マージ後の `origin/main` を Issue #410 の各ブランチ（PR #35 `codex/issue-410-data`、PR #36 `codex/issue-410-article`、PR #37 `codex/issue-410-navigation`）へ取り込み、draft PR のCIを再評価する。
