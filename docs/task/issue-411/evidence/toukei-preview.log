@@ -1,0 +1,39 @@
+PASS /toukei/problems/confidence-interval: static, full text, canonical, ads, references
+PASS /toukei/problems/hypothesis-test: static, full text, canonical, ads, references
+PASS /toukei/problems/simple-regression: static, full text, canonical, ads, references
+PASS /toukei/problems/contingency-table: static, full text, canonical, ads, references
+PASS /toukei/problems/sampling-bias: static, full text, canonical, ads, references
+PASS /toukei/problems/linear-transformation: static, full text, canonical, ads, references
+PASS /toukei/problems/bayes-theorem-screening: static, full text, canonical, ads, references
+PASS /toukei/problems/binomial-normal-approximation: static, full text, canonical, ads, references
+PASS /toukei/problems/sample-proportion-distribution: static, full text, canonical, ads, references
+PASS /toukei/problems/paired-t-test: static, full text, canonical, ads, references
+PASS /toukei/problems/correlation-coefficient: static, full text, canonical, ads, references
+PASS /toukei/problems/sum-and-difference-variance: static, full text, canonical, ads, references
+PASS /toukei/problems/poisson-distribution-calculation: static, full text, canonical, ads, references
+PASS /toukei/problems/sample-proportion-confidence-interval: static, full text, canonical, ads, references
+PASS /toukei/problems/one-way-anova: static, full text, canonical, ads, references
+PASS /toukei/problems/two-sample-t-test-pooled: static, full text, canonical, ads, references
+PASS /toukei/problems/two-sample-f-test-variance: static, full text, canonical, ads, references
+PASS /toukei/problems/chi-square-goodness-of-fit: static, full text, canonical, ads, references
+PASS /toukei/problems/adjusted-r-squared: static, full text, canonical, ads, references
+PASS /toukei/problems/chi-square-variance-confidence-interval: static, full text, canonical, ads, references
+PASS /toukei/problems/laspeyres-paasche-price-index: static, full text, canonical, ads, references
+PASS /toukei/problems/chebyshev-inequality: static, full text, canonical, ads, references
+PASS /toukei/problems/geometric-distribution: static, full text, canonical, ads, references
+PASS /toukei/problems/type-1-type-2-errors-power: static, full text, canonical, ads, references
+PASS /toukei/problems/fishers-three-principles-experiment: static, full text, canonical, ads, references
+PASS /toukei/problems/two-sample-proportion-test: static, full text, canonical, ads, references
+PASS /toukei/problems/exponential-distribution-waiting-time: static, full text, canonical, ads, references
+PASS /toukei/problems/time-series-moving-average-autocorrelation: static, full text, canonical, ads, references
+PASS /toukei/problems/two-way-anova-interaction: static, full text, canonical, ads, references
+PASS /toukei/problems/multiple-regression-multicollinearity-dummy: static, full text, canonical, ads, references
+PASS /toukei/guides/learning-roadmap: static, canonical, content, references
+PASS /toukei/guides/cbt-time-management: static, canonical, content, references
+PASS /toukei/guides/hypothesis-testing-basics: static, canonical, content, references
+PASS /toukei/guides/choosing-statistical-tests: static, canonical, content, references
+PASS /toukei/guides/distribution-selection: static, canonical, content, references
+PASS /toukei/guides/regression-interpretation: static, canonical, content, references
+PASS /toukei/guides/anova-and-chi-square: static, canonical, content, references
+PASS /toukei/guides/sampling-and-bias: static, canonical, content, references
+PASS: sitemap 54 unique URLs; 6 non-ad pages and 3 invalid/404 routes have no ads

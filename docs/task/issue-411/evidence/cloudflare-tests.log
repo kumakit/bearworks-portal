@@ -1,0 +1,57 @@
+
+> bearworks.uk@0.1.0 test:cloudflare
+> node --experimental-strip-types --test scripts/cloudflare-collection.test.mjs
+
+(node:57248) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/kumat/dev/bearworks-portal/.wrangler/issue411-undici-audit/app/(non-monetized)/dashboard/lib/cloudflareCollection.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to C:\Users\kumat\dev\bearworks-portal\.wrangler\issue411-undici-audit\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ sparse Firewall reference keeps API counts and cannot change access health (34.5602ms)
+✔ missing, expired and malformed Firewall periods stay local (2.9282ms)
+✔ shared fixture hash and independently specified expectations (1.2069ms)
+✔ legacy, unknown version, root runId and malformed input never reuse old numeric values (0.1982ms)
+✔ v1 remains usable while new access blocks stay undistributed (0.5862ms)
+✔ v2 validates the same full hourly denominator for trend and country list (4.1053ms)
+✔ period selector renders 24h, adaptive 7d and adaptive 30d data with period-specific comparison (52.9301ms)
+✔ hourly history is optional and a malformed block cannot alter existing access results (71.7556ms)
+✔ 30-day hourly display and same-source comparison require separate flags and fresh complete windows (363.8326ms)
+✔ unsampled adaptive periods remain exact and the comparison describes them accurately (23.2449ms)
+✔ phase 2 blocks reject incomplete buckets, inconsistent denominators and non-estimated data independently (14.1266ms)
+✔ a missing period block stays isolated and absent optional blocks do not affect legacy health (27.6082ms)
+✔ v2 access failures affect collection health while explicitly disabled blocks do not (8.1758ms)
+✔ unknown country code remains visible as an unknown region (2.4546ms)
+✔ pinned Natural Earth map has explicit join exceptions and no duplicate usable codes (8.3326ms)
+✔ v2 missing, mismatched or incomplete access data does not fabricate the affected block (9.422ms)
+✔ unknown enum, run mismatch and illegal combinations are block-local UNKNOWN (2.1161ms)
+✔ LIVE error and UNKNOWN combinations validate; failures cannot carry old values (1.4391ms)
+✔ retired detail failure stays in the contract but outside the access screen (0.3808ms)
+✔ unavailable WAF groups keep five failures and describe the unknown cause neutrally (0.3684ms)
+✔ PARTIAL with verified data is reference-only, null remains unavailable (0.5644ms)
+✔ MOCK plus DEMO is explicitly demo, never produces production actions or signal health (0.3271ms)
+✔ zero events, empty arrays, sampling and zero-denominator cache rate stay distinct from null (1.5058ms)
+✔ invalid numbers and missing fields are not coerced into zero (1.105ms)
+✔ timestamps, ordering, missing deadlines and exact expiry boundaries (1.3607ms)
+✔ fixed traffic/WAF periods, UTC Pages month and maximum freshness are contract conditions (0.6997ms)
+✔ unknown actions preserve count under Other, scope identifiers are not exposed (0.5228ms)
+✔ access trend and country failures remain independent on the main screen (3.535ms)
+✔ collapsed data details flag a separate Pages failure and expired access stays hidden (3.0895ms)
+✔ transport failure recommends retry instead of inventing a malformed collector result (0.4333ms)
+✔ monotonic clock includes RTT and uncertainty, expires at resync and ignores wall clock (0.3273ms)
+DASHBOARD_API_TOKEN is not configured.
+Unauthorized request: Missing cf-access-jwt-assertion header.
+Error proxying dashboard data. Error
+Error proxying dashboard data. Error
+Error proxying dashboard data. SyntaxError
+Error proxying dashboard data. Error
+✔ Worker clock settings keep production and staging on hourly sync (5.5149ms)
+✔ clock rejects missing config, excessive latency and contradictory resync (0.2651ms)
+✔ API auth/config, successful servedAt, no-store and all explicit method rejections (6.6459ms)
+✔ page refetches on visibility/pageshow/resume and periodic sync; fetch failure clears data (4.9546ms)
+ℹ tests 35
+ℹ suites 0
+ℹ pass 35
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1102.1238
