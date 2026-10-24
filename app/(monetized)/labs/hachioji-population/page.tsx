@@ -7,7 +7,7 @@ import { populationBundle as data, populationNumber as n, populationPercent as p
 
 const title = "八王子の人口は本当に減っている？";
 const canonical = "https://bearworks.uk/labs/hachioji-population";
-const description = "八王子市の住民基本台帳から、全市・町丁別・年齢別に2016年9月末と2026年9月末を比較。人口減少の見え方と、比較できない地域や統計の限界も確認します。";
+const description = "八王子市の住民基本台帳をもとに、全市・町丁別・年齢別に2016年9月末と2026年9月末を比較。人口減少の見え方や、比較できない地域、統計の限界も確認します。";
 
 export const metadata: Metadata = {
   title: `${title} | 八王子を数字で読み解く | bearworks.uk`,
@@ -31,14 +31,14 @@ export default function HachiojiPopulationPage() {
         <p className="text-sm font-bold tracking-widest text-cyan-200">八王子を数字で読み解く · 第1弾</p>
         <h1 className="mt-5 text-3xl font-bold leading-snug sm:text-5xl">八王子の人口は<br className="sm:hidden" />本当に減っている？</h1>
         <p className="mt-5 max-w-3xl text-xl font-semibold text-cyan-100">全体・町丁・年齢で見る、2016年から2026年の変化</p>
-        <p className="mt-5 max-w-3xl text-sm leading-7 text-slate-200">「八王子は人口が減っている」と聞くことがあります。市全体の数字だけでなく、町丁別と年齢別にも分けると、同じ人口の変化でも違った姿が見えてきます。ここでは八王子市の住民基本台帳を、同じ9月末どうしで比べます。</p>
+        <p className="mt-5 max-w-3xl text-sm leading-7 text-slate-200">「八王子は人口が減っている」と耳にすることがあります。市全体の数字だけでなく、町丁別や年齢別に分けると、同じ人口の変化でも違った姿が見えてきます。この記事では、八王子市が公表している住民基本台帳を使い、同じ「9月末」の基準日どうしで10年の変化を比較します。</p>
         <p className="mt-6 text-xs text-slate-300">比較日：2016年9月30日・2026年9月30日 · 人口は日本人と外国人の合計</p>
       </header>
 
       <section aria-labelledby="answer" className="space-y-5">
         <p className="text-xs font-bold tracking-widest text-cyan-800">まず、今回の数字から</p>
         <h2 id="answer" className="text-2xl font-bold leading-relaxed text-slate-900">10年ではわずかに減少。直近1年は増加し、年齢構成は大きく変わりました。</h2>
-        <p>全市人口は{n(comparison.cityPopulation2016)}人から{n(comparison.cityPopulation2026)}人へ、{n(Math.abs(comparison.cityDelta))}人（{percent(comparison.cityChangePercent)}）減りました。一方、2025年9月末から2026年9月末は{n(Math.abs(comparison.latestYearDelta))}人増えています。長い比較と直近の動きを分けて見る必要があります。</p>
+        <p>八王子市の全市人口は、{n(comparison.cityPopulation2016)}人から{n(comparison.cityPopulation2026)}人へ、この10年で{n(Math.abs(comparison.cityDelta))}人（{percent(comparison.cityChangePercent)}）減少しました。その一方で、2025年9月末から2026年9月末の直近1年間では{n(Math.abs(comparison.latestYearDelta))}人増えています。10年間の変化と直近1年間の動きを分けて見ることが大切です。</p>
         <div className="grid gap-3 sm:grid-cols-3">
           <div className="rounded-2xl bg-cyan-50 p-5"><h3 className="text-sm font-semibold text-slate-900">全市・10年間</h3><p className="mt-3 text-3xl font-bold tabular-nums text-cyan-950">{signed(comparison.cityDelta)}<span className="ml-1 text-sm font-normal">人</span></p><p className="mt-2 text-sm">{percent(comparison.cityChangePercent)} · 全市人口を分母</p><p className="mt-2 text-xs leading-5">対象：全市 · 分母：2016年全市人口 · 基準日：2016-09-30→2026-09-30</p></div>
           <div className="rounded-2xl bg-sky-50 p-5"><h3 className="text-sm font-semibold text-slate-900">直近1年間</h3><p className="mt-3 text-3xl font-bold tabular-nums text-sky-950">{signed(comparison.latestYearDelta)}<span className="ml-1 text-sm font-normal">人</span></p><p className="mt-2 text-sm">2025年9月末→2026年9月末</p><p className="mt-2 text-xs leading-5">対象：全市 · 分母：割合計算なし · 基準日：2025-09-30→2026-09-30</p></div>
@@ -49,26 +49,26 @@ export default function HachiojiPopulationPage() {
       <nav aria-label="記事の目次" className="flex flex-wrap gap-x-5 gap-y-2 rounded-2xl border border-slate-200 bg-white p-5 text-sm font-semibold text-sky-800">{[["city", "全市の推移"], ["towns", "町丁別"], ["ages", "年齢別"], ["limits", "比較の限界"], ["method", "方法・出典"]].map(([id, label]) => <a key={id} href={`#${id}`} className="underline decoration-sky-200 underline-offset-4 hover:decoration-sky-800">{label}</a>)}</nav>
 
       <section id="city" className="scroll-mt-6 space-y-5">
-        <h2 className="text-2xl font-bold text-slate-900">全市では、途中で上下しながらわずかに減った。</h2>
-        <p>2016年から2026年まで、各年9月末時点の人口を並べました。比較した11時点のうち最も多かったのは2017年の{n(Math.max(...data.annualPopulation.map((row) => row.population)))}人です。2026年は2025年より56人多く、毎年一方向に減り続けたわけではありません。</p>
+        <h2 className="text-2xl font-bold text-slate-900">市全体では、途中で上下しながら、10年間でわずかに減少。</h2>
+        <p>2016年から2026年まで、各年9月末時点の人口推移を並べました。今回比較した11時点のうち最も多かったのは、2017年の{n(Math.max(...data.annualPopulation.map((row) => row.population)))}人です。直近の2026年は前年（2025年）より56人多く、毎年一方向に減り続けたわけではありません。</p>
         <PopulationCharts data={data} />
         <div className={`${card} overflow-x-auto`}><table className="w-full min-w-[420px] text-right text-sm"><caption className="mb-3 text-left font-semibold">八王子市の住民基本台帳人口（各年9月末）</caption><thead><tr className="border-b border-slate-300"><th scope="col" className="p-2 text-left">基準日</th><th scope="col" className="p-2">人口（人）</th></tr></thead><tbody>{data.annualPopulation.map((row) => <tr key={row.targetDate} className="border-b border-slate-100"><th scope="row" className="p-2 text-left font-medium">{row.targetDate}</th><td className="p-2 tabular-nums">{n(row.population)}</td></tr>)}</tbody></table></div>
-        <p className="text-xs text-slate-600">対象：八王子市全体 · 分母：10年間の増減率は2016年人口 · 基準日：各年9月30日。住民基本台帳による各時点の人数で、同じ人を追跡した集計ではありません。</p>
+        <p className="text-xs text-slate-600">対象：八王子市全体 · 分母：10年間の増減率は2016年人口 · 基準日：各年9月30日。住民基本台帳による各時点の人数で、同一人物を追跡した集計ではありません。</p>
       </section>
 
       <section id="towns" className="scroll-mt-6 space-y-5">
         <h2 className="text-2xl font-bold text-slate-900">市全体が減っていても、増えた町丁はある。</h2>
-        <p>区域変更関連の8町丁を除いた191町丁では、増減の幅も方向もさまざまです。人数の増減と、2016年人口を分母にした増減率は別の問いになるため、図の切替で両方を見られるようにしました。増減率は、基準人口が100人未満の町丁を順位から分けています。</p>
+        <p>区域変更に関わる8町丁を除いた191町丁では、増減の幅も方向も地域によってさまざまです。人数の増減と、2016年人口を分母にした増減率は別の問いになるため、図を切り替えて両方を見られるようにしました。なお増減率については、2016年の人口が100人未満の町丁を主順位から分けています。</p>
         <p className="rounded-xl bg-slate-50 p-4 text-sm">対象：区域変更関連の除外8町丁を除く191町丁 · 2026年9月末の全市人口に対するカバー率 {data.regions.populationCoverage2026.toFixed(1)}% · 率の順位は2016年人口100人以上の{data.regions.rateEligibleCount}町丁。宇津貫町（65人）は率の主順位から分けています。</p>
-        <p>地図は載せていません。町名と統計用境界の候補は見つかりましたが、地理的な一致を確かめられず、区域変更関連の地域を除くと事前に決めた人口カバー率95%にも届きませんでした。正確さを確かめられない地図より、対象範囲を明示したランキングと表を使います。</p>
+        <p>地図は載せていません。町名と統計用境界データの候補は見つかりましたが、地理的な一致を確かめられず、区域変更関連の地域を除くと事前に決めた人口カバー率95%にも届きませんでした。正確さを確かめられない地図を載せるより、対象範囲を明示したランキングと表を使います。</p>
         <h3 className="text-lg font-bold text-slate-900">比較から外した町丁も、理由と参考値を残す</h3>
         <p>区域変更が確認できた4町丁と、議決資料は見つかったものの施行日を確認できなかった4町丁です。参考人口は両時点の別々の値で、順位・増減人数・増減率は付けていません。</p><p className="text-xs text-slate-600">対象：区域変更関連の比較対象外8町丁 · 分母：人数比較なし · 基準日：2016-09-30・2026-09-30</p>
         <div className={`${card} overflow-x-auto`}><table className="w-full min-w-[650px] text-right text-sm"><caption className="mb-3 text-left">区域変更関連の比較対象外8町丁（参考人口）</caption><thead><tr className="border-b border-slate-300"><th scope="col" className="p-2 text-left">町丁</th><th scope="col" className="p-2">2016年（人）</th><th scope="col" className="p-2">2026年（人）</th><th scope="col" className="p-2 text-left">比較対象外の理由</th></tr></thead><tbody>{data.excludedRegions.rows.map((row) => <tr key={row.code} className="border-b border-slate-100"><th scope="row" className="p-2 text-left font-medium">{row.name}</th><td className="p-2 tabular-nums">{n(row.population2016)}</td><td className="p-2 tabular-nums">{n(row.population2026)}</td><td className="p-2 text-left">{row.reason}</td></tr>)}</tbody></table></div>
-        <p>西寺方町と美山町は、除外前の診断では減少人数・率の上位10に入っていました。除外すると目立つ地域が順位から消えるため、その事実も示します。これは「全市で減少した町丁の完全な一覧」ではありません。</p>
+        <p>西寺方町と美山町は、除外前の診断では減少人数・率の上位10に入っていました。除外すると目立つ地域が順位から外れるため、その事実も示します。これは「全市で減少した町丁の完全な一覧」ではありません。</p>
       </section>
 
       <section id="ages" className="scroll-mt-6 space-y-5">
-        <h2 className="text-2xl font-bold text-slate-900">人数の変化は、年齢区分によって違う。</h2>
+        <h2 className="text-2xl font-bold text-slate-900">人数の変化は、年齢区分によって異なる。</h2>
         <p>0〜14歳は{signed(child.delta)}人、65歳以上は{signed(older.delta)}人でした。全市人口に占める割合では、0〜14歳が{child.shareDeltaPoints.toFixed(2)}ポイント低下し、65歳以上は{older.shareDeltaPoints.toFixed(2)}ポイント上昇しています。15〜64歳は{signed(working.delta)}人、構成比は{working.shareDeltaPoints.toFixed(2)}ポイントの変化でした。</p>
         <div className={`${card} overflow-x-auto`}><table className="w-full min-w-[660px] text-right text-sm"><caption className="mb-3 text-left">年齢3区分の人数と構成比。構成比の分母は各年の全市人口</caption><thead><tr className="border-b border-slate-300"><th scope="col" className="p-2 text-left">年齢</th><th scope="col" className="p-2">2016年（人）</th><th scope="col" className="p-2">2026年（人）</th><th scope="col" className="p-2">人数差</th><th scope="col" className="p-2">2016年</th><th scope="col" className="p-2">2026年</th><th scope="col" className="p-2">構成比差</th></tr></thead><tbody>{data.ageComposition.map((row) => <tr key={row.key} className="border-b border-slate-100"><th scope="row" className="p-2 text-left font-medium">{row.label}</th><td className="p-2 tabular-nums">{n(row.population2016)}</td><td className="p-2 tabular-nums">{n(row.population2026)}</td><td className="p-2 tabular-nums">{signed(row.delta)}人</td><td className="p-2 tabular-nums">{row.share2016.toFixed(2)}%</td><td className="p-2 tabular-nums">{row.share2026.toFixed(2)}%</td><td className="p-2 tabular-nums">{row.shareDeltaPoints > 0 ? "+" : ""}{row.shareDeltaPoints.toFixed(2)}ポイント</td></tr>)}</tbody></table></div>
         <p className="text-sm text-slate-600">年齢区分ごとの人数差は、同じ人々を追跡した結果ではありません。10年の間に年齢区分を移った人や、転入・転出、出生・死亡などが含まれます。</p>
@@ -76,8 +76,8 @@ export default function HachiojiPopulationPage() {
 
       <section id="limits" className="scroll-mt-6 space-y-5">
         <h2 className="text-2xl font-bold text-slate-900">人口の増減だけでは、理由までは分からない。</h2>
-        <p>住民基本台帳の人数は基準日に登録されている人の数です。この差から、転出が原因か、出生や死亡がどの程度影響したか、開発が地域の変化を生んだかを特定することはできません。因果関係を調べるには、別の資料が必要です。</p>
-        <p>また、町丁の比較対象191行は、確認できた区域変更関連の地域を除いた範囲です。地理的な境界が残る全地域で10年間不変だったと証明したものではなく、全市人口の代わりにもなりません。</p>
+        <p>住民基本台帳の人数は基準日に登録されている人の数です。この人数の差だけから、転出が原因なのか、出生や死亡がどの程度影響したのか、開発が地域の変化を生んだのかを特定することはできません。因果関係を調べるには、別の資料が必要です。</p>
+        <p>また、町丁の比較対象191町丁は、確認できた区域変更関連の地域を除いた範囲です。地理的な境界が残る全地域で10年間不変だったと証明したものではなく、全市人口の代わりにもなりません。</p>
       </section>
 
       <section id="method" className={`${card} scroll-mt-6 space-y-4`}>
@@ -91,7 +91,7 @@ export default function HachiojiPopulationPage() {
         <p className="text-xs text-slate-600">再現手順と検算コードはリポジトリの <code>docs/task/issue-410</code> と <code>scripts/hachioji-population</code> にあります。公開前に、採用した公式資料が更新されていないか再取得して確認します。</p>
       </section>
 
-      <section className="rounded-3xl bg-slate-900 p-7 text-white sm:p-9"><p className="text-sm font-bold tracking-widest text-cyan-200">次回の候補</p><h2 className="mt-2 text-2xl font-bold">地価・高齢化・学生の街も、数字から確かめられる。</h2><p className="mt-3 text-sm text-slate-200">次に扱うテーマは別の記事で検討します。このシリーズでは、問いごとに一次資料と比較できる範囲を確認します。</p><p className="mt-5"><Link href="/labs/hachioji-climate" className="font-semibold text-cyan-200 underline underline-offset-4">気候データを読んだ記事も見る →</Link></p><p className="mt-3"><Link href="/labs" className="font-semibold text-cyan-200 underline underline-offset-4">Labsの記事一覧 →</Link></p></section>
+      <section className="rounded-3xl bg-slate-900 p-7 text-white sm:p-9"><p className="text-sm font-bold tracking-widest text-cyan-200">次回の候補</p><h2 className="mt-2 text-2xl font-bold">地価・高齢化・学生の街も、数字から確かめられる。</h2><p className="mt-3 text-sm text-slate-200">次に扱うテーマは別の記事で検討します。このシリーズでは、問いごとに一次資料と比較できる範囲を丁寧に確かめていきます。</p><p className="mt-5"><Link href="/labs/hachioji-climate" className="font-semibold text-cyan-200 underline underline-offset-4">気候データを読んだ記事も見る →</Link></p><p className="mt-3"><Link href="/labs" className="font-semibold text-cyan-200 underline underline-offset-4">Labsの記事一覧 →</Link></p></section>
     </article>
     <PublicSiteFooter />
   </main>;

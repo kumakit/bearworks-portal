@@ -43,13 +43,13 @@ export default function PopulationCharts({ data }: { data: PopulationChartData }
         <polyline points={points} fill="none" stroke="#0369a1" strokeWidth="4" strokeLinejoin="round" strokeLinecap="round"/>
         {annual.map((row, index) => { const x = 50 + index * 70; const y = 24 + ((max - row.population) / (max - min)) * 160; return <g key={row.targetDate}><circle cx={x} cy={y} r="4" fill="white" stroke="#0369a1" strokeWidth="3"/><text x={x} y="210" textAnchor="middle" fontSize="11" fill="#334155">{row.targetDate.slice(0, 4)}</text></g>; })}
       </svg></div>
-      <p className="mt-2 text-sm text-slate-700">11時点の実数は下の表にあります。2017年に563,538人となり、2026年は前年より56人増えています。</p>
+      <p className="mt-2 text-sm text-slate-700">11時点の実数は下の表にあります。比較した11時点では2017年が最多の563,538人となり、2026年は前年より56人増えています。</p>
     </figure>
 
     <figure className="rounded-2xl border border-slate-200 bg-white p-4 sm:p-6">
       <figcaption className="font-semibold text-slate-900">全市人口に占める年齢3区分</figcaption><p className="mt-1 text-xs text-slate-600">各年の全市人口を100%として表示</p><p className="mt-1 text-xs text-slate-600">対象：全市の年齢別人口 · 分母：各年の全市人口 · 基準日：2016年9月30日・2026年9月30日</p>
       <div className="mt-5 space-y-5">{([2016, 2026] as const).map((year) => <div key={year}><p className="mb-2 text-sm font-bold">{year}年9月末</p><div className="flex h-8 overflow-hidden rounded-full" role="img" aria-label={`${year}年の年齢構成: ${data.ageComposition.map((row) => `${row.label} ${year === 2016 ? row.share2016 : row.share2026}%`).join("、")}`}>{data.ageComposition.map((row, i) => <span key={row.key} className={ageColors[i]} style={{ width: `${year === 2016 ? row.share2016 : row.share2026}%` }}/>)}</div><div className="mt-2 grid grid-cols-3 gap-2 text-xs tabular-nums text-slate-700">{data.ageComposition.map((row, i) => <p key={row.key}><span className={`mr-1 inline-block size-2 rounded-full ${ageColors[i]}`} aria-hidden="true"/>{row.label}<br/>{(year === 2016 ? row.share2016 : row.share2026).toFixed(1)}%</p>)}</div></div>)}</div>
-      <p className="mt-4 text-sm text-slate-700">人数・構成比・構成比の差は記事内の表でも確認できます。年齢区分の移動を含み、同じ人々を追跡した図ではありません。</p>
+      <p className="mt-4 text-sm text-slate-700">人数・構成比・構成比の差は記事内の表でも確認できます。年齢区分の移動を含んでおり、同じ人々を追跡した図ではありません。</p>
     </figure>
 
     <section aria-labelledby="regional-chart-title" className="rounded-2xl border border-slate-200 bg-white p-4 sm:p-6">
