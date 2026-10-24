@@ -48,5 +48,5 @@
 ## 4. 次のステップ（Codex 引き継ぎ事項）
 
 1. [x] 専用作業ツリーの変更をcommit・pushし、`main` 向けのdraft PR #38を作成した。
-2. [ ] GitHub Actions（Ubuntu / Node 22 `Workers build`）の必須job通過を確認する。初回runはnpm 10.9.9のlockfile整合エラーで失敗し、lockfileと依存参照を修正済み。
+2. [x] GitHub Actions（Ubuntu / Node 22 `Workers build`）run 89の必須jobがすべて成功（[run 89](https://github.com/kumakit/bearworks-portal/actions/runs/40099391025)）。初回runはnpm 10.9.9のlockfile整合エラーで失敗したが、lockfileと依存参照を修正後に成功した。
 3. [ ] マージ後の `origin/main` を Issue #410 の各ブランチ（PR #35 `codex/issue-410-data`、PR #36 `codex/issue-410-article`、PR #37 `codex/issue-410-navigation`）へ取り込み、draft PR のCIを再評価する。
