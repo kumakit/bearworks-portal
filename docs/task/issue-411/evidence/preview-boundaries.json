@@ -1,0 +1,133 @@
+{
+  "result": "PASS",
+  "routeChecks": [
+    {
+      "path": "/",
+      "status": 200,
+      "adLayout": true
+    },
+    {
+      "path": "/toukei",
+      "status": 200,
+      "adLayout": true
+    },
+    {
+      "path": "/toukei/guides/learning-roadmap",
+      "status": 200,
+      "adLayout": true
+    },
+    {
+      "path": "/toukei/problems/confidence-interval",
+      "status": 200,
+      "adLayout": true
+    },
+    {
+      "path": "/labs/hachioji-climate",
+      "status": 200,
+      "adLayout": true
+    },
+    {
+      "path": "/labs/hachioji-snow",
+      "status": 200,
+      "adLayout": true
+    },
+    {
+      "path": "/labs/hachioji-heat",
+      "status": 200,
+      "adLayout": true
+    },
+    {
+      "path": "/labs/hachioji-chill",
+      "status": 200,
+      "adLayout": true
+    },
+    {
+      "path": "/labs/takao-gear",
+      "status": 200,
+      "adLayout": true
+    },
+    {
+      "path": "/labs/takao-weather-shift",
+      "status": 200,
+      "adLayout": true
+    },
+    {
+      "path": "/labs/hachioji-rain",
+      "status": 200,
+      "adLayout": true
+    },
+    {
+      "path": "/labs/hachioji-autumn",
+      "status": 200,
+      "adLayout": true
+    },
+    {
+      "path": "/about",
+      "status": 200,
+      "adLayout": false
+    },
+    {
+      "path": "/ai-news",
+      "status": 200,
+      "adLayout": false
+    },
+    {
+      "path": "/contact",
+      "status": 200,
+      "adLayout": false
+    },
+    {
+      "path": "/dashboard",
+      "status": 200,
+      "adLayout": false
+    },
+    {
+      "path": "/privacy",
+      "status": 200,
+      "adLayout": false
+    },
+    {
+      "path": "/weather",
+      "status": 200,
+      "adLayout": false
+    },
+    {
+      "path": "/toukei/problems/__invalid__",
+      "status": 404,
+      "adLayout": false
+    },
+    {
+      "path": "/toukei/guides/__invalid__",
+      "status": 404,
+      "adLayout": false
+    },
+    {
+      "path": "/labs/__invalid__",
+      "status": 404,
+      "adLayout": false
+    },
+    {
+      "path": "/route-that-does-not-exist",
+      "status": 404,
+      "adLayout": false
+    },
+    {
+      "path": "/api/dashboard-data",
+      "method": "GET",
+      "status": 401,
+      "noStore": true
+    },
+    {
+      "path": "/api/dashboard-data",
+      "method": "POST",
+      "status": 405,
+      "noStore": true
+    }
+  ],
+  "iconPng": true,
+  "staticAssetImmutable": true,
+  "adsTxt": true,
+  "robots": true,
+  "sitemap": true,
+  "repeatedConcurrentRequests": 18
+}
