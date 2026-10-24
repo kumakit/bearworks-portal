@@ -18,6 +18,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
@@ -66,6 +71,9 @@ jobs:
             ${{ runner.temp }}/npm-audit-production.json
             ${{ runner.temp }}/npm-audit-full.json
           retention-days: 14
+
+      - name: Test Hachioji population analysis
+        run: npm run test:hachioji-population
 
       - name: Validate publication bundles
         run: npm run validate:bundles
@@ -137,6 +145,7 @@ jobs:
 
           node scripts/verify-toukei-pages.mjs http://127.0.0.1:8788
           node scripts/verify-hachioji-rain-autumn-pages.mjs http://127.0.0.1:8788 --ads
+          node scripts/verify-hachioji-population-pages.mjs http://127.0.0.1:8788
 
           assert_status() {
             expected=$1
