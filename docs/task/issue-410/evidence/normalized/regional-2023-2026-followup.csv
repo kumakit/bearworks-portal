@@ -1,0 +1,17 @@
+name,targetDate,populationExcel,ageExcel,ageRowPresent,boundaryEffectiveDateInference
+川口町,2023-09-30,11923,11923,True,not-identifiable-from-population
+上川町,2023-09-30,1443,1443,True,not-identifiable-from-population
+西寺方町,2023-09-30,5455,5455,True,not-identifiable-from-population
+美山町,2023-09-30,2486,2486,True,not-identifiable-from-population
+川口町,2024-09-30,11952,11952,True,not-identifiable-from-population
+上川町,2024-09-30,1433,1433,True,not-identifiable-from-population
+西寺方町,2024-09-30,5347,5347,True,not-identifiable-from-population
+美山町,2024-09-30,2452,2452,True,not-identifiable-from-population
+川口町,2025-09-30,11931,11931,True,not-identifiable-from-population
+上川町,2025-09-30,1405,1405,True,not-identifiable-from-population
+西寺方町,2025-09-30,5276,5276,True,not-identifiable-from-population
+美山町,2025-09-30,2386,2386,True,not-identifiable-from-population
+川口町,2026-09-30,12034,12034,True,not-identifiable-from-population
+上川町,2026-09-30,1385,1385,True,not-identifiable-from-population
+西寺方町,2026-09-30,5207,5207,True,not-identifiable-from-population
+美山町,2026-09-30,2349,2349,True,not-identifiable-from-population

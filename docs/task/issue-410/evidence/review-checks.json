@@ -1,0 +1,220 @@
+{
+  "displayScope": {
+    "city": {
+      "officialRows": 199,
+      "population2016": 563327,
+      "population2026": 559320
+    },
+    "regional": {
+      "candidateRows": 191,
+      "subtotals": {
+        "2016": 530676,
+        "2026": 528044
+      },
+      "excludedRows": 8,
+      "coverageLabel": "191町丁・2026年9月末全市人口の94.4%",
+      "exclusionLabel": "8町丁は区域変更確認済み、または施行時点が未確認のため比較対象外",
+      "below100Rows": 1,
+      "rateEligibleRows": 190,
+      "below100Names": [
+        "宇津貫町"
+      ]
+    },
+    "ageDefinition": "City-wide age composition denominator is city population; not the 191-row subtotal.",
+    "nationalityBreakdown": "Not adopted: primary population/age Excel tables have no Japanese/foreign breakdown. CSV has detail but is not the adopted series."
+  },
+  "regionalFollowup": [
+    {
+      "name": "川口町",
+      "targetDate": "2023-09-30",
+      "populationExcel": 11923,
+      "ageExcel": 11923,
+      "ageRowPresent": true,
+      "boundaryEffectiveDateInference": "not-identifiable-from-population"
+    },
+    {
+      "name": "上川町",
+      "targetDate": "2023-09-30",
+      "populationExcel": 1443,
+      "ageExcel": 1443,
+      "ageRowPresent": true,
+      "boundaryEffectiveDateInference": "not-identifiable-from-population"
+    },
+    {
+      "name": "西寺方町",
+      "targetDate": "2023-09-30",
+      "populationExcel": 5455,
+      "ageExcel": 5455,
+      "ageRowPresent": true,
+      "boundaryEffectiveDateInference": "not-identifiable-from-population"
+    },
+    {
+      "name": "美山町",
+      "targetDate": "2023-09-30",
+      "populationExcel": 2486,
+      "ageExcel": 2486,
+      "ageRowPresent": true,
+      "boundaryEffectiveDateInference": "not-identifiable-from-population"
+    },
+    {
+      "name": "川口町",
+      "targetDate": "2024-09-30",
+      "populationExcel": 11952,
+      "ageExcel": 11952,
+      "ageRowPresent": true,
+      "boundaryEffectiveDateInference": "not-identifiable-from-population"
+    },
+    {
+      "name": "上川町",
+      "targetDate": "2024-09-30",
+      "populationExcel": 1433,
+      "ageExcel": 1433,
+      "ageRowPresent": true,
+      "boundaryEffectiveDateInference": "not-identifiable-from-population"
+    },
+    {
+      "name": "西寺方町",
+      "targetDate": "2024-09-30",
+      "populationExcel": 5347,
+      "ageExcel": 5347,
+      "ageRowPresent": true,
+      "boundaryEffectiveDateInference": "not-identifiable-from-population"
+    },
+    {
+      "name": "美山町",
+      "targetDate": "2024-09-30",
+      "populationExcel": 2452,
+      "ageExcel": 2452,
+      "ageRowPresent": true,
+      "boundaryEffectiveDateInference": "not-identifiable-from-population"
+    },
+    {
+      "name": "川口町",
+      "targetDate": "2025-09-30",
+      "populationExcel": 11931,
+      "ageExcel": 11931,
+      "ageRowPresent": true,
+      "boundaryEffectiveDateInference": "not-identifiable-from-population"
+    },
+    {
+      "name": "上川町",
+      "targetDate": "2025-09-30",
+      "populationExcel": 1405,
+      "ageExcel": 1405,
+      "ageRowPresent": true,
+      "boundaryEffectiveDateInference": "not-identifiable-from-population"
+    },
+    {
+      "name": "西寺方町",
+      "targetDate": "2025-09-30",
+      "populationExcel": 5276,
+      "ageExcel": 5276,
+      "ageRowPresent": true,
+      "boundaryEffectiveDateInference": "not-identifiable-from-population"
+    },
+    {
+      "name": "美山町",
+      "targetDate": "2025-09-30",
+      "populationExcel": 2386,
+      "ageExcel": 2386,
+      "ageRowPresent": true,
+      "boundaryEffectiveDateInference": "not-identifiable-from-population"
+    },
+    {
+      "name": "川口町",
+      "targetDate": "2026-09-30",
+      "populationExcel": 12034,
+      "ageExcel": 12034,
+      "ageRowPresent": true,
+      "boundaryEffectiveDateInference": "not-identifiable-from-population"
+    },
+    {
+      "name": "上川町",
+      "targetDate": "2026-09-30",
+      "populationExcel": 1385,
+      "ageExcel": 1385,
+      "ageRowPresent": true,
+      "boundaryEffectiveDateInference": "not-identifiable-from-population"
+    },
+    {
+      "name": "西寺方町",
+      "targetDate": "2026-09-30",
+      "populationExcel": 5207,
+      "ageExcel": 5207,
+      "ageRowPresent": true,
+      "boundaryEffectiveDateInference": "not-identifiable-from-population"
+    },
+    {
+      "name": "美山町",
+      "targetDate": "2026-09-30",
+      "populationExcel": 2349,
+      "ageExcel": 2349,
+      "ageRowPresent": true,
+      "boundaryEffectiveDateInference": "not-identifiable-from-population"
+    }
+  ],
+  "sourceVersionHeaders": [
+    {
+      "filename": "age-2026-09.xlsx",
+      "url": "https://www.city.hachioji.tokyo.jp/hachiouji/jinko/005/p037124_d/fil/0809matibetunenrei.xlsx",
+      "retrievedAt": "2026-10-24T10:53:13.410010+00:00",
+      "lastModified": "Fri, 23 Oct 2026 16:04:36 GMT",
+      "sha256": "d4757827b6afb2ad0e0468c4a031546cefa341c10ecc9282c1f8ed005964ea1f"
+    },
+    {
+      "filename": "population-2026-09.csv",
+      "url": "https://www.city.hachioji.tokyo.jp/tantoumadoguchi/002/003/matisetaicsv_d/fil/chouchoubetsu_jinkou_0809.csv",
+      "retrievedAt": "2026-10-24T10:53:13.358000+00:00",
+      "lastModified": "Fri, 23 Oct 2026 17:22:34 GMT",
+      "sha256": "5416b8b5c51d318e4ca5e7c5be9be887c5b6cd3233a7058b4a4956a27229fb4f"
+    },
+    {
+      "filename": "population-2024-09.csv",
+      "url": "https://www.city.hachioji.tokyo.jp/tantoumadoguchi/002/003/matisetaicsv_d/fil/chouchoubetsu_jinkou0609.csv",
+      "retrievedAt": "2026-10-24T10:58:36.606800+00:00",
+      "lastModified": "Fri, 23 Oct 2026 17:22:34 GMT",
+      "sha256": "d8e52e5af2bbce37a3f7d33cc421f023d62023a8d75ca7d54a38cab152143f74"
+    },
+    {
+      "filename": "population-2025-09.csv",
+      "url": "https://www.city.hachioji.tokyo.jp/tantoumadoguchi/002/003/matisetaicsv_d/fil/chouchoubetsu_jinkou_0709.csv",
+      "retrievedAt": "2026-10-24T10:58:36.668316+00:00",
+      "lastModified": "Fri, 23 Oct 2026 17:22:34 GMT",
+      "sha256": "4cf5225baa50bd8aeb2245f3f23f7eb0c1a57259c7072e754ff0a92518d1df36"
+    },
+    {
+      "filename": "population-2026-09.xlsx",
+      "url": "https://www.city.hachioji.tokyo.jp/hachiouji/jinko/004/p037433_d/fil/0809matibetu.xlsx",
+      "retrievedAt": "2026-10-24T10:58:36.678317+00:00",
+      "lastModified": "Fri, 23 Oct 2026 16:06:34 GMT",
+      "sha256": "a3c2d2f9219f41a67bcd17e4ff5b978d1e23d76d5ecf8d95eb92369b1d1063f7"
+    }
+  ],
+  "pageUpdateLabels": [
+    {
+      "filename": "population-current-page.html",
+      "displayedUpdate": "令和8年10月1日"
+    },
+    {
+      "filename": "population-2026-excel-page.html",
+      "displayedUpdate": "令和8年8月15日"
+    },
+    {
+      "filename": "age-2026-page.html",
+      "displayedUpdate": "令和8年8月15日"
+    }
+  ],
+  "sourceFreshnessConclusion": "Last-Modified is HTTP resource metadata; does not establish the statistics revision date or explain CSV/Excel differences.",
+  "csvSensitivity": {
+    "csv2026Total": 559329,
+    "csv2016Total": 563327,
+    "csvDelta": -3998,
+    "csvRate": -0.7097121210238422,
+    "excelDelta": -4007,
+    "directionUnchanged": true
+  },
+  "outputHashes": {
+    "excluded-region-reference.csv": "4d88577ff0952f5fb646bdea6011060c7ab5620351771bce1bf97f69a5d78690",
+    "regional-2023-2026-followup.csv": "fe94a754dccecb3648689c3d0885dac439fbfc22698d58c81f95067afbba3573"
+  }
+}

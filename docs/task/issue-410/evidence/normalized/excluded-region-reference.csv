@@ -1,0 +1,9 @@
+code,name,referencePopulation2016,referencePopulation2026,reason,display
+02500,上野町,2842,2884,exclude-confirmed-boundary-change,reference-only; no rank/difference/rate; separate population snapshots
+02800,小門町,1686,1810,exclude-confirmed-boundary-change,reference-only; no rank/difference/rate; separate population snapshots
+02903,台町3丁目,2746,2780,exclude-confirmed-boundary-change,reference-only; no rank/difference/rate; separate population snapshots
+02904,台町4丁目,2851,2827,exclude-confirmed-boundary-change,reference-only; no rank/difference/rate; separate population snapshots
+35300,西寺方町,5814,5207,exclude-pending-effective-date,reference-only; no rank/difference/rate; separate population snapshots
+40100,川口町,12261,12034,exclude-pending-effective-date,reference-only; no rank/difference/rate; separate population snapshots
+40200,上川町,1608,1385,exclude-pending-effective-date,reference-only; no rank/difference/rate; separate population snapshots
+40500,美山町,2843,2349,exclude-pending-effective-date,reference-only; no rank/difference/rate; separate population snapshots
