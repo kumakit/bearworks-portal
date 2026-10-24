@@ -27,8 +27,18 @@ Lunaの読み取り専用レビューで、manifestに残っていたPhase 0時�
 - ブラウザーで本文/表/リンク、表示切替、町丁選択、キーボード操作を確認。541px幅で水平overflowがないことを確認。PC幅/タッチ実機とGitHub Actionsは未確認。
 - `git diff --check` — 成功。
 
+## ローカルPR分割
+
+main基点の依存branchで以下の3commitを作成し、working treeはclean。origin/mainは確認時に `1396c14171d9206d09277741896d7c35a6d17b37`。
+
+- PR1 data: `codex/issue-410-data` — `e0da10f`、基点main。
+- PR2 article: `codex/issue-410-article` — `13bf949`、baseはPR1。
+- PR3 navigation: `codex/issue-410-navigation` — `88bb433`、baseはPR2。
+
+予定タイトルは各commit messageと同じ。push前に、3差分の境界と依存関係を再確認済み。
+
 ## 未実施のゲート
 
-commit、push、PR作成、Issue更新、merge、deploy、公開URL確認は未実施。計画の3PR分割も未実施で、現在は1つのローカル実装branchに全変更がある。公開前に公式資料の最新版再取得・hash比較、Cloudflare等の自動公開設定確認、PR分割と統合CI、操作ごとの明示承認が必要。
+追加のcommit、push、GitHub PR作成、Issueコメント、merge、deploy、公開URL確認は未実施。3つの依存branch/commitはローカルに作成済みだが、まだpushしていない。公開前に公式資料の最新版再取得・hash比較、Cloudflare等の自動公開設定確認、PR分割と統合CI、操作ごとの明示承認が必要。
 
 データ上の未解決事項はCSVとExcelの差の原因、一部区域変更の施行日、境界変更調査の網羅性。記事では主Excel系列を明示し、区域変更関連8町丁を順位と増減比較から除外し、残る地域の境界不変を完全立証したとは扱わない。

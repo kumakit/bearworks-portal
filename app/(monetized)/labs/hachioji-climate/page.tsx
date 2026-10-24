@@ -175,6 +175,13 @@ export default function HachiojiClimatePage() {
 
       <ContentProvenance provenance={hachiojiClimateProvenance} />
 
+      <section className="rounded-2xl border border-cyan-100 bg-cyan-50 p-5" aria-labelledby="population-related-link">
+        <p className="text-xs font-bold tracking-widest text-cyan-800">八王子を数字で読み解く</p>
+        <h2 id="population-related-link" className="mt-2 text-lg font-bold text-slate-900">気候とは別のデータから、街を見てみる。</h2>
+        <p className="mt-2 text-sm leading-6 text-slate-700">住民基本台帳から、八王子市全体・町丁・年齢別の人口を比べました。</p>
+        <Link href="/labs/hachioji-population" className="mt-3 inline-block font-semibold text-cyan-900 underline underline-offset-4">人口の記事を読む →</Link>
+      </section>
+
       <section className="overflow-hidden rounded-3xl bg-slate-900 text-white p-7 md:p-10">
         <p className="text-sm font-bold tracking-wider text-orange-200">街のうわさを、統計でほどく シリーズ</p>
         <h2 className="mt-2 text-2xl font-bold md:text-3xl">八王子の気候を、もっと深く知る</h2>

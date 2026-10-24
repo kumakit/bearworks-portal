@@ -234,10 +234,10 @@ Skillの分類上はPlanningにAstra推奨だが自動切替は行わない。�
 
 NEXT ACTOR: MODEL
 NEXT MODEL: Sol
-NEXT TASK: release/readiness-and-pr-split
-PURPOSE: PR分割を維持したまま変更を整理し、公開前再取得・自動公開設定確認・commit/push/PR等の個別ゲートを準備する。
+NEXT TASK: user-approval/remote-push-and-draft-prs
+PURPOSE: 承認を得た後に3つの依存branchをpushし、記載済みタイトルでdraft PRを作成する。mergeとdeployは別ゲート。
 INPUTS: 本計画r2.1、r2レビュー採否、feasibility、manifest、validation、review-checks、地域対応表。
-ACCEPTANCE: データ/記事/導線の変更境界、最終統合branch、公開直前データ再取得、自動公開設定、復旧対象がレビュー可能な形で記録される。
+ACCEPTANCE: PR1→PR2→PR3のbase/headと差分境界を確認し、draft PRを作成。自動公開設定/最新版再取得/復旧はmain merge前に別途確認する。
 BLOCKERS: 計画の着手前修正は解消済み。CSV差/施行日/地理調査網羅性の限界は表示・範囲に反映。自動公開設定はmain merge前の必須ゲート。
 
 計画レビューはmission-control-flowと合意済み工程に従い受領済み。今回の修正は条件付き承認への対応であり、同じ計画レビューを再度必須化しない。新たな設計変更や別のリスクが生じたときは必要な範囲を再評価する。公開承認は別工程。
@@ -245,6 +245,6 @@ BLOCKERS: 計画の着手前修正は解消済み。CSV差/施行日/地理調�
 
 ## 実装完了記録（2026-10-24）
 
-専用branch `codex/issue-410-population`（`origin/main` の `1396c14171d9206d09277741896d7c35a6d17b37` 基点）にデータ生成、article bundle/manifest、人口記事、図表、`/labs`、トップ/気候記事導線、sitemap、validator、CI workflowを実装した。現ローカルbranch内には計画で定めたPR1～3相当の変更が同居し、PR分割はまだ行っていない。公開・Git操作は別承認まで実施しない。
+専用branch `codex/issue-410-population`（`origin/main` の `1396c14171d9206d09277741896d7c35a6d17b37` 基点）にデータ生成、article bundle/manifest、人口記事、図表、`/labs`、トップ/気候記事導線、sitemap、validator、CI workflowを実装した。データ・記事・導線の3段階をローカルcommitと依存branchに分割した。PR1 `codex/issue-410-data` → PR2 `codex/issue-410-article` → PR3 `codex/issue-410-navigation`。3branchとも未pushで、GitHub PR/Issueコメント/merge/deployは未実施。
 
 検証記録と未完了事項: `docs/history/20261024_issue#410_walkthrough.md`。独立コードレビュー採否: `docs/history/20261024_issue#410_code_review.md`。

@@ -25,8 +25,10 @@
 - [x] 独立コードレビュー（指摘3件を修正）
 - [x] test/validator/lint/typecheck/build/Workers preview検証（GitHub Actions実行は未確認）
 - [x] スマホ幅（541px）・キーボード・代替表の表示確認（PC/タッチ実機は未確認）
-- [ ] 操作別承認後にcommit/push/PR/merge/deploy
+- [x] PR1～3のローカル依存branchとcommitを作成（push・PR作成は未実施）
+- [ ] 明示承認後に3branchをpushしdraft PRを作成
+- [ ] 公開/merge承認後のmerge・deploy
 - [ ] 公開URL・再現手順・既存記事の表示確認
 - [ ] 主要結果・対象期間・次回候補をIssueへ報告し完了判定
 
-Phase 0、r2レビュー対応、データ・記事実装とローカル検証を完了。commit/push/PR/merge/deploy、公開URL確認、Issue報告は未実施。CSV差の原因、一部町区域変更施行日、変更調査の網羅性は未確認として残す。PC幅/タッチ実機とGitHub Actionsは未確認。自動公開設定はmainへの最初のmerge前に必須確認。
+Phase 0、r2レビュー対応、データ・記事実装とローカル検証を完了。3つのローカルcommitを作成。push、PR作成、Issueコメント、merge、deploy、公開URL確認は未実施。CSV差の原因、一部町区域変更施行日、変更調査の網羅性は未確認として残す。PC幅/タッチ実機とGitHub Actionsは未確認。自動公開設定はmainへの最初のmerge前に必須確認。

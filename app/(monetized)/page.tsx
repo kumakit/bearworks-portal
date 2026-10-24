@@ -98,6 +98,13 @@ export default function Home() {
         </div>
       </section>
 
+      <section aria-labelledby="population-article" className="rounded-[2rem] border border-cyan-100 bg-cyan-50 p-6 sm:p-8">
+        <p className="text-xs font-bold tracking-widest text-cyan-800">新シリーズ · 八王子を数字で読み解く</p>
+        <h2 id="population-article" className="mt-2 text-xl font-bold text-slate-900">八王子の人口は本当に減っている？</h2>
+        <p className="mt-3 max-w-3xl text-sm leading-7 text-slate-700">全市・町丁・年齢別の公式人口を、2016年と2026年の9月末で比較します。</p>
+        <div className="mt-4 flex flex-wrap gap-4 text-sm font-bold text-cyan-900"><Link href="/labs/hachioji-population" className="underline underline-offset-4">人口分析を読む →</Link><Link href="/labs" className="underline underline-offset-4">Labsの記事一覧 →</Link></div>
+      </section>
+
       {/* Features Section */}
       <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div className="bg-white rounded-[2rem] p-8 shadow-soft border border-gray-100 flex flex-col justify-between">
