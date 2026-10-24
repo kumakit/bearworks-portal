@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-10-25",
+    "daily_summary": "本日のAIニュースは、厚労省の自殺予防対策や政府の防衛産業戦略、Google検索の機能強化、気象予測やMUFGでの実用化など社会やビジネスでの活用が進む一方で、株式市場ではAI関連の巨額投資に対する警戒感からナスダックや日経平均が下落し、市場の過熱やバブル崩壊リスクへの懸念が強まる展開となりました。",
+    "articles": [
+      {
+        "title": "自殺予防にAI 厚労省が効果検証へ",
+        "content": "厚生労働省は、自殺予防対策として人工知能（AI）を活用した取り組みの効果検証に乗り出すことを決定しました。SNS相談の現場などでAIを用いて対応の質向上や負担軽減を図り、その有効性を確かめる方針です。メンタルヘルス支援におけるテクノロジーの活用として注目されます。",
+        "source": "Google News",
+        "published_at": "2026-10-25",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBlMUowSWtCN0N6cTVRV2ZqWWdzQVViOW1tN0FKWG9xYnRHdV9laXRnU0IyMUdNbnI1VlhldGRqdHNMeE9SVjVnb3kwNEtjYm5Z?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "ＡＩなど「軍民両用」産業育成へ、政府が年内に「防衛産業基盤戦略」策定…継戦能力確保狙う",
+        "content": "政府は人工知能などの先端技術を活用した「軍民両用」産業を育成するため、年内に「防衛産業基盤戦略」を策定する方針を固めました。これにより、有事の際の継戦能力の確保と防衛力の強化を目指します。",
+        "source": "Google News",
+        "published_at": "2026-10-25",
+        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE0xYTlQYkptaHVDN25RZzFWeHVkVU5XNWZid0J1X25TaGVUdXNxQXRHSmRKdWhJUXlMN2FjNVl0T2Z2eEhQLW9fMjBOcy1lVW9aRmpwbVJUWnFGSnBTQnVLdHg0ZmJCQQ?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "Google「AI モード」にアップデート、公式サイトの強調やサムネイル追加など",
+        "content": "Googleの検索における「AIモード」がアップデートされ、公式サイトの強調表示やサムネイル画像の追加などの機能強化が行われました。これにより、ユーザーはより視覚的かつ効率的に求めている情報や公式ソースにアクセスできるようになります。",
+        "source": "Google News",
+        "published_at": "2026-10-25",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1selRvaHlpdHlibjJxamYyMGpvaUVsblBWX3VBRmFYTG9GXzJaLVgtUzhkWjBnMEdDa1ZEd0gyWVZaeV8yODRDVENWakdzX3JQMTk1Z0dxTFNZdjVZN3hQcDF0SXhDWUU?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "広がるAI気象予測、自前主義には限界も",
+        "content": "人工知能（AI）を活用した気象予測の導入が広がる中で、単一企業や組織による自前主義の体制には限界が見え始めています。今後はデータの共有や外部技術との連携など、より協調的なアプローチが重要になると指摘されています。",
+        "source": "Google News",
+        "published_at": "2026-10-25",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBQY1FGOXRxQU05dlF6dS1NbllvZklxaTZwZzRaeUVpbUxXM0s3VHEtcnQ3SUhVSURGYklsYzJDNVAzRFI2eGJPb0RuVV96OUVkODVqV056NW9YYlBPOFpBdmRLN0x4MzFxNGtTMQ?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "MUFGのAI PoCを再建したオントロジー×ナレッジグラフ活用 非IT部門が2万件の知見をデータ化",
+        "content": "三菱UFJ銀行（MUFG）のAI実証実験（PoC）において、オントロジーとナレッジグラフを活用した取り組みが紹介されています。非IT部門の職員自らが2万件もの知見をデータ化することに成功し、プロジェクトの再建を実現しました。",
+        "source": "Google News",
+        "published_at": "2026-10-25",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5IMmcwbmczQXVvSmFuYWNlbk0tVlZ2VGFad2c0b1M0VXZSNlE2bTdRMjdBU1A1T2Y0OFQ4MFY0NktiZURKUU9CRFdMZ0tTTVh5VHdIbi1wek1kdw?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "AIバブル崩壊寸前、流動性の「枯渇」を警告する7つのサイン",
+        "content": "この記事では、現在のAIブームにおける市場の過熱状態と、それに伴う流動性枯渇のリスクについて解説しています。投資マネーの動向や資金調達の環境変化など、AIバブルの崩壊を示唆する7つの重要な兆候を挙げて警鐘を鳴らしています。",
+        "source": "Google News",
+        "published_at": "2026-10-25",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1IdUhLNVNQWWlia2JrVUJ3THRsc3c4N1dTS1FOLXRXa1c3SFNXVkxOemZ0Uk9leExuUmtVMWd1NFROOWVEZWtiaGh4bGIxY3Rmamdpb20yLVpYQQ?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "AI投資ブームにどれだけ影響？中間選挙とアメリカの行方",
+        "content": "この記事では、アメリカの中間選挙がAI投資ブームに与える影響について考察しています。政治情勢の変化が今後のテクノロジー分野の資金の流れや政策にどのような結果をもたらすのかを解説しています。",
+        "source": "Google News",
+        "published_at": "2026-10-25",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9vdS1RQndfUDJvSExuRzFNbVotZVhzdkx6ZXFnSGk5cU9hQTZzNHRwOTM5dVZ4TnRUUzVKRVFPWmtpblo4MUNYSHNZbVkwZDRhdENhWEFHWQ?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "米ナスダック急落2.6%安 メタは一時8%安、AI巨額投資に警戒再燃",
+        "content": "米ナスダック総合指数が2.6%安と急落し、メタも一時8%下落しました。背景には人工知能（AI）分野への巨額投資に対する市場の警戒感が再び高まったことがあります。",
+        "source": "Google News",
+        "published_at": "2026-10-25",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBrNWJZZjhaX2pEeDZUVGxDNFR2MmZzeTNnTi1fVG1pQ3lCQ2JnWERfUXlLQUhRWUdqUFBrc3czRjkwMVBaYVExWl9MUGt1OFBzMDctb2tHck85aE9JVUpoRTQ4S2o5emZmTzdPdQ?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "AI関連の調整長期化を警戒、独自の成長テーマを有する銘柄に注目",
+        "content": "市場におけるAI関連銘柄の調整が長期化する可能性が指摘されています。今後は全体的なトレンドに依存せず、独自の成長テーマを持つ個別銘柄への注目が重要となります。投資戦略の見直しや新たな投資先の選定に役立つ情報です。",
+        "source": "Google News",
+        "published_at": "2026-10-25",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFByUXR2TGVQWXVkY0tLRU92Q0xITlJ3U0xxTzRGRFZYUTRCenNOWmwzZ2RRQzM1Y0d0Ukt1S0xCbmh0eEF1akRVdDZtQzFDTUNGbndyY1I2MDlscUxSWHc4bw?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "日経平均は続落で寄り付く、AI・半導体株が売り先行 6万2000円割れ",
+        "content": "東京株式市場で日経平均株価は続落して寄り付きました。AIおよび半導体関連の株式に売りが先行し、節目の6万2000円を割り込んで推移しています。",
+        "source": "Google News",
+        "published_at": "2026-10-25",
+        "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNWVh2X1ppUG5KcklXNEJna2xPc3EzZHpQdmsxVnFyWTUwU0g1V196SGNQWWdnaGRzZ1R0STNidlFBV2Z5Zm04YTJ1NEdkSERaR3ZjeThfeTEtRmRQeG1QbGZGWGM4VmFBNGVDQUJUYmVJYld0RG9GUGlDVmgwMmhwdU9xdjdPQQ?oc=5",
+        "category": "事業・投資"
+      }
+    ]
+  },
+  {
     "date": "2026-10-24",
     "daily_summary": "本日のAIニュースでは、パナソニックHDでの従業員情報誤送信や中国系ハッカー集団によるAI悪用などセキュリティ上の深刻な課題が浮き彫りになる一方で、過熱するAI投資への収益化懸念から日米の株式市場で下落や警戒ムードが広がりました。他方で、台風予測や半導体設計におけるAI活用の高度化が進み、軍事分野でのAI統制を巡る議論や政府のデジタル改革推進会議の開催など、技術の利活用とリスク管理の両面で社会的な注目が集まる一日となりました。",
     "articles": [
