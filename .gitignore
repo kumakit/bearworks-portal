@@ -44,3 +44,5 @@ cloudflare-env.d.ts
 
 # Local, non-public Issue #403 observation snapshots
 /.local-research/
+
+scripts/hachioji-population/__pycache__/

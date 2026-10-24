@@ -1,0 +1,14 @@
+{
+  "bundle": "hachioji-population-2026-10-24.r1.json",
+  "sha256": "5a762128ee554c659a809c986160289ab2f66067204e8b070518b15374be3353",
+  "bytes": 51349,
+  "sourceHashes": {
+    "annual-population.csv": "6ad9ff37405261d1dd108e7dfbcef1cb3176b3e4f1b01c6a63f2c7b6d65cf65e",
+    "town-code-crosswalk.csv": "c03195e73f9c39b515b74a0de06f413355eec547f3fb11391257ccc0e5d3e8b6",
+    "age-2016-09.csv": "72bc1da266dbdf75e587af555469d7398e7811cc3c04d404d951126645c35db0",
+    "age-2026-09.csv": "423de05c1372b29cda7f86073d5c5285cd262e0140e2c0bf28c4dc29fcd9ee49",
+    "excluded-region-reference.csv": "4d88577ff0952f5fb646bdea6011060c7ab5620351771bce1bf97f69a5d78690",
+    "csv-2026-discrepancies.csv": "e1f42c3fa285726785d05bc58f69de2fe3671df5d2a38d74fa86a97f331dbc36"
+  },
+  "generatedBy": "scripts/hachioji-population/generate_bundle.py"
+}

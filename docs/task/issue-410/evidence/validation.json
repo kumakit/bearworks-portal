@@ -1,0 +1,330 @@
+{
+  "policy": {
+    "registeredAt": "2026-10-24",
+    "revision": "r1.1",
+    "minimumPopulationCoverageEachEndpoint": 0.95,
+    "minimumOfficialRowCoverageEachEndpoint": 0.95,
+    "topIncreaseAndDecreaseCount": 10,
+    "includeTies": true,
+    "minimumBaselinePopulationForPrimaryRateRanking": 100,
+    "sensitivityBaselines": [
+      50,
+      100,
+      200
+    ],
+    "ambiguousGeographicMatchesAllowed": false,
+    "populationAllocationByAreaAllowed": false,
+    "publicRedistributionRequiresArtifactSpecificAllow": true,
+    "note": "Data-independent editorial gates recorded before downloading population files. Same comparable geographic set at both endpoints; uncertain boundaries fail even when coverage thresholds pass."
+  },
+  "annualPopulationExcel": [
+    {
+      "source": "population-2016-09.xls",
+      "targetDate": "2016-09-30",
+      "total": 563327,
+      "rows": 199
+    },
+    {
+      "source": "population-2017-09.xls",
+      "targetDate": "2017-09-30",
+      "total": 563538,
+      "rows": 199
+    },
+    {
+      "source": "population-2018-09.xls",
+      "targetDate": "2018-09-30",
+      "total": 562522,
+      "rows": 199
+    },
+    {
+      "source": "population-2019-09.xlsx",
+      "targetDate": "2019-09-30",
+      "total": 562828,
+      "rows": 199
+    },
+    {
+      "source": "population-2020-09.xlsx",
+      "targetDate": "2020-09-30",
+      "total": 561872,
+      "rows": 199
+    },
+    {
+      "source": "population-2021-09.xlsx",
+      "targetDate": "2021-09-30",
+      "total": 562326,
+      "rows": 199
+    },
+    {
+      "source": "population-2022-09.xlsx",
+      "targetDate": "2022-09-30",
+      "total": 562605,
+      "rows": 199
+    },
+    {
+      "source": "population-2023-09.xlsx",
+      "targetDate": "2023-09-30",
+      "total": 560913,
+      "rows": 199
+    },
+    {
+      "source": "population-2024-09.xlsx",
+      "targetDate": "2024-09-30",
+      "total": 559809,
+      "rows": 199
+    },
+    {
+      "source": "population-2025-09.xlsx",
+      "targetDate": "2025-09-30",
+      "total": 559264,
+      "rows": 199
+    },
+    {
+      "source": "population-2026-09.xlsx",
+      "targetDate": "2026-09-30",
+      "total": 559320,
+      "rows": 199
+    }
+  ],
+  "csvCrossChecks": [
+    {
+      "year": 2016,
+      "encoding": "cp932",
+      "csvTotal": 563327,
+      "excelTotal": 563327,
+      "difference": 0
+    },
+    {
+      "year": 2017,
+      "encoding": "cp932",
+      "csvTotal": 563538,
+      "excelTotal": 563538,
+      "difference": 0
+    },
+    {
+      "year": 2018,
+      "encoding": "cp932",
+      "csvTotal": 562522,
+      "excelTotal": 562522,
+      "difference": 0
+    },
+    {
+      "year": 2019,
+      "encoding": "cp932",
+      "csvTotal": 562828,
+      "excelTotal": 562828,
+      "difference": 0
+    },
+    {
+      "year": 2020,
+      "encoding": "cp932",
+      "csvTotal": 561872,
+      "excelTotal": 561872,
+      "difference": 0
+    },
+    {
+      "year": 2021,
+      "encoding": "cp932",
+      "csvTotal": 562326,
+      "excelTotal": 562326,
+      "difference": 0
+    },
+    {
+      "year": 2024,
+      "encoding": "utf-16",
+      "csvTotal": 559806,
+      "excelTotal": 559809,
+      "difference": -3
+    },
+    {
+      "year": 2025,
+      "encoding": "utf-16",
+      "csvTotal": 559273,
+      "excelTotal": 559264,
+      "difference": 9
+    },
+    {
+      "year": 2026,
+      "encoding": "utf-16",
+      "csvTotal": 559329,
+      "excelTotal": 559320,
+      "difference": 9
+    }
+  ],
+  "ageChecks": {
+    "2016": {
+      "city": {
+        "code": "city",
+        "name": "八王子市",
+        "population": 563327,
+        "age0_14": 68649,
+        "age15_64": 351214,
+        "age65plus": 143464
+      },
+      "rows": 199,
+      "mismatchesWithPopulationExcel": 0,
+      "unknownAgeResidual": 0
+    },
+    "2023": {
+      "city": {
+        "code": "city",
+        "name": "八王子市",
+        "population": 560913,
+        "age0_14": 59415,
+        "age15_64": 345944,
+        "age65plus": 155554
+      },
+      "rows": 199,
+      "mismatchesWithPopulationExcel": 0,
+      "unknownAgeResidual": 0
+    },
+    "2024": {
+      "city": {
+        "code": "city",
+        "name": "八王子市",
+        "population": 559809,
+        "age0_14": 57817,
+        "age15_64": 345544,
+        "age65plus": 156448
+      },
+      "rows": 199,
+      "mismatchesWithPopulationExcel": 0,
+      "unknownAgeResidual": 0
+    },
+    "2025": {
+      "city": {
+        "code": "city",
+        "name": "八王子市",
+        "population": 559264,
+        "age0_14": 56131,
+        "age15_64": 346209,
+        "age65plus": 156924
+      },
+      "rows": 199,
+      "mismatchesWithPopulationExcel": 0,
+      "unknownAgeResidual": 0
+    },
+    "2026": {
+      "city": {
+        "code": "city",
+        "name": "八王子市",
+        "population": 559320,
+        "age0_14": 54731,
+        "age15_64": 346975,
+        "age65plus": 157614
+      },
+      "rows": 199,
+      "mismatchesWithPopulationExcel": 0,
+      "unknownAgeResidual": 0
+    }
+  },
+  "outputHashes": {
+    "age-2016-09.csv": "72bc1da266dbdf75e587af555469d7398e7811cc3c04d404d951126645c35db0",
+    "age-2023-09.csv": "2e920980ca222479fdd3a1b8dd33916ccc661f59815cb5bc5b7efaa8c93b26c1",
+    "age-2024-09.csv": "59f7ce13ae26ca3502634f54630453a3a0df0f0fa11ee2166bf752632b8af2b9",
+    "age-2025-09.csv": "9e57ef2fb738084f98bb724d1164cadc288621c34671fff015a4e682a5c463b5",
+    "age-2026-09.csv": "423de05c1372b29cda7f86073d5c5285cd262e0140e2c0bf28c4dc29fcd9ee49",
+    "town-code-crosswalk.csv": "c03195e73f9c39b515b74a0de06f413355eec547f3fb11391257ccc0e5d3e8b6",
+    "boundary-candidates.csv": "2a53583cbefd2756bc66494615e16e651991e61ef33f7ab7172867729eba466b",
+    "annual-population.csv": "6ad9ff37405261d1dd108e7dfbcef1cb3176b3e4f1b01c6a63f2c7b6d65cf65e",
+    "csv-2026-discrepancies.csv": "e1f42c3fa285726785d05bc58f69de2fe3671df5d2a38d74fa86a97f331dbc36"
+  },
+  "boundaryCheck": {
+    "features": 297,
+    "hcodes": [
+      8101
+    ],
+    "distinctNames": 199,
+    "nameCandidateRows": 199,
+    "officialRows": 199,
+    "nameCandidateRowCoverage": 1.0,
+    "nameCandidatePopulationCoverage": {
+      "2016": 1.0,
+      "2026": 1.0
+    },
+    "unmatched": [],
+    "certifiedCoverage": null,
+    "note": "Name matches are candidates, not geographic equivalence evidence."
+  },
+  "regionalDecision": {
+    "retainedRows": 191,
+    "excludedRows": 8,
+    "retainedRowCoverage": 0.9597989949748744,
+    "retainedPopulationCoverage": {
+      "2016": 0.942038993337795,
+      "2026": 0.9440820996924837
+    },
+    "geographicEquivalenceProvenForAllRetained": false,
+    "unresolvedRegionsInDiagnosticTopTen": [
+      "美山町",
+      "西寺方町"
+    ],
+    "mapAdopted": false,
+    "mapReason": "Conservative exclusions fail population coverage and prominent-region geography remains unresolved; name matching alone is insufficient."
+  },
+  "csv2026Discrepancies": [
+    {
+      "code": "01602",
+      "name": "明神町2丁目",
+      "csv": 2524,
+      "populationExcel": 2523,
+      "ageExcel": 2523,
+      "difference": 1
+    },
+    {
+      "code": "02000",
+      "name": "三崎町",
+      "csv": 402,
+      "populationExcel": 401,
+      "ageExcel": 401,
+      "difference": 1
+    },
+    {
+      "code": "15402",
+      "name": "鑓水2丁目",
+      "csv": 8350,
+      "populationExcel": 8349,
+      "ageExcel": 8349,
+      "difference": 1
+    },
+    {
+      "code": "20401",
+      "name": "めじろ台1丁目",
+      "csv": 2255,
+      "populationExcel": 2253,
+      "ageExcel": 2253,
+      "difference": 2
+    },
+    {
+      "code": "25300",
+      "name": "寺田町",
+      "csv": 5995,
+      "populationExcel": 5994,
+      "ageExcel": 5994,
+      "difference": 1
+    },
+    {
+      "code": "30600",
+      "name": "泉町",
+      "csv": 3205,
+      "populationExcel": 3204,
+      "ageExcel": 3204,
+      "difference": 1
+    },
+    {
+      "code": "30900",
+      "name": "川町",
+      "csv": 2068,
+      "populationExcel": 2067,
+      "ageExcel": 2067,
+      "difference": 1
+    },
+    {
+      "code": "55100",
+      "name": "北野町",
+      "csv": 7876,
+      "populationExcel": 7875,
+      "ageExcel": 7875,
+      "difference": 1
+    }
+  ]
+}

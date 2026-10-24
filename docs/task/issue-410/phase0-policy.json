@@ -1,0 +1,14 @@
+{
+  "registeredAt": "2026-10-24",
+  "revision": "r1.1",
+  "minimumPopulationCoverageEachEndpoint": 0.95,
+  "minimumOfficialRowCoverageEachEndpoint": 0.95,
+  "topIncreaseAndDecreaseCount": 10,
+  "includeTies": true,
+  "minimumBaselinePopulationForPrimaryRateRanking": 100,
+  "sensitivityBaselines": [50, 100, 200],
+  "ambiguousGeographicMatchesAllowed": false,
+  "populationAllocationByAreaAllowed": false,
+  "publicRedistributionRequiresArtifactSpecificAllow": true,
+  "note": "Data-independent editorial gates recorded before downloading population files. Same comparable geographic set at both endpoints; uncertain boundaries fail even when coverage thresholds pass."
+}

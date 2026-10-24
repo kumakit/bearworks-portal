@@ -1,0 +1,2065 @@
+{
+  "schemaVersion": 1,
+  "series": "八王子を数字で読み解く",
+  "title": "八王子の人口は本当に減っている？",
+  "comparison": {
+    "from": "2016-09-30",
+    "to": "2026-09-30",
+    "definition": "住民基本台帳の日本人・外国人合計",
+    "cityPopulation2016": 563327,
+    "cityPopulation2026": 559320,
+    "cityDelta": -4007,
+    "cityChangePercent": -0.7113,
+    "latestYearFrom": 2025,
+    "latestYearTo": 2026,
+    "latestYearDelta": 56
+  },
+  "annualPopulation": [
+    {
+      "targetDate": "2016-09-30",
+      "population": 563327
+    },
+    {
+      "targetDate": "2017-09-30",
+      "population": 563538
+    },
+    {
+      "targetDate": "2018-09-30",
+      "population": 562522
+    },
+    {
+      "targetDate": "2019-09-30",
+      "population": 562828
+    },
+    {
+      "targetDate": "2020-09-30",
+      "population": 561872
+    },
+    {
+      "targetDate": "2021-09-30",
+      "population": 562326
+    },
+    {
+      "targetDate": "2022-09-30",
+      "population": 562605
+    },
+    {
+      "targetDate": "2023-09-30",
+      "population": 560913
+    },
+    {
+      "targetDate": "2024-09-30",
+      "population": 559809
+    },
+    {
+      "targetDate": "2025-09-30",
+      "population": 559264
+    },
+    {
+      "targetDate": "2026-09-30",
+      "population": 559320
+    }
+  ],
+  "ageComposition": [
+    {
+      "key": "age0_14",
+      "label": "0〜14歳",
+      "population2016": 68649,
+      "population2026": 54731,
+      "delta": -13918,
+      "changePercent": -20.2741,
+      "share2016": 12.1864,
+      "share2026": 9.7853,
+      "shareDeltaPoints": -2.4011
+    },
+    {
+      "key": "age15_64",
+      "label": "15〜64歳",
+      "population2016": 351214,
+      "population2026": 346975,
+      "delta": -4239,
+      "changePercent": -1.207,
+      "share2016": 62.3464,
+      "share2026": 62.0351,
+      "shareDeltaPoints": -0.3112
+    },
+    {
+      "key": "age65plus",
+      "label": "65歳以上",
+      "population2016": 143464,
+      "population2026": 157614,
+      "delta": 14150,
+      "changePercent": 9.8631,
+      "share2016": 25.4673,
+      "share2026": 28.1796,
+      "shareDeltaPoints": 2.7123
+    }
+  ],
+  "regions": {
+    "count": 191,
+    "populationCoverage2016": 94.2039,
+    "populationCoverage2026": 94.4082,
+    "rows": [
+      {
+        "code": "00100",
+        "name": "横山町",
+        "population2016": 2040,
+        "population2026": 3109,
+        "delta": 1069,
+        "changePercent": 52.402
+      },
+      {
+        "code": "00200",
+        "name": "八日町",
+        "population2016": 2879,
+        "population2026": 5068,
+        "delta": 2189,
+        "changePercent": 76.0333
+      },
+      {
+        "code": "00300",
+        "name": "八幡町",
+        "population2016": 1907,
+        "population2026": 2427,
+        "delta": 520,
+        "changePercent": 27.268
+      },
+      {
+        "code": "00400",
+        "name": "八木町",
+        "population2016": 869,
+        "population2026": 840,
+        "delta": -29,
+        "changePercent": -3.3372
+      },
+      {
+        "code": "00500",
+        "name": "追分町",
+        "population2016": 1613,
+        "population2026": 1691,
+        "delta": 78,
+        "changePercent": 4.8357
+      },
+      {
+        "code": "00601",
+        "name": "千人町1丁目",
+        "population2016": 1386,
+        "population2026": 1409,
+        "delta": 23,
+        "changePercent": 1.6595
+      },
+      {
+        "code": "00602",
+        "name": "千人町2丁目",
+        "population2016": 2116,
+        "population2026": 2272,
+        "delta": 156,
+        "changePercent": 7.3724
+      },
+      {
+        "code": "00603",
+        "name": "千人町3丁目",
+        "population2016": 2210,
+        "population2026": 2133,
+        "delta": -77,
+        "changePercent": -3.4842
+      },
+      {
+        "code": "00604",
+        "name": "千人町4丁目",
+        "population2016": 1148,
+        "population2026": 1329,
+        "delta": 181,
+        "changePercent": 15.7666
+      },
+      {
+        "code": "00700",
+        "name": "日吉町",
+        "population2016": 1136,
+        "population2026": 1091,
+        "delta": -45,
+        "changePercent": -3.9613
+      },
+      {
+        "code": "00801",
+        "name": "元本郷町1丁目",
+        "population2016": 1591,
+        "population2026": 1523,
+        "delta": -68,
+        "changePercent": -4.274
+      },
+      {
+        "code": "00802",
+        "name": "元本郷町2丁目",
+        "population2016": 1281,
+        "population2026": 1366,
+        "delta": 85,
+        "changePercent": 6.6354
+      },
+      {
+        "code": "00803",
+        "name": "元本郷町3丁目",
+        "population2016": 1243,
+        "population2026": 1257,
+        "delta": 14,
+        "changePercent": 1.1263
+      },
+      {
+        "code": "00804",
+        "name": "元本郷町4丁目",
+        "population2016": 1402,
+        "population2026": 1435,
+        "delta": 33,
+        "changePercent": 2.3538
+      },
+      {
+        "code": "00900",
+        "name": "平岡町",
+        "population2016": 1467,
+        "population2026": 1501,
+        "delta": 34,
+        "changePercent": 2.3177
+      },
+      {
+        "code": "01000",
+        "name": "本郷町",
+        "population2016": 546,
+        "population2026": 537,
+        "delta": -9,
+        "changePercent": -1.6484
+      },
+      {
+        "code": "01100",
+        "name": "大横町",
+        "population2016": 937,
+        "population2026": 808,
+        "delta": -129,
+        "changePercent": -13.7673
+      },
+      {
+        "code": "01200",
+        "name": "本町",
+        "population2016": 1934,
+        "population2026": 1829,
+        "delta": -105,
+        "changePercent": -5.4292
+      },
+      {
+        "code": "01301",
+        "name": "元横山町1丁目",
+        "population2016": 1247,
+        "population2026": 1350,
+        "delta": 103,
+        "changePercent": 8.2598
+      },
+      {
+        "code": "01302",
+        "name": "元横山町2丁目",
+        "population2016": 1930,
+        "population2026": 2172,
+        "delta": 242,
+        "changePercent": 12.5389
+      },
+      {
+        "code": "01303",
+        "name": "元横山町3丁目",
+        "population2016": 1834,
+        "population2026": 1736,
+        "delta": -98,
+        "changePercent": -5.3435
+      },
+      {
+        "code": "01400",
+        "name": "田町",
+        "population2016": 263,
+        "population2026": 275,
+        "delta": 12,
+        "changePercent": 4.5627
+      },
+      {
+        "code": "01500",
+        "name": "新町",
+        "population2016": 958,
+        "population2026": 1122,
+        "delta": 164,
+        "changePercent": 17.119
+      },
+      {
+        "code": "01601",
+        "name": "明神町1丁目",
+        "population2016": 2291,
+        "population2026": 2429,
+        "delta": 138,
+        "changePercent": 6.0236
+      },
+      {
+        "code": "01602",
+        "name": "明神町2丁目",
+        "population2016": 2325,
+        "population2026": 2523,
+        "delta": 198,
+        "changePercent": 8.5161
+      },
+      {
+        "code": "01603",
+        "name": "明神町3丁目",
+        "population2016": 1354,
+        "population2026": 1423,
+        "delta": 69,
+        "changePercent": 5.096
+      },
+      {
+        "code": "01604",
+        "name": "明神町4丁目",
+        "population2016": 2850,
+        "population2026": 3087,
+        "delta": 237,
+        "changePercent": 8.3158
+      },
+      {
+        "code": "01701",
+        "name": "子安町1丁目",
+        "population2016": 4946,
+        "population2026": 5337,
+        "delta": 391,
+        "changePercent": 7.9054
+      },
+      {
+        "code": "01702",
+        "name": "子安町2丁目",
+        "population2016": 2989,
+        "population2026": 2996,
+        "delta": 7,
+        "changePercent": 0.2342
+      },
+      {
+        "code": "01703",
+        "name": "子安町3丁目",
+        "population2016": 2185,
+        "population2026": 2157,
+        "delta": -28,
+        "changePercent": -1.2815
+      },
+      {
+        "code": "01704",
+        "name": "子安町4丁目",
+        "population2016": 1799,
+        "population2026": 1778,
+        "delta": -21,
+        "changePercent": -1.1673
+      },
+      {
+        "code": "01800",
+        "name": "東町",
+        "population2016": 125,
+        "population2026": 114,
+        "delta": -11,
+        "changePercent": -8.8
+      },
+      {
+        "code": "01900",
+        "name": "旭町",
+        "population2016": 466,
+        "population2026": 979,
+        "delta": 513,
+        "changePercent": 110.0858
+      },
+      {
+        "code": "02000",
+        "name": "三崎町",
+        "population2016": 428,
+        "population2026": 401,
+        "delta": -27,
+        "changePercent": -6.3084
+      },
+      {
+        "code": "02100",
+        "name": "中町",
+        "population2016": 307,
+        "population2026": 336,
+        "delta": 29,
+        "changePercent": 9.4463
+      },
+      {
+        "code": "02200",
+        "name": "南町",
+        "population2016": 890,
+        "population2026": 1133,
+        "delta": 243,
+        "changePercent": 27.3034
+      },
+      {
+        "code": "02300",
+        "name": "寺町",
+        "population2016": 1444,
+        "population2026": 2009,
+        "delta": 565,
+        "changePercent": 39.1274
+      },
+      {
+        "code": "02400",
+        "name": "万町",
+        "population2016": 2487,
+        "population2026": 2522,
+        "delta": 35,
+        "changePercent": 1.4073
+      },
+      {
+        "code": "02600",
+        "name": "天神町",
+        "population2016": 689,
+        "population2026": 640,
+        "delta": -49,
+        "changePercent": -7.1118
+      },
+      {
+        "code": "02700",
+        "name": "南新町",
+        "population2016": 525,
+        "population2026": 597,
+        "delta": 72,
+        "changePercent": 13.7143
+      },
+      {
+        "code": "02901",
+        "name": "台町1丁目",
+        "population2016": 2062,
+        "population2026": 2008,
+        "delta": -54,
+        "changePercent": -2.6188
+      },
+      {
+        "code": "02902",
+        "name": "台町2丁目",
+        "population2016": 2141,
+        "population2026": 2465,
+        "delta": 324,
+        "changePercent": 15.1331
+      },
+      {
+        "code": "03000",
+        "name": "中野町",
+        "population2016": 4302,
+        "population2026": 3924,
+        "delta": -378,
+        "changePercent": -8.7866
+      },
+      {
+        "code": "03101",
+        "name": "暁町1丁目",
+        "population2016": 3025,
+        "population2026": 2846,
+        "delta": -179,
+        "changePercent": -5.9174
+      },
+      {
+        "code": "03102",
+        "name": "暁町2丁目",
+        "population2016": 2021,
+        "population2026": 1945,
+        "delta": -76,
+        "changePercent": -3.7605
+      },
+      {
+        "code": "03103",
+        "name": "暁町3丁目",
+        "population2016": 1038,
+        "population2026": 990,
+        "delta": -48,
+        "changePercent": -4.6243
+      },
+      {
+        "code": "03201",
+        "name": "中野山王1丁目",
+        "population2016": 1372,
+        "population2026": 1453,
+        "delta": 81,
+        "changePercent": 5.9038
+      },
+      {
+        "code": "03202",
+        "name": "中野山王2丁目",
+        "population2016": 1609,
+        "population2026": 1754,
+        "delta": 145,
+        "changePercent": 9.0118
+      },
+      {
+        "code": "03203",
+        "name": "中野山王3丁目",
+        "population2016": 2815,
+        "population2026": 2481,
+        "delta": -334,
+        "changePercent": -11.865
+      },
+      {
+        "code": "03301",
+        "name": "中野上町1丁目",
+        "population2016": 1709,
+        "population2026": 1640,
+        "delta": -69,
+        "changePercent": -4.0374
+      },
+      {
+        "code": "03302",
+        "name": "中野上町2丁目",
+        "population2016": 1440,
+        "population2026": 1427,
+        "delta": -13,
+        "changePercent": -0.9028
+      },
+      {
+        "code": "03303",
+        "name": "中野上町3丁目",
+        "population2016": 1310,
+        "population2026": 1430,
+        "delta": 120,
+        "changePercent": 9.1603
+      },
+      {
+        "code": "03304",
+        "name": "中野上町4丁目",
+        "population2016": 2156,
+        "population2026": 2029,
+        "delta": -127,
+        "changePercent": -5.8905
+      },
+      {
+        "code": "03305",
+        "name": "中野上町5丁目",
+        "population2016": 1597,
+        "population2026": 1462,
+        "delta": -135,
+        "changePercent": -8.4534
+      },
+      {
+        "code": "03401",
+        "name": "大和田町1丁目",
+        "population2016": 3458,
+        "population2026": 3457,
+        "delta": -1,
+        "changePercent": -0.0289
+      },
+      {
+        "code": "03402",
+        "name": "大和田町2丁目",
+        "population2016": 1478,
+        "population2026": 1434,
+        "delta": -44,
+        "changePercent": -2.977
+      },
+      {
+        "code": "03403",
+        "name": "大和田町3丁目",
+        "population2016": 2517,
+        "population2026": 2461,
+        "delta": -56,
+        "changePercent": -2.2249
+      },
+      {
+        "code": "03404",
+        "name": "大和田町4丁目",
+        "population2016": 1305,
+        "population2026": 1278,
+        "delta": -27,
+        "changePercent": -2.069
+      },
+      {
+        "code": "03405",
+        "name": "大和田町5丁目",
+        "population2016": 2220,
+        "population2026": 2539,
+        "delta": 319,
+        "changePercent": 14.3694
+      },
+      {
+        "code": "03406",
+        "name": "大和田町6丁目",
+        "population2016": 3457,
+        "population2026": 3211,
+        "delta": -246,
+        "changePercent": -7.116
+      },
+      {
+        "code": "03407",
+        "name": "大和田町7丁目",
+        "population2016": 1965,
+        "population2026": 1960,
+        "delta": -5,
+        "changePercent": -0.2545
+      },
+      {
+        "code": "03500",
+        "name": "富士見町",
+        "population2016": 1449,
+        "population2026": 1452,
+        "delta": 3,
+        "changePercent": 0.207
+      },
+      {
+        "code": "03600",
+        "name": "緑町",
+        "population2016": 4559,
+        "population2026": 4476,
+        "delta": -83,
+        "changePercent": -1.8206
+      },
+      {
+        "code": "03700",
+        "name": "清川町",
+        "population2016": 1308,
+        "population2026": 1237,
+        "delta": -71,
+        "changePercent": -5.4281
+      },
+      {
+        "code": "10100",
+        "name": "東浅川町",
+        "population2016": 11157,
+        "population2026": 12288,
+        "delta": 1131,
+        "changePercent": 10.1371
+      },
+      {
+        "code": "10200",
+        "name": "初沢町",
+        "population2016": 3375,
+        "population2026": 3212,
+        "delta": -163,
+        "changePercent": -4.8296
+      },
+      {
+        "code": "10300",
+        "name": "高尾町",
+        "population2016": 2958,
+        "population2026": 2888,
+        "delta": -70,
+        "changePercent": -2.3665
+      },
+      {
+        "code": "10400",
+        "name": "南浅川町",
+        "population2016": 392,
+        "population2026": 250,
+        "delta": -142,
+        "changePercent": -36.2245
+      },
+      {
+        "code": "10500",
+        "name": "西浅川町",
+        "population2016": 726,
+        "population2026": 680,
+        "delta": -46,
+        "changePercent": -6.3361
+      },
+      {
+        "code": "10600",
+        "name": "裏高尾町",
+        "population2016": 1245,
+        "population2026": 1104,
+        "delta": -141,
+        "changePercent": -11.3253
+      },
+      {
+        "code": "10700",
+        "name": "廿里町",
+        "population2016": 721,
+        "population2026": 685,
+        "delta": -36,
+        "changePercent": -4.9931
+      },
+      {
+        "code": "15100",
+        "name": "下柚木",
+        "population2016": 2784,
+        "population2026": 2788,
+        "delta": 4,
+        "changePercent": 0.1437
+      },
+      {
+        "code": "15102",
+        "name": "下柚木2丁目",
+        "population2016": 2479,
+        "population2026": 2714,
+        "delta": 235,
+        "changePercent": 9.4796
+      },
+      {
+        "code": "15103",
+        "name": "下柚木3丁目",
+        "population2016": 3646,
+        "population2026": 3264,
+        "delta": -382,
+        "changePercent": -10.4772
+      },
+      {
+        "code": "15200",
+        "name": "上柚木",
+        "population2016": 2557,
+        "population2026": 2610,
+        "delta": 53,
+        "changePercent": 2.0727
+      },
+      {
+        "code": "15202",
+        "name": "上柚木2丁目",
+        "population2016": 2243,
+        "population2026": 2330,
+        "delta": 87,
+        "changePercent": 3.8787
+      },
+      {
+        "code": "15203",
+        "name": "上柚木3丁目",
+        "population2016": 6312,
+        "population2026": 5658,
+        "delta": -654,
+        "changePercent": -10.3612
+      },
+      {
+        "code": "15300",
+        "name": "中山",
+        "population2016": 899,
+        "population2026": 868,
+        "delta": -31,
+        "changePercent": -3.4483
+      },
+      {
+        "code": "15400",
+        "name": "鑓水",
+        "population2016": 1773,
+        "population2026": 1723,
+        "delta": -50,
+        "changePercent": -2.8201
+      },
+      {
+        "code": "15402",
+        "name": "鑓水2丁目",
+        "population2016": 7935,
+        "population2026": 8349,
+        "delta": 414,
+        "changePercent": 5.2174
+      },
+      {
+        "code": "15501",
+        "name": "南大沢1丁目",
+        "population2016": 1373,
+        "population2026": 1507,
+        "delta": 134,
+        "changePercent": 9.7597
+      },
+      {
+        "code": "15502",
+        "name": "南大沢2丁目",
+        "population2016": 2311,
+        "population2026": 2388,
+        "delta": 77,
+        "changePercent": 3.3319
+      },
+      {
+        "code": "15503",
+        "name": "南大沢3丁目",
+        "population2016": 4185,
+        "population2026": 3580,
+        "delta": -605,
+        "changePercent": -14.4564
+      },
+      {
+        "code": "15504",
+        "name": "南大沢4丁目",
+        "population2016": 4231,
+        "population2026": 3836,
+        "delta": -395,
+        "changePercent": -9.3359
+      },
+      {
+        "code": "15505",
+        "name": "南大沢5丁目",
+        "population2016": 5109,
+        "population2026": 4579,
+        "delta": -530,
+        "changePercent": -10.3739
+      },
+      {
+        "code": "15600",
+        "name": "越野",
+        "population2016": 3862,
+        "population2026": 4122,
+        "delta": 260,
+        "changePercent": 6.7323
+      },
+      {
+        "code": "15700",
+        "name": "松木",
+        "population2016": 7235,
+        "population2026": 7240,
+        "delta": 5,
+        "changePercent": 0.0691
+      },
+      {
+        "code": "15801",
+        "name": "別所1丁目",
+        "population2016": 11656,
+        "population2026": 10821,
+        "delta": -835,
+        "changePercent": -7.1637
+      },
+      {
+        "code": "15802",
+        "name": "別所2丁目",
+        "population2016": 9781,
+        "population2026": 8745,
+        "delta": -1036,
+        "changePercent": -10.592
+      },
+      {
+        "code": "15901",
+        "name": "南陽台1丁目",
+        "population2016": 841,
+        "population2026": 759,
+        "delta": -82,
+        "changePercent": -9.7503
+      },
+      {
+        "code": "15902",
+        "name": "南陽台2丁目",
+        "population2016": 1425,
+        "population2026": 1292,
+        "delta": -133,
+        "changePercent": -9.3333
+      },
+      {
+        "code": "15903",
+        "name": "南陽台3丁目",
+        "population2016": 963,
+        "population2026": 868,
+        "delta": -95,
+        "changePercent": -9.865
+      },
+      {
+        "code": "16000",
+        "name": "堀之内",
+        "population2016": 3514,
+        "population2026": 4109,
+        "delta": 595,
+        "changePercent": 16.9323
+      },
+      {
+        "code": "16002",
+        "name": "堀之内2丁目",
+        "population2016": 1162,
+        "population2026": 1323,
+        "delta": 161,
+        "changePercent": 13.8554
+      },
+      {
+        "code": "16003",
+        "name": "堀之内3丁目",
+        "population2016": 2922,
+        "population2026": 3364,
+        "delta": 442,
+        "changePercent": 15.1266
+      },
+      {
+        "code": "16100",
+        "name": "東中野",
+        "population2016": 4291,
+        "population2026": 5660,
+        "delta": 1369,
+        "changePercent": 31.904
+      },
+      {
+        "code": "16200",
+        "name": "大塚",
+        "population2016": 6903,
+        "population2026": 7465,
+        "delta": 562,
+        "changePercent": 8.1414
+      },
+      {
+        "code": "16300",
+        "name": "鹿島",
+        "population2016": 3108,
+        "population2026": 2744,
+        "delta": -364,
+        "changePercent": -11.7117
+      },
+      {
+        "code": "16400",
+        "name": "松が谷",
+        "population2016": 5069,
+        "population2026": 5101,
+        "delta": 32,
+        "changePercent": 0.6313
+      },
+      {
+        "code": "20100",
+        "name": "並木町",
+        "population2016": 3423,
+        "population2026": 3243,
+        "delta": -180,
+        "changePercent": -5.2585
+      },
+      {
+        "code": "20201",
+        "name": "散田町1丁目",
+        "population2016": 2008,
+        "population2026": 1872,
+        "delta": -136,
+        "changePercent": -6.7729
+      },
+      {
+        "code": "20202",
+        "name": "散田町2丁目",
+        "population2016": 2877,
+        "population2026": 2803,
+        "delta": -74,
+        "changePercent": -2.5721
+      },
+      {
+        "code": "20203",
+        "name": "散田町3丁目",
+        "population2016": 3632,
+        "population2026": 3721,
+        "delta": 89,
+        "changePercent": 2.4504
+      },
+      {
+        "code": "20204",
+        "name": "散田町4丁目",
+        "population2016": 2448,
+        "population2026": 2503,
+        "delta": 55,
+        "changePercent": 2.2467
+      },
+      {
+        "code": "20205",
+        "name": "散田町5丁目",
+        "population2016": 2963,
+        "population2026": 2841,
+        "delta": -122,
+        "changePercent": -4.1174
+      },
+      {
+        "code": "20300",
+        "name": "山田町",
+        "population2016": 2799,
+        "population2026": 2960,
+        "delta": 161,
+        "changePercent": 5.7521
+      },
+      {
+        "code": "20401",
+        "name": "めじろ台1丁目",
+        "population2016": 2355,
+        "population2026": 2253,
+        "delta": -102,
+        "changePercent": -4.3312
+      },
+      {
+        "code": "20402",
+        "name": "めじろ台2丁目",
+        "population2016": 2753,
+        "population2026": 2657,
+        "delta": -96,
+        "changePercent": -3.4871
+      },
+      {
+        "code": "20403",
+        "name": "めじろ台3丁目",
+        "population2016": 1455,
+        "population2026": 1414,
+        "delta": -41,
+        "changePercent": -2.8179
+      },
+      {
+        "code": "20404",
+        "name": "めじろ台4丁目",
+        "population2016": 1814,
+        "population2026": 1713,
+        "delta": -101,
+        "changePercent": -5.5678
+      },
+      {
+        "code": "20500",
+        "name": "長房町",
+        "population2016": 13567,
+        "population2026": 13220,
+        "delta": -347,
+        "changePercent": -2.5577
+      },
+      {
+        "code": "20551",
+        "name": "城山手1丁目",
+        "population2016": 1021,
+        "population2026": 845,
+        "delta": -176,
+        "changePercent": -17.238
+      },
+      {
+        "code": "20552",
+        "name": "城山手2丁目",
+        "population2016": 933,
+        "population2026": 737,
+        "delta": -196,
+        "changePercent": -21.0075
+      },
+      {
+        "code": "20600",
+        "name": "狭間町",
+        "population2016": 6381,
+        "population2026": 5858,
+        "delta": -523,
+        "changePercent": -8.1962
+      },
+      {
+        "code": "25100",
+        "name": "椚田町",
+        "population2016": 8710,
+        "population2026": 8690,
+        "delta": -20,
+        "changePercent": -0.2296
+      },
+      {
+        "code": "25200",
+        "name": "館町",
+        "population2016": 12086,
+        "population2026": 11347,
+        "delta": -739,
+        "changePercent": -6.1145
+      },
+      {
+        "code": "25300",
+        "name": "寺田町",
+        "population2016": 6395,
+        "population2026": 5994,
+        "delta": -401,
+        "changePercent": -6.2705
+      },
+      {
+        "code": "25400",
+        "name": "大船町",
+        "population2016": 2047,
+        "population2026": 2040,
+        "delta": -7,
+        "changePercent": -0.342
+      },
+      {
+        "code": "30100",
+        "name": "大楽寺町",
+        "population2016": 5438,
+        "population2026": 5114,
+        "delta": -324,
+        "changePercent": -5.9581
+      },
+      {
+        "code": "30200",
+        "name": "上壱分方町",
+        "population2016": 3718,
+        "population2026": 3829,
+        "delta": 111,
+        "changePercent": 2.9855
+      },
+      {
+        "code": "30300",
+        "name": "諏訪町",
+        "population2016": 5150,
+        "population2026": 4863,
+        "delta": -287,
+        "changePercent": -5.5728
+      },
+      {
+        "code": "30400",
+        "name": "四谷町",
+        "population2016": 2798,
+        "population2026": 2438,
+        "delta": -360,
+        "changePercent": -12.8663
+      },
+      {
+        "code": "30500",
+        "name": "叶谷町",
+        "population2016": 1875,
+        "population2026": 1868,
+        "delta": -7,
+        "changePercent": -0.3733
+      },
+      {
+        "code": "30600",
+        "name": "泉町",
+        "population2016": 3352,
+        "population2026": 3204,
+        "delta": -148,
+        "changePercent": -4.4153
+      },
+      {
+        "code": "30700",
+        "name": "横川町",
+        "population2016": 11046,
+        "population2026": 10611,
+        "delta": -435,
+        "changePercent": -3.9381
+      },
+      {
+        "code": "30800",
+        "name": "弐分方町",
+        "population2016": 4488,
+        "population2026": 4605,
+        "delta": 117,
+        "changePercent": 2.607
+      },
+      {
+        "code": "30900",
+        "name": "川町",
+        "population2016": 2428,
+        "population2026": 2067,
+        "delta": -361,
+        "changePercent": -14.8682
+      },
+      {
+        "code": "31001",
+        "name": "元八王子町1丁目",
+        "population2016": 2214,
+        "population2026": 1969,
+        "delta": -245,
+        "changePercent": -11.0659
+      },
+      {
+        "code": "31002",
+        "name": "元八王子町2丁目",
+        "population2016": 5936,
+        "population2026": 5563,
+        "delta": -373,
+        "changePercent": -6.2837
+      },
+      {
+        "code": "31003",
+        "name": "元八王子町3丁目",
+        "population2016": 3733,
+        "population2026": 3339,
+        "delta": -394,
+        "changePercent": -10.5545
+      },
+      {
+        "code": "35100",
+        "name": "下恩方町",
+        "population2016": 7161,
+        "population2026": 6896,
+        "delta": -265,
+        "changePercent": -3.7006
+      },
+      {
+        "code": "35200",
+        "name": "上恩方町",
+        "population2016": 800,
+        "population2026": 623,
+        "delta": -177,
+        "changePercent": -22.125
+      },
+      {
+        "code": "35400",
+        "name": "小津町",
+        "population2016": 246,
+        "population2026": 178,
+        "delta": -68,
+        "changePercent": -27.6423
+      },
+      {
+        "code": "40300",
+        "name": "犬目町",
+        "population2016": 6511,
+        "population2026": 6342,
+        "delta": -169,
+        "changePercent": -2.5956
+      },
+      {
+        "code": "40400",
+        "name": "楢原町",
+        "population2016": 8636,
+        "population2026": 9107,
+        "delta": 471,
+        "changePercent": 5.4539
+      },
+      {
+        "code": "45100",
+        "name": "尾崎町",
+        "population2016": 105,
+        "population2026": 106,
+        "delta": 1,
+        "changePercent": 0.9524
+      },
+      {
+        "code": "45200",
+        "name": "左入町",
+        "population2016": 1957,
+        "population2026": 1782,
+        "delta": -175,
+        "changePercent": -8.9423
+      },
+      {
+        "code": "45301",
+        "name": "滝山町1丁目",
+        "population2016": 979,
+        "population2026": 760,
+        "delta": -219,
+        "changePercent": -22.3698
+      },
+      {
+        "code": "45302",
+        "name": "滝山町2丁目",
+        "population2016": 636,
+        "population2026": 500,
+        "delta": -136,
+        "changePercent": -21.3836
+      },
+      {
+        "code": "45400",
+        "name": "梅坪町",
+        "population2016": 307,
+        "population2026": 274,
+        "delta": -33,
+        "changePercent": -10.7492
+      },
+      {
+        "code": "45500",
+        "name": "谷野町",
+        "population2016": 1548,
+        "population2026": 1473,
+        "delta": -75,
+        "changePercent": -4.845
+      },
+      {
+        "code": "45551",
+        "name": "みつい台1丁目",
+        "population2016": 780,
+        "population2026": 695,
+        "delta": -85,
+        "changePercent": -10.8974
+      },
+      {
+        "code": "45552",
+        "name": "みつい台2丁目",
+        "population2016": 1579,
+        "population2026": 1470,
+        "delta": -109,
+        "changePercent": -6.9031
+      },
+      {
+        "code": "45601",
+        "name": "丹木町1丁目",
+        "population2016": 1543,
+        "population2026": 1399,
+        "delta": -144,
+        "changePercent": -9.3325
+      },
+      {
+        "code": "45602",
+        "name": "丹木町2丁目",
+        "population2016": 803,
+        "population2026": 688,
+        "delta": -115,
+        "changePercent": -14.3213
+      },
+      {
+        "code": "45603",
+        "name": "丹木町3丁目",
+        "population2016": 644,
+        "population2026": 584,
+        "delta": -60,
+        "changePercent": -9.3168
+      },
+      {
+        "code": "45701",
+        "name": "加住町1丁目",
+        "population2016": 429,
+        "population2026": 457,
+        "delta": 28,
+        "changePercent": 6.5268
+      },
+      {
+        "code": "45702",
+        "name": "加住町2丁目",
+        "population2016": 129,
+        "population2026": 92,
+        "delta": -37,
+        "changePercent": -28.6822
+      },
+      {
+        "code": "45800",
+        "name": "宮下町",
+        "population2016": 1412,
+        "population2026": 1305,
+        "delta": -107,
+        "changePercent": -7.5779
+      },
+      {
+        "code": "45900",
+        "name": "戸吹町",
+        "population2016": 1508,
+        "population2026": 1302,
+        "delta": -206,
+        "changePercent": -13.6605
+      },
+      {
+        "code": "46000",
+        "name": "高月町",
+        "population2016": 378,
+        "population2026": 298,
+        "delta": -80,
+        "changePercent": -21.164
+      },
+      {
+        "code": "50100",
+        "name": "小比企町",
+        "population2016": 6581,
+        "population2026": 6669,
+        "delta": 88,
+        "changePercent": 1.3372
+      },
+      {
+        "code": "50200",
+        "name": "片倉町",
+        "population2016": 12747,
+        "population2026": 12579,
+        "delta": -168,
+        "changePercent": -1.318
+      },
+      {
+        "code": "50251",
+        "name": "西片倉1丁目",
+        "population2016": 572,
+        "population2026": 553,
+        "delta": -19,
+        "changePercent": -3.3217
+      },
+      {
+        "code": "50252",
+        "name": "西片倉2丁目",
+        "population2016": 1070,
+        "population2026": 1142,
+        "delta": 72,
+        "changePercent": 6.729
+      },
+      {
+        "code": "50253",
+        "name": "西片倉3丁目",
+        "population2016": 953,
+        "population2026": 1149,
+        "delta": 196,
+        "changePercent": 20.5666
+      },
+      {
+        "code": "50300",
+        "name": "宇津貫町",
+        "population2016": 65,
+        "population2026": 56,
+        "delta": -9,
+        "changePercent": -13.8462
+      },
+      {
+        "code": "50401",
+        "name": "みなみ野1丁目",
+        "population2016": 1664,
+        "population2026": 1642,
+        "delta": -22,
+        "changePercent": -1.3221
+      },
+      {
+        "code": "50402",
+        "name": "みなみ野2丁目",
+        "population2016": 880,
+        "population2026": 918,
+        "delta": 38,
+        "changePercent": 4.3182
+      },
+      {
+        "code": "50403",
+        "name": "みなみ野3丁目",
+        "population2016": 1878,
+        "population2026": 1804,
+        "delta": -74,
+        "changePercent": -3.9404
+      },
+      {
+        "code": "50404",
+        "name": "みなみ野4丁目",
+        "population2016": 2168,
+        "population2026": 2068,
+        "delta": -100,
+        "changePercent": -4.6125
+      },
+      {
+        "code": "50405",
+        "name": "みなみ野5丁目",
+        "population2016": 2267,
+        "population2026": 2868,
+        "delta": 601,
+        "changePercent": 26.5108
+      },
+      {
+        "code": "50406",
+        "name": "みなみ野6丁目",
+        "population2016": 678,
+        "population2026": 613,
+        "delta": -65,
+        "changePercent": -9.587
+      },
+      {
+        "code": "50501",
+        "name": "兵衛1丁目",
+        "population2016": 1313,
+        "population2026": 1322,
+        "delta": 9,
+        "changePercent": 0.6855
+      },
+      {
+        "code": "50502",
+        "name": "兵衛2丁目",
+        "population2016": 919,
+        "population2026": 904,
+        "delta": -15,
+        "changePercent": -1.6322
+      },
+      {
+        "code": "50601",
+        "name": "七国1丁目",
+        "population2016": 949,
+        "population2026": 1023,
+        "delta": 74,
+        "changePercent": 7.7977
+      },
+      {
+        "code": "50602",
+        "name": "七国2丁目",
+        "population2016": 1255,
+        "population2026": 1385,
+        "delta": 130,
+        "changePercent": 10.3586
+      },
+      {
+        "code": "50603",
+        "name": "七国3丁目",
+        "population2016": 1397,
+        "population2026": 2070,
+        "delta": 673,
+        "changePercent": 48.1747
+      },
+      {
+        "code": "50604",
+        "name": "七国4丁目",
+        "population2016": 2179,
+        "population2026": 2188,
+        "delta": 9,
+        "changePercent": 0.413
+      },
+      {
+        "code": "50605",
+        "name": "七国5丁目",
+        "population2016": 2220,
+        "population2026": 2165,
+        "delta": -55,
+        "changePercent": -2.4775
+      },
+      {
+        "code": "50606",
+        "name": "七国6丁目",
+        "population2016": 2103,
+        "population2026": 1918,
+        "delta": -185,
+        "changePercent": -8.797
+      },
+      {
+        "code": "55100",
+        "name": "北野町",
+        "population2016": 7697,
+        "population2026": 7875,
+        "delta": 178,
+        "changePercent": 2.3126
+      },
+      {
+        "code": "55300",
+        "name": "打越町",
+        "population2016": 9251,
+        "population2026": 9393,
+        "delta": 142,
+        "changePercent": 1.535
+      },
+      {
+        "code": "55351",
+        "name": "北野台1丁目",
+        "population2016": 1450,
+        "population2026": 1268,
+        "delta": -182,
+        "changePercent": -12.5517
+      },
+      {
+        "code": "55352",
+        "name": "北野台2丁目",
+        "population2016": 1258,
+        "population2026": 1171,
+        "delta": -87,
+        "changePercent": -6.9157
+      },
+      {
+        "code": "55353",
+        "name": "北野台3丁目",
+        "population2016": 1553,
+        "population2026": 1450,
+        "delta": -103,
+        "changePercent": -6.6323
+      },
+      {
+        "code": "55354",
+        "name": "北野台4丁目",
+        "population2016": 1127,
+        "population2026": 1024,
+        "delta": -103,
+        "changePercent": -9.1393
+      },
+      {
+        "code": "55355",
+        "name": "北野台5丁目",
+        "population2016": 1731,
+        "population2026": 1453,
+        "delta": -278,
+        "changePercent": -16.0601
+      },
+      {
+        "code": "55400",
+        "name": "長沼町",
+        "population2016": 7884,
+        "population2026": 7828,
+        "delta": -56,
+        "changePercent": -0.7103
+      },
+      {
+        "code": "55501",
+        "name": "絹ケ丘1丁目",
+        "population2016": 2300,
+        "population2026": 2172,
+        "delta": -128,
+        "changePercent": -5.5652
+      },
+      {
+        "code": "55502",
+        "name": "絹ケ丘2丁目",
+        "population2016": 2059,
+        "population2026": 1957,
+        "delta": -102,
+        "changePercent": -4.9539
+      },
+      {
+        "code": "55503",
+        "name": "絹ケ丘3丁目",
+        "population2016": 1692,
+        "population2026": 1514,
+        "delta": -178,
+        "changePercent": -10.5201
+      },
+      {
+        "code": "60100",
+        "name": "高倉町",
+        "population2016": 3342,
+        "population2026": 3430,
+        "delta": 88,
+        "changePercent": 2.6332
+      },
+      {
+        "code": "60200",
+        "name": "石川町",
+        "population2016": 10674,
+        "population2026": 10194,
+        "delta": -480,
+        "changePercent": -4.4969
+      },
+      {
+        "code": "60300",
+        "name": "宇津木町",
+        "population2016": 3372,
+        "population2026": 3218,
+        "delta": -154,
+        "changePercent": -4.567
+      },
+      {
+        "code": "60400",
+        "name": "平町",
+        "population2016": 409,
+        "population2026": 357,
+        "delta": -52,
+        "changePercent": -12.7139
+      },
+      {
+        "code": "60500",
+        "name": "小宮町",
+        "population2016": 5472,
+        "population2026": 5401,
+        "delta": -71,
+        "changePercent": -1.2975
+      },
+      {
+        "code": "60601",
+        "name": "久保山町1丁目",
+        "population2016": 2647,
+        "population2026": 2443,
+        "delta": -204,
+        "changePercent": -7.7068
+      },
+      {
+        "code": "60602",
+        "name": "久保山町2丁目",
+        "population2016": 2615,
+        "population2026": 2493,
+        "delta": -122,
+        "changePercent": -4.6654
+      },
+      {
+        "code": "60700",
+        "name": "大谷町",
+        "population2016": 3630,
+        "population2026": 3763,
+        "delta": 133,
+        "changePercent": 3.6639
+      },
+      {
+        "code": "60800",
+        "name": "丸山町",
+        "population2016": 1228,
+        "population2026": 1078,
+        "delta": -150,
+        "changePercent": -12.215
+      }
+    ],
+    "deltaIncreaseTop": [
+      {
+        "code": "00200",
+        "name": "八日町",
+        "population2016": 2879,
+        "population2026": 5068,
+        "delta": 2189,
+        "changePercent": 76.0333
+      },
+      {
+        "code": "16100",
+        "name": "東中野",
+        "population2016": 4291,
+        "population2026": 5660,
+        "delta": 1369,
+        "changePercent": 31.904
+      },
+      {
+        "code": "10100",
+        "name": "東浅川町",
+        "population2016": 11157,
+        "population2026": 12288,
+        "delta": 1131,
+        "changePercent": 10.1371
+      },
+      {
+        "code": "00100",
+        "name": "横山町",
+        "population2016": 2040,
+        "population2026": 3109,
+        "delta": 1069,
+        "changePercent": 52.402
+      },
+      {
+        "code": "50603",
+        "name": "七国3丁目",
+        "population2016": 1397,
+        "population2026": 2070,
+        "delta": 673,
+        "changePercent": 48.1747
+      },
+      {
+        "code": "50405",
+        "name": "みなみ野5丁目",
+        "population2016": 2267,
+        "population2026": 2868,
+        "delta": 601,
+        "changePercent": 26.5108
+      },
+      {
+        "code": "16000",
+        "name": "堀之内",
+        "population2016": 3514,
+        "population2026": 4109,
+        "delta": 595,
+        "changePercent": 16.9323
+      },
+      {
+        "code": "02300",
+        "name": "寺町",
+        "population2016": 1444,
+        "population2026": 2009,
+        "delta": 565,
+        "changePercent": 39.1274
+      },
+      {
+        "code": "16200",
+        "name": "大塚",
+        "population2016": 6903,
+        "population2026": 7465,
+        "delta": 562,
+        "changePercent": 8.1414
+      },
+      {
+        "code": "00300",
+        "name": "八幡町",
+        "population2016": 1907,
+        "population2026": 2427,
+        "delta": 520,
+        "changePercent": 27.268
+      }
+    ],
+    "deltaDecreaseTop": [
+      {
+        "code": "15802",
+        "name": "別所2丁目",
+        "population2016": 9781,
+        "population2026": 8745,
+        "delta": -1036,
+        "changePercent": -10.592
+      },
+      {
+        "code": "15801",
+        "name": "別所1丁目",
+        "population2016": 11656,
+        "population2026": 10821,
+        "delta": -835,
+        "changePercent": -7.1637
+      },
+      {
+        "code": "25200",
+        "name": "館町",
+        "population2016": 12086,
+        "population2026": 11347,
+        "delta": -739,
+        "changePercent": -6.1145
+      },
+      {
+        "code": "15203",
+        "name": "上柚木3丁目",
+        "population2016": 6312,
+        "population2026": 5658,
+        "delta": -654,
+        "changePercent": -10.3612
+      },
+      {
+        "code": "15503",
+        "name": "南大沢3丁目",
+        "population2016": 4185,
+        "population2026": 3580,
+        "delta": -605,
+        "changePercent": -14.4564
+      },
+      {
+        "code": "15505",
+        "name": "南大沢5丁目",
+        "population2016": 5109,
+        "population2026": 4579,
+        "delta": -530,
+        "changePercent": -10.3739
+      },
+      {
+        "code": "20600",
+        "name": "狭間町",
+        "population2016": 6381,
+        "population2026": 5858,
+        "delta": -523,
+        "changePercent": -8.1962
+      },
+      {
+        "code": "60200",
+        "name": "石川町",
+        "population2016": 10674,
+        "population2026": 10194,
+        "delta": -480,
+        "changePercent": -4.4969
+      },
+      {
+        "code": "30700",
+        "name": "横川町",
+        "population2016": 11046,
+        "population2026": 10611,
+        "delta": -435,
+        "changePercent": -3.9381
+      },
+      {
+        "code": "25300",
+        "name": "寺田町",
+        "population2016": 6395,
+        "population2026": 5994,
+        "delta": -401,
+        "changePercent": -6.2705
+      }
+    ],
+    "rateEligibleCount": 190,
+    "rateExcludedSmallBaseline": [
+      {
+        "code": "50300",
+        "name": "宇津貫町",
+        "population2016": 65,
+        "population2026": 56,
+        "delta": -9
+      }
+    ],
+    "rateIncreaseTop": [
+      {
+        "code": "01900",
+        "name": "旭町",
+        "population2016": 466,
+        "population2026": 979,
+        "delta": 513,
+        "changePercent": 110.0858
+      },
+      {
+        "code": "00200",
+        "name": "八日町",
+        "population2016": 2879,
+        "population2026": 5068,
+        "delta": 2189,
+        "changePercent": 76.0333
+      },
+      {
+        "code": "00100",
+        "name": "横山町",
+        "population2016": 2040,
+        "population2026": 3109,
+        "delta": 1069,
+        "changePercent": 52.402
+      },
+      {
+        "code": "50603",
+        "name": "七国3丁目",
+        "population2016": 1397,
+        "population2026": 2070,
+        "delta": 673,
+        "changePercent": 48.1747
+      },
+      {
+        "code": "02300",
+        "name": "寺町",
+        "population2016": 1444,
+        "population2026": 2009,
+        "delta": 565,
+        "changePercent": 39.1274
+      },
+      {
+        "code": "16100",
+        "name": "東中野",
+        "population2016": 4291,
+        "population2026": 5660,
+        "delta": 1369,
+        "changePercent": 31.904
+      },
+      {
+        "code": "02200",
+        "name": "南町",
+        "population2016": 890,
+        "population2026": 1133,
+        "delta": 243,
+        "changePercent": 27.3034
+      },
+      {
+        "code": "00300",
+        "name": "八幡町",
+        "population2016": 1907,
+        "population2026": 2427,
+        "delta": 520,
+        "changePercent": 27.268
+      },
+      {
+        "code": "50405",
+        "name": "みなみ野5丁目",
+        "population2016": 2267,
+        "population2026": 2868,
+        "delta": 601,
+        "changePercent": 26.5108
+      },
+      {
+        "code": "50253",
+        "name": "西片倉3丁目",
+        "population2016": 953,
+        "population2026": 1149,
+        "delta": 196,
+        "changePercent": 20.5666
+      }
+    ],
+    "rateDecreaseTop": [
+      {
+        "code": "10400",
+        "name": "南浅川町",
+        "population2016": 392,
+        "population2026": 250,
+        "delta": -142,
+        "changePercent": -36.2245
+      },
+      {
+        "code": "45702",
+        "name": "加住町2丁目",
+        "population2016": 129,
+        "population2026": 92,
+        "delta": -37,
+        "changePercent": -28.6822
+      },
+      {
+        "code": "35400",
+        "name": "小津町",
+        "population2016": 246,
+        "population2026": 178,
+        "delta": -68,
+        "changePercent": -27.6423
+      },
+      {
+        "code": "45301",
+        "name": "滝山町1丁目",
+        "population2016": 979,
+        "population2026": 760,
+        "delta": -219,
+        "changePercent": -22.3698
+      },
+      {
+        "code": "35200",
+        "name": "上恩方町",
+        "population2016": 800,
+        "population2026": 623,
+        "delta": -177,
+        "changePercent": -22.125
+      },
+      {
+        "code": "45302",
+        "name": "滝山町2丁目",
+        "population2016": 636,
+        "population2026": 500,
+        "delta": -136,
+        "changePercent": -21.3836
+      },
+      {
+        "code": "46000",
+        "name": "高月町",
+        "population2016": 378,
+        "population2026": 298,
+        "delta": -80,
+        "changePercent": -21.164
+      },
+      {
+        "code": "20552",
+        "name": "城山手2丁目",
+        "population2016": 933,
+        "population2026": 737,
+        "delta": -196,
+        "changePercent": -21.0075
+      },
+      {
+        "code": "20551",
+        "name": "城山手1丁目",
+        "population2016": 1021,
+        "population2026": 845,
+        "delta": -176,
+        "changePercent": -17.238
+      },
+      {
+        "code": "55355",
+        "name": "北野台5丁目",
+        "population2016": 1731,
+        "population2026": 1453,
+        "delta": -278,
+        "changePercent": -16.0601
+      }
+    ]
+  },
+  "excludedRegions": {
+    "count": 8,
+    "confirmedCount": 4,
+    "effectiveDateUnconfirmedCount": 4,
+    "rows": [
+      {
+        "code": "40200",
+        "name": "上川町",
+        "population2016": 1608,
+        "population2026": 1385,
+        "reasonType": "effective-date-unconfirmed",
+        "reason": "区域変更の議決を確認。換地処分後の施行日が未確認のため比較対象外。"
+      },
+      {
+        "code": "02500",
+        "name": "上野町",
+        "population2016": 2842,
+        "population2026": 2884,
+        "reasonType": "confirmed",
+        "reason": "2024年8月10日に区域変更を確認。2016年との連続比較から除外。"
+      },
+      {
+        "code": "02903",
+        "name": "台町3丁目",
+        "population2016": 2746,
+        "population2026": 2780,
+        "reasonType": "confirmed",
+        "reason": "2024年8月10日に区域変更を確認。2016年との連続比較から除外。"
+      },
+      {
+        "code": "02904",
+        "name": "台町4丁目",
+        "population2016": 2851,
+        "population2026": 2827,
+        "reasonType": "confirmed",
+        "reason": "2024年8月10日に区域変更を確認。2016年との連続比較から除外。"
+      },
+      {
+        "code": "02800",
+        "name": "小門町",
+        "population2016": 1686,
+        "population2026": 1810,
+        "reasonType": "confirmed",
+        "reason": "2024年8月10日に区域変更を確認。2016年との連続比較から除外。"
+      },
+      {
+        "code": "40100",
+        "name": "川口町",
+        "population2016": 12261,
+        "population2026": 12034,
+        "reasonType": "effective-date-unconfirmed",
+        "reason": "区域変更の議決を確認。換地処分後の施行日が未確認のため比較対象外。"
+      },
+      {
+        "code": "40500",
+        "name": "美山町",
+        "population2016": 2843,
+        "population2026": 2349,
+        "reasonType": "effective-date-unconfirmed",
+        "reason": "区域変更の議決を確認。換地処分後の施行日が未確認のため比較対象外。"
+      },
+      {
+        "code": "35300",
+        "name": "西寺方町",
+        "population2016": 5814,
+        "population2026": 5207,
+        "reasonType": "effective-date-unconfirmed",
+        "reason": "区域変更の議決を確認。換地処分後の施行日が未確認のため比較対象外。"
+      }
+    ]
+  },
+  "csvSensitivity": {
+    "year": 2026,
+    "cityTotalCsv": 559329,
+    "cityTotalExcel": 559320,
+    "difference": 9,
+    "tenYearDeltaCsvAlternative": -3998,
+    "cause": "未確認。市の人口Excel系列を主資料とし、CSVとの差を手補正していない。"
+  },
+  "diagnosticNote": "美山町・西寺方町は区域変更関連の除外前に減少上位10町丁へ入った。境界施行日の確認ができないため比較対象外とし、順位から消える影響を方法欄に示す。",
+  "limitations": [
+    "191町丁を全市網羅とは扱わない。",
+    "残る191町丁の境界が10年間不変と完全に立証したわけではない。",
+    "人口増減から転入出、出生死亡、開発などの原因を特定しない。",
+    "年齢区分の増減は同じ人々を追跡した結果ではなく、区分間の移動を含む。"
+  ],
+  "sourceHashes": {
+    "annual-population.csv": "6ad9ff37405261d1dd108e7dfbcef1cb3176b3e4f1b01c6a63f2c7b6d65cf65e",
+    "town-code-crosswalk.csv": "c03195e73f9c39b515b74a0de06f413355eec547f3fb11391257ccc0e5d3e8b6",
+    "age-2016-09.csv": "72bc1da266dbdf75e587af555469d7398e7811cc3c04d404d951126645c35db0",
+    "age-2026-09.csv": "423de05c1372b29cda7f86073d5c5285cd262e0140e2c0bf28c4dc29fcd9ee49",
+    "excluded-region-reference.csv": "4d88577ff0952f5fb646bdea6011060c7ab5620351771bce1bf97f69a5d78690",
+    "csv-2026-discrepancies.csv": "e1f42c3fa285726785d05bc58f69de2fe3671df5d2a38d74fa86a97f331dbc36"
+  }
+}
