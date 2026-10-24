@@ -1,0 +1,15 @@
+{
+  "packagePath": "node_modules/miniflare/node_modules/undici",
+  "version": "7.30.1",
+  "verifiedExports": [
+    "fetch",
+    "Headers",
+    "Request",
+    "Response",
+    "FormData",
+    "Dispatcher",
+    "Pool",
+    "getGlobalDispatcher"
+  ],
+  "topLevelUndiciVersion": "6.29.1"
+}

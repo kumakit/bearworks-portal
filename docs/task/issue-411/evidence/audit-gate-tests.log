@@ -1,0 +1,28 @@
+✔ accepts a zero-warning audit without a lockfile or exception policy (0.9428ms)
+✔ rejects a info warning without exceptions (0.6836ms)
+✔ rejects a low warning without exceptions (0.1444ms)
+✔ rejects a moderate warning without exceptions (0.0996ms)
+✔ rejects a high warning without exceptions (0.0752ms)
+✔ rejects a critical warning without exceptions (0.0733ms)
+✔ rejects an execution failure (0.1134ms)
+✔ rejects a failed command with an empty report (0.0671ms)
+✔ rejects a transport error (0.0897ms)
+✔ rejects an unsupported report version (0.1375ms)
+✔ rejects missing vulnerability counts (0.1042ms)
+✔ rejects missing vulnerability entries (0.14ms)
+✔ rejects an array in place of vulnerability entries (0.0616ms)
+✔ rejects a negative total (0.4787ms)
+✔ rejects a noninteger total (0.0986ms)
+✔ rejects a hidden warning with total zero (0.0966ms)
+✔ rejects a hidden warning in severity counts (0.0807ms)
+✔ rejects missing severity counts (0.0965ms)
+✔ rejects an unknown severity (0.0601ms)
+✔ rejects a warning paired with a successful command (0.0757ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 20
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 69.5468
