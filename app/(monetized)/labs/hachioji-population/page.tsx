@@ -7,7 +7,7 @@ import { populationBundle as data, populationNumber as n, populationPercent as p
 
 const title = "八王子の人口は本当に減っている？";
 const canonical = "https://bearworks.uk/labs/hachioji-population";
-const description = "八王子市の住民基本台帳をもとに、全市・町丁別・年齢別に2016年9月末と2026年9月末を比較。人口減少の見え方や、比較できない地域、統計の限界も確認します。";
+const description = "八王子市の住民基本台帳をもとに、全市・地域別・年齢別に2016年9月末と2026年9月末を比較。人口減少の見え方や、比較できない地域、統計の限界も確認します。";
 
 export const metadata: Metadata = {
   title: `${title} | 八王子を数字で読み解く | bearworks.uk`,
@@ -30,8 +30,8 @@ export default function HachiojiPopulationPage() {
       <header className="overflow-hidden rounded-3xl bg-slate-950 p-7 text-white sm:p-12">
         <p className="text-sm font-bold tracking-widest text-cyan-200">八王子を数字で読み解く · 第1弾</p>
         <h1 className="mt-5 text-3xl font-bold leading-snug sm:text-5xl">八王子の人口は<br className="sm:hidden" />本当に減っている？</h1>
-        <p className="mt-5 max-w-3xl text-xl font-semibold text-cyan-100">全体・町丁・年齢で見る、2016年から2026年の変化</p>
-        <p className="mt-5 max-w-3xl text-sm leading-7 text-slate-200">「八王子は人口が減っている」と耳にすることがあります。市全体の数字だけでなく、町丁別や年齢別に分けると、同じ人口の変化でも違った姿が見えてきます。この記事では、八王子市が公表している住民基本台帳を使い、同じ「9月末」の基準日どうしで10年の変化を比較します。</p>
+        <p className="mt-5 max-w-3xl text-xl font-semibold text-cyan-100">全体・地域・年齢で見る、2016年から2026年の変化</p>
+        <p className="mt-5 max-w-3xl text-sm leading-7 text-slate-200">「八王子は人口が減っている」と耳にすることがあります。市全体の数字だけでなく、地域別や年齢別に分けると、同じ人口の変化でも違った姿が見えてきます。この記事では、八王子市が公表している住民基本台帳を使い、同じ「9月末」の基準日どうしで10年の変化を比較します。</p>
         <p className="mt-6 text-xs text-slate-300">比較日：2016年9月30日・2026年9月30日 · 人口は日本人と外国人の合計</p>
       </header>
 
@@ -46,7 +46,7 @@ export default function HachiojiPopulationPage() {
         </div>
       </section>
 
-      <nav aria-label="記事の目次" className="flex flex-wrap gap-x-5 gap-y-2 rounded-2xl border border-slate-200 bg-white p-5 text-sm font-semibold text-sky-800">{[["city", "全市の推移"], ["towns", "町丁別"], ["ages", "年齢別"], ["limits", "比較の限界"], ["method", "方法・出典"]].map(([id, label]) => <a key={id} href={`#${id}`} className="underline decoration-sky-200 underline-offset-4 hover:decoration-sky-800">{label}</a>)}</nav>
+      <nav aria-label="記事の目次" className="flex flex-wrap gap-x-5 gap-y-2 rounded-2xl border border-slate-200 bg-white p-5 text-sm font-semibold text-sky-800">{[["city", "全市の推移"], ["towns", "地域別"], ["ages", "年齢別"], ["limits", "比較の限界"], ["method", "方法・出典"]].map(([id, label]) => <a key={id} href={`#${id}`} className="underline decoration-sky-200 underline-offset-4 hover:decoration-sky-800">{label}</a>)}</nav>
 
       <section id="city" className="scroll-mt-6 space-y-5">
         <h2 className="text-2xl font-bold text-slate-900">市全体では、途中で上下しながら、10年間でわずかに減少。</h2>
@@ -57,7 +57,7 @@ export default function HachiojiPopulationPage() {
       </section>
 
       <section id="towns" className="scroll-mt-6 space-y-5">
-        <h2 className="text-2xl font-bold text-slate-900">市全体が減っていても、増えた町丁はある。</h2>
+        <h2 className="text-2xl font-bold text-slate-900">市全体が減っていても、増えた地域はある。</h2>
         <p>区域変更に関わる8町丁を除いた191町丁では、増減の幅も方向も地域によってさまざまです。人数の増減と、2016年人口を分母にした増減率は別の問いになるため、図を切り替えて両方を見られるようにしました。なお増減率については、2016年の人口が100人未満の町丁を主順位から分けています。</p>
         <p className="rounded-xl bg-slate-50 p-4 text-sm">対象：区域変更関連の除外8町丁を除く191町丁 · 2026年9月末の全市人口に対するカバー率 {data.regions.populationCoverage2026.toFixed(1)}% · 率の順位は2016年人口100人以上の{data.regions.rateEligibleCount}町丁。宇津貫町（65人）は率の主順位から分けています。</p>
         <p>地図は載せていません。町名と統計用境界データの候補は見つかりましたが、地理的な一致を確かめられず、区域変更関連の地域を除くと事前に決めた人口カバー率95%にも届きませんでした。正確さを確かめられない地図を載せるより、対象範囲を明示したランキングと表を使います。</p>
@@ -77,15 +77,15 @@ export default function HachiojiPopulationPage() {
       <section id="limits" className="scroll-mt-6 space-y-5">
         <h2 className="text-2xl font-bold text-slate-900">人口の増減だけでは、理由までは分からない。</h2>
         <p>住民基本台帳の人数は基準日に登録されている人の数です。この人数の差だけから、転出が原因なのか、出生や死亡がどの程度影響したのか、開発が地域の変化を生んだのかを特定することはできません。因果関係を調べるには、別の資料が必要です。</p>
-        <p>また、町丁の比較対象191町丁は、確認できた区域変更関連の地域を除いた範囲です。地理的な境界が残る全地域で10年間不変だったと証明したものではなく、全市人口の代わりにもなりません。</p>
+        <p>また、今回の比較対象191町丁は、確認できた区域変更関連の地域を除いた範囲です。地理的な境界が残る全地域で10年間不変だったと証明したものではなく、全市人口の代わりにもなりません。</p>
       </section>
 
       <section id="method" className={`${card} scroll-mt-6 space-y-4`}>
         <h2 className="text-2xl font-bold text-slate-900">方法・再現性・出典</h2>
         <p>八王子市の「町丁別世帯数及び人口」と「町丁別年齢別人口」を使い、2016年9月末と2026年9月末を比較しました。市全体の推移も各年9月末にそろえています。人口は日本人と外国人の合計です。国勢調査人口は混ぜていません。</p>
-        <p>町名は明示した文字表記の正規化で対応し、曖昧な地理照合は行いません。町丁比較から外した区域変更関連8町丁のうち、4町丁は変更を確認し、4町丁は施行日を確認できませんでした。市の住所・本籍変更事業一覧で確認できた範囲は2024年8月10日までで、町の区域変更全体を網羅する資料ではありません。</p>
-        <p>2025年と2026年の人口CSVはExcelより各9人多く、2024年はCSVが3人少ない差がありました。差の原因は未確認です。主集計は11年のExcel系列と年齢Excelの町丁・全市合計が一致することを根拠にExcelへ統一しました。これは同じ市が公表した資料間の内部整合であり、独立した正確性確認ではありません。CSVを使った場合の2026年全市値は559,329人、2016年からの差は−3,998人で、10年比較の減少方向は変わりません。町丁別の全順位が同じとは確認していません。</p>
-        <p>町丁別では、除外前の減少上位に西寺方町・美山町が含まれます。除外後の191町丁小計は2016年530,676人、2026年528,044人です。これは全市総数563,327人・559,320人とは別の範囲です。</p>
+        <p>町名は明示した文字表記の正規化で対応し、曖昧な地理照合は行いません。比較から外した区域変更関連8町丁のうち、4町丁は変更を確認し、4町丁は施行日を確認できませんでした。市の住所・本籍変更事業一覧で確認できた範囲は2024年8月10日までで、町の区域変更全体を網羅する資料ではありません。</p>
+        <p>2025年と2026年の人口CSVはExcelより各9人多く、2024年はCSVが3人少ない差がありました。差の原因は未確認です。主集計は11年のExcel系列と年齢Excelの町丁・全市合計が一致することを根拠にExcelへ統一しました。これは同じ市が公表した資料間の内部整合であり、独立した正確性確認ではありません。CSVを使った場合の2026年全市値は559,329人、2016年からの差は−3,998人で、10年比較の減少方向は変わりません。地域別の全順位が同じとは確認していません。</p>
+        <p>地域別では、除外前の減少上位に西寺方町・美山町が含まれます。除外後の191町丁小計は2016年530,676人、2026年528,044人です。これは全市総数563,327人・559,320人とは別の範囲です。</p>
         <p>利用条件：八王子市の人口・年齢データはCC BY 4.0。原本のExcel/CSVは公開配布せず、正規化データと集計値を公開します。<strong>出典：「町丁別世帯数及び人口」「町丁別年齢別人口」、八王子市、CC BY 4.0。改変：文字表記の正規化、町丁対応、集計・図表化。</strong></p>
         <ul className="list-disc space-y-2 pl-5 text-sm text-sky-800"><li><a className="underline" href="https://www.city.hachioji.tokyo.jp/hachiouji/jinko/004/index.html">八王子市：町丁別世帯数及び人口</a></li><li><a className="underline" href="https://www.city.hachioji.tokyo.jp/hachiouji/jinko/005/index.html">八王子市：町丁別年齢別人口</a></li><li><a className="underline" href="https://www.city.hachioji.tokyo.jp/contents/open/001/p005861.html#ccby">八王子市：オープンデータ利用条件（CC BY 4.0）</a></li><li><a className="underline" href="https://www.city.hachioji.tokyo.jp/kurashi/kosekijumin/008/001a/p032860.html">八王子市：住所・本籍変更事業一覧</a></li><li><a className="underline" href="https://www.city.hachioji.tokyo.dbsr.jp/index.php/734981?Id=6155&Template=document">八王子市議会：町区域変更の会議録</a></li><li><a className="underline" href="/data/hachioji-population/source-manifest.json">資料の版・取得記録・利用条件とデータhash</a></li><li><a className="underline" href="/data/hachioji-population/hachioji-population-2026-10-24.r1.json">記事の集計JSON</a></li><li><a className="underline" href="/data/hachioji-population/annual-population.csv">年次人口CSVをダウンロード</a></li><li><a className="underline" href="/data/hachioji-population/csv-2026-discrepancies.csv">2026年CSV差の8町丁を確認</a></li><li><a className="underline" href="/data/hachioji-population/retained-region-comparison.csv">比較対象191町丁CSVをダウンロード</a></li><li><a className="underline" href="/data/hachioji-population/excluded-region-reference.csv">比較対象外8町丁の参考人口CSVをダウンロード</a></li><li><a className="underline" href="/data/hachioji-population/age-2016-09.csv">2016年年齢別CSVをダウンロード</a></li><li><a className="underline" href="/data/hachioji-population/age-2026-09.csv">2026年年齢別CSVをダウンロード</a></li></ul>
         <p className="text-xs text-slate-600">再現手順と検算コードはリポジトリの <code>docs/task/issue-410</code> と <code>scripts/hachioji-population</code> にあります。公開前に、採用した公式資料が更新されていないか再取得して確認します。</p>

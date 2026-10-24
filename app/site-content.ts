@@ -138,7 +138,7 @@ const staticPaths: SitemapEntry[] = [
   {
     pathname: "/labs/hachioji-population",
     title: "八王子の人口は本当に減っている？",
-    summary: "全市・町丁別・年齢別の3つの視点から、2016年と2026年の人口を比べます。",
+    summary: "全市・地域別・年齢別の3つの視点から、2016年と2026年の人口を比べます。",
     series: "population",
     seriesTitle: "八王子を数字で読み解く",
     lastModified: new Date("2026-10-24"),
