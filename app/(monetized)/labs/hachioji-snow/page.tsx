@@ -38,15 +38,18 @@ export default function SnowPage() {
     <PublicSiteHeader />
     <article className="space-y-10 leading-relaxed">
       <header className="overflow-hidden rounded-[2rem] bg-slate-900 text-white">
-        <div className="grid items-center lg:grid-cols-2">
-          <div className="p-7 md:p-10">
+        <div className="grid items-center gap-8 p-6 md:p-10 lg:grid-cols-2">
+          <div className="min-w-0">
             <p className="mb-4 text-sm font-semibold tracking-widest text-sky-200">街のうわさを、統計でほどく · 02</p>
             <h1 className="text-3xl font-bold leading-tight md:text-5xl">雪のニュース。<br />また、八王子だ。</h1>
             <p className="mt-6 text-xl font-semibold">{title}</p>
             <p className="mt-4 text-slate-200">白くなる駅前、傘をさす人、雪の中の中継。「都心は雨なのに、八王子は雪」というイメージを、観測データで確かめてみます。</p>
             <p className="mt-5 text-sm text-sky-200">箱ひげ図・相関・信頼区間の読み方まで。統計検定2級の知識を、身近な街の問いに使う記事です。</p>
           </div>
-          <figure><Image src="/images/hachioji-snow/hero-illustration.webp" width={1536} height={1024} alt="雪の駅前広場と中継カメラを描いたイラスト" unoptimized priority className="w-full" /><figcaption className="px-5 py-3 text-xs text-slate-300">導入用のAI生成イラスト。実際の災害写真や特定日時の再現ではありません。</figcaption></figure>
+          <figure className="min-w-0">
+            <Image src="/images/hachioji-snow/hero-illustration.webp" width={1536} height={1024} alt="雪の駅前広場と中継カメラを描いたイラスト" unoptimized priority className="h-auto w-full rounded-2xl" />
+            <figcaption className="mt-3 text-xs leading-6 text-slate-300">導入用のAI生成イラスト。実際の災害写真や特定日時の再現ではありません。</figcaption>
+          </figure>
         </div>
       </header>
 
