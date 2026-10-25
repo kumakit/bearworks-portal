@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import Image from "next/image";
 import { ArrowRight, CloudRain, Flame, Snowflake, Sun, Thermometer, Wind } from "lucide-react";
 import Link from "@/components/InternalLink";
 import ContentProvenance from "@/components/ContentProvenance";
@@ -17,6 +18,7 @@ import {
 
 const canonicalUrl = "https://bearworks.uk/labs/hachioji-chill";
 const title = "八王子の朝はなぜ寒い？ ―― 冬の冷え込みと放射冷却をデータで検証する";
+const heroImage = "/images/hachioji-chill/hero-illustration.webp";
 const card = "min-w-0 rounded-3xl border border-slate-200 bg-white p-5 md:p-8";
 const heading = "text-2xl font-bold tracking-tight text-slate-900 md:text-3xl";
 const validHourlyPairCount = chillBundle.hourly_profile.reduce((total, hour) => total + hour.sample_size, 0);
@@ -32,6 +34,7 @@ export const metadata: Metadata = {
     title,
     description: "八王子の朝はなぜ都心より寒いのか？ 24時間の気温推移と放射冷却条件を実測データで検証。",
     siteName: "bearworks.uk",
+    images: [heroImage],
   },
 };
 
@@ -94,6 +97,7 @@ export default function HachiojiChillPage() {
     datePublished: "2026-09-18",
     dateModified: "2026-10-03",
     mainEntityOfPage: canonicalUrl,
+    image: `https://bearworks.uk${heroImage}`,
     author: { "@type": "Person", name: "kuma" },
     publisher: { "@type": "Organization", name: "bearworks.uk", url: "https://bearworks.uk" },
     isBasedOn: chillBundle.attribution.source_url,
@@ -106,31 +110,37 @@ export default function HachiojiChillPage() {
 
       <article className="space-y-10 leading-relaxed">
         {/* Header / Hero */}
-        <header className="overflow-hidden rounded-[2rem] bg-gradient-to-br from-slate-900 via-slate-800 to-indigo-950 text-white p-7 md:p-12 shadow-xl">
-          <div className="max-w-3xl">
-            <p className="mb-4 text-sm font-semibold tracking-widest text-cyan-300">街のうわさを、統計でほどく · 04</p>
-            <h1 className="text-3xl font-bold leading-tight md:text-5xl">
-              八王子の朝は、<br />
-              なぜ寒い？<br />
-              <span className="text-cyan-300">冬の冷え込みをデータで解く。</span>
-            </h1>
-            <p className="mt-6 text-xl font-semibold text-slate-100">
-              冬の明け方の気温差と、日較差・放射冷却の構造
-            </p>
-            <p className="mt-4 text-slate-300 leading-relaxed">
-              冬の朝、八王子駅に降り立つと都心より明らかに寒く感じる――。生活実感としてよく語られるこの「朝の寒さ」は、実際に何℃違い、1日のいつ生まれ、どんな気象条件で強まるのでしょうか。気象庁の12シーズン・1,078日分の実測データから、その時間構造とメカニズムを検証します。
-            </p>
-            <div className="mt-6 flex flex-wrap items-center gap-4 text-xs text-cyan-200">
-              <span className="inline-flex items-center gap-1.5">
-                <Snowflake size={16} /> 冬季12シーズン（2014-2026年）
-              </span>
-              <span className="inline-flex items-center gap-1.5">
-                <Thermometer size={16} /> 1時間値の有効な地点間ペア {validHourlyPairCount.toLocaleString()}組
-              </span>
-              <span className="inline-flex items-center gap-1.5">
-                <Wind size={16} /> 夜間風速・降水条件分析
-              </span>
+        <header className="overflow-hidden rounded-[2rem] bg-gradient-to-br from-slate-900 via-slate-800 to-indigo-950 p-6 text-white shadow-xl md:p-10">
+          <div className="grid items-center gap-8 lg:grid-cols-2">
+            <div className="min-w-0">
+              <p className="mb-4 text-sm font-semibold tracking-widest text-cyan-300">街のうわさを、統計でほどく · 04</p>
+              <h1 className="text-3xl font-bold leading-tight md:text-5xl">
+                八王子の朝は、<br />
+                なぜ寒い？
+                <span className="mt-3 block text-balance text-xl leading-snug text-cyan-300 md:text-2xl">冬の冷え込みをデータで解く。</span>
+              </h1>
+              <p className="mt-6 text-xl font-semibold text-slate-100">
+                冬の明け方の気温差と、日較差・放射冷却の構造
+              </p>
+              <p className="mt-4 text-slate-300 leading-relaxed">
+                冬の朝、八王子駅に降り立つと都心より明らかに寒く感じる――。生活実感としてよく語られるこの「朝の寒さ」は、実際に何℃違い、1日のいつ生まれ、どんな気象条件で強まるのでしょうか。気象庁の12シーズン・1,078日分の実測データから、その時間構造とメカニズムを検証します。
+              </p>
+              <div className="mt-6 flex flex-wrap items-center gap-4 text-xs text-cyan-200">
+                <span className="inline-flex items-center gap-1.5">
+                  <Snowflake size={16} /> 冬季12シーズン（2014-2026年）
+                </span>
+                <span className="inline-flex items-center gap-1.5">
+                  <Thermometer size={16} /> 1時間値の有効な地点間ペア {validHourlyPairCount.toLocaleString()}組
+                </span>
+                <span className="inline-flex items-center gap-1.5">
+                  <Wind size={16} /> 夜間風速・降水条件分析
+                </span>
+              </div>
             </div>
+            <figure className="min-w-0">
+              <Image src={heroImage} width={1536} height={1024} alt="霜の降りた川沿いの道を歩く人と、朝焼けに照らされた街並みや丘陵を描いた冬の朝のイラスト" unoptimized priority className="h-auto w-full rounded-2xl" />
+              <figcaption className="mt-3 text-xs leading-6 text-slate-300">導入用のAI生成イラスト。実在の場所や特定日時の観測を再現したものではありません。</figcaption>
+            </figure>
           </div>
         </header>
 
