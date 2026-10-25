@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "@/components/InternalLink";
 import { Leaf, CalendarRange, Thermometer, SlidersHorizontal } from "lucide-react";
 import PublicSiteHeader from "@/components/PublicSiteHeader";
@@ -12,7 +13,13 @@ import { autumnArticleProvenance } from "@/lib/hachioji-series-provenance";
 
 const title = "八王子の秋は本当に短くなった？ 気温の区切りを変えて確かめる";
 const canonical = "https://bearworks.uk/labs/hachioji-autumn";
-export const metadata: Metadata = { title: `${title} | bearworks.uk`, description: "八王子の2009〜2025年、9〜11月の日平均気温を分析。中間の気温の日数、年変動、連続日数と品質条件による違いを、操作できる図とカレンダーで確かめます。", alternates: { canonical }, openGraph: { type: "article", title, url: canonical, siteName: "bearworks.uk" } };
+const heroImage = "/images/hachioji-autumn/hero-illustration.webp";
+export const metadata: Metadata = {
+  title: `${title} | bearworks.uk`,
+  description: "八王子の2009〜2025年、9〜11月の日平均気温を分析。中間の気温の日数、年変動、連続日数と品質条件による違いを、操作できる図とカレンダーで確かめます。",
+  alternates: { canonical },
+  openGraph: { type: "article", title, url: canonical, siteName: "bearworks.uk", images: [heroImage] },
+};
 const main = bundle.main.comparison[1]; const sensitivity = bundle.sensitivity_quality5.comparison[1];
 const card = "rounded-2xl border border-slate-200 bg-white p-5 sm:p-6";
 const quizzes = [
@@ -24,13 +31,24 @@ const quizzes = [
 ];
 
 export default function HachiojiAutumnPage() {
-  return <main className="mx-auto w-full max-w-5xl px-4 pb-12 text-slate-800 sm:px-6">
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Article", headline: title, dateModified: "2026-10-04", author: { "@type": "Person", name: "kuma" }, mainEntityOfPage: canonical }) }} />
+  return <main className="mx-auto w-full min-w-0 max-w-6xl px-4 py-6 text-slate-700 sm:px-6">
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Article", headline: title, dateModified: "2026-10-04", author: { "@type": "Person", name: "kuma" }, mainEntityOfPage: canonical, image: `https://bearworks.uk${heroImage}` }) }} />
     <PublicSiteHeader />
-    <article className="mx-auto max-w-4xl space-y-10 text-base leading-8">
-      <header className="relative overflow-hidden rounded-3xl bg-emerald-950 p-7 text-white sm:p-12">
-        <Leaf aria-hidden="true" size={190} strokeWidth={0.7} className="pointer-events-none absolute -right-6 top-12 -rotate-12 text-emerald-700/60 sm:right-4" />
-        <div className="relative max-w-2xl"><p className="text-xs font-bold tracking-widest text-emerald-200">街のうわさを、統計でほどく · 08</p><h1 className="mt-6 text-3xl font-bold leading-snug sm:text-5xl">夏が終わると、<br />もう冬。<br /><span className="text-amber-200">秋はどこへ？</span></h1><p className="mt-5 font-semibold text-emerald-100">八王子の秋は、本当に短くなった？</p><p className="mt-4 max-w-xl text-sm leading-7 text-emerald-100">半袖の出番が長くなり、気づけば上着が手放せない。その感覚を調べるために、まず「秋をどう数えるか」を決めます。日々の気温を三つに分け、数え方を変えながら、17年の記録を見てみましょう。</p><p className="mt-6 text-xs text-emerald-200">八王子の地点観測 · 2009〜2025年の9〜11月 · 2026年10月4日作成</p></div>
+    <article className="space-y-10 leading-relaxed">
+      <header className="overflow-hidden rounded-[2rem] bg-gradient-to-br from-slate-900 via-slate-800 to-emerald-950 p-6 text-white md:p-10">
+        <div className="grid items-center gap-8 lg:grid-cols-2">
+          <div className="min-w-0">
+            <p className="mb-4 text-sm font-semibold tracking-widest text-emerald-200">街のうわさを、統計でほどく · 08</p>
+            <h1 className="text-3xl font-bold leading-tight md:text-5xl">夏が終わると、<br />もう冬。<br /><span className="text-amber-200">秋はどこへ？</span></h1>
+            <p className="mt-5 text-xl font-semibold text-emerald-100">八王子の秋は、本当に短くなった？</p>
+            <p className="mt-4 text-slate-200">半袖の出番が長くなり、気づけば上着が手放せない。その感覚を調べるために、まず「秋をどう数えるか」を決めます。日々の気温を三つに分け、数え方を変えながら、17年の記録を見てみましょう。</p>
+            <p className="mt-5 text-xs text-emerald-200">八王子の地点観測 · 2009〜2025年の9〜11月 · 2026年10月4日作成</p>
+          </div>
+          <figure className="min-w-0">
+            <Image src={heroImage} width={1536} height={1024} alt="黄色く色づいた銀杏並木の街路を、上着を羽織って歩く人々と秋空を描いたイラスト" unoptimized priority className="h-auto w-full rounded-2xl" />
+            <figcaption className="mt-3 text-xs leading-6 text-slate-300">導入用のAI生成イラスト。実在の場所や特定の紅葉時期を再現したものではありません。</figcaption>
+          </figure>
+        </div>
       </header>
 
       <section aria-labelledby="autumn-answer" className="space-y-5"><p className="text-xs font-bold tracking-widest text-emerald-800">まず、定義した範囲での答え</p><h2 id="autumn-answer" className="text-2xl font-bold leading-relaxed text-slate-900">中間の気温の日は、最近の期間で少ない。<br className="hidden sm:block" />ただし、差の大きさは数え方による。</h2><p>日平均気温15℃以上25℃未満の日数は、2009〜2013年の平均{n(main.early.middle)}日から、2021〜2025年のうち採用した4年では{n(main.late.middle)}日へ。主集計の差は{n(Math.abs(main.middle_difference))}日でした。準正常値も採用した5年同士では、差は{n(Math.abs(sensitivity.middle_difference))}日になります。</p>
