@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "@/components/InternalLink";
 import PublicSiteHeader from "@/components/PublicSiteHeader";
 import PublicSiteFooter from "@/components/PublicSiteFooter";
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
   title: `${title} | 八王子を数字で読み解く | bearworks.uk`,
   description,
   alternates: { canonical },
-  openGraph: { type: "article", url: canonical, title, description, siteName: "bearworks.uk" },
+  openGraph: { type: "article", url: canonical, title, description, siteName: "bearworks.uk", images: ["/images/hachioji-population/hero-illustration.webp"] },
 };
 
 const card = "rounded-2xl border border-slate-200 bg-white p-5 sm:p-6";
@@ -34,6 +35,11 @@ export default function HachiojiPopulationPage() {
         <p className="mt-5 max-w-3xl text-sm leading-7 text-slate-200">「八王子は人口が減っている」と耳にすることがあります。市全体の数字だけでなく、地域別や年齢別に分けると、同じ人口の変化でも違った姿が見えてきます。この記事では、八王子市が公表している住民基本台帳を使い、同じ「9月末」の基準日どうしで10年の変化を比較します。</p>
         <p className="mt-6 text-xs text-slate-300">比較日：2016年9月30日・2026年9月30日 · 人口は日本人と外国人の合計</p>
       </header>
+
+      <figure className="overflow-hidden rounded-3xl border border-slate-200 bg-white">
+        <Image src="/images/hachioji-population/hero-illustration.webp" width={1536} height={1024} alt="丘陵を望む八王子をイメージした街並みで、親子や学生、高齢者が歩くイラスト" unoptimized priority className="h-auto w-full" />
+        <figcaption className="px-5 py-3 text-xs leading-6 text-slate-600">導入用のAI生成イラスト。実在の場所や特定時点の街並み、人口・年齢構成の比率を再現したものではありません。</figcaption>
+      </figure>
 
       <section aria-labelledby="answer" className="space-y-5">
         <p className="text-xs font-bold tracking-widest text-cyan-800">まず、今回の数字から</p>
