@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "@/components/InternalLink";
 import { CloudRain, Droplets, CalendarDays, ArrowDown } from "lucide-react";
 import PublicSiteHeader from "@/components/PublicSiteHeader";
@@ -12,9 +13,12 @@ import { rainArticleProvenance } from "@/lib/hachioji-series-provenance";
 
 const title = "八王子は都心より雨が多い？ 降る日数と、降る量を分けてみる";
 const canonical = "https://bearworks.uk/labs/hachioji-rain";
+const heroImage = "/images/hachioji-rain/hero-illustration.webp";
 export const metadata: Metadata = {
-  title: `${title} | bearworks.uk`, description: "気象庁の日別観測から、八王子と東京都心の降水量・降水日数・上位5日への集中度を比較。2015〜2025年のうち条件のそろう8年と、品質条件を変えた10年を分けて読み解きます。",
-  alternates: { canonical }, openGraph: { type: "article", title, url: canonical, siteName: "bearworks.uk" },
+  title: `${title} | bearworks.uk`,
+  description: "気象庁の日別観測から、八王子と東京都心の降水量・降水日数・上位5日への集中度を比較。2015〜2025年のうち条件のそろう8年と、品質条件を変えた10年を分けて読み解きます。",
+  alternates: { canonical },
+  openGraph: { type: "article", title, url: canonical, siteName: "bearworks.uk", images: [heroImage] },
 };
 const data = bundle.main;
 const sensitivity = bundle.sensitivity_quality5;
@@ -29,13 +33,24 @@ const quizzes = [
 ];
 
 export default function HachiojiRainPage() {
-  return <main className="mx-auto w-full max-w-5xl px-4 pb-12 text-slate-800 sm:px-6">
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Article", headline: title, dateModified: "2026-10-04", author: { "@type": "Person", name: "kuma" }, mainEntityOfPage: canonical }) }} />
+  return <main className="mx-auto w-full min-w-0 max-w-6xl px-4 py-6 text-slate-700 sm:px-6">
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Article", headline: title, dateModified: "2026-10-04", author: { "@type": "Person", name: "kuma" }, mainEntityOfPage: canonical, image: `https://bearworks.uk${heroImage}` }) }} />
     <PublicSiteHeader />
-    <article className="mx-auto max-w-4xl space-y-10 text-base leading-8">
-      <header className="relative overflow-hidden rounded-3xl bg-sky-950 p-7 text-white sm:p-12">
-        <CloudRain aria-hidden="true" size={180} strokeWidth={0.7} className="pointer-events-none absolute -right-7 top-8 text-sky-700/50 sm:right-5" />
-        <div className="relative max-w-2xl"><p className="text-xs font-bold tracking-widest text-sky-200">街のうわさを、統計でほどく · 07</p><h1 className="mt-6 text-3xl font-bold leading-snug sm:text-5xl">雨が多い街。<br />それは、<span className="text-sky-300">日数？ 量？</span></h1><p className="mt-5 font-semibold text-sky-100">八王子は都心より雨が多い？</p><p className="mt-4 max-w-xl text-sm leading-7 text-sky-100">帰り道だけ、雨に降られた。そんな記憶から街の天気を想像していませんか。八王子と東京都心の日別観測を、「どのくらい降るか」「何日降るか」「一部の日に集中するか」に分けて読みます。</p><p className="mt-6 text-xs text-sky-200">気象庁の地点観測 · 2015〜2025年のうち共通8年 · 2026年10月4日作成</p></div>
+    <article className="space-y-10 leading-relaxed">
+      <header className="overflow-hidden rounded-[2rem] bg-gradient-to-br from-slate-900 via-slate-800 to-sky-950 p-6 text-white md:p-10">
+        <div className="grid items-center gap-8 lg:grid-cols-2">
+          <div className="min-w-0">
+            <p className="mb-4 text-sm font-semibold tracking-widest text-sky-200">街のうわさを、統計でほどく · 07</p>
+            <h1 className="text-3xl font-bold leading-tight md:text-5xl">雨が多い街。<br />それは、<span className="text-sky-300">日数？ 量？</span></h1>
+            <p className="mt-5 text-xl font-semibold text-sky-100">八王子は都心より雨が多い？</p>
+            <p className="mt-4 text-slate-200">帰り道だけ、雨に降られた。そんな記憶から街の天気を想像していませんか。八王子と東京都心の日別観測を、「どのくらい降るか」「何日降るか」「一部の日に集中するか」に分けて読みます。</p>
+            <p className="mt-5 text-xs text-sky-200">気象庁の地点観測 · 2015〜2025年のうち共通8年 · 2026年10月4日作成</p>
+          </div>
+          <figure className="min-w-0">
+            <Image src={heroImage} width={1536} height={1024} alt="雨の日の八王子の街並みで、傘をさして歩く人々と濡れた路面を描いたイラスト" unoptimized priority className="h-auto w-full rounded-2xl" />
+            <figcaption className="mt-3 text-xs leading-6 text-slate-300">導入用のAI生成イラスト。実在の場所や特定日時の気象観測を再現したものではありません。</figcaption>
+          </figure>
+        </div>
       </header>
 
       <section aria-labelledby="rain-answer" className="space-y-5"><p className="text-xs font-bold tracking-widest text-sky-800">まず、今回のデータから</p><h2 id="rain-answer" className="text-2xl font-bold leading-relaxed text-slate-900">8年平均では、八王子のほうが少ない。</h2><p>主集計の年間降水量は八王子{n(h.total)}mm、東京都心{n(t.total)}mm。日降水量1mm以上の日数も、八王子が少ない結果でした。一方、上位5日に集まる雨量の割合は八王子のほうが大きくなっています。</p>
