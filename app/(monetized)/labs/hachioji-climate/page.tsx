@@ -61,16 +61,16 @@ export default function HachiojiClimatePage() {
     <PublicSiteHeader />
     <article className="space-y-10 leading-relaxed">
       <header className="overflow-hidden rounded-[2rem] bg-slate-900 text-white">
-        <div className="grid items-center lg:grid-cols-2">
-          <div className="p-7 md:p-10">
+        <div className="grid items-center gap-8 p-6 md:p-10 lg:grid-cols-2">
+          <div className="min-w-0">
             <p className="mb-4 text-sm font-semibold tracking-widest text-orange-200">街のうわさを、統計でほどく · 01</p>
             <h1 className="text-3xl font-bold leading-tight md:text-5xl">夏は暑い。<br />冬は寒い。<br /><span className="text-orange-200">それって、本当？</span></h1>
             <p className="mt-6 text-xl font-semibold">{title}</p>
             <p className="mt-4 text-slate-200">昼の駅前は暑いのに、夜になると少しほっとする。冬の朝は、都心よりも冷える気がする——そんな肌感覚は、実際の気象データと一致しているのでしょうか。本記事では、八王子・府中・青梅・東京都心の観測データをもとに、平均や中央値、ばらつき、仮説検証といった「統計検定2級」の視点で、街の気温の実態を丁寧に読み解いていきます。</p>
           </div>
-          <figure>
-            <Image src="/images/hachioji-climate/hero-illustration.webp" width={1536} height={1024} alt="同じ街路を夏の暑い昼と冬の冷たい朝で対比したイラスト" unoptimized priority className="w-full" />
-            <figcaption className="px-5 py-3 text-xs text-slate-300">導入用のAI生成イラスト。実在の街路や特定日時の観測を再現したものではありません。</figcaption>
+          <figure className="min-w-0">
+            <Image src="/images/hachioji-climate/hero-illustration.webp" width={1536} height={1024} alt="同じ街路を夏の暑い昼と冬の冷たい朝で対比したイラスト" unoptimized priority className="h-auto w-full rounded-2xl" />
+            <figcaption className="mt-3 text-xs leading-6 text-slate-300">導入用のAI生成イラスト。実在の街路や特定日時の観測を再現したものではありません。</figcaption>
           </figure>
         </div>
       </header>
