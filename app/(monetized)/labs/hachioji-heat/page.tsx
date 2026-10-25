@@ -75,8 +75,8 @@ export default function HachiojiHeatPage() {
     <PublicSiteHeader />
     <article className="space-y-10 leading-relaxed">
       <header className="overflow-hidden rounded-[2rem] bg-slate-900 text-white">
-        <div className="grid items-center lg:grid-cols-2">
-          <div className="p-7 md:p-10">
+        <div className="grid items-center gap-8 p-6 md:p-10 lg:grid-cols-2">
+          <div className="min-w-0">
             <p className="mb-4 text-sm font-semibold tracking-widest text-orange-300">街のうわさを、統計でほどく · 03</p>
             <h1 className="text-3xl font-bold leading-tight md:text-5xl">昼は暑い。<br />夜も暑い？<br /><span className="text-orange-300">数字で確かめる。</span></h1>
             <p className="mt-6 text-xl font-semibold">八王子の夏は<span className="block sm:inline">本当に暑いのか</span></p>
@@ -84,8 +84,8 @@ export default function HachiojiHeatPage() {
             <p className="mt-5 text-sm text-orange-200">平均とばらつき・同時刻の差・時系列。統計検定2級の知識で、グラフの一歩先を読む記事です。</p>
           </div>
           <figure className="min-w-0">
-            <Image src="/images/hachioji-heat/hero-illustration.webp" width={1536} height={1024} alt="夏の街を、日差しのある昼と青い夜で対比したイラスト" unoptimized priority className="w-full" />
-            <figcaption className="px-5 py-3 text-xs text-slate-300">導入用のAI生成イラスト。特定日時の観測や、風の流れを再現したものではありません。</figcaption>
+            <Image src="/images/hachioji-heat/hero-illustration.webp" width={1536} height={1024} alt="夏の街を、日差しのある昼と青い夜で対比したイラスト" unoptimized priority className="h-auto w-full rounded-2xl" />
+            <figcaption className="mt-3 text-xs leading-6 text-slate-300">導入用のAI生成イラスト。特定日時の観測や、風の流れを再現したものではありません。</figcaption>
           </figure>
         </div>
       </header>
