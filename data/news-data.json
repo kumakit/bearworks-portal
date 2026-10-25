@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-10-26",
+    "daily_summary": "本日のAIニュースは、巨額の投資やマレーシアへの大規模インフラ計画といった経済的活況が伝えられる一方で、政府による知財保護原則の適用やアンソロピック社の「AIキルスイッチ法案」の流出など、安全性や規制に関する重要な動きが浮き彫りとなりました。また、自動運転向けの「世界モデル」やパーキンソン病の早期検知、業務効率化を図るAIカメラなど医療・産業分野での実用化が進む一方、メタのAI「Muse」の日本上陸と性的会話の許可を巡るクリエイターとの摩擦など、AIの急速な普及に伴う倫理的・社会的な課題や議論も深まる一日となりました。",
+    "articles": [
+      {
+        "title": "AI投資に巨額マネー 実態と展望",
+        "content": "近年、人工知能（AI）分野への投資が急増しており、その巨額の資金がどこに向かい、どのような経済的・技術的影響をもたらしているのかが注目されています。本記事では、AIブームの背後にある実態を紐解きつつ、今後の市場の展望について詳しく解説しています。",
+        "source": "Google News",
+        "published_at": "2026-10-26",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5EbnU4b1M4eXRoc3RQQmFEb3JRc1BjOVZtRmZMaTQxYWt3VkVrWW52OENJLW1OR2E5czJSSHgzUWlqQUpCVkhfRDl6RDZhamlr?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "孫正義氏、マレーシアに500億ドル投資へ－AIデータセンターなど対象",
+        "content": "ソフトバンクグループの孫正義氏が、マレーシアに対してAIデータセンターなどを対象に500億ドルの投資を計画していることが報じられました。この大型投資により、同地域のAIインフラ開発や関連産業の成長が加速することが期待されています。",
+        "source": "Google News",
+        "published_at": "2026-10-26",
+        "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFAzemoyd2VtVW9SVkZINlNwd0NxQnBkU09EV0dwSnV5TnZDRE95aW40VGYyTmpnS1BPWXBhZFFSTE1ocUdFTHljNmYxUW5ZNkRobG0xZ2pIcnd5Zm13M1FxVy0wNUltN3BOQUN0M3VrNGNpYmk4UjJB?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "AI学習方法の開示、26日から知財保護原則を適用 企業に対応促す",
+        "content": "政府は26日からAI学習方法の開示に関する知的財産保護原則を適用し、企業に対応を促します。これにより、著作権侵害を防ぎつつAI開発の透明性を高めることが狙いです。関係企業は新たなガイドラインに沿った体制整備が求められます。",
+        "source": "Google News",
+        "published_at": "2026-10-26",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1zOGF0aTZXeUFaNlpqVHpQTkU4bGpJSVRGUUs0VDlMNXJaQ0RpeC02ekNuSHZUWGtLRThpRldHTkJEZEpBODR4bXBmdm16dTJOOUdhM1JOU2FocjVidlp5a1FkYVpWZ1d5VnpkVQ?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "未経験の状況をAIはどう予測する？ 自動運転やロボットを進化させる「世界モデル」の実力",
+        "content": "自動運転やロボット技術の進化において、AIが未経験の状況を予測する「世界モデル」の重要性が高まっています。この記事では、世界モデルがどのように未知の環境をシミュレーションし、AIの判断力を向上させるのかその実力に迫ります。",
+        "source": "Google News",
+        "published_at": "2026-10-26",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE02eGdtX3prZGRmQUdFZE9wcmNKSGR4UE5HMVF2Wkx5MmhBNDZQQXI5TWZZbDFLSlBFRnk3T2xTSUU4c1ljN2FGamN3eGdET3drenZVd0h3?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "「書く」だけでパーキンソン病を検知 筆圧やペンの角度からAIが判断",
+        "content": "沖縄タイムス社の報道によると、筆圧やペンの角度といった「書く」動作の特徴からAIがパーキンソン病を検知する技術が紹介されています。日常的な動作データを活用することで、病気の早期発見につながる医療技術として期待されています。",
+        "source": "Google News",
+        "published_at": "2026-10-26",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE45LXhaQzBQRndJQ1g4dU5PTHlyWU5qUWRqTDFJU3gtUEMzZVI0aWRnTFEwY3VQbFdEdHdpVkk5Ti1MTmNVaDRQZDRGOHlScVpuREN6aEFhdDA2bUZ4RFE?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "トヨクモ、現場の状態変化をAIが検知しkintoneへ自動通知する「AIカメラ」を提供",
+        "content": "トヨクモは、現場の状態変化をAIが検知してkintoneへ自動的に通知する「AIカメラ」の提供を開始した。これにより、現場の状況把握や報告業務の効率化が期待される。クラウド Watchが報じた。",
+        "source": "Google News",
+        "published_at": "2026-10-26",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBVWHdqQUV5WEh2bGdTZXJyYVF5OGJHSlFLX2lqbXJzdmdHaFVXX1NnSEthNEtPYVVRVW1ZcTdDLU5xOFBKbDh0UTE0RUVDSy1RQjF2U1o3b1F3ZVRXX2xQZEg4VUd2aFk?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "メタはAI「Muse」に性的な会話を許可。人間のアダルトクリエイターからは怒りの声",
+        "content": "メタが提供するAI「Muse」が性的な会話を許可したことにより、人間のアダルトクリエイターたちの間で不満と怒りの声が上がっています。AIによる表現の許容範囲やクリエイターの経済的影響を巡り、大きな議論を呼んでいます。",
+        "source": "Google News",
+        "published_at": "2026-10-26",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxObUxyQTlMQ1kzNmF1Mm9WazRtN1FmQjlmcVAxdW9OUGdSNl83aEs1SXAxa0lMX2VLZ250UUVucW9HSldsbjcxUE5YTHVVVW4tTTBUQ1hBeDExdzladDNnOGZvX1puODF2NjQ1SzZXSi1laFV4dXgzd3RnUElrZDJXT3VXNTFJTlM4UWZ4LWZ3?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "メタのAI「Muse」が日本上陸、利便性とプライバシーを両立する「10の対策」",
+        "content": "メタのAIサービス「Muse」が日本市場に展開を開始しました。本記事では、ユーザーの利便性を高めつつ、プライバシーを保護するための10の重要な対策について詳しく解説しています。",
+        "source": "Google News",
+        "published_at": "2026-10-26",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1aQmY4Sy1HeFJaeEVXRTlOVkhvajYyOUxPWksybjhjdUJhbHVBc0JSczVqZXRNQ1dibUNaU0hEVEpldlh3YlZ1eUNILW5nblhlRk9aRHlwd2NvUQ?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "メタのAIエージェント「Muse」、日本で開始 メルカリなどと連携",
+        "content": "メタが提供するAIエージェント「Muse」の日本でのサービスが開始され、メルカリなどの企業との連携が発表されました。これにより、ユーザーの利便性向上が期待されています。",
+        "source": "Google News",
+        "published_at": "2026-10-26",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBfMnR1WWJsMm9NWFhuQlBWaFJjaGNBSGFaM3FpekoySGlFeDUwQlVROTdQX2Zuc1RFNWtGWUFQRC02R1R0RVV0YTdGaERFUlAxMXFySmEzOHl1NTNoR0o5WjdObDRNU1lpUFU5dg?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "アンソロピック、AIを緊急停止する「AIキルスイッチ法案」草案を極秘提案──流出した衝撃内容で論争",
+        "content": "AI開発企業のアンソロピックが、人工知能を緊急停止するための「AIキルスイッチ法案」の草案を極秘裏に提案したことが明らかになりました。この流出した法案の内容を巡り、AIの安全性と規制のあり方について業界内外で激しい論争が巻き起こっています。",
+        "source": "Google News",
+        "published_at": "2026-10-26",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE8tTzJBQXZFZW4zNmw5NDlJekFyenVneWxtRElheFJtZ1lNUkVYOFhXWG50Vm0ycW96ZnQwYTNwNF8xX2xKWHBpWEQxc2JIYnBuZmpsWlBSbC1oZw?oc=5",
+        "category": "政策・安全"
+      }
+    ]
+  },
+  {
     "date": "2026-10-25",
     "daily_summary": "本日のAIニュースは、厚労省の自殺予防対策や政府の防衛産業戦略、Google検索の機能強化、気象予測やMUFGでの実用化など社会やビジネスでの活用が進む一方で、株式市場ではAI関連の巨額投資に対する警戒感からナスダックや日経平均が下落し、市場の過熱やバブル崩壊リスクへの懸念が強まる展開となりました。",
     "articles": [
