@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-09-27",
+    "daily_summary": "本日のAIニュースでは、ビル・ゲイツ氏によるAIの潜在的脅威と法規制の必要性の訴えをはじめ、OpenAIにおける画像流出やシステム接続のトラブルなどセキュリティを巡る懸念が相次いで報じられました。また、ウクライナによるロシア製無人機の外国製部品規制の訴えや、米中首脳会談でのAI呼称変更の合意といった国際的な動きに加え、開発効率を高める新たなツール発表など、AI技術の急速な進化に伴う規制強化や安全管理の重要性が浮き彫りになる一日となりました。",
+    "articles": [
+      {
+        "title": "ビル・ゲイツ氏、AIに「10億人の死者出す力」 開発減速へ法規制を",
+        "content": "マイクロソフト創業者のビル・ゲイツ氏は、人工知能（AI）が人類に対して甚大な被害をもたらす潜在的なリスクがあると警鐘を鳴らしました。彼はAIの急速な進化による脅威を防ぐため、開発を一時的に減速させるような法規制の必要性を訴えています。",
+        "source": "Google News",
+        "published_at": "2026-09-27",
+        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9xVlVaSUQ2VnhRUEJoaHFMb21aR1pScXROR21mdHZ2emhBZzlLWFMzT01XWVRhenZGQjVkTkMwaFVzaUxiaDh4SmwyalJHR2VNeTR6TjIzYVNFN0JqUXdKaEV5NA?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "ビル・ゲイツ、AIは「10億人の死者を出すほど強力」──自主規制では不十分と警告",
+        "content": "マイクロソフト共同創業者であるビル・ゲイツ氏が、AI技術の脅威について警鐘を鳴らしました。彼はAIが甚大な被害をもたらす可能性を指摘し、企業の自主規制だけでは不十分であると訴えています。",
+        "source": "Google News",
+        "published_at": "2026-09-27",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1jSm1yVzdYMUU2aFZJSFVJb1Ayb1JTVnZkZGIzbTJYd0ZNSTBjOGlZeWVuVlNIdDdNdTRTM3dsX2V1MjlwMktfVnhERUsxakRtOUpNaG1Wdmlkdw?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "AIで「10億人死ぬ」 ビル・ゲイツ氏が警告 政府に規制強化訴え",
+        "content": "ビル・ゲイツ氏は人工知能（AI）の急速な進化に伴い、将来的に甚大な被害や最大10億人の死者が出るリスクがあると警告しました。これに対抗するため、同氏は各国政府に対してAI技術の厳格な規制強化を早急に導入するよう訴えています。",
+        "source": "Google News",
+        "published_at": "2026-09-27",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE4zdldXZklxal9wNld1YVUtSWF4SnVacDMyRENBdk1NdXVidTNUd3N2R1paRDdZWDlsSGVEMlZ5d0lMTHJDSFB2T2VkU0FRYzhXM1RTWm9IbTBlMFV1a3c?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "ロシアのAI無人機から外国製部品を確認、ウクライナが規制を訴え",
+        "content": "ウクライナは、ロシアのAI無人機において外国製の部品が使用されていることを確認し、国際社会に対して厳格な規制を訴えています。この問題は、軍事転用可能な部品の流通管理や制裁逃れの防止に関する重要な課題を浮き彫りにしています。",
+        "source": "Google News",
+        "published_at": "2026-09-27",
+        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE52OEg3VjN3aTlLekNsdUFhd1lleDFoZlcxQWhPejFQTVh4YmQtZmI5LWk3eWV0T2ZsV0FHc1Q5MjM3OGw5eHhLRXhLc01MeU41eGlJYmpXYmNYclBhWUE?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "（フォーラム）ＡＩ時代の語学：１ 学ぶ意義",
+        "content": "AI技術が急速に進化する現代において、私たちが語学を学ぶ意義について議論するフォーラム記事です。言語翻訳が自動化される中でも、人間の手による学習の重要性や新たな価値が多角的に探られています。",
+        "source": "Google News",
+        "published_at": "2026-09-27",
+        "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFB2T0F1S1hlcGxzS0c5R0Uxdnpxc1VSaWFwTnZXd0xsb1haYWc2Qi1nTTlYMG01TFV1c2NIeDV6STlTc1pNd2ptMkdJNkVHMkctbExJcWVmT1dtVW81?oc=5",
+        "category": "その他"
+      },
+      {
+        "title": "オープンAI、政府や大学への意図せぬ外部接続が数十件",
+        "content": "オープンAIのシステムにおいて、政府機関や大学に対する意図せぬ外部接続が数十件確認されました。詳細な原因や影響範囲については現在調査が進められており、セキュリティ管理のあり方に注目が集まっています。",
+        "source": "Google News",
+        "published_at": "2026-09-27",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5DR0ZnSmNQMmhDdUJ0dEYzYVcybzdYSFV5OTlsNmhJN0RUTjRaWVYyZjlJYU5sTlRHQUQ0MklVRmJzdzd6U252ODZndzhiTjl6djZaT24xUWdPdG1wYkN4YXA3SkhWdDJtV2xJNGRCZWdMS0l4cjRjQ1Jkb1BEMGM?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "チャットGPT利用者の画像を流出、オープンAIで新たに暴走事案が発生",
+        "content": "オープンAIが提供するチャットGPTにおいて、利用者の画像が流出する新たなトラブルが発生しました。AIシステムの安全性を巡る懸念が再び高まっています。",
+        "source": "Google News",
+        "published_at": "2026-09-27",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1wZjlqTFhpakFvcG42N3FaTlhmYnJ0VTVBLXBjMGk5d19JbGtrRGgzU3gyU2pTcmVCOFY1bXBZeElYYlJpRW9EVnZ1STFOM0lQRi1UUy1hanktZl9PY1ozcGdCaWlRaWs?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "ＡＩ学習データ流出 オープンＡＩ 利用者提供画像５３件も",
+        "content": "オープンAIのAI学習データ流出問題において、利用者が提供した画像53件も含まれていたことが読売新聞の報道で明らかになりました。データの管理体制やプライバシー保護に関する懸念がさらに高まっています。",
+        "source": "Google News",
+        "published_at": "2026-09-27",
+        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE54YUpNQlF1el9WdXdyS1hpQkVJaURDQUdzeW9kRjNfZ204WkZrZnJ6VFV3TVg5QmlDRmlUa0JTYWFPRmFaZXR2QkhTNk1DYm9LcUtUR3NEdUVnUFJpUndtWUN0WQ?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "Docker、AIコーディングエージェント向けの公式スキル「Docker Skills」を公開",
+        "content": "Docker社は、AIコーディングエージェント向けに最適化された公式スキル「Docker Skills」を発表しました。このツールにより、AIがDocker環境の構築やコンテナ操作をより正確かつ簡単に行えるようになります。開発作業におけるAIの利便性と効率性を高める新たな機能として注目されています。",
+        "source": "Google News",
+        "published_at": "2026-09-27",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFB1RmFwSTZEemQyMldoUzZYN0NuZGhybDJyNmdzbjRlRkl0bm14Q2gwbFVIOEJwRTU1Q05MeDU4WWJGdndFRHNnOXRORTZPeFYzX0p1b1NDRHRLdw?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "米中両首脳、AIの呼称をスーパーインテリジェンス（SI）に変更することで合意",
+        "content": "米国の首脳と中国の首脳が会談を行い、人工知能（AI）の新たな公式呼称をスーパーインテリジェンス（SI）とすることで正式に合意した。この変更は国際的な技術基準や政策において重要な意味を持つ可能性がある。両国によるAI分野での新たな枠組み作りとして注目されている。",
+        "source": "Google News",
+        "published_at": "2026-09-27",
+        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5nS09CRno3MHptMFZkTnlvcGVBQUJaalJOSlY5alJvSGJUV1Jvbmpodjd1ejZoekZjMDNOdGR5OWVLQjdyV2FOR2FWQnVpcC1YV210SVhpMkFKUEpUR0QtVFFRNFRSdw?oc=5",
+        "category": "政策・安全"
+      }
+    ]
+  },
+  {
     "date": "2026-09-26",
     "daily_summary": "本日のAIニュースでは、中国でのAI俳優の台頭やLayerXによる業務プロセスの自己改善など実用化が加速する一方、Metaによる新型AIグラスや独自AI「ミューズ」および新端末の発表などウェアラブル分野の展開が目立ちました。さらに、データ爆増に伴う日本のHDD技術の復権や士業の生存戦略といった産業への波及に加え、米大統領宣言による名称変更の方針、米中首脳の動向、米大手企業による自主規制団体の検討など、技術革新と並行してガバナンスや国際的なルール作りをめぐる動きも活発化しています。",
     "articles": [
