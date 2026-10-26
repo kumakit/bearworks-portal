@@ -1,5 +1,11 @@
 # Issue #344 Workers/OpenNext staging・本番切替runbook
 
+> [!WARNING]
+> **【履歴資料 / Historical Document】**
+> 本ドキュメントは、2026年8月に実施された Cloudflare Pages から Cloudflare Workers への初回移行・切替作業（Issue #344）当時の runbook です。
+> **現在の通常運用におけるデプロイ・更新手順としては使用しないでください。**
+> 現在の公開・デプロイ手順の正本は [docs/operations/deployment.md](../../operations/deployment.md) を参照してください。
+
 ## 原則
 
 - secret実値、Access token、JWTをこの文書・Issue・PR・ログへ残さない。

@@ -43,7 +43,7 @@ OpenNext Cloudflare does not support Windows directly. Run Workers build, dry-ru
 - `open-next.config.ts`: OpenNext adapter configuration without an external R2/D1 cache.
 - `wrangler.jsonc`: Worker entrypoint, static assets, compatibility flags, and observability.
 - `public/_headers`: Immutable cache policy for versioned Next.js static assets.
-- `.github/workflows/workers-build.yml`: Linux clean-install, Next.js build, Workers build, Wrangler dry-run, and Workers preview route/API validation. It does not deploy.
+- `.github/workflows/workers-build.yml`: Linux clean-install, Next.js build, Workers build, Wrangler dry-run, and Workers preview route/API validation. **It does not deploy to production.**
 
 Available commands:
 
@@ -56,11 +56,28 @@ npm run upload      # Build and upload an inactive Worker version
 npm run deploy      # Build and deploy the Worker
 ```
 
-`upload` and `deploy` change Cloudflare state. Run them only after reviewing the custom-domain switch and rollback procedure and receiving explicit approval.
+## Operations & Deployment (運用・デプロイ)
 
-The tracked Wrangler configuration disables both the public `workers.dev` endpoint and version preview URLs. Add only the Cloudflare Access-protected custom-domain route during the separately approved production switch.
+本番公開・運用手順の**正本ドキュメント**および AI エージェント向け規約は以下を参照してください。
 
-`NEXT_PUBLIC_ADSENSE_CLIENT_ID` is a build-time public value and must be set before `build` or `cf:build`. `DASHBOARD_API_TOKEN` is a secret and must be configured as a Worker secret for production; never place a real token in tracked files.
+* 📖 **本番公開・運用手順書（正本）**: [docs/operations/deployment.md](docs/operations/deployment.md)
+* 🤖 **AI エージェント運用安全規約**: [AGENTS.md](AGENTS.md)
+* 🧭 **Gemini / Antigravity ガイド**: [GEMINI.md](GEMINI.md)
+
+### 重要な運用原則
+1. **自律作業と承認必須ゲート**:
+   - 調査、計画、ローカル修正、テスト、専用ブランチの push、PR 作成は自律的に進めて構いません。
+   - **main へのマージ**、**本番デプロイ (`npm run deploy`)**、**Cloudflare 設定変更**、**既存サービス・他作業に影響する操作**は、必ず事前にユーザーの明示的承認を得てください。
+2. **安全な公開手順**:
+   - デプロイ前に必ず `npx wrangler deployments list --env=""` で直前の稼働バージョン（復旧先）を確認・記録してください。
+   - `NEXT_PUBLIC_ADSENSE_CLIENT_ID` に本番用 ID（`ca-pub-9560028085973137`）を設定して `npm run deploy` を実行します。
+   - 公開後は、実際の URL で HTTP ステータス、AdSense 境界、Access リダイレクト、画面表示を確認してください。
+3. **Cloudflare 設定の変更禁止**:
+   - 既存の DNS レコード、Cloudflare Access、Workers Route、Secret を勝手に変更・削除してはなりません。
+4. **AI ニュース自動更新との関係**:
+   - `data/news-data.json` は OCI 上のワーカーから日次で GitHub `main` に直接 push されますが、本番 Worker をデプロイするまで本番サイト（`bearworks.uk/ai-news`）の表示は自動的には更新されません。
+5. **ロールバックの優先順位**:
+   - 通常障害時は直前の Worker バージョンへのロールバック（`npx wrangler rollback`）を第一選択とします。Pages への切戻しは未検証の過去バージョンへの変更を伴う非常措置であり、事前確認とユーザー承認なしに実行してはなりません。
 
 ## 変更履歴 (Update History)
 
