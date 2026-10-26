@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "@/components/InternalLink";
 import PublicSiteHeader from "@/components/PublicSiteHeader";
 import PublicSiteFooter from "@/components/PublicSiteFooter";
@@ -11,7 +12,7 @@ const canonical = "https://bearworks.uk/labs/hachioji-aging";
 export const metadata: Metadata = {
   title: `${title} | 八王子を数字で読み解く | bearworks.uk`, description,
   alternates: { canonical },
-  openGraph: { type: "article", url: canonical, title, description, siteName: "bearworks.uk" },
+  openGraph: { type: "article", url: canonical, title, description, siteName: "bearworks.uk", images: [{ url: "https://bearworks.uk/images/hachioji-aging/hero-illustration.webp", width: 1536, height: 1024, alt: "丘陵の街並みを背景に、公園で散歩や会話を楽しむ人々のイラスト" }] },
 };
 const card = "rounded-2xl border border-slate-200 bg-white p-4 sm:p-6";
 const heading = "text-2xl font-bold leading-relaxed text-slate-900";
@@ -35,16 +36,25 @@ export default function HachiojiAgingPage() {
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
       "@context": "https://schema.org", "@type": "Article", headline: title, description, mainEntityOfPage: canonical,
       datePublished: data.publishedDate, dateModified: data.publishedDate,
+      image: "https://bearworks.uk/images/hachioji-aging/hero-illustration.webp",
       author: { "@type": "Organization", name: "bearworks.uk" },
       isBasedOn: ["https://www.city.hachioji.tokyo.jp/hachiouji/jinko/005/index.html", "https://www.toukei.metro.tokyo.lg.jp/juukiy/2026/jy26000001.htm"],
     }) }} />
     <PublicSiteHeader />
     <article className="mx-auto max-w-5xl space-y-10 text-base leading-8">
       <header className="overflow-hidden rounded-[2rem] bg-slate-900 p-6 text-white md:p-10">
+        <div className="grid items-center gap-8 lg:grid-cols-2">
+          <div className="min-w-0">
         <p className="text-sm font-semibold tracking-widest text-cyan-200">八王子を数字で読み解く · 第3弾</p>
-        <h1 className="mt-4 text-3xl font-bold leading-tight md:text-5xl">八王子は高齢者の街に<br className="hidden sm:block" />なっている？</h1>
-        <p className="mt-5 text-xl font-semibold text-cyan-100">10年の年齢構成、近隣市、市内の違いから確かめる</p>
+        <h1 className="mt-4 text-3xl font-bold leading-tight md:text-5xl">八王子は<br className="hidden lg:block" />高齢者の街に<br className="hidden sm:block" />なっている？</h1>
+        <p className="mt-5 text-xl font-semibold text-cyan-100">10年の年齢構成、近隣市、<br className="hidden lg:block" />市内の違いから確かめる</p>
         <p className="mt-5 max-w-3xl text-slate-200">「八王子は高齢者が多くなった」と感じることはありますか。市全体の割合が上がっていても、どの年齢層が増えたのか、住んでいる地域ではどうなのかは別の問いです。公式の年齢別人口を使い、人数と割合を分けて見ていきます。</p>
+          </div>
+          <figure className="min-w-0">
+            <Image src="/images/hachioji-aging/hero-illustration.webp" width={1536} height={1024} alt="多摩丘陵の街並みを背景に、公園で散歩や会話を楽しむ高齢者と親子のイラスト" unoptimized priority className="h-auto w-full rounded-2xl" />
+            <figcaption className="mt-3 text-xs leading-6 text-slate-300">導入用のAI生成イラスト。実在の場所や人物、人口・年齢構成の比率を再現したものではありません。</figcaption>
+          </figure>
+        </div>
         <div className="mt-7 grid gap-4 sm:grid-cols-3">
           {[[pct(before.share65plus), "2016年9月末 · 65歳以上"], [pct(after.share65plus), "2026年9月末 · 65歳以上"], [`+${older.points!.toFixed(1)}ポイント`, "10年の割合の変化"]].map(([value,label]) => <div key={label} className="rounded-2xl border border-white/20 bg-white/5 p-4"><p className="text-2xl font-bold tabular-nums text-cyan-100">{value}</p><p className="mt-1 text-xs text-slate-300">{label}</p></div>)}
         </div>
