@@ -35,4 +35,18 @@ PR CI、本番artifact、merge/deploy、公開URL検証は次節に追記する�
 
 ## PR CI修正
 
-PR #40の初回CI `40292146431` は分析/既存テスト・監査0・lint・Next/Workers build・本番/staging dry-runまで成功。preview開始時に既存 `verify-toukei-pages.mjs` の公開パス許可リストが旧56件のままで停止した（実際は新記事込み57件）。許可リストへ新記事1件を追加し、完全一致検査を維持してCIを再実行する。
+PR #40の初回CI `40292146431` は分析/既存テスト・監査0・lint・Next/Workers build・本番/staging dry-runまで成功。preview開始時に既存 `verify-toukei-pages.mjs` の公開パス許可リストが旧56件のままで停止した（実際は新記事込み57件）。許可リストへ新記事1件を追加し、完全一致検査を維持して再実行した。
+
+## CI・merge・本番反映
+
+- 修正後のPR CI `40293030248` は全job成功。Linuxで分析テスト・監査・Next/Workers build・production/staging dry-run・全公開ページ確認まで通過。
+- PR [#40](https://github.com/kumakit/bearworks-portal/pull/40) は2026-10-26にsquash merge。mainのmerge commitは `55e47977093c27f07cb8cdde587c928fdd6bf836`。既存のニュース更新 `5b70972` も保持した。
+- mainの同じSHAからproduction artifact生成run `40293402925` が成功。artifact `12637161982`、zipのSHA-256は `59b4a1da571bc4e9f2a48231b96b9e5aea2475b5922dbef222bfc2aff7d561bc`。1,551ファイルをzip内と照合した。
+- 成果物を `.local-research/issue413-release` の隔離環境へ展開し、OpenNext CLIで既定の静的asset準備を含むdry-runを成功させた後、同じartifactをdeploy。新Worker version `7b4bd9a3-7420-410a-bfa9-6162d89566fb` を確認。既存custom domainは維持され、routeやsecretなどの設定は変更していない。
+- 本番URL `https://bearworks.uk/labs/hachioji-land-prices` のSSR・canonical・一覧/サイトマップ・公開データ7ファイルの内容一致を検証。OGP画像もHTTP 200かつ生成ファイルとhash一致。
+- 公開ブラウザーで地図を開き、地理院タイル12枚と地点マーカーを表示。所在地セレクターで高値地点（子安町、35.5万円/㎡）を選ぶと住所・価格が更新され、ブラウザーerror logは0件。
+- Issue #413の必須範囲を完了して結果を報告、Status: Doneへ変更してクローズ。駅距離散布図と実取引分析は因果・市場全体の推定に踏み込む追加分析となるため対象外とし、記事に未検証として明記。100㎡換算は公示価格を掛けた参考計算と明示した。
+
+## 公開時の結論
+
+2026年の住宅地公示地価は八王子124地点の平均131,316円/㎡・中央値117,500円/㎡。比較6市で平均は青梅に次いで低い一方、市内価格は36,000〜355,000円/㎡。2016年の125地点平均から全標本平均は14.7%増、継続条件を満たした83地点の地点別変化率平均は9.1%。対象と計算方法が異なる2つの変化率を分けて説明し、地点標本から価格差の原因や住宅市場全体の値動きを断定していない。
