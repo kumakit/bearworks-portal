@@ -1,0 +1,16 @@
+{
+  "files": {
+    "public/data/hachioji-aging/hachioji-aging-2026-10-26.r1.json": "5cd99288d595d853a52b9f5d89e19bb0cee25d13d60c5986f3412d2af9e6998c",
+    "public/data/hachioji-aging/source-manifest.json": "5cb6b99b8ccbce3afef288f1171f27f5fce3731494771e3dabe0aa16a2cc5399",
+    "public/data/hachioji-aging/city-ages.csv": "66ba2f5bb4a1e7407b472ca79ff66bba7702a38c30a75e5beb85298239716eea",
+    "public/data/hachioji-aging/comparison-cities.csv": "ab852deb96a4be8dc26bfd22577c1b3cd5f2e3b4f2c9e278c81272744dbaa2b5",
+    "public/data/hachioji-aging/town-ages.csv": "78f96a40a631545163264c8dbccee9e48e22ca285b67c15a7265a534318a795d",
+    "public/data/hachioji-aging/normalized-inputs.json": "771fe4d5db0b486a838f74b414057c74dc617ffa1c26ec20b726d0adea03d055",
+    "public/data/hachioji-aging/region-exclusions.json": "c86e4bdf780b2598420665f9d0931d864eb9366073bf996583bd41d4795bafbe",
+    "public/data/hachioji-aging/retrieval.json": "0a7931b39f3bae818e41da6c050dd8a8eccc368176cdd85c33845d2d9c99ba23",
+    "public/data/hachioji-aging/generate_bundle.py": "266693660ff263186da4034bbacc0d724a012322c244bafbde5368bbe468aa45",
+    "public/data/hachioji-aging/prepare_sources.py": "e8ce4a9c3c98472db5a348de13d2c7a59fb81b6eef8db6acb25768af4e89f0cc",
+    "public/data/hachioji-aging/README.txt": "828d8e4e3dcbe4d513ef1401d71e6722dddf7c4a8e46a17e5984314b8263b8af",
+    "app/(monetized)/labs/hachioji-aging/data/hachioji-aging-2026-10-26.r1.json": "5cd99288d595d853a52b9f5d89e19bb0cee25d13d60c5986f3412d2af9e6998c"
+  }
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "filename": "age2016.xls",
+    "url": "https://www.city.hachioji.tokyo.jp/hachiouji/jinko/005/p005910_d/fil/2809matibetunenrei.xls",
+    "sha256": "d9e0b8419c10865e2d407390eafcec9cc7ce86c1b4329560660f7c76ce65ffd5",
+    "retrievedAt": "2026-10-26T12:24:56.069284+00:00"
+  },
+  {
+    "filename": "age2026.xlsx",
+    "url": "https://www.city.hachioji.tokyo.jp/hachiouji/jinko/005/p037124_d/fil/0809matibetunenrei.xlsx",
+    "sha256": "d4757827b6afb2ad0e0468c4a031546cefa341c10ecc9282c1f8ed005964ea1f",
+    "retrievedAt": "2026-10-26T12:24:56.247595+00:00"
+  },
+  {
+    "filename": "tokyo-age.csv",
+    "url": "https://www.toukei.metro.tokyo.lg.jp/juukiy/2026/jy26qv0700.csv",
+    "sha256": "5936c7de21a607ded5e2f56ad6d3d25c74e8540c3d38a8c649e9a8f48a062ee7",
+    "retrievedAt": "2026-10-26T12:24:56.427593+00:00"
+  },
+  {
+    "filename": "tokyo-three.csv",
+    "url": "https://www.toukei.metro.tokyo.lg.jp/juukiy/2026/jy26qv0301.csv",
+    "sha256": "12af701a022f0b3b099e5cbcdbc8b3568e49746fbad7a04c7fbf37f7eadf4f82",
+    "retrievedAt": "2026-10-26T12:24:56.515645+00:00"
+  }
+]
