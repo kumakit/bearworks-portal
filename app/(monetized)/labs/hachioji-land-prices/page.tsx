@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "@/components/InternalLink";
 import PublicSiteHeader from "@/components/PublicSiteHeader";
 import PublicSiteFooter from "@/components/PublicSiteFooter";
@@ -12,7 +13,7 @@ const description = "2026年の住宅地の公示地価を八王子・立川・�
 export const metadata: Metadata = {
   title: `${title} | 八王子を数字で読み解く | bearworks.uk`, description,
   alternates: { canonical },
-  openGraph: { type: "article", url: canonical, title, description, siteName: "bearworks.uk", images: [{ url: "https://bearworks.uk/images/hachioji-land-prices/og.png", width: 1200, height: 630, alt: "近隣6市の住宅地標準地の平均価格、2026年1月1日" }] },
+  openGraph: { type: "article", url: canonical, title, description, siteName: "bearworks.uk", images: [{ url: "https://bearworks.uk/images/hachioji-land-prices/hero-illustration.webp", width: 1536, height: 1024, alt: "多摩丘陵の緑と街並みを望む八王子の住宅街を描いたイラスト" }] },
 };
 const card = "rounded-2xl border border-slate-200 bg-white p-5 sm:p-6";
 const th = "whitespace-nowrap p-3 text-right font-semibold";
@@ -26,15 +27,33 @@ export default function HachiojiLandPricesPage() {
   const high = points.reduce((a, b) => a.price > b.price ? a : b);
   const ome = data.cities.find(c => c.code === "13205")!;
   return <main className="mx-auto w-full min-w-0 max-w-6xl px-4 py-6 text-slate-700 sm:px-6">
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Article", headline: title, description, mainEntityOfPage: canonical, datePublished: "2026-10-26", dateModified: "2026-10-26", author: { "@type": "Organization", name: "bearworks.uk" }, isBasedOn: "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-L01-2026.html" }) }} />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Article", headline: title, description, mainEntityOfPage: canonical, datePublished: "2026-10-26", dateModified: "2026-10-26", author: { "@type": "Organization", name: "bearworks.uk" }, image: "https://bearworks.uk/images/hachioji-land-prices/hero-illustration.webp", isBasedOn: "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-L01-2026.html" }) }} />
     <PublicSiteHeader />
     <article className="mx-auto max-w-5xl space-y-10 text-base leading-8">
-      <header className="overflow-hidden rounded-[2rem] bg-slate-900 p-6 text-white sm:p-10">
-        <p className="mb-4 text-sm font-semibold tracking-widest text-cyan-200">八王子を数字で読み解く · 第2弾</p>
-        <h1 className="max-w-3xl text-3xl font-bold leading-tight sm:text-5xl">八王子は本当に<br className="sm:hidden" />土地が安い？</h1>
-        <p className="mt-6 text-xl font-semibold text-cyan-100">近隣6市と124の地点から見る、「安さ」の幅。</p>
-        <p className="mt-4 max-w-3xl text-slate-200">同じ東京都でも、土地の値段にはずいぶん差がありそうです。では、八王子は近くの街より安いのでしょうか。住宅地の公示地価を使って、市ごとの平均、市内の地点分布、10年前からの変化を順に確かめます。</p>
-        <p className="mt-5 text-xs text-slate-300">主な価格時点：2026年1月1日 · 過去比較：2016年1月1日 · 単位：円/㎡（図では万円/㎡）</p>
+      <header className="overflow-hidden rounded-[2rem] bg-slate-900 text-white">
+        <div className="grid items-center gap-8 p-6 md:p-10 lg:grid-cols-2">
+          <div className="min-w-0">
+            <p className="mb-4 text-sm font-semibold tracking-widest text-cyan-200">八王子を数字で読み解く · 第2弾</p>
+            <h1 className="text-3xl font-bold leading-tight md:text-5xl">八王子は本当に<br className="sm:hidden" />土地が安い？</h1>
+            <p className="mt-6 text-xl font-semibold text-cyan-100">近隣6市と124の地点から見る、「安さ」の幅。</p>
+            <p className="mt-4 text-slate-200">同じ東京都でも、土地の値段にはずいぶん差がありそうです。では、八王子は近くの街より安いのでしょうか。住宅地の公示地価を使って、市ごとの平均、市内の地点分布、10年前からの変化を順に確かめます。</p>
+            <p className="mt-5 text-xs text-slate-300">主な価格時点：2026年1月1日 · 過去比較：2016年1月1日 · 単位：円/㎡（図では万円/㎡）</p>
+          </div>
+          <figure className="min-w-0">
+            <Image
+              src="/images/hachioji-land-prices/hero-illustration.webp"
+              width={1536}
+              height={1024}
+              alt="多摩丘陵の緑と街並みを望む八王子の住宅街を描いたイラスト"
+              unoptimized
+              priority
+              className="h-auto w-full rounded-2xl"
+            />
+            <figcaption className="mt-3 text-xs leading-6 text-slate-300">
+              導入用のAI生成イラスト。実在の場所や特定の分譲地、土地価格の水準を再現したものではありません。
+            </figcaption>
+          </figure>
+        </div>
       </header>
 
       <section className="space-y-5" aria-labelledby="answer">
