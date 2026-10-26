@@ -40,8 +40,8 @@
   - [x] 7.1 `npm run lint` (合格)
   - [x] 7.2 `npm run test:ai-news` (合格: 6/6 pass)
   - [x] 7.3 `npm run build` (合格)
-- [/] 8. PR作成およびCI結果確認
-  - [ ] 8.1 リモートブランチへの push
-  - [ ] 8.2 PR 作成
-  - [ ] 8.3 GitHub Actions `Workers build` のパス確認
-  - [ ] 8.4 完了報告と本番公開承認ゲートの提示
+- [x] 8. PR作成およびCI結果確認
+  - [x] 8.1 リモートブランチへの push (`feature/issue-415-ai-news-client-fetch`)
+  - [x] 8.2 PR 作成 ([#42](https://github.com/kumakit/bearworks-portal/pull/42))
+  - [x] 8.3 GitHub Actions `Workers build` のパス確認 (合格: 1m44s)
+  - [x] 8.4 完了報告と本番公開承認ゲートの提示
