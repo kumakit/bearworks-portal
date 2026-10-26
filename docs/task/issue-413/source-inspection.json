@@ -1,0 +1,146 @@
+{
+  "inspectedOn": "2026-10-26",
+  "status": "preliminary-not-for-publication",
+  "sourcePage": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-L01-2026.html",
+  "sources": [
+    {
+      "year": 2026,
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/data/L01/L01-26/L01-26_13_GML.zip",
+      "sha256": "4F3E251683A6AFFE7181236B60FDA2A7EEE1D5E83DAFFC9DB82435A1542A7795"
+    },
+    {
+      "year": 2016,
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/data/L01/L01-16/L01-16_13_GML.zip",
+      "sha256": "AC057BEF58B157FFDF3FB072CFC1F41AA72E2A0A65C250E4E128DCE546E3D5F1"
+    }
+  ],
+  "officialAggregateReconciled": false,
+  "cities": [
+    {
+      "code": "13201",
+      "city": "八王子",
+      "year2026": {
+        "count": 124,
+        "mean": 131316.12903225806,
+        "median": 117500,
+        "min": 36000,
+        "max": 355000
+      },
+      "year2016": {
+        "count": 125,
+        "mean": 114527.2,
+        "median": 107000,
+        "min": 37100,
+        "max": 273000
+      },
+      "validCoordinates2026": 124,
+      "positive2016HistoryIn2026": 116,
+      "continuityVerified": false
+    },
+    {
+      "code": "13202",
+      "city": "立川",
+      "year2026": {
+        "count": 30,
+        "mean": 308433.3333333333,
+        "median": 291500,
+        "min": 156000,
+        "max": 600000
+      },
+      "year2016": {
+        "count": 30,
+        "mean": 233700.0,
+        "median": 231000,
+        "min": 133000,
+        "max": 370000
+      },
+      "validCoordinates2026": 30,
+      "positive2016HistoryIn2026": 27,
+      "continuityVerified": false
+    },
+    {
+      "code": "13209",
+      "city": "町田",
+      "year2026": {
+        "count": 79,
+        "mean": 172625.31645569621,
+        "median": 158000,
+        "min": 53900,
+        "max": 403000
+      },
+      "year2016": {
+        "count": 80,
+        "mean": 155661.25,
+        "median": 150500,
+        "min": 57100,
+        "max": 298000
+      },
+      "validCoordinates2026": 79,
+      "positive2016HistoryIn2026": 76,
+      "continuityVerified": false
+    },
+    {
+      "code": "13212",
+      "city": "日野",
+      "year2026": {
+        "count": 37,
+        "mean": 218567.56756756757,
+        "median": 223000,
+        "min": 110000,
+        "max": 330000
+      },
+      "year2016": {
+        "count": 36,
+        "mean": 183361.11111111112,
+        "median": 185000,
+        "min": 110000,
+        "max": 245000
+      },
+      "validCoordinates2026": 37,
+      "positive2016HistoryIn2026": 32,
+      "continuityVerified": false
+    },
+    {
+      "code": "13206",
+      "city": "府中",
+      "year2026": {
+        "count": 44,
+        "mean": 355590.9090909091,
+        "median": 322000,
+        "min": 225000,
+        "max": 628000
+      },
+      "year2016": {
+        "count": 45,
+        "mean": 279266.6666666667,
+        "median": 270000,
+        "min": 196000,
+        "max": 450000
+      },
+      "validCoordinates2026": 44,
+      "positive2016HistoryIn2026": 39,
+      "continuityVerified": false
+    },
+    {
+      "code": "13205",
+      "city": "青梅",
+      "year2026": {
+        "count": 27,
+        "mean": 98566.66666666667,
+        "median": 93200,
+        "min": 28800,
+        "max": 185000
+      },
+      "year2016": {
+        "count": 28,
+        "mean": 97442.85714285714,
+        "median": 89400,
+        "min": 32000,
+        "max": 177000
+      },
+      "validCoordinates2026": 27,
+      "positive2016HistoryIn2026": 23,
+      "continuityVerified": false
+    }
+  ]
+}

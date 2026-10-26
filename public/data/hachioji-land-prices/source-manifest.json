@@ -1,0 +1,42 @@
+{
+  "retrievedOn": "2026-10-26",
+  "priceDates": [
+    "2016-01-01",
+    "2026-01-01"
+  ],
+  "sourcePage": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-L01-2026.html",
+  "sources": [
+    {
+      "year": 2016,
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/data/L01/L01-16/L01-16_13_GML.zip",
+      "sha256": "ac057bef58b157ffdf3fb072cfc1f41aa72e2a0a65c250e4e128dce546e3d5f1",
+      "retrievedOn": "2026-10-26"
+    },
+    {
+      "year": 2026,
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/data/L01/L01-26/L01-26_13_GML.zip",
+      "sha256": "4f3e251683a6affe7181236b60fda2a7eee1d5e83daffc9db82435a1542a7795",
+      "retrievedOn": "2026-10-26"
+    }
+  ],
+  "generatorSha256": "f1cdd292a8845bcb0d4084680c96fb0706e2e0b4b14c6b025d0768448c28a89a",
+  "license2026": "CC BY 4.0 (individual dataset condition)",
+  "license2016": "商用可・国土数値情報旧利用約款（出典・加工者・利用条件と適用限界を継承）",
+  "terms": [
+    "https://nlftp.mlit.go.jp/ksj/other/agreement_01.html",
+    "https://nlftp.mlit.go.jp/ksj/other/agreement_02.html"
+  ],
+  "credit": "出典：国土交通省 国土数値情報（地価公示、2016・2026年）。bearworks.ukが住宅地抽出・正規化・集計・図表化。国が作成した分析ではありません。",
+  "limitations": "標準地の価格であり、実売価格や市内全ての土地の価格ではありません。位置は標準地の代表点で、敷地境界や売地を示しません。標本構成と測地系は年により異なります。",
+  "files": {
+    "hachioji-land-prices-2026-10-26.r1.json": "410e483dbb700961c45c93e996d0070bcbbca3e1d1b24f728e389e665a115ec0",
+    "points.csv": "77b536d9275db9dfcf29ff5cd75200e1c84d61404ea12a91fb916c8aedec2a26",
+    "continuity-audit.csv": "f24991d933b500c93c69e048e9ff3dd45d7e8b44437ac3940f3a0b6c7b38c567"
+  },
+  "officialReconciliation": {
+    "passed": true,
+    "rounding": "平均は100円単位・四捨五入。件数・最小・最大も一致",
+    "table2016": "https://www.mlit.go.jp/common/001212283.pdf",
+    "table2026": "https://www.mlit.go.jp/tochi_fudousan_kensetsugyo/content/001986139.pdf"
+  }
+}

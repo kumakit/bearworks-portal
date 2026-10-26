@@ -46,3 +46,4 @@ cloudflare-env.d.ts
 /.local-research/
 
 scripts/hachioji-population/__pycache__/
+scripts/hachioji-land-prices/__pycache__/

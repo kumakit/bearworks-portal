@@ -24,3 +24,8 @@ docs/task/hachioji-rain-autumn/evidence/**/*.json text eol=lf
 scripts/fixtures/cloudflare-collection-*.json text eol=lf
 # Keep normalized population CSV checkout bytes stable for source hashes.
 docs/task/issue-410/evidence/normalized/*.csv text eol=crlf
+# Preserve the reproducible land-price bundle and generator hashes across platforms.
+/public/data/hachioji-land-prices/* text eol=lf
+/app/(monetized)/labs/hachioji-land-prices/data/*.json text eol=lf
+/docs/task/issue-413/normalized-inputs.json text eol=lf
+/scripts/hachioji-land-prices/*.py text eol=lf
