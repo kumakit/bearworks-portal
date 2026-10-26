@@ -72,6 +72,11 @@ jobs:
             ${{ runner.temp }}/npm-audit-full.json
           retention-days: 14
 
+      - name: Test Hachioji land price analysis
+        run: |
+          npm run test:hachioji-land-prices
+          python scripts/hachioji-land-prices/generate_bundle.py --check
+
       - name: Test Hachioji population analysis
         run: npm run test:hachioji-population
 
@@ -146,6 +151,7 @@ jobs:
           node scripts/verify-toukei-pages.mjs http://127.0.0.1:8788
           node scripts/verify-hachioji-rain-autumn-pages.mjs http://127.0.0.1:8788 --ads
           node scripts/verify-hachioji-population-pages.mjs http://127.0.0.1:8788
+          node scripts/verify-hachioji-land-prices-pages.mjs http://127.0.0.1:8788
 
           assert_status() {
             expected=$1

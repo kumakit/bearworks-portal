@@ -14,6 +14,16 @@ type LabArticle = SitemapEntry & { title: string; summary: string; series: strin
 
 const staticPaths: SitemapEntry[] = [
   {
+    pathname: "/labs/hachioji-land-prices",
+    title: "八王子は本当に土地が安い？",
+    summary: "近隣6市の住宅地と124地点の地図、10年前との比較から価格の幅を確かめます。",
+    series: "population",
+    seriesTitle: "八王子を数字で読み解く",
+    lastModified: new Date("2026-10-26"),
+    changeFrequency: "yearly",
+    priority: 0.85,
+  },
+  {
     pathname: "/labs/hachioji-rain",
     title: "八王子は都心より雨が多い？",
     summary: "年ごとの雨量や日数、上位5日への集中を観測から読みます。",

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0f172a"/>
+  <g font-family="Yu Gothic, sans-serif" fill="#fff">
+    <text x="64" y="70" font-size="22" fill="#67e8f9">八王子を数字で読み解く · 第2弾</text>
+    <text x="64" y="151" font-size="52" font-weight="700">八王子は本当に土地が安い？</text>
+    <text x="64" y="205" font-size="25" fill="#cbd5e1">近隣6市の住宅地を比べると、平均の中に違いが見える。</text>
+    <text x="64" y="280" font-size="23">2026年の住宅地標準地の平均</text>
+    <g font-size="22">
+      <text x="80" y="333">八王子</text><rect x="205" y="305" width="249" height="35" rx="5" fill="#22d3ee"/><text x="470" y="332">13.13</text>
+      <text x="80" y="382">立川</text><rect x="205" y="354" width="586" height="35" rx="5" fill="#64748b"/><text x="807" y="381">30.84</text>
+      <text x="80" y="431">町田</text><rect x="205" y="403" width="328" height="35" rx="5" fill="#64748b"/><text x="549" y="430">17.26</text>
+      <text x="80" y="480">日野</text><rect x="205" y="452" width="415" height="35" rx="5" fill="#64748b"/><text x="636" y="479">21.86</text>
+      <text x="80" y="529">府中</text><rect x="205" y="501" width="676" height="35" rx="5" fill="#64748b"/><text x="897" y="528">35.56</text>
+      <text x="80" y="578">青梅</text><rect x="205" y="550" width="187" height="35" rx="5" fill="#64748b"/><text x="408" y="577">9.86</text>
+    </g>
+    <text x="1125" y="280" font-size="21" text-anchor="end">万円/㎡</text>
+    <text x="1130" y="602" font-size="16" text-anchor="end" fill="#cbd5e1">2026-01-01 · 国土交通省 地価公示を加工 · bearworks.uk</text>
+  </g>
+</svg>

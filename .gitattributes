@@ -1,26 +1,5 @@
-app/(monetized)/labs/hachioji-climate/data/*.json text eol=lf
-app/(monetized)/labs/hachioji-snow/data/*.json text eol=lf
-app/(monetized)/labs/hachioji-heat/data/*.json text eol=lf
-app/(monetized)/labs/takao-gear/data/*.json text eol=lf
-scripts/validate-hachioji-climate-bundle.mjs text eol=lf
-scripts/validate-hachioji-snow-bundle.mjs text eol=lf
-scripts/validate-hachioji-heat-bundle.mjs text eol=lf
-scripts/validate-takao-gear-bundle.mjs text eol=lf
-app/(monetized)/labs/takao-weather-shift/data/*.json text eol=lf
-scripts/validate-takao-weather-bundle.mjs text eol=lf
-app/(monetized)/labs/hachioji-chill/data/*.json text eol=lf
-scripts/validate-hachioji-chill-bundle.mjs text eol=lf
-app/(monetized)/labs/hachioji-rain/data/*.json text eol=lf
-app/(monetized)/labs/hachioji-autumn/data/*.json text eol=lf
-app/(monetized)/labs/hachioji-population/data/*.json text eol=lf
-public/data/hachioji-population/*.json text eol=lf
-# Preserve Shift_JIS originals, including their CRLF, as byte sequences.
-data/hachioji-rain-autumn/*.csv -text -diff
-data/hachioji-rain-autumn/*.json text eol=lf
-public/data/hachioji-rain-autumn/*.csv -text -diff
-public/data/hachioji-rain-autumn/*.json text eol=lf
-docs/task/hachioji-rain-autumn/evidence/jma/*.html -text -diff
-docs/task/hachioji-rain-autumn/evidence/**/*.json text eol=lf
-scripts/fixtures/cloudflare-collection-*.json text eol=lf
-# Keep normalized population CSV checkout bytes stable for source hashes.
-docs/task/issue-410/evidence/normalized/*.csv text eol=crlf
+# Preserve the reproducible land-price bundle and generator hashes across platforms.
+/public/data/hachioji-land-prices/* text eol=lf
+/app/(monetized)/labs/hachioji-land-prices/data/*.json text eol=lf
+/docs/task/issue-413/normalized-inputs.json text eol=lf
+/scripts/hachioji-land-prices/*.py text eol=lf
