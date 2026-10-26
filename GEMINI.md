@@ -11,4 +11,4 @@
    - **main へのマージ**、**本番デプロイ (`npm run deploy`)**、**Cloudflare 設定変更**、**既存サービス・他作業に影響する操作**は、必ず事前にユーザーの明示的承認を得てください。
 2. **正本参照**: デプロイやロールバックの具体的手順は、常に [docs/operations/deployment.md](docs/operations/deployment.md) に従ってください。
 3. **設定不変更**: 既存の Cloudflare 設定（DNS、Access、Route、Secret）を勝手に変更しないでください。
-4. **AI ニュース自動更新の理解**: `data/news-data.json` が GitHub main にコミットされても Worker デプロイまで本番サイトには自動反映されません。
+4. **AI ニュース自動更新の理解**: `/ai-news` はクライアント側で GitHub Raw から最新データを非同期取得して自動反映します（反映まで数分のキャッシュ遅延あり）。ニュース更新だけを目的にユーザー承認なく本番デプロイを行わないでください。

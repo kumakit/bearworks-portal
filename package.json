@@ -27,7 +27,8 @@
     "start": "next start",
     "lint": "eslint .",
     "test:hachioji-land-prices": "python -m unittest discover -s scripts/hachioji-land-prices -p test_generate_bundle.py",
-    "validate:hachioji-land-prices": "node scripts/validate-hachioji-land-prices-bundle.mjs"
+    "validate:hachioji-land-prices": "node scripts/validate-hachioji-land-prices-bundle.mjs",
+    "test:ai-news": "node --experimental-strip-types --test tests/ai-news-utils.test.mjs"
   },
   "dependencies": {
     "lucide-react": "^0.378.0",
