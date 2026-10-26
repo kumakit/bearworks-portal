@@ -32,3 +32,7 @@ Workersの正常版: `773dbfae-ae00-49bb-aa0b-527acfb088bd`（2026-10-25T14:25:2
 GitHub ActionsにはWorkers PR検証と手動本番artifact生成があり、deploy実行は含まない。mainのbranch protectionは未設定。既存GitHub Pagesはmain/のlegacy公開経路あり（設定変更なし）。CloudflareのGit Build連携は未確認のため、mergeは公開を起動し得る操作として扱う。
 
 PR CI、本番artifact、merge/deploy、公開URL検証は次節に追記する。
+
+## PR CI修正
+
+PR #40の初回CI `40292146431` は分析/既存テスト・監査0・lint・Next/Workers build・本番/staging dry-runまで成功。preview開始時に既存 `verify-toukei-pages.mjs` の公開パス許可リストが旧56件のままで停止した（実際は新記事込み57件）。許可リストへ新記事1件を追加し、完全一致検査を維持してCIを再実行する。
