@@ -17,7 +17,7 @@
     "validate:hachioji-rain-autumn": "node scripts/validate-hachioji-rain-autumn.mjs",
     "test:hachioji-population": "python -m unittest discover -s scripts/hachioji-population -p test_generate_bundle.py",
     "validate:hachioji-population": "node scripts/validate-hachioji-population-bundle.mjs",
-    "validate:bundles": "npm run validate:hachioji-land-prices && npm run validate:hachioji-population && npm run validate:hachioji-climate && npm run validate:hachioji-snow && npm run validate:hachioji-heat && npm run validate:hachioji-chill && npm run validate:takao-gear && npm run validate:takao-weather && npm run validate:hachioji-rain-autumn",
+    "validate:bundles": "npm run validate:hachioji-aging && npm run validate:hachioji-land-prices && npm run validate:hachioji-population && npm run validate:hachioji-climate && npm run validate:hachioji-snow && npm run validate:hachioji-heat && npm run validate:hachioji-chill && npm run validate:takao-gear && npm run validate:takao-weather && npm run validate:hachioji-rain-autumn",
     "build": "npm run validate:bundles && next build",
     "cf:build": "npm run validate:bundles && opennextjs-cloudflare build",
     "preview": "npm run validate:bundles && opennextjs-cloudflare build && opennextjs-cloudflare preview",
@@ -28,7 +28,9 @@
     "lint": "eslint .",
     "test:hachioji-land-prices": "python -m unittest discover -s scripts/hachioji-land-prices -p test_generate_bundle.py",
     "validate:hachioji-land-prices": "node scripts/validate-hachioji-land-prices-bundle.mjs",
-    "test:ai-news": "node --experimental-strip-types --test tests/ai-news-utils.test.mjs"
+    "test:ai-news": "node --experimental-strip-types --test tests/ai-news-utils.test.mjs",
+    "test:hachioji-aging": "python -m unittest discover -s scripts/hachioji-aging -p test_generate_bundle.py",
+    "validate:hachioji-aging": "node scripts/validate-hachioji-aging-bundle.mjs"
   },
   "dependencies": {
     "lucide-react": "^0.378.0",

@@ -14,6 +14,16 @@ type LabArticle = SitemapEntry & { title: string; summary: string; series: strin
 
 const staticPaths: SitemapEntry[] = [
   {
+    pathname: "/labs/hachioji-aging",
+    title: "八王子は高齢者の街になっている？",
+    summary: "65歳以上の人数と割合、75・85歳以上の内訳、近隣6市と199町丁の年齢構成を比べます。",
+    series: "population",
+    seriesTitle: "八王子を数字で読み解く",
+    lastModified: new Date("2026-10-26"),
+    changeFrequency: "yearly",
+    priority: 0.85,
+  },
+  {
     pathname: "/labs/hachioji-land-prices",
     title: "八王子は本当に土地が安い？",
     summary: "近隣6市の住宅地と124地点の地図、10年前との比較から価格の幅を確かめます。",

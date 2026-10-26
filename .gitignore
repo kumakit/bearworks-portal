@@ -47,3 +47,9 @@ cloudflare-env.d.ts
 
 scripts/hachioji-population/__pycache__/
 scripts/hachioji-land-prices/__pycache__/
+
+# Local Issue #419 analysis scratch and bytecode
+scripts/hachioji-aging/__pycache__/
+/temp/issue419-sources/
+/temp/inspect419.py
+/temp/fetch419.py

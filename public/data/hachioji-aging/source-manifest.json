@@ -1,0 +1,109 @@
+{
+  "sources": [
+    {
+      "filename": "age2016.xls",
+      "url": "https://www.city.hachioji.tokyo.jp/hachiouji/jinko/005/p005910_d/fil/2809matibetunenrei.xls",
+      "sha256": "d9e0b8419c10865e2d407390eafcec9cc7ce86c1b4329560660f7c76ce65ffd5",
+      "retrievedAt": "2026-10-26T12:24:56.069284+00:00"
+    },
+    {
+      "filename": "age2026.xlsx",
+      "url": "https://www.city.hachioji.tokyo.jp/hachiouji/jinko/005/p037124_d/fil/0809matibetunenrei.xlsx",
+      "sha256": "d4757827b6afb2ad0e0468c4a031546cefa341c10ecc9282c1f8ed005964ea1f",
+      "retrievedAt": "2026-10-26T12:24:56.247595+00:00"
+    },
+    {
+      "filename": "tokyo-age.csv",
+      "url": "https://www.toukei.metro.tokyo.lg.jp/juukiy/2026/jy26qv0700.csv",
+      "sha256": "5936c7de21a607ded5e2f56ad6d3d25c74e8540c3d38a8c649e9a8f48a062ee7",
+      "retrievedAt": "2026-10-26T12:24:56.427593+00:00"
+    },
+    {
+      "filename": "tokyo-three.csv",
+      "url": "https://www.toukei.metro.tokyo.lg.jp/juukiy/2026/jy26qv0301.csv",
+      "sha256": "12af701a022f0b3b099e5cbcdbc8b3568e49746fbad7a04c7fbf37f7eadf4f82",
+      "retrievedAt": "2026-10-26T12:24:56.515645+00:00"
+    }
+  ],
+  "city": {
+    "title": "町丁別年齢別人口（2016年・2026年9月末）",
+    "publisher": "八王子市",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://www.city.hachioji.tokyo.jp/contents/open/002/p005866.html",
+    "attribution": "出典：八王子市「町丁別年齢別人口」、CC BY 4.0。文字表記の正規化、年齢区分の集計、図表化を実施。"
+  },
+  "tokyo": {
+    "title": "住民基本台帳による東京都の世帯と人口 令和8年1月 第7表・第3-1表",
+    "publisher": "東京都",
+    "license": "数値の事実を抽出・独自集計。東京都資料全体へのCCライセンス付与はしない。",
+    "licenseUrl": "https://www.toukei.metro.tokyo.lg.jp/homepage/site-policy.htm",
+    "notesUrl": "https://www.toukei.metro.tokyo.lg.jp/juukiy/2026/jy26qf0002.pdf",
+    "attribution": "出典：東京都「住民基本台帳による東京都の世帯と人口」2026年1月1日（2026年9月10日訂正版）を加工。文章・原表レイアウト・ロゴは転載しない。"
+  },
+  "method": {
+    "ageUnknown": 0,
+    "denominator": "each date and area's total registered population",
+    "smallPopulationThreshold": 100,
+    "tokyoDash": "公式利用上の注意に基づき、人数欄の - は皆無/該当数値なしとして0件。空欄や他の欠損はエラー。",
+    "sourceProcessing": "prepare_sources.py: 男女計、国籍計、町丁計、5歳階級/3区分、前作全199町丁、東京都第3-1表と突合。"
+  },
+  "excludedTowns": {
+    "上野町": {
+      "status": "exclude-confirmed-boundary-change",
+      "effectiveDate": "2024-08-10",
+      "evidenceUrl": "https://www.city.hachioji.tokyo.jp/kurashi/kosekijumin/008/001a/p032860.html",
+      "detailUrl": "https://www.city.hachioji.tokyo.jp/shisei/001/001/007/002/p031262_d/fil/gaiyou.pdf"
+    },
+    "小門町": {
+      "status": "exclude-confirmed-boundary-change",
+      "effectiveDate": "2024-08-10",
+      "evidenceUrl": "https://www.city.hachioji.tokyo.jp/kurashi/kosekijumin/008/001a/p032860.html",
+      "detailUrl": "https://www.city.hachioji.tokyo.jp/shisei/001/001/007/002/p031262_d/fil/gaiyou.pdf"
+    },
+    "台町3丁目": {
+      "status": "exclude-confirmed-boundary-change",
+      "effectiveDate": "2024-08-10",
+      "evidenceUrl": "https://www.city.hachioji.tokyo.jp/kurashi/kosekijumin/008/001a/p032860.html",
+      "detailUrl": "https://www.city.hachioji.tokyo.jp/shisei/001/001/007/002/p031262_d/fil/gaiyou.pdf"
+    },
+    "台町4丁目": {
+      "status": "exclude-confirmed-boundary-change",
+      "effectiveDate": "2024-08-10",
+      "evidenceUrl": "https://www.city.hachioji.tokyo.jp/kurashi/kosekijumin/008/001a/p032860.html",
+      "detailUrl": "https://www.city.hachioji.tokyo.jp/shisei/001/001/007/002/p031262_d/fil/gaiyou.pdf"
+    },
+    "川口町": {
+      "status": "exclude-pending-effective-date",
+      "effectiveDate": null,
+      "evidenceUrl": "https://www.city.hachioji.tokyo.dbsr.jp/index.php/734981?Id=6155&Template=document",
+      "detailUrl": "https://www.city.hachioji.tokyo.jp/contents/shigikai_1/gikainokatudou/honnkaigi/reiwa7/p036001.html"
+    },
+    "上川町": {
+      "status": "exclude-pending-effective-date",
+      "effectiveDate": null,
+      "evidenceUrl": "https://www.city.hachioji.tokyo.dbsr.jp/index.php/734981?Id=6155&Template=document",
+      "detailUrl": "https://www.city.hachioji.tokyo.jp/contents/shigikai_1/gikainokatudou/honnkaigi/reiwa7/p036001.html"
+    },
+    "西寺方町": {
+      "status": "exclude-pending-effective-date",
+      "effectiveDate": null,
+      "evidenceUrl": "https://www.city.hachioji.tokyo.dbsr.jp/index.php/734981?Id=6155&Template=document",
+      "detailUrl": "https://www.city.hachioji.tokyo.jp/contents/shigikai_1/gikainokatudou/honnkaigi/reiwa7/p036001.html"
+    },
+    "美山町": {
+      "status": "exclude-pending-effective-date",
+      "effectiveDate": null,
+      "evidenceUrl": "https://www.city.hachioji.tokyo.dbsr.jp/index.php/734981?Id=6155&Template=document",
+      "detailUrl": "https://www.city.hachioji.tokyo.jp/contents/shigikai_1/gikainokatudou/honnkaigi/reiwa7/p036001.html"
+    }
+  },
+  "mapDecision": "不採用。2020年統計境界と対象期間の地理的対応が未解決。前作で区域変更関連8町丁を除く人口カバー率は94.41%で、事前95%基準に未達。",
+  "codeVersion": "scripts/hachioji-aging/generate_bundle.py r1",
+  "processingHashes": {
+    "normalized-inputs.json": "771fe4d5db0b486a838f74b414057c74dc617ffa1c26ec20b726d0adea03d055",
+    "region-exclusions.json": "c86e4bdf780b2598420665f9d0931d864eb9366073bf996583bd41d4795bafbe",
+    "retrieval.json": "0a7931b39f3bae818e41da6c050dd8a8eccc368176cdd85c33845d2d9c99ba23",
+    "generate_bundle.py": "266693660ff263186da4034bbacc0d724a012322c244bafbde5368bbe468aa45",
+    "prepare_sources.py": "e8ce4a9c3c98472db5a348de13d2c7a59fb81b6eef8db6acb25768af4e89f0cc"
+  }
+}

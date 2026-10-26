@@ -29,3 +29,8 @@ docs/task/issue-410/evidence/normalized/*.csv text eol=crlf
 /app/(monetized)/labs/hachioji-land-prices/data/*.json text eol=lf
 /docs/task/issue-413/normalized-inputs.json text eol=lf
 /scripts/hachioji-land-prices/*.py text eol=lf
+
+# Preserve Issue #419 publication and processing hashes on Windows and Linux.
+/public/data/hachioji-aging/* text eol=lf
+/app/(monetized)/labs/hachioji-aging/data/*.json text eol=lf
+/scripts/hachioji-aging/* text eol=lf

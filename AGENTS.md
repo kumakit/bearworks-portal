@@ -63,3 +63,13 @@
   - 広告対象ページにのみ実広告 ID が含まれ、非広告ページ・404・管理画面には広告が一切含まれないこと（広告境界の検証）。
   - 未認証アクセス時に `/dashboard` および `/api/dashboard-data` が Cloudflare Access へ 302 リダイレクトされること。
   - 実ブラウザで表示崩れや JavaScript エラーがないこと。
+
+<!-- BEGIN:nextjs-agent-rules -->
+
+## This is NOT the Next.js you know
+
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+
+This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+
+<!-- END:nextjs-agent-rules -->
