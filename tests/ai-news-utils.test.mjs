@@ -27,7 +27,7 @@ test("sanitizeArticleUrl allows http and https, and strips invalid schemes", () 
   assert.equal(sanitizeArticleUrl(null), undefined);
 });
 
-test("validateNewsData validates real repository news-data.json with zero loss of url/published_at", async () => {
+test("validateNewsData validates real repository news-data.json with zero loss of url, published_at, title, and content", async () => {
   const filePath = path.join(__dirname, "..", "data", "news-data.json");
   const rawContent = await fs.readFile(filePath, "utf-8");
   const parsed = JSON.parse(rawContent);
@@ -36,11 +36,16 @@ test("validateNewsData validates real repository news-data.json with zero loss o
   assert.ok(validated, "validated result should not be null");
   assert.equal(validated.length, parsed.length, "groups length should match real file groups length");
 
-  // 元データ内の全有効記事の url と published_at の総数をカウント
+  // 元データ内の全有効記事の url, published_at, title, content の総数をカウント
   let rawUrlCount = 0;
   let rawPubCount = 0;
+  let rawTitleCount = 0;
+  let rawContentCount = 0;
+
   for (const group of parsed) {
     for (const art of group.articles || []) {
+      if (art.title && art.title.trim()) rawTitleCount++;
+      if (art.content && art.content.trim()) rawContentCount++;
       if (art.url) rawUrlCount++;
       if (art.published_at) rawPubCount++;
     }
@@ -48,15 +53,34 @@ test("validateNewsData validates real repository news-data.json with zero loss o
 
   let validatedUrlCount = 0;
   let validatedPubCount = 0;
+  let validatedTitleCount = 0;
+  let validatedContentCount = 0;
+
   for (const group of validated) {
     for (const art of group.articles) {
+      if (art.title) validatedTitleCount++;
+      if (art.content) validatedContentCount++;
       if (art.url) validatedUrlCount++;
       if (art.published_at) validatedPubCount++;
     }
   }
 
+  assert.equal(validatedTitleCount, rawTitleCount, "All valid titles must be retained");
+  assert.equal(validatedContentCount, rawContentCount, "All valid contents must be retained");
   assert.equal(validatedUrlCount, rawUrlCount, "All valid article URLs must be retained without loss");
   assert.equal(validatedPubCount, rawPubCount, "All valid published_at timestamps must be retained without loss");
+
+  // 各記事のタイトルとコンテンツが実データと厳密に一致することをサンプルおよび全件走査で検証
+  for (let i = 0; i < parsed.length; i++) {
+    const rawG = parsed[i];
+    const valG = validated.find((g) => g.date === rawG.date);
+    assert.ok(valG, `Group for date ${rawG.date} must exist`);
+    assert.equal(valG.articles.length, rawG.articles.length);
+    for (let j = 0; j < rawG.articles.length; j++) {
+      assert.equal(valG.articles[j].title, rawG.articles[j].title.trim());
+      assert.equal(valG.articles[j].content, rawG.articles[j].content.trim());
+    }
+  }
 });
 
 test("validateNewsData handles edge cases: empty array, non-array, and partial corrupted items", () => {
@@ -179,7 +203,7 @@ test("validateArchiveIndex parses valid archive indices correctly", () => {
   assert.equal(valid.updated_at, "2026-10-26T00:00:00Z");
 });
 
-test("fetchLatestAiNews, fetchArchiveIndex, fetchMonthlyArchive mock tests", async () => {
+test("fetchLatestAiNews, fetchArchiveIndex, fetchMonthlyArchive mock tests with real AbortController timeout", async () => {
   const originalFetch = globalThis.fetch;
 
   try {
@@ -228,7 +252,7 @@ test("fetchLatestAiNews, fetchArchiveIndex, fetchMonthlyArchive mock tests", asy
     assert.ok(monthly);
     assert.equal(monthly[0].date, "2026-10-15");
 
-    // 異常系: 404 / ネットワークエラー
+    // 異常系: 404 HTTPエラー
     globalThis.fetch = async () => {
       return { ok: false, status: 404 };
     };
@@ -237,14 +261,25 @@ test("fetchLatestAiNews, fetchArchiveIndex, fetchMonthlyArchive mock tests", asy
     assert.equal(await fetchArchiveIndex(), null);
     assert.equal(await fetchMonthlyArchive("2026-10"), null);
 
-    // 異常系: 例外 / タイムアウト
-    globalThis.fetch = async () => {
-      throw new Error("Network timeout");
+    // 異常系: 実際に AbortSignal のタイムアウトで中断される動作のテスト
+    globalThis.fetch = (url, options) => {
+      return new Promise((resolve, reject) => {
+        const signal = options?.signal;
+        if (signal?.aborted) {
+          return reject(new DOMException("The operation was aborted", "AbortError"));
+        }
+        signal?.addEventListener("abort", () => {
+          reject(new DOMException("The operation was aborted", "AbortError"));
+        });
+      });
     };
 
-    assert.equal(await fetchLatestAiNews(), null);
-    assert.equal(await fetchArchiveIndex(), null);
-    assert.equal(await fetchMonthlyArchive("2026-10"), null);
+    // タイムアウトを短い時間 (10ms) に指定して実行し、AbortController で安全に中断されることを検証
+    const timeoutLatest = await fetchLatestAiNews(10);
+    assert.equal(timeoutLatest, null, "Should return null on AbortError timeout");
+
+    const timeoutArchive = await fetchMonthlyArchive("2026-10", 10);
+    assert.equal(timeoutArchive, null, "Should return null on AbortError timeout");
   } finally {
     globalThis.fetch = originalFetch;
   }

@@ -1,9 +1,8 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Link from "@/components/InternalLink";
 import {
-  Article,
   NewsGroup,
   ArchiveIndex,
   fetchLatestAiNews,
@@ -25,6 +24,9 @@ export default function AiNewsFeedClient({ initialGroups }: AiNewsFeedClientProp
   const [isLoadingArchive, setIsLoadingArchive] = useState<boolean>(false);
   const [archiveError, setArchiveError] = useState<string | null>(null);
   const [isLiveUpdated, setIsLiveUpdated] = useState<boolean>(false);
+
+  // 連続クリック時の競合を防止するためのアクティブリクエスト追跡
+  const activeFetchMonthRef = useRef<string | null>(null);
 
   // マウント時にクライアント側で最新ニュースおよびアーカイブインデックスを取得
   useEffect(() => {
@@ -70,6 +72,7 @@ export default function AiNewsFeedClient({ initialGroups }: AiNewsFeedClientProp
 
     setSelectedMonth(month);
     setArchiveError(null);
+    activeFetchMonthRef.current = month;
 
     if (archiveCache[month]) {
       return;
@@ -78,21 +81,31 @@ export default function AiNewsFeedClient({ initialGroups }: AiNewsFeedClientProp
     setIsLoadingArchive(true);
     try {
       const data = await fetchMonthlyArchive(month);
+      // 他の月が選択されている場合は後発リクエストを優先して破棄
+      if (activeFetchMonthRef.current !== month) {
+        return;
+      }
+
       if (data && data.length > 0) {
         setArchiveCache((prev) => ({ ...prev, [month]: data }));
       } else {
         setArchiveError(`${month} のアーカイブデータが見つかりませんでした。`);
       }
     } catch {
-      setArchiveError(`${month} のアーカイブ取得中にエラーが発生しました。`);
+      if (activeFetchMonthRef.current === month) {
+        setArchiveError(`${month} のアーカイブ取得中にエラーが発生しました。`);
+      }
     } finally {
-      setIsLoadingArchive(false);
+      if (activeFetchMonthRef.current === month) {
+        setIsLoadingArchive(false);
+      }
     }
   };
 
   const handleSelectLatest = () => {
     setSelectedMonth(null);
     setArchiveError(null);
+    activeFetchMonthRef.current = null;
   };
 
   // 表示対象のグループデータ
@@ -178,7 +191,7 @@ export default function AiNewsFeedClient({ initialGroups }: AiNewsFeedClientProp
         )}
 
         {/* ニュース表示エリア */}
-        {!isLoadingArchive && sortedGroups.length === 0 ? (
+        {!isLoadingArchive && !archiveError && sortedGroups.length === 0 ? (
           <div className="py-16 text-center text-zinc-400 select-none">
             <p className="text-lg font-bold">No news available.</p>
             <p className="text-xs mt-2">データが存在しないか、読み込みを待機しています。</p>
@@ -329,6 +342,7 @@ export default function AiNewsFeedClient({ initialGroups }: AiNewsFeedClientProp
       <footer className="text-center text-xs text-gray-300 py-4 font-sans select-none">
         <p>
           Data collected by OCI • Summaries by Gemini API • Total {totalArticles} news items
+          {selectedMonth && ` (${selectedMonth} アーカイブ)`}
         </p>
       </footer>
     </main>

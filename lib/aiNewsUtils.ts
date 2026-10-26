@@ -251,12 +251,20 @@ async function fetchWithTimeout(url: string, timeoutMs: number): Promise<Respons
 }
 
 /**
+ * 5分単位で丸めたキャッシュバスターを生成し、GitHub CDNのエッジキャッシュ（max-age=300）と
+ * 協調して不要なレート制限・帯域消費を抑制する。
+ */
+function getCacheBuster(): number {
+  return Math.floor(Date.now() / (5 * 60 * 1000));
+}
+
+/**
  * GitHub Raw から最新の AIニュースデータを取得・検証する
  */
 export async function fetchLatestAiNews(
   timeoutMs = DEFAULT_FETCH_TIMEOUT_MS
 ): Promise<NewsGroup[] | null> {
-  const url = `${RAW_GITHUB_NEWS_URL}?t=${Date.now()}`;
+  const url = `${RAW_GITHUB_NEWS_URL}?t=${getCacheBuster()}`;
   try {
     const res = await fetchWithTimeout(url, timeoutMs);
     if (!res.ok) {
@@ -275,7 +283,7 @@ export async function fetchLatestAiNews(
 export async function fetchArchiveIndex(
   timeoutMs = DEFAULT_FETCH_TIMEOUT_MS
 ): Promise<ArchiveIndex | null> {
-  const url = `${RAW_GITHUB_ARCHIVE_INDEX_URL}?t=${Date.now()}`;
+  const url = `${RAW_GITHUB_ARCHIVE_INDEX_URL}?t=${getCacheBuster()}`;
   try {
     const res = await fetchWithTimeout(url, timeoutMs);
     if (!res.ok) {
@@ -298,7 +306,7 @@ export async function fetchMonthlyArchive(
   if (!/^\d{4}-\d{2}$/.test(month)) {
     return null;
   }
-  const url = `${RAW_GITHUB_ARCHIVE_BASE_URL}/news-${month}.json?t=${Date.now()}`;
+  const url = `${RAW_GITHUB_ARCHIVE_BASE_URL}/news-${month}.json?t=${getCacheBuster()}`;
   try {
     const res = await fetchWithTimeout(url, timeoutMs);
     if (!res.ok) {
