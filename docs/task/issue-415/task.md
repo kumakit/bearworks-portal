@@ -14,25 +14,25 @@
   - [x] 2.1 型定義 (`Article`, `NewsGroup`, `ArchiveIndex`)
   - [x] 2.2 スキーマ検証および URL サニタイズ関数 (`validateNewsData`, `sanitizeArticleUrl`, `validateArchiveIndex` - 不正記事スキップ・同日重複排除・日付形式チェック)
   - [x] 2.3 日付ベース鮮度比較関数 (`shouldAdoptFetchedNews`)
-  - [x] 2.4 クライアント取得関数 (`fetchLatestAiNews`, `fetchArchiveIndex`, `fetchMonthlyArchive` - AbortController + setTimeout)
+  - [x] 2.4 クライアント取得関数 (`fetchLatestAiNews`, `fetchArchiveIndex`, `fetchMonthlyArchive` - AbortController + setTimeout, 5分バケットキャッシュバスター)
 - [x] 3. 単体テスト作成と互換性検証 (`tests/ai-news-utils.test.mjs`, `package.json`, CI)
   - [x] 3.1 `package.json` に `test:ai-news` 追加（`--experimental-strip-types` 利用）
-  - [x] 3.2 実ファイル `data/news-data.json` の互換性テスト（URL/日付の欠落ゼロ検証）
+  - [x] 3.2 実ファイル `data/news-data.json` の互換性テスト（URL/日付/title/content の欠落ゼロ検証）
   - [x] 3.3 境界値・スキーマ検証テスト（空配列、不正構造、javascriptスキーム等の除外、不正記事スキップ）
   - [x] 3.4 鮮度比較ロジックの単体テスト（新14日 vs 旧30日、同日件数比較等）
-  - [x] 3.5 取得関数のモックテスト（200, 404, タイムアウト）
+  - [x] 3.5 取得関数のモックテスト（200, 404, AbortController タイムアウト実中断テスト）
   - [x] 3.6 `.github/workflows/workers-build.yml` に `npm run test:ai-news` 追加
 - [x] 4. クライアントコンポーネント実装 (`components/AiNewsFeedClient.tsx`)
   - [x] 4.1 ヘッダー（最新データ日付）とフッター（総件数）の連動管理
   - [x] 4.2 マウント時の最新データ取得・鮮度比較による自動更新
   - [x] 4.3 取得失敗・タイムアウト時のフォールバック維持
-  - [x] 4.4 月別アーカイブ切替UIおよびオンデマンド取得（404時は静かに非表示）
+  - [x] 4.4 月別アーカイブ切替UIおよびオンデマンド取得（競合防止、404時は静かに非表示）
 - [x] 5. ページ修正 (`app/(non-monetized)/ai-news/page.tsx`)
   - [x] 5.1 SSG 初期データ読み込み（最新14グループ制限: `INITIAL_SSG_GROUPS_LIMIT = 14`）
   - [x] 5.2 Server Component の AdSense 非掲載境界とメタデータ維持
   - [x] 5.3 `<AiNewsFeedClient initialGroups={initialGroups} />` へのデータ引き渡し
 - [x] 6. ドキュメント更新 (4ファイル)
-  - [x] 6.1 `docs/operations/deployment.md` のAIニュース反映方式更新
+  - [x] 6.1 `docs/operations/deployment.md` のAIニュース反映方式更新・将来改善候補の記録復元
   - [x] 6.2 `README.md` の運用記述更新
   - [x] 6.3 `AGENTS.md` のAIニュース自動更新に関する記述更新
   - [x] 6.4 `GEMINI.md` のAIニュース記述更新
@@ -43,5 +43,11 @@
 - [x] 8. PR作成およびCI結果確認
   - [x] 8.1 リモートブランチへの push (`feature/issue-415-ai-news-client-fetch`)
   - [x] 8.2 PR 作成 ([#42](https://github.com/kumakit/bearworks-portal/pull/42))
-  - [x] 8.3 GitHub Actions `Workers build` のパス確認 (合格: 1m44s)
+  - [x] 8.3 GitHub Actions `Workers build` のパス確認 (合格: 1m44s / 1m32s)
   - [x] 8.4 完了報告と本番公開承認ゲートの提示
+- [x] 9. 本番公開と実URL検証
+  - [x] 9.1 main への通常マージ完了
+  - [x] 9.2 直前 Version ID (`1fbf5e80-7fb3-452b-bbb8-243cf04d1785`) の記録
+  - [x] 9.3 本番デプロイ実行 (`npm run deploy`, Version ID: `2e18eea9-faf4-4952-8d3c-9a4a5ab32ab9`)
+  - [x] 9.4 実URL検証（200, 404, AdSense非掲載境界, Access 302リダイレクト, ads.txt/sitemap）
+  - [x] 9.5 Issue #415 への結果詳細コメント投稿

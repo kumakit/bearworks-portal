@@ -61,3 +61,27 @@
 - [x] クライアント更新時に、記事一覧だけでなくヘッダーの「最新データ日付」とフッターの「Total N news items」も連動して更新されること。
 - [x] `data/archive/index.json` が存在する場合、過去の月別アーカイブ (`data/archive/news-YYYY-MM.json`) をオンデマンドで切り替えて閲覧できるUI導線があること。
 - [x] ローカル `npm run build` がパスし、AdSense 非掲載境界が維持されていること。
+
+---
+
+## 4. 本番デプロイおよび実URL検証記録
+
+- **マージコミット**: `6549347c69cb965e1d48e5b91b8a4fa97096f593` (PR [#42](https://github.com/kumakit/bearworks-portal/pull/42))
+- **公開日時**: 2026-10-26 21:18 JST (`2026-10-26T12:18:37.279Z`)
+- **公開 Version ID**: `2e18eea9-faf4-4952-8d3c-9a4a5ab32ab9`
+- **直前 Version ID (復旧先)**: `1fbf5e80-7fb3-452b-bbb8-243cf04d1785`
+- **本番環境変数**: `NEXT_PUBLIC_ADSENSE_CLIENT_ID="ca-pub-9560028085973137"`
+
+### 実URL検証結果
+1. **トップページ (`https://bearworks.uk/`)**: HTTP 200、本番 AdSense ID (`ca-pub-9560028085973137`) 正常描画確認。
+2. **AIニュース (`https://bearworks.uk/ai-news`)**:
+   - HTTP 200 正常応答。
+   - 初期SSGデータ（最新日付 `2026-10-26`、まとめ、10記事）が正常描画。
+   - AdSense パブリッシャー ID およびスクリプトが**一切含まれていないこと**を確認（AdSense 非掲載境界の維持）。
+3. **その他非広告ページ**: `/about`, `/weather`, `/privacy`, `/contact` すべて HTTP 200、広告コード一切なし。
+4. **404 ページ (`/not-found-test-slug`)**: HTTP 404 応答、広告コード一切なし。
+5. **認証・保護確認**: `/dashboard` および `/api/dashboard-data` への未認証アクセス時に Cloudflare Access (`bearworks-uk.cloudflareaccess.com`) へ 302 リダイレクトされることを確認。
+6. **関連ファイル**:
+   - `https://bearworks.uk/ads.txt`: HTTP 200、`google.com, pub-9560028085973137, DIRECT, f08c47fec0942fa0` 確認。
+   - `https://bearworks.uk/robots.txt` & `https://bearworks.uk/sitemap.xml`: HTTP 200 正常取得確認。
+
