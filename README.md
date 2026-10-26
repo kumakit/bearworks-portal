@@ -75,7 +75,7 @@ npm run deploy      # Build and deploy the Worker
 3. **Cloudflare 設定の変更禁止**:
    - 既存の DNS レコード、Cloudflare Access、Workers Route、Secret を勝手に変更・削除してはなりません。
 4. **AI ニュース自動更新との関係**:
-   - `data/news-data.json` は OCI 上のワーカーから日次で GitHub `main` に直接 push されますが、本番 Worker をデプロイするまで本番サイト（`bearworks.uk/ai-news`）の表示は自動的には更新されません。
+   - `data/news-data.json` は OCI 上のワーカーから日次で GitHub `main` に直接 push されます。`/ai-news` ページはクライアント側で GitHub Raw から最新データを非同期取得して自動更新するため、サイト全体の再デプロイなしに最新データが反映されます（GitHub CDNのキャッシュにより数分程度の遅延が生じる場合があります）。
 5. **ロールバックの優先順位**:
    - 通常障害時は直前の Worker バージョンへのロールバック（`npx wrangler rollback`）を第一選択とします。Pages への切戻しは未検証の過去バージョンへの変更を伴う非常措置であり、事前確認とユーザー承認なしに実行してはなりません。
 

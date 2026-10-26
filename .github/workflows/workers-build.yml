@@ -89,6 +89,9 @@ jobs:
       - name: Verify Cloudflare collection contract and display
         run: npm run test:cloudflare
 
+      - name: Test AI news utilities
+        run: npm run test:ai-news
+
       - name: Build Next.js
         run: npm run build
 
