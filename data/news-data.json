@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-10-28",
+    "daily_summary": "本日のAIニュースでは、OpenAIの新モデルを活用した開発・セキュリティツールの進化や、Microsoftによる強化学習を用いたエージェント育成フレームワークの公開など、ソフトウェア開発やAIエージェントの高度化に関する発表が相次ぎました。また、Googleの最長2分一貫性を保つ世界モデル「Genie 4」や脳解明プロジェクト、Oracleとのビジネス統合など各社の応用領域拡大が進む一方、AnthropicのIPO目論見書による人類の存続リスクへの警告や、OpenAIの成果非公開に対する研究者からの懸念など、AIの急速な進化に伴うオープン性とガバナンスを巡る課題も浮き彫りになっています。",
+    "articles": [
+      {
+        "title": "OpenAI、GPT-6 Astraを活用したGreptileの高度なバグ検出機能を発表",
+        "content": "Greptileが最新のGPT-6 AstraやDaybreak、Codexを導入し、コードレビューを超えたユーザーワークフローのテストやセキュリティ強化を実現したことが発表されました。最新モデルを活用した次世代のソフトウェア開発自動化とコード品質管理の進化を示しています。",
+        "source": "OpenAI",
+        "published_at": "2026-10-28",
+        "url": "https://openai.com/index/greptile-code-review-codex-astra",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "Microsoft、既存エージェントを強化学習で育成する軽量フレームワーク「Agent Lightning v1.0」公開",
+        "content": "Microsoft Researchが公開した「Agent Lightning v1.0」は、わずか3,500行のコードで既存のエージェントを強化学習（RL）に接続できる軽量フレームワークである。複雑なシステムをゼロから再構築することなく、エージェントの性能向上を図ることが可能になる。",
+        "source": "Microsoft Research",
+        "published_at": "2026-10-28",
+        "url": "https://www.microsoft.com/en-us/research/blog/agent-lightning-v1-0-a-3500-line-lightweight-agentic-rl-framework-for-training-agents-with-real-harnesses/",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "フロンティアAIラボのモデルが「指数時間仮説」を打破？その科学的意味とは",
+        "content": "最先端AIモデルが計算複雑性理論における「指数時間仮説（ETH）」を論破したとされる発見について、MITの計算機科学者がその驚異的な内容を解説した。AIの推論能力が理論的限界を超えつつあることを示す重要なブレイクスルーである。",
+        "source": "TechCrunch",
+        "published_at": "2026-10-28",
+        "url": "https://techcrunch.com/2026/10/27/frontier-ai-labs-say-their-models-refuted-the-exponential-time-hypothesis-what-does-that-mean/",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "Google、音声・物理演算を強化し最長2分一貫性を保つ世界モデル「Genie 4」発表",
+        "content": "Googleが発表した世界モデル「Genie 4」は、シーンの一貫性を前身の倍となる最長2分間維持でき、音声対応やリアルタイムのステアリング機能を備えています。より現実的な物理演算と人間らしいキャラクター表現により、シミュレーションやロボティクス分野への応用が期待されます。",
+        "source": "TechCrunch",
+        "published_at": "2026-10-28",
+        "url": "https://techcrunch.com/2026/10/27/googles-genie-4-world-model-adds-audio-more-realistic-worlds-and-real-time-steering/",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "Hugging Face、LFM3を用いた特殊マルチモーダルモデルの構築手法を公開",
+        "content": "Hugging FaceはLFM3を活用して、特定の用途に特化したマルチモーダルモデルを構築するためのアプローチを紹介した。開発者が自社固有のタスクに合わせて効率的にモデルをカスタマイズする実践的なヒントを提供する。",
+        "source": "Hugging Face",
+        "published_at": "2026-10-28",
+        "url": "https://huggingface.co/blog/LiquidAI/lfm3",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "OpenAI、Oracleとの提携拡大でChatGPTにビジネスアプリとAIエージェントを統合",
+        "content": "OpenAIはOracleとのパートナーシップを拡大し、ChatGPTにビジネスアプリケーションやAIエージェント機能を統合すると発表した。これにより、企業の業務効率化やOracleの新サービス提供に向けた基盤強化が期待される。",
+        "source": "OpenAI",
+        "published_at": "2026-10-28",
+        "url": "https://openai.com/index/oracle-apps-in-chatgpt",
+        "category": "事業・投資"
+      },
+      {
+        "title": "Google AIの新たな挑戦：人間の脳の全容解明へ向けて",
+        "content": "Google AIは人間の脳の構造や機能をマッピングするための新しいプロジェクト「AI Quest」を発表した。最先端のAI技術を活用して脳科学の未解明な領域に挑むものであり、今後の医療や認知科学への応用が期待される。",
+        "source": "Google AI",
+        "published_at": "2026-10-28",
+        "url": "https://blog.google/products-and-platforms/products/education/ai-quests-polar-peaks/",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "Check Point、OpenAI Daybreakを活用して脆弱性研究を大幅加速",
+        "content": "Check PointはOpenAIの「Daybreak」を導入し、セキュリティの脆弱性調査と顧客向けの防御体制構築のスピードを劇的に向上させた。サイバーセキュリティ分野における生成AI活用の具体的な成功事例として重要である。",
+        "source": "OpenAI",
+        "published_at": "2026-10-28",
+        "url": "https://openai.com/index/check-point-daybreak",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "研究者の間で高まる不満：OpenAIの成果非公開（ゲートキーピング）に対する懸念",
+        "content": "OpenAIが発表した数学やコンピュータ科学における画期的な成果に対し、オープンな共有を求める研究者から不満の声が上がっている。AI業界における情報公開のあり方と研究のオープン性を巡る議論に一石を投じる内容である。",
+        "source": "The Verge",
+        "published_at": "2026-10-28",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/1019921/openai-breakthrough-math-computer-science-physics",
+        "category": "政策・安全"
+      },
+      {
+        "title": "アンソロピック、IPO目論見書で「最先端AIが人類の存続を脅かす危険性」を指摘",
+        "content": "米Anthropicが上場に向けて提出した目論見書の中で、最先端AIが将来的に人類の存続を脅かす危険性があると公式に警告したことが報じられました。AI企業のガバナンスやリスク管理体制が上場企業の評価において重要な投資判断基準になることを示唆しています。",
+        "source": "Google News",
+        "published_at": "2026-10-28",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE84Z215eFlkaGt0WXN1cXh0cEJ6SGl4ckZ2eWxxZnRLbzhPNlFvUTQzRDRfNnZYVndRMHBtaXk2MUp4dnY0NDBBUFUyNEdlSWQxdHNLdURjM29xdHJodWFDa2xHOGI?oc=5",
+        "category": "政策・安全"
+      }
+    ]
+  },
+  {
     "date": "2026-10-27",
     "daily_summary": "本日のAIニュースは、MicrosoftやOpenAIによる新技術・効率化ツールの発表や、AnthropicのIPO申請およびS-1書類から見えてきた巨額の財務・戦略の実態、さらにはSpaceXによる400億ドルの大規模なGPU資金調達など、AIインフラの拡大と産業構造の大きな変化を象徴する話題が中心となりました。同時に、AIエージェントの普及に伴うECサイトでのボット防御の強化や、マイクロソフトの大規模な希望退職といった組織再編の動きも報じられており、AI技術の高度化がビジネスや雇用環境に多大な影響を与え始めていることを示す一日となりました。",
     "articles": [
@@ -2649,92 +2735,6 @@
         "source": "Google News",
         "published_at": "2026-09-29",
         "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1XMlRjWlY1Nk1CV2xRSzVIcTVXYi1OT0hSTWo0YlRzNFNweWFjX243WEZIZHY1dTY1emhpTkxhZWdlR0Izcjh1N1gtb3pNVVVBYktvS2E1M0J0cGtmYUFRQ3Q3cEhWUEppc3FjamhTNUhPUQ?oc=5",
-        "category": "事業・投資"
-      }
-    ]
-  },
-  {
-    "date": "2026-09-28",
-    "daily_summary": "本日のAIニュースは、声優業界における生成AIの権利侵害問題や、米中首脳会談によるAIの「SI」呼称合意および開発競争といった国際的動向が報じられたほか、産業・造船・CAD分野でのAIロボットや熟練知見の活用、さらにはマイクロン社の株価急騰やアセマネOneのAI運用者への出資など、技術の産業実装と市場の双方において大きな動きが見られた一日となりました。",
-    "articles": [
-      {
-        "title": "声優業界、生成AIによる無断模倣の被害が深刻化 ベテラン声優らが権利保護を訴え",
-        "content": "生成AIによる声の無断模倣や権利侵害が声優業界で深刻な問題となっています。第三者が無断で生成した音声で報酬を得るケースも発生しており、ベテラン声優らが法的権利の認可と保護を強く求めています。AI技術の急激な普及に伴うクリエイターの権利保護が急務となっています。",
-        "source": "Google News",
-        "published_at": "2026-09-28",
-        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5UWDVDZkQ3d3FJNDBNelpxbjFmU0FoVTAtZGJRNXNhdUIwVnViTkd6a1RtQzQzeWh0S19WdlN4UVFTOWZrc1dxQUMzYlgzX3VY?oc=5",
-        "category": "政策・安全"
-      },
-      {
-        "title": "AIを「SI」と呼称 米中が合意",
-        "content": "アメリカと中国の間で、人工知能（AI）の新しい呼称として「SI」を採用することで合意がなされました。この新たな定義により、両国間における今後の技術的な対話や協力体制に影響を与える可能性があります。詳細については今後の動向が注目されます。",
-        "source": "Google News",
-        "published_at": "2026-09-28",
-        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBQVjRVdWh2Y3doSlJzd0NiaWNGb0hOWmFfZ2IzX0l1ak15MzVmM2lhVXRrNEs0eGsxbWxaTnNGamIwOUM2ZEF2WkpsR2daTDVs?oc=5",
-        "category": "政策・安全"
-      },
-      {
-        "title": "AIは「SI」と言い換え 米中首脳が合意と米ホワイトハウス発表",
-        "content": "米ホワイトハウスの発表によると、米中首脳会談において人工知能（AI）を「SI」と言い換えることで合意に至りました。この用語の変更は両国間の技術対話や議論に影響を与える可能性があります。詳細な意図や今後の運用については引き続き注目されています。",
-        "source": "Google News",
-        "published_at": "2026-09-28",
-        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9LZUZNREJsSDFIQUhCZW92M2xJTFhYLWVKYnZWR3F6aWRTN1Y1UHVhTWJQeEpkX1BVOER6bGNhSkNuQ0dOSWo2S2F6dVlqc0FuemNDV0RCazE3a2J5V3VkWWtiUEI4UWtsLUJhXw?oc=5",
-        "category": "政策・安全"
-      },
-      {
-        "title": "米大統領、ＡＩで対中リード維持を表明 対話強化と開発推進へ",
-        "content": "米大統領は人工知能（AI）分野において中国に対する優位性を維持する方針を示し、対話を強化しつつも開発を推進していく考えを明らかにしました。台湾を巡る問題についても触れ、習近平国家主席との意思疎通に言及しています。",
-        "source": "Google News",
-        "published_at": "2026-09-28",
-        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE0zQ0ozLXFmblpvQUlnVmt3QzJlVWRvd1N5QktnZVo4NDIyWk9PNTBKRE8ycHlJMU94aDdBaG5FZ3piVWp6VXJxMkhud1cxQWllTWR4MkVNOGxDNUJRUDVndUU5MA?oc=5",
-        "category": "政策・安全"
-      },
-      {
-        "title": "産業ロボットの雄ファナックが貫くオープン化の肝",
-        "content": "ファナックはグーグルからの独占的な提携オファーを断り、産業用ロボット分野におけるオープン化の道を歩み続けています。工場でのフィジカルAIの実装が進む中、同社は独自の戦略でエコシステムの拡大を図っています。",
-        "source": "Google News",
-        "published_at": "2026-09-28",
-        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9VVDlwNnNzd1ZmdUxjMkp5UUJtWXlmYmc5WlZ3cERQSjY0WnF2VUEtMXVtMF82dUtnRGFCUnBvaWRNX3ljLUVuZXFLQXdOSVVhRWVadnRPM1hDODFKXzVv?oc=5",
-        "category": "事業・投資"
-      },
-      {
-        "title": "造船再生、カギはAIロボットか…国交省が日米で共同開発",
-        "content": "国土交通省は、日本の造船業の再生を目指し、AIやロボット技術の共同開発を日米間で進める方針を固めました。最先端のテクノロジーを導入することで、生産性の向上や国際競争力の強化を図ります。今後の具体的な技術協力の行方に注目が集まっています。",
-        "source": "Google News",
-        "published_at": "2026-09-28",
-        "url": "https://news.google.com/rss/articles/CBMiQkFVX3lxTE1aOTdnQllfMl9VVzNaUHFfNF9uQlJ0VXd0Q1cza1dsbjVpakF2MTE2dTQ3Zk1ISkhuY1lZR25ueEp0UQ?oc=5",
-        "category": "政策・安全"
-      },
-      {
-        "title": "UEL、熟練者知見をAIで再現 3DCAD新機能",
-        "content": "UELは、熟練者のノウハウや知見をAIによって再現する3DCADの新機能を発表しました。設計業務の効率化や属人化の解消が期待されます。",
-        "source": "Google News",
-        "published_at": "2026-09-28",
-        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5oSHVfRFRZTUxlb3NXTURlTmZvM1psOVRCTHRKSm1DMDhfeUZLc0dyVXZmdW9LQkdlOGtMSHJkbjkzT0laMlVEWnVRZEZEVXdwSkJQVE1odU8?oc=5",
-        "category": "エージェント・開発ツール"
-      },
-      {
-        "title": "AI巡る投資家心理が急旋回－恐怖と強欲の間で揺れる米株市場",
-        "content": "人工知能（AI）関連の株式市場において、投資家の心理が急速に変化しています。市場は「恐怖」と「強欲」の間で大きく揺れ動いており、今後の動向に注目が集まっています。",
-        "source": "Google News",
-        "published_at": "2026-09-28",
-        "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1kWFk0Q0I4eDk2V0ZvVzgwN3FXZTZYM3hkY2ozMFZXRGg2U0QzS2RjeWI1TE9QWXVDdGlma1VGUVVQWkJKWGRkSk5wVzBFNHRfZml0dkgyeTJWUVhLZzE2b0RKY2tQUTU0dDdYSFJoSlkyX3NEVDJN?oc=5",
-        "category": "事業・投資"
-      },
-      {
-        "title": "アセマネOneが「AI運用者」シンガポール新興に出資、国内大手で初",
-        "content": "資産運用会社のアセマネOneが、シンガポールの新興企業が開発する「AI運用者」に対して出資を行いました。国内の主要な資産運用会社によるAI技術を活用した運用体制への出資は、これが初めての事例となります。AIによる高度な市場分析や投資判断の導入が、今後の資産運用業界にどのような影響を与えるか注目されます。",
-        "source": "Google News",
-        "published_at": "2026-09-28",
-        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5ZLUJnZW91dnhKQWFGdFNmMnBxQUFZZzBoOXcyUEZUbVVLTTBldEZ0QnBwaFJCbGJxaGoyQUxSbUw0TWtSUmotY3RZQTZycXNmQV84ZTdZUUJ3bkEyTW1ic000SldFY2tkMHBmdw?oc=5",
-        "category": "事業・投資"
-      },
-      {
-        "title": "AI需要でマイクロン株が年初来260％超上昇、9月30日決算で問われる持続力",
-        "content": "AI需要の拡大に伴い、マイクロン・テクノロジーの株価が年初来で260%を超える大幅な上昇を記録しています。9月30日に予定されている決算発表では、この好業績の勢いとAI特需の持続可能性が投資家から厳しく問われることになります。",
-        "source": "Google News",
-        "published_at": "2026-09-28",
-        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5pMzBlemN2X0ZTOUxqX1Njck9KTjJmVDVLOVh5Z2s4dDBUOWJBeS1SMkRLTkJPZDJjblVGNEczX0VNTXFtMnEtN3A1MDJQQ3YyLUhaX3FfY1Vvdw?oc=5",
         "category": "事業・投資"
       }
     ]
