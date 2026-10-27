@@ -159,6 +159,7 @@ export default function HachiojiAgingPage() {
         <Link href="/labs/hachioji-land-prices" className={`${card} font-semibold text-sky-800 hover:bg-sky-50`}>第2弾：八王子は本当に土地が安い？ →</Link>
         <Link href="/labs" className="text-sm font-semibold text-sky-800 underline">Labsの記事一覧へ</Link>
       </nav>
+    <p className="text-sm"><Link href="/labs/hachioji-city-center" className="font-semibold text-sky-800 underline">第4弾：八王子の中心市街地は発展しつつある？ →</Link></p>
     </article>
     <PublicSiteFooter />
   </main>;

@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-27",
+  "generatorSha256": "5779d7dedb72f2cf2d06f305d07de950007c2fb4f69bf1b901cfe5e2160e39a6",
+  "sources": [
+    {
+      "id": "follow-up2025",
+      "url": "https://www.city.hachioji.tokyo.jp/kurashi/sangyo/003/hatioujichuusinn/p031516_d/fil/follow-up2025.pdf",
+      "retrievedAt": "2026-10-27T13:53:54.431584+00:00",
+      "sha256": "f706698949b46bdb5fb63aa4d52c52f60c7532af31976e2881993ea5c0cd30dc",
+      "bytes": 1805439,
+      "pages": 21,
+      "title": "2025年度 八王子市中心市街地活性化基本計画 定期フォローアップ報告書",
+      "published": "2026-05"
+    },
+    {
+      "id": "follow-up2024",
+      "url": "https://www.city.hachioji.tokyo.jp/kurashi/sangyo/003/hatioujichuusinn/p031516_d/fil/follow-up2024.pdf",
+      "retrievedAt": "2026-10-27T13:53:55.121955+00:00",
+      "sha256": "07119debee7d588b1fa5578a50a95024b9e6ea067ad6cc83f161915c620bc122",
+      "bytes": 1272970,
+      "pages": 20,
+      "title": "2024年度 八王子市中心市街地活性化基本計画 定期フォローアップ報告書",
+      "published": "2025-05"
+    },
+    {
+      "id": "plan-20260821",
+      "url": "https://www.city.hachioji.tokyo.jp/kurashi/sangyo/003/hatioujichuusinn/p031516_d/fil/chukatsukeikaku_2_260821.pdf",
+      "retrievedAt": "2026-10-27T13:53:57.171158+00:00",
+      "sha256": "c09c01c6e6d8388f5693c8ed1cb8fbee7c9123cbfaf008968325523432fffb50",
+      "bytes": 17416036,
+      "pages": 161,
+      "title": "八王子市中心市街地活性化基本計画〈第2期〉2026年8月21日変更認定版",
+      "published": "2026-08-21"
+    },
+    {
+      "id": "walking-2023",
+      "url": "https://www.city.hachioji.tokyo.jp/kurashi/sangyo/003/004/p014345_d/fil/R5houkokusyo.pdf",
+      "retrievedAt": "2026-10-27T13:54:01.706843+00:00",
+      "sha256": "0d03efbce898420ecfe9f0130768f2a1de5f216258fe7fa7bf623935fd619de8",
+      "bytes": 12412537,
+      "pages": 54,
+      "title": "2023年度 八王子市中心市街地歩行量調査報告書",
+      "published": "2024-02"
+    },
+    {
+      "id": "walking-2024",
+      "url": "https://www.city.hachioji.tokyo.jp/kurashi/sangyo/003/004/p014345_d/fil/R6houkokusyo.pdf",
+      "retrievedAt": "2026-10-27T13:54:27.488860+00:00",
+      "sha256": "5462d3ee45b92924643396b22190d07105a5bb03ed9f866d6d989fc59b9fcc88",
+      "bytes": 9288028,
+      "pages": 54,
+      "title": "2024年度 八王子市中心市街地歩行量調査報告書",
+      "published": "2025-02"
+    },
+    {
+      "id": "walking-2025",
+      "url": "https://www.city.hachioji.tokyo.jp/kurashi/sangyo/003/004/p014345_d/fil/R7houkokusyo.pdf",
+      "retrievedAt": "2026-10-27T13:54:40.262255+00:00",
+      "sha256": "07e5ff1b03a650e420b707dccaa60bf2f3cd9ed925c1427d06d94c23a686eaa7",
+      "bytes": 12658276,
+      "pages": 54,
+      "title": "2025年度 八王子市中心市街地歩行量調査報告書",
+      "published": "2026-02"
+    }
+  ],
+  "sourcePages": {
+    "walking": "walking-2025:本文1,2,4,6,18,19・各地点個票21–52 / PDF3,4,6,8,20,21,23–54",
+    "population": {
+      "recent": "follow-up2025:PDF1/本文1",
+      "historical": "plan-20260821:PDF9/本文6"
+    },
+    "vacancies": {
+      "recent": "follow-up2025:PDF14/本文14",
+      "historical": "plan-20260821:PDF25/本文22"
+    },
+    "housing": "plan-20260821:PDF10/本文7"
+  },
+  "rights": "抽出した事実数値と独自の加工結果を出典付きで配布。市の原文・原図・写真・地形図・原表レイアウトは転載しない。包括CC BY許諾は主張しない。",
+  "methods": {
+    "walking": "中学生以上・乗車中自転車除外、9–22時13時間、23/32地点の固定集合。2:5加重・四捨五入。公表基準値117,769は丸め済み2018–2021年度指標の平均117,768.5を四捨五入すると再現する。",
+    "continuity": "2025年度過去推移表の同一行にある2016–2025年度を採用。32地点すべて欠測なし。過去年の調査断面が完全不変と証明したものではない。",
+    "population": "旧表は17町丁合計。最新掲載値との集計範囲の同一性を確認できないため別系列。115ha内の厳密人口とは断定しない。",
+    "vacancies": "いずれも路面店の調査だが、期間間の調査エリア・対象の厳密な同一性を確認できないため別系列。"
+  },
+  "officialReconciliation": {
+    "passed": true,
+    "individual2025Profiles": 32,
+    "historicalEditions": [
+      2023,
+      2024
+    ],
+    "all32AnnualTotals": 20,
+    "plan23AnchoredYears": [
+      2023,
+      2024,
+      2025
+    ],
+    "baseline2018to2021": 117769,
+    "noDuplicateSubtotal": true
+  },
+  "discrepancies": [
+    {
+      "sourceRef": "walking-2025:PDF8/本文6",
+      "description": "本文の平日前年減少は14,661人、表の差は14,343人。元の人数から再計算する。",
+      "reported": 14661,
+      "recalculated": 14343
+    }
+  ],
+  "files": {
+    "README.txt": "35f6f981a5adf9defa841540ce261d3186ad92bb1d05b5d06eedf2c238f8ddb5",
+    "annual-counts.csv": "e2a9fa08b9a78e9e603013ceee2013526f3bccc58460798d50eaf96adcc1256f",
+    "generate_bundle.py": "5779d7dedb72f2cf2d06f305d07de950007c2fb4f69bf1b901cfe5e2160e39a6",
+    "hachioji-city-center-2026-10-27.r1.json": "75c9e0698c3976459d109336fd88c4825dee301e9c6e52704d8cfa41d0b5b957",
+    "normalized-inputs.json": "ad48f5501262b7810ff96cb2a47b592562e66322bd9e9ce1f95ed57d558ab959",
+    "point-changes.csv": "25a18f133256a870a0e83b2768e0f6383e6e0c81d546ee2d7a96790466dffacb",
+    "population.csv": "c73ef53c6a594ea4c71b536ea6547bcd9cf28cc57f2d262e868aad515997a468",
+    "prepare_sources.py": "3f01f6d0837bf3fa99105e9704845228e0796a4608bedf0716b16a501200b817",
+    "vacancies.csv": "13c55094bcdc977dcd98d9c45d86b3b9be477d9a90a2d5ae651becd167336fb4"
+  }
+}

@@ -140,6 +140,7 @@ export default function HachiojiLandPricesPage() {
 
       <section className="rounded-3xl bg-slate-900 p-7 text-white sm:p-9"><p className="text-sm font-bold tracking-widest text-cyan-200">八王子を数字で読み解く</p><h2 className="mt-2 text-2xl font-bold">人口も、見る範囲で違って見える。</h2><p className="mt-3 text-sm text-slate-200">第1弾では、市全体・地域別・年齢別に人口の変化を確かめました。</p><p className="mt-5"><Link href="/labs/hachioji-population" className="font-semibold text-cyan-200 underline underline-offset-4">八王子の人口は本当に減っている？ →</Link></p><p className="mt-3"><Link href="/labs" className="font-semibold text-cyan-200 underline underline-offset-4">Labsの記事一覧 →</Link></p></section>
     <p className="text-sm"><Link href="/labs/hachioji-aging" className="font-semibold text-sky-800 underline">第3弾：八王子は高齢者の街になっている？ →</Link></p>
+    <p className="text-sm"><Link href="/labs/hachioji-city-center" className="font-semibold text-sky-800 underline">第4弾：八王子の中心市街地は発展しつつある？ →</Link></p>
     </article>
     <PublicSiteFooter />
   </main>;

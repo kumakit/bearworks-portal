@@ -102,6 +102,7 @@ export default function HachiojiPopulationPage() {
 
       <section className="rounded-3xl bg-slate-900 p-7 text-white sm:p-9"><p className="text-sm font-bold tracking-widest text-cyan-200">続けて読む</p><h2 className="mt-2 text-2xl font-bold">地価・高齢化・学生の街も、数字から確かめられる。</h2><p className="mt-3 text-sm text-slate-200">次に扱うテーマは別の記事で検討します。このシリーズでは、問いごとに一次資料と比較できる範囲を丁寧に確かめていきます。</p><p className="mt-5"><Link href="/labs/hachioji-land-prices" className="font-semibold text-cyan-200 underline underline-offset-4">第2弾：八王子は本当に土地が安い？ →</Link></p><p className="mt-5"><Link href="/labs/hachioji-climate" className="font-semibold text-cyan-200 underline underline-offset-4">気候データを読んだ記事も見る →</Link></p><p className="mt-3"><Link href="/labs" className="font-semibold text-cyan-200 underline underline-offset-4">Labsの記事一覧 →</Link></p></section>
     <p className="text-sm"><Link href="/labs/hachioji-aging" className="font-semibold text-sky-800 underline">第3弾：八王子は高齢者の街になっている？ →</Link></p>
+    <p className="text-sm"><Link href="/labs/hachioji-city-center" className="font-semibold text-sky-800 underline">第4弾：八王子の中心市街地は発展しつつある？ →</Link></p>
     </article>
     <PublicSiteFooter />
   </main>;
