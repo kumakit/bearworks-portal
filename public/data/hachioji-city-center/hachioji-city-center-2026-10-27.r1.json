@@ -1,0 +1,952 @@
+{
+  "schemaVersion": 1,
+  "version": "2026-10-27.r1",
+  "reviewedOn": "2026-10-27",
+  "population": {
+    "recent": [
+      {
+        "year": 2022,
+        "population": 34183
+      },
+      {
+        "year": 2023,
+        "population": 34401
+      },
+      {
+        "year": 2024,
+        "population": 34489
+      },
+      {
+        "year": 2025,
+        "population": 34769
+      }
+    ],
+    "historical": [
+      {
+        "year": 2012,
+        "population": 27227,
+        "cityPopulation": 564500
+      },
+      {
+        "year": 2013,
+        "population": 27443,
+        "cityPopulation": 563482
+      },
+      {
+        "year": 2014,
+        "population": 27981,
+        "cityPopulation": 562572
+      },
+      {
+        "year": 2015,
+        "population": 29267,
+        "cityPopulation": 562795
+      },
+      {
+        "year": 2016,
+        "population": 29383,
+        "cityPopulation": 563228
+      },
+      {
+        "year": 2017,
+        "population": 30121,
+        "cityPopulation": 563178
+      },
+      {
+        "year": 2018,
+        "population": 30921,
+        "cityPopulation": 562460
+      },
+      {
+        "year": 2019,
+        "population": 32256,
+        "cityPopulation": 562480
+      },
+      {
+        "year": 2020,
+        "population": 33082,
+        "cityPopulation": 561828
+      },
+      {
+        "year": 2021,
+        "population": 33232,
+        "cityPopulation": 561758
+      }
+    ],
+    "joined": false,
+    "reason": "旧表は17町丁合計。最新掲載値との集計範囲の同一性を確認できないため別系列。115ha内の厳密人口とは断定しない。",
+    "sourceRefs": {
+      "recent": "follow-up2025:PDF1/本文1",
+      "historical": "plan-20260821:PDF9/本文6"
+    }
+  },
+  "vacancies": {
+    "historical": [
+      {
+        "year": 2018,
+        "count": 122
+      },
+      {
+        "year": 2019,
+        "count": 100
+      },
+      {
+        "year": 2020,
+        "count": 103
+      },
+      {
+        "year": 2021,
+        "count": 86
+      }
+    ],
+    "recent": [
+      {
+        "year": 2021,
+        "count": 86
+      },
+      {
+        "year": 2022,
+        "count": 68
+      },
+      {
+        "year": 2023,
+        "count": 72
+      },
+      {
+        "year": 2024,
+        "count": 63
+      },
+      {
+        "year": 2025,
+        "count": 62
+      }
+    ],
+    "joined": false,
+    "reason": "いずれも路面店の調査だが、期間間の調査エリア・対象の厳密な同一性を確認できないため別系列。",
+    "sourceRefs": {
+      "recent": "follow-up2025:PDF14/本文14",
+      "historical": "plan-20260821:PDF25/本文22"
+    }
+  },
+  "survey": {
+    "sourceRef": "walking-2025:PDF20-21/本文18-19",
+    "hours": "9:00–22:00（13時間）",
+    "target": "中学生以上の歩行者。自転車乗車中は対象外。目視・カウンター計測。",
+    "dates": {
+      "2023": {
+        "holiday": "2023-11-26",
+        "weekday": "2023-11-28"
+      },
+      "2024": {
+        "holiday": "2024-11-24",
+        "weekday": "2024-11-26"
+      },
+      "2025": {
+        "holiday": "2025-11-23",
+        "weekday": "2025-11-25"
+      }
+    },
+    "exceptions": [
+      "2023年度のNo.12 とちの木デッキ下（23地点には含まれない）の休日は、エレベーター不具合のため2023-12-03に再調査。全32地点の同年合計は単一調査日の値ではない。"
+    ],
+    "continuity": "2025年度過去推移表の同一行にある2016–2025年度を採用。32地点すべて欠測なし。過去年の調査断面が完全不変と証明したものではない。"
+  },
+  "housing": {
+    "completedSupplyCountAvailable": false,
+    "sourceRef": "plan-20260821:PDF10/本文7",
+    "finding": "市の集合住宅グラフは事前協議の建設予定戸数の累計で、竣工戸数ではない。区域内の近年の完成棟数・戸数は確定していない。"
+  },
+  "walking": {
+    "plan23": [
+      {
+        "year": 2016,
+        "holiday": 129766,
+        "weekday": 122109,
+        "weighted": 124297
+      },
+      {
+        "year": 2017,
+        "holiday": 131259,
+        "weekday": 132534,
+        "weighted": 132170
+      },
+      {
+        "year": 2018,
+        "holiday": 131391,
+        "weekday": 123345,
+        "weighted": 125644
+      },
+      {
+        "year": 2019,
+        "holiday": 126655,
+        "weekday": 129746,
+        "weighted": 128863
+      },
+      {
+        "year": 2020,
+        "holiday": 107093,
+        "weekday": 107566,
+        "weighted": 107431
+      },
+      {
+        "year": 2021,
+        "holiday": 115162,
+        "weekday": 106726,
+        "weighted": 109136
+      },
+      {
+        "year": 2022,
+        "holiday": 120182,
+        "weekday": 111671,
+        "weighted": 114103
+      },
+      {
+        "year": 2023,
+        "holiday": 117859,
+        "weekday": 116530,
+        "weighted": 116910
+      },
+      {
+        "year": 2024,
+        "holiday": 124909,
+        "weekday": 112259,
+        "weighted": 115873
+      },
+      {
+        "year": 2025,
+        "holiday": 129272,
+        "weekday": 114530,
+        "weighted": 118742
+      }
+    ],
+    "all32": [
+      {
+        "year": 2016,
+        "holiday": 482558,
+        "weekday": 493243,
+        "weighted": 490190
+      },
+      {
+        "year": 2017,
+        "holiday": 476938,
+        "weekday": 498428,
+        "weighted": 492288
+      },
+      {
+        "year": 2018,
+        "holiday": 481806,
+        "weekday": 488397,
+        "weighted": 486514
+      },
+      {
+        "year": 2019,
+        "holiday": 468504,
+        "weekday": 503875,
+        "weighted": 493769
+      },
+      {
+        "year": 2020,
+        "holiday": 377890,
+        "weekday": 393791,
+        "weighted": 389248
+      },
+      {
+        "year": 2021,
+        "holiday": 390205,
+        "weekday": 396001,
+        "weighted": 394345
+      },
+      {
+        "year": 2022,
+        "holiday": 437117,
+        "weekday": 477330,
+        "weighted": 465841
+      },
+      {
+        "year": 2023,
+        "holiday": 421990,
+        "weekday": 457068,
+        "weighted": 447046
+      },
+      {
+        "year": 2024,
+        "holiday": 463372,
+        "weekday": 471729,
+        "weighted": 469341
+      },
+      {
+        "year": 2025,
+        "holiday": 486847,
+        "weekday": 457386,
+        "weighted": 465803
+      }
+    ],
+    "pointChanges": [
+      {
+        "id": "1",
+        "name": "東放射線アイロード①",
+        "inPlan": true,
+        "holiday": {
+          "previous": 16718,
+          "current": 16803,
+          "delta": 85,
+          "percent": 0.51
+        },
+        "weekday": {
+          "previous": 19133,
+          "current": 18401,
+          "delta": -732,
+          "percent": -3.83
+        }
+      },
+      {
+        "id": "2",
+        "name": "東放射線アイロード②",
+        "inPlan": true,
+        "holiday": {
+          "previous": 4135,
+          "current": 5096,
+          "delta": 961,
+          "percent": 23.24
+        },
+        "weekday": {
+          "previous": 4676,
+          "current": 4935,
+          "delta": 259,
+          "percent": 5.54
+        }
+      },
+      {
+        "id": "3",
+        "name": "八王子駅北口交番前",
+        "inPlan": false,
+        "holiday": {
+          "previous": 44174,
+          "current": 50721,
+          "delta": 6547,
+          "percent": 14.82
+        },
+        "weekday": {
+          "previous": 35216,
+          "current": 44806,
+          "delta": 9590,
+          "percent": 27.23
+        }
+      },
+      {
+        "id": "4",
+        "name": "ドン・キホーテ前",
+        "inPlan": true,
+        "holiday": {
+          "previous": 23935,
+          "current": 24162,
+          "delta": 227,
+          "percent": 0.95
+        },
+        "weekday": {
+          "previous": 16404,
+          "current": 18911,
+          "delta": 2507,
+          "percent": 15.28
+        }
+      },
+      {
+        "id": "5",
+        "name": "横山町公園",
+        "inPlan": true,
+        "holiday": {
+          "previous": 9476,
+          "current": 9565,
+          "delta": 89,
+          "percent": 0.94
+        },
+        "weekday": {
+          "previous": 7704,
+          "current": 8062,
+          "delta": 358,
+          "percent": 4.65
+        }
+      },
+      {
+        "id": "6",
+        "name": "八王子駅入口交差点",
+        "inPlan": true,
+        "holiday": {
+          "previous": 4365,
+          "current": 4238,
+          "delta": -127,
+          "percent": -2.91
+        },
+        "weekday": {
+          "previous": 4103,
+          "current": 4472,
+          "delta": 369,
+          "percent": 8.99
+        }
+      },
+      {
+        "id": "7",
+        "name": "甲州街道①",
+        "inPlan": true,
+        "holiday": {
+          "previous": 2227,
+          "current": 2446,
+          "delta": 219,
+          "percent": 9.83
+        },
+        "weekday": {
+          "previous": 2233,
+          "current": 2144,
+          "delta": -89,
+          "percent": -3.99
+        }
+      },
+      {
+        "id": "8",
+        "name": "甲州街道②",
+        "inPlan": true,
+        "holiday": {
+          "previous": 1414,
+          "current": 1607,
+          "delta": 193,
+          "percent": 13.65
+        },
+        "weekday": {
+          "previous": 1840,
+          "current": 1810,
+          "delta": -30,
+          "percent": -1.63
+        }
+      },
+      {
+        "id": "9",
+        "name": "八日町交差点",
+        "inPlan": true,
+        "holiday": {
+          "previous": 2314,
+          "current": 2372,
+          "delta": 58,
+          "percent": 2.51
+        },
+        "weekday": {
+          "previous": 2790,
+          "current": 2917,
+          "delta": 127,
+          "percent": 4.55
+        }
+      },
+      {
+        "id": "10",
+        "name": "甲州街道③",
+        "inPlan": true,
+        "holiday": {
+          "previous": 2603,
+          "current": 2670,
+          "delta": 67,
+          "percent": 2.57
+        },
+        "weekday": {
+          "previous": 2336,
+          "current": 2477,
+          "delta": 141,
+          "percent": 6.04
+        }
+      },
+      {
+        "id": "11",
+        "name": "甲州街道④",
+        "inPlan": true,
+        "holiday": {
+          "previous": 2397,
+          "current": 2647,
+          "delta": 250,
+          "percent": 10.43
+        },
+        "weekday": {
+          "previous": 2439,
+          "current": 2453,
+          "delta": 14,
+          "percent": 0.57
+        }
+      },
+      {
+        "id": "12",
+        "name": "とちの木デッキ下",
+        "inPlan": false,
+        "holiday": {
+          "previous": 19665,
+          "current": 19260,
+          "delta": -405,
+          "percent": -2.06
+        },
+        "weekday": {
+          "previous": 28142,
+          "current": 26827,
+          "delta": -1315,
+          "percent": -4.67
+        }
+      },
+      {
+        "id": "13-1",
+        "name": "八王子駅北口通路①",
+        "inPlan": false,
+        "holiday": {
+          "previous": 74402,
+          "current": 78362,
+          "delta": 3960,
+          "percent": 5.32
+        },
+        "weekday": {
+          "previous": 104616,
+          "current": 71364,
+          "delta": -33252,
+          "percent": -31.78
+        }
+      },
+      {
+        "id": "13-2",
+        "name": "八王子駅北口通路②",
+        "inPlan": false,
+        "holiday": {
+          "previous": 34313,
+          "current": 38769,
+          "delta": 4456,
+          "percent": 12.99
+        },
+        "weekday": {
+          "previous": 39110,
+          "current": 36285,
+          "delta": -2825,
+          "percent": -7.22
+        }
+      },
+      {
+        "id": "14",
+        "name": "八王子駅南口通路",
+        "inPlan": false,
+        "holiday": {
+          "previous": 61371,
+          "current": 65264,
+          "delta": 3893,
+          "percent": 6.34
+        },
+        "weekday": {
+          "previous": 58649,
+          "current": 67388,
+          "delta": 8739,
+          "percent": 14.9
+        }
+      },
+      {
+        "id": "15",
+        "name": "三井住友銀行前",
+        "inPlan": false,
+        "holiday": {
+          "previous": 37021,
+          "current": 35062,
+          "delta": -1959,
+          "percent": -5.29
+        },
+        "weekday": {
+          "previous": 24842,
+          "current": 28865,
+          "delta": 4023,
+          "percent": 16.19
+        }
+      },
+      {
+        "id": "16",
+        "name": "京王八王子駅中央口",
+        "inPlan": false,
+        "holiday": {
+          "previous": 16531,
+          "current": 16833,
+          "delta": 302,
+          "percent": 1.83
+        },
+        "weekday": {
+          "previous": 18721,
+          "current": 18790,
+          "delta": 69,
+          "percent": 0.37
+        }
+      },
+      {
+        "id": "17",
+        "name": "桑並木通り",
+        "inPlan": true,
+        "holiday": {
+          "previous": 6631,
+          "current": 6953,
+          "delta": 322,
+          "percent": 4.86
+        },
+        "weekday": {
+          "previous": 6312,
+          "current": 5883,
+          "delta": -429,
+          "percent": -6.8
+        }
+      },
+      {
+        "id": "18",
+        "name": "八王子スクエアビル南",
+        "inPlan": false,
+        "holiday": {
+          "previous": 4893,
+          "current": 4494,
+          "delta": -399,
+          "percent": -8.15
+        },
+        "weekday": {
+          "previous": 6831,
+          "current": 7003,
+          "delta": 172,
+          "percent": 2.52
+        }
+      },
+      {
+        "id": "19",
+        "name": "八王子スクエアビル西①",
+        "inPlan": true,
+        "holiday": {
+          "previous": 8537,
+          "current": 8942,
+          "delta": 405,
+          "percent": 4.74
+        },
+        "weekday": {
+          "previous": 6762,
+          "current": 6945,
+          "delta": 183,
+          "percent": 2.71
+        }
+      },
+      {
+        "id": "20",
+        "name": "八王子スクエアビル西②",
+        "inPlan": true,
+        "holiday": {
+          "previous": 3760,
+          "current": 4080,
+          "delta": 320,
+          "percent": 8.51
+        },
+        "weekday": {
+          "previous": 3371,
+          "current": 3746,
+          "delta": 375,
+          "percent": 11.12
+        }
+      },
+      {
+        "id": "21",
+        "name": "八王子スクエアビル北",
+        "inPlan": true,
+        "holiday": {
+          "previous": 9348,
+          "current": 9351,
+          "delta": 3,
+          "percent": 0.03
+        },
+        "weekday": {
+          "previous": 7222,
+          "current": 7633,
+          "delta": 411,
+          "percent": 5.69
+        }
+      },
+      {
+        "id": "22",
+        "name": "パーク壱番街通り①",
+        "inPlan": true,
+        "holiday": {
+          "previous": 2849,
+          "current": 2777,
+          "delta": -72,
+          "percent": -2.53
+        },
+        "weekday": {
+          "previous": 2146,
+          "current": 1987,
+          "delta": -159,
+          "percent": -7.41
+        }
+      },
+      {
+        "id": "23",
+        "name": "パーク壱番街通り②",
+        "inPlan": true,
+        "holiday": {
+          "previous": 3596,
+          "current": 3432,
+          "delta": -164,
+          "percent": -4.56
+        },
+        "weekday": {
+          "previous": 3021,
+          "current": 2807,
+          "delta": -214,
+          "percent": -7.08
+        }
+      },
+      {
+        "id": "24",
+        "name": "マルベリーブリッジ",
+        "inPlan": false,
+        "holiday": {
+          "previous": 46093,
+          "current": 48810,
+          "delta": 2717,
+          "percent": 5.89
+        },
+        "weekday": {
+          "previous": 43343,
+          "current": 41528,
+          "delta": -1815,
+          "percent": -4.19
+        }
+      },
+      {
+        "id": "25",
+        "name": "甲州街道⑤",
+        "inPlan": true,
+        "holiday": {
+          "previous": 1435,
+          "current": 1443,
+          "delta": 8,
+          "percent": 0.56
+        },
+        "weekday": {
+          "previous": 1167,
+          "current": 1251,
+          "delta": 84,
+          "percent": 7.2
+        }
+      },
+      {
+        "id": "26",
+        "name": "富士見通り",
+        "inPlan": true,
+        "holiday": {
+          "previous": 5359,
+          "current": 5508,
+          "delta": 149,
+          "percent": 2.78
+        },
+        "weekday": {
+          "previous": 5088,
+          "current": 4599,
+          "delta": -489,
+          "percent": -9.61
+        }
+      },
+      {
+        "id": "27",
+        "name": "みさき通り",
+        "inPlan": true,
+        "holiday": {
+          "previous": 3026,
+          "current": 3184,
+          "delta": 158,
+          "percent": 5.22
+        },
+        "weekday": {
+          "previous": 3103,
+          "current": 2708,
+          "delta": -395,
+          "percent": -12.73
+        }
+      },
+      {
+        "id": "28",
+        "name": "ジョイ五番街通り",
+        "inPlan": true,
+        "holiday": {
+          "previous": 3657,
+          "current": 3843,
+          "delta": 186,
+          "percent": 5.09
+        },
+        "weekday": {
+          "previous": 3261,
+          "current": 3512,
+          "delta": 251,
+          "percent": 7.7
+        }
+      },
+      {
+        "id": "29",
+        "name": "みずき通り",
+        "inPlan": true,
+        "holiday": {
+          "previous": 1462,
+          "current": 2290,
+          "delta": 828,
+          "percent": 56.63
+        },
+        "weekday": {
+          "previous": 1460,
+          "current": 1302,
+          "delta": -158,
+          "percent": -10.82
+        }
+      },
+      {
+        "id": "30",
+        "name": "野猿街道",
+        "inPlan": true,
+        "holiday": {
+          "previous": 3512,
+          "current": 3536,
+          "delta": 24,
+          "percent": 0.68
+        },
+        "weekday": {
+          "previous": 3144,
+          "current": 2846,
+          "delta": -298,
+          "percent": -9.48
+        }
+      },
+      {
+        "id": "31",
+        "name": "とちの木通り",
+        "inPlan": true,
+        "holiday": {
+          "previous": 2153,
+          "current": 2327,
+          "delta": 174,
+          "percent": 8.08
+        },
+        "weekday": {
+          "previous": 2544,
+          "current": 2729,
+          "delta": 185,
+          "percent": 7.27
+        }
+      }
+    ],
+    "baseline": {
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021
+      ],
+      "weighted": 117769
+    }
+  },
+  "summary": {
+    "population": {
+      "from": 2022,
+      "to": 2025,
+      "first": 34183,
+      "last": 34769,
+      "delta": 586,
+      "percent": 1.71
+    },
+    "vacancies": {
+      "from": 2021,
+      "to": 2025,
+      "first": 86,
+      "last": 62,
+      "delta": -24,
+      "percent": -27.91
+    },
+    "planYearOnYear": {
+      "holiday": {
+        "from": 2024,
+        "to": 2025,
+        "first": 124909,
+        "last": 129272,
+        "delta": 4363,
+        "percent": 3.49
+      },
+      "weekday": {
+        "from": 2024,
+        "to": 2025,
+        "first": 112259,
+        "last": 114530,
+        "delta": 2271,
+        "percent": 2.02
+      },
+      "weighted": {
+        "from": 2024,
+        "to": 2025,
+        "first": 115873,
+        "last": 118742,
+        "delta": 2869,
+        "percent": 2.48
+      }
+    },
+    "planSince2016": {
+      "holiday": {
+        "from": 2016,
+        "to": 2025,
+        "first": 129766,
+        "last": 129272,
+        "delta": -494,
+        "percent": -0.38
+      },
+      "weekday": {
+        "from": 2016,
+        "to": 2025,
+        "first": 122109,
+        "last": 114530,
+        "delta": -7579,
+        "percent": -6.21
+      },
+      "weighted": {
+        "from": 2016,
+        "to": 2025,
+        "first": 124297,
+        "last": 118742,
+        "delta": -5555,
+        "percent": -4.47
+      }
+    },
+    "allYearOnYear": {
+      "holiday": {
+        "from": 2024,
+        "to": 2025,
+        "first": 463372,
+        "last": 486847,
+        "delta": 23475,
+        "percent": 5.07
+      },
+      "weekday": {
+        "from": 2024,
+        "to": 2025,
+        "first": 471729,
+        "last": 457386,
+        "delta": -14343,
+        "percent": -3.04
+      }
+    },
+    "historicalPopulation": {
+      "from": 2012,
+      "to": 2021,
+      "first": 27227,
+      "last": 33232,
+      "delta": 6005,
+      "percent": 22.06
+    },
+    "historicalCityPopulation": {
+      "from": 2012,
+      "to": 2021,
+      "first": 564500,
+      "last": 561758,
+      "delta": -2742,
+      "percent": -0.49
+    }
+  },
+  "discrepancies": [
+    {
+      "sourceRef": "walking-2025:PDF8/本文6",
+      "description": "本文の平日前年減少は14,661人、表の差は14,343人。元の人数から再計算する。",
+      "reported": 14661,
+      "recalculated": 14343
+    }
+  ]
+}

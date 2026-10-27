@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Phase 0 source inspection; not a publication bundle",
+  "scriptSha256": "b25b8697d55d7f0e6a10ee12e364da9d331d5a2ffbe49217642aab709bca507c",
+  "sources": [
+    {
+      "id": "follow-up2025",
+      "url": "https://www.city.hachioji.tokyo.jp/kurashi/sangyo/003/hatioujichuusinn/p031516_d/fil/follow-up2025.pdf",
+      "retrievedAt": "2026-10-27T13:53:54.431584+00:00",
+      "sha256": "f706698949b46bdb5fb63aa4d52c52f60c7532af31976e2881993ea5c0cd30dc",
+      "bytes": 1805439,
+      "pages": 21
+    },
+    {
+      "id": "follow-up2024",
+      "url": "https://www.city.hachioji.tokyo.jp/kurashi/sangyo/003/hatioujichuusinn/p031516_d/fil/follow-up2024.pdf",
+      "retrievedAt": "2026-10-27T13:53:55.121955+00:00",
+      "sha256": "07119debee7d588b1fa5578a50a95024b9e6ea067ad6cc83f161915c620bc122",
+      "bytes": 1272970,
+      "pages": 20
+    },
+    {
+      "id": "plan-20260821",
+      "url": "https://www.city.hachioji.tokyo.jp/kurashi/sangyo/003/hatioujichuusinn/p031516_d/fil/chukatsukeikaku_2_260821.pdf",
+      "retrievedAt": "2026-10-27T13:53:57.171158+00:00",
+      "sha256": "c09c01c6e6d8388f5693c8ed1cb8fbee7c9123cbfaf008968325523432fffb50",
+      "bytes": 17416036,
+      "pages": 161
+    },
+    {
+      "id": "walking-2023",
+      "url": "https://www.city.hachioji.tokyo.jp/kurashi/sangyo/003/004/p014345_d/fil/R5houkokusyo.pdf",
+      "retrievedAt": "2026-10-27T13:54:01.706843+00:00",
+      "sha256": "0d03efbce898420ecfe9f0130768f2a1de5f216258fe7fa7bf623935fd619de8",
+      "bytes": 12412537,
+      "pages": 54
+    },
+    {
+      "id": "walking-2024",
+      "url": "https://www.city.hachioji.tokyo.jp/kurashi/sangyo/003/004/p014345_d/fil/R6houkokusyo.pdf",
+      "retrievedAt": "2026-10-27T13:54:27.488860+00:00",
+      "sha256": "5462d3ee45b92924643396b22190d07105a5bb03ed9f866d6d989fc59b9fcc88",
+      "bytes": 9288028,
+      "pages": 54
+    },
+    {
+      "id": "walking-2025",
+      "url": "https://www.city.hachioji.tokyo.jp/kurashi/sangyo/003/004/p014345_d/fil/R7houkokusyo.pdf",
+      "retrievedAt": "2026-10-27T13:54:40.262255+00:00",
+      "sha256": "07e5ff1b03a650e420b707dccaa60bf2f3cd9ed925c1427d06d94c23a686eaa7",
+      "bytes": 12658276,
+      "pages": 54
+    }
+  ]
+}

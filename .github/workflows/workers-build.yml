@@ -77,6 +77,11 @@ jobs:
           npm run test:hachioji-land-prices
           python scripts/hachioji-land-prices/generate_bundle.py --check
 
+      - name: Test Hachioji city center analysis offline
+        run: |
+          npm run test:hachioji-city-center
+          python scripts/hachioji-city-center/generate_bundle.py --check
+
       - name: Test Hachioji aging analysis
         run: |
           npm run test:hachioji-aging
@@ -158,6 +163,7 @@ jobs:
 
           node scripts/verify-toukei-pages.mjs http://127.0.0.1:8788
           node scripts/verify-hachioji-rain-autumn-pages.mjs http://127.0.0.1:8788 --ads
+          node scripts/verify-hachioji-city-center-pages.mjs http://127.0.0.1:8788 --ads
           node scripts/verify-hachioji-aging-pages.mjs http://127.0.0.1:8788
           node scripts/verify-hachioji-population-pages.mjs http://127.0.0.1:8788
           node scripts/verify-hachioji-land-prices-pages.mjs http://127.0.0.1:8788

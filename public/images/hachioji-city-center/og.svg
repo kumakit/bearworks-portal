@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#020617"/>
+  <circle cx="1040" cy="80" r="260" fill="#0f766e" opacity=".18"/>
+  <text x="70" y="86" font-family="sans-serif" font-size="22" font-weight="700" fill="#99f6e4" letter-spacing="4">HACHIOJI / CITY CENTER</text>
+  <text x="70" y="190" font-family="Yu Gothic, sans-serif" font-weight="700" font-size="51" fill="#fff">八王子の中心市街地は</text>
+  <text x="70" y="266" font-family="Yu Gothic, sans-serif" font-weight="700" font-size="60" fill="#fff">発展しつつある？</text>
+  <text x="70" y="340" font-family="Yu Gothic, sans-serif" font-size="30" fill="#fde68a">住む人は増えた。では、にぎわいは？</text>
+  <g fill="#134e4a" stroke="#5eead4" stroke-width="2">
+    <path d="M760 530V380h65v150m12 0V300h80v230m14 0V405h95v125m14 0V345h60v185"/>
+    <path d="M750 530h370"/>
+  </g>
+  <g fill="#99f6e4"><path d="M852 325h12v18h-12zm27 0h12v18h-12zm-27 40h12v18h-12zm27 0h12v18h-12zm-27 40h12v18h-12zm27 0h12v18h-12z"/></g>
+  <g font-family="Yu Gothic, sans-serif" font-size="26" font-weight="700" fill="#e2e8f0"><text x="70" y="465">住む</text><text x="220" y="465">歩く</text><text x="370" y="465">商う</text></g>
+  <g stroke="#2dd4bf" stroke-width="5"><path d="M70 490h92m58 0h92m58 0h92"/></g>
+  <text x="70" y="570" font-family="Yu Gothic, sans-serif" font-size="20" fill="#94a3b8">八王子を数字で読み解く · 第4弾</text>
+  <text x="1110" y="580" text-anchor="end" font-family="sans-serif" font-size="20" fill="#94a3b8">bearworks.uk</text>
+</svg>

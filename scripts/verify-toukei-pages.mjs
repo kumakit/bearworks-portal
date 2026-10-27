@@ -67,6 +67,7 @@ const expectedStaticPaths = [
   "/labs/takao-gear", "/labs/takao-weather-shift",
   "/labs", "/labs/hachioji-population",
   "/labs/hachioji-land-prices", "/labs/hachioji-aging",
+  "/labs/hachioji-city-center",
   "/labs/hachioji-rain", "/labs/hachioji-autumn",
 ];
 const expectedContentPaths = [
