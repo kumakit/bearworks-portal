@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Building2, Footprints, Store } from "lucide-react";
 import Link from "@/components/InternalLink";
 import PublicSiteHeader from "@/components/PublicSiteHeader";
@@ -9,11 +10,11 @@ import { cityCenterBundle as data, cityNumber as n, citySigned as signed, cityPe
 const title = "八王子の中心市街地は発展しつつある？";
 const description = "住む人は増えた。では、にぎわいは？ 八王子市の人口・歩行量・空き店舗を3つの視点で比較。平日と休日、23地点と全32地点で違う街の動きを確かめます。";
 const canonical = "https://bearworks.uk/labs/hachioji-city-center";
-const image = "https://bearworks.uk/images/hachioji-city-center/og.png";
+const image = "https://bearworks.uk/images/hachioji-city-center/hero-illustration.webp";
 export const metadata: Metadata = {
   title: `${title} | 八王子を数字で読み解く | bearworks.uk`, description,
   alternates: { canonical },
-  openGraph: { type: "article", url: canonical, title, description, siteName: "bearworks.uk", images: [{ url: image, width: 1200, height: 630, alt: "住む・歩く・商うの3つの視点で八王子の中心市街地を読む" }] },
+  openGraph: { type: "article", url: canonical, title, description, siteName: "bearworks.uk", images: [{ url: image, width: 1536, height: 1024, alt: "集合住宅と商店が並び、人々が歩く街並みのイラスト" }] },
   twitter: { card: "summary_large_image", title, description, images: [image] },
 };
 const card = "min-w-0 rounded-2xl border border-slate-200 bg-white p-5 sm:p-6";
@@ -40,12 +41,18 @@ export default function HachiojiCityCenterPage() {
     <PublicSiteHeader/>
     <article className="mx-auto max-w-5xl space-y-12 text-base leading-8">
       <header className="overflow-hidden rounded-[2rem] bg-slate-950 text-white">
-        <div className="px-6 pb-8 pt-8 sm:px-10 sm:pt-12">
+        <div className="grid items-center gap-8 px-6 pb-8 pt-8 sm:px-10 sm:pt-12 lg:grid-cols-2">
+          <div className="min-w-0">
           <p className="text-xs font-bold tracking-[0.15em] text-teal-200">八王子を数字で読み解く · 第4弾</p>
           <h1 className="mt-5 max-w-3xl text-3xl font-bold leading-[1.45] sm:text-5xl sm:leading-[1.4]"><span className="block sm:inline">八王子の</span><span className="block sm:inline">中心市街地は</span><span className="block">発展しつつある？</span></h1>
           <p className="mt-5 text-lg font-semibold text-amber-200 sm:text-2xl">住む人は増えた。では、にぎわいは？</p>
           <p className="mt-5 max-w-3xl text-slate-200">駅の周りを歩くと、マンションが増えているように感じます。街が発展している証拠なのでしょうか。「住む人」「歩く人」「店の使われ方」を分けて、市のデータから確かめます。</p>
           <p className="mt-5 text-xs leading-6 text-slate-400">主な実績：2025年度まで · 人口は各年12月末 · 歩行・空き店舗は年度別調査 · 資料確認日：{data.reviewedOn}</p>
+          </div>
+          <figure className="min-w-0">
+            <Image src="/images/hachioji-city-center/hero-illustration.webp" width={1536} height={1024} alt="集合住宅と商店が並び、人々が歩く街並みのイラスト" unoptimized preload className="h-auto w-full rounded-2xl" />
+            <figcaption className="mt-3 text-xs leading-6 text-slate-300">導入用のAI生成イラスト。実在の場所や建物、人通りの量を再現したものではありません。</figcaption>
+          </figure>
         </div>
         <div className="grid border-t border-white/10 bg-white/5 sm:grid-cols-3">
           {[{ Icon: Building2, word: "住む", caption: "人口という、街の土台" }, { Icon: Footprints, word: "歩く", caption: "日と通りで違う、人の流れ" }, { Icon: Store, word: "商う", caption: "空き店舗から見える変化" }].map(({ Icon, word, caption }) => <div key={word} className="flex items-center gap-4 border-b border-white/10 px-6 py-5 last:border-0 sm:border-b-0 sm:border-r"><Icon size={28} className="shrink-0 text-teal-200" aria-hidden="true"/><div><p className="font-bold">{word}</p><p className="text-xs text-slate-300">{caption}</p></div></div>)}
