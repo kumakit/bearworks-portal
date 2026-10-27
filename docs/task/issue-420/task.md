@@ -16,6 +16,6 @@
 - [x] 固定入力・生成スクリプト・検算・JSON/CSV・manifestを作成
 - [x] 人口/歩行/空き店舗の図表と発見2件以上、本文・限界・出典を実装
 - [x] 前作3記事との導線・Labs・SEO・sitemapを更新
-- [/] 専用テスト12件、bundle/hash/オフライン再生成一致はPASS。PC1280/スマホ390で横溢れ・切替・コンソール確認済み。diff/必須CIは進行中
-- [ ] PR・main merge・本番artifact・Workers公開・実URL確認
-- [ ] 完成URLと指標ごとの結論をIssueへ報告し完了
+- [x] 専用テスト12件、bundle/hash/オフライン再生成一致、diff、必須Workers CI（40522303732）はPASS。PC1280/スマホ390、切替・キーボード・コンソール確認済み
+- [x] PR #46・main merge b334230・本番artifact（40522919455）・Workers公開。Version d45774ab-3ee0-4c25-af50-3ba5760a2803が100%
+- [x] 公開URL https://bearworks.uk/labs/hachioji-city-center のSSR/データ/リンク/Labs/sitemap/広告境界/Access、PC・モバイル実表示を確認。完成結果をIssueへ記録
