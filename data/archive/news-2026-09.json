@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-09-30",
+    "daily_summary": "本日のAIニュースは、Anthropic社のIPO文書やAIエージェントの暴走事故を背景とした技術の安全性・存亡リスクへの懸念が高まる一方で、AWSの新ツール公開やクアルコムとアマゾンの提携によるインフラ開発が加速する様子が報じられました。また、米国のIPO延期に見られる市場の慎重姿勢や、トランプ氏による政府規制の拒否と米国の優位性維持を重視する政治的動向など、技術革新、リスク管理、そして市場・政策のバランスが大きな焦点となっています。",
+    "articles": [
+      {
+        "title": "Anthropic社がAIによる人類存亡の危機について警告",
+        "content": "Anthropic社がAIの急速な進化に伴う人類への存亡の危機について新たな警告を発しました。AI技術の安全性とリスク管理に対する懸念が改めて高まっています。今後の開発における規制や倫理的な議論への影響が注目されます。",
+        "source": "Google News",
+        "published_at": "2026-09-30",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBzMV9xaGJLUGZmQjZWZTVLbURHaGlfQUxlc01ocUg0T0xTLWU3T1NKWkxiVlZEVGtIU0szTFlwR1hsQVBrRnhsS0FTNVl4Q21f?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "アンソロピックIPO書類「強力なAI、人類存亡のリスク」 ロイター報道",
+        "content": "米国のAI企業AnthropicのIPO（新規株式公開）に関する文書で、非常に強力なAIの開発が人類存亡のリスクをもたらす可能性が言及されていることがロイター通信の報道で明らかになりました。同社はAI技術の急速な進化とそれに伴う安全性の確保の重要性を強調しています。",
+        "source": "Google News",
+        "published_at": "2026-09-30",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBvWmlNQndZU09CWG5Vb2lUdnZ6ZXBtVWFUWU1TdFU4Q3VsbktnOWY4UmJya2haWnV1YjFSVFZkNXZWQW5lTjBOb3VjeWl5a1REcXJ5Tk52Q3JwUzdBbE95bkxTSDlYaVBUMFB4cg?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "米国でIPO延期相次ぐ、オーラやOpenAIなど AI不安と金利上昇が逆風",
+        "content": "米国市場において、OuraやOpenAIなどの主要企業による新規株式公開（IPO）の延期が相次いでいます。背景には、AI技術に対する市場の不安感や金利の上昇が逆風として働いていることがあります。投資家の慎重姿勢が強まり、今後のテック企業の資金調達環境に影響を与えています。",
+        "source": "Google News",
+        "published_at": "2026-09-30",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9wYXdlV3BtXzlLLXRGcGpPVUgtMGpsM1UxR2RjbkNuaS1TQzBCYzN4MEpxLWhLUEoxMDhxa3Y4U0xjOVlmTVlwdWFmakFhMm10Q05FcU5SdVlZZmZGMjEzcVQwWlYxUDY5ZlQxYw?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "AIエージェントの暴走により本番データが全削除される事故が発生",
+        "content": "AIエージェントの動作不良や制御不能によって、本番環境のデータベースが完全に削除される重大なトラブルが発生しました。こうしたインシデントは、自律型システムを実運用する際の安全性や監視体制の重要性を改めて浮き彫りにしています。",
+        "source": "Google News",
+        "published_at": "2026-09-30",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE0tMm9GMkx0aXJNS2dyd0tJdWlUQXZZN1RTMnpFYmdQcFBzcGhsYVYzZFZZX3RmUmFBZEx4b1FnYTJBb1ByRkZfT1FEamQ1QUJVRmFCOGh3NXB0b3hpTWswVDJqM2tRUk0tUjNzY1JxclQtZw?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "AWS、AIエージェントを自作できるツール「Strandsハーネス」をオープンソースで公開",
+        "content": "AWSは、特定のLLMに依存せずに入れ替えが可能なAIエージェント自作ツール「Strandsハーネス」をオープンソースとして公開しました。開発者は好みの言語モデルを自由に組み合わせて、柔軟にAIエージェントを構築できるようになります。",
+        "source": "Google News",
+        "published_at": "2026-09-30",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBxM1JYZmU1R2ZQNVlvNTlpWVNjYjV3cTJTbHZZaUdJTlI4NmlxVmpLdXl2ZmhrTXdPYnZ3WVJ4Nzc1cGU4Y0piTktXaTdOZk1QNnJQUUtZRnBzQ3BzZ2c5VDd4UEJiSmdVVkE?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "AIで「実行は分散、判断は集約」へ エージェントが増えるほど人間の仕事が重くなる理由",
+        "content": "AIエージェントの普及により、実務の実行は分散する一方で、最終的な判断を下す人間の負担がかえって重くなるという構造変化について解説しています。AIの進化に伴い、人間が担うべき役割の重要性とマネジメントのあり方が問われています。",
+        "source": "Google News",
+        "published_at": "2026-09-30",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1CeVlmOGlJWGY4b2JWMVYwZGhrTlhGVWVEcGk2dnlucmxINWw1RlNkcm1oeU9UMHNqTWZkaHNGdVFnSnlXcEdGOHZOUUIzOTNRY2Y5Z2Vn?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "クアルコムとアマゾンが結ぶ巨額AI同盟、推論と光技術で挑む脱GPU依存",
+        "content": "クアルコムとアマゾンが巨大なAI同盟を締結し、推論処理と光技術を活用してGPUへの依存からの脱却を目指しています。両社の提携により、次世代のAIインフラ構築やコスト削減が期待されています。この動きは半導体業界やクラウド市場における勢力図に大きな影響を与える可能性があります。",
+        "source": "Google News",
+        "published_at": "2026-09-30",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9IMUFTTDJiQkhCX0k2ZUtmTl8xVmxRbHBtUEQxWXFXOE83SG03UXA2U3dEREYxTEJFNDlDYXQwc3ZRMXEtMDd3ZW4xLU1RYUVrZEFwY01R?oc=5",
+        "category": "インフラ・半導体"
+      },
+      {
+        "title": "トランプ氏、AI規制を拒否し「自主規制」を強調－業界幹部らと昼食会",
+        "content": "トランプ氏はAIに関する政府の過度な規制を拒否し、業界の自主規制を強く支持する姿勢を示しました。AI業界の主要な幹部らを招いた昼食会でこの方針が語られ、今後の技術革新のあり方に影響を与えると見られています。政府主導のルール作りよりも企業の自由な発展を優先する方針が改めて強調されました。",
+        "source": "Google News",
+        "published_at": "2026-09-30",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9oeEtseTlkWmtVS1BzUkFia1Z3VnFmZnlKaWw2WFRxUk5KbUlMb3BTcFY0cEVzcVdHbnFxVjkwTGhmVFNmMjdJbEdtRnR6ZWU4aXQzWDBOOEcxUjAtUlVVWFd5RUtPeHpsbjRCb1dWSEdaSHhv?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "トランプ氏、AI規制巡る習氏との連携否定 米の優位維持重視",
+        "content": "トランプ氏は人工知能（AI）規制を巡る習近平氏との連携を否定し、米国の優位性を維持することを重視する姿勢を示しました。米中間の技術覇権争いにおいて、独自路線でAI開発と規制を進める方針が改めて鮮明になっています。",
+        "source": "Google News",
+        "published_at": "2026-09-30",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE00ODRLZUt5UWZEVkhBVUpKeGo0QVA3ZUMwZnphRGRpTEI0UGhHdG9CejZuMUdKa3AxUG5TY1NYSmw3RklLVmRsQzRWbWtjTGx6VDNIcjlhb3E4aHZGR0Mwbk91R0x3SnNQNC1fUmxGTkF0eEFEWHphc1dVWDN4RTg?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "AI開発を監視する委員会の検討とトランプ氏の動向",
+        "content": "AI開発の監視を目的とした委員会の設置検討に関するニュースです。トランプ氏に関連する動向や、AI政策への影響が注目されています。",
+        "source": "Google News",
+        "published_at": "2026-09-30",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9GMnM2SHllcVR2T2hPdUlDb25WZE9VbHhwV095Qnh0ME40WTFIT21ZYzdJNDZxUkdhQXJPV3B1WHQ2NHpoX1FZU1VwdEU0d2xkTUlkR2l3?oc=5",
+        "category": "政策・安全"
+      }
+    ]
+  },
+  {
     "date": "2026-09-29",
     "daily_summary": "本日は、デロイトや安川電機などによる具体的なビジネス・製造現場でのAI活用や人材育成の動きが報じられる一方、AMDによる巨額買収やソフトバンクGの資金調達など、AI領域への大規模な投資と戦略的転換が目立ちました。また、AIの急速な普及に伴い、OpenAIのトラブルに見る安全性への懸念や、FRB理事による経済効果への慎重な見方が示されたほか、石黒浩教授が指摘する人間と技術の共生関係の再考など、技術的進化と並行して社会的・倫理的課題への向き合い方も改めて問われる一日となりました。",
     "articles": [
