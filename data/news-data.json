@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-10-31",
+    "daily_summary": "本日のAIニュースは、宇宙空間でのエッジAI処理の実証やオープンソースモデルの展開といった技術的な進展が見られる一方で、主要AI企業によるウェブスクレイピング拒否の共通基準導入やアルファベットの株価急落など、ビジネスや著作権を巡る大きな転換点も浮き彫りになりました。",
+    "articles": [
+      {
+        "title": "GoogleのAIチップ搭載衛星が宇宙からの初応答を地球に送信",
+        "content": "GoogleのTPUを搭載した衛星が軌道上で起動し、オンボードのGemma 4モデルを用いて宇宙に関する俳句を作成し地球への送信に成功した。宇宙空間でのエッジAI処理の実証として大きな一歩となる。",
+        "source": "The Verge",
+        "published_at": "2026-10-31",
+        "url": "https://www.theverge.com/tech/1023528/google-project-suncatcher-ai-satellite-transmission",
+        "category": "インフラ・半導体"
+      },
+      {
+        "title": "Microsoft Research、合成データを用いたCopilot評価手法を解説",
+        "content": "Microsoft Researchは、機密情報を保護しながら複雑な企業環境でのMicrosoft Copilotの信頼性を評価するため、合成データ活用の取り組みを公開した。実データの漏洩リスクを冒さずに実用的なスケールでのテストが可能になり、企業向け導入の信頼性が高まる。",
+        "source": "Microsoft Research",
+        "published_at": "2026-10-31",
+        "url": "https://www.microsoft.com/en-us/research/blog/from-synthetic-enterprise-data-evaluations-to-real-microsoft-copilot-ai-confidence/",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "Hugging Face、公的科学データをAI対応させる「Project ProtoStar」発表",
+        "content": "Hugging Faceが公的資金による科学研究データをAIで容易に活用できるようにする「Project ProtoStar」を発表した。学術データのオープンアクセス化とAI研究の加速を同時に狙う。",
+        "source": "Hugging Face",
+        "published_at": "2026-10-31",
+        "url": "https://huggingface.co/blog/announcing-project-protostar",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "Appleプラットフォーム向け音声・意思決定オープンモデル「AnySpeechRecognizer」「AnyDecisionModel」登場",
+        "content": "Hugging Face等より、Appleプラットフォームでの動作を想定したオープンな音声認識および意思決定モデル「AnySpeechRecognizer」「AnyDecisionModel」が発表された。デバイス上でのAI活用拡大に寄与する。",
+        "source": "Hugging Face",
+        "published_at": "2026-10-31",
+        "url": "https://huggingface.co/blog/anydecisionmodel",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "主要AI企業、ウェブスクレイピング拒否の共通新基準を導入へ",
+        "content": "OpenAI、Google、Microsoft、Anthropicなどの主要AI企業が、パブリッシャーがAI学習用スクレイピングを一括で拒否できる新しい共通標準の採用を表明した。個別の設定を不要にし、コンテンツホルダーとの権利関係を整理する業界横断の大きな一歩となる。",
+        "source": "The Verge",
+        "published_at": "2026-10-31",
+        "url": "https://www.theverge.com/tech/1023763/openai-google-microsoft-ai-scraping-standard-opt-out",
+        "category": "政策・安全"
+      },
+      {
+        "title": "Google DeepMind、宇宙空間のTPUでGemma 4を稼働させ詩を生成",
+        "content": "Googleが初のデータセンター用衛星を軌道上に打ち上げ、宇宙空間のTPU上でGemma 4モデルを稼働させて詩を生成することに成功した。宇宙エッジAIの可能性を示す実験的なマイルストーンとなる。",
+        "source": "TechCrunch",
+        "published_at": "2026-10-31",
+        "url": "https://techcrunch.com/2026/10/30/googles-first-data-center-satellite-is-online-and-writing-poetry/",
+        "category": "インフラ・半導体"
+      },
+      {
+        "title": "GitHub Copilot、アプリセッションをVS Codeへ引き継ぐ機能を提供",
+        "content": "GitHub Copilotアプリでの会話やコード変更、文脈を維持したままVS Code上のエージェントセッションへ移行する手順が公開された。開発者はプラットフォーム間でシームレスに作業を継続でき、コーディングの生産性が向上する。",
+        "source": "GitHub AI",
+        "published_at": "2026-10-31",
+        "url": "https://github.blog/ai-and-ml/github-copilot/how-to-continue-a-github-copilot-app-session-in-vs-code/",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "OpenAI、ウェブサイト向けAI学習拒否シグナル共通化を発表",
+        "content": "OpenAIがウェブサイト運営者がAI学習の意向を複数プロバイダーへ一括で伝える共通のrobots.txtシグナルを尊重する方針を表明した。これにより、クリエイターやメディアは個別の設定の手間を省きながら、効率的にデータスクレイピングを制御できるようになる。",
+        "source": "OpenAI",
+        "published_at": "2026-10-31",
+        "url": "https://openai.com/index/helping-websites-express-ai-training-preferences",
+        "category": "政策・安全"
+      },
+      {
+        "title": "Zest、テキストで飲食店予約を行うAIコンシェルジュを発表",
+        "content": "Zestが提供する新しいAIエージェントは、グループ全員の好みを統合してレストランの候補を投票で絞り込み、テキストベースで予約まで完了させることができる。日常の幹事タスクを完全に自動化し、実用的なAIエージェントのユースケースを提示する。",
+        "source": "TechCrunch",
+        "published_at": "2026-10-31",
+        "url": "https://techcrunch.com/2026/10/30/zests-new-ai-agent-finds-restaurants-and-books-reservations-over-text/",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "アルファベット株13%安、時価総額80兆円消失 AIによる検索収益圧迫への懸念",
+        "content": "アルファベットの株価が13%下落し、時価総額80兆円が消失した。AI台頭による検索事業の収益圧迫への懸念が市場で強まっていることを示している。",
+        "source": "Google News",
+        "published_at": "2026-10-31",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1vVy1qclN0S3JtNzNyTzJwc0lfRERySVJYOUFEVUdPczBlUVc5T01JRE9xdGVqbWlmbE4zdDBiaDdKR0VmeE1wZUdGUHhtLTl3Qng2NDg5a21icW5VNWJKTEpsN0hyNkRvcWFFdw?oc=5",
+        "category": "事業・投資"
+      }
+    ]
+  },
+  {
     "date": "2026-10-30",
     "daily_summary": "本日のAIニュースは、最新モデルの登場やHugging Faceでのアップデート、Google Geminiの機能拡張といった技術・サービスの進化が伝えられる一方で、AIエージェントによる数学の巨大定理証明や大規模な買収など実用化の加速が目立ちます。他方で、MicrosoftにおけるAI活用に伴う大規模な早期退職優遇制度の提示や、ダウンロードフォルダ等でのAI利用におけるマルウェア感染リスクの指摘など、雇用やセキュリティ面での深刻な課題も浮き彫りになっており、OpenAIによる「Model Spec」の更新やミスアライメント検出の取り組みを含め、技術の急速な発展と安全性・ガバナンスのバランスが重要な局面を迎えていることを示す一日となりました。",
     "articles": [
@@ -2650,92 +2736,6 @@
         "published_at": "2026-10-02",
         "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBQRzdudUtFcTRBWFVaVXlDWU9SMkh2ZHJzLVJ2TjhTb2RYRmozeDhCMzdQOS1VYUw3NUIyRk5lX084QWNBZlRZQnhxX2ZHR2ItZWdXTmVBN2VWNnNIeE1MTjVDSE90V0FuNEE?oc=5",
         "category": "事業・投資"
-      }
-    ]
-  },
-  {
-    "date": "2026-10-01",
-    "daily_summary": "本日のAIニュースは、トランプ米政権による政府用語の「SI（超知能）」への変更命令や企業主導の自主規制方針、米FTCによるリスク調査など国家・産業レベルの動向が目立ちました。国内では、東京地裁が声の「パブリシティー権」を初めて認める司法判断を下したほか、NECのAI・安保分野を軸とした躍進や、台風予測、認知症予防、科学研究など多様な分野でのAI活用が進む一方、エンジニアの育成モデルの変革期にあることが示されています。",
-    "articles": [
-      {
-        "title": "トランプ大統領、AIに代わる「SI＝超知能」の使用を命じる大統領令に署名",
-        "content": "トランプ大統領は、政府の公式文書や発表において従来のAIという用語に代えて「SI（超知能）」を使用することを義務付ける大統領令に署名しました。この決定により、政府のテクノロジー戦略における呼称や位置づけに大きな変化が生じる可能性があります。今後の行政文書における表現の統一と、超知能技術の推進に注目が集まっています。",
-        "source": "Google News",
-        "published_at": "2026-10-01",
-        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE80RUllVC1VbWdaQW0wYUtPNDFMVUs0N2E4N2FIekxueTRJaFpTTVktWmo0WGlxTHN0SUgydXR6TGdOS0t4VXRWeEdvYzNGUHlTdDFBWDZrZmRqYmRqLWRzRWlGckVodzAyY1BtZ1N2WDNNeEF4dUFKX3QtNlV3Yjg?oc=5",
-        "category": "政策・安全"
-      },
-      {
-        "title": "トランプ氏、アンソロピックなどAI企業20社と自主規制で合意",
-        "content": "トランプ氏がアンソロピックをはじめとする主要なAI企業20社と人工知能に関する自主規制で合意しました。この協定は急速に発展するAI技術の安全性と信頼性を確保することを目的としています。",
-        "source": "Google News",
-        "published_at": "2026-10-01",
-        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE04RDNPOVg4bG5kUjFaRzlCRlFZYTRUTHFrdUdObTJTUUgwbkVSOTFzOUEtNEQxeTJYTHpsMlBFMTRRYlljeTFOdXdPOUtFN3lwdGdjNzJvTmZQNUtFZHdwS2RQYlU4OFRTbk1PMA?oc=5",
-        "category": "政策・安全"
-      },
-      {
-        "title": "ＡＩ開発減速、「企業が規制」協定 トランプ氏、国の関与には応ぜず",
-        "content": "トランプ氏はAI開発の減速を目的とした企業主導の規制協定について、国家の直接的な関与には応じない姿勢を示しました。企業の自主的な取り組みに委ねる方針が示されており、今後のAI政策や規制のあり方に影響を与える可能性があります。朝日新聞が報じています。",
-        "source": "Google News",
-        "published_at": "2026-10-01",
-        "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1YZnNXeFdKbUdoNVlSVDZWMTZxMVd2MmdlTVFBOC1IcjJRSHVsY2FJNVYzbGplUWUya2tseTdQN2pMQnRWdHdOYi1pNzRmcFFNUm42WEZ0YzhBQ2Jk?oc=5",
-        "category": "政策・安全"
-      },
-      {
-        "title": "声にも「パブリシティー権」初判断 生成AIで模倣、人気声優訴え―削除請求は退ける・東京地裁",
-        "content": "生成AIによって声を無断で模倣された人気声優が提訴した裁判で、東京地裁は声にも「パブリシティー権」が認められるという初の司法判断を下しました。ただし、該当する音声データの削除請求については退けています。声の権利保護における重要な一歩として注目されています。",
-        "source": "Google News",
-        "published_at": "2026-10-01",
-        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5sU0RDMmUyZXRxQWI5UkpHR2dYM0NJMTRvVE5WLVpOSlFnaTVDeGtUdVpPbEZsVUoyUXZ5ZUpkNlpnUVkwbkZib05Od2RhUTkydV9BNUJZcVFxajJySzVYV0x4aw?oc=5",
-        "category": "政策・安全"
-      },
-      {
-        "title": "NEC、富士通を20年ぶり逆転 AIと安全保障で挑む森田改革の正念場",
-        "content": "日本経済新聞によると、NECが時価総額などで富士通を約20年ぶりに逆転しました。人工知能（AI）や安全保障分野を軸にした構造改革が成果を上げており、今後の展開が注目されています。",
-        "source": "Google News",
-        "published_at": "2026-10-01",
-        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFAwRWRRRGZuYUpyTGJCeHVDQjZoUENka01DT2VMNW8xREM4Y05hY2lUSzQyYlpZSWlLQnJkUXpHdGdXTzVGU3ZDeEtvUDRpYkhiS0Z5aWJRY2c5UmdPS29SZXNOcU5LZXRuUTRjVw?oc=5",
-        "category": "事業・投資"
-      },
-      {
-        "title": "米連邦取引委員会がAIリスクの調査を開始 開発企業幹部らに証言求める方針",
-        "content": "米連邦取引委員会（FTC）は、急速に普及する人工知能（AI）に関連する潜在的なリスクについての調査を開始しました。主要なAI開発企業の幹部らに対し、安全性確保の取り組みやリスク管理体制について証言を求める方針です。この動きは、AI技術の急激な発展に伴う規制強化の第一歩として注目されています。",
-        "source": "Google News",
-        "published_at": "2026-10-01",
-        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1RcXRRVHVOTk1JazF6MXE4OWZObFAydmZVdV9EdUNwajZobGd6NnFINkpHM2J5aUk1clM1V3Q0NEFpY3NlUHl0ZkJhUGhpMWJTbE55d2piX2ViWXJReUFtaFhjVzhxalJlVU5LbndVN2VHNmFH?oc=5",
-        "category": "政策・安全"
-      },
-      {
-        "title": "大阪：認知症予防AI頼んます",
-        "content": "大阪における認知症予防の取り組みに人工知能（AI）を活用する話題を報じたニュースです。地域社会でのAI技術を用いた健康管理や予防医学への期待が示されています。",
-        "source": "Google News",
-        "published_at": "2026-10-01",
-        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5tY2ZiWEpIOWtacUpKYlRmUThiT0twaVRMTEh3TGNMbndvXzJpTkMwSzlmX1p4ZWNLbE9PakNTY1B4SDRLUDY2a2cwVVJ3Ui1JdjdtVVozaFN0bWthQ3k0eDVNdXJ4M3pEX2dvTG9xZEw?oc=5",
-        "category": "その他"
-      },
-      {
-        "title": "AIで「人月モデル」は崩壊する それでも“若手エンジニア不要論”が危険な誤解である理由",
-        "content": "AIの普及により従来の「人月モデル」は崩壊に向かうと指摘されています。しかし、自動化が進む現代においても、経験を積む土台となる若手エンジニアを軽視する「不要論」は大きな誤解であり危険です。これからの時代に求められるエンジニアの育成と役割の変化について解説しています。",
-        "source": "Google News",
-        "published_at": "2026-10-01",
-        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBHYzZnRV9vSkdZd3hZU0VwUWVpdU1YMUhXSzVpTVd5and4RDNsYjNEUVFQTFBHYllUNmoxOGxRUklIbjd4ZGhmelFLR2N4WHRzYjRrNlI3RGgxejh5cm84Ty1FdzNidUlFbVJuOERGdUd2QQ?oc=5",
-        "category": "事業・投資"
-      },
-      {
-        "title": "AI for Science革新的研究推進事業（ARiSE） 新規採択課題の決定について",
-        "content": "科学技術振興機構（JST）は、AIを活用した科学研究の推進を目指す「AI for Science革新的研究推進事業（ARiSE）」の新規採択課題を決定しました。本事業により、AI技術を駆使した新たな研究パラダイムの創出や、科学技術の各分野における革新的な成果の期待が高まります。",
-        "source": "Google News",
-        "published_at": "2026-10-01",
-        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBCaUd0X0dBTHUzcXNMUHdhbWp4LWU3ZVdCT2JDYlQtUW9zdlY5VHQ4T3puQ1NsVkVMRkZ1eHM3Wm42QVJRMTQ2TklVLWNSclU3bkNhaGsxSllwOU1oNVE?oc=5",
-        "category": "モデル・研究"
-      },
-      {
-        "title": "台風予測にAI革命 その実力を徹底分析",
-        "content": "NHKニュースが台風予測におけるAI活用の最新動向とその実力を徹底的に分析した記事です。従来の気象予測モデルと比較して、AIがどのように精度や速度の向上をもたらしているのかを解説しています。",
-        "source": "Google News",
-        "published_at": "2026-10-01",
-        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1XbFJJeEljOUl3VWpMREd2T2ktVmRCV2dibHVFdFF0TFYxWHRXM2ZVbTJkMGdQMnJUZzhWVnRNNnJHTkdiaUNQbzg2TDkyRUl1Wlg1ZW1uQXlCNmNKSXdN?oc=5",
-        "category": "モデル・研究"
       }
     ]
   }
