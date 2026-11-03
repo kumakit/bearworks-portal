@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-10-05",
+    "daily_summary": "本日のAIニュースは、トランプ米政権の政策や米中の覇権争いといった地政学的・安全保障上の動向から、AIチャットbotのUX課題や企業のデータ基盤支援、NTTデータGのビジネスモデル変革に至るまで、技術・ビジネス両面での実用化と変革の波を伝えています。さらに、ソフトバンクGの孫氏が訴える人類の協調の必要性や、AI開発のスピード鈍化を機にした深い知識理解の模索など、AIが社会や働き方に根本的な転換を迫る中での新たな課題と展望が浮き彫りになっています。",
+    "articles": [
+      {
+        "title": "トランプ米政権のAI政策を巡る動き：合意文書での国名誤りや司令塔の発表など",
+        "content": "トランプ米政権によるAI政策の推進を巡り、合意文書での国名誤りや新たな司令塔の発表、政府AIの仕様変更などが報じられています。AI戦略の展開やその政治的影響に関心が集まっています。",
+        "source": "Google News",
+        "published_at": "2026-10-05",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1IcF9HeWFUckh2dWszV0xqakRsUWlNa0gtenhrUW1FYXNmdXFEUW5taHEwQ2tnT1puWUp5LTMzN0M2aFZGdVpGWVE2a0VuUW5zNlJVbmxqZV94M0V0b0pWb2xvNFlCdnIzR0syeUtTa0VGazdaeVlRN29tLXBCbUk?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "「ロボAI推論を外部処理」「QEMからFTQCへ」 海外動向",
+        "content": "日本経済新聞による海外のAIおよび量子コンピューティングに関する動向の報道です。ロボットのAI推論を外部で処理する技術や、量子誤り軽減（QEM）から誤り耐性量子計算（FTQC）への移行について取り上げています。",
+        "source": "Google News",
+        "published_at": "2026-10-05",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPSkphaUxfYXkxU3JOU0s0MHVCaVlqU1JxQjBYMjVEenVtNXFZOWdpSi1uX0FNazB3b2lWbXYxazBCV09lRGxtZE5DTVBGMGZYLXVjQk53V0RhTnVtZFFEUEUxRDlIZERwTEpGbEEyTUVQN1dIRWRHenRVNUZ6U1Azd3U3RTRJVWc?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "米中AI覇権競争には軍事衝突のリスクが潜んでいた…このままでは「デジタル核兵器」の開発競争が始まりかねない",
+        "content": "米中間のAI覇権争いは激化の一途をたどっており、軍事衝突につながる重大なリスクを孕んでいます。このまま規制や対話が進まなければ、まるで冷戦期の核開発のような「デジタル核兵器」の開発競争に発展しかねません。両国間のテクノロジーを巡る対立は、世界全体の安全保障を揺るがす深刻な問題となっています。",
+        "source": "Google News",
+        "published_at": "2026-10-05",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5ONm56LXo0elZCbFplZzlpaWtNa0VfQTNmQkNQeUEwY0RMVFFidVl6dWFMT20xSjgtT0dXeTYyVm0tZWFMRE5YckVrRno2Y2VMM1RqcDFqc3IySlM2Y2lB?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "「また同じ説明か」 消費者の半数が離脱するAIチャットbotの“記憶喪失”：8割の企業が意識していない問題",
+        "content": "多くの企業が導入するAIチャットbotにおいて、会話の文脈を忘れてしまう「記憶喪失」問題が消費者の大きな不満となっています。半数以上のユーザーが同じ説明を繰り返されることで利用を辞めており、企業の対応改善が急務となっています。",
+        "source": "Google News",
+        "published_at": "2026-10-05",
+        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1pSXFCUHBzY1hsR0VzM1h4Wjl0S0ZIeXZnNzZnNF81cy1YSjBZa2dPWnBnbUJKTmJicDVNaHQ1andPMWpVelhTdy1NakJIUUE1ZGdIUERTUHQzdG94LTA5ZUVvLXFSbFU4WDBnbWJ3Vjk?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "AI時代に活躍必至、「サイバーセキュリティ」株は新たな飛躍ステージへ",
+        "content": "AIの急速な普及に伴い、サイバーセキュリティ関連株が新たな飛躍のステージを迎えている。企業のデジタル化が進む中でセキュリティの重要性が高まっており、関連銘柄の今後の成長が期待されている。",
+        "source": "Google News",
+        "published_at": "2026-10-05",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9ERzg3R0tSalhBT0cxS1Q3X1ZKUVdpbzBROTdPRUgwdC1iQmN2RnJGMUt4alNvZnNlZVM3SWVVSy1abTljQkNTN0VyVkhERGl0Ni12VjZCT2xULWRJYkY5cA?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "NotebookLM開発者は「AI開発ペース鈍化」を歓迎!?知識をより深く理解する、AI時代の新たな“成長術”も指南",
+        "content": "ダイヤモンド・オンラインによる記事では、GoogleのNotebookLM開発者がAI開発のスピード鈍化を歓迎している背景について報じられています。AIの進化が速すぎる現状において、知識をより深く理解し定着させるための新たな学習・成長のアプローチが指南されています。AI時代を生き抜くための思考法やツールの活用術に焦点を当てています。",
+        "source": "Google News",
+        "published_at": "2026-10-05",
+        "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5rbFlvTmNhR2FfZ0Z6Vk9Ja3NaYlJLVk9CUXJiWG9oSFpwQ2xDcDJKNV9yTkFaUjlkNmptd0pQX080NnlUSEFjNFNOM1LSAU9BVV95cUxQQ3NxTFlURjdCX1h1UGtxVlBIbEdFVkQydUJQaExuNmtkN204ZUt3TEstaUFmQng2Y1dGdGVxT3Y0bXVyUHA3SzN2YUNyRzEw?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "パーソルビジネスプロセスデザイン、AI利用のためのデータ基盤構築・運用支援サービスを提供開始",
+        "content": "パーソルビジネスプロセスデザインが、企業におけるAI活用を円滑に進めるためのデータ基盤の構築と運用を支援する新サービスの提供を開始しました。このサービスにより、企業はAI導入に必要なデータの整備や管理体制を効率的に整えることが可能になります。データ活用を通じた企業のDX推進や業務効率化に貢献することが期待されます。",
+        "source": "Google News",
+        "published_at": "2026-10-05",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1oaldfbF8yWkJXREtGRmlITEIxdFliUFVEV1h2VjlXci1RRTQ1S3dBVThMODlhdWdZb21HRkROMXU5cXlGYTU1T2dJMThCbXo0bV9vUzhKMlR5Mkstb21N?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "ソフトバンクGの孫氏、AI進化で「人間同士が戦うぜいたくはない」",
+        "content": "ソフトバンクグループの孫正義会長兼社長が、AIの急速な進化について言及し、人間同士が対立している余裕はないと訴えました。人類が直面するAI時代における協調の必要性を強調しています。今後の技術革新が社会や経済に与える影響について、各方面で議論が続けられています。",
+        "source": "Google News",
+        "published_at": "2026-10-05",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5aNTBjcnRTbU1Id2o0Z1MyeGk0LXpxM0puczRaYjVEdE95UVRDMF80VXpRR1E3QktnQ2ttMDhTSHptdlJSRGVPdXR3bkc1Qzc1V3lETVVrejhJbFlWSjBXamt6ZDA3bnc?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "OpenAI「dots」で始まる常駐型AI競争、24時間働くエージェントは何を変えるのか？",
+        "content": "OpenAIの新しい常駐型AI技術「dots」に関連する動向を解説しています。24時間稼働するAIエージェントが私たちの働き方やビジネスにどのような変革をもたらすのかについて考察しています。",
+        "source": "Google News",
+        "published_at": "2026-10-05",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1uVUZPZnA4TnVhU25CRUlxQ1RDMjdaUDBNSGJPUGtOSUVXMm8zeUdoR3lrX09SS1BIVmJET2RnOVlrVXJ6Y0JOMDB4RElmVnlWUlRvRy1n?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "NTTデータG、法人向けAIで日立らに挑む 人月ビジネスから脱却図る",
+        "content": "NTTデータグループは、法人向けAI事業を強化し、日立製作所などの競合に挑む姿勢を見せています。これまでの人月商モデルからの脱却を図り、AIを活用した高付加価値なビジネスモデルへの転換を目指しています。",
+        "source": "Google News",
+        "published_at": "2026-10-05",
+        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPaV9lZDhoT24tRHduOWoxVjhNRkR5Nm15MGhuRW9ZVkxVNHgyZVB1SG42Zk5WcmFEWmZQbEwzZExyUlBkS3JpeVZEcVlWWEFwd3dtblZBbk85VkpXejhPWGNIYXA2MkNjbFRtRGdJU0JMa3VMVzBIa2xxbUJrc3N2d1otVUtDMm5CSWpWbQ?oc=5",
+        "category": "事業・投資"
+      }
+    ]
+  },
+  {
     "date": "2026-10-04",
     "daily_summary": "本日のAIニュースは、GoogleとOpenAIによる新型フロンティアモデルの発表といった技術競争の激化をはじめ、学校教育への導入に伴う悪影響の懸念、AI翻訳時代における言語学習の価値再定義、そして新卒採用で求められる「判断力」の変化など、社会各層への多大なインパクトを浮き彫りにしています。また、通信速度やプログラミング言語におけるAI適性の「格差」が露わになる一方で、北朝鮮のミサイルへのAI導入や米政府AIの中立性を巡る政治的懸念といった安全保障・ガバナンス上の課題も深刻化しており、茨城県のフィジカルAI産業創出のように地域経済での活用が進む一方で、AIの急速な浸透がもたらす光と影の両面が改めて問われる一日となりました。",
     "articles": [
