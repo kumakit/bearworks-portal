@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-10-06",
+    "daily_summary": "本日のAIニュースは、政府の後押しを受けた異業種連携や日本独自の強みを生かした「フィジカルAI」の開発加速や自動化の動きが目立ちました。また、AIによるコード生成の効率化に伴うレビュー負担への新たな解決策の提示や、生成AIの利用履歴が裁判の証拠として採用されるなど実社会への浸透が進む一方で、米中間の安全保障を巡るジレンマや、半導体依存による日本株の下落リスクといった懸念も浮き彫りになりました。さらに、ノーベル物理学賞を通じたAIの科学的貢献への再評価や、プライバシー保護の徹底が市場の信頼につながる事例など、技術革新の光と影が多角的に報じられた一日となりました。",
+    "articles": [
+      {
+        "title": "フィジカルAI分野で進む異業種間連携の動向",
+        "content": "近年、現実世界で直接動作するフィジカルAIの領域において、業界の垣根を超えた連携やパートナーシップが相次いで発表されています。自動車や製造業、テクノロジー企業などの協業により、技術革新や新たなサービスの実用化に向けた動きが加速しています。",
+        "source": "Google News",
+        "published_at": "2026-10-06",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5BRFRfUGpRUG85TWFVaUdfejBTdVlmODhoclJta2Jsb29OV0pOMDlrbVhmalpZZ3g0VmNTRXhqOXBodWFCSXVuQm9OeUdhVERv?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "フィジカルAI開発の最前線 “日本らしさ”で世界に挑む『every.特集』",
+        "content": "日本テレビのニュース番組『every.』にて、フィジカルAI開発の最前線が特集されました。独自の“日本らしさ”を武器に、世界市場へ挑戦する日本の取り組みが紹介されています。",
+        "source": "Google News",
+        "published_at": "2026-10-06",
+        "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9ydFdJTHpMWDNsMkk1ODFIOVlUdnBSbG5iVjQ3N1lYTFB5ODNSR1pXZTFJQVBGd0NDdFAxdGs0UW9ZWk16R3JFTllTaGJGaEhiRjdGZnV1XzdXaGtWZHcxWTdxaEI2SDhIX3ZuTVBrdUVNa2FQbFhESUptZUM?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "フィジカルAIで異業種連合：ロボ・車自動化、政府も後押し",
+        "content": "政府の後押しを受け、フィジカルAIを活用したロボットや自動車の自動化に向けて異業種連合が立ち上がりました。多様な業界の技術を融合させることで、次世代の自動化技術の発展と社会実装を加速させる狙いがあります。",
+        "source": "Google News",
+        "published_at": "2026-10-06",
+        "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOWmdQMV9LamVfN21WUWdTRE8xLUxUX0pZQkdPejlHOWFJWGQtUTVSal9tNV9PZjdKOF8tYzR1cHFfY1pXZFNlSnhkdVh4YXh6N3JVSHFNOGZNeDIyYzY0eEdYUUpPWTV1TlBRRXFzV2JvczF6bkV3UW1aVlBkcFpCTVJn?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "AIでコード生成は加速、でも人間の確認が追いつかない問題。t-wadaが示す「レビュー解体」という答え",
+        "content": "AIの普及によりコード生成が加速する一方で、人間のコードレビューが追いつかないという課題が浮き彫りになっています。著名エンジニアのt-wada氏が、この問題に対する解決策として「レビュー解体」というアプローチを提示しています。開発プロセスの効率化と品質維持の両立に向けた新しい開発手法として注目されています。",
+        "source": "Google News",
+        "published_at": "2026-10-06",
+        "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE5STEpJR1lVeThuRnBiRkZ1ZFB5cVFsQ2tnUnlZZTdfSndFZy1BQUJkZm0xSlBNVW82NDR5YVg3S3pzV1F4U3RIXw?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "米AI大手「開発減速論」に中国が反発した真意、浮かぶジレンマと安全保障",
+        "content": "アメリカのAI大手による開発減速の議論に対し、中国が反発を示した背景には複雑な安全保障上のジレンマが存在します。この記事では、米中の技術競争における中国の思惑と、AI開発を巡る戦略的な意図について詳しく解説しています。",
+        "source": "Google News",
+        "published_at": "2026-10-06",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5hVXR1NjV2MnRCNDM0Q2tVOGVKVWMtaTVxODlsbWNOemxXZlBzQm5FdVh3emo0bFBvZUc4M1BacTRzeFN5LXEtVUR0WDlxSlN2WDZyU2dn?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "Newtonで読む24年の物理学賞 AIの飛躍的進化のきっかけ",
+        "content": "2024年のノーベル物理学賞に焦点を当て、AIの飛躍的な進化のきっかけとなった業績について朝日新聞が報じています。科学雑誌Newtonの記事を通じて、受賞研究の背景やAI分野への影響を分かりやすく解説しています。",
+        "source": "Google News",
+        "published_at": "2026-10-06",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5jQS1PcDVPaHpsS1UwNzB4d05xbmRpVnhhRjdTLVVwUFFfQ1JOTWgwbTA4WHFhMk5zR3VzN1Vya0RqbmFfRlEwXzUxdWIwNUpKWWdHLWxzZG5fd0FybFdweGRVLTFGM28?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "生成AIへの質問履歴を薬物密輸公判の証拠として提出、検察が「違法性の認識」を主張",
+        "content": "海外からの荷物受け取りに関する報酬やリスクについて生成AIに質問していた履歴が、薬物密輸事件の公判で証拠として提出されました。検察側はこの検索履歴を基に、被告が違法性を認識していたと主張しています。生成AIの利用履歴が刑事裁判の証拠として活用される事例として注目を集めています。",
+        "source": "Google News",
+        "published_at": "2026-10-06",
+        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBBal9pM0FTN0Zrd3Q3ZXYwZFFab29xTGtMUHFPX0JRb0ZUdkV1T0loNnhueG1DRmtEeWI1VWNRUUxjVGQteXplLXRNeTd3X2QwM3FXMUJIR1ZnQ3ZlUmxvOFR1WVduZw?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "【北浜流一郎のズバリ株先見！】 ─ AI投資の巨大奔流が生み出す「新・企業城下町」関連に注目せよ！",
+        "content": "AI投資の急速な拡大が、新たな「企業城下町」とも呼べる関連企業の経済圏を生み出しています。この記事では、AI関連の巨大な投資トレンドによって恩恵を受ける注目企業や投資先について解説しています。",
+        "source": "Google News",
+        "published_at": "2026-10-06",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5fYzJERVp2ZkVJRVoxUV9VOEVyZUN0LWRMb1ctRnVheXV0Mkh3M0dOWDZQalk2RW9MSFVtbHlxRDUzRFkycHY1VVEteFpqRV93cmpQU2FVUzVOTzF6cU91bw?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "日経平均、AI半導体株主導で「約3カ月ぶりの7万円」回復も…実は〈日本株の全面安リスク〉が警戒されている理由",
+        "content": "日経平均株価はAI半導体関連株の主導により約3カ月ぶりの高値を回復しましたが、市場では日本株の全面安リスクが警戒されています。半導体セクターへの依存度が高すぎる点が、相場全体の下落リスクを孕んでいる要因となっています。今後の動向によっては、特定のセクター以外への波及や調整圧力が懸念されています。",
+        "source": "Google News",
+        "published_at": "2026-10-06",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBVMFJSckk1dkZiY1E3bmVmYVhGN1BjZFhqd19JN00tcWdMckpKV1pNLUhyM1RBQzFPdVU5ckV5dGp6Tld6bHdzaHdYTUZvMTZhOU12UGp6WHJnQQ?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "アップル株高はAI企業への教訓 市場の信頼、顧客データの保護徹底で獲得",
+        "content": "アップルの株価上昇は、AI企業にとって重要な示唆を与えています。市場からの厚い信頼は、徹底した顧客データの保護によって獲得されたものです。AI技術の発展においても、プライバシーとセキュリティの確保が極めて重要であることを示しています。",
+        "source": "Google News",
+        "published_at": "2026-10-06",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5OdUxrMDR1ZlQ4NWJxTWhHZFNJV3J6NVNoZDBmUlhuM0k5UkdHRkJhNHZLYTU4a0JYY1BZNlZwWUdmdWg3ZWU0aTFReHhWNjdCV1dPN3JqR1VocmZkSE90XzlB?oc=5",
+        "category": "事業・投資"
+      }
+    ]
+  },
+  {
     "date": "2026-10-05",
     "daily_summary": "本日のAIニュースは、トランプ米政権の政策や米中の覇権争いといった地政学的・安全保障上の動向から、AIチャットbotのUX課題や企業のデータ基盤支援、NTTデータGのビジネスモデル変革に至るまで、技術・ビジネス両面での実用化と変革の波を伝えています。さらに、ソフトバンクGの孫氏が訴える人類の協調の必要性や、AI開発のスピード鈍化を機にした深い知識理解の模索など、AIが社会や働き方に根本的な転換を迫る中での新たな課題と展望が浮き彫りになっています。",
     "articles": [
