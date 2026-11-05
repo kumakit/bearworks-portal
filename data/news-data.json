@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-11-06",
+    "daily_summary": "本日のAIニュースでは、OpenAIによるLinuxカーネルの脆弱性自動修復や新サイバーセキュリティモデルの発表をはじめ、AIの安全性と実用性を高める技術革新が際立ちました。また、Googleの軽量・高速な動画対応モデルやHugging Faceのオンデバイス音声モデル、Anthropicの銀行口座連携など、マルチモーダル化や実生活への統合が加速しています。さらに、NVIDIAの世界シミュレーションモデルの公開や、OpenAIの2027年IPO視野の報道など、技術の進化と商業化の両面で業界が大きく動く一日となりました。",
+    "articles": [
+      {
+        "title": "OpenAI、Linuxカーネルの脆弱性948件を自律的に発見・修正するパイプラインを構築",
+        "content": "OpenAIは、Linuxカーネル内のローカル特権昇格脆弱性948件の発見、検証、パッチ生成を自動で行う自律型パイプラインを構築した。「A thousand fewer paths to root」と題し、AIによる大規模コード監査の実用性と脅威への対処能力を実証した。",
+        "source": "OpenAI",
+        "published_at": "2026-11-06",
+        "url": "https://openai.com/index/a-thousand-fewer-paths-to-root",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "OpenAIがサイバーセキュリティ特化モデル「GPT-6 Cyber」を発表",
+        "content": "OpenAIは脆弱性の発見と修正プログラムの自動生成を安全な範囲内で行うサイバーセキュリティ特化型モデル「GPT-6 Cyber」を発表した。高度な攻撃・防御シミュレーションを通じて、インフラやコードのセキュリティ自動化と脆弱性対策のフロンティアを大きく前進させる。",
+        "source": "OpenAI",
+        "published_at": "2026-11-06",
+        "url": "https://openai.com/index/introducing-gpt-6-cyber",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "OpenAI「Images 2.6」登場：高速画像生成とGIF作成に対応",
+        "content": "OpenAIは画像生成モデル「Images 2.6」を発表し、生成速度の向上、GIF作成機能、より精密な編集機能、新しいAPIコントロールを実装した。ChatGPTやCodex、API経由で利用可能になり、クリエイティブおよび開発の実務効率が大幅に向上する。",
+        "source": "OpenAI",
+        "published_at": "2026-11-06",
+        "url": "https://openai.com/index/introducing-images-2-6",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "Microsoft Research、PDD KitでAI生成コードの形式検証手法を公開",
+        "content": "Microsoft Researchは、AIエージェントが生成したフルスタックWebアプリのコードを開発者の意図通り検証する「PDD Kit」を発表した。Verus仕様への変換によりコードの正確性を数学的に証明し、人間による行ごとのレビュー負担を軽減する。",
+        "source": "Microsoft Research",
+        "published_at": "2026-11-06",
+        "url": "https://www.microsoft.com/en-us/research/blog/formally-verifying-agent-written-full-stack-web-apps-with-pdd-kit/",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "Googleが「Gemini Omni 1.2 Flash」を発表、高速かつ長尺動画に対応",
+        "content": "Googleは、処理速度とコスト効率を最適化しつつ長尺の動画クリップに対応した「Gemini Omni 1.2 Flash」を発表した。マルチモーダルなやり取りがさらに高速かつ経済的になり、実用的な動画・音声連携アプリケーションの開発を加速する。",
+        "source": "Google AI",
+        "published_at": "2026-11-06",
+        "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "Hugging Face、「Phonon TTS」を発表しオンデバイス音声でベンチマーク首位を獲得",
+        "content": "Hugging Faceは、ベンチマークで最高性能を記録した高品質なオンデバイス音声モデル「Phonon TTS」を発表した。軽量でありながら自然な音声をローカル環境で生成でき、エッジAIの音声インタフェース開発を強力に後押しする。",
+        "source": "Hugging Face",
+        "published_at": "2026-11-06",
+        "url": "https://huggingface.co/blog/phonon-tts",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "AnthropicのClaude、Plaid連携で銀行口座に直接接続して家計管理が可能に",
+        "content": "AnthropicはPlaidプラットフォームを介してClaudeを銀行やカード口座に直接接続し、個人資産の管理を行う新機能を導入した。チャットを通じて収支の分析や資金の動きを自然言語で尋ねることができる。",
+        "source": "The Verge",
+        "published_at": "2026-11-06",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/1027652/anthropic-claude-plaid-personal-finance",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "Hugging FaceにNVIDIAのインタラクティブ世界シミュレーション「Cosmos 3」が登場",
+        "content": "Hugging FaceでNVIDIAの新しいオープンモデル「Cosmos 3」が利用可能になり、インタラクティブな世界シミュレーションの構築が容易になった。物理法則を考慮した高度なシミュレーション環境をオープンに活用でき、ロボティクス等の研究開発を促進する。",
+        "source": "Hugging Face",
+        "published_at": "2026-11-06",
+        "url": "https://huggingface.co/blog/nvidia/cosmos-interactive-world-simulation",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "OpenAI、2027年のIPO視野に事業加速へ",
+        "content": "OpenAIのグレッグ・ブロックマン社長言によれば、同社は急拡大するエンタープライズ収益と事業基盤の立て直しを背景に、2027年にも株式公開（IPO）の準備が整う可能性があるという。AI業界全体の商業化モデルや投資環境に甚大なインパクトを与える。",
+        "source": "TechCrunch",
+        "published_at": "2026-11-06",
+        "url": "https://techcrunch.com/2026/11/05/openai-president-greg-brockman-says-company-could-be-ipo-ready-in-2027/",
+        "category": "事業・投資"
+      },
+      {
+        "title": "OpenAI、責任あるAIインフラ構築に向けた国家コミュニティ協定を発表",
+        "content": "OpenAIは地域資源の保護や雇用の創出、責任あるインフラ開発をガイドする「National Community Compact」およびポリシーブループリントを発表した。巨大AIインフラの拡大に伴う地域社会との協調モデルを提示している。",
+        "source": "OpenAI",
+        "published_at": "2026-11-06",
+        "url": "https://openai.com/index/setting-new-standard-responsible-ai-infrastructure",
+        "category": "政策・安全"
+      }
+    ]
+  },
+  {
     "date": "2026-11-05",
     "daily_summary": "本日のAIニュースは、OpenAIやMetaによる開発・コーディング支援関連企業の相次ぐ買収や新モデルの発表をはじめ、Hugging Faceの高度な文書抽出ツールや標準化の動きなど、実用的な技術革新が際立つ一日となりました。さらに、ChatGPTによるアニメーションGIF生成やNothingの新型スクリーンフリーAIデバイスといったコンシュー向けの新展開に加え、AWS GovCloudでの政府向け高度モデルの提供や欧州企業での導入事例など、エンタープライズ・公共分野での活用も着実に進んでいます。一方で、米国の政治動向に起因するAI規制強化の懸念が日本市場へ波及するなど、技術の急拡大と並行してガバナンスや市場への影響にも注目が集まる内容となっています。",
     "articles": [
@@ -2650,92 +2736,6 @@
         "published_at": "2026-10-08",
         "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE13Rl8zMTdfcVpkbDZ2QUxDMGdEQ1FwbXhJWkN2R2dSUGMxVWtUNWhmY241bFJvTEppWnNVQVg4NHdJdVBOdWh1VFFjZXRmZzU5aXVv?oc=5",
         "category": "モデル・研究"
-      }
-    ]
-  },
-  {
-    "date": "2026-10-07",
-    "daily_summary": "本日のAIニュースは、出版物のデータ利用や著作権に関する議論、AI法の見直しに向けた動きといった法制度・ガバナンスの話題に加え、川崎重工や安川電機によるフィジカルAIを活用したロボット開発、神戸市やドコモビジネスにおける業務効率化・マネジメントへの導入といった産業・行政での実用化が広く報じられました。さらに、日本のAI開発における独自の理論の重要性や、安全保障上の動向まで、AI技術の進化に伴う社会的影響と多方面での活用が浮き彫りになる一日となりました。",
-    "articles": [
-      {
-        "title": "AI企業への書籍販売めぐり日販に質問状",
-        "content": "日本出版販売（日販）が生成AI企業へ書籍データを販売する動きに関して、関係各所から質問状が提出されました。AIの学習における著作権やデータ利用のあり方に注目が集まっています。",
-        "source": "Google News",
-        "published_at": "2026-10-07",
-        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9uV1ZMSFZ1amNhdzd6Z0dUQ0NpaXpQbFo5blV5dEtMbVdvZ2R1enVpUnJiSGw3a1ZyVVZpem9udHRQa2xXdkd4VzlEZTRndFZV?oc=5",
-        "category": "政策・安全"
-      },
-      {
-        "title": "川崎重工、ロボット企業へトランスフォーム 全事業にフィジカルAI",
-        "content": "川崎重工業は全ての事業においてフィジカルAIを活用し、ロボット企業への全面的なトランスフォームを目指す方針を明らかにしました。産業用ロボットの知能化や自動化技術を深化させ、グループ全体での事業構造改革を推進します。",
-        "source": "Google News",
-        "published_at": "2026-10-07",
-        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1lLXpsRnhyb1dUaWR3akp6czg2Z1pOUTFkbHhJMHZ3TkVISlVWT0RCbnhsSFZfWHF0OVR6SXR5YXk4cDV3T0xtRkx3VjItaS1rVk1EVlZZUmhaZlRBNGg1TWlLVzlSRFBkZ2lWcw?oc=5",
-        "category": "事業・投資"
-      },
-      {
-        "title": "川崎重工、造船向けのフィジカルAI活用ロボットの試作機を公開",
-        "content": "川崎重工業は造船現場での作業を効率化するため、フィジカルAIを活用した新型ロボットの試作機を公開しました。人手不足が深刻化する造船業界において、熟練作業の自動化や生産性向上への貢献が期待されています。今後、実証実験を重ねて早期の実用化を目指す方針です。",
-        "source": "Google News",
-        "published_at": "2026-10-07",
-        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1yZGlUMHJjUWUzanNnVE1OVWZiZkJtYWpFa2NBNV8yTnJKSEt4azMtRG1zS0Zxb2czbGpfWFdmVk5DV1BkUXppWFBhbGZaX3E5aE5TV25Yc3BSMXg0azM4?oc=5",
-        "category": "モデル・研究"
-      },
-      {
-        "title": "船体を垂直に登る「次世代造船AIロボット」川崎重工業が公開 フィジカルAIで技術伝承や人手不足に対応へ",
-        "content": "川崎重工業は、船体を垂直に登ることができる次世代の造船AIロボットを公開しました。フィジカルAIを活用することで、造船業界における深刻な人手不足の解消や、熟練工の技術伝承に対応することを目指しています。",
-        "source": "Google News",
-        "published_at": "2026-10-07",
-        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1RcW5qeFVndEdveVhTUVYtVms2Y0hUdnk2MHdSQi16dGJ2SGZJWEcyRDNnMl80WlpQMVFJeGd4M2gwaU1CaVd2ZHRVOTVvQnlFeDJjVHJTN3VYUDh4N0lialFPNXE?oc=5",
-        "category": "エージェント・開発ツール"
-      },
-      {
-        "title": "AI巨大化競争の中、日本が進むべき2つの道 甘利俊一氏が語る「量ではなく理論」で勝負するAI",
-        "content": "AIの巨大化が進む中、日本が取るべき戦略について甘利俊一氏が解説しています。単なる「量」ではなく独自の「理論」で勝負することの重要性が語られています。日本独自の強みを活かしたAI開発のあり方を提示しています。",
-        "source": "Google News",
-        "published_at": "2026-10-07",
-        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9YdlNvY1piWVpoVExRME1qZkZ6QWV0aWhrdThJdy1rZG1BQ2V1Y0RmSl9VSFctWXdwZjBVSXgwbEl1U1NTb3JUaTZmaHhzc3VWQV9jQjdR?oc=5",
-        "category": "モデル・研究"
-      },
-      {
-        "title": "自治体の業務効率化にAI 神戸市、工事の図面審査で活用",
-        "content": "神戸市は、工事の図面審査にAIを活用し、業務の効率化を図る取り組みを進めています。こうした自治体でのAI活用や最適化に向けて、総務省も調査研究を行っています。行政手続きの負担軽減や効率化への期待が高まっています。",
-        "source": "Google News",
-        "published_at": "2026-10-07",
-        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBlMnc4cXZFUzBhS1AzVUM2YURJemFUa0VZLTVGUnNFU25xeTd4Tno4OVVTWEtPRFNlY2x5NW9tUmY1MHd0anpyTUo5OUltbWRWOWZWdE9vdEFzcWNRYzBQaGRsdmIzMGF4X01nSW9JNA?oc=5",
-        "category": "政策・安全"
-      },
-      {
-        "title": "信頼・安全で世界に挑む 安川電機 AIロボ担当役員・久保田由美恵氏",
-        "content": "北九州市の安川電機でAIロボットを担当する役員、久保田由美恵氏へのインタビュー記事です。信頼性と安全性を武器に、同社がグローバル市場に挑む姿勢や今後の展望について語られています。",
-        "source": "Google News",
-        "published_at": "2026-10-07",
-        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1wSHBnWjNZZlBjdTA4U0N5a25peDhCWVhvdW1icUtvTGplQmJhMENZaGhRSWFOWW11SDBSSERmRW1ETW04a1REMm1BSHVQTXpTVnhPVWVB?oc=5",
-        "category": "事業・投資"
-      },
-      {
-        "title": "もう「AI上司」で十分？ ドコモビジネスで200超導入、部長も課長も",
-        "content": "ドコモビジネスにおいて「AI上司」が200件以上導入され、部長や課長といった管理職の役割に変化が生じています。AIを活用した業務効率化やマネジメントの変革が進む事例として注目を集めています。",
-        "source": "Google News",
-        "published_at": "2026-10-07",
-        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1SQ3lBYWFZbFVPeEtLZ1ZxTHJSZi04b0wxQmFJaHhxMVFUVTJMUzhqS1NsYXRDMmwxOFZGUHhyUzZQOURpaTg4OXdza0FWSjVnYW4xeU1HR2tpUlhfaERla3oyM3QzU1E5a2VWeg?oc=5",
-        "category": "エージェント・開発ツール"
-      },
-      {
-        "title": "【速報】AI法の見直し、今月下旬からとデジタル相",
-        "content": "デジタル相は、人工知能（AI）に関する法規制の見直しを今月下旬から開始すると表明しました。AI技術の急激な発展や社会的な影響を踏まえ、実態に合わせた法整備や運用方針の再検討が進められる見通しです。今後の議論の行方に注目が集まっています。",
-        "source": "Google News",
-        "published_at": "2026-10-07",
-        "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBvVXVKWnVwVG5hV3lqWlB3WnpGcm1nRVp2SzA0RDA3NmFqajJNT3VMYjFsdmtQU1loenBJc0ZqbGRaNEh6dk5CaU13cw?oc=5",
-        "category": "政策・安全"
-      },
-      {
-        "title": "［深層NEWS］「AI導入」の北朝鮮ミサイル、「独自の生産は考えられない」…安全保障ジャーナリスト・吉永ケンジ氏",
-        "content": "北朝鮮が開発を進めるAI導入ミサイルについて、安全保障ジャーナリストの吉永ケンジ氏が読売新聞の「深層NEWS」で独自の生産は考えられないとの見解を示しました。外部からの技術支援や部品調達の可能性が示唆されており、国際的な安全保障の観点から動向が注目されています。",
-        "source": "Google News",
-        "published_at": "2026-10-07",
-        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE4zWUJRSGZCd0tPV1oyN0N4dW9hVkthUWhIYlJnczNsV2N5Ym9ZRTB6dU9USFRGRzNVYnBDVjdsbXZJMmlLTFhVNG05Z3Z0elBVOHNaUGpBZnpDXzU3Vk5ILUx3?oc=5",
-        "category": "政策・安全"
       }
     ]
   }
