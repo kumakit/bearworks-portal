@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-10-08",
+    "daily_summary": "本日のAIニュースは、出版取次による米AI企業への書籍販売やOpenAIの数学論文公開など技術の高度化と活用が進む一方で、著作権の懸念、インフラ負荷や雇用への不安から生じるデータセンターの新設停止や慎重論が表面化しており、AIの急速な普及に伴う恩恵と課題が国内外で同時に浮き彫りになる一日となりました。",
+    "articles": [
+      {
+        "title": "出版取次の日販、米AI企業への書籍販売を認める 業界団体に回答",
+        "content": "出版取次大手の日本出版販売（日販）が、米国のAI企業に対して書籍を販売することを認める方針を業界団体に回答しました。AIの学習データとして出版物の利用が進む中、著作権や流通を巡る動向として業界内外から注目を集めています。",
+        "source": "Google News",
+        "published_at": "2026-10-08",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBCZlNpS2YyTmxqQTg1VW5mb0pmVW9CZUVEVEJva0UwRFhQMG9vWUhST0J4MHhTWmhRcTJySDhuUGVJYW9YSjJBNjZORzhDa2F4?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "日販、米AIに書籍販売 学習利用か 懸念広がる",
+        "content": "日本出版販売が米国のAI企業に対して書籍を販売していたことが明らかになり、AIによる著作物の学習利用に対する懸念が広がっています。出版業界全体で著作権保護やAI開発におけるデータ利用のあり方についての議論が活発化しています。",
+        "source": "Google News",
+        "published_at": "2026-10-08",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9pQkZBbWtUdUFUT3NjcTQ3eU5jdXBfVTVoMGxnYTduSDF2RElxcFZta2kwSk9DT1Z2WDJBYldFS3V4ZXhrTlhabTdCck9leER2d0k1a1RZZmgwR0tMeWd5UU9R?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "AI競争の主戦場は「賢さ」から「安さ」へ、Reflection AIが示す新潮流、評価額250億ドルでも性能首位ではない理由",
+        "content": "AI業界の競争軸が最高性能の追求から低コスト化へとシフトしている。高額な評価額をつける新興企業が存在する一方で、必ずしも性能首位が市場の成功を意味しない新しいトレンドが生まれている。この変化は今後のAI開発やビジネス戦略に大きな影響を与える。",
+        "source": "Google News",
+        "published_at": "2026-10-08",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE03elNvMXhzdndOTkRhS0N2NmFXMFNVTTdHYmw3RktHbGlMa09ta3IxcHBHb21SNWVBNWVWU0l2SlBGRV9IM1lxVkZYUG56X08zN2hlZWVR?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "AIデータセンターの「隠れたコスト」、誰がその代償を支払っているのか",
+        "content": "急増するAIデータセンターの建設と運用に伴い、環境負荷や地域社会への影響といった隠れたコストが表面化しています。この記事では、それらの負担が誰に課されているのか、持続可能性の観点から問題提起を行っています。",
+        "source": "Google News",
+        "published_at": "2026-10-08",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1sLVpDcUEzSi1NaUtOdzFiZ1pDT19GWnUyeWxYV1otLTdEeHBJeURFdm9iYTZ6bFBxcTVaZzNfd3c2Z3dBTWUyMUxsZkFmOEotclRMcVFPby13QQ?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "アメリカ国民8割超が「AIを雇用への脅威」慎重論広がる",
+        "content": "アメリカで行われた調査によると、国民の8割以上がAIの普及を雇用の脅威と捉えており、慎重な姿勢が広がっています。急速な技術の発展に伴い、労働市場への影響に対する社会的不安が高まっている状況が浮き彫りになりました。",
+        "source": "Google News",
+        "published_at": "2026-10-08",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1SbVRLeHFENkZVM1RsN2ZxdzVORzNndnd3Z2h1RDhMdXVRYi1pTWFRYTlmaUZ5YWsyOW4yUEhna0RhanhGX21tbF9jQ29NUjljTmJwWEdKNjN4Q1NmbTlTcW1fVFN0bUxKc3dhNHVtRXVMMzZsVWlsRGpNNEQxUms?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "AI企業集積地サンフランシスコ、データセンター新設の一時停止を決定",
+        "content": "米国のAI企業集積地であるサンフランシスコ市が、データセンターの新設を一時停止することを決定しました。電力需要の急増や都市インフラへの負荷を考慮した措置とみられます。今後のAI開発やインフラ整備への影響が懸念されています。",
+        "source": "Google News",
+        "published_at": "2026-10-08",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5lQ0EzZmJWNmZLcDY3WFQxeWtaSXNRSkthQzBnYTBpNy1VWWw4UzlORjBPelJvRGtOazNwajYyZ2E4ZkZmSW9mU3ZsaFlxQ2RqekdXaF9JMmdQU1N2RUZlQjhNR3FnOV9MeTZPcnRqVHFjc3dL?oc=5",
+        "category": "インフラ・半導体"
+      },
+      {
+        "title": "AIで「誰もが豊かになる時代」へ…イーロン・マスクが語った仕事と医療の未来",
+        "content": "イーロン・マスク氏がAIの進化によってもたらされる仕事や医療の未来について語りました。AI技術の発展により、人類はすべての人が豊かさを享受できる時代に向かっていると展望を示しています。",
+        "source": "Google News",
+        "published_at": "2026-10-08",
+        "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxONzlRSEp3MGdZSnF3SU9icGpHaW9WdHY1RmxUbWxPa0RjdXlXOXV3clB6ajVieXVBY0FaM3NzcllveFIyVVVpV08wX3pzUnhCQnNacUtZTE9TSFVIaW9WUFJOLXFQa1VwOHMzSmZvTFVZOE15MzMxTXBZbHRhZDNIbDd2Vl82UmJJTjA5bUh1NTR0cDNRWGtaNm5nRW1oR0hONWFfYW1hS0gzQ1U?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "生成AIで映像制作に挑戦！ダジャレの映像化やスパイ作品の制作を日向坂46平尾らが体験",
+        "content": "生成AIを活用して映像制作に挑む番組の企画で、ダジャレの映像化や、2回のどんでん返しがあるスパイ作品の制作が行われました。日向坂46の平尾も参戦し、AI技術を用いて不可能を可能にするクリエイティブな挑戦が繰り広げられます。",
+        "source": "Google News",
+        "published_at": "2026-10-08",
+        "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5aeGFGeGJwdEF6bXZadUE5eHZMZlB3Rm5ITlJ3Wjl1WUNnS2FRQm1YS21DZkt2a1RKaDFSZnFOODl2T1Q5eFNJSENkUQ?oc=5",
+        "category": "その他"
+      },
+      {
+        "title": "AIが暴走する時代！国産技術で守るセキュリティー関連5銘柄",
+        "content": "AIの普及とリスク増大に伴い、国産技術で情報セキュリティを守る関連銘柄に注目が集まっています。この記事では、セキュリティ強化に向けた期待が高まる注目の5銘柄を紹介しています。",
+        "source": "Google News",
+        "published_at": "2026-10-08",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBkQ0hUMEdwc2dtLUF4bzhwZ1BiUS1XTlgyb3hBQS1FeTJnbWJqTnRXRWNzcWg4QTd5UEdrMDJOZ1NnOVIxZDlBOEhYSEhzNjRYVmdOTmlUWQ?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "OpenAIが準リーマン予想の証明を含む、AIによる数学証明論文722本を公開",
+        "content": "OpenAIは、準リーマン予想の証明などを含むAIを活用した数学の証明論文722本を公開しました。AIの高度な推論能力を示す画期的な取り組みとして注目されています。この発表は今後の数学研究やAIの応用範囲に大きな影響を与える可能性があります。",
+        "source": "Google News",
+        "published_at": "2026-10-08",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE13Rl8zMTdfcVpkbDZ2QUxDMGdEQ1FwbXhJWkN2R2dSUGMxVWtUNWhmY241bFJvTEppWnNVQVg4NHdJdVBOdWh1VFFjZXRmZzU5aXVv?oc=5",
+        "category": "モデル・研究"
+      }
+    ]
+  },
+  {
     "date": "2026-10-07",
     "daily_summary": "本日のAIニュースは、出版物のデータ利用や著作権に関する議論、AI法の見直しに向けた動きといった法制度・ガバナンスの話題に加え、川崎重工や安川電機によるフィジカルAIを活用したロボット開発、神戸市やドコモビジネスにおける業務効率化・マネジメントへの導入といった産業・行政での実用化が広く報じられました。さらに、日本のAI開発における独自の理論の重要性や、安全保障上の動向まで、AI技術の進化に伴う社会的影響と多方面での活用が浮き彫りになる一日となりました。",
     "articles": [

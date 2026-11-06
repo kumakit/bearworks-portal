@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-11-07",
+    "daily_summary": "本日のAIニュースは、ロボット学習や科学作業の自動化、音声認識の多様性対応といった技術的進化が見られる一方で、GoogleやOpenAIによる高度なセキュリティ対策やAppleの端末内処理によるプライバシー保護など、実用化に向けた安全性の強化が目立ちます。さらに、Metaの新機能発表やAI企業のコスト課題、データセンター規制といったインフラ・ビジネス面の波紋に加え、「AI故人」をめぐる倫理的課題など、技術の急速な普及に伴う多角的な問題提起が浮き彫りとなった一日となりました。",
+    "articles": [
+      {
+        "title": "Hugging Face、ロボット学習と評価のための制御環境「ToyBlocks」公開",
+        "content": "Hugging Faceがロボット学習およびその性能評価を安全かつ制御された環境で行うための新プロジェクト「ToyBlocks」を発表した。ロボット工学分野におけるモデルの評価効率向上に寄与する。",
+        "source": "Hugging Face",
+        "published_at": "2026-11-07",
+        "url": "https://huggingface.co/blog/allenai/toyblocks",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "OpenAI、実験室の科学作業を評価する新ベンチマーク「BioBasicsBench」発表",
+        "content": "OpenAIが、AIエージェントが生の実験データを解釈し、日常的なウェットラボ（実験室）の科学作業をどれだけ正確に処理できるかを測る100タスクのベンチマーク「BioBasicsBench」を公開した。科学分野へのAIエージェント応用を加速する重要な評価指標となる。",
+        "source": "OpenAI",
+        "published_at": "2026-11-07",
+        "url": "https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "AnthropicのIPO間近で浮き彫りになる、AI利用増と支出頭打ちの矛盾",
+        "content": "AIの利用量は増加し続けているものの、企業のAI関連支出は頭打ち傾向にあり、コスト削減や価格競争が進んでいます。この動向は、AI企業のハイパーグロースを前提とした投資家の期待に大きな再考を迫る可能性があります。",
+        "source": "TechCrunch",
+        "published_at": "2026-11-07",
+        "url": "https://techcrunch.com/2026/11/06/ramp-data-shows-ai-spending-stalling-just-as-anthropic-nears-its-ipo/",
+        "category": "事業・投資"
+      },
+      {
+        "title": "Meta、Museエージェント向けの新コラボレーション機能「Spaces」を発表",
+        "content": "MetaがMuse AIエージェントの新機能として、ユーザーが独自のカスタム空間を作成・共有できる「Spaces」を発表した。AIとのインタラクションの幅を広げ、タスク特化型のアプリ体験を提供する。",
+        "source": "TechCrunch",
+        "published_at": "2026-11-07",
+        "url": "https://techcrunch.com/2026/11/06/meta-introduces-spaces-a-new-way-to-collaborate-with-your-muse-agent/",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "グーグル、「マシンスピード」で脆弱性を修正する「CodeMender」などAI防御策を発表",
+        "content": "Googleがマシンスピードでソフトウェアの脆弱性を自律的に修正する新システム「CodeMender」などのAI防御策を発表した。サイバーセキュリティの自動化と迅速な対応において重要なマイルストーンとなる。",
+        "source": "Google News",
+        "published_at": "2026-11-07",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1tWm9QTml3RDhDdEFFa015TkdsRnRfQkJHRnFKUVJaZTItSU5PY1VpWG8zMGZBNHdhQzRNTmJaUUNCeVVpX2FxOVFPZ1BsRG05c29CcTBQY0ZHRmgxc291aUZuazI?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "米中間選挙の民主党勝利とデータセンター規制の波紋",
+        "content": "米中間選挙におけるデータセンター関連の住民投票で多くの制限案が可決され、AIインフラ開発に逆風が吹いています。急増する電力需要と地域住民の反発により、今後のインフラ投資計画の見直しが迫られる可能性があります。",
+        "source": "TechCrunch",
+        "published_at": "2026-11-07",
+        "url": "https://techcrunch.com/podcast/how-a-blue-wave-midterm-might-reshape-the-ai-industry/",
+        "category": "政策・安全"
+      },
+      {
+        "title": "OpenAI、ハッカソン企業Hacktronと提携しシステム脆弱性対策を強化",
+        "content": "OpenAIがHacktron社と提携し、最先端AIを活用してシステム全体の脆弱性検出やサードパーティ製サービスとの接続テストを強化すると発表した。これにより、生成AIを活用した堅牢なセキュリティ防御システムの構築が期待される。",
+        "source": "OpenAI",
+        "published_at": "2026-11-07",
+        "url": "https://openai.com/index/partnering-with-hacktron",
+        "category": "政策・安全"
+      },
+      {
+        "title": "Hugging Face、Open ASRリーダーボードにエジプト・ナイジェリア英語を追加",
+        "content": "Hugging Faceのオープン音声認識（ASR）リーダーボードに、新たにエジプト英語とナイジェリア英語の方言・地域変種が追加された。多様なアクセントに対する音声モデルの評価と性能向上が期待される。",
+        "source": "Hugging Face",
+        "published_at": "2026-11-07",
+        "url": "https://huggingface.co/blog/open-asr-leaderboard-liva",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "クラウド非依存型Siri AI、端末内処理で情報漏洩リスクを低減",
+        "content": "Appleの音声アシスタントSiriがクラウドに頼らず端末内で高度なAI処理を実行し、情報漏洩リスクの大幅な低減を実現しています。プライバシー重視のオンデバイスAI実用化における重要なマイルストーンとなります。",
+        "source": "Google News",
+        "published_at": "2026-11-07",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1mSTJYcVhEeTNXdS10ajFoUjlMeEgzQ1dwNVdObl9ERVhjS1M2VXk3cGtYM1kxTFFMNWZxeTJjY3R4OExHXzFURTNrUGhmSmFzMTdlR05xdWtYeEo1REtKT2lBallJS2MyNzctbg?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "AI新世紀における「AI故人」と死者の尊厳をめぐる倫理的問い",
+        "content": "故人のデジタルツインやAI人格の再現技術が普及する中、死者の尊厳や遺族の倫理的ケアをめぐる根深い課題が浮き彫りになっています。技術の急速な進化に対し、法整備や社会的合意の形成が急務となっています。",
+        "source": "Google News",
+        "published_at": "2026-11-07",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE8xZURVY0NoSjRCTEdXZ18wcmpjQjlwWG8yajU4VldXTXVPaEFXX1pscEE1b3lYbFhmM01DcVVDRkhBQ2V2czBpLXRwcnhzSzgtQzVwdnpKOVJLTi1fc0wxV2RGcEMxcnZr?oc=5",
+        "category": "政策・安全"
+      }
+    ]
+  },
+  {
     "date": "2026-11-06",
     "daily_summary": "本日のAIニュースでは、OpenAIによるLinuxカーネルの脆弱性自動修復や新サイバーセキュリティモデルの発表をはじめ、AIの安全性と実用性を高める技術革新が際立ちました。また、Googleの軽量・高速な動画対応モデルやHugging Faceのオンデバイス音声モデル、Anthropicの銀行口座連携など、マルチモーダル化や実生活への統合が加速しています。さらに、NVIDIAの世界シミュレーションモデルの公開や、OpenAIの2027年IPO視野の報道など、技術の進化と商業化の両面で業界が大きく動く一日となりました。",
     "articles": [
@@ -2650,92 +2736,6 @@
         "published_at": "2026-10-09",
         "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFB2ZTFNb2xJeVpUX2VHVWEta0tTSkkzTUZrWGVhMnB3ZTJIeGNyMmxwLTF4emhvLWlKWWtTcFZ3Nmx2Z0t6V21CLThxcUplLWlOS1FQQmZjUFNCOEV2UzF2TFVR?oc=5",
         "category": "政策・安全"
-      }
-    ]
-  },
-  {
-    "date": "2026-10-08",
-    "daily_summary": "本日のAIニュースは、出版取次による米AI企業への書籍販売やOpenAIの数学論文公開など技術の高度化と活用が進む一方で、著作権の懸念、インフラ負荷や雇用への不安から生じるデータセンターの新設停止や慎重論が表面化しており、AIの急速な普及に伴う恩恵と課題が国内外で同時に浮き彫りになる一日となりました。",
-    "articles": [
-      {
-        "title": "出版取次の日販、米AI企業への書籍販売を認める 業界団体に回答",
-        "content": "出版取次大手の日本出版販売（日販）が、米国のAI企業に対して書籍を販売することを認める方針を業界団体に回答しました。AIの学習データとして出版物の利用が進む中、著作権や流通を巡る動向として業界内外から注目を集めています。",
-        "source": "Google News",
-        "published_at": "2026-10-08",
-        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBCZlNpS2YyTmxqQTg1VW5mb0pmVW9CZUVEVEJva0UwRFhQMG9vWUhST0J4MHhTWmhRcTJySDhuUGVJYW9YSjJBNjZORzhDa2F4?oc=5",
-        "category": "事業・投資"
-      },
-      {
-        "title": "日販、米AIに書籍販売 学習利用か 懸念広がる",
-        "content": "日本出版販売が米国のAI企業に対して書籍を販売していたことが明らかになり、AIによる著作物の学習利用に対する懸念が広がっています。出版業界全体で著作権保護やAI開発におけるデータ利用のあり方についての議論が活発化しています。",
-        "source": "Google News",
-        "published_at": "2026-10-08",
-        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9pQkZBbWtUdUFUT3NjcTQ3eU5jdXBfVTVoMGxnYTduSDF2RElxcFZta2kwSk9DT1Z2WDJBYldFS3V4ZXhrTlhabTdCck9leER2d0k1a1RZZmgwR0tMeWd5UU9R?oc=5",
-        "category": "政策・安全"
-      },
-      {
-        "title": "AI競争の主戦場は「賢さ」から「安さ」へ、Reflection AIが示す新潮流、評価額250億ドルでも性能首位ではない理由",
-        "content": "AI業界の競争軸が最高性能の追求から低コスト化へとシフトしている。高額な評価額をつける新興企業が存在する一方で、必ずしも性能首位が市場の成功を意味しない新しいトレンドが生まれている。この変化は今後のAI開発やビジネス戦略に大きな影響を与える。",
-        "source": "Google News",
-        "published_at": "2026-10-08",
-        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE03elNvMXhzdndOTkRhS0N2NmFXMFNVTTdHYmw3RktHbGlMa09ta3IxcHBHb21SNWVBNWVWU0l2SlBGRV9IM1lxVkZYUG56X08zN2hlZWVR?oc=5",
-        "category": "事業・投資"
-      },
-      {
-        "title": "AIデータセンターの「隠れたコスト」、誰がその代償を支払っているのか",
-        "content": "急増するAIデータセンターの建設と運用に伴い、環境負荷や地域社会への影響といった隠れたコストが表面化しています。この記事では、それらの負担が誰に課されているのか、持続可能性の観点から問題提起を行っています。",
-        "source": "Google News",
-        "published_at": "2026-10-08",
-        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1sLVpDcUEzSi1NaUtOdzFiZ1pDT19GWnUyeWxYV1otLTdEeHBJeURFdm9iYTZ6bFBxcTVaZzNfd3c2Z3dBTWUyMUxsZkFmOEotclRMcVFPby13QQ?oc=5",
-        "category": "事業・投資"
-      },
-      {
-        "title": "アメリカ国民8割超が「AIを雇用への脅威」慎重論広がる",
-        "content": "アメリカで行われた調査によると、国民の8割以上がAIの普及を雇用の脅威と捉えており、慎重な姿勢が広がっています。急速な技術の発展に伴い、労働市場への影響に対する社会的不安が高まっている状況が浮き彫りになりました。",
-        "source": "Google News",
-        "published_at": "2026-10-08",
-        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1SbVRLeHFENkZVM1RsN2ZxdzVORzNndnd3Z2h1RDhMdXVRYi1pTWFRYTlmaUZ5YWsyOW4yUEhna0RhanhGX21tbF9jQ29NUjljTmJwWEdKNjN4Q1NmbTlTcW1fVFN0bUxKc3dhNHVtRXVMMzZsVWlsRGpNNEQxUms?oc=5",
-        "category": "政策・安全"
-      },
-      {
-        "title": "AI企業集積地サンフランシスコ、データセンター新設の一時停止を決定",
-        "content": "米国のAI企業集積地であるサンフランシスコ市が、データセンターの新設を一時停止することを決定しました。電力需要の急増や都市インフラへの負荷を考慮した措置とみられます。今後のAI開発やインフラ整備への影響が懸念されています。",
-        "source": "Google News",
-        "published_at": "2026-10-08",
-        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5lQ0EzZmJWNmZLcDY3WFQxeWtaSXNRSkthQzBnYTBpNy1VWWw4UzlORjBPelJvRGtOazNwajYyZ2E4ZkZmSW9mU3ZsaFlxQ2RqekdXaF9JMmdQU1N2RUZlQjhNR3FnOV9MeTZPcnRqVHFjc3dL?oc=5",
-        "category": "インフラ・半導体"
-      },
-      {
-        "title": "AIで「誰もが豊かになる時代」へ…イーロン・マスクが語った仕事と医療の未来",
-        "content": "イーロン・マスク氏がAIの進化によってもたらされる仕事や医療の未来について語りました。AI技術の発展により、人類はすべての人が豊かさを享受できる時代に向かっていると展望を示しています。",
-        "source": "Google News",
-        "published_at": "2026-10-08",
-        "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxONzlRSEp3MGdZSnF3SU9icGpHaW9WdHY1RmxUbWxPa0RjdXlXOXV3clB6ajVieXVBY0FaM3NzcllveFIyVVVpV08wX3pzUnhCQnNacUtZTE9TSFVIaW9WUFJOLXFQa1VwOHMzSmZvTFVZOE15MzMxTXBZbHRhZDNIbDd2Vl82UmJJTjA5bUh1NTR0cDNRWGtaNm5nRW1oR0hONWFfYW1hS0gzQ1U?oc=5",
-        "category": "事業・投資"
-      },
-      {
-        "title": "生成AIで映像制作に挑戦！ダジャレの映像化やスパイ作品の制作を日向坂46平尾らが体験",
-        "content": "生成AIを活用して映像制作に挑む番組の企画で、ダジャレの映像化や、2回のどんでん返しがあるスパイ作品の制作が行われました。日向坂46の平尾も参戦し、AI技術を用いて不可能を可能にするクリエイティブな挑戦が繰り広げられます。",
-        "source": "Google News",
-        "published_at": "2026-10-08",
-        "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5aeGFGeGJwdEF6bXZadUE5eHZMZlB3Rm5ITlJ3Wjl1WUNnS2FRQm1YS21DZkt2a1RKaDFSZnFOODl2T1Q5eFNJSENkUQ?oc=5",
-        "category": "その他"
-      },
-      {
-        "title": "AIが暴走する時代！国産技術で守るセキュリティー関連5銘柄",
-        "content": "AIの普及とリスク増大に伴い、国産技術で情報セキュリティを守る関連銘柄に注目が集まっています。この記事では、セキュリティ強化に向けた期待が高まる注目の5銘柄を紹介しています。",
-        "source": "Google News",
-        "published_at": "2026-10-08",
-        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBkQ0hUMEdwc2dtLUF4bzhwZ1BiUS1XTlgyb3hBQS1FeTJnbWJqTnRXRWNzcWg4QTd5UEdrMDJOZ1NnOVIxZDlBOEhYSEhzNjRYVmdOTmlUWQ?oc=5",
-        "category": "事業・投資"
-      },
-      {
-        "title": "OpenAIが準リーマン予想の証明を含む、AIによる数学証明論文722本を公開",
-        "content": "OpenAIは、準リーマン予想の証明などを含むAIを活用した数学の証明論文722本を公開しました。AIの高度な推論能力を示す画期的な取り組みとして注目されています。この発表は今後の数学研究やAIの応用範囲に大きな影響を与える可能性があります。",
-        "source": "Google News",
-        "published_at": "2026-10-08",
-        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE13Rl8zMTdfcVpkbDZ2QUxDMGdEQ1FwbXhJWkN2R2dSUGMxVWtUNWhmY241bFJvTEppWnNVQVg4NHdJdVBOdWh1VFFjZXRmZzU5aXVv?oc=5",
-        "category": "モデル・研究"
       }
     ]
   }
