@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-10-09",
+    "daily_summary": "本日のAIニュースでは、著作権や倫理面での反発（AI学習用の書籍大量販売への懸念、メニュー画像の不快感、OpenAIのCEOの発言に対する批判）や、米中の国家間競争といった課題が浮き彫りになる一方で、映画制作における表現手法としての活用や、日本の製造業における「フィジカルAI」や熟練技継承への期待、さらには若年層向けの学習支援といった新たなアプローチや未来への取り組みが幅広く報じられています。",
+    "articles": [
+      {
+        "title": "AI学習用に書籍を大量販売、適法でも出版社反発 業界ルール望む声",
+        "content": "AIの学習用に出版物が大量販売される動きに対し、適法であっても出版社側から強い反発の声が上がっています。著作権を巡る懸念から、業界全体での明確なルール作りを望む意見が高まっています。",
+        "source": "Google News",
+        "published_at": "2026-10-09",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBfZGxiZXpmUEFubDY4VWI5dEdDSFREbWpaRlhqWHBidUEyX2RNUnBTdTRoU3Fua21jWE45SHhrVmU5dXpPZkgweFVKT2NyX1Z2QXZ6U3ZOalRjNGVuUERSWTRwcHprUnBMTlJtag?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "食欲より不快感：AIメニュー画像に大きな反発",
+        "content": "飲食店などで導入が進むAI生成のメニュー画像に対し、消費者の間で不快感を覚える声や大きな反発が広がっています。不自然な造形や気味の悪さが食欲をそげると指摘されており、AIの商業利用における課題が浮き彫りになっています。",
+        "source": "Google News",
+        "published_at": "2026-10-09",
+        "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxORnlfUEQ0SThPTG1jbTIyZTBIc211VnZDZk5hd3BlTjVJRWxSX0ZjT044cEd6ckRfNk51SU5mbGVHWEtkcmxSOVd5T3pFVzFpUm9FMnNwQWxFSnowTFhCU04ySkVab1ZwcU51QUpMVkZBRUZxa043dGRxTnJHcFd0cTZURnlENWVENFpFOEU4ZGtKbmt4R3lWSXRVR2NHOHI2S1FOeThtUUMxdEJNZDdBQXVR?oc=5",
+        "category": "その他"
+      },
+      {
+        "title": "福士蒼汰主演『ハイド＆シーク』、生成AIによるカットを使用 “業務効率化”ではない理由を説明",
+        "content": "俳優の福士蒼汰が主演を務める映画『ハイド＆シーク』において、生成AIを活用したカットが使用されることが明らかになった。制作側は単なる業務効率化ではなく、作品の表現手法としての意図があることをコメントで説明している。AI技術の映像制作への新たなアプローチとして注目を集めている。",
+        "source": "Google News",
+        "published_at": "2026-10-09",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFAzczRjdHJzYU83QVc4ejE4cmdIbUFjT0NNR2k1b0dWLWxaTXhiRDhOVzhqbDFHYV9IaEJsYzQwWHBnYl9mNFRtbnV5X004Z0N5QzZFNW5hSDhrNzJIVGZ0Q256WFR5c3Vmck5oUldOTFJqVmNjTFNicUFWRnZiRXM?oc=5",
+        "category": "その他"
+      },
+      {
+        "title": "フィジカルAI「職人技」再現に日本の勝機あり 東京ロボティクス代表取締役インタビュー",
+        "content": "東京ロボティクスの坂本義弘代表取締役が、フィジカルAIを活用した「職人技」の再現において日本企業に勝機があると語りました。ロボット技術とAIの融合により、熟練の技をデジタル化し継承する取り組みが注目されています。日本の製造業の強みを活かした今後のロボット開発の展開について述べられています。",
+        "source": "Google News",
+        "published_at": "2026-10-09",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1TZjgwM3g3TVZLZ2VqSDN1TUJnMFhydGd4ZUNqOWlZRG1STjU5T1FHQm1KeWItQzdVTVV5RHFqVmhmbWZzZGNHWU41bkNQRFI4OHpWQW53?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "DMG森精機社長が読むフィジカルAIの未来「中国勢と信頼性で勝負できる」",
+        "content": "DMG森精機の社長が、フィジカルAIの未来について語り、中国勢に対して信頼性の面で勝負できるという見解を示しました。製造業におけるAI活用やロボティクス技術の進化において、日本企業の強みがどのように発揮されるかが注目されています。",
+        "source": "Google News",
+        "published_at": "2026-10-09",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE01Y0RRS01KdVdwN004M1lwdVE2MTFsNlEwWHh3V1lZWmwxYXZqS0NER1RobHNicmJwUkpzSmYzWE5uSlg4em5Wd0dRTk5qYWVWY29BdXdXV2ZGQzRfYkRONGdkMzczc00?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "ベインに聞くヒューマノイドの「現在地」、フィジカルAIの社会実装はどこから始まる？",
+        "content": "この記事では、ヒューマノイドロボットやフィジカルAIの現在の開発状況とその社会実装の可能性について解説しています。ビジネスの視点から、どのような領域や産業からロボットの活用が始まるのかを明らかにしています。",
+        "source": "Google News",
+        "published_at": "2026-10-09",
+        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5ZMHZzU2Z2ZmZVLTNNaHV5VVh4bzRjZUFaNG43ZFlHTW1Ba01vNjR2ZDB0cXItS1VfVDhqVUtXMEkyME02R3c2ZFg4ZDAxRVRJR2c4?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "【動画】AIにコンテンツを読ませるか、守るか… noteの加藤・深津氏が語る未来と課題",
+        "content": "noteの加藤氏と深津氏が、AIによるコンテンツの学習や利用における未来と課題について議論を行いました。クリエイターの権利保護とAI技術の発展をいかに両立させるかが重要なテーマとして語られています。詳細な議論の様子は産経ニュースの動画で公開されています。",
+        "source": "Google News",
+        "published_at": "2026-10-09",
+        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5ocC1Mc2RiMHVubl9NbDFpWXo0U1RERXQwZUU2LTVoNHhrV0RNVFctclVkek5yY3pxY3ZQZWZUYUdUYjYxWUhONHFpajJKYVRaOWpVTE91d3NLTWNnTmI5LXNoNGsza29ldzBBSHMzWFphVmp3OVE?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "そりゃ中国が有利だわ…「AI冷戦」で米国が敗北しかねないワケ",
+        "content": "米中間の「AI冷戦」において、中国が有利に立っている理由と、米国が敗北しかねないリスクについて解説しています。AI開発における国家戦略やリソースの差がどのように影響しているのかを論じています。",
+        "source": "Google News",
+        "published_at": "2026-10-09",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1feU5xYkxxRXJyWTVnWlQ5dklSTWdrM0NOV3N2dHMzaVZKcENla3M4ZE9mMEVUanRTNEhrcVIxZXVyTFF6SmhlSE1YdXRhalA1NmxSM2930gFPQVVfeXFMT3BXa2syRDBsUDlYdG1tUmc4WDQtUmxEVTJtTGxGZF92bGZaTWN0QVdGSm9vNjRlZGlicjZWMENNZ1U4S01KN1o2SlNOU1pISQ?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "「AIのためなら“悪いこと”も受け入れよ」OpenAIのCEO発言に批判殺到の理由",
+        "content": "OpenAIのCEOによる人工知能開発に関する発言が、倫理的な観点から多くの批判を浴びています。AIの進歩を最優先する姿勢が、社会的なリスクや悪影響を軽視しているのではないかと懸念されています。この記事では、当該発言の背景と波紋を呼んでいる理由について報じています。",
+        "source": "Google News",
+        "published_at": "2026-10-09",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBkUVVNdVRSQktwZS02MTJ6RVR1cEtXNU5pZGY2M1FPS2QyMXFkeU53TmJva0E0WmlRWTRvc0dhTUstSnBoSktKNDZDYnFVLVpBanpkb2JDRzJHSlZ4MXRhRVE4Wkh0M1ZsMTd6TkJtV3ZPenRvc3VQX0JpRE5sZk0?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "10代の学び、将来の計画、AIの未来づくりを支援 - OpenAI",
+        "content": "OpenAIは、10代の若者たちを対象とした学習支援、将来のキャリアプランニング、そして人工知能の未来を形作るための新しい取り組みを発表しました。若い世代がAI技術を活用し、安全かつ主体的に未来を切り開くためのサポートを強化します。",
+        "source": "Google News",
+        "published_at": "2026-10-09",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFB2ZTFNb2xJeVpUX2VHVWEta0tTSkkzTUZrWGVhMnB3ZTJIeGNyMmxwLTF4emhvLWlKWWtTcFZ3Nmx2Z0t6V21CLThxcUplLWlOS1FQQmZjUFNCOEV2UzF2TFVR?oc=5",
+        "category": "政策・安全"
+      }
+    ]
+  },
+  {
     "date": "2026-10-08",
     "daily_summary": "本日のAIニュースは、出版取次による米AI企業への書籍販売やOpenAIの数学論文公開など技術の高度化と活用が進む一方で、著作権の懸念、インフラ負荷や雇用への不安から生じるデータセンターの新設停止や慎重論が表面化しており、AIの急速な普及に伴う恩恵と課題が国内外で同時に浮き彫りになる一日となりました。",
     "articles": [
