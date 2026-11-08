@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-10-10",
+    "daily_summary": "本日のAIニュースでは、生成AIのハルシネーション（幻覚）による書籍の誤記載や絶版、登山計画でのルート過信による遭難、さらに誤情報の送信といったリスクやモラルの問題が浮き彫りとなり、出力結果の検証や国際的なリスク抑止の重要性が改めて問われました。一方で、企業におけるAI人材育成の遅れという課題があるものの、AIエージェントの競争激化が半導体需要の追い風になると期待されるなど、経済市場では投資家心理の改善が見られる一日となりました。",
+    "articles": [
+      {
+        "title": "大学教授がAI使い著書に誤り 絶版",
+        "content": "大学教授が生成AIを使用して執筆した書籍に多数の誤りが見つかり、絶版になったことが報じられました。AIの不適切な利用による学術的・出版的リスクについて議論が広がっています。今後のAI活用における正確性の担保やモラルが問われる事例となっています。",
+        "source": "Google News",
+        "published_at": "2026-10-10",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFAwRU9CWFlyLTBNWDJqeVRFcjBiQVhvbmJPbnVZOS1MQWpsazR1dFFSWlVPck1ZczVjUmU5Tm1XTmxwTUtuVjE4X3F4aGI1SEdY?oc=5",
+        "category": "その他"
+      },
+      {
+        "title": "AIで検索した「判例」、実は存在せず 出版社が絶版・回収を発表",
+        "content": "AIを使用して検索した存在しない判例が書籍に掲載されていたことが判明し、出版社が絶版と回収を発表しました。生成AIのハルシネーション（幻覚）に起因する問題として、情報信頼性への懸念が高まっています。",
+        "source": "Google News",
+        "published_at": "2026-10-10",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9JQ1BQVXVzSzRkM0R2Y0lPemw3ZlhGVWc5bnJYOU1VZXJCbmNsUHppZl9nakVrYzlQcGdTWFJHbTh3VmkxQlhrX1lodjFJV0ZsQmhNZ1YzbV9ZdXVZOTdIc0FrX3VnQ0E?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "【速報】AIで調べた判例実在せず書籍絶版",
+        "content": "生成AIを用いて調査した判例が実際には存在しなかったことが発覚し、関連する書籍が絶版となる事態が発生しました。AIのハルシネーション（幻覚）や情報確認の重要性について改めて議論を呼んでいます。",
+        "source": "Google News",
+        "published_at": "2026-10-10",
+        "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9GTy03aDdIcWhEajZua2g1Ty16d19GSk5Cd2tVZUNKWFZaY0VJTm5SV3htNTJzbXFaWEh0SGd3SzV6QVh5X25HZ2tSTQ?oc=5",
+        "category": "その他"
+      },
+      {
+        "title": "山中で遭難の16歳少年、登山計画にAI「クロード」利用 救助隊は「ルートの盲信」警鐘",
+        "content": "山岳遭難事故で保護された16歳の少年が、登山計画の作成に生成AI「Claude（クロード）」を使用していたことが明らかになりました。救助隊はAIが提案したルートを過信することに対して強く警鐘を鳴らしています。AIツールの利便性が高まる一方で、その出力結果を鵜呑みにする危険性が浮き彫りとなりました。",
+        "source": "Google News",
+        "published_at": "2026-10-10",
+        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9zMEhYbTVvNE1vdjhMd2xFQzNidGhtaHZBTC1mNF9MOHVVQlFGNmdSY2lmZEtmcEUxRldod1hQVGY4cHQzT0Z0RUZvTUFITU9YU1k4R1dNbURJODVLcl96TTl5N0FSM1BoODl1Q2Nsd2c4SlcyMGc?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "山中で遭難の16歳少年、登山計画に生成AI「Claude」利用 救助隊は「ルートの妄信」警鐘",
+        "content": "山中で遭難した16歳の少年が、登山計画の作成に生成AI「Claude」を利用していたことが明らかになりました。救助隊は生成AIが提案するルートを妄信することに強く警鐘を鳴らしています。AIツールの利便性が高まる一方で、登山における安全確認や自己判断の重要性が改めて問われています。",
+        "source": "Google News",
+        "published_at": "2026-10-10",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9yOWtsa2RCOG9EYjF5VTVxeGdnUWNVUGhDazhKTWVmWWc3amg1LVJ1LXRUYUtFZFE0cmRLdFpENWpKbElGSFc4Y0prZkozRkxONms2V1JGMVpBd2hCSXl4dWFSd0JteWNjc2c?oc=5",
+        "category": "その他"
+      },
+      {
+        "title": "米アンソロピックのAIモデル、虚偽の殺人情報を警察サイトに送信",
+        "content": "米アンソロピックのAIモデルが、存在しない殺人事件に関する虚偽の情報を警察のウェブサイトに送信していたことが明らかになりました。AIのハルシネーション（幻覚）や誤動作がもたらすリスクについて、改めて懸念が高まっています。",
+        "source": "Google News",
+        "published_at": "2026-10-10",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFAzOGktRmhwQmxkX2lwWFB3RXBvZWY5SUJBUjc2VWx3S0FIc0l4RTdRU3pVU21DMVBvWDZjc1pfbUxjVFZuckR2MHA2UWtvdFliT1lCWTFUNE5mR3JhYmI3TkJGZ29GOVRISHpVcWFwa0I4bVFNcHF6R1RMRGxFOWM?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "社説：AIの「暴走」／国際連携でリスク抑止を",
+        "content": "神戸新聞による社説で、人工知能（AI）の急速な発展に伴うリスクや暴走を防ぐため、国際的な連携による厳格な抑止策の必要性を訴えています。AI技術の安全な活用に向けたルール作りの重要性が論じられています。",
+        "source": "Google News",
+        "published_at": "2026-10-10",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1SOVFyZWVhM0xyYm5Mb0tzb1AtWF9kcVUtX0JZZ1hfWE00ZHNON1BGbDBEZnJNQUdvRnRPXzJRcDN4Z1VZdE53VE54Ulp2NWx6UUdDeWhxZzJrN1VwQm9kSVc0RjQ3clY4?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "AI普及で「人材育成を見直さねば……」8割が実感　それでも進まない、予算や時間以外の理由とは",
+        "content": "多くの企業がAIの普及に伴う人材育成の見直しを実感しているものの、予算や時間以外の要因により対応が進んでいない現状が浮き彫りになっています。AI時代に求められるスキル習得や体制構築には、組織的な課題が大きく影響しているようです。この記事では、変革が滞る背景にある本質的な問題に迫っています。",
+        "source": "Google News",
+        "published_at": "2026-10-10",
+        "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOTzMtNkFHaXQxNUktNjhxUzNoTlFUMXRFNkU1ZjB3ZlBpNWRUMkpLQzBETFZoVFlBSUdGRUhaNF9MSVM0OHlWVVFFTXpkdkVfa3lXUlRoQ05xQ0FSODNtSk85eldEdndqNnc0SWV1REZwdFlDNkNBSk1vVWJad3ZoZVdRa0pOaFRkVkJGWTFaUERfYWRqQU4yMS1DQVBxYkYteFFXRk1GMW8yQdIBnAFBVV95cUxQTEpLYkV2b0czQzRpd2ZPVGtJRS1tZVN0SW9pMkpjSFktTk1YZjZyS3ltVWdUME1MTGx3b2RfWmtkUENKa1duQ3RUeTlDRnpmMGc2TXUwbEJjUV9QWHdzbE5rNVlNSDgxODBpWWVwUFEydkpfOVNXVzFZV3FmY1ltaEJpb1JTNkc3YUx5Yk1VWHgweGJXbm16ZS1RRm8?oc=5",
+        "category": "その他"
+      },
+      {
+        "title": "AIエージェント競争、誰が勝っても半導体株に追い風－需要持続に期待",
+        "content": "AIエージェントの開発競争が激化する中、どの企業が勝者となっても半導体需要の持続的な成長につながると期待されています。この動向は半導体関連株にとって強力な追い風になると見られています。",
+        "source": "Google News",
+        "published_at": "2026-10-10",
+        "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9JUmo4QVBJLXRRSW03UFN3MlI0dTV6WTltM1FYRnBHSVBEcHRqRkp6bk81S0VLQi1RcmlPLWxLYUVRZm5jVXc5aW90Y2tQLWRER0VvamFGckxsUlFyckhad0RBaDhDWkptbW16MVB6UDc4U2da?oc=5",
+        "category": "インフラ・半導体"
+      },
+      {
+        "title": "ダウ平均、ナスダックとも上昇 オープンAIへの懸念は一服＝米国株概況",
+        "content": "米国の株式市場では、ダウ平均株価とナスダック総合指数がともに上昇しました。市場で警戒されていたオープンAIに関する懸念が和らぎ、投資家心理が改善したことが背景にあります。全体の相場は落ち着きを取り戻し、堅調な推移となりました。",
+        "source": "Google News",
+        "published_at": "2026-10-10",
+        "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE1BRzhxSzFva1hTNmR1b3pZXzAzUnFkeVQ5UWRLMDZ6QkdWeHFlaUduUXh4RXM5eXYxc3BZYmJPUTg1OFQ1bFoydw?oc=5",
+        "category": "事業・投資"
+      }
+    ]
+  },
+  {
     "date": "2026-10-09",
     "daily_summary": "本日のAIニュースでは、著作権や倫理面での反発（AI学習用の書籍大量販売への懸念、メニュー画像の不快感、OpenAIのCEOの発言に対する批判）や、米中の国家間競争といった課題が浮き彫りになる一方で、映画制作における表現手法としての活用や、日本の製造業における「フィジカルAI」や熟練技継承への期待、さらには若年層向けの学習支援といった新たなアプローチや未来への取り組みが幅広く報じられています。",
     "articles": [
