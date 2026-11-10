@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-11-11",
+    "daily_summary": "本日のAIニュースは、OpenAIによるビジネスエージェントや企業情報管理機能の発表、GoogleとAdobeの提携、さらにAnthropicのオフィススイート展開など、ビジネスやワークフローへのAI統合を加速させる動きが目立ちました。また、Google Cloudの医療特化型GeminiやOuraによるヘルスケアAI企業の買収など特定領域での活用が進む一方、ニューヨーク州での厳格なAI安全法の施行により、主要開発企業に対する規制と監督がさらに強化される転換点となっています。",
+    "articles": [
+      {
+        "title": "ChatGPT、検証済みブランドを代表する「ビジネスエージェント」機能を導入",
+        "content": "ChatGPT上でブランドを代表する検証済みの「ビジネスエージェント」と対話し、比較ショッピングなどの支援を受けられる機能が発表された。まずは米国の適格なEコマースやオンラインサービス企業を対象に順次展開される。",
+        "source": "The Verge",
+        "published_at": "2026-11-11",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/1030552/openai-chatgpt-business-agents-hub",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "OpenAI、ChatGPT内での企業情報管理機能「Businesses in ChatGPT」を発表",
+        "content": "ChatGPT上で自社のビジネス情報を管理し、表示状況のインサイト取得やユーザーの関心をアクションへ繋げる新機能が導入された。企業がAIプラットフォーム上で直接顧客とエンゲージメントを築くことが可能になる。",
+        "source": "OpenAI",
+        "published_at": "2026-11-11",
+        "url": "https://openai.com/index/introducing-businesses-chatgpt",
+        "category": "事業・投資"
+      },
+      {
+        "title": "GoogleとAdobeが提携、GoogleアプリにAdobeのクリエイティブ機能等を統合",
+        "content": "GoogleとAdobeがパートナーシップを組み、GoogleドライブでのPDF編集やGeminiへのAdobe製AIツールの統合を発表した。日常的なワークフローの中で高度なクリエイティブ機能を利用できるようになる。",
+        "source": "Google AI",
+        "published_at": "2026-11-11",
+        "url": "https://blog.google/company-news/inside-google/company-announcements/adobe-google-partnership-integration/",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "Google Cloud、医療特化型Geminiを発表",
+        "content": "Google Cloudが臨床データの統合とワークフローの自動化を目的とした「Gemini for healthcare」を発表した。医療従事者の事務負担を軽減し、実務におけるAI活用を加速させる重要なソリューションとなる。",
+        "source": "Google AI",
+        "published_at": "2026-11-11",
+        "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/gemini-for-healthcare/",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "OpenAIとUpworkが共同調査、フリーランス市場におけるAIの影響を発表",
+        "content": "OpenAIとUpworkの最新調査により、AI関連プロジェクトの需要急増と新たなスキル結合、予算増加の傾向が明らかになった。AIがフリーランスの働き方と市場構造に与える実態を示す内容となっている。",
+        "source": "OpenAI",
+        "published_at": "2026-11-11",
+        "url": "https://openai.com/index/ai-effect-on-freelance-work",
+        "category": "事業・投資"
+      },
+      {
+        "title": "Anthropic、独自のAI駆動型オフィススイートを展開へ",
+        "content": "Anthropicがエンタープライズ顧客向けに独自のAI駆動型オフィススイートを展開していることが報じられた。Claude Codeの成功に続き、各社が開発する生産性ツール市場の競争激化を示唆している。",
+        "source": "The Verge",
+        "published_at": "2026-11-11",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/1030709/anthropic-has-its-own-ai-powered-office-suite-now",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "Hugging Face、意思決定モデルのサポート機能「Decision Models」を追加",
+        "content": "Hugging Faceプラットフォーム上で意思決定モデル（Decision Models）の取り扱いや共有が可能になる機能が追加された。AIによる意思決定プロセスのオープン化と再利用性を促進する。",
+        "source": "Hugging Face",
+        "published_at": "2026-11-11",
+        "url": "https://huggingface.co/blog/decision",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "ニューヨーク州の厳格なAI安全法が施行、OpenAIやAnthropicが新たな監督対象に",
+        "content": "ニューヨーク州で包括的なAI安全法が施行され、OpenAIやAnthropicなどの主要AI開発企業に対し、登録、安全対策の開示、重大インシデントの報告、違反時の罰則が義務付けられる。米国内での規制強化の波がさらに広がっている。",
+        "source": "TechCrunch",
+        "published_at": "2026-11-11",
+        "url": "https://techcrunch.com/2026/11/10/openai-anthropic-face-new-oversight-as-new-yorks-ai-safety-law-takes-effect/",
+        "category": "政策・安全"
+      },
+      {
+        "title": "Oura、AIヘルスケアスタートアップのCounsel Healthを6.25億ドルで買収",
+        "content": "スマートリングのOuraが、IPO延期発表の数週間後にAIネイティブの一次医療スタートアップCounsel Healthを6億2500万ドルで買収した。ヘルスケア分野におけるAI機能の垂直統合を加速させる戦略的な動きである。",
+        "source": "TechCrunch",
+        "published_at": "2026-11-11",
+        "url": "https://techcrunch.com/2026/11/10/oura-to-acquire-ai-native-primary-care-startup-counsel-health-for-625m/",
+        "category": "事業・投資"
+      },
+      {
+        "title": "ソニーAIなど、画像生成AIのキャラ出力傾向を調査",
+        "content": "ソニーAIなどの研究チームが14の画像生成AIモデルを対象に、既存キャラクターの出力傾向を調査した結果を公開した。著作権やモデルの挙動を理解する上で、実務的なベンチマーク知見を提供する。",
+        "source": "Google News",
+        "published_at": "2026-11-11",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE41c2RWWVJNOG1zQVVXVkpuYlE5ZVh0elNGeDFPamlvVVZMSkgwVk5vaG9FdjJVeXlJTnZqRkdEeHg4dzF4T0NxTWZvMVJ5OHBIMGxhLVZ2R0o4d1hiQmZpNzNlclJ0RGdralE?oc=5",
+        "category": "モデル・研究"
+      }
+    ]
+  },
+  {
     "date": "2026-11-10",
     "daily_summary": "本日のAIニュースは、Anthropicによる新モデル「Mythos」「Fable」の発表や膨大な電力確保に向けた巨額投資、Metaの超安価なエージェント用軽量モデル「Muse Ember」の公開など、技術革新とインフラ拡大の動きが際立ちました。また、ChatGPT EnterpriseのAWS提供開始やKuken Industriesによる業務効率化といった企業導入・活用が進む一方、AppleのAI機能の追加課金モデル導入やトランプ氏によるAI規制への言及、Hugging Faceでの日本市場向け合成データ公開やマルチモデル協調手法「HOPE」の登場など、マネタイズ、政策、そして開発エコシステムの両面で多様な展開が見られた一日となりました。",
     "articles": [
@@ -2650,92 +2736,6 @@
         "published_at": "2026-10-13",
         "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1WQUFDTkRKNzZhR0FpYWVkV0tDaXZKYjY2S3dBOHZuZnk2V2FwcDYzcllRd3B5LWhCVGhHb1VWYTZQWVpULV9QT1VweXNOQ0RwdEtGRlEyTzRWbFNlbTNIRjE2NGcwQQ?oc=5",
         "category": "エージェント・開発ツール"
-      }
-    ]
-  },
-  {
-    "date": "2026-10-12",
-    "daily_summary": "本日のAIニュースでは、生成AIの安全性評価システムや行政・ゲーム制作などでの実用的な活用が進む一方で、中国製AIツール「ARTEX」の悪用による韓国の銀行へのサイバー攻撃や、AIを利用した不正アクセスの急増など、セキュリティ上の新たな脅威が浮き彫りとなりました。技術の急速な普及に伴い、ガバナンスのあり方や強固なサイバー対策の必要性が一段と高まっています。",
-    "articles": [
-      {
-        "title": "生成AIの安全性評価するシステム開発",
-        "content": "NHKニュースによると、生成AIの安全性を評価するための新しいシステムが開発されました。このシステムにより、AIモデルのリスクや安全性を客観的に測定することが可能になります。AIの普及が進む中、安全な利用に向けた重要な取り組みとして期待されています。",
-        "source": "Google News",
-        "published_at": "2026-10-12",
-        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE10aU1oemVUcW1rUDduSmM3VUx6clkzbDM5a09Nb1NDck1rNDlGX3E2TjQ5QmZDVGJwSjlRVVgyblJEeWRIOF96c3RuYmw2TXB5UW9MVXFzVzNHNlcycEdV?oc=5",
-        "category": "政策・安全"
-      },
-      {
-        "title": "マイカー向けAI自動運転技術、各社から続々投入へ",
-        "content": "自家用車向けのAIを活用した自動運転技術が、今後続々と市場に投入される見込みであることが報じられました。最新のAI技術により、一般車でも高度な自動運転機能の利用が期待されています。自動車業界における新たなトレンドとして注目を集めています。",
-        "source": "Google News",
-        "published_at": "2026-10-12",
-        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9pNG5TT2QxeUp5YkVJbkZiTFBpT203eFktdXpRRmJLZm9DclBTSG1jVlItaDJURlZPcXFBYVpuZ3VmWnFlcExsY1NXd0dEN0gz?oc=5",
-        "category": "モデル・研究"
-      },
-      {
-        "title": "韓国の銀行を襲った中国製AI「ARTEX」の脅威、「専門知識がなくてもハッキングできる時代」が到来",
-        "content": "中国製のAIツール「ARTEX」が悪用され、韓国の銀行がサイバー攻撃の脅威にさらされたことが報じられました。専門的な知識がなくても容易にハッキングを行える時代が到来しており、セキュリティ対策の重要性が一段と高まっています。サイバー犯罪の敷居が下がる中、新たな技術的脅威に対する警戒が求められています。",
-        "source": "Google News",
-        "published_at": "2026-10-12",
-        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE0zZEhWRnBUT3ozY1pnWk5waG56ZVBhdkc0U09nSUNxLWJTemNOTk9hTWdybHA3M3hYQm5tMHJpT3NWMmNHMEdTR1BPakRUbjF0NlNyZHN3?oc=5",
-        "category": "政策・安全"
-      },
-      {
-        "title": "AI規制と自主規制、ガバナンスの境界をどう引くか―中国メディア",
-        "content": "AIの急速な発展に伴い、政府による厳格な法規制と業界による自主規制のバランスをどのように取るべきかが議論されています。中国メディアが報じた内容をもとに、適切なAIガバナンスのあり方について考察されています。",
-        "source": "Google News",
-        "published_at": "2026-10-12",
-        "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQYnhHeE5fa19ZREE0RmVWZ1ZSbEtSYmpDdldXUUlvVjdvajI3VFo4UzQzMmUwMVRSbno0cXVjc3YxdlNJT2Vydl83NTFvT3ljaHdhTGtSb3FjVHFidTVJX3FLSW4yLWdyTEM0b3dtQ3ZIX2N1d1ppMUEwRFlYOEd3ZlpRSklTUHl3Sm5MQjBTM29mQU8yMklCY2VHQlBZREFaYzAtTW93WkRVbmxfdlVlSjByT1JVNmJKY0ppdVB0WkJjSmFwaWR4YmpMV0ZDenRUdjM0bVhCZjZWOVItWS130gGPAUFVX3lxTFBXdVdkeVluN29BY0czMlVZZVFpZkMyb1VEUUlRZFNaOUNDNHZWYlRKUExjc0FjREt4M29BdXhHM2VWcXVyazVVQVBNSWVXMWdDZW9jWVdvYjhRNlkzdzFfNENBUlB3Vll4Z2Z3RjNLNmJTQWZORURFSDd5UEwzR1BTSHkwai1CVk1NVWNld3dj?oc=5",
-        "category": "政策・安全"
-      },
-      {
-        "title": "中国AIツール「ARTEX」公開停止、韓国金融機関攻撃受け",
-        "content": "韓国の金融機関が攻撃を受けた事態を受け、中国のAIツール「ARTEX」の公開が停止されました。この問題はAI技術の安全性や悪用リスクに関する懸念を改めて高めています。",
-        "source": "Google News",
-        "published_at": "2026-10-12",
-        "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOLXBaZ2JicUNOOGZGSUNxVF8xaDRQeGhmczlNOVpTdmVoN21iQUV0akI4b2NITUo2ZC1aX3RpeEszUTkwT29hbEZQTVo5c3VyY2ZZTHNTbWE5LUFaWHRmSk5Jc1djanM2dkE3b1BGLVZDYm5FTjJsZFBIWFJoejU3SHRoMA?oc=5",
-        "category": "政策・安全"
-      },
-      {
-        "title": "サステナビリティ担当者のためのAI活用術：たった1時間の下調べでコンサルをリードする方法",
-        "content": "東洋経済オンラインによる記事で、サステナビリティ担当者がわずか1時間の下調べでAIを活用し、コンサルティングを受ける側から確認する側へと立場を逆転させるノウハウが解説されています。実務におけるAIの具体的な応用法を通じて、専門知識のキャッチアップと業務効率化を実現するためのヒントが紹介されています。",
-        "source": "Google News",
-        "published_at": "2026-10-12",
-        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1xVmxLVk1FODlBNEJsbUtiYVA5NE85WnpKZjJOQnRZZFM4RVVvOHZyUU10T1pMT2pOYTBwU3VHZ1JtOGZXczR0OFR4MHNsU2lqbFJnNkRnX2VaQkJmby00?oc=5",
-        "category": "エージェント・開発ツール"
-      },
-      {
-        "title": "市民の声をAIで見える化 「ブロードリスニング」導入の田川市長「政策の意思決定に」",
-        "content": "福岡県田川市は、市民の意見をAIで分析して可視化する「ブロードリスニング」を導入しました。市長は、集まった膨大な声を今後の政策決定に活用していく方針を示しています。行政におけるAI活用事例として注目されています。",
-        "source": "Google News",
-        "published_at": "2026-10-12",
-        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5KZ3ZTTHpJR0Zhd29fdU1CTmJSSzVKbHpxYjdqTDVxLVl0WkxGa2hhVm93VmRUc0huTUFmUzEyd2tqLUlObjVhMjM5anNYaVc1cDNpQmFn?oc=5",
-        "category": "エージェント・開発ツール"
-      },
-      {
-        "title": "堀井雄二氏がAIを活用して30分で制作した推理アドベンチャーゲーム『取調室の小宮』が無料公開",
-        "content": "『ドラゴンクエスト』シリーズなどで知られる堀井雄二氏が、AIを活用して制作した推理アドベンチャーゲーム『取調室の小宮』を無料で公開しました。制作時間はわずか30分ほどでありながら、AI技術を用いたゲーム制作の新たな可能性を示す試みとして注目を集めています。",
-        "source": "Google News",
-        "published_at": "2026-10-12",
-        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE40QVplYVZTMzNIclR1T3hIVlZLNFdQcXh1REVDZ0ktRDl2UDZvczhFX09hMkNXUUFpU3BtWDZSdXFCSDlFNDFfbnR3d0tqOWhmOFVJWGNVQQ?oc=5",
-        "category": "エージェント・開発ツール"
-      },
-      {
-        "title": "不正アクセス、世界で急増 「隅っこの脆弱性をAIが見逃さず」",
-        "content": "世界中で不正アクセスが急増しており、従来のセキュリティ対策では見落とされがちな脆弱性がAIによって突かれるケースが増加しています。さらに、AIが自律的にサイバー攻撃を行う事例も確認されており、企業のセキュリティ体制への脅威となっています。",
-        "source": "Google News",
-        "published_at": "2026-10-12",
-        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5mSUNXd0ZkWDJIdy1VZEVERi1mMzZrMTZfWVZ3b1RIcUVMQ2V2TndBUkRlbkZsTmJ1WVd2bjBMT0hjRDFYOEtoVVJxajUyU2QtaF9RbWdlZGNvaGxuTmdEQVY3VEhFenhqZjJwLXVwV3kzQQ?oc=5",
-        "category": "政策・安全"
-      },
-      {
-        "title": "銅市場、AI・電化の流れ止まらず パンパシフィック・カッパー会長",
-        "content": "パンパシフィック・カッパーの会長が、AIの普及や電化の進展により銅市場の旺盛な需要が今後も続くと見解を示した。世界的な脱炭素化やデータセンターの急増が銅の消費を後押ししている。資源確保に向けた動向が引き続き注目される。",
-        "source": "Google News",
-        "published_at": "2026-10-12",
-        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE90eDNhQVNhek11Tlc1X3oySTIyQ0xzb214dFU5SjhBdDBvUDR3ckxacGZOQy1HY2w0MENCNDZSQUVuMHpnU3YzVWZkUEN1ZTFIdzM2LUVPamdoakV6WlgzS0xQTnRVZXp5N3h1Rg?oc=5",
-        "category": "インフラ・半導体"
       }
     ]
   }
