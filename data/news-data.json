@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-11-13",
+    "daily_summary": "本日のAIニュースは、Googleの検索機能強化やHugging Faceによる新言語・ガイドの公開、OpenAIモデルを活用した開発効率化や安全研究への支援など、技術の進化と実務応用の広がりを見せる一方で、Nvidiaのジェンスン・フアン氏の辞任報道による業界への懸念や、AIエージェントの検証不足による誤認事例など、ガバナンスや信頼性に関する課題も浮き彫りになる一日となりました。",
+    "articles": [
+      {
+        "title": "Google検索が「Gemini 4 Hydrogen」にアップグレード",
+        "content": "Googleは検索機能に「Gemini 4 Hydrogen」を導入し、複雑なクエリの理解や関連リンクの提示、視覚的な応答の生成を大幅に強化した。検索体験の根本的なパーソナライゼーションとLLM統合の最新マイルストーンを示すものである。",
+        "source": "Google AI",
+        "published_at": "2026-11-13",
+        "url": "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "Hugging Face、LLMネイティブなマークアップ言語「LLMON」をGranite 4.1向けに公開",
+        "content": "Hugging FaceはLLMネイティブなマークアップ言語「LLMON」を発表し、Granite 4.1 3Bおよび8Bモデルでの対応を進めている。LLMの出力構造化と処理効率を向上させる新しいアプローチとして期待される。",
+        "source": "Hugging Face",
+        "published_at": "2026-11-13",
+        "url": "https://huggingface.co/blog/ibm-granite/llmon-an-llm-native-markup-language-now-in-granite",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "Amplitude、OpenAIモデルを活用したプロダクトエージェント「Wave」で開発を効率化",
+        "content": "AmplitudeはOpenAIのモデルを基盤としたプロアクティブなプロダクトエージェント「Wave」を導入し、機能の特定やコーディングエージェントによる実装、影響測定を1〜2日で実現している。実務におけるAIエージェントによる開発サイクル短縮の先進的なユースケースとして注目される。",
+        "source": "OpenAI",
+        "published_at": "2026-11-13",
+        "url": "https://openai.com/index/amplitude",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "Hugging Face、3D生成モデル向け決定版ファインチューニングガイドを公開",
+        "content": "Hugging Faceは、3D生成モデルを効率的にカスタマイズするための包括的なファインチューニングガイドをリリースした。3Dアセット制作や空間コンピューティングに取り組む開発者にとって実用的なリソースとなる。",
+        "source": "Hugging Face",
+        "published_at": "2026-11-13",
+        "url": "https://huggingface.co/blog/3d-lora-finetuning",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "ジェンスン・フアン氏の退任がNvidiaのオープンソース戦略に与える疑問",
+        "content": "Nvidiaのジェンスン・フアン氏の辞任により、Hugging Face買収やオープンウェイトモデルの提供など、同社のオープンソースAIへの取り組みの継続性に懸念が生じています。業界構造に直結する重大なニュースです。",
+        "source": "TechCrunch",
+        "published_at": "2026-11-13",
+        "url": "https://techcrunch.com/2026/11/12/jensen-huangs-exit-puts-nvidias-support-for-open-source-in-question/",
+        "category": "事業・投資"
+      },
+      {
+        "title": "OpenAI、AIと子どもの安全に関する研究支援へ200万ドルを拠出",
+        "content": "OpenAIは子どもの安全とAIに関する研究を支援するため、200万ドルの資金拠出を発表した。若年層におけるAIのリスクと機会を測定するための共有ツールの開発を促進する狙いがある。",
+        "source": "OpenAI",
+        "published_at": "2026-11-13",
+        "url": "https://openai.com/index/children-first-declaration",
+        "category": "政策・安全"
+      },
+      {
+        "title": "Holiday Extras、Codexを活用して顧客体験と予約コンバージョンを向上",
+        "content": "Holiday ExtrasはOpenAIのCodexを活用し、顧客の専門知識を優れたアプリケーションへと変換することで予約コンバージョンの向上と事業成長を実現している。開発効率化におけるコード生成モデルの実用性を証明する事例である。",
+        "source": "OpenAI",
+        "published_at": "2026-11-13",
+        "url": "https://openai.com/business/customer-stories/holidays-extras-codex",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "Google Labs、グループ向け協調スペース「Tabletop」の実験版を発表",
+        "content": "Google Labsは、グループでの旅行計画やインタラクティブな投票・議論を共同で行える新しい実験的スペース「Tabletop」のウェイティングリスト受付を開始した。コラボレーションツールのAI・実験的進化を示すものである。",
+        "source": "Google AI",
+        "published_at": "2026-11-13",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/google-labs/tabletop/",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "ジェンスン・フアン氏の辞任報道とNvidiaのリーダーシップの行方",
+        "content": "Nvidiaのジェンスン・フアン氏に関するスキャンダルとCEO辞任に関する報道です。AI業界の中心人物の去就や後継者不在の問題は業界全体に巨大な影響を及ぼす可能性がありますが、技術的な進展を示すものではありません。",
+        "source": "The Verge",
+        "published_at": "2026-11-13",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/1032069/jensen-huang-resignation-affair-chips-smuggling",
+        "category": "事業・投資"
+      },
+      {
+        "title": "AIエージェントによるマヤ遺跡発見の主張、実際には既知の遺跡と判明",
+        "content": "Googleの研究者がAIエージェントを用いて未マッピングのマヤ遺跡を発見したと主張したものの、実際には昨年学術誌に発表済みの既知の遺跡であることが判明した。AIのハルシネーションや検証不足がもたらすリスクを示す教訓的な事例である。",
+        "source": "The Verge",
+        "published_at": "2026-11-13",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/1032125/ai-agents-maya-site-archeology-discovery",
+        "category": "その他"
+      }
+    ]
+  },
+  {
     "date": "2026-11-12",
     "daily_summary": "本日のAIニュースは、GoogleやMicrosoftによる医療解明や意思決定、3D生成などの新モデルおよびAPIの発表が相次ぐ一方で、AIエージェントに潜む新たなバックドア攻撃手法「Lazarus」の発見や、日本政府による開発事業者への罰則導入検討など、セキュリティとガバナンス強化の重要性が浮き彫りになる一日となりました。",
     "articles": [
@@ -2650,92 +2736,6 @@
         "published_at": "2026-10-15",
         "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9zTmJtT3VRekFjaHpZZ1U0MGQ3MEtzREp5ZE1Oa3pvWVpLc1Z5RGtocjd5X2JiYlAtblBlcDkydlBIOUdwM1l2aGFubjVJb2lzcmNVS3pLQlBDdw?oc=5",
         "category": "モデル・研究"
-      }
-    ]
-  },
-  {
-    "date": "2026-10-14",
-    "daily_summary": "本日のAIニュースでは、SB Intuitionsによる国産生成AI「Sarashina」の無償ベータ版提供や、ドローンとAIを掛け合わせた密漁検知の実証実験成功など技術の実用化が進む一方、IMFが指摘する巨大なAI需要の「循環投資」リスクや収益化の壁、モデル疲れといった構造的課題が浮き彫りになりました。また、AIエージェントの悪用によるサイバー攻撃の高度化が深刻な脅威となっているほか、川辺健太郎氏が語るAI時代における個人の在り方の変化など、ビジネス、セキュリティ、社会構造の各方面でAIがもたらす光と影が多角的に報じられています。",
-    "articles": [
-      {
-        "title": "SB Intuitions、国産生成AI「Sarashina」を利用できる無償ベータ版サービスを提供開始",
-        "content": "SB Intuitions株式会社は、自社開発の国産生成AI「Sarashina」を手軽に利用できる「Sarashinaサービス」の無償ベータ版の提供を開始しました。これにより、ユーザーは実際の業務や検証において同社の生成AI技術を試すことが可能になります。",
-        "source": "Google News",
-        "published_at": "2026-10-14",
-        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5WQ2NfUkZEdTZKY2hvdFdNcG1fWFliQzFvUGh4MEFERGRPSXVZRm56a0tuR04zVlE5cEFYXzE1ajVVbS12Zzd5eV8wLWdkSW9ScldxTDREbkI2ekFwODdrMWJTSXQ?oc=5",
-        "category": "モデル・研究"
-      },
-      {
-        "title": "AIで激変するグローバルIT市場でNTTデータGが見いだす勝機",
-        "content": "AIの台頭により既存のITビジネスモデルが破壊される中、NTTデータグループがどのように変化に向き合い、勝機を見いだしているのかを解説しています。グローバル市場における新たな戦略や取り組みに焦点を当てています。",
-        "source": "Google News",
-        "published_at": "2026-10-14",
-        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5MT0FZODRMRlBaa0VTMDU3a0V1QmRXZWN3bGJhbVJrQVhIemMwN0g2OEg5d0VlM3VibGxLdWN0aFlwOEc0ZE91RHhybWVxZFVKNmxjZkp0N2l1cHljM2lj?oc=5",
-        "category": "事業・投資"
-      },
-      {
-        "title": "AI新モデル乱発の裏に潜む「収益化の壁」、米中格差と「モデル疲れ」の深層",
-        "content": "相次ぐAI新モデルの発表の裏で、収益化の難しさや米中間の格差が深刻な課題となっています。ユーザーの間では急速な技術進化に対する「モデル疲れ」も懸念されています。AI業界が直面する構造的な課題と今後の展望を深く分析しています。",
-        "source": "Google News",
-        "published_at": "2026-10-14",
-        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1iTURJU3lDc1gtaUNKVHhtVWV3U0hHY29wRmxZYlB6Vi1OUHlaWGVMLUFMb3hhd2VaTlY3VXJfblJBVTlvWkNrbFpjSTJKLW1VNGxyMEtR?oc=5",
-        "category": "事業・投資"
-      },
-      {
-        "title": "ドローンとAIで密漁検知 実証実験、摘発に成功",
-        "content": "ドローンとAIを活用した密漁検知システムの実証実験が行われ、実際の摘発に成功しました。先端技術を組み合わせることで、海洋資源の保護や違法行為の取り締まりにおける効果が示されています。",
-        "source": "Google News",
-        "published_at": "2026-10-14",
-        "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOa2I5TlRuT1cxVmxWVzJsdEFGcDBmMEJwRVUyazBOcDJ5bXFYdVhYOElwZTBIYkY5ck5XTzV5cXRZSS1sR3NQQ1R1dmpiM0huUEhPcDBnR2FfR3M3WEd3RW9OREJ6SmlNWXJnSkVyQ05yY2RiLUhJcVl1cFBSY3NmYWVDU0lDSngwNjhF0gGQAUFVX3lxTE9YdTJzWVRDalUzX29jY0RodW1LZWxnR0FDaHBwVlg4OXVhUnlJUEppVjhNWUdCOVRfbC0yWjJ3VFI1SV9ZdkhNM0xrLVV6eXUwTmhJMEYtQjJ0bXJWWmctTGV2RGVsdFZzbjl4MHh5aTBuaENDY0ZPbkFVNmNXQjBybzJvcGQ5ZEJtWUJWYTJsNQ?oc=5",
-        "category": "モデル・研究"
-      },
-      {
-        "title": "ドローンとAIで密漁検知",
-        "content": "下野新聞社による報道によると、ドローンとAI技術を活用して密漁を検知する取り組みが進められている。最新のテクノロジーを組み合わせることで、監視の効率化や犯罪の抑止効果が期待されている。",
-        "source": "Google News",
-        "published_at": "2026-10-14",
-        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFAweDB2YzE3NS03LTZPdGxYWVhfdkkyT2tzeVBZY1JVQ3Q5NUl2UGVlUHR3YURpWGdsRkpObU9rc2p1dnhtUllDeFdpMXc1R3RzVlA2cUZpMlB4Q0U?oc=5",
-        "category": "エージェント・開発ツール"
-      },
-      {
-        "title": "「循環投資」頼みのAI需要220兆円 IMF、逆回転リスク警鐘",
-        "content": "国際通貨基金（IMF）は、現在の巨大なAI需要が企業間の「循環投資」に依存しているとして、その逆回転リスクに警鐘を鳴らしました。AI分野への過度な資金集中やバブル的な投資構造に対する懸念が高まっています。",
-        "source": "Google News",
-        "published_at": "2026-10-14",
-        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1kbnN1QWJfSDd6LWxDamhJaE5Ra00taWgzd0NIQk1rLWhkUEItWFk0dEo3UDdtdkhIRmhaUUV4OUYwbFVFM0V0bnR0X1lKVXk1YUFYcHFhVE0zNlhKRmNaT3U5R0ExejZPVXZvVA?oc=5",
-        "category": "事業・投資"
-      },
-      {
-        "title": "ＡＩ時代は「シゴデキより人気者」、新聞も「推し活」意識を…ＬＩＮＥヤフー元会長の川辺健太郎さん",
-        "content": "LINEヤフー元会長の川辺健太郎氏が、AI時代におけるメディアや個人の在り方について語りました。AIが仕事の効率化を進める中、今後は能力だけでなく愛されるキャラクターや「推し活」される視点が重要になると指摘しています。新聞などのメディアも、この新しい時代観を意識した変革が必要だと提言しています。",
-        "source": "Google News",
-        "published_at": "2026-10-14",
-        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9QVmNrdERkUkVlOExadDVwZHZlbnVlSkJGWWF1ajNDSTFJWVZRTnc2RTJ2TTRGZFdlVjdvSy13RG9BdmNFQktQMHdfcWVSTHBDeTBmMHFmYzNoeUhEQzBNbU93YXQ1Zw?oc=5",
-        "category": "事業・投資"
-      },
-      {
-        "title": "サイバー攻撃の加速に対するAIの影響を指摘",
-        "content": "サイバー攻撃が加速している現状において、AI技術がもたらす影響についての指摘がなされました。AIの普及に伴い、脅威の巧妙化や自動化が進んでいる懸念が示されています。",
-        "source": "Google News",
-        "published_at": "2026-10-14",
-        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFA4Z3VJUmlySFJhRUkwTVpVU21wQTB4dkRrTl9zUEFvV0JWZ3A4OUJ5djFPZERtQy1qeVRYcDRLR0Fnc2Y4SmhKSW9WSlNIS3hm?oc=5",
-        "category": "政策・安全"
-      },
-      {
-        "title": "一連の不正アクセスは“AIエージェント悪用の可能性”解析で",
-        "content": "NHKニュースによると、最近発生した一連の不正アクセス事件について、AIエージェントが悪用された可能性が浮上し、専門機関による解析が進められています。最新のテクノロジーが悪意ある攻撃に利用されるリスクが高まっていることが示唆されています。",
-        "source": "Google News",
-        "published_at": "2026-10-14",
-        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFByRGhYTC01Nl81TWRsejBZcnlSQzF2a2x6YVlSeUU5dmxZZzFsZXh3ZG9qd1BkZTVNcWlRNmVyLUZtdjhwNlliZnNGOG9USXFjc2ZHT2NzS2d4NU9yNjFj?oc=5",
-        "category": "エージェント・開発ツール"
-      },
-      {
-        "title": "社説：不正アクセス 格段に増したＡＩ悪用の脅威",
-        "content": "読売新聞による社説で、AI技術の悪用によって不正アクセスの脅威が格段に増していることへの懸念が述べられています。サイバー攻撃の高度化や自動化が進む中、社会全体でのセキュリティ対策の強化が急務であると指摘しています。",
-        "source": "Google News",
-        "published_at": "2026-10-14",
-        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFA4ZFAtakFUdTVkcnlVWEYxZmtCTHB2MWsxMUN5bWctMldDZlV2SlJjYnF5b3JCaFF5OTJaS2lvdE0wSHVCR1Ryb1l4X3hXSWE3SFZHSUZrWkxoRXIwX2tvUlZ0MEdXbVk?oc=5",
-        "category": "政策・安全"
       }
     ]
   }
