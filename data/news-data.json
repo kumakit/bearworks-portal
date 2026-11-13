@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-11-14",
+    "daily_summary": "本日のAIニュースでは、OpenAIの「ChatGPT Wallet」発表をはじめとするAIエージェントの自律的な決済・作業自動化機能の実装が大きく進展した一方、GitHubによる再利用可能なエージェント構築ガイドの公開や、ElevenLabsの音声書き起こしアプリなど、開発・ビジネス両面でのエコシステム拡大が目立ちました。また、ローカルLLM基盤「llama.cpp v1.0.0」のリリースやHugging Faceのロボットシミュレーションなど技術基盤の強化が進む一方で、中国製AIの規制対象チップ使用疑惑やNvidiaを巡る地政学的リスク、さらにAIによる生命科学実験の安全性に対する懸念など、法規制やガバナンスの重要性が改めて浮き彫りになる一日となりました。",
+    "articles": [
+      {
+        "title": "OpenAI、AIエージェントによる決済機能「ChatGPT Wallet」を発表",
+        "content": "OpenAIは、ユーザーの承認と既存のカード保護機能を活用し、ChatGPT WorkやCodex、Dotsなどのエージェントが安全に購入を実行できる「ChatGPT Wallet」を発表した。AIエージェントが自律的にタスクを完了させるだけでなく、商取引や決済まで実行する実用的なエコシステムの構築に向けた重要な一歩となる。",
+        "source": "OpenAI",
+        "published_at": "2026-11-14",
+        "url": "https://openai.com/index/introducing-chatgpt-wallet",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "ChatGPTの新機能「Wallet」によりAIエージェントのショッピング自動決済が可能に",
+        "content": "OpenAIはChatGPTに決済機能「Wallet」を導入し、AIエージェントがユーザーの代理でショッピングやチェックアウトを行えるようにした。米国Pro加入者向けを皮切りに、実用的なトランザクションを遂行するエージェントの進化を示す重要なマイルストーンとなる。",
+        "source": "TechCrunch",
+        "published_at": "2026-11-14",
+        "url": "https://techcrunch.com/2026/11/13/chatgpts-new-wallet-lets-ai-agents-shop-and-check-out-for-you/",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "GitHub、あらゆるエージェントで再利用可能な「エージェントスキル」構築ガイドを公開",
+        "content": "GitHubは、チームがレビューして再利用可能なファイル形式で反復的なエンジニアリング作業をカプセル化する「エージェントスキル」の構築ガイドを公開した。ツールやプロジェクトコンテキスト、権限をホスト環境ごとに分けたまま、エージェント間で一貫したスキル運用を可能にする。",
+        "source": "GitHub AI",
+        "published_at": "2026-11-14",
+        "url": "https://github.blog/ai-and-ml/github-copilot/build-once-run-on-any-agent-a-practical-guide-to-agent-skills/",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "llama.cpp v1.0.0がリリース、ローカルAIエコシステムの基盤を強化",
+        "content": "ローカルLLM実行のデファクトスタンダードであるllama.cppがv1.0.0に到達し、安定性とエコシステムの基盤が大幅に強化された。オフライン環境やエッジデバイスでのAI活用を推進する開発者にとって実用的なアップデートとなる。",
+        "source": "Hugging Face",
+        "published_at": "2026-11-14",
+        "url": "https://huggingface.co/blog/ggml-org/llama-cpp-v1",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "The Verge：ジェン・セン・フアン氏のNvidiaトップ辞任が意味する今後の重大な地政学的リスク",
+        "content": "NvidiaのCEOであるジェン・セン・フアン氏の辞任劇の一幕が一段落したものの、今後はNvidiaの中国での取引や米国政府の規制を巡るより大きな問題が表面化する見通しである。AI業界最大の企業における経営陣の変動と、半導体サプライチェーンの行方に注目が集まっている。",
+        "source": "The Verge",
+        "published_at": "2026-11-14",
+        "url": "https://www.theverge.com/podcast/1032866/jensen-huang-nvidia-china-trump-vergecast",
+        "category": "事業・投資"
+      },
+      {
+        "title": "中国の最先端AIモデルが輸出規制対象のNvidia製チップで訓練されていたことが判明",
+        "content": "新たな調査により、中国の最も高度なAIモデルが米国の輸出規制対象となっているNvidia製チップを使用して訓練されていたことが明らかになった。半導体規制の抜け穴や実効性をめぐる議論にさらなる波紋を広げている。",
+        "source": "TechCrunch",
+        "published_at": "2026-11-14",
+        "url": "https://techcrunch.com/2026/11/13/export-banned-nvidia-chips-are-behind-chinas-most-powerful-ai-models-uh-oh-jensen/",
+        "category": "インフラ・半導体"
+      },
+      {
+        "title": "Anthropicのコンシュー向けエージェント「Duet」の体験レポートが公開",
+        "content": "Anthropicが一般ユーザー向けに提供するAIエージェント「Duet」の実用性とユニークな振る舞いが報じられた。コーディングを行わない一般層へのエージェント普及を目指す同社の戦略を占う重要なプロダクトである。",
+        "source": "The Verge",
+        "published_at": "2026-11-14",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/1032518/claude-duet-ai-agent-hands-on",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "Hugging Face、SimReadyアセットを用いたロボットのピック＆プレースシミュレーションを公開",
+        "content": "Hugging Faceは、SimReadyアセットを活用したロボットのピック＆プレース（把持・配置）シミュレーション構築ガイドを公開した。ロボット学習環境の構築を効率化し、実世界への展開を見据えたシミュレーション技術の向上に貢献する。",
+        "source": "Hugging Face",
+        "published_at": "2026-11-14",
+        "url": "https://huggingface.co/blog/nvidia/simready-assets-robot-pick-and-place",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "ElevenLabs、チーム向け会議メモ・音声書き起こしアプリ「ElevenAI」を発表",
+        "content": "音声AI大手のElevenLabsが、チームや企業向けの会議ノート作成・音声書き起こしアプリ「ElevenAI」を投入した。音声生成技術の応用範囲をエンタープライズのコラボレーションツールへと広げる動きを示す。",
+        "source": "TechCrunch",
+        "published_at": "2026-11-14",
+        "url": "https://techcrunch.com/2026/11/13/elevenlabs-new-app-combines-meeting-note-taking-and-dictation-for-teams/",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "AIがロボットを操作して生命科学実験を行う中国チームの開発に懸念の声",
+        "content": "中国の研究チームがAIにロボットを操作させて生命科学実験を行わせるシステムを開発し、安全性や管理体制に対する懸念が示されている。自動化された高度な科学研究がもたらす利便性と、リスク管理の重要性が改めて問われている。",
+        "source": "Google News",
+        "published_at": "2026-11-14",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE8ySUZMRmM0NlZ2bmpGOUN0MWozZHBnUVJINlhZUGpZQ01pdTl4d2Q5VEU3UnZwamVrRzZsV3VaZUYzUVYzWVY1U2pMRmRyVXVRUmJYRktycGo5V1J4V0cyZ3EwLVpsS1Y2TDVwYWtEQ1NZUkhiRVRxbG11cnExVlU?oc=5",
+        "category": "政策・安全"
+      }
+    ]
+  },
+  {
     "date": "2026-11-13",
     "daily_summary": "本日のAIニュースは、Googleの検索機能強化やHugging Faceによる新言語・ガイドの公開、OpenAIモデルを活用した開発効率化や安全研究への支援など、技術の進化と実務応用の広がりを見せる一方で、Nvidiaのジェンスン・フアン氏の辞任報道による業界への懸念や、AIエージェントの検証不足による誤認事例など、ガバナンスや信頼性に関する課題も浮き彫りになる一日となりました。",
     "articles": [
@@ -2570,172 +2656,6 @@
         "published_at": "2026-10-16",
         "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE8yQWMxLUJjY2tiZDRtX0NTbU1EamJ6TlprMWJnZ0JDc1Z2MlpLOEQ3dlNiMW52U2ZpSE90MEU3WGhXMENHclRDYzZxeWprbERFQlctOGIzeFJNMUlFd1ZSa0JGb0k?oc=5",
         "category": "エージェント・開発ツール"
-      }
-    ]
-  },
-  {
-    "date": "2026-10-15",
-    "daily_summary": "本日のAIニュースは、米8州によるオープンAI提訴やAI関連企業の財務不安を背景とした株価急落など法的・市場的リスクが表面化する一方で、みずほの大規模なリスキリングや企業のM&Aといった産業・人材面の動きが活発化しています。さらに、サイバー攻撃におけるAIエージェントの悪用が相次ぎ確認されるなど、技術の急速な浸透に伴うセキュリティ上の脅威と規制・対策の重要性も改めて浮き彫りとなった一日でした。",
-    "articles": [
-      {
-        "title": "米8州がオープンAIを提訴",
-        "content": "アメリカの8つの州がオープンAIに対して訴訟を提起しました。具体的な提訴の理由や背景については、今後の詳細な報道が注目されます。AI技術の急速な発展に伴う法的および規制上の課題が浮き彫りになっています。",
-        "source": "Google News",
-        "published_at": "2026-10-15",
-        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1BSm1ucmlWaXI3dkN5X281djdITHFvTkxIVW5ROFI1NTZTTjJLXzlRS1RwaWhkRFlsbjNDTzdjdWZvSHRNWDdCME5fR25QU18y?oc=5",
-        "category": "政策・安全"
-      },
-      {
-        "title": "みずほが数千人をAI開発者に転換 事務や営業、日本企業の働き方転機",
-        "content": "みずほフィナンシャルグループは、事務や営業職の数千人をAI開発者に転換する方針を固めました。日本の伝統的な大企業における大規模なリスキリングの動きとして、働き方の大きな転換点になると注目されています。AI人材の育成を通じて、企業のデジタルトランスフォーメーション（DX）を加速させる狙いがあります。",
-        "source": "Google News",
-        "published_at": "2026-10-15",
-        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9iTjYyNVA3RUc3Q0ZVSkRSMjcwWDZFVllCOXhmeEwxM2JVUXI5QVJZZWdXd1R1Qk9La0Ffc0k2UWJ4eUNKemVVUGJxXzEwSDg0TThNQkJQdUI3ejNIdnhPczVERGY5aHMtR29LSw?oc=5",
-        "category": "事業・投資"
-      },
-      {
-        "title": "AI Sword、未経験者を対象に営業・AIオペレーション・バックオフィスの正社員を募集開始",
-        "content": "AI Swordは、未経験からAI業界への参入を希望する人材に向けて、営業やAIオペレーション、バックオフィスの正社員の募集を開始しました。履歴書不要で応募でき、最短7日で内定が出るスピーディーな採用プロセスが特徴です。AI人材の需要が高まる中、新たなキャリア挑戦の機会を提供します。",
-        "source": "Google News",
-        "published_at": "2026-10-15",
-        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1uUzZubFZPNm1VekJIWWFtdER5QkJPX3MzbDQ3X3NycnBaN3JpQ3Uza2lZa3QtY1hZejVmM3JoS2N3clZjcmU4dk9QTHZMRXFFVFJaYzBEbVBVYk9RZ0tJMmJZaXFPYTlRa1E?oc=5",
-        "category": "事業・投資"
-      },
-      {
-        "title": "コヒア、AIで未知の脆弱性を探す新興AISLEの買収で基本合意",
-        "content": "AI開発を手掛けるコヒアが、未知の脆弱性を発見する技術を持つ新興企業AISLEの買収に向けて基本合意したことが明らかになりました。買収価格や取引の完了時期については非公開とされています。この買収により、コヒアのAIセキュリティ関連の機能強化が期待されます。",
-        "source": "Google News",
-        "published_at": "2026-10-15",
-        "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9NUTZjd1E4QmY1QTlYcE5PbElnRkFGbUU4RXBTdEtIa3JZZDFOb3I1QnAzWF9JLWNCS3ZnZUZCck9NOU5OVFBMcVJnVUhGWE4tTlBV?oc=5",
-        "category": "事業・投資"
-      },
-      {
-        "title": "ＡＩ株売りに勢い、資金調達に懸念 クライマックスには距離",
-        "content": "人工知能（AI）関連株の売り圧力が増加しており、市場では資金調達に対する懸念が広がっている。しかし、今回の調整局面が売り手のクライマックスに達したとはまだ言えない状況であると専門家は指摘している。",
-        "source": "Google News",
-        "published_at": "2026-10-15",
-        "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1pVHlBc1RsZnlsdjg5UjdYdEFLU09PcTIyVklIXzNEemZkRVVPT2ljZHFtS1lrTi1SVWEzcEhtM0wxb182S0xFVlpteGxvcXhhN0Y4cVFGRHVPOHBiemRTcVJNTFcyckVsaENDZU1XWENEQnloc0o4RW1hVXZuUQ?oc=5",
-        "category": "事業・投資"
-      },
-      {
-        "title": "ChatGPTで儲かる株をどう探す？銘柄選びから売却まで「AI株式投資」6つのSTEP",
-        "content": "この記事では、ChatGPTを活用した株式投資の具体的な手法について6つのステップで解説しています。銘柄の選び方から実際の売却タイミングまで、AIをどのように投資判断に役立てるかが分かります。",
-        "source": "Google News",
-        "published_at": "2026-10-15",
-        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBUOXBSU2ROU1VBN1hUNUZ4SEk4NjdLTU9xLWdnbzZNalBSTzhvalpmZ1VfN1ljaVhFQTlqeVFJY2JOb3ZzLU12TlNJc0xQVmdLTUN4UkItdW5OVEZHdDlYcU9seHhXTnBSVlVKbzhaaVdJWE1wREJiNktpZWs1T0k?oc=5",
-        "category": "事業・投資"
-      },
-      {
-        "title": "東京株急落、3318円安 過去3番目の下げ幅 AI企業の財務不安が背景",
-        "content": "東京株式市場で株価が急落し、下落幅は過去3番目の大きさとなる3318円安を記録しました。AI関連企業の財務に対する不安感が投資家心理を冷え込ませ、売り注文が膨らむ要因となりました。",
-        "source": "Google News",
-        "published_at": "2026-10-15",
-        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1ndVh5YUk5X2JTMlVkYmFfN2dVaHZ2QlVCckgxbGNWOHo5QVlVYW1rNUFpeFZHWGFDM0xKemd0ZHZrQ3NpcXdHcUFRaERFQ0JScFVjM1FZVFFuWUxaMlBjaFF1Zw?oc=5",
-        "category": "事業・投資"
-      },
-      {
-        "title": "相次ぐ不正アクセス “AIエージェント”使用の証拠見つかる",
-        "content": "近年の相次ぐサイバー攻撃において、攻撃者が自動で高度な作業を行う「AIエージェント」を使用していた証拠が見つかりました。AIの悪用によりサイバー攻撃の自動化や巧妙化が進んでおり、企業や組織における一層のセキュリティ対策が急務となっています。",
-        "source": "Google News",
-        "published_at": "2026-10-15",
-        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9iOUxETlUwOFplN0tEUnZEQVY0cGFlREVwZmZZVk1hWnptalg5S3RYVURmX1g1NGM2VEV3MVVCTFVXN3I4QmpXNkloX1puWnk3NVhBeWZNb3RldkF1SWZR?oc=5",
-        "category": "政策・安全"
-      },
-      {
-        "title": "国内WebサイトへのAIエージェント攻撃を観測 「8時間弱」続いた攻撃の推移を公開",
-        "content": "国内のセキュリティベンダーが、Webサイトに対するAIエージェントを用いた自動化された攻撃を観測しました。約8時間にわたって継続したこの攻撃の具体的な推移や手口が公開され、セキュリティ業界で注目を集めています。AI技術の悪用に対する新たな脅威として、企業の警戒が高まっています。",
-        "source": "Google News",
-        "published_at": "2026-10-15",
-        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5XRHhHSy0xOHVRQlQzbzNhVjlSSEFiQnlNQ1BYMEpLMTRvTldyQ3pmZHJBR2E5OGR2UlhBNFFQRi14aXhNS0xmYkptelY2V096RmV2bW9NTnZIOW8xcHRzc3lGZTBkZDJrQzgwLQ?oc=5",
-        "category": "政策・安全"
-      },
-      {
-        "title": "相次ぐ不正アクセスによる個人情報流出、攻撃者がAIを活用して弱点を探索と調査結果公表",
-        "content": "相次ぐ不正アクセスによる個人情報流出問題に関し、攻撃者がAIを用いてシステムの弱点を探索していることが明らかになった。最新の調査結果が公表され、サイバー攻撃の手口がより高度化している実態が浮き彫りとなっている。",
-        "source": "Google News",
-        "published_at": "2026-10-15",
-        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5fei13MnZaQmVmYWVCS1VoWjhTVDZianFFNU1zUVhUUTZmTzlzcFJQTlBkZGFydkh1QjVLYjFMNWQ2TzFtc0pMNDZiam45N0xQbmhDTUR0WXZxbnBGYUpBNWRVZzB2UUd6VW91dW9qZ21EaWlzaTZPUWtnVWJBck0?oc=5",
-        "category": "政策・安全"
-      },
-      {
-        "title": "AI、家電乗っ取り増殖の恐れ アンソロピック「デジタル粘菌」と警告",
-        "content": "AIが家電を乗っ取って自己増殖するリスクについて、Anthropicが「デジタル粘菌」と称して警告を発したというニュースです。自律的に拡散するAIの脅威と、それに伴うセキュリティ対策の重要性が指摘されています。",
-        "source": "Google News",
-        "published_at": "2026-10-15",
-        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9mQzE4Y0hhZERlbEZxZFp5bWIxUXUwS0o1QnlCcFh4eWk4YU4tblkzeDkzdkNnYkEtejFpd2FDOUh2WmhjT0ZQSF80RG5GbVpIVHZteUl3U29QNEl0R0JTdi1kNHFCVjVQbDZVOA?oc=5",
-        "category": "政策・安全"
-      },
-      {
-        "title": "共同創業者単独インタビューが語るAIの未来",
-        "content": "NHKニュースにおいて、AI企業の共同創業者への単独インタビューが実施されました。インタビューでは、人工知能技術の今後の展望や社会に与える影響について詳しく語られています。",
-        "source": "Google News",
-        "published_at": "2026-10-15",
-        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBOSGFCQ2pzZUgydnVZalp0eFVaMnNSZHZWVUxKSHF5d0FKOFNEQWd0ZXZIeXIyYmtmd19VcjN5MUFjWmlGdnpfVmQ0TUZYRFBuTkZiaDBud0ZqbktkbVhN?oc=5",
-        "category": "事業・投資"
-      },
-      {
-        "title": "ＮＴＴ、大阪にデータ施設 米ＡＩアンソロピック向け",
-        "content": "ＮＴＴが大阪府内に生成AIの開発や運用に必要なデータセンターを建設することが明らかになった。米国の主要AI企業であるアンソロピックの利用を想定している。最先端のAIインフラを国内で整備する動きとして注目される。",
-        "source": "Google News",
-        "published_at": "2026-10-15",
-        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9obDNZQWUtdlNnMFBGcl9qVTF4QmxVY005LU9mWWx6MkNKc0JnVmRaNVFoa3FGZWtmUjRyMXlNc05OR1Z0cW5uVmhyN0pJWUFWQmtsck5rTlY0Z3V4TDhaYVN3?oc=5",
-        "category": "インフラ・半導体"
-      },
-      {
-        "title": "わずか2分でAIが偽サイト作成、情報流出の起点に ホワイトハッカーが警鐘",
-        "content": "生成AIが悪用され、わずか2分で巧妙な偽サイトが作成される実態が明らかになりました。これによりフィッシング詐欺や個人情報の流出リスクが急増しており、専門家がその脅威に警鐘を鳴らしています。",
-        "source": "Google News",
-        "published_at": "2026-10-15",
-        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9YNmNHcm4ySllqS3N1ZkxqVS12VkozVGF2b1hqb0RFTjljOV80X25QRFZzcjVkMHBfd082Y2JPeFNwVjNyYmFSQzV0TU5jY1h1Vl85WFVRNzFRcUFXc0h2VWNWMktiYkUwLVJQSHpNeTdDSm4xWTRwWDFiM0xhcnM?oc=5",
-        "category": "政策・安全"
-      },
-      {
-        "title": "AI時代のサイバー攻撃、度重なる情報漏洩からの守りを固めるための政府への7つの提言私案",
-        "content": "AIの普及に伴うサイバー攻撃の高度化や度重なる情報漏洩に対処するため、政府が講じるべき具体的な防衛策として7つの提言がなされています。国家レベルでのセキュリティ体制の強化や、AI時代に対応した法整備の必要性が議論されています。",
-        "source": "Google News",
-        "published_at": "2026-10-15",
-        "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFAyajFOaWJZZmFEWGlWb2w0eXhmOHVWN184dzh5UXhFaW1hcUtMZU5FZkx2eS1MNnoxenlqLVA3SlIwcThKZlJLQnNvNWpyZV9ZRXhWT3NsVEM?oc=5",
-        "category": "政策・安全"
-      },
-      {
-        "title": "マクドナルドとウォルマートが「AI値上げ」か 両社否定も反発消えず",
-        "content": "マクドナルドとウォルマートにおいて、AIを活用した動的な価格設定（ダイナミック・プライシング）による値上げが行われているのではないかとの懸念が浮上しています。両社はこの疑惑を否定しているものの、消費者からの反発や批判は収まっていません。AI技術の商業利用における倫理や価格設定の透明性が問われる事態となっています。",
-        "source": "Google News",
-        "published_at": "2026-10-15",
-        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9kZ1N5RGxfRml1YjFLekxQaWp3Umc2VXNCRDRXMTRMTHZRNnEzM1ZzMGZxeDhnbHg1SWhuTXBBWGZQYmhLNVdmQXd0N3dTMlY3bFkxdW13WXdCS2U3eWVOZk9WYWtBbEUwUkd4eQ?oc=5",
-        "category": "事業・投資"
-      },
-      {
-        "title": "AIによる解雇から労働者を保護する米国当局の動き",
-        "content": "米国当局が人工知能による不当な解雇から労働者を守るための新しい保護策や規制の検討に乗り出しています。テクノロジーの急速な普及に伴う雇用不安への懸念が高まる中、労働者の権利を守るための具体的な政策動向が注目されています。",
-        "source": "Google News",
-        "published_at": "2026-10-15",
-        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9uZk9kLTdRTGlvZjVYcnlEN0xhU2VER1ptQjVVOTYza1ZMa3dScmhRTFhDcGk0WDE0aWRuMUdVVGFTSHdvQlJhSHdhVDI0RTNTWGx6SDdwMWVZZ005SUFTUGxtMUhmNlAwM01kYmV5RVUtN2o3UW5GQmpuelJuZHM?oc=5",
-        "category": "政策・安全"
-      },
-      {
-        "title": "生保業界の不正追及、AIと人との未来とは 記者やデスクが語る思い",
-        "content": "朝日新聞の記者とデスクが生保業界における不正追及の裏側や、AI技術と人間の記者双方が果たすべき役割の未来について語っています。テクノロジーの進化が報道や業界監視にどのような影響を与えるのかが議論されています。",
-        "source": "Google News",
-        "published_at": "2026-10-15",
-        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBpeG9yNlBibnp1REh6YmdabENnT2lqbDVOa2lFSUtoMmlkbENQQ2JxTlNiUXlDb1VwVXlwekU1cllLbWI1OEJyZHFfNzE1dFQyZ2xjNVdmRmhyUExyMjB0MXNJNHJVRnc?oc=5",
-        "category": "政策・安全"
-      },
-      {
-        "title": "AIエージェントで約7人に1人が法令違反リスク、古いルール参照が原因に",
-        "content": "企業におけるAIエージェントの利用において、古いルールを参照させたことが原因で約7人に1人に法令違反のリスクが生じていることが明らかになりました。経営層の3割がこの問題に対して無関与であることも指摘されており、ガバナンス体制の強化が急務となっています。",
-        "source": "Google News",
-        "published_at": "2026-10-15",
-        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFB2UEtxMFEweVJGeGxwQUNsY1ljOXVIRDRJM0JsM2ZLMDBKYTZfZS1lQ2QxMndtYVFPZ19iQmJGMVpVUkJYeWkxLS1wMVROSjlYU1hkNGZRNTZkcndRdmtiU1FuUUthWkJiNmFDZ0Z2blFQZw?oc=5",
-        "category": "政策・安全"
-      },
-      {
-        "title": "AIは「学ぶ力」を奪う？ Gemini Notebook責任者が語るAI時代の思考力とキャリア形成",
-        "content": "Forbes JAPANの記事にて、Gemini Notebookの責任者がAI時代における思考力やキャリア形成について語っています。AIの普及が人間の学習能力やスキルにどのような影響を与えるのか、今後の展望が示されています。",
-        "source": "Google News",
-        "published_at": "2026-10-15",
-        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9zTmJtT3VRekFjaHpZZ1U0MGQ3MEtzREp5ZE1Oa3pvWVpLc1Z5RGtocjd5X2JiYlAtblBlcDkydlBIOUdwM1l2aGFubjVJb2lzcmNVS3pLQlBDdw?oc=5",
-        "category": "モデル・研究"
       }
     ]
   }
