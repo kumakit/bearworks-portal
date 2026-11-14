@@ -10,6 +10,8 @@
 - [x] Phase 0確定（原本固定、定義、権利、都照合、町丁/地図判定）
 - [x] 集計スクリプト・データ・単体テスト・再現手順
 - [x] 新記事・図表・町丁選択・導線・SEO
-- [/] 専用検証・既存必須CI・PC/スマホ確認
-- [ ] PR・merge・本番artifact・deploy・公開URL確認
-- [ ] walkthrough・Issue結果報告・Done
+- [x] 専用検証・既存必須CI・PC/スマホ確認
+- [x] PR・merge・本番artifact・deploy・公開URL確認
+- [x] walkthrough・Issue結果報告・Done
+
+完了: 2026-10-26 23:06 JST公開。公開URL https://bearworks.uk/labs/hachioji-aging 。Issue #419はDone/closed。詳細はwalkthrough。
