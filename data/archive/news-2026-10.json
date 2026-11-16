@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-10-18",
+    "daily_summary": "本日のAIニュースでは、故人声優の声のAI再現を原則禁止とする日俳連の新指針やテレビ業界での生成AI活用などクリエイターの権利と仕事に関する議論が浮き彫りになったほか、中国によるAI技術の輸出規制強化や米国の自主規制への懸念など安全保障・ガバナンスの動きが目立ちました。また、地域交通でのAI活用やメタの自律型AIによる新たな自動化事例が報じられる一方で、AIを悪用したサイバー攻撃の急増といったセキュリティ上の脅威も深刻化しており、社会全体でAIの規制と活用のバランスが強く問われています。",
+    "articles": [
+      {
+        "title": "亡くなった声優の声、AIでの再現は原則禁止 日俳連が新指針",
+        "content": "日本俳優連合（日俳連）は、故人となった声優の声を人工知能（AI）で再現することを原則として禁止する新しい指針を策定しました。AI技術の急速な発展に伴い、権利保護や倫理的な観点から厳格なルールを設ける動きが広がっています。",
+        "source": "Google News",
+        "published_at": "2026-10-18",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE81VHd6MzNpT0lDdV9Jc215aFZra2RnVjhUT1F5VUJMLWxyS1JPTm1FZ0pnNFhrekdxMGx4U01yWXZxOFB0Wkt1Yy1NamhBelB0Tmc?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "再現ドラマにも生成AIを使用、俳優の仕事はどうなる？ テレビ番組のAI化はどこまで進むのか",
+        "content": "テレビ番組の制作現場において、再現ドラマへの生成AI活用などAI技術の導入が急速に進んでいます。これにより俳優の仕事や映像制作のあり方がどのように変化するのか、その影響と今後の展望について専門的な視点から解説されています。",
+        "source": "Google News",
+        "published_at": "2026-10-18",
+        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOMG02S0hUbDgzLVhXM0RuWVFDbFBfdzg3RXBsRVlFYWhuTnR1RmR3alh5MDk1LXgyTjBiVHpoNkFhM01haG1hYWFMV3RXZm5aRk1RUTdoYTlVSUtqTUQxbEttdmU5bWZ0bDZVNmJ6amd5UFZPaDZ2MzF6ejR3U1ZuT1A3UEJMdUZF?oc=5",
+        "category": "その他"
+      },
+      {
+        "title": "米AI自主規制：企業任せでは安全を守れない",
+        "content": "アメリカのAIに関する自主規制のあり方について、企業にのみ安全対策を委ねることの限界を指摘するニュースです。社会的リスクを防ぐためには、企業任せではなく公的な規制や監督が必要であると論じています。",
+        "source": "Google News",
+        "published_at": "2026-10-18",
+        "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNR19CU3dReGxOREFwMXQ5NkdYeElhTFlLWTkzWWZfMm1YWmNfUWZ0TUZMUXFkaW16T1NYYjExYm84czd4NU5qdEVoTGNTQjdRa1VsQklHX1FxNzNTSUE4VmVkTTJkc0d5aHJnTXZtN1lBMklzWEtVMXZudG52TDhycU90U3LSAYoBQVVfeXFMT3JlaTVEZDVjWHZuMEV6VGowVWZDNGJJWFUtWE1Dd3VEUXgweUJYWUQyVUVEV2hBaEdYV3JwYWZDRXI2WEFQT3gtdm40WHJva0l1eGZUSXl0bVpycno4Yk4xeDlVbXFucnFCNXZtSmJkVE9JUzdzNTB2Vm0wcEQyN2RvYi1PaEdTMjFR?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "山田町でオンデマンドバスの運行スタート AI活用し最適ルートを計算",
+        "content": "岩手県山田町において、AIを活用して最適ルートを計算するオンデマンドバスの運行が新たに開始されました。地域の移動手段の利便性向上や効率化が期待されています。",
+        "source": "Google News",
+        "published_at": "2026-10-18",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9mdGZUNGNsSjZJWFJUT3MtQUk2YUZ4aGtJbm5MS296dUJwVXdzZzc1aGlmc0plelozOVUtSVRlYzVOWFBiVXl4UmNrYVB5ZU5tbTRzc2lOcVBfN0ZSaUIyaldn?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "中国、AI技術23項目を輸出規制へ その中身とは",
+        "content": "中国政府が人工知能（AI）関連の技術23項目を新たに輸出規制の対象に加える方針であることが明らかになりました。この規制により、最先端のAI技術や関連システムの海外流出を防ぐ狙いがあると見られています。今後のグローバルなAI開発やサプライチェーンに与える影響が注目されています。",
+        "source": "Google News",
+        "published_at": "2026-10-18",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1PeDJDU1BRbGZDTnZMV1d5TTJ1aEpDWTA0QjFYRGhXTEdkRTNEMU03VkFBTDlYblMzMlhIVGZuLV90YU9jV3M5ZjdTc2QzNlE5ZUE?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "中国、AIなど40技術で輸出規制案 対象外設定で企業に海外展開余地",
+        "content": "中国政府は人工知能（AI）を含む40の技術を対象とした新たな輸出規制案を発表しました。一方で、一部の技術を規制対象外とする例外規定も設けられており、中国企業が海外展開を継続する余地を残しています。この動きは、先端技術の流出を防ぎつつ経済活動への影響を最小限に抑える狙いがあるとみられています。",
+        "source": "Google News",
+        "published_at": "2026-10-18",
+        "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNbTRkemNmamNzRVFOM2NFS0gzYjFvR2l5UlpVaVZtRmdSLXY0U2ZuOHRJbEwwNy0wU3FCNFB4M3VCcDN2V0Ftd3NuaVp0NUdWRklSSUFWa2FuQ21xa09IRnlIaU9tMHQzY01OampfNjRvR18ta1dId2pIQWJzaG51TUw4OA?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "中国、AI関連に輸出規制 先端技術の流出阻止狙う",
+        "content": "中国政府が人工知能（AI）関連技術に関する輸出規制を新たに実施したことが報じられました。この措置は、国内の先端技術や重要情報が国外へ流出することを防ぐ狙いがあります。AI技術を巡る国際的な覇権争いや安全保障上の懸念が強まる中での動きとして注目されています。",
+        "source": "Google News",
+        "published_at": "2026-10-18",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9hbHBFWE5ZZ1hpcFJPcXpmbGNMR1dnMXJxV0ljRmV5a3ZuMWUtY0dmTXNadzdiWlVUQnNqQmdIQW9pMW9vNlk1VUhabG1sc3ZQTW83ampsNnpUR0FJUzFzdkdIVlIwNlI3TjA5VQ?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "トランプ氏がAIの呼び方を「人工知能」から「SI」へ変更指示、IMF諮問機関は「先進的知能」と表記",
+        "content": "トランプ氏がAIの呼称を「人工知能」から「SI」に変更するよう指示したことが報じられました。一方、国際通貨基金（IMF）の諮問機関では「先進的知能」と表記されており、AIの呼称や定義を巡る議論が注目されています。",
+        "source": "Google News",
+        "published_at": "2026-10-18",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9CME05bnk3azJUMHU3bXMtZ1J6WF8wMk4wd3NEQ2dPMDRNcHIxMF9EOVJTbjBLTm1XV2lWb1JybllmWHhuTHpnb2tqM2pBWHdPcnJOY0loRnJUZURFcTBPaV9NOVM?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "「AI以外ありえない」サイバー攻撃、無差別に会員情報サイト狙う",
+        "content": "AIを活用したサイバー攻撃が急増しており、無差別に会員情報サイトが狙われています。従来の防御手法では対応が困難になりつつあり、セキュリティ対策の抜本的な見直しが迫られています。",
+        "source": "Google News",
+        "published_at": "2026-10-18",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBzQ09qa2NvSDAyUmpSVVhNSjB4RmI4Q1lEcFRIRWJ6WUstRUNnaDEyOXBvRjBFanBaVHYybWVZaHZLTnM4TUMxOGt5dzVVSHBESXVjU2ZiVERzRHYwZmd1SkhZVzJrVTVtdFN2SQ?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "メタのAI「Muse」、6分で約11万円分のアマゾン用クレジットを発見──料金交渉から返金まで代行",
+        "content": "メタが開発したAI「Muse」が、わずか6分で約11万円相当のアマゾン用クレジットを発見し話題となっています。このAIは料金交渉から返金手続きまでの一連のプロセスを自動で代行する能力を備えています。AIの自律的な活用範囲がショッピングやカスタマーサポートの領域にも広がっていることを示しています。",
+        "source": "Google News",
+        "published_at": "2026-10-18",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBHU216MFp0NXpTTF96M0F2VGlRdTVIMFRKaExKWFZOekdGVkk2R3cwOTBVSmFoTGduYkJLbWlYcG8xQzhOSFAxNklGRV82Q2JBVlFtbTBHV2ttdw?oc=5",
+        "category": "エージェント・開発ツール"
+      }
+    ]
+  },
+  {
     "date": "2026-10-17",
     "daily_summary": "本日のAIニュースは、クラウド事業者コアウィーブの信用不安やAI株の下落など金融市場におけるリスクが意識される一方で、AI半導体の買い戻しやプロによる「AIラリー再開」の予測など市場の強気な見方も健在です。また、YouTube Musicの生成AI楽曲へのラベル導入や金融機関でのAIエージェント遮断といった透明性・セキュリティの課題が浮き彫りになる中、自治体での業務効率化や気象予測、住友電工のエヌビディアパートナー選出など、実社会やインフラ分野へのAIの浸透と技術革新も着実に進展しています。",
     "articles": [
