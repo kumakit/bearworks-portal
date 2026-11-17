@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-10-19",
+    "daily_summary": "本日のAIニュースは、就職活動での面接対策や小売業の変革、株式投資といった身近な活用事例が広がる一方で、検索エンジンの変化に伴うウェブ集客の低下や、AIを活用したサイバー攻撃の急増といった深刻なセキュリティの脅威が浮き彫りになっています。さらに、新興国の雇用への影響や、巨額投資と生産性の隔たり、過熱する市場の逆回転リスクなど、経済や国際社会における構造的な課題や財務不安も指摘されており、AIの急速な普及が光と影の両面で大きな変革と警鐘をもたらしている一日となりました。",
+    "articles": [
+      {
+        "title": "AI面接拡大 突破口は「まず結論」",
+        "content": "就職活動や転職活動で導入が広がるAI面接では、回答の構成力が重要な評価ポイントとなります。評価を高めるための突破口として、結論から先に述べる話し方が有効であると紹介されています。",
+        "source": "Google News",
+        "published_at": "2026-10-19",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1jemU1Vk84anZDSHRXZC1DRXJIYzQ3Zl9Ja0dMSFNoZy0wQnJSaHpOYlVON2ZjVEJ0Z1J1NXhCUFRWV0htVTVkTFRmQkI2aThF?oc=5",
+        "category": "その他"
+      },
+      {
+        "title": "AI検索普及、ゼロクリック率68%に上昇 揺らぐサイト集客",
+        "content": "AI検索の普及に伴い、検索結果ページで完結してリンクがクリックされない「ゼロクリック率」が68%へと上昇しました。これにより、従来のウェブサイトへの集客構造が大きく揺らいでいます。",
+        "source": "Google News",
+        "published_at": "2026-10-19",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBxWGtXeTJXWXBiR3p5UHR3N0YyWVJOWEZnZ0ZPOFpjWWtuUkMtOHp3OTNuWG9naS1haUM0RDNIQS12Z1BZc21zNUdXTjNQb01YUWNBZnI5OFhoZEE4M3lSb0pURnYyNFd0Yy1DTA?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "「AIの脅威」が現実に、グローバル経済を牽引するはずだったインドとベトナムで起きていること",
+        "content": "AIの急速な進化と普及により、グローバル経済の成長を牽引すると期待されていたインドやベトナムなどの新興国で新たな脅威が現実化しています。従来のアウトソーシングや製造業中心の経済モデルがAIによる自動化の影響を受けており、雇用のあり方や産業構造の変換が迫られています。これらの国々が直面する課題は、世界の労働市場や経済のバランスに大きな影響を与えつつあります。",
+        "source": "Google News",
+        "published_at": "2026-10-19",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE80Q2d0VmNval9FNVpHUTZxS01ldk1UaERXeDQ0ZXpKLTMtRjBoVVo2cUREUTVKWlZDV3FNQy1BX0FtMEtPSFkzOVVUTHQ4bHp2ZVJzOVh3?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "ＡＩで企業に無限の可能性…ＦＬＵＸ ＣＥＯ 永井元治さん",
+        "content": "FLUXのCEOである永井元治氏が、AIを活用して企業に無限の可能性をもたらす事業展開について語っています。若いリーダーの視点から、次代を創るビジネスの展望が紹介されています。",
+        "source": "Google News",
+        "published_at": "2026-10-19",
+        "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBUazZEa2tNWjViMlJNTGpWQWJ4QUNVY3BsVndPZkctMlZVc1FBSnJoQ2pDSnJzdVRLWTRjNzJKRjJDT2lzOEFJUTVySkgtbG9mczlCZU52V2pfbTBfNkNCOGlNRWlieEVub3YySmZB?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "小売業にAIを適用する「エージェンティック・コマース」が迫る変革",
+        "content": "AIを活用して小売業の業務や購買体験を変革する「エージェンティック・コマース」について解説しています。自律型のエージェントが消費者のニーズを先読みし、新たな商取引の形をもたらす可能性について論じています。",
+        "source": "Google News",
+        "published_at": "2026-10-19",
+        "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1GTVI1UWUyb01ROXpBYnJ1QzdlOWF6blBneThURHNBRXg5MnZhRGFOS2wxeElmdHV3X0FMdUNpakIwNXltRUlkYTlMMl94UnRQZDEzWTlUZEdUU3V0WE1qaERrUmRKUnQxczRjZ2RSYWtzeHNqUDBLVQ?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "G20で浮かび上がった「AI一本足」の世界経済―AIへの巨額投資と生産性向上の隔たりが広げる国際格差",
+        "content": "G20において、AIへの巨額投資と実際の生産性向上との間に大きな隔たりがあることが国際的な課題として浮き彫りになりました。この投資と効果のギャップは、各国間の経済格差をさらに広げる要因として懸念されています。世界経済におけるAI依存の歪みと国際格差の実態について専門家が解説しています。",
+        "source": "Google News",
+        "published_at": "2026-10-19",
+        "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNandlNjZBVGY4MU9aVHh3QlltVHJKX1RnaGlZMTBybmhPTnlJNnJBaXBDYnpWYmhUa3dCVHozMlhUR0NCcE9VWWxoZ3FtWmRnY1M3dlh3ZHhsckphVDdoVnNYR2Vwa3J5U3c3LWEyZ2otWUtuMkt6QlR5M2tudjcxemJPal9vcEFa?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "狂騒AIに歴史の警鐘 膨張する投資、逆回転のリスク",
+        "content": "この記事では、過熱するAI関連の巨大投資に対する歴史的な教訓と、市場の逆回転リスクについて警鐘を鳴らしています。膨張を続けるAIブームの裏に潜む経済的な脆弱性を分析し、今後の動向に注意を促しています。",
+        "source": "Google News",
+        "published_at": "2026-10-19",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9qUFpnaDVnaE5RX0JEd1NUekVMQ0RaR1pIMzczb0JJOGE0SkFzS090elJDZmQ3NERuWV9uZ3RUUjBBQW5mRTFhd1V0dVRaMVRQRlJxUklPRnd5eVEyRGV1TTlYZTZWcE5zOElXVQ?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "『AIに9割まかせる ほぼほったらかし株式投資』【書籍紹介】",
+        "content": "本書は、AIを活用して手間をかけずに株式投資を行う方法を紹介する書籍です。投資の大部分をAIに任せることで、初心者でも手軽に取り組める運用術を解説しています。",
+        "source": "Google News",
+        "published_at": "2026-10-19",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1fZ18xMTlnMU5LY1M1ZWM1Tkk3SGxaR0hUYnFLbTc5QUFvbFdaMUx0bHRLaFBxOE1KenlOT1k1OEJ0LThDR0NWT2RaM2pnc0pkUXk5OGk5WXd3Zw?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "16兆円の受注残でも赤字の衝撃、AI企業コアウィーブの負債リスク",
+        "content": "膨大な受注残を抱えるAI企業のコアウィーブが赤字に陥っており、財務面での負債リスクが懸念されています。急速に拡大するAI市場において、インフラ投資と収益化のバランスが大きな課題となっています。今後の事業継続や資金調達の動向に注目が集まっています。",
+        "source": "Google News",
+        "published_at": "2026-10-19",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1sV0JxZ19xTUVSN05CRmZBNTR5WXBOY1RfZ0Qyd0kxSjV6SXY0R2lGUlBMa3V2UVgzeHFGYmFXWG9fdWlsRFk5VmxqYW9DTkZlaUY1d1lfbldxUQ?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "不正アクセス急増の背景に中国製LLMの台頭、AIを活用した自動サイバー攻撃に専門家が警鐘",
+        "content": "中国製の大規模言語モデル（LLM）の台頭により、AIが自動で標的の偵察やシステム侵入、情報奪取を行う不正アクセスが急増しています。専門家は情報の漏洩リスクに対する深刻な警鐘を鳴らしており、適切な対策が急務となっています。",
+        "source": "Google News",
+        "published_at": "2026-10-19",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFB6dmQwNlg1bGFVX2sxM3VnSVNqQlkzbmlBMFB2aEFfNkdZYXFCQXdYU3JCUlBjSThnSV9YVUtnWVdySjFVbWNoZjdmYU9hRjluZTNEenFuMmpQSWUtQUhmc2JLTUs?oc=5",
+        "category": "政策・安全"
+      }
+    ]
+  },
+  {
     "date": "2026-10-18",
     "daily_summary": "本日のAIニュースでは、故人声優の声のAI再現を原則禁止とする日俳連の新指針やテレビ業界での生成AI活用などクリエイターの権利と仕事に関する議論が浮き彫りになったほか、中国によるAI技術の輸出規制強化や米国の自主規制への懸念など安全保障・ガバナンスの動きが目立ちました。また、地域交通でのAI活用やメタの自律型AIによる新たな自動化事例が報じられる一方で、AIを悪用したサイバー攻撃の急増といったセキュリティ上の脅威も深刻化しており、社会全体でAIの規制と活用のバランスが強く問われています。",
     "articles": [
