@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-10-20",
+    "daily_summary": "本日のAIニュースでは、中国語のAIエージェントが悪用されたサイバー攻撃や生成AIが生む倫理的・実務的課題（人間関係の錯覚や行政での確認負担増）といったリスクが浮き彫りになる一方で、自動運転レースでの技術者獲得競争、英会話学習や気象予測での実用化が進んでいます。また、経済・市場面ではAI関連株の反発や中国のAI輸出による経済下支え、先端半導体への投資機会が注目されるなど、AI技術の急激な浸透がもたらす光と影が多方面で顕著になった一日となりました。",
+    "articles": [
+      {
+        "title": "サイバー攻撃受け情報漏えい、中国語のAIエージェント悪用か",
+        "content": "国内約80社を狙った一連のサイバー攻撃において、中国語のAIエージェントが悪用された痕跡がセキュリティ企業により確認されました。AIの活用により言語の壁が低くなり、日本企業に対するサイバー攻撃が急増している実態が明らかになっています。",
+        "source": "Google News",
+        "published_at": "2026-10-20",
+        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1MZGpyMVV6RVg4VlZXLVRPdE15LWdaUkxBRVBsUzlmc2RxcUxmYXAxYWl5a1Q4RURvNVJrZzN2SGlDVE9vd18tbVF0WVBNSHpJTkxSb0NhODI5WWlZQ3l3RzEwb3BtZw?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "AIが生成した「実在しない女性」に会いに男性が2,000km近く移動、AI作成者は販売目的",
+        "content": "AIによって生成された実在しない女性に会うために、ある男性が2,000km近く移動する事態が発生しました。このAI画像・コンテンツの作成者は商業的な目的でこれを行っていました。生成AI技術の進展に伴う人間関係や倫理的な課題が浮き彫りになっています。",
+        "source": "Google News",
+        "published_at": "2026-10-20",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBYTkNJdkFicDlSSXkxN2xnN1VNM0RtRDBERldLc29VSGI3YTV4dUJIVG9NV3hHWVlSeWVvRDc4YVh4eXFCaVktcEVoTzM2cVJZd2ZtdjFKX2JVQU5XUU9lOWwyV21RR21WY0dCdm1TYmhBdmpqRFhIQlZfTmVfWDA?oc=5",
+        "category": "その他"
+      },
+      {
+        "title": "AI自動運転レースに650人参戦 トヨタやホンダ、敏腕技術者に熱視線",
+        "content": "AIを用いた自動運転の技術を競うレースに650人が参戦しました。自動車業界からはトヨタ自動車や本田技研工業なども注目しており、優秀な技術者の獲得に向けた熱視線が注がれています。",
+        "source": "Google News",
+        "published_at": "2026-10-20",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBnNmEyWHdQdnpRclRJdkpPT1Z1MTFIeW5MMnFtVFVTLVM4c1pZSFVaaTNBb1BiM2MwX1hybXRRYU5pUUVnd0NIdjBUQlNQQVlud19ETVAwUDdZMVcxT2NMaURUcG5pME5FRV9kQw?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "英会話学習で使用しているAIアプリの一つ - ［福岡県］AI頼って英会話学習",
+        "content": "福岡県において、英語学習の場にAIアプリを取り入れた学習方法が紹介されています。最新のAI技術を活用することで、より実践的で効果的な英会話の習得を目指す取り組みとなっています。",
+        "source": "Google News",
+        "published_at": "2026-10-20",
+        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE4ybHFhelluZTRWVWZ6QVJySS1CdGtZWVFzbGtxS3hSMG81bXJJYUg4M19HUHlFRU1YMWlpSDU0UzIzN1p6R1hManJ2eW5mNEQzelh5dUwxRQ?oc=5",
+        "category": "その他"
+      },
+      {
+        "title": "台風30号、物理モデルとAI予測に大きな差が判明",
+        "content": "ウェザーニュースによると、台風30号の進路予測において従来の物理モデルとAIモデルの間で大きな乖離が見られています。特にAIモデルの一部では、台風が北東へ転向する可能性を計算しているとのことです。気象予測におけるAI活用の動向として注目されています。",
+        "source": "Google News",
+        "published_at": "2026-10-20",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9jdkY1RXZCeTNkcGZrZUtnaEJYd0FlUDk0Qks1VmJQMW9HdkY4cDlyZUhka0t2N1hvRW11cndaelhudTEybVlpZHp0aWk0OW5rWXRSUw?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "米国株式市場・午前＝Ｓ＆Ｐ・ナスダック上昇、ＡＩ関連が反発",
+        "content": "米国の午前中の株式市場では、S&P 500とナスダックが上昇しました。直近で下落していたAI関連の銘柄が買い戻され、市場全体の押し上げに寄与しています。",
+        "source": "Google News",
+        "published_at": "2026-10-20",
+        "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQNnUxZDdGRFdWUTFSOWQtdHNnaDJnX0FVbXlxZjZHTnE2YWNVUXJEOEdZWWVPTGNIZmIwUS1rSnJjSW9VNWhrTFRMWk1VeFd6dnZSUnNpNmhpV3lBZ3R5R2syV2N2ZHRZVXZVbDZ5R2FaTmt2cjdZaklhWldoVk9JZUpkMVF1Zw?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "コアウィーブ株急落は「さざ波」 AI揺るがす規制リスク、焦点は米中間選挙",
+        "content": "コアウィーブの株価急落を通じて、AI業界を取り巻く規制リスクと今後の市場への影響が議論されています。米中間選挙が今後の政策や投資判断における大きな焦点になると指摘されています。",
+        "source": "Google News",
+        "published_at": "2026-10-20",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1HSExkbi01blFhWTVnS09UQVRPME1XYVJubHBDT3Vfbk5fcXN6Z0NKUTNTb0ZDcFNyZ0NYdERoam9VZmVXVEQzSkwtOHV4cy0wWDE4TGFNSVNjN1ZhY0t1dUU4VkNYUFk?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "悲観は好機に変わる！「先端AI半導体ニッチトップ」最強6銘柄を拾え",
+        "content": "この記事では、先端AI半導体市場において独自の強みを持つニッチトップ企業の中から、投資妙味のある最強の6銘柄を紹介しています。市場の悲観ムードを好機と捉え、今後の成長が期待される注目銘柄にスポットを当てています。",
+        "source": "Google News",
+        "published_at": "2026-10-20",
+        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQY09SRW1TZkt2Y0E3WHhXRHcyMTBkZHg5WVlybmRsdEZOV2E1al9MT3lCMmdfV2M5TThjQm9CTUhPTC1zdmZ0QmZQamEzOTdYaDl0Q3hwMkJUeVYtbFFCYnd3bmsyNk10TU5RMnd5MHY1dVBjSUFScEphQjhjU1NXVy1vd1JKZWs?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "世田谷区、AI活用で約2900時間の業務削減を達成するも「確認と修正の負担」が新たな課題に",
+        "content": "世田谷区では生成AIの活用によって約2900時間の業務時間削減に成功しました。一方で、AIが生成した内容の確認や修正を行う負担が増加するという新たな課題が浮き彫りになっています。今後はこうした運用面の課題に対してどのように対応していくかが注目されています。",
+        "source": "Google News",
+        "published_at": "2026-10-20",
+        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1TTzJWQi0tcjlZLS15UW50ZkRZekE5a1pBUkdBX1NQRlcwbWhtOWxZVXFtT2xtMUFrUk9SN1BISU55OEpjM1pucUFvRmJmazBzM0RERGYyZ0dnN2ZyVmRoYTNpM2dyXzFRWGdBb0Zud3Jmdw?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "中国の経済成長が加速、AI輸出ブームが国内消費の低迷を上回る",
+        "content": "中国の経済成長が加速しており、人工知能（AI）関連の輸出ブームが国内消費の低迷を補う形となっている。BBCの報道によると、世界的なAI需要の拡大が中国経済を下支えしているという。",
+        "source": "Google News",
+        "published_at": "2026-10-20",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1HbTI4ak85ZklQamI2VVEtVms1R1ZBV21fbjgxS1NBaFYtYjNHSi1TRG9XUE9FdFpzY0twVUxpTE1nV2tfZjE2NkpyNjl5OW1sa0tfSHlRMk1MSjhqX1c2Q9IBZkFVX3lxTFBFSFpqZXRYVUZrX0xfMllHWF9vdDE3RVlrUl9nM2tHN00yQUZicUVOWFR6NHd6VnZkU2NpMFNuZnR5b0g5SEtNZWNBZXowM1V5S29lQkg5RkJBR1JQVWJ0NFZzNmN0dw?oc=5",
+        "category": "事業・投資"
+      }
+    ]
+  },
+  {
     "date": "2026-10-19",
     "daily_summary": "本日のAIニュースは、就職活動での面接対策や小売業の変革、株式投資といった身近な活用事例が広がる一方で、検索エンジンの変化に伴うウェブ集客の低下や、AIを活用したサイバー攻撃の急増といった深刻なセキュリティの脅威が浮き彫りになっています。さらに、新興国の雇用への影響や、巨額投資と生産性の隔たり、過熱する市場の逆回転リスクなど、経済や国際社会における構造的な課題や財務不安も指摘されており、AIの急速な普及が光と影の両面で大きな変革と警鐘をもたらしている一日となりました。",
     "articles": [

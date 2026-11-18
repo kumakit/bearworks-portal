@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-11-19",
+    "daily_summary": "本日のAIニュースでは、OpenAIによるチップ設計の自動化やHugging Faceの効率的なモデル公開など、開発プロセスやリソース最適化における技術的進歩が際立つ一方で、Googleが警鐘を鳴らすAIを活用したサイバー攻撃の自動化や、シティバンクが言及したAIエージェント利用時の責任分界点など、セキュリティとリスク管理に関する重大な課題も浮き彫りになりました。",
+    "articles": [
+      {
+        "title": "OpenAI、GPT-6 Astraを用いたAI支援チップ設計の進展を発表",
+        "content": "OpenAIの先進モデルを活用してJalapeñoシリコンの回路最適化およびRISC-Vコア設計の改善に成功しました。AIを活用した半導体設計プロセスの自動化と効率化において大きなマイルストーンとなります。",
+        "source": "OpenAI",
+        "published_at": "2026-11-19",
+        "url": "https://openai.com/index/advancing-chip-design-with-our-models",
+        "category": "インフラ・半導体"
+      },
+      {
+        "title": "180Bパラメータを32GB RAMで動かすMoE推論の限界突破手法",
+        "content": "Transformersライブラリを用いて、巨大な180Bパラメータの混合専門家（MoE）モデルをわずか32GBのRAMで効率的に推論させる手法が解説されました。リソースが限られた環境でも超大型モデルの運用を可能にする実用的なアプローチです。",
+        "source": "Hugging Face",
+        "published_at": "2026-11-19",
+        "url": "https://huggingface.co/blog/moe-expert-streaming",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "Hugging Face、ポストトレーニング効率のフロンティアを押し上げる「DaisyRose-27B」公開",
+        "content": "Hugging Faceは、ポストトレーニングの効率を極限まで高めた27Bモデル「DaisyRose-27B」を発表した。オープンソースモデルの事前学習・微調整コスト削減の新たな選択肢として注目される。",
+        "source": "Hugging Face",
+        "published_at": "2026-11-19",
+        "url": "https://huggingface.co/blog/RadixArk/daisyrose-27b-pushing-the-frontier-of-post-trainin",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "Hugging Face、ファインチューニングの実行時間が理論値（FLOPs）を超える理由を解説",
+        "content": "Hugging Faceは、LLMのファインチューニングジョブが理論上の演算性能（FLOPs）から予想されるよりも長期化する原因とボトルネックを詳細に解説した。トレーニングの高速化やコスト最適化を目指すエンジニアにとって必読の内容である。",
+        "source": "Hugging Face",
+        "published_at": "2026-11-19",
+        "url": "https://huggingface.co/blog/Dharma-AI/predicting-fine-tuning-time",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "Snapchat、Claude CodeやCursorを活用したARレンズ開発機能を導入",
+        "content": "Snapchatは、開発者がClaude CodeやCursorなどのAIアシスタントを使用して、自然言語の指示からARレンズをゼロから作成できる機能を導入した。ノーコード・ローコードによるAR開発の敷居を大きく引き下げる。",
+        "source": "TechCrunch",
+        "published_at": "2026-11-19",
+        "url": "https://techcrunch.com/2026/11/18/snapchat-now-lets-developers-build-ar-lenses-with-ai-coding-assistants-like-claude-code-and-cursor/",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "OpenAI、Codexサンドボックスの安全性とローカル実行の仕組みを公開",
+        "content": "OpenAIは、CodexがmacOS、Linux、Windows上でファイルシステムとネットワークの制限を強制しながらローカル環境でコマンドを実行する仕組みを解説した。開発者はセキュアなサンドボックス環境下での安全な自動コード実行メカニズムを深く理解できる。",
+        "source": "OpenAI",
+        "published_at": "2026-11-19",
+        "url": "https://openai.com/index/inside-the-codex-sandbox",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "Google、AIによる脆弱性発見から攻撃までの自動化に警鐘",
+        "content": "Googleは、AIがシステムの脆弱性発見から実際の攻撃コード作成までを自動化している現状について仮想通貨企業などを標的に警告を発した。セキュリティ実務者にとって、高度化するAI脅威に対する防御体制の見直しが急務となっている。",
+        "source": "Google News",
+        "published_at": "2026-11-19",
+        "url": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE54cXlDaEZFMGZnUXJzaGdxRWNSSHJrTTBhRXVjTmlUX1Y2THpmYVpvSlZMS1FZNGN6ZkRvU0VVRUthbTg?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "OpenAI、モデルのトレーニングからデプロイまでのフロンティアAIリスク管理手法を解説",
+        "content": "OpenAIは、モデルのアライメント、サンドボックス、セーフガードのブロック、モニタリングを活用して、トレーニングからデプロイまでのフロンティアAIリスクを管理する手法を公開した。安全なAI開発と運用を目指す組織にとってベストプラクティスとなる。",
+        "source": "OpenAI",
+        "published_at": "2026-11-19",
+        "url": "https://openai.com/index/managing-frontier-ai-risk",
+        "category": "政策・安全"
+      },
+      {
+        "title": "米シティバンク、ユーザーのAIエージェント利用時のハッキング被害に免責方針",
+        "content": "主要金融機関であるシティバンクが個人の財務管理用AIエージェント利用に関するセキュリティリスクについて警告を発しました。ユーザーがAIエージェントに起因してハッキングや不正送金被害に遭った場合の責任分界点に関する議論を呼んでいます。",
+        "source": "TechCrunch",
+        "published_at": "2026-11-19",
+        "url": "https://techcrunch.com/2026/11/18/more-banks-says-customers-using-ai-agents-are-on-their-own-even-if-they-get-hacked/",
+        "category": "事業・投資"
+      },
+      {
+        "title": "ストリームハウスにおける時系列モデルの新しいフロンティア",
+        "content": "ストリームハウス環境における時系列予測モデルの新しい活用事例とアーキテクチャが提案されました。リアルタイムデータ処理と予測の統合により、エッジおよびストリーミングシステムの効率が向上します。",
+        "source": "Hugging Face",
+        "published_at": "2026-11-19",
+        "url": "https://huggingface.co/blog/ibm-research/time-series-powered-streamhouse",
+        "category": "モデル・研究"
+      }
+    ]
+  },
+  {
     "date": "2026-11-18",
     "daily_summary": "本日のAIニュースでは、OpenAIやGoogleによる新世代モデルの発表や実用的なAIエージェントの展開が加速する一方で、カリフォルニア州によるOpenAI提訴やGoogleが確認したAIによる自律的なサイバー攻撃プログラムの自動作成など、AIの安全性やセキュリティリスクに関する重大な課題も浮き彫りになりました。さらに、法務や金融などの専門分野へのAI特化が進むとともに、国家安全保障での活用やNvidiaの経営体制の行方など、技術革新とガバナンスの両面で大きな動きが見られた一日となりました。",
     "articles": [
@@ -2569,92 +2655,6 @@
         "source": "Google News",
         "published_at": "2026-10-21",
         "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNbHByT3RybzkySmx0VVBzdGgxLTc2VVRrV1ZyM28zb3d0MHliQ2JIaWdJek9GeWUxWkpiRUFjXzd6WTY4ZFBMQWswYm9sWmd4aGF2TXhFM29kN1pxQVlKSmthYWdpeUUyU3l6OTJYVzNScU5kbXhnVnZ4ajU4d0l5U00wcHQtQQ?oc=5",
-        "category": "事業・投資"
-      }
-    ]
-  },
-  {
-    "date": "2026-10-20",
-    "daily_summary": "本日のAIニュースでは、中国語のAIエージェントが悪用されたサイバー攻撃や生成AIが生む倫理的・実務的課題（人間関係の錯覚や行政での確認負担増）といったリスクが浮き彫りになる一方で、自動運転レースでの技術者獲得競争、英会話学習や気象予測での実用化が進んでいます。また、経済・市場面ではAI関連株の反発や中国のAI輸出による経済下支え、先端半導体への投資機会が注目されるなど、AI技術の急激な浸透がもたらす光と影が多方面で顕著になった一日となりました。",
-    "articles": [
-      {
-        "title": "サイバー攻撃受け情報漏えい、中国語のAIエージェント悪用か",
-        "content": "国内約80社を狙った一連のサイバー攻撃において、中国語のAIエージェントが悪用された痕跡がセキュリティ企業により確認されました。AIの活用により言語の壁が低くなり、日本企業に対するサイバー攻撃が急増している実態が明らかになっています。",
-        "source": "Google News",
-        "published_at": "2026-10-20",
-        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1MZGpyMVV6RVg4VlZXLVRPdE15LWdaUkxBRVBsUzlmc2RxcUxmYXAxYWl5a1Q4RURvNVJrZzN2SGlDVE9vd18tbVF0WVBNSHpJTkxSb0NhODI5WWlZQ3l3RzEwb3BtZw?oc=5",
-        "category": "政策・安全"
-      },
-      {
-        "title": "AIが生成した「実在しない女性」に会いに男性が2,000km近く移動、AI作成者は販売目的",
-        "content": "AIによって生成された実在しない女性に会うために、ある男性が2,000km近く移動する事態が発生しました。このAI画像・コンテンツの作成者は商業的な目的でこれを行っていました。生成AI技術の進展に伴う人間関係や倫理的な課題が浮き彫りになっています。",
-        "source": "Google News",
-        "published_at": "2026-10-20",
-        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBYTkNJdkFicDlSSXkxN2xnN1VNM0RtRDBERldLc29VSGI3YTV4dUJIVG9NV3hHWVlSeWVvRDc4YVh4eXFCaVktcEVoTzM2cVJZd2ZtdjFKX2JVQU5XUU9lOWwyV21RR21WY0dCdm1TYmhBdmpqRFhIQlZfTmVfWDA?oc=5",
-        "category": "その他"
-      },
-      {
-        "title": "AI自動運転レースに650人参戦 トヨタやホンダ、敏腕技術者に熱視線",
-        "content": "AIを用いた自動運転の技術を競うレースに650人が参戦しました。自動車業界からはトヨタ自動車や本田技研工業なども注目しており、優秀な技術者の獲得に向けた熱視線が注がれています。",
-        "source": "Google News",
-        "published_at": "2026-10-20",
-        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBnNmEyWHdQdnpRclRJdkpPT1Z1MTFIeW5MMnFtVFVTLVM4c1pZSFVaaTNBb1BiM2MwX1hybXRRYU5pUUVnd0NIdjBUQlNQQVlud19ETVAwUDdZMVcxT2NMaURUcG5pME5FRV9kQw?oc=5",
-        "category": "モデル・研究"
-      },
-      {
-        "title": "英会話学習で使用しているAIアプリの一つ - ［福岡県］AI頼って英会話学習",
-        "content": "福岡県において、英語学習の場にAIアプリを取り入れた学習方法が紹介されています。最新のAI技術を活用することで、より実践的で効果的な英会話の習得を目指す取り組みとなっています。",
-        "source": "Google News",
-        "published_at": "2026-10-20",
-        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE4ybHFhelluZTRWVWZ6QVJySS1CdGtZWVFzbGtxS3hSMG81bXJJYUg4M19HUHlFRU1YMWlpSDU0UzIzN1p6R1hManJ2eW5mNEQzelh5dUwxRQ?oc=5",
-        "category": "その他"
-      },
-      {
-        "title": "台風30号、物理モデルとAI予測に大きな差が判明",
-        "content": "ウェザーニュースによると、台風30号の進路予測において従来の物理モデルとAIモデルの間で大きな乖離が見られています。特にAIモデルの一部では、台風が北東へ転向する可能性を計算しているとのことです。気象予測におけるAI活用の動向として注目されています。",
-        "source": "Google News",
-        "published_at": "2026-10-20",
-        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9jdkY1RXZCeTNkcGZrZUtnaEJYd0FlUDk0Qks1VmJQMW9HdkY4cDlyZUhka0t2N1hvRW11cndaelhudTEybVlpZHp0aWk0OW5rWXRSUw?oc=5",
-        "category": "モデル・研究"
-      },
-      {
-        "title": "米国株式市場・午前＝Ｓ＆Ｐ・ナスダック上昇、ＡＩ関連が反発",
-        "content": "米国の午前中の株式市場では、S&P 500とナスダックが上昇しました。直近で下落していたAI関連の銘柄が買い戻され、市場全体の押し上げに寄与しています。",
-        "source": "Google News",
-        "published_at": "2026-10-20",
-        "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQNnUxZDdGRFdWUTFSOWQtdHNnaDJnX0FVbXlxZjZHTnE2YWNVUXJEOEdZWWVPTGNIZmIwUS1rSnJjSW9VNWhrTFRMWk1VeFd6dnZSUnNpNmhpV3lBZ3R5R2syV2N2ZHRZVXZVbDZ5R2FaTmt2cjdZaklhWldoVk9JZUpkMVF1Zw?oc=5",
-        "category": "事業・投資"
-      },
-      {
-        "title": "コアウィーブ株急落は「さざ波」 AI揺るがす規制リスク、焦点は米中間選挙",
-        "content": "コアウィーブの株価急落を通じて、AI業界を取り巻く規制リスクと今後の市場への影響が議論されています。米中間選挙が今後の政策や投資判断における大きな焦点になると指摘されています。",
-        "source": "Google News",
-        "published_at": "2026-10-20",
-        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1HSExkbi01blFhWTVnS09UQVRPME1XYVJubHBDT3Vfbk5fcXN6Z0NKUTNTb0ZDcFNyZ0NYdERoam9VZmVXVEQzSkwtOHV4cy0wWDE4TGFNSVNjN1ZhY0t1dUU4VkNYUFk?oc=5",
-        "category": "事業・投資"
-      },
-      {
-        "title": "悲観は好機に変わる！「先端AI半導体ニッチトップ」最強6銘柄を拾え",
-        "content": "この記事では、先端AI半導体市場において独自の強みを持つニッチトップ企業の中から、投資妙味のある最強の6銘柄を紹介しています。市場の悲観ムードを好機と捉え、今後の成長が期待される注目銘柄にスポットを当てています。",
-        "source": "Google News",
-        "published_at": "2026-10-20",
-        "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQY09SRW1TZkt2Y0E3WHhXRHcyMTBkZHg5WVlybmRsdEZOV2E1al9MT3lCMmdfV2M5TThjQm9CTUhPTC1zdmZ0QmZQamEzOTdYaDl0Q3hwMkJUeVYtbFFCYnd3bmsyNk10TU5RMnd5MHY1dVBjSUFScEphQjhjU1NXVy1vd1JKZWs?oc=5",
-        "category": "事業・投資"
-      },
-      {
-        "title": "世田谷区、AI活用で約2900時間の業務削減を達成するも「確認と修正の負担」が新たな課題に",
-        "content": "世田谷区では生成AIの活用によって約2900時間の業務時間削減に成功しました。一方で、AIが生成した内容の確認や修正を行う負担が増加するという新たな課題が浮き彫りになっています。今後はこうした運用面の課題に対してどのように対応していくかが注目されています。",
-        "source": "Google News",
-        "published_at": "2026-10-20",
-        "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1TTzJWQi0tcjlZLS15UW50ZkRZekE5a1pBUkdBX1NQRlcwbWhtOWxZVXFtT2xtMUFrUk9SN1BISU55OEpjM1pucUFvRmJmazBzM0RERGYyZ0dnN2ZyVmRoYTNpM2dyXzFRWGdBb0Zud3Jmdw?oc=5",
-        "category": "政策・安全"
-      },
-      {
-        "title": "中国の経済成長が加速、AI輸出ブームが国内消費の低迷を上回る",
-        "content": "中国の経済成長が加速しており、人工知能（AI）関連の輸出ブームが国内消費の低迷を補う形となっている。BBCの報道によると、世界的なAI需要の拡大が中国経済を下支えしているという。",
-        "source": "Google News",
-        "published_at": "2026-10-20",
-        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1HbTI4ak85ZklQamI2VVEtVms1R1ZBV21fbjgxS1NBaFYtYjNHSi1TRG9XUE9FdFpzY0twVUxpTE1nV2tfZjE2NkpyNjl5OW1sa0tfSHlRMk1MSjhqX1c2Q9IBZkFVX3lxTFBFSFpqZXRYVUZrX0xfMllHWF9vdDE3RVlrUl9nM2tHN00yQUZicUVOWFR6NHd6VnZkU2NpMFNuZnR5b0g5SEtNZWNBZXowM1V5S29lQkg5RkJBR1JQVWJ0NFZzNmN0dw?oc=5",
         "category": "事業・投資"
       }
     ]
