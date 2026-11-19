@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-10-21",
+    "daily_summary": "本日のAIニュースは、中国系AIによるサイバー攻撃の激化や、米中市場におけるAI関連株の投資過熱への警戒感・信用不安といった負の側面がクローズアップされ、国内外の株式市場や為替に下落圧力を与えました。一方で、AI議事録ツールの企業浸透の課題やLINEマンガによるAI二次創作機能の発表といった実用・エンタメ分野での模索が進むほか、政治的なインフラ整備の動きも見られ、AI技術の急激な発展と社会実装の間で、安全性、収益性、倫理面をめぐる様々な課題と警戒感が交錯する一日となりました。",
+    "articles": [
+      {
+        "title": "不正アクセス、中国系AI「ARTEX」で日本標的に 金融など業種絞り攻撃",
+        "content": "中国系のAIエージェント「ARTEX」が悪用され、金融などの特定業種を標的にしたサイバー攻撃が国内で行われていることが判明しました。国内の複数企業で情報漏えいや不正アクセスの痕跡が確認されており、AI時代における新たなセキュリティ上の脅威として警戒が強まっています。",
+        "source": "Google News",
+        "published_at": "2026-10-21",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9EV1lhdjROM0R3Y1oybGNpcDVsUUFBTGlMaTAxNTlKd2xjaVp0bV9xYTJUcTF6WEctY3dvZ1BvYW9VNzBVUUJnZ1BVaXlGM0I2QVBheDFIUVE3YXZDcS1EQ3JfQW1fdl9QTXhydg?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "ＮＹ外為市場＝ドル下落、ＡＩ懸念が重し 円は20年債入札好調で上昇",
+        "content": "ニューヨーク外国為替市場では、AIに関する懸念が重しとなりドルが下落しました。一方、円は良好な結果となった20年債入札を背景に上昇しました。",
+        "source": "Google News",
+        "published_at": "2026-10-21",
+        "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE42QVJtanZGVTlGdUdwd1pqZW5zcnN1NGZuM2MyQXE2bnR2bXAxNEFMTE9VRGRzeGFoWHZaa2d2MGNUWGhwTk5HalQtYUVWODctR0dENjJTZ3FtMnlxcEtWdHloYUxlTnNuOElTV3FCNGlwRnZTMlpHTUxGYW9VUQ?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "トランプ氏とAI首脳の「自主基準」合意が映す思惑、データセンター推進と迫る中間選挙",
+        "content": "トランプ氏とAI業界の首脳らが自主基準に関する合意に至った背景には、データセンターの推進や迫る中間選挙に向けた政治的思惑が影響しています。AIの発展とインフラ整備をめぐる動向として注目されています。",
+        "source": "Google News",
+        "published_at": "2026-10-21",
+        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9lczJYT3JfT1NnelVDbnhkYUNYbUVNUUxqZ2N6bkZWSTA1UXpvaVRLNzNERVA5Vy0wODI5Z0k3a1o0b0I3emVmOHVFQVlPYm42dzVQekFR?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "会議の記録を残さない人が50.2％ AI議事録が便利でも企業に浸透しない理由",
+        "content": "キーマンズネットの調査によると、会議の記録を残さない人が50.2％に達することが明らかになりました。AIを活用した便利な議事録ツールが存在するにもかかわらず、なぜ企業への浸透が進まないのか、その背景にある理由について解説しています。",
+        "source": "Google News",
+        "published_at": "2026-10-21",
+        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE0tSkw5cVFxU2U3UzZTa2JXb0RSMmRJTHd4bGY3Vmk5SWhtRUdONkZyVGhMNDAxUHlHb0lZVXRJMVlLWEFZRW96OGs3bDJ6LW53bU15aDNPQUl3U2V0bnBFMXNHemRoQQ?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "LINEマンガ、原作者公認でAIによる二次創作が可能になる新機能を発表",
+        "content": "LINEマンガが、原作者の公認のもとでAIを使用したマンガの二次創作を可能にする新機能を発表しました。これにより、ユーザーは指定された作品をベースにAIを活用した新しい創作活動を手軽に楽しめるようになります。AI技術を活用したコンテンツ展開の新たな試みとして注目されています。",
+        "source": "Google News",
+        "published_at": "2026-10-21",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1Wbk5CZEYyVm5VR3dvYUI1Njl3elowSEVzSTY4MkVyT0oxVDdYLVh5VDZNUXZHRFhhNjBxMWY5ajUxc0VmZnV0cndObExDYTR0Y0E?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "TSMCにも売りが波及、マイクロソフトなどAI投資の採算が問われる",
+        "content": "マイクロソフトなどの大手企業によるAI投資の採算性に対する懸念が強まっており、関連銘柄であるTSMCにも売り注文が波及しています。市場では過剰投資への警戒感が高まり、今後のAI関連ビジネスの収益化に向けた動向が注目されています。",
+        "source": "Google News",
+        "published_at": "2026-10-21",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBITzhuRXRNWDRuT01xYUdyRGRBdTZQQ25JS2FJVUt2UjNoaFlWYkVySEVvUWVNREdDQUxqTk1NLTJPcjZFNUNsTERCVEZHTDd5ZUwwNURyOHNLZw?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "AI投資減速に警戒感、コアウィーブ巡り米株式市場で信用不安",
+        "content": "米株式市場において、AI特化型クラウド企業であるコアウィーブを巡る信用不安が浮上しています。この懸念からAI投資の過熱に対する減速への警戒感が強まっています。市場参加者の間で今後の動向を注視する動きが広がっています。",
+        "source": "Google News",
+        "published_at": "2026-10-21",
+        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9JdGFSUURtSzdSSkVZQjBNLXpwT0xuSmdDeVI4Yk1mRFplRXdId2pCYllIVGFVOVUwOUxKcTh6d28zaXJ3SEVDelp0bTZhRmVHWE54MnI4OHF4NjdkOHlvTjhnRQ?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "日経平均は続落、AI関連株中心に売り優勢で終日軟調推移",
+        "content": "本日の株式市場では、日経平均株価が続落となりました。AI関連株を中心に売りが優勢となり、終日軟調な推移が見られました。",
+        "source": "Google News",
+        "published_at": "2026-10-21",
+        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9mYzRRbG50dy00QXg5bS1NYWV0a3NmVU5Dd1hESWNjZFU5RkE3a0NZZHlCMF9tc1ZRNzR0VFo4ZFlVZFNRdm9HUnFaakFnY2Rnb2J5THBmY3BDRnZEMkxKTQ?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "中国でAI株安、調達ラッシュに変調 「自立自強」戦略の急所に",
+        "content": "中国市場においてAI関連の株式が下落し、過熱していた資金調達の動きに変調が見え始めている。米国の規制に対抗する「自立自強」を掲げる中国のAI戦略にとって、今回の資金調達の停滞は大きな急所となり得る。市場の冷え込みが今後の技術開発や産業全体の成長に影響を与える懸念が強まっている。",
+        "source": "Google News",
+        "published_at": "2026-10-21",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE13b1ZtQmRQTWdJWGtWbDVMVXoyeHRmQXhVX0lzS1AtdHM1ZUVXVlBySm5RRUhTdDhZUTItVlRQeHFRRFlscXRYZ0JwYnFzMXNOQW50aUY0TVNuWWwzNkR2SEpwc2dONWt5M09YVQ?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "日経平均は続落、AI株含め全体的に低調 安値もみ合いに終始",
+        "content": "東京株式市場で日経平均株価は続落し、AI関連銘柄を含む市場全体が低調な値動きとなりました。終日を通じて安値圏でのもみ合いに終始する展開となりました。",
+        "source": "Google News",
+        "published_at": "2026-10-21",
+        "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNbHByT3RybzkySmx0VVBzdGgxLTc2VVRrV1ZyM28zb3d0MHliQ2JIaWdJek9GeWUxWkpiRUFjXzd6WTY4ZFBMQWswYm9sWmd4aGF2TXhFM29kN1pxQVlKSmthYWdpeUUyU3l6OTJYVzNScU5kbXhnVnZ4ajU4d0l5U00wcHQtQQ?oc=5",
+        "category": "事業・投資"
+      }
+    ]
+  },
+  {
     "date": "2026-10-20",
     "daily_summary": "本日のAIニュースでは、中国語のAIエージェントが悪用されたサイバー攻撃や生成AIが生む倫理的・実務的課題（人間関係の錯覚や行政での確認負担増）といったリスクが浮き彫りになる一方で、自動運転レースでの技術者獲得競争、英会話学習や気象予測での実用化が進んでいます。また、経済・市場面ではAI関連株の反発や中国のAI輸出による経済下支え、先端半導体への投資機会が注目されるなど、AI技術の急激な浸透がもたらす光と影が多方面で顕著になった一日となりました。",
     "articles": [

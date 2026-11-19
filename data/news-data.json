@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-11-20",
+    "daily_summary": "本日のAIニュースでは、OpenAIによるコーディングエージェントを活用した研究加速や、GoogleによるMac向け自律操作機能および検索へのAIサイドバー常設など、AIエージェントの実用化と日常への統合が大きく前進しました。また、Anthropicのナスダック上場という歴史的な資金調達の一方で、Metaの「Muse」に見られたプライバシー露呈の不具合は、高度化するエージェント開発における安全性やコンテキスト管理の重要性を改めて浮き彫りにしています。",
+    "articles": [
+      {
+        "title": "OpenAIが明かすコーディングエージェントによるAI研究の加速",
+        "content": "OpenAIがコーディングエージェントによるAI研究の加速効果や性能のばらつき、再帰的自己改善への示唆について測定・分析結果を公開した。次世代AI開発のフロンティアにおける重要な実証データを提供する。",
+        "source": "OpenAI",
+        "published_at": "2026-11-20",
+        "url": "https://openai.com/index/research-acceleration-jagged-frontier",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "Google、Macのファイル整理やフォーム入力を自律実行するAIエージェント機能をGeminiに追加",
+        "content": "GoogleはGeminiの最新アップデートにより、Mac上でファイル整理やフォーム入力、複数ステップのワークフローを自動実行するAIエージェント機能を導入した。OSレベルでのAIエージェントの実用化が大きく前進していることを示している。",
+        "source": "TechCrunch",
+        "published_at": "2026-11-20",
+        "url": "https://techcrunch.com/2026/11/19/google-gives-gemini-the-ability-to-use-your-mac-for-you/",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "GoogleのMac用GeminiアプリにPC操作機能が追加",
+        "content": "GoogleがmacOS向けGeminiアプリにパソコンの自動操作機能（Computer Use）を導入し、ローカルファイルやデスクトップアプリを横断したマルチステップ作業の自動化が可能になった。開発者やナレッジワーカーの日々の定型業務やワークフローを強力に効率化する。",
+        "source": "The Verge",
+        "published_at": "2026-11-20",
+        "url": "https://www.theverge.com/tech/1037902/google-gemini-macos-ai-computer-use",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "OpenAI、Codex自動化ワークフロー「Performance Factory」によるChatGPT高速化の仕組みを公開",
+        "content": "OpenAIは、ChatGPTの高速な応答速度を維持するため、Codexを活用してパフォーマンスのボトルネックを自動検出・修正する社内システム「Performance Factory」を構築した。開発現場におけるAI駆動型の継続的パフォーマンス改善の先進事例として参考になる。",
+        "source": "OpenAI",
+        "published_at": "2026-11-20",
+        "url": "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "Hugging Face、40以上の言語に対応する軽量オープン音声モデル「Rumble-2-Flash（0.5B）」を公開",
+        "content": "Hugging Faceは、パラメータ数0.5Bという超軽量ながら40以上の言語に対応するオープンな音声モデル「Rumble-2-Flash」をリリースした。エッジデバイスやローカル環境での音声認識・処理システムの構築に大きな利点をもたらす。",
+        "source": "Hugging Face",
+        "published_at": "2026-11-20",
+        "url": "https://huggingface.co/blog/rumble-2-flash",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "Anthropicがウォール街に上場、ナスダックで取引開始",
+        "content": "Anthropicがナスダック（ティッカー: ANT）への上場を果たし、初値111.50ドル、時価総額約1.5兆円規模で取引が開始された。主要AI企業による歴史的な大型上場として業界の資金調達構造に大きな影響を与える。",
+        "source": "The Verge",
+        "published_at": "2026-11-20",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/1035384/anthropic-ipo-trading-nasdaq",
+        "category": "事業・投資"
+      },
+      {
+        "title": "Google、Gemini APIに外部ツールを効率的に取得・活用する「Tool Retrieval」機能を追加",
+        "content": "GoogleはGemini API向けに、大量のツール群から適切なものを動的に取得して利用する「Tool Retrieval」機能を発表した。多数の関数やツールを扱う複雑なAIエージェント開発のスケーラビリティ向上に寄与する。",
+        "source": "Google AI",
+        "published_at": "2026-11-20",
+        "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "MetaのAIエージェント「Muse」、会話の混同や他人のプライベートデータ露呈の不具合が判明",
+        "content": "MetaのAIエージェント「Muse」のテストにおいて、ユーザーが要求していない育児相談や他人の銀行口座残高などのプライベートデータが混信する不具合が報告された。エージェント開発におけるコンテキスト管理やプライバシー保護の難しさを浮き彫りにしている。",
+        "source": "TechCrunch",
+        "published_at": "2026-11-20",
+        "url": "https://techcrunch.com/2026/11/19/metas-ai-agent-muse-is-mixing-up-conversations-and-exposing-private-data-report-says/",
+        "category": "政策・安全"
+      },
+      {
+        "title": "Meta、AIエージェント専用の画面付き専用デバイス「Muse Charm」を300ドルで12月発売か",
+        "content": "MetaはAIエージェント「Muse」と対話できる専用スクリーン付きの小型端末「Muse Charm」を300ドルで12月のホリデーシーズンに向けて投入する計画であることが報じられた。コンシューマー向けハードウェアにおける新たなAIインターフェースの展開として注目される。",
+        "source": "The Verge",
+        "published_at": "2026-11-20",
+        "url": "https://www.theverge.com/tech/1038087/meta-muse-charm-ai-price",
+        "category": "事業・投資"
+      },
+      {
+        "title": "Google、検索ホームページ上に折りたたみ可能なAIチャットサイドバーを常設へ",
+        "content": "Googleは検索サービスのホームページをアップデートし、クリックで展開できるAIチャット用のサイドバーを統合した。ユーザーが検索からシームレスにAIとの対話を継続できるインターフェースの大きな変更となる。",
+        "source": "The Verge",
+        "published_at": "2026-11-20",
+        "url": "https://www.theverge.com/tech/1038059/google-search-homepage-ai-chats",
+        "category": "事業・投資"
+      }
+    ]
+  },
+  {
     "date": "2026-11-19",
     "daily_summary": "本日のAIニュースでは、OpenAIによるチップ設計の自動化やHugging Faceの効率的なモデル公開など、開発プロセスやリソース最適化における技術的進歩が際立つ一方で、Googleが警鐘を鳴らすAIを活用したサイバー攻撃の自動化や、シティバンクが言及したAIエージェント利用時の責任分界点など、セキュリティとリスク管理に関する重大な課題も浮き彫りになりました。",
     "articles": [
@@ -2570,92 +2656,6 @@
         "published_at": "2026-10-22",
         "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9ubU5WQ3lTRDY5aEhaZkxtRmxWcHBuOGs2ZGdZQmtlY1UtdVVPeUxCWjVfUFlDMkZmaUs4UV9sM3BoZFFHZHN2TDFCSXgwS3U5OU1OVVRacmhqUng3dTFSX3lROA?oc=5",
         "category": "政策・安全"
-      }
-    ]
-  },
-  {
-    "date": "2026-10-21",
-    "daily_summary": "本日のAIニュースは、中国系AIによるサイバー攻撃の激化や、米中市場におけるAI関連株の投資過熱への警戒感・信用不安といった負の側面がクローズアップされ、国内外の株式市場や為替に下落圧力を与えました。一方で、AI議事録ツールの企業浸透の課題やLINEマンガによるAI二次創作機能の発表といった実用・エンタメ分野での模索が進むほか、政治的なインフラ整備の動きも見られ、AI技術の急激な発展と社会実装の間で、安全性、収益性、倫理面をめぐる様々な課題と警戒感が交錯する一日となりました。",
-    "articles": [
-      {
-        "title": "不正アクセス、中国系AI「ARTEX」で日本標的に 金融など業種絞り攻撃",
-        "content": "中国系のAIエージェント「ARTEX」が悪用され、金融などの特定業種を標的にしたサイバー攻撃が国内で行われていることが判明しました。国内の複数企業で情報漏えいや不正アクセスの痕跡が確認されており、AI時代における新たなセキュリティ上の脅威として警戒が強まっています。",
-        "source": "Google News",
-        "published_at": "2026-10-21",
-        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9EV1lhdjROM0R3Y1oybGNpcDVsUUFBTGlMaTAxNTlKd2xjaVp0bV9xYTJUcTF6WEctY3dvZ1BvYW9VNzBVUUJnZ1BVaXlGM0I2QVBheDFIUVE3YXZDcS1EQ3JfQW1fdl9QTXhydg?oc=5",
-        "category": "政策・安全"
-      },
-      {
-        "title": "ＮＹ外為市場＝ドル下落、ＡＩ懸念が重し 円は20年債入札好調で上昇",
-        "content": "ニューヨーク外国為替市場では、AIに関する懸念が重しとなりドルが下落しました。一方、円は良好な結果となった20年債入札を背景に上昇しました。",
-        "source": "Google News",
-        "published_at": "2026-10-21",
-        "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE42QVJtanZGVTlGdUdwd1pqZW5zcnN1NGZuM2MyQXE2bnR2bXAxNEFMTE9VRGRzeGFoWHZaa2d2MGNUWGhwTk5HalQtYUVWODctR0dENjJTZ3FtMnlxcEtWdHloYUxlTnNuOElTV3FCNGlwRnZTMlpHTUxGYW9VUQ?oc=5",
-        "category": "事業・投資"
-      },
-      {
-        "title": "トランプ氏とAI首脳の「自主基準」合意が映す思惑、データセンター推進と迫る中間選挙",
-        "content": "トランプ氏とAI業界の首脳らが自主基準に関する合意に至った背景には、データセンターの推進や迫る中間選挙に向けた政治的思惑が影響しています。AIの発展とインフラ整備をめぐる動向として注目されています。",
-        "source": "Google News",
-        "published_at": "2026-10-21",
-        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9lczJYT3JfT1NnelVDbnhkYUNYbUVNUUxqZ2N6bkZWSTA1UXpvaVRLNzNERVA5Vy0wODI5Z0k3a1o0b0I3emVmOHVFQVlPYm42dzVQekFR?oc=5",
-        "category": "政策・安全"
-      },
-      {
-        "title": "会議の記録を残さない人が50.2％ AI議事録が便利でも企業に浸透しない理由",
-        "content": "キーマンズネットの調査によると、会議の記録を残さない人が50.2％に達することが明らかになりました。AIを活用した便利な議事録ツールが存在するにもかかわらず、なぜ企業への浸透が進まないのか、その背景にある理由について解説しています。",
-        "source": "Google News",
-        "published_at": "2026-10-21",
-        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE0tSkw5cVFxU2U3UzZTa2JXb0RSMmRJTHd4bGY3Vmk5SWhtRUdONkZyVGhMNDAxUHlHb0lZVXRJMVlLWEFZRW96OGs3bDJ6LW53bU15aDNPQUl3U2V0bnBFMXNHemRoQQ?oc=5",
-        "category": "エージェント・開発ツール"
-      },
-      {
-        "title": "LINEマンガ、原作者公認でAIによる二次創作が可能になる新機能を発表",
-        "content": "LINEマンガが、原作者の公認のもとでAIを使用したマンガの二次創作を可能にする新機能を発表しました。これにより、ユーザーは指定された作品をベースにAIを活用した新しい創作活動を手軽に楽しめるようになります。AI技術を活用したコンテンツ展開の新たな試みとして注目されています。",
-        "source": "Google News",
-        "published_at": "2026-10-21",
-        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1Wbk5CZEYyVm5VR3dvYUI1Njl3elowSEVzSTY4MkVyT0oxVDdYLVh5VDZNUXZHRFhhNjBxMWY5ajUxc0VmZnV0cndObExDYTR0Y0E?oc=5",
-        "category": "エージェント・開発ツール"
-      },
-      {
-        "title": "TSMCにも売りが波及、マイクロソフトなどAI投資の採算が問われる",
-        "content": "マイクロソフトなどの大手企業によるAI投資の採算性に対する懸念が強まっており、関連銘柄であるTSMCにも売り注文が波及しています。市場では過剰投資への警戒感が高まり、今後のAI関連ビジネスの収益化に向けた動向が注目されています。",
-        "source": "Google News",
-        "published_at": "2026-10-21",
-        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBITzhuRXRNWDRuT01xYUdyRGRBdTZQQ25JS2FJVUt2UjNoaFlWYkVySEVvUWVNREdDQUxqTk1NLTJPcjZFNUNsTERCVEZHTDd5ZUwwNURyOHNLZw?oc=5",
-        "category": "事業・投資"
-      },
-      {
-        "title": "AI投資減速に警戒感、コアウィーブ巡り米株式市場で信用不安",
-        "content": "米株式市場において、AI特化型クラウド企業であるコアウィーブを巡る信用不安が浮上しています。この懸念からAI投資の過熱に対する減速への警戒感が強まっています。市場参加者の間で今後の動向を注視する動きが広がっています。",
-        "source": "Google News",
-        "published_at": "2026-10-21",
-        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9JdGFSUURtSzdSSkVZQjBNLXpwT0xuSmdDeVI4Yk1mRFplRXdId2pCYllIVGFVOVUwOUxKcTh6d28zaXJ3SEVDelp0bTZhRmVHWE54MnI4OHF4NjdkOHlvTjhnRQ?oc=5",
-        "category": "事業・投資"
-      },
-      {
-        "title": "日経平均は続落、AI関連株中心に売り優勢で終日軟調推移",
-        "content": "本日の株式市場では、日経平均株価が続落となりました。AI関連株を中心に売りが優勢となり、終日軟調な推移が見られました。",
-        "source": "Google News",
-        "published_at": "2026-10-21",
-        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9mYzRRbG50dy00QXg5bS1NYWV0a3NmVU5Dd1hESWNjZFU5RkE3a0NZZHlCMF9tc1ZRNzR0VFo4ZFlVZFNRdm9HUnFaakFnY2Rnb2J5THBmY3BDRnZEMkxKTQ?oc=5",
-        "category": "事業・投資"
-      },
-      {
-        "title": "中国でAI株安、調達ラッシュに変調 「自立自強」戦略の急所に",
-        "content": "中国市場においてAI関連の株式が下落し、過熱していた資金調達の動きに変調が見え始めている。米国の規制に対抗する「自立自強」を掲げる中国のAI戦略にとって、今回の資金調達の停滞は大きな急所となり得る。市場の冷え込みが今後の技術開発や産業全体の成長に影響を与える懸念が強まっている。",
-        "source": "Google News",
-        "published_at": "2026-10-21",
-        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE13b1ZtQmRQTWdJWGtWbDVMVXoyeHRmQXhVX0lzS1AtdHM1ZUVXVlBySm5RRUhTdDhZUTItVlRQeHFRRFlscXRYZ0JwYnFzMXNOQW50aUY0TVNuWWwzNkR2SEpwc2dONWt5M09YVQ?oc=5",
-        "category": "事業・投資"
-      },
-      {
-        "title": "日経平均は続落、AI株含め全体的に低調 安値もみ合いに終始",
-        "content": "東京株式市場で日経平均株価は続落し、AI関連銘柄を含む市場全体が低調な値動きとなりました。終日を通じて安値圏でのもみ合いに終始する展開となりました。",
-        "source": "Google News",
-        "published_at": "2026-10-21",
-        "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNbHByT3RybzkySmx0VVBzdGgxLTc2VVRrV1ZyM28zb3d0MHliQ2JIaWdJek9GeWUxWkpiRUFjXzd6WTY4ZFBMQWswYm9sWmd4aGF2TXhFM29kN1pxQVlKSmthYWdpeUUyU3l6OTJYVzNScU5kbXhnVnZ4ajU4d0l5U00wcHQtQQ?oc=5",
-        "category": "事業・投資"
       }
     ]
   }
