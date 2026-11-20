@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-10-22",
+    "daily_summary": "本日のAIニュースでは、ゲーム開発における人員削減や週休3日制の検討といった労働環境への影響が示される一方、AIを活用したプログラミング言語PHPの脆弱性発見などセキュリティ分野での大きな進展が報じられました。また、米メタの巨額なAI投資や株式市場の好転といった経済的な動きに加え、政府による「AI・デジタル改革原則」の策定方針や、米政府による中国製AIの排除方針など、技術の急速な普及に伴う安全保障や規制の重要性が改めて浮き彫りになる一日となりました。",
+    "articles": [
+      {
+        "title": "「来週から週休3日」AI活用迫る劇薬 ゲーム開発人員30分の1に",
+        "content": "AIの急速な活用により、ゲーム開発における人員数が従来の30分の1にまで減少する可能性が指摘されています。このような技術革新は労働環境の劇的な変化を促し、週休3日制の導入など働き方の見直しを迫る劇薬となっています。",
+        "source": "Google News",
+        "published_at": "2026-10-22",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1pZmtlQzZncS1LZ1VDb3BSQXNObFZVVDNmVFlTSk15dzE4eExaMm9jdlhUQ1k3TmV5SzM1aWNXUjRkb3FuTUtVdDlsQXhuUW1TNnZ1WUVSYzhvV3EwZ2g0cHNpVWxrY3VVcGFaYw?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "【速報】AIの支援を得てPHPの欠陥を発見",
+        "content": "47NEWSによると、AIの支援を活用することでプログラミング言語PHPの欠陥が発見されたとのことです。AI技術の進化がソフトウェアのセキュリティ向上や脆弱性の早期発見にどのように貢献しているかを示す事例です。",
+        "source": "Google News",
+        "published_at": "2026-10-22",
+        "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5UNmphMXFfYkd0cW8wWWVjdjBCb2w1blEyQnhOek5DLUdnSERZV3FBVmFJZlp2MHBjcGZSMjFxcVhTeHdXVENlSi1jTQ?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "「AI・デジタル改革原則」、政府が策定へ…活用と安全対策を強化",
+        "content": "政府は人工知能（AI）やデジタルの活用と安全対策を強化するため、「AI・デジタル改革原則」を策定する方針を固めました。技術革新の推進とリスク管理のバランスを取るための新たな指針となります。",
+        "source": "Google News",
+        "published_at": "2026-10-22",
+        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9GYXVwUUVVZkNYUG9VYXNUbGptblFnMWdvdG1XNkxRZGdUWnhKZmE0bG1XYXJsTndTdFRIVms5Z1hJU19VaGl5SnFfMGVXdGE0ZFlsRWlGbGJ0Q0s2aGlfaC1iRHQwdw?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "米国株式市場はナスダック主導で上昇、決算発表でAI投資への心理が改善",
+        "content": "米国の株式市場はナスダックを中心に上昇しました。企業の決算発表を通じてAI投資に対する市場の心理が改善されたことが背景にあります。投資家の間に前向きな見方が広がっています。",
+        "source": "Google News",
+        "published_at": "2026-10-22",
+        "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQSHR3VTg3U0dpTk9jT240WjZqOTY5TUxhRFk0Ykx4Sm1PQ3hadUZFMzYxUk5nWE1JTlhHdzlWdGNSdlJsQl9DX2ZLbDVzSHcyZ2Q5WU9GeDFldjdJb2VRcEF0dXhlUnlZeVFHR25oVWxpeXdic1FxLVM5b0FoQ1JZS1ZYZ0Y5Zw?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "米メタ、AI投資拡大へ無議決権株発行へ 設備投資下限引き上げ",
+        "content": "米メタはAI関連の投資をさらに拡大するため、無議決権株の発行を計画している。これに伴い、今後の設備投資の下限額を引き上げる方針である。AI分野での競争力強化に向けた同社の積極的な資金調達の動きとして注目されている。",
+        "source": "Google News",
+        "published_at": "2026-10-22",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5JVnVXZGtESmpkNy04NVd3ZDk4bGpkekUyRmRvLVRBVDQ5SWMxTTlmdTBsSDR4OHZ3VllxbG9KOWxvVGlna2J5RmxYNjBSR2wycm5kdnRRcEJIMzc2SU9kSGc4WWZNT3VwUTB0XzE5TFgwV3pmSThkWHdtWndrRWs?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "PHPの脆弱性をOpenAIのAIが発見、今後数カ月で同様の事例が急増する見込み",
+        "content": "OpenAIの人工知能を活用してPHPの脆弱性が発見されました。専門家は、このようなAIによる脆弱性発見の事例が今後数カ月で急増すると予測しています。セキュリティの分野におけるAIの活用とリスク管理の重要性が改めて注目されています。",
+        "source": "Google News",
+        "published_at": "2026-10-22",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBicUUzVEZMLWtJZ21kZGxoY2dicURLZHNPVVg4bE1Vd21URUt0WGRyLTIxMnVYSG5SdlMzTUdkS0cwbXg0UGJhNkIyaW1WLXhkQldNYkRQRkdXb2RCWVFPSGxQYzhXcHJJbUw5cUVVTUtSeWNwQ0hpMGpZdjkxbG8?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "「PHP」の脆弱性、米オープンAIのAIで発見 グーグル傘下企業も独自発見を主張",
+        "content": "プログラミング言語「PHP」の脆弱性が、米オープンAIの人工知能によって発見されたことが報じられました。さらに、米グーグル傘下の企業も同様の脆弱性を独自に発見していたと主張しています。AIの活用がセキュリティ分野の脆弱性発見において重要な役割を果たし始めている事を示しています。",
+        "source": "Google News",
+        "published_at": "2026-10-22",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE0xNWpaUC1sdHFIV2RHN3RyUHota0xXU3dGVHFpLW9QRVlzLWswLU9mdkpHZVdRekhHLU5jQlVlSndqSW5DSUF3aDZmZHhGS0xNQWEyT3lvQmtiSWVsa0JqR254RUJ2YnZSVTBjZHpKXzJEUnFfMnBvT2Z2dnNqSVk?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "PHPの重大脆弱性「PHP2Shell」はAIを活用して発見・対策されていたことが判明",
+        "content": "PHPの重大な脆弱性である「PHP2Shell」は、セキュリティ企業のCalifとWizがAIを用いて発見しました。さらに、その対策にはOpenAIの枠組みが使用されていたことが明らかになっています。",
+        "source": "Google News",
+        "published_at": "2026-10-22",
+        "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9Bc3Y5OUtYd2hlQndPQ2ZsNmZMNnNPem1vQURRRGU2NHAzd3U1OVdndVNyOEpEc3JjV3FGWGR5MzF2MTRKblhpV3UzeGc4c3NRcl91WHZreVljSU1BakxiMVdFU0NlekJNbkN0eHNzaw?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "台風30号の数値シミュレーションの変化：AI予測モデルの計算結果が安定",
+        "content": "ウェザーニュースは、台風30号に関する数値シミュレーションの変化を報じた。今回の発表では、AIを活用した予測モデルによる計算結果が安定してきたことが示されている。",
+        "source": "Google News",
+        "published_at": "2026-10-22",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBPY3Z4SnZVV0x5R3JXTGlzSm93RmU4R241Z0N6TEZHdDdnamtkRmpVbVZseDcwWFhuY1NEVjJ5LWFhRjhTUDRTeUNDSDFSb1JSM212dw?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "ディープシーク製AI排除、機密情報漏えい懸念で米政府が方針 中国は反発",
+        "content": "米政府は中国のディープシーク製AIの排除に動き出し、機密情報の漏えいに対する懸念を示している。これに対し、中国側は強く反発している。AI技術をめぐる米中間の安全保障上の緊張がさらに高まっている。",
+        "source": "Google News",
+        "published_at": "2026-10-22",
+        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9ubU5WQ3lTRDY5aEhaZkxtRmxWcHBuOGs2ZGdZQmtlY1UtdVVPeUxCWjVfUFlDMkZmaUs4UV9sM3BoZFFHZHN2TDFCSXgwS3U5OU1OVVRacmhqUng3dTFSX3lROA?oc=5",
+        "category": "政策・安全"
+      }
+    ]
+  },
+  {
     "date": "2026-10-21",
     "daily_summary": "本日のAIニュースは、中国系AIによるサイバー攻撃の激化や、米中市場におけるAI関連株の投資過熱への警戒感・信用不安といった負の側面がクローズアップされ、国内外の株式市場や為替に下落圧力を与えました。一方で、AI議事録ツールの企業浸透の課題やLINEマンガによるAI二次創作機能の発表といった実用・エンタメ分野での模索が進むほか、政治的なインフラ整備の動きも見られ、AI技術の急激な発展と社会実装の間で、安全性、収益性、倫理面をめぐる様々な課題と警戒感が交錯する一日となりました。",
     "articles": [
