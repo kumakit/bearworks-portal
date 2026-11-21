@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-10-23",
+    "daily_summary": "本日のAIニュースでは、AIの進化がもたらす「セキュリティの光と影」が大きくクローズアップされました。オープンソースの重大な脆弱性発見やオラクルの新基盤発表など業務効率化や解析での活用が進む一方で、わずか15秒での個人情報抽出や、中国政府系ハッカー集団によるAIを活用した大規模なサイバー攻撃など、悪用リスクの増大に対する警戒と対策の急務さが浮き彫りになっています。また、AIエージェントを前提としたSaaSへの転換やGoogle「Gemini」の新機能など、ビジネスや利便性の面でも新たな展開が見られる一日となりました。",
+    "articles": [
+      {
+        "title": "情報抜き取りに15秒 悪用指摘のAI",
+        "content": "わずか15秒で個人情報を抜き取ることができるAIが登場し、その悪用リスクについて専門家から指摘が上がっています。セキュリティ上の脅威が増大する中、対策の強化が急務となっています。",
+        "source": "Google News",
+        "published_at": "2026-10-23",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9RZXBmT1RiR3BkaDYxMjdaQ0dsWjJaQnRuNk5PVHNKblBtYmstY2R1cnJkVnlEUEF5cmxxc2VIaTRoSUVTd3Z6WERpN09wV3BG?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "PHPの重大な脆弱性を米OpenAIのAIが発見、長年放置されていた欠陥を露呈",
+        "content": "プログラミング言語PHPに長年放置されていた重大な欠陥が、米OpenAIのAIを活用して発見されました。この脆弱性の発覚により世界中でサイトが一時停止するなどの影響が出ており、AIがセキュリティ分野の解析において強力なツールとなることを示しています。",
+        "source": "Google News",
+        "published_at": "2026-10-23",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1PbUtOcnZIdG1TbVBsU25tZlNCeFBVeXJBNjQ0UTMwZjJLejhaS0ZqWUg2UEdoVExJRy12bEgtcHFBVjZNQ3pPT3dfbE9rVGYx?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "シリコンバレーの話題の主役｢AIエージェントスタートアップ｣に立ちはだかる",
+        "content": "シリコンバレーで注目を集めるAIエージェント関連のスタートアップ企業が、市場において直面する課題について解説しています。顧客からの信頼を獲得することの難しさや、既存のシステムや市場の「門番」を突破するハードルが浮き彫りになっています。",
+        "source": "Google News",
+        "published_at": "2026-10-23",
+        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBqM2EyWVFiZG1wM0FlbUQtSEkzSzhZMV96TDJpTUtoN0hfd3ZJRFBJbG4tNUNULWJBdWlIajVBcFhKa3JndHZ6WXZrRHBmM2lZU05rZ0EtXzFNenhocXJB?oc=5",
+        "category": "事業・投資"
+      },
+      {
+        "title": "オラクル、業種別アプリ向けにAIエージェント基盤を発表 8業種に対応しMCPも利用可",
+        "content": "オラクルは、8つの業種別アプリケーション向けにAIエージェント基盤を発表しました。この新しい基盤ではMCP（Model Context Protocol）も利用可能となっており、業務効率化や自動化の高度化が期待されます。",
+        "source": "Google News",
+        "published_at": "2026-10-23",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBjMHVjMzNKWFlFaVJkalFTZk91ZHAzTGs3N2ZEc1V0SFNKdG1JNF85bnVRVTZ6ZG1pWGZYbGQxVkRLQkluUVNLbml5NDFiUWJnMlJ4a3pwTHNlalJoR1NBVzFLTHhrQkNzWjhWSWVpam5BOEM2VURnRU5zTWh4LTQ?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "SaaSは死なずAIエージェント前提に転生、データ不足や高コストに注意",
+        "content": "従来のSaaSはAIエージェントを前提としたビジネスモデルへと進化を遂げつつあります。しかしその一方で、学習データの不足や運用に伴う高コストといった課題にも注意が必要です。今後のITビジネスにおいて、エージェント活用とコスト・データのバランスが重要な鍵となります。",
+        "source": "Google News",
+        "published_at": "2026-10-23",
+        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPU0N3MEJKU0pzdGlaSkFnSTB4UFpkcTEySURnZE5vRmJOR1RiU3ZGWUlYRUd4WGFLa0RPNXN1OS1GTklqUW9LdHR1WGpSb29QcUZBc1pTLU96ZFdjRHlnay1TZDdrR1loLXZYbDh4cTBpUFVaMENqM0c4MF9tSlg4dHR6OGZDWGtMN01FSFk1Mlo?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "Google「Gemini」に新メニュー「Customize」、AIの指示や外部アプリ連携を一元管理",
+        "content": "GoogleのAIアシスタント「Gemini」に新メニュー「Customize」が追加されました。これにより、AIへの指示や外部アプリケーションとの連携を一元管理できるようになり、ユーザビリティが向上します。設定のカスタマイズがよりスムーズに行えるようになります。",
+        "source": "Google News",
+        "published_at": "2026-10-23",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9sdEthZ2d5ZVBDQXk3Tm4yQ2FKalp3Z3RGeUVoT2tHQlZwcndIaEpycTJmejRhSXAwektUZVAxMkpLUGFjeFN0eEZicy1TTDRZa3RYZzVKaXdQWS0tdmF6NVUydHN3elE?oc=5",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "世界のAI研究者・開発者は何を追っているか、9月の人気論文2000本超を分析",
+        "content": "この記事では、9月に発表された2000本を超えるAI関連の論文を分析し、世界の研究者や開発者が注目しているトレンドを明らかにしています。最先端のAI研究における関心の向かう先や、技術的な動向が詳しく解説されています。",
+        "source": "Google News",
+        "published_at": "2026-10-23",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE53WllFZWg2bVNMQnltbktzNWxvYXpnbm9PeU8xMDZ5cTlVdzRxZXpBQTE4UjlQaEc3YlhZd2tuTUhYcFczc0FSc0tqcmVKRmVSQUg3TkNVcDdFNnhSTTFsQVVsLU1kaWp3MFlIcg?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "中国政府関係のハッカー集団が大規模サイバー攻撃、AIで世界数百の企業・組織に",
+        "content": "中国政府に関連するハッカー集団が、人工知能（AI）を活用して世界中の数百に及ぶ企業や組織に対して大規模なサイバー攻撃を行っていたことが、米マイクロソフトの記録により確認されました。AIの導入により、攻撃の効率化や高度化が懸念されており、国際的な警戒が強まっています。",
+        "source": "Google News",
+        "published_at": "2026-10-23",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5MNUdDN3NDbEdWVHQwSWJpTXowcDFCVW5vdkh0RzJzVkxqSEVtNDJIMU8yTTNpeHhHcUI4WDZiNGw2NFFBX3pvTV8zU21ubDBPc2xCTGVlLUZ5aDFpZnZQdWZ3?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "中国政府系ハッカー集団、AI「ARTEX」で攻撃 マイクロソフトが確認",
+        "content": "マイクロソフト社は、中国政府系のハッカー集団が人工知能（AI）ツール「ARTEX」を利用してサイバー攻撃を行っていることを確認したと発表しました。AI技術の悪用による脅威の高度化が懸念されており、セキュリティ対策の強化が急務となっています。",
+        "source": "Google News",
+        "published_at": "2026-10-23",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE0xOGp5M2JJUnZqQmRoUmJHMWRsSFpUOU5TYmV5WVNBOGtpazFKRm5VR3QzSDZJTGt5MU9rTmItdGZ1cWpacG4zUUFocTZIVTRONVZGZHJieUxVT3BfUDlZWE9zRTJOTVdyYk5jNA?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "中国政府系組織がAIを活用してサイバー攻撃を行っているとマイクロソフトが発表",
+        "content": "マイクロソフトは、中国政府に関連する攻撃グループが生成AI技術をサイバー攻撃や情報工作に悪用していると発表しました。攻撃者は標的の調査や不正コードの作成、世論誘導などにAIを利用していると警鐘を鳴らしています。AI技術の急速な発展に伴うセキュリティ上の脅威について、警戒感が高まっています。",
+        "source": "Google News",
+        "published_at": "2026-10-23",
+        "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFB4R2o3Q3BhWFRRLUVaWG45Wi1YVE85cTI5VzY4X2ZhbnE2bU5wNUt6UlV1SjZ5enhKUDNWVlNmQkVtOUREQ0tsa3V3OA?oc=5",
+        "category": "政策・安全"
+      }
+    ]
+  },
+  {
     "date": "2026-10-22",
     "daily_summary": "本日のAIニュースでは、ゲーム開発における人員削減や週休3日制の検討といった労働環境への影響が示される一方、AIを活用したプログラミング言語PHPの脆弱性発見などセキュリティ分野での大きな進展が報じられました。また、米メタの巨額なAI投資や株式市場の好転といった経済的な動きに加え、政府による「AI・デジタル改革原則」の策定方針や、米政府による中国製AIの排除方針など、技術の急速な普及に伴う安全保障や規制の重要性が改めて浮き彫りになる一日となりました。",
     "articles": [

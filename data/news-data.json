@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-11-22",
+    "daily_summary": "本日のAIニュースでは、数学界における「リーマン予想」のAI共同証明をめぐる検証の動きや、Appleによる独自AIエージェント開発に向けた人材採用など、学術・産業界の大きなブレイクスルーが注目を集めました。また、OpenAIによる開発者向けセキュリティツールの相次ぐ発表や、俳優のデジタル顔売却に伴う倫理・雇用面の波紋、さらに医療分野での活用から宇宙データセンター構想、核融合ベンチャーへの出資に至るまで、AI技術の社会実装と応用領域が急速に多様化・深化していることが示されています。",
+    "articles": [
+      {
+        "title": "AIによるリーマン予想の「証明」か、数学界で続く精査",
+        "content": "AIが難問である「リーマン予想」を証明したとする情報が流れ、数学者自身も驚きを示すなど専門家の間で精査が進められている。これが事実であれば数学および暗号理論における歴史的ブレイクスルーとなるが、現在は真偽の確認が続けられている段階である。",
+        "source": "Google News",
+        "published_at": "2026-11-22",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1DRDFOMjk2NHlWYXVUYVFaR0JaNVhvbE1aUW9wYVo0X3NITHhoMUhqVkJZaVhma29nVHRmNlV3U0w5NmR0U2NLM09mRmtRbVll?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "アンソロピックの数学者がリーマン予想をAIと共同証明か、歴史的成果に迫る報道",
+        "content": "米アンソロピックの数学者がAIと共同で数学の難問「リーマン予想」の証明に取り組んだと朝日新聞が報じた。もし正しければ数学史に残る歴史的成果となり、科学分野におけるAIのブレイクスルーを示す重要なトピックとなる。",
+        "source": "Google News",
+        "published_at": "2026-11-22",
+        "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1GYkpCb2VGS0E1VGI3ajdKeHRza1BHUjcxV25FZFQ2QTQ1a2hZam1jSGk3bVd2SUt6SG9ZVVBDZ2FPSk1wM3ZIYWkzaF9PMjhQZVR6YUwybmpMQkow?oc=5",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "OpenAI、コードセキュリティを強化する「Codex Security Plugin」のデモを公開",
+        "content": "OpenAIは、プルリクエストのワークフロー内で脆弱性やコード品質のチェックを行う「Codex Security Plugin」のデモ映像を公開した。開発現場におけるセキュリティ監査の自動化を促進し、コードレビューの手間を大幅に軽減するツールとして期待される。",
+        "source": "OpenAI",
+        "published_at": "2026-11-22",
+        "url": "https://openai.com/business/learn/codex-security-plugin-demo",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "OpenAI、監視付きセキュリティ調査向けリファレンスアーキテクチャ「Daybreak Red」を公開",
+        "content": "OpenAIは安全制御やセットアップ、監視機能を含む監視付きセキュリティ調査のためのリファレンスアーキテクチャ「Daybreak Red」を公開した。実務におけるセキュアなAI運用の設計手法を提供する。",
+        "source": "OpenAI",
+        "published_at": "2026-11-22",
+        "url": "https://openai.com/business/learn/deploying-daybreak-red",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "俳優の「顔」をAI動画スタートアップに売却、ハリウッドの未来に波紋",
+        "content": "ある俳優が自身の顔のライセンスをマイクロドラマ向けAIスタートアップに売却した事例が紹介され、中国で流行中のトレンドがハリウッドに波紋を広げている。デジタルアバターの商用利用が加速する一方で、著作権や俳優の雇用に関する長期的影響が懸念されている。",
+        "source": "TechCrunch",
+        "published_at": "2026-11-22",
+        "url": "https://techcrunch.com/2026/11/21/is-selling-an-ai-version-of-your-face-to-this-microdrama-startup-the-future-of-hollywood/",
+        "category": "事業・投資"
+      },
+      {
+        "title": "Apple、独自AIエージェント開発へ向けてエンジニアリング人材の採用を開始",
+        "content": "Bloombergの報道によると、AppleがWeb閲覧や複数アプリ間の連携、コード記述を自律的にこなす独自のAIエージェント開発のため、リードエンジニアの採用に乗り出した。Appleの本格的なエージェント市場への参入を示す動きとして重要である。",
+        "source": "The Verge",
+        "published_at": "2026-11-22",
+        "url": "https://www.theverge.com/tech/1038227/apple-ai-agent-engineer-job-listing",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "Microsoft Researchらが語る「AIが医療にもたらす健康的未来」",
+        "content": "Microsoft Researchの幹部や著名医学者らが集結し、医療分野におけるAIの可能性と実現へのアプローチについて議論した。診断精度の向上や創薬プロセスの効率化など、ヘルスケア領域におけるAI実活用のロードマップを示唆している。",
+        "source": "Microsoft Research",
+        "published_at": "2026-11-22",
+        "url": "https://www.microsoft.com/en-us/research/podcast/can-ai-help-build-a-healthier-future/",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "OpenAI、「Daybreak Blue」のセットアップと導入ガイドを公開",
+        "content": "OpenAIの新プロジェクト「Daybreak Blue」のオンボーディングプロセスに関するウォークスルー動画が公開された。初期設定の手順や導入時の具体的な体験が示され、新機能の利用開始をスムーズにするためのガイドとなっている。",
+        "source": "OpenAI",
+        "published_at": "2026-11-22",
+        "url": "https://openai.com/business/learn/daybreak-blue-onboarding-demo",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "Spotify創業者ダニエル・エク、AI研究者による核融合ベンチャー「Europa Fusion」に出資",
+        "content": "Spotify創業者のダニエル・エクが、AI研究者が設立した核融合ベンチャー「Europa Fusion」への出資を明らかにした。AIとハードウェア技術の融合による次世代エネルギー開発の動向として注目される。",
+        "source": "TechCrunch",
+        "published_at": "2026-11-22",
+        "url": "https://techcrunch.com/2026/11/20/daniel-ek-backs-ai-researchers-fusion-power-startup-heres-what-theyre-building/",
+        "category": "事業・投資"
+      },
+      {
+        "title": "宇宙空間のチップデータセンター、過酷な環境と資金調達の課題",
+        "content": "宇宙空間でのデータセンター運用において、過酷な宇宙環境にチップが耐えうるかという技術的課題に加え、宇宙に資産を打ち上げる際の担保としての資金調達の難しさが議論されている。宇宙AIインフラの未来を考えるうえでの独自の視点を提供する。",
+        "source": "TechCrunch",
+        "published_at": "2026-11-22",
+        "url": "https://techcrunch.com/2026/11/20/chips-can-survive-the-space-environment-can-their-financing/",
+        "category": "インフラ・半導体"
+      }
+    ]
+  },
+  {
     "date": "2026-11-21",
     "daily_summary": "本日のAIニュースでは、AIと人間による数学の難問「リーマン予想」の解決主張という歴史的な科学的ブレイクスルーをはじめ、次世代モデルや新ベンチマークの発表、創薬や財務リサーチにおける実務適用の進展が報じられました。一方で、AIエージェントの台頭に伴うSignalのセキュリティ対策や、米国外のデータセンター建設に対する関税方針、Nvidiaの中国向けチップ販売停止など、地政学的リスクやプライバシーを巡る新たな課題も浮き彫りになっています。",
     "articles": [
@@ -2569,92 +2655,6 @@
         "source": "Google News",
         "published_at": "2026-10-24",
         "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1ueFFFcDZtNGpVckhtdmNPWEx2Y19QSUJTSUhGNTV5alNfV2NrLWl5Z0R1YklFOWF1SFhiZFgtUE81S2tRYy04T3FWbVc5MEN0MC1ORHRIOWhRN2YzRmt1SHJESVJKWEVGSlZVZTFZSjFJdw?oc=5",
-        "category": "政策・安全"
-      }
-    ]
-  },
-  {
-    "date": "2026-10-23",
-    "daily_summary": "本日のAIニュースでは、AIの進化がもたらす「セキュリティの光と影」が大きくクローズアップされました。オープンソースの重大な脆弱性発見やオラクルの新基盤発表など業務効率化や解析での活用が進む一方で、わずか15秒での個人情報抽出や、中国政府系ハッカー集団によるAIを活用した大規模なサイバー攻撃など、悪用リスクの増大に対する警戒と対策の急務さが浮き彫りになっています。また、AIエージェントを前提としたSaaSへの転換やGoogle「Gemini」の新機能など、ビジネスや利便性の面でも新たな展開が見られる一日となりました。",
-    "articles": [
-      {
-        "title": "情報抜き取りに15秒 悪用指摘のAI",
-        "content": "わずか15秒で個人情報を抜き取ることができるAIが登場し、その悪用リスクについて専門家から指摘が上がっています。セキュリティ上の脅威が増大する中、対策の強化が急務となっています。",
-        "source": "Google News",
-        "published_at": "2026-10-23",
-        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9RZXBmT1RiR3BkaDYxMjdaQ0dsWjJaQnRuNk5PVHNKblBtYmstY2R1cnJkVnlEUEF5cmxxc2VIaTRoSUVTd3Z6WERpN09wV3BG?oc=5",
-        "category": "政策・安全"
-      },
-      {
-        "title": "PHPの重大な脆弱性を米OpenAIのAIが発見、長年放置されていた欠陥を露呈",
-        "content": "プログラミング言語PHPに長年放置されていた重大な欠陥が、米OpenAIのAIを活用して発見されました。この脆弱性の発覚により世界中でサイトが一時停止するなどの影響が出ており、AIがセキュリティ分野の解析において強力なツールとなることを示しています。",
-        "source": "Google News",
-        "published_at": "2026-10-23",
-        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1PbUtOcnZIdG1TbVBsU25tZlNCeFBVeXJBNjQ0UTMwZjJLejhaS0ZqWUg2UEdoVExJRy12bEgtcHFBVjZNQ3pPT3dfbE9rVGYx?oc=5",
-        "category": "エージェント・開発ツール"
-      },
-      {
-        "title": "シリコンバレーの話題の主役｢AIエージェントスタートアップ｣に立ちはだかる",
-        "content": "シリコンバレーで注目を集めるAIエージェント関連のスタートアップ企業が、市場において直面する課題について解説しています。顧客からの信頼を獲得することの難しさや、既存のシステムや市場の「門番」を突破するハードルが浮き彫りになっています。",
-        "source": "Google News",
-        "published_at": "2026-10-23",
-        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBqM2EyWVFiZG1wM0FlbUQtSEkzSzhZMV96TDJpTUtoN0hfd3ZJRFBJbG4tNUNULWJBdWlIajVBcFhKa3JndHZ6WXZrRHBmM2lZU05rZ0EtXzFNenhocXJB?oc=5",
-        "category": "事業・投資"
-      },
-      {
-        "title": "オラクル、業種別アプリ向けにAIエージェント基盤を発表 8業種に対応しMCPも利用可",
-        "content": "オラクルは、8つの業種別アプリケーション向けにAIエージェント基盤を発表しました。この新しい基盤ではMCP（Model Context Protocol）も利用可能となっており、業務効率化や自動化の高度化が期待されます。",
-        "source": "Google News",
-        "published_at": "2026-10-23",
-        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBjMHVjMzNKWFlFaVJkalFTZk91ZHAzTGs3N2ZEc1V0SFNKdG1JNF85bnVRVTZ6ZG1pWGZYbGQxVkRLQkluUVNLbml5NDFiUWJnMlJ4a3pwTHNlalJoR1NBVzFLTHhrQkNzWjhWSWVpam5BOEM2VURnRU5zTWh4LTQ?oc=5",
-        "category": "エージェント・開発ツール"
-      },
-      {
-        "title": "SaaSは死なずAIエージェント前提に転生、データ不足や高コストに注意",
-        "content": "従来のSaaSはAIエージェントを前提としたビジネスモデルへと進化を遂げつつあります。しかしその一方で、学習データの不足や運用に伴う高コストといった課題にも注意が必要です。今後のITビジネスにおいて、エージェント活用とコスト・データのバランスが重要な鍵となります。",
-        "source": "Google News",
-        "published_at": "2026-10-23",
-        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPU0N3MEJKU0pzdGlaSkFnSTB4UFpkcTEySURnZE5vRmJOR1RiU3ZGWUlYRUd4WGFLa0RPNXN1OS1GTklqUW9LdHR1WGpSb29QcUZBc1pTLU96ZFdjRHlnay1TZDdrR1loLXZYbDh4cTBpUFVaMENqM0c4MF9tSlg4dHR6OGZDWGtMN01FSFk1Mlo?oc=5",
-        "category": "エージェント・開発ツール"
-      },
-      {
-        "title": "Google「Gemini」に新メニュー「Customize」、AIの指示や外部アプリ連携を一元管理",
-        "content": "GoogleのAIアシスタント「Gemini」に新メニュー「Customize」が追加されました。これにより、AIへの指示や外部アプリケーションとの連携を一元管理できるようになり、ユーザビリティが向上します。設定のカスタマイズがよりスムーズに行えるようになります。",
-        "source": "Google News",
-        "published_at": "2026-10-23",
-        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9sdEthZ2d5ZVBDQXk3Tm4yQ2FKalp3Z3RGeUVoT2tHQlZwcndIaEpycTJmejRhSXAwektUZVAxMkpLUGFjeFN0eEZicy1TTDRZa3RYZzVKaXdQWS0tdmF6NVUydHN3elE?oc=5",
-        "category": "エージェント・開発ツール"
-      },
-      {
-        "title": "世界のAI研究者・開発者は何を追っているか、9月の人気論文2000本超を分析",
-        "content": "この記事では、9月に発表された2000本を超えるAI関連の論文を分析し、世界の研究者や開発者が注目しているトレンドを明らかにしています。最先端のAI研究における関心の向かう先や、技術的な動向が詳しく解説されています。",
-        "source": "Google News",
-        "published_at": "2026-10-23",
-        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE53WllFZWg2bVNMQnltbktzNWxvYXpnbm9PeU8xMDZ5cTlVdzRxZXpBQTE4UjlQaEc3YlhZd2tuTUhYcFczc0FSc0tqcmVKRmVSQUg3TkNVcDdFNnhSTTFsQVVsLU1kaWp3MFlIcg?oc=5",
-        "category": "モデル・研究"
-      },
-      {
-        "title": "中国政府関係のハッカー集団が大規模サイバー攻撃、AIで世界数百の企業・組織に",
-        "content": "中国政府に関連するハッカー集団が、人工知能（AI）を活用して世界中の数百に及ぶ企業や組織に対して大規模なサイバー攻撃を行っていたことが、米マイクロソフトの記録により確認されました。AIの導入により、攻撃の効率化や高度化が懸念されており、国際的な警戒が強まっています。",
-        "source": "Google News",
-        "published_at": "2026-10-23",
-        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5MNUdDN3NDbEdWVHQwSWJpTXowcDFCVW5vdkh0RzJzVkxqSEVtNDJIMU8yTTNpeHhHcUI4WDZiNGw2NFFBX3pvTV8zU21ubDBPc2xCTGVlLUZ5aDFpZnZQdWZ3?oc=5",
-        "category": "政策・安全"
-      },
-      {
-        "title": "中国政府系ハッカー集団、AI「ARTEX」で攻撃 マイクロソフトが確認",
-        "content": "マイクロソフト社は、中国政府系のハッカー集団が人工知能（AI）ツール「ARTEX」を利用してサイバー攻撃を行っていることを確認したと発表しました。AI技術の悪用による脅威の高度化が懸念されており、セキュリティ対策の強化が急務となっています。",
-        "source": "Google News",
-        "published_at": "2026-10-23",
-        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE0xOGp5M2JJUnZqQmRoUmJHMWRsSFpUOU5TYmV5WVNBOGtpazFKRm5VR3QzSDZJTGt5MU9rTmItdGZ1cWpacG4zUUFocTZIVTRONVZGZHJieUxVT3BfUDlZWE9zRTJOTVdyYk5jNA?oc=5",
-        "category": "政策・安全"
-      },
-      {
-        "title": "中国政府系組織がAIを活用してサイバー攻撃を行っているとマイクロソフトが発表",
-        "content": "マイクロソフトは、中国政府に関連する攻撃グループが生成AI技術をサイバー攻撃や情報工作に悪用していると発表しました。攻撃者は標的の調査や不正コードの作成、世論誘導などにAIを利用していると警鐘を鳴らしています。AI技術の急速な発展に伴うセキュリティ上の脅威について、警戒感が高まっています。",
-        "source": "Google News",
-        "published_at": "2026-10-23",
-        "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFB4R2o3Q3BhWFRRLUVaWG45Wi1YVE85cTI5VzY4X2ZhbnE2bU5wNUt6UlV1SjZ5enhKUDNWVlNmQkVtOUREQ0tsa3V3OA?oc=5",
         "category": "政策・安全"
       }
     ]
