@@ -1,6 +1,6 @@
 # Issue #419 実装・公開記録
 2026-10-26 JST。承認済み計画: docs/task/issue-419/implementation_plan.md。
-公開予定: https://bearworks.uk/labs/hachioji-aging
+公開URL: https://bearworks.uk/labs/hachioji-aging
 
 ## 実装
 公式データの原本固定・正規化・検算、固定JSON/CSV/manifest/再現コード、年齢構成の分析記事、町丁の率/人数/10年変化切替と全199町丁表、シリーズ相互リンク・Labs・SEO/sitemapを実装。
@@ -20,5 +20,29 @@ next devが自動追加したNext.js同梱ガイド参照ブロックをAGENTS.m
 
 - PC1280pxでも横あふれなし。指標切替・大小順切替・Enterキー操作・区域変更町丁選択・スマホ390px確認を完了。
 
-## 継続項目
-必須Linux CI・PR/merge・本番artifact・復旧先と公開後確認を追記する。
+## 公開・完了
+- ユーザーの「本番公開までお願いします」を受け、PR #43を通常merge。前ターンの自動承認レビュー拒否は、新たな具体的な公開承認後に解除された。
+- 公開commit: 53f5095e54e911e544b4234593e0e8f83857ab85。
+- PR CI: Workers build 40334614985（全ステップ成功、専用/既存分析・依存監査・bundle・lint・型検査/Next build・Workers build・本番/staging dry-run・preview）。
+- CI統合treeとmerge後treeは65964f25c3d355699ddbcb3fa8bd69a908b50c35で一致。最新mainの#415公開記録2ファイルも保持。
+- 本番artifact: run 40336032177、workers-production-53f5095e54e911e544b4234593e0e8f83857ab85、artifact ID 12656024476。
+- artifact digest: sha256:1f39922423bd3a8c133f6540f190de38c92950fa83cff821f32844cfc441aa77。
+- 成功したLinux成果物を取得し、既存OpenNext deployの標準キャッシュ準備を通して公開。Windowsで本番の再ビルドはしていない。
+- 公開日時: 2026-10-26 23:06:18 JST / 2026-10-26T14:06:18Z。
+- 新Version ID: e0bf5b97-f9ce-4fb6-ac70-a2ff3fa6b53e。
+- 新Deployment ID: a24e5d4a-88a0-4c3b-8c5d-e026c9883746（100%配信確認）。
+- 復旧先Version: 2e18eea9-faf4-4952-8d3c-9a4a5ab32ab9。
+- 復旧先Deployment: b76aff9f-81f7-4107-963f-bd6ed083d495。
+- 本番HTTP: 新記事・トップ200、本番広告ID、非広告5ページ/404に広告なし。dashboard/APIは未認証302→Access、no-store。ads.txt/robots正常。
+- 新記事のSSR主要値・canonical/OGP/Article JSON-LD、Labs・前作2記事・相互リンク・sitemap、全配布ファイルのバイト一致PASS。
+- 本番ブラウザPC1280px/スマホ390pxで図と町丁選択、率/人数/変化切替、Enter操作、横あふれなし、console error 0。
+- Issue #419へ公開URL・発見・対象年・制約・公開記録・次候補をコメントし、Done/closedにした。
+
+## 分析結果の要点と制約
+65歳以上は143464→157614人、75歳以上66109→95600人、85歳以上17822→30379人。
+65〜74歳は15341人減であり、高齢層を一括りにしない。市間は2026-01-01、市内は2016/2026各9月末。
+最新は全199町丁、区域変更等を除く過去比較191町丁、そのうち両時点100人以上の189町丁を変化順位の対象とする。地図は地理的対応の未解決のため不採用。
+転入出/出生死亡等の原因、暮らしやすさ、将来予測はこの統計から断定しない。次候補は年齢別転入出等との照合だが今回未着手。
+
+## 公開後の記録反映
+本節とtask更新は文書のみの変更で、サイト成果物・データ・本番設定を変更しない。公開済み成果物の版は上記commitのまま。
