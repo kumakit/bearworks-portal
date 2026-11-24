@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-11-25",
+    "daily_summary": "本日のAIニュースは、OpenAIとCiscoによるLinux向けセキュリティランタイム「Shirudo」の発表やiFoodによる大規模コーディングエージェントの展開といった技術の実用化が進む一方、Tidalによる生成AI楽曲の全面禁止やAnthropicの株価下落に見られる市場の警戒感など、AIの普及と産業化における光と影が浮き彫りとなった一日でした。",
+    "articles": [
+      {
+        "title": "OpenAIとCiscoがLinux向けオープンソースランタイム「Shirudo」を発表",
+        "content": "OpenAIとCiscoが共同で、Linux向けのオープンソースランタイム「Shirudo」を発表しました。パッチ適用時のシステム保護を支援し、実運用環境での安全性を高めるため、インフラ管理やセキュリティ担当エンジニアにとって非常に実用的です。",
+        "source": "OpenAI",
+        "published_at": "2026-11-25",
+        "url": "https://openai.com/index/introducing-shirudo",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "iFood、1万5,000リポジトリにコーディングエージェントを大規模展開した手法を公開",
+        "content": "iFoodが1万5,000を超えるコードリポジトリにコーディングエージェントをスケールさせた実践的な手法と知見を公開した。大規模なソフトウェア開発組織におけるAIエージェントの全社展開のベストプラクティスとして非常に価値が高い。",
+        "source": "OpenAI",
+        "published_at": "2026-11-25",
+        "url": "https://openai.com/business/customer-stories/ifood",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "アマチュア天文家がOpenAIのAstraとCodexを活用し新たな系外惑星候補を発見",
+        "content": "2名のアマチュア天文家がNASAのケプラーおよびTESS宇宙望遠鏡の公開データから、OpenAIのAstraとCodexを用いて新たな系外惑星の候補を発見した。大規模言語モデルやAIエージェントが、専門知識が必要な天文学のデータ解析においても強力なツールとして機能することを示している。",
+        "source": "OpenAI",
+        "published_at": "2026-11-25",
+        "url": "https://openai.com/index/searching-for-distant-planets-with-astra",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "Hugging Face、Isaac LabとNewtonを用いたSim2Realの障害物回避ワークフローを公開",
+        "content": "Hugging FaceがIsaac LabとNewtonを活用したマイクロダックの障害物回避に関するSim2Realワークフローを公開した。ロボティクス分野におけるシミュレーションから実世界への移行を効率化する実用的な手法を提供する。",
+        "source": "Hugging Face",
+        "published_at": "2026-11-25",
+        "url": "https://huggingface.co/blog/nvidia/microduck-obstacle-avoidance",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "Tidal、12月9日から生成AI楽曲の全面禁止と毎日数万曲の自動削除を発表",
+        "content": "音楽配信サービスのTidalが12月9日から生成AIによる楽曲の禁止に踏み切り、約2,900万曲の削除および毎日8万〜8万5,000曲の拒否を行う方針を明らかにした。プラットフォーム側による生成AIコンテンツの排除方針として極めて大規模かつ厳しい措置である。",
+        "source": "The Verge",
+        "published_at": "2026-11-25",
+        "url": "https://www.theverge.com/entertainment/1041362/tidal-ai-music-ban",
+        "category": "政策・安全"
+      },
+      {
+        "title": "OpenAI、Web調査や提案書作成を自動化する「Intentful」の活用事例を公開",
+        "content": "ユーザーのAIアシスタント「Aria」を活用してWeb調査の実行や提案書の作成、メッセージのプロアクティブなフラグ立てを行うIntentfulの事例が公開された。日常的なデスクワークにおけるAIエージェントの具体的な生産性向上の形を示している。",
+        "source": "OpenAI",
+        "published_at": "2026-11-25",
+        "url": "https://openai.com/business/customer-stories/intentful-dots",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "OpenAIアルトマンが警告、AIエージェント時代に職場が整えるべき6つの備え",
+        "content": "OpenAIのサム・アルトマンがAIエージェントの普及に伴う職場の変化について「非常にまずい」と警鐘を鳴らし、企業が事前に整えるべき6つの備えを指摘した。実務現場においてAIエージェント導入時のセキュリティや組織体制の見直しが急務であることを示している。",
+        "source": "Google News",
+        "published_at": "2026-11-25",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE02NWRLNklqaUhRS0JDT21scDM5NmN2RmUycnB4dHEzY2wzWml1dFpPZGVlRWEtTVlPV1RUa2RQVlg1Y2lXcm5DNVc5a09pR1p3SGV6S1hmZVpjU2JvalFQQy1Obk9JeDF1NHFwQXVPOVNMS0R3eGJla1RyN25KaGM?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "Anthropicの株価がIPO価格を下回る、AIスタートアップの評価に警戒感",
+        "content": "Anthropicの株価がIPO価格を下回る水準まで下落し、AIスタートアップ全体の高すぎるバリュエーションに対する市場の警戒感が高まっている。巨額の投資を集めるAI企業のマネタイズと市場評価のギャップを映し出す象徴的な動向である。",
+        "source": "TechCrunch",
+        "published_at": "2026-11-25",
+        "url": "https://techcrunch.com/2026/11/24/anthropic-shares-fall-below-ipo-price-a-worrying-sign-for-ai-startups/",
+        "category": "事業・投資"
+      },
+      {
+        "title": "Preferred Networks、AI製品から半導体まで企業連合へノウハウ提供",
+        "content": "Preferred NetworksがAI製品や半導体領域にわたり、企業連合に対して包括的な開発ノウハウを提供することが報じられました。国内のエコシステム強化やハードウェア開発における重要な産学・企業間連携の動きとなります。",
+        "source": "Google News",
+        "published_at": "2026-11-25",
+        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1nSGJaeVg5U0FvMk5Zb3NxcDhpRm5qUmZpUFZwU0haNk9MQVNzb2lwWEVmT0FzWnFYZVBBQXo5ZFItdkZ6WDQ4UEFSTENkYmlXSjJXd2JvUmVBeTN5RHprOUFYZmozZDdYZ3ZMRA?oc=5",
+        "category": "インフラ・半導体"
+      },
+      {
+        "title": "次世代AIデータセンター向け太陽光・蓄電池の可能性",
+        "content": "膨大な電力を消費する次世代AIデータセンターの電源確保として、太陽光発電と蓄電池の組み合わせが注目を集めています。持続可能なインフラ構築におけるエネルギー問題の解決策として実務的な示唆を与えます。",
+        "source": "TechCrunch",
+        "published_at": "2026-11-25",
+        "url": "https://techcrunch.com/2026/11/24/why-a-crusoe-investor-is-betting-on-solar-and-batteries-to-power-future-ai-data-centers/",
+        "category": "インフラ・半導体"
+      }
+    ]
+  },
+  {
     "date": "2026-11-24",
     "daily_summary": "本日のAIニュースは、Anthropicによる開発自動化やAmazonの巨額買収、Googleのパーソナライゼーション強化など技術革新が相次ぐ一方で、OpenAIの安全性提案やGrokのディープフェイクを巡る州司法長官による提訴など、AIのガバナンスや倫理面での規制・法的責任の動きも活発化している点が特徴です。さらに、トランプ大統領の産業への直接的介入やオラクルによるインフラ資金調達の完了など、AIエコシステムを支える経済・政治の巨大なうねりも浮き彫りになった一日となりました。",
     "articles": [
@@ -2490,172 +2576,6 @@
         "published_at": "2026-10-27",
         "url": "https://www.theverge.com/tech/1018666/microsoft-expands-buyouts-60000-employees-eligible",
         "category": "事業・投資"
-      }
-    ]
-  },
-  {
-    "date": "2026-10-26",
-    "daily_summary": "本日のAIニュースは、Microsoft Researchによる長年の難問「KLS予想」の解決やOpenAIのCOBOL危機へのアプローチといった基礎科学・実用面での大きな突破口に加え、AnthropicのIPO申請やMetaの巨額資金調達など業界の大きな経済的動きが際立つ一日となりました。さらに、Hugging FaceやGitHubによる開発・セキュリティの効率化、Googleの新モデル「Gemini 4 Argon」の予告、サカナAIの国産防衛AI開発など、AI技術の高度化と社会実装・インフラ強化が多方面で加速していることを示す重要トピックが揃いました。",
-    "articles": [
-      {
-        "title": "Microsoft Research、高次元計算の難問「KLS予想」を31年ぶりに解決",
-        "content": "Microsoft Researchは、数十年未解決だった高次元空間の計算効率に関する「KLS予想」の証明に成功した。科学や計算機科学全般で使われるランダム化アルゴリズムの効率性を理解する上での重大な理論的障害を取り除く成果である。",
-        "source": "Microsoft Research",
-        "published_at": "2026-10-26",
-        "url": "https://www.microsoft.com/en-us/research/blog/solving-a-31-year-old-grand-challenge-in-mathematics-the-kls-conjecture/",
-        "category": "モデル・研究"
-      },
-      {
-        "title": "Hugging Face、ThinkingBoxを用いたデータベース評価のRL報酬化手法を公開",
-        "content": "Hugging Faceが、データベースのグレーディングを強化学習（RL）の報酬へと変換し、ThinkingBoxを活用してポストトレーニングを行うエージェント手法を公開しました。エージェントの推論能力と自律的最適化を高める実用的な手法として注目されます。",
-        "source": "Hugging Face",
-        "published_at": "2026-10-26",
-        "url": "https://huggingface.co/blog/microsoft/thinkingbox-training",
-        "category": "エージェント・開発ツール"
-      },
-      {
-        "title": "アンソロピック、米国ナスダックへのIPOを申請 証券SECへS-1提出",
-        "content": "Anthropicが米証券取引委員会（SEC）にS-1目論見書を提出し、ティッカーシンボル「ANT」でナスダックへの上場準備に入ったことが明らかになった。OpenAIに先駆けて上場を目指す動きであり、AI業界の資金調達環境に重大な転換点となる。",
-        "source": "The Verge",
-        "published_at": "2026-10-26",
-        "url": "https://www.theverge.com/ai-artificial-intelligence/1018476/anthropic-ipo-details-s1-filed-sec",
-        "category": "事業・投資"
-      },
-      {
-        "title": "レガシーコードの救世主となるか？OpenAIが挑むCOBOL危機解決へのアプローチ",
-        "content": "世界中の金融機関や政府機関を支えながらも深刻な保守人材不足にあるレガシー言語「COBOL」の危機に対し、OpenAIが解決策を提示しました。レガシーシステムのモダナイゼーションを加速させるAI活用の実用性が議論されています。",
-        "source": "The Verge",
-        "published_at": "2026-10-26",
-        "url": "https://www.theverge.com/ai-artificial-intelligence/1018434/cobol-migration-legacy-code-openai-anthropic",
-        "category": "エージェント・開発ツール"
-      },
-      {
-        "title": "Microsoft Research、AIエージェントに可視化言語を与える「Flint-interactive」を発表",
-        "content": "Microsoft Researchは、AIエージェントが対話的なデータ視覚化を作成するための言語「Flint-interactive」を発表した。ユーザーはチャートをクリックしてデータを絞り込み、著者本来の視野を超えた詳細な探索が可能になるため、高度なデータ分析エージェントの開発に寄与する。",
-        "source": "Microsoft Research",
-        "published_at": "2026-10-26",
-        "url": "https://www.microsoft.com/en-us/research/blog/flint-interactive-a-language-for-creating-interactive-data-visualizations/",
-        "category": "エージェント・開発ツール"
-      },
-      {
-        "title": "GitHub、文脈理解型シークレット検出モデルで精度11.5%向上と高速化を実現",
-        "content": "GitHubは、コンテキストを考慮した新しいシークレット検出モデルを導入し、重み付け受入率を11.5%向上させつつスキャン実行時間を86%削減することに成功しました。開発現場におけるセキュリティ監査の効率化と誤検知削減に大きく貢献します。",
-        "source": "GitHub AI",
-        "published_at": "2026-10-26",
-        "url": "https://github.blog/ai-and-ml/githubs-model-for-secret-detection-finding-more-secrets-with-less-noise/",
-        "category": "エージェント・開発ツール"
-      },
-      {
-        "title": "Google AI、「Gemini 4 Argon」を発表か",
-        "content": "Google AIより新しいフラッグシップモデルとみられる「Gemini 4 Argon」の登場が予告された。詳細情報はTBDだが次世代モデルの動向として注目される。",
-        "source": "Google AI",
-        "published_at": "2026-10-26",
-        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
-        "category": "モデル・研究"
-      },
-      {
-        "title": "OpenAI、ストレージ基盤「Habitat」拡充でChatGPTの読み込み速度が12倍に高速化",
-        "content": "OpenAIは、マルチテナンシー対応やグローバルキャッシュ、Azure Cosmos DBを活用してインフラ基盤「Habitat」を拡張し、10億人超のChatGPTユーザー向けに読み込み速度を12倍に向上させた。大規模AIサービス運用における実用的なアーキテクチャ改善として、インフラ設計の重要な示唆となる。",
-        "source": "OpenAI",
-        "published_at": "2026-10-26",
-        "url": "https://openai.com/index/scaling-storage-one-billion-users-part-two",
-        "category": "インフラ・半導体"
-      },
-      {
-        "title": "サカナAI、防衛やサイバー向けに国産AI開発へ 日経報道",
-        "content": "サカナAIが防衛やサイバーセキュリティ分野に活用可能な国産AIの開発に乗り出し、米中依存リスクの排除を目指すことが報じられた。経済安全保障上の観点や国内AIベンチャーの戦略において極めて重要な動向である。",
-        "source": "Google News",
-        "published_at": "2026-10-26",
-        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9fOGV4SkZzbDJBb1VVSmdnMlFqbnRKVXJWd1Fod0FHdXlBbDRQRUFYZW9DcGxHcEQ5Y1ZobE5nMUpJX3FzdVgxTTZsTWxRSVE2UnZwQnlKdWh2RXhXdWVFOF9OT3kwQXZyQmJ3OA?oc=5",
-        "category": "政策・安全"
-      },
-      {
-        "title": "米メタ、AIインフラ拡充に向け最大950億ドルの資金調達を計画",
-        "content": "米MetaがAIインフラのさらなる大規模拡充に向け、最大950億ドルの資金調達を計画していることが報じられました。継続的な計算資源の確保とAI競争の激化を裏付ける巨額投資として、市場に大きなインパクトを与えています。",
-        "source": "Google News",
-        "published_at": "2026-10-26",
-        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBpNUdPZ1VnMzA4VVg1dGpnOE9ZeXVJU05NVWFUYWM2b0Q5YWtkQVZsMzFyS0ItVkp6UmNTdTd4QTFuaVU4ZTBHNm5kekpHMnBDOXY1VHExVFhBUQ?oc=5",
-        "category": "事業・投資"
-      },
-      {
-        "title": "AI投資に巨額マネー 実態と展望",
-        "content": "近年、人工知能（AI）分野への投資が急増しており、その巨額の資金がどこに向かい、どのような経済的・技術的影響をもたらしているのかが注目されています。本記事では、AIブームの背後にある実態を紐解きつつ、今後の市場の展望について詳しく解説しています。",
-        "source": "Google News",
-        "published_at": "2026-10-26",
-        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5EbnU4b1M4eXRoc3RQQmFEb3JRc1BjOVZtRmZMaTQxYWt3VkVrWW52OENJLW1OR2E5czJSSHgzUWlqQUpCVkhfRDl6RDZhamlr?oc=5",
-        "category": "事業・投資"
-      },
-      {
-        "title": "孫正義氏、マレーシアに500億ドル投資へ－AIデータセンターなど対象",
-        "content": "ソフトバンクグループの孫正義氏が、マレーシアに対してAIデータセンターなどを対象に500億ドルの投資を計画していることが報じられました。この大型投資により、同地域のAIインフラ開発や関連産業の成長が加速することが期待されています。",
-        "source": "Google News",
-        "published_at": "2026-10-26",
-        "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFAzemoyd2VtVW9SVkZINlNwd0NxQnBkU09EV0dwSnV5TnZDRE95aW40VGYyTmpnS1BPWXBhZFFSTE1ocUdFTHljNmYxUW5ZNkRobG0xZ2pIcnd5Zm13M1FxVy0wNUltN3BOQUN0M3VrNGNpYmk4UjJB?oc=5",
-        "category": "事業・投資"
-      },
-      {
-        "title": "AI学習方法の開示、26日から知財保護原則を適用 企業に対応促す",
-        "content": "政府は26日からAI学習方法の開示に関する知的財産保護原則を適用し、企業に対応を促します。これにより、著作権侵害を防ぎつつAI開発の透明性を高めることが狙いです。関係企業は新たなガイドラインに沿った体制整備が求められます。",
-        "source": "Google News",
-        "published_at": "2026-10-26",
-        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1zOGF0aTZXeUFaNlpqVHpQTkU4bGpJSVRGUUs0VDlMNXJaQ0RpeC02ekNuSHZUWGtLRThpRldHTkJEZEpBODR4bXBmdm16dTJOOUdhM1JOU2FocjVidlp5a1FkYVpWZ1d5VnpkVQ?oc=5",
-        "category": "政策・安全"
-      },
-      {
-        "title": "未経験の状況をAIはどう予測する？ 自動運転やロボットを進化させる「世界モデル」の実力",
-        "content": "自動運転やロボット技術の進化において、AIが未経験の状況を予測する「世界モデル」の重要性が高まっています。この記事では、世界モデルがどのように未知の環境をシミュレーションし、AIの判断力を向上させるのかその実力に迫ります。",
-        "source": "Google News",
-        "published_at": "2026-10-26",
-        "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE02eGdtX3prZGRmQUdFZE9wcmNKSGR4UE5HMVF2Wkx5MmhBNDZQQXI5TWZZbDFLSlBFRnk3T2xTSUU4c1ljN2FGamN3eGdET3drenZVd0h3?oc=5",
-        "category": "モデル・研究"
-      },
-      {
-        "title": "「書く」だけでパーキンソン病を検知 筆圧やペンの角度からAIが判断",
-        "content": "沖縄タイムス社の報道によると、筆圧やペンの角度といった「書く」動作の特徴からAIがパーキンソン病を検知する技術が紹介されています。日常的な動作データを活用することで、病気の早期発見につながる医療技術として期待されています。",
-        "source": "Google News",
-        "published_at": "2026-10-26",
-        "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE45LXhaQzBQRndJQ1g4dU5PTHlyWU5qUWRqTDFJU3gtUEMzZVI0aWRnTFEwY3VQbFdEdHdpVkk5Ti1MTmNVaDRQZDRGOHlScVpuREN6aEFhdDA2bUZ4RFE?oc=5",
-        "category": "モデル・研究"
-      },
-      {
-        "title": "トヨクモ、現場の状態変化をAIが検知しkintoneへ自動通知する「AIカメラ」を提供",
-        "content": "トヨクモは、現場の状態変化をAIが検知してkintoneへ自動的に通知する「AIカメラ」の提供を開始した。これにより、現場の状況把握や報告業務の効率化が期待される。クラウド Watchが報じた。",
-        "source": "Google News",
-        "published_at": "2026-10-26",
-        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBVWHdqQUV5WEh2bGdTZXJyYVF5OGJHSlFLX2lqbXJzdmdHaFVXX1NnSEthNEtPYVVRVW1ZcTdDLU5xOFBKbDh0UTE0RUVDSy1RQjF2U1o3b1F3ZVRXX2xQZEg4VUd2aFk?oc=5",
-        "category": "エージェント・開発ツール"
-      },
-      {
-        "title": "メタはAI「Muse」に性的な会話を許可。人間のアダルトクリエイターからは怒りの声",
-        "content": "メタが提供するAI「Muse」が性的な会話を許可したことにより、人間のアダルトクリエイターたちの間で不満と怒りの声が上がっています。AIによる表現の許容範囲やクリエイターの経済的影響を巡り、大きな議論を呼んでいます。",
-        "source": "Google News",
-        "published_at": "2026-10-26",
-        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxObUxyQTlMQ1kzNmF1Mm9WazRtN1FmQjlmcVAxdW9OUGdSNl83aEs1SXAxa0lMX2VLZ250UUVucW9HSldsbjcxUE5YTHVVVW4tTTBUQ1hBeDExdzladDNnOGZvX1puODF2NjQ1SzZXSi1laFV4dXgzd3RnUElrZDJXT3VXNTFJTlM4UWZ4LWZ3?oc=5",
-        "category": "事業・投資"
-      },
-      {
-        "title": "メタのAI「Muse」が日本上陸、利便性とプライバシーを両立する「10の対策」",
-        "content": "メタのAIサービス「Muse」が日本市場に展開を開始しました。本記事では、ユーザーの利便性を高めつつ、プライバシーを保護するための10の重要な対策について詳しく解説しています。",
-        "source": "Google News",
-        "published_at": "2026-10-26",
-        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1aQmY4Sy1HeFJaeEVXRTlOVkhvajYyOUxPWksybjhjdUJhbHVBc0JSczVqZXRNQ1dibUNaU0hEVEpldlh3YlZ1eUNILW5nblhlRk9aRHlwd2NvUQ?oc=5",
-        "category": "モデル・研究"
-      },
-      {
-        "title": "メタのAIエージェント「Muse」、日本で開始 メルカリなどと連携",
-        "content": "メタが提供するAIエージェント「Muse」の日本でのサービスが開始され、メルカリなどの企業との連携が発表されました。これにより、ユーザーの利便性向上が期待されています。",
-        "source": "Google News",
-        "published_at": "2026-10-26",
-        "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBfMnR1WWJsMm9NWFhuQlBWaFJjaGNBSGFaM3FpekoySGlFeDUwQlVROTdQX2Zuc1RFNWtGWUFQRC02R1R0RVV0YTdGaERFUlAxMXFySmEzOHl1NTNoR0o5WjdObDRNU1lpUFU5dg?oc=5",
-        "category": "エージェント・開発ツール"
-      },
-      {
-        "title": "アンソロピック、AIを緊急停止する「AIキルスイッチ法案」草案を極秘提案──流出した衝撃内容で論争",
-        "content": "AI開発企業のアンソロピックが、人工知能を緊急停止するための「AIキルスイッチ法案」の草案を極秘裏に提案したことが明らかになりました。この流出した法案の内容を巡り、AIの安全性と規制のあり方について業界内外で激しい論争が巻き起こっています。",
-        "source": "Google News",
-        "published_at": "2026-10-26",
-        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE8tTzJBQXZFZW4zNmw5NDlJekFyenVneWxtRElheFJtZ1lNUkVYOFhXWG50Vm0ycW96ZnQwYTNwNF8xX2xKWHBpWEQxc2JIYnBuZmpsWlBSbC1oZw?oc=5",
-        "category": "政策・安全"
       }
     ]
   }
