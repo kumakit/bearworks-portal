@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-11-26",
+    "daily_summary": "本日のAIニュースは、最新のGPT-6モデルを活用したタンパク질設計、カスタマーサポートや営業・GTMの自動化といったビジネスでの高度な実用化が進む一方、スペースXによる宇宙AIデータセンター計画の承認や、AmazonとMetaによるAIエージェントを介したEC連携の協議など、インフラや流通エコシステムを揺るがす大きな動きが相次ぎました。さらに、GitHubやHugging Faceによる開発・セキュリティツールの効率化やローカル推論の検証など、技術・実務の両面でAIの活用領域が着実に拡大している一日となりました。",
+    "articles": [
+      {
+        "title": "OpenAI、GPT-6による自律的なタンパク質設計の有効性を実証",
+        "content": "OpenAIは、最新のGPT-6モデルが推論とコードを用いてタンパク質の構造や配列を設計できることを発表した。実験室のテストでは5つの標的すべてに対する結合の証拠が確認されており、創薬やバイオテクノロジー分野への強力な応用が期待される。",
+        "source": "OpenAI",
+        "published_at": "2026-11-26",
+        "url": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "米FCC、スペースXのAIチップ搭載データセンター衛星計画を承認",
+        "content": "米FCCは、スペースXが提唱する「Starmind」イニシアチブに基づき、最大100万機のAIチップ搭載衛星の打ち上げを承認した。宇宙空間へのAIデータセンター構築競争が本格化し、インフラ・半導体業界に大きな変革をもたらす可能性を秘めている。",
+        "source": "The Verge",
+        "published_at": "2026-11-26",
+        "url": "https://www.theverge.com/science/1042278/spacex-fcc-starmind-ai-space-data-centers",
+        "category": "インフラ・半導体"
+      },
+      {
+        "title": "GitHub、文脈理解型シークレット検出モデルで誤検知を大幅削減",
+        "content": "GitHubは、文脈を考慮したシークレット検出モデルを導入し、重み付け受け入れ率を11.5%向上させつつスキャン時間を86%短縮したことを発表した。セキュリティ対策の精度とパフォーマンスを同時に高める実用的なアップデートである。",
+        "source": "GitHub AI",
+        "published_at": "2026-11-26",
+        "url": "https://github.blog/ai-and-ml/githubs-model-for-secret-detection-finding-more-secrets-with-less-noise/",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "Hugging Face、インド言語向け音声エージェント「CUGA」を発表",
+        "content": "Hugging Faceは、多様なインド諸言語に対応する新しい音声エージェントフレームワーク「CUGA」を公開した。多言語対応の音声AI開発やローカライズを検討する開発者にとって貴重なオープンソースの選択肢となる。",
+        "source": "Hugging Face",
+        "published_at": "2026-11-26",
+        "url": "https://huggingface.co/blog/ibm-research/an-indic-voice-agent-with-cuga",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "Richpanel、GPT-6モデルを活用してサポート業務の50%を自動化",
+        "content": "Richpanelが最新のGPT-6シリーズ（Astra、Sol、Luna）を導入し、AIカスタマーサポートエージェントによる問い合わせ対応の50%を30日間で自動化することに成功した。実業務における最先端フロンティアモデルの高度な実用化事例を示している。",
+        "source": "OpenAI",
+        "published_at": "2026-11-26",
+        "url": "https://openai.com/business/customer-stories/richpanel-ai-customer-support",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "Clay、OpenAIのCodexとGPT-6を活用した営業・GTM自動化機能を強化",
+        "content": "データ連携プラットフォームのClayがOpenAIと統合し、GPT-6の高度な推論能力とCodexを活用した市場開拓（GTM）プレイブックの自動作成機能を発表した。営業チームのリサーチおよび戦略立案の自動化を大きく加速させる。",
+        "source": "OpenAI",
+        "published_at": "2026-11-26",
+        "url": "https://openai.com/business/customer-stories/clay-plugins-openai",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "GitHub Copilotを活用したレガシーアプリケーション近代化の手法",
+        "content": "GitHubは、レガシーアプリケーションの評価方法や安全な近代化ステップの選び方、GitHub Copilotエージェントスキルを活用した手法を解説した。開発現場における現実的なコードベース移行プロセスを効率化する実用的な知見を提供する。",
+        "source": "GitHub AI",
+        "published_at": "2026-11-26",
+        "url": "https://github.blog/ai-and-ml/github-copilot/how-to-choose-the-next-safe-step-in-application-modernization/",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "Hugging Face、「Hill-climbing Inkling 2 Mini」のRTX PRO 6000単機推論を実施",
+        "content": "Hugging Face環境において、最新の軽量モデル「Inkling 2 Mini」を用いた単一のRTX PRO 6000による効率的なインフレーション検証が公開された。ハイエンドGPU1基での高速かつ実用的な推論検証として、ローカル開発者への示唆が大きい。",
+        "source": "Hugging Face",
+        "published_at": "2026-11-26",
+        "url": "https://huggingface.co/blog/inkling-2-mini-inference-hillclimb",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "Amazon、MetaのAIエージェント「Muse」のECショッピングブロック解除に向けて交渉か",
+        "content": "AmazonがMetaのAIエージェント「Muse」による同社オンラインマーケットプレイスでのショッピング機能解禁に向けた協議を行っていることが報じられた。実現すれば、AIエージェントが自律的に商品を推奨・購入する新しいECエコシステムが構築される可能性がある。",
+        "source": "The Verge",
+        "published_at": "2026-11-26",
+        "url": "https://www.theverge.com/tech/1042071/meta-amazon-muse-ai-shopping-discussions",
+        "category": "事業・投資"
+      },
+      {
+        "title": "OpenAI、チャットと仕事用機能の統合に伴い利用制限の合算を導入",
+        "content": "OpenAIは、ChatGPTの「チャット」と「ワーク」の体験を統合し、単一の使用量メーターを導入すると発表した。ヘビーユーザーにとっては利用制限に到達しやすくなる可能性があり、実務での利用計画に影響を与える。",
+        "source": "TechCrunch",
+        "published_at": "2026-11-26",
+        "url": "https://techcrunch.com/2026/11/25/openai-says-heavy-chatgpt-users-may-hit-limits-sooner-as-it-merges-chat-and-work/",
+        "category": "事業・投資"
+      }
+    ]
+  },
+  {
     "date": "2026-11-25",
     "daily_summary": "本日のAIニュースは、OpenAIとCiscoによるLinux向けセキュリティランタイム「Shirudo」の発表やiFoodによる大規模コーディングエージェントの展開といった技術の実用化が進む一方、Tidalによる生成AI楽曲の全面禁止やAnthropicの株価下落に見られる市場の警戒感など、AIの普及と産業化における光と影が浮き彫りとなった一日でした。",
     "articles": [
@@ -2490,92 +2576,6 @@
         "published_at": "2026-10-28",
         "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE84Z215eFlkaGt0WXN1cXh0cEJ6SGl4ckZ2eWxxZnRLbzhPNlFvUTQzRDRfNnZYVndRMHBtaXk2MUp4dnY0NDBBUFUyNEdlSWQxdHNLdURjM29xdHJodWFDa2xHOGI?oc=5",
         "category": "政策・安全"
-      }
-    ]
-  },
-  {
-    "date": "2026-10-27",
-    "daily_summary": "本日のAIニュースは、MicrosoftやOpenAIによる新技術・効率化ツールの発表や、AnthropicのIPO申請およびS-1書類から見えてきた巨額の財務・戦略の実態、さらにはSpaceXによる400億ドルの大規模なGPU資金調達など、AIインフラの拡大と産業構造の大きな変化を象徴する話題が中心となりました。同時に、AIエージェントの普及に伴うECサイトでのボット防御の強化や、マイクロソフトの大規模な希望退職といった組織再編の動きも報じられており、AI技術の高度化がビジネスや雇用環境に多大な影響を与え始めていることを示す一日となりました。",
-    "articles": [
-      {
-        "title": "Microsoft Researchが発表した汎用ゼロ知識証明コンピューティング「Magnetar」",
-        "content": "Microsoft Researchは、ワークロードの再実行や機密データの露出なしに計算結果を検証できるゼロ知識証明フレームワーク「Magnetar」を発表しました。主要なプログラミング言語のサポートと量子耐性セキュリティを備え、実用的なメインストリーム化を加速させます。",
-        "source": "Microsoft Research",
-        "published_at": "2026-10-27",
-        "url": "https://www.microsoft.com/en-us/research/blog/proof-based-general-purpose-computing-with-magnetar/",
-        "category": "インフラ・半導体"
-      },
-      {
-        "title": "OpenAI、Codex Ultrafastでインシデント調査を数分に短縮",
-        "content": "OpenAIは内部のインシデント調査時間を数時間から数分へと大幅に短縮する「Codex Ultrafast」の活用事例を公開した。エンジニアリングの効率化やセキュリティ分析の迅速化に向けた実務的な知見を提供する。",
-        "source": "OpenAI",
-        "published_at": "2026-10-27",
-        "url": "https://openai.com/index/openai-cut-incident-investigation",
-        "category": "エージェント・開発ツール"
-      },
-      {
-        "title": "アンソロピックがIPOを正式申請、巨額の損失と急成長を明らかに",
-        "content": "アンソロピックが米国でIPOを正式申請し、急増する収益や損失、独自の統治構造を明らかにした。AI業界全体の資金調達や市場動向に大きな影響を与える歴史的マイルストーンとなる。",
-        "source": "TechCrunch",
-        "published_at": "2026-10-27",
-        "url": "https://techcrunch.com/2026/10/26/anthropic-officially-files-for-its-public-debut/",
-        "category": "事業・投資"
-      },
-      {
-        "title": "Hugging Faceが発表した文献の動的文脈化による研究支援ツール「LitPivot」",
-        "content": "Hugging Faceは膨大な学術文献の文脈を動的に結びつけ、新たな研究アイデアの創出を支援するシステム「LitPivot」を公開しました。研究者が最先端の論文からインサイトを素早く引き出すための強力な開発支援ツールとなります。",
-        "source": "Hugging Face",
-        "published_at": "2026-10-27",
-        "url": "https://huggingface.co/blog/allenai/litpivot",
-        "category": "エージェント・開発ツール"
-      },
-      {
-        "title": "Microsoft Research、AIチューター評価のための学生シミュレーションシステム「StudentSim」を発表",
-        "content": "Microsoft Researchが、AIチューターツールを事前に評価・改善するためのシミュレーションシステム「StudentSim」を発表した。多様な学習者の行動をモデル化し、数学や文章作成などの教育用AIの性能向上を実現する。",
-        "source": "Microsoft Research",
-        "published_at": "2026-10-27",
-        "url": "https://www.microsoft.com/en-us/research/blog/simulating-student-learning-for-better-ai-tutoring/",
-        "category": "モデル・研究"
-      },
-      {
-        "title": "AnthropicのS-1公開：Claudeプラットフォームと独自アプリのクロスセル戦略が明らかに",
-        "content": "AnthropicのIPOに向けたS-1書類により、10万ドル以上の顧客の半数以上がClaudeプラットフォームと独自アプリの両方を利用していることが判明しました。アマゾンのような強力なクロスセル戦略がエンタープライズ顧客の囲い込みに寄与している実態が浮き彫りになりました。",
-        "source": "TechCrunch",
-        "published_at": "2026-10-27",
-        "url": "https://techcrunch.com/2026/10/26/anthropics-ipo-filing-reveals-its-strategy-for-keeping-enterprise-customers-hooked/",
-        "category": "事業・投資"
-      },
-      {
-        "title": "SpaceXがアポロと400億ドルのGPUファイナンス契約を締結",
-        "content": "SpaceXがアポロ・グローバル・マネジメントを通じて400億ドル規模のGPU資金調達ディールを締結しました。伝統的な負債市場に依存せず、急速に拡大するAIインフラの野望を支えるための新たな資金調達スキームとして注目されます。",
-        "source": "TechCrunch",
-        "published_at": "2026-10-27",
-        "url": "https://techcrunch.com/2026/10/26/spacex-locks-in-40b-gpu-financing-deal-with-apollo/",
-        "category": "事業・投資"
-      },
-      {
-        "title": "AnthropicのS-1提出書類から読み解く、経営陣の報酬やIPOの5つの詳細",
-        "content": "300ページを超えるAnthropicのSEC向けS-1プロスペクタスから、経営陣の報酬体系や巨額のIPO資金の使途、事業上のリスク要因など5つの詳細が明らかになりました。AI業界をリードする非公開企業の内部ガバナンスと財務実態を伝える詳細な分析です。",
-        "source": "The Verge",
-        "published_at": "2026-10-27",
-        "url": "https://www.theverge.com/ai-artificial-intelligence/1018738/anthropic-ipo-s1-filing-weird-details",
-        "category": "事業・投資"
-      },
-      {
-        "title": "高級古着のThe RealReal、AIエージェントによる自動購入を防ぐボット防御を強化",
-        "content": "高級ファッションのセカンドハンドECを運営するThe RealRealが、AIエージェントによるサイト上の商品買い占めを防ぐためボット防御システムを更新しました。AIエージェントの自律的な買い物行動に対するECサイト側の防衛策の先駆けとなります。",
-        "source": "The Verge",
-        "published_at": "2026-10-27",
-        "url": "https://www.theverge.com/news/1018713/meta-muse-agentic-shopping-ai-the-realreal",
-        "category": "エージェント・開発ツール"
-      },
-      {
-        "title": "マイクロソフト、最大6万人の従業員を対象に希望退職を実施",
-        "content": "マイクロソフトが米国、英国、カナダなどの最大6万人の従業員を対象に希望退職プログラムの提供を開始した。AIへの大規模投資に伴う組織再編の一環とみられ、テック業界全体の人員動向に影響を及ぼす。",
-        "source": "The Verge",
-        "published_at": "2026-10-27",
-        "url": "https://www.theverge.com/tech/1018666/microsoft-expands-buyouts-60000-employees-eligible",
-        "category": "事業・投資"
       }
     ]
   }
