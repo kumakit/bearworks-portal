@@ -1,5 +1,91 @@
 [
   {
+    "date": "2026-10-29",
+    "daily_summary": "本日のAIニュースは、Googleの「Gemini 4 Carbon」やNvidiaの新音声モデルといった先端技術の発表から、OpenAIとServiceNowなどの連携による企業向けワークフローの実装加速まで、実用化に向けた動きが際立ちました。同時に、Anthropicの新管理ツールによる投資対効果の可視化や、セキュリティ・脆弱性に関する警鐘、さらには米政権による「AI」名称使用の規制検討など、AI技術の急激な浸透に伴うガバナンスやリスク管理の重要性も浮き彫りになる一日となりました。",
+    "articles": [
+      {
+        "title": "Google、サイバーセキュリティを大幅強化した新モデル「Gemini 4 Carbon」をリリース",
+        "content": "Googleは、コーディング、エージェントタスク、サイバーセキュリティ分野で飛躍的な向上を実現した最新フロンティアモデル「Gemini 4 Carbon」を発表した。各種ベンチマークでも上位を獲得しており、高度なセキュリティ対応や自律タスク処理の実用性が高まる。",
+        "source": "The Verge",
+        "published_at": "2026-10-29",
+        "url": "https://www.theverge.com/tech/1021339/google-gemini-4-carbon-cybersecurity-frontier",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "NVIDIA、「Nemotron 3.5 Transcribe」などの高度な多言語音声認識モデルを発表",
+        "content": "NVIDIAは、プロンプトによる適応が可能なインテリジェント多言語文字起こしモデル「NVIDIA Nemotron 3.5 Transcribe」および「Granary v2」を発表した。高精度な音声処理と柔軟なカスタマイズ性により、音声認識・文字起こしシステムの開発効率を大きく向上させる。",
+        "source": "Hugging Face",
+        "published_at": "2026-10-29",
+        "url": "https://huggingface.co/blog/nvidia/nemotron-transcribe-granary",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "マイクロソフト、宇宙天気による電力網リスクを予測するMLシステム発表",
+        "content": "極端な宇宙天気が地球上の電力システムやGPSに与える影響を予測する、新しい機械学習システムがMicrosoft Researchにより発表されました。嵐の到来30〜60分前に被害発生場所を高精度で予測し、インフラの事前防護に貢献します。",
+        "source": "Microsoft Research",
+        "published_at": "2026-10-29",
+        "url": "https://www.microsoft.com/en-us/research/blog/forecasting-space-weather-risks-on-power-grids/",
+        "category": "モデル・研究"
+      },
+      {
+        "title": "OpenAIとServiceNowがパートナーシップを拡大、業務フローへのAI統合を強化",
+        "content": "OpenAIとServiceNowは提携を拡大し、OpenAIのモデルやエージェントをServiceNowのワークフローに組み込むとともに、ServiceNowの機能をChatGPTやCodexから利用できるようにする。企業向けAI活用において、システム間の垣根を越えたエージェント連携が加速する実用的なアップデートである。",
+        "source": "OpenAI",
+        "published_at": "2026-10-29",
+        "url": "https://openai.com/index/openai-servicenow-partnership-expansion",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "Anthropic、企業のAI支出対効果を可視化する管理ツールを投入へ",
+        "content": "フロンティアAIラボのAnthropicは、IPOを控え、企業ユーザーがAIモデルへの投資コストに対してどのような価値を得られているかを可視化する新ツールを投入した。巨額のAI投資対効果に対する企業の不透明感を払拭し、ROIを明確にする狙いがある。",
+        "source": "TechCrunch",
+        "published_at": "2026-10-29",
+        "url": "https://techcrunch.com/2026/10/28/anthropic-just-launched-tools-to-show-companies-what-their-ai-spending-is-buying/",
+        "category": "事業・投資"
+      },
+      {
+        "title": "OpenAIモデルを活用した法務特化エージェントOS「Legora」",
+        "content": "LegoraがOpenAIのモデルやChatGPT、Codexを活用し、法務ワークフローの加速や契約書分析の拡張を実現するエージェント型OSを構築していることが発表されました。弁護士がより付加価値の高い業務に集中できるよう、AIエージェントを活用した業務効率化の実践例を示しています。",
+        "source": "OpenAI",
+        "published_at": "2026-10-29",
+        "url": "https://openai.com/index/legora",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "PHP脆弱性問題の教訓、WizのCTOが警告する「脆弱性の氾濫」の未来",
+        "content": "多くのWebサイトの基盤であるPHPに発覚した2件の重大な脆弱性と、それに伴う対応の混乱がセキュリティ業界に衝撃を与えた。WizのCTOは、オープンソースエコシステム全体に潜むリスクの深刻さと、今後の「脆弱性の氾濫」に対する警戒を促している。",
+        "source": "TechCrunch",
+        "published_at": "2026-10-29",
+        "url": "https://techcrunch.com/video/wizs-cto-on-php2shell-and-the-coming-vulnpocalypse/",
+        "category": "インフラ・半導体"
+      },
+      {
+        "title": "Javaチャンピオン3名が実践する、GitHub Copilotを活用した開発生産性の高め方",
+        "content": "著名なJavaプログラミングのエキスパート3名が、GitHub Copilotを用いて複雑な問題を解決し開発を加速させる実践的なワークフローを公開した。AIを活用しつつも人間が最終的な責任を持つためのベストプラクティスが紹介されている。",
+        "source": "GitHub AI",
+        "published_at": "2026-10-29",
+        "url": "https://github.blog/ai-and-ml/github-copilot/how-3-java-champions-are-using-github-copilot-for-increased-productivity/",
+        "category": "エージェント・開発ツール"
+      },
+      {
+        "title": "米大統領が「AI」名称の利用を禁止する方針を検討か",
+        "content": "米大統領が政府関連や特定の文脈において「AI」の名称使用を禁止する方針であると報じられた。過熱するAIブームや用語の定義に対する規制・政策的なアプローチの新たな動きとして注目を集めている。",
+        "source": "Google News",
+        "published_at": "2026-10-29",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE43eWFpeHY4UjRNSG52eDA3N1ZQU1ZfTEdGM2FJdkVIWm5UOTlLWTg3dlZOaVdJTW1kUnNCVVc3TVVuREV1Yjdoa0ZlYU9xeGdZ?oc=5",
+        "category": "政策・安全"
+      },
+      {
+        "title": "AIが直面する複雑性の壁、失敗から学ぶ機械学習の教訓",
+        "content": "Microsoft Researchのジェニファー・ネビル氏が、AIが現実世界の複雑性を処理する上で直面する「意外な失敗」とその原因について解説した。モデルの限界や、複雑なシステムを構築する際に陥りやすい罠を理解するための貴重な知見を提供している。",
+        "source": "Microsoft Research",
+        "published_at": "2026-10-29",
+        "url": "https://www.microsoft.com/en-us/research/podcast/what-ai-gets-wrong-and-what-failure-teaches-us/",
+        "category": "モデル・研究"
+      }
+    ]
+  },
+  {
     "date": "2026-10-28",
     "daily_summary": "本日のAIニュースでは、OpenAIの新モデルを活用した開発・セキュリティツールの進化や、Microsoftによる強化学習を用いたエージェント育成フレームワークの公開など、ソフトウェア開発やAIエージェントの高度化に関する発表が相次ぎました。また、Googleの最長2分一貫性を保つ世界モデル「Genie 4」や脳解明プロジェクト、Oracleとのビジネス統合など各社の応用領域拡大が進む一方、AnthropicのIPO目論見書による人類の存続リスクへの警告や、OpenAIの成果非公開に対する研究者からの懸念など、AIの急速な進化に伴うオープン性とガバナンスを巡る課題も浮き彫りになっています。",
     "articles": [
