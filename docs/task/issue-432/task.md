@@ -7,5 +7,6 @@
 - [x] Antigravity で公開資料に基づく日本語の初稿を作成し、Codexで照合する。
 - [x] 実装計画の承認を得る。
 - [x] 記事・図表・再現データ・シリーズ導線を追加し、ローカルのビルド、配信確認、PC・スマホの表示を検証する。
-- [ ] 既存 Next.js の監査指摘に対応し、Linux Workers CI の合格を確認する。
-- [ ] 承認済みの範囲で push、PR、マージ、本番公開を行い、公開URLを確認する。
+- [x] 既存 Next.js の監査指摘に対応し、Linux Workers CI の合格を確認する。
+- [x] 承認済みの範囲で push、PR、マージ、本番公開を行い、公開URLを確認する。
+- [x] 公開URLと検証結果をIssueに記録し、完了としてクローズする。 [完了コメント](https://github.com/kumakit/mission-control/issues/432#issuecomment-7219575883)

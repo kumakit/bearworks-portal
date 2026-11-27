@@ -15,3 +15,11 @@
 - 新規データの数値検証、Next.jsのビルドと型検査、第4・5弾のローカル配信検証に合格した。配信検証はHTML、テスト広告ID、画像とデータの応答、記事間リンク、サイトマップを確認した。リポジトリ全体のlintはエラー0件、既存の警告3件だった。
 - 第4弾の既存公開ファイルはWindowsの改行変換で通常のハッシュ検証が失敗した。Gitの内容を改行変換なしで一時展開した環境では、既存の全公開データ検証が通過した。
 - 開発時の依存関係監査で既存の Next.js 16.4.3 が検出された。記事の実装では依存関係を変更していない。Workers CI は依存関係監査に合格する必要があり、本番公開には別途承認が必要。
+
+## 本番公開
+
+- 2026年11月27日 22:27:41 JST（13:27:41 UTC）に [第5弾](https://bearworks.uk/labs/hachioji-students) を公開した。
+- Next.js と ESLint 設定を16.4.6、OpenNextを1.20.19に更新した。既存の公開ルート検証一覧に第5弾を追加した。[Workers CI](https://github.com/kumakit/bearworks-portal/actions/runs/46006138789) が合格し、[PR #49](https://github.com/kumakit/bearworks-portal/pull/49) をマージした。
+- マージ後の `ddba5766313e2899036e2547830b6aac414c09db` はCI対象と同一のGitツリー。[本番用Linuxビルド](https://github.com/kumakit/bearworks-portal/actions/runs/46006523365) で生成した成果物 `15200533259` のSHA-256と全1,607ファイルの展開一致を検証した。WindowsでOpenNextがWranglerを起動できなかったため、キャッシュ準備完了後に固定版のWranglerを直接起動し、検証済み成果物を公開した。
+- 新 Deployment `55c54e79-c5c8-478b-b636-e1375115bac6`、Version `7c1a7b22-2f4f-4261-a162-357f43daec4d` が100％配信。復旧先は Deployment `08cf0a3d-1559-4b0c-93ef-30d2e3160b26`、Version `2102c2be-1918-4c46-a81c-e94457498403`。
+- 公開記事、冒頭画像とデータの配信、前作・Labsのリンク、サイトマップ、トップ、広告境界、ダッシュボードとAPIの未認証時の302と `no-store` を確認した。公開記事をPC幅1440pxとスマホ幅390pxで表示し、横方向のはみ出しがなく、18年分の数値表が開くことを確認した。確認時のブラウザコンソールにエラーはなかった。
