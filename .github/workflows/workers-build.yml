@@ -96,6 +96,9 @@ jobs:
       - name: Verify Hachioji student data
         run: node scripts/validate-hachioji-students-data.mjs
 
+      - name: Verify Hachioji international data
+        run: node scripts/validate-hachioji-international-data.mjs
+
       - name: Lint
         run: npm run lint
 
@@ -168,6 +171,7 @@ jobs:
           node scripts/verify-hachioji-rain-autumn-pages.mjs http://127.0.0.1:8788 --ads
           node scripts/verify-hachioji-city-center-pages.mjs http://127.0.0.1:8788 --ads
           node scripts/verify-hachioji-students-pages.mjs http://127.0.0.1:8788 --ads
+          node scripts/verify-hachioji-international-pages.mjs http://127.0.0.1:8788 --ads
           node scripts/verify-hachioji-aging-pages.mjs http://127.0.0.1:8788
           node scripts/verify-hachioji-population-pages.mjs http://127.0.0.1:8788
           node scripts/verify-hachioji-land-prices-pages.mjs http://127.0.0.1:8788

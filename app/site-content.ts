@@ -14,6 +14,15 @@ type LabArticle = SitemapEntry & { title: string; summary: string; series: strin
 
 const staticPaths: SitemapEntry[] = [
   {
+    pathname: "/labs/hachioji-international",
+    title: "八王子は国際的になってきている？",
+    summary: "外国人住民数と総人口比の推移、国籍・地域の構成、近隣6市との違いを読み解きます。",
+    series: "population",
+    seriesTitle: "八王子を数字で読み解く",
+    changeFrequency: "yearly",
+    priority: 0.85,
+  },
+  {
     pathname: "/labs/hachioji-students",
     title: "八王子はまだ学生の街？",
     summary: "市内の大学等で学ぶ学生数の推移と、八王子に住む学生の割合を公表資料から読み解きます。",
