@@ -128,7 +128,11 @@ export default function HachiojiCityCenterPage() {
         <details className="rounded-xl bg-slate-50 p-4"><summary className="cursor-pointer font-semibold">集計データ・再現手順を開く</summary><div className="mt-3 space-y-3 text-sm"><p>出典URL・取得日時・SHA256・対象頁・処理方法は出典記録に保存しています。固定入力からの再生成はPython標準ライブラリだけで実行できます。原本PDFの取得は再生成に必要ありません。</p><ul className="list-disc space-y-1 pl-5 text-teal-900">{[["source-manifest.json", "出典・加工・権利・検算記録"], ["annual-counts.csv", "23/32地点の年次値CSV"], ["point-changes.csv", "全地点の2024→2025比較CSV"], ["population.csv", "別系列の人口CSV"], ["vacancies.csv", "別系列の空き店舗CSV"], ["hachioji-city-center-2026-10-27.r1.json", "本文と図表の固定JSON"], ["normalized-inputs.json", "固定数値入力"], ["generate_bundle.py", "オフライン再生成スクリプト"], ["prepare_sources.py", "ローカル原本抽出・照合スクリプト"], ["README.txt", "再現手順"]].map(([file, label]) => <li key={file}><a href={`/data/hachioji-city-center/${file}`} className="underline">{label}</a></li>)}</ul></div></details>
       </section>
 
-      <nav aria-label="八王子を数字で読み解くシリーズ" className="grid gap-4 sm:grid-cols-3">{[["hachioji-population", "第1弾", "人口は本当に減っている？"], ["hachioji-land-prices", "第2弾", "本当に土地が安い？"], ["hachioji-aging", "第3弾", "高齢者の街になっている？"]].map(([slug, number, name]) => <Link key={slug} href={`/labs/${slug}`} className={`${card} hover:bg-teal-50`}><span className="block text-xs font-bold text-teal-800">{number}</span><span className="mt-2 block font-semibold text-slate-900">{name} →</span></Link>)}<Link href="/labs" className="text-sm font-semibold text-teal-900 underline">Labsの記事一覧へ</Link></nav>
+      <nav aria-label="八王子を数字で読み解くシリーズ" className="grid gap-4 sm:grid-cols-3">
+        <Link href="/labs/hachioji-students" className={`${card} hover:bg-teal-50 sm:col-span-3`}><span className="block text-xs font-bold text-teal-800">次回・第5弾</span><span className="mt-2 block font-semibold text-slate-900">八王子はまだ学生の街？ →</span></Link>
+        {[["hachioji-population", "第1弾", "人口は本当に減っている？"], ["hachioji-land-prices", "第2弾", "本当に土地が安い？"], ["hachioji-aging", "第3弾", "高齢者の街になっている？"]].map(([slug, number, name]) => <Link key={slug} href={`/labs/${slug}`} className={`${card} hover:bg-teal-50`}><span className="block text-xs font-bold text-teal-800">{number}</span><span className="mt-2 block font-semibold text-slate-900">{name} →</span></Link>)}
+        <Link href="/labs" className="text-sm font-semibold text-teal-900 underline">Labsの記事一覧へ</Link>
+      </nav>
     </article>
     <PublicSiteFooter/>
   </main>;
