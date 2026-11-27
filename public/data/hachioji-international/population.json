@@ -1,0 +1,442 @@
+{
+  "retrievedOn": "2026-11-27",
+  "categories": [
+    "中国",
+    "フィリピン",
+    "ベトナム",
+    "ネパール",
+    "ミャンマー",
+    "この5区分以外"
+  ],
+  "annual": [
+    {
+      "date": "2013-10-01",
+      "code": "13201",
+      "name": "八王子市",
+      "total": 563895,
+      "japanese": 554898,
+      "foreign": 8997,
+      "counts": [
+        3715,
+        1043,
+        198,
+        239,
+        27,
+        3775
+      ],
+      "sources": [
+        {
+          "url": "https://www.toukei.metro.tokyo.lg.jp/juukim/2013/jm13av0000_1.csv",
+          "sha256": "7b85905f06a0b67969c5e4f269c6ac92b695ce57a510b5b3ecbdeb9c1c0e26d8"
+        },
+        {
+          "url": "https://www.toukei.metro.tokyo.lg.jp/gaikoku/2013/ga13hv0100.csv",
+          "sha256": "643c05c53aed7fbf93295e717c24f6c257e2811c30b534ad21a9702868db9174"
+        }
+      ]
+    },
+    {
+      "date": "2014-10-01",
+      "code": "13201",
+      "name": "八王子市",
+      "total": 562940,
+      "japanese": 553518,
+      "foreign": 9422,
+      "counts": [
+        3919,
+        1090,
+        316,
+        295,
+        29,
+        3773
+      ],
+      "sources": [
+        {
+          "url": "https://www.toukei.metro.tokyo.lg.jp/juukim/2014/jm14av0000_1.csv",
+          "sha256": "682e2c3140a9c045eb288e528077e97900f900417ca65abf9d89167d80ce1eb6"
+        },
+        {
+          "url": "https://www.toukei.metro.tokyo.lg.jp/gaikoku/2014/ga14hv0100.csv",
+          "sha256": "d090202d1f3f0f69c413cb6b86d163941041a8504f71d1aca7be91d1eaa204da"
+        }
+      ]
+    },
+    {
+      "date": "2015-10-01",
+      "code": "13201",
+      "name": "八王子市",
+      "total": 562781,
+      "japanese": 552853,
+      "foreign": 9928,
+      "counts": [
+        4111,
+        1150,
+        433,
+        332,
+        45,
+        3857
+      ],
+      "sources": [
+        {
+          "url": "https://www.toukei.metro.tokyo.lg.jp/juukim/2015/jm15av0000_1.csv",
+          "sha256": "fd279eb572831526f1224206310e703fa7a1cdb37a1d6fbaaeaa2af76a8397d2"
+        },
+        {
+          "url": "https://www.toukei.metro.tokyo.lg.jp/gaikoku/2015/ga15hv0100.csv",
+          "sha256": "49d90ffd6fc5060a29b2c5072edb3fe3cf7ac72ef552ba784ba8b5e1f8b3ab60"
+        }
+      ]
+    },
+    {
+      "date": "2016-10-01",
+      "code": "13201",
+      "name": "八王子市",
+      "total": 563327,
+      "japanese": 552268,
+      "foreign": 11059,
+      "counts": [
+        4496,
+        1238,
+        619,
+        451,
+        59,
+        4196
+      ],
+      "sources": [
+        {
+          "url": "https://www.toukei.metro.tokyo.lg.jp/juukim/2016/jm16av0000_1.csv",
+          "sha256": "a9a5cb7f57c175d2d2db7ce79cf80b429a15aa5e4ea817c3e00abd0ac8e7d289"
+        },
+        {
+          "url": "https://www.toukei.metro.tokyo.lg.jp/gaikoku/2016/ga16hv0100.csv",
+          "sha256": "723e4b725ddd52186bd84d3e23fac06b77d34a0845d4575a4359a5a41af688fc"
+        }
+      ]
+    },
+    {
+      "date": "2017-10-01",
+      "code": "13201",
+      "name": "八王子市",
+      "total": 563538,
+      "japanese": 551584,
+      "foreign": 11954,
+      "counts": [
+        4529,
+        1303,
+        731,
+        536,
+        107,
+        4748
+      ],
+      "sources": [
+        {
+          "url": "https://www.toukei.metro.tokyo.lg.jp/juukim/2017/jm17av0000_1.csv",
+          "sha256": "2f24aa5b726e20d0687c0d01b22f21a2a460c799818a3027ba84e8c120158d36"
+        },
+        {
+          "url": "https://www.toukei.metro.tokyo.lg.jp/gaikoku/2017/ga17hv0100.csv",
+          "sha256": "89c7de36edda946cecab221b44ae1f71c2e3e847d88e1ef10650a68f0de2c2ae"
+        }
+      ]
+    },
+    {
+      "date": "2018-10-01",
+      "code": "13201",
+      "name": "八王子市",
+      "total": 562522,
+      "japanese": 549785,
+      "foreign": 12737,
+      "counts": [
+        4777,
+        1371,
+        852,
+        590,
+        95,
+        5052
+      ],
+      "sources": [
+        {
+          "url": "https://www.toukei.metro.tokyo.lg.jp/juukim/2018/jm18av0000_1.csv",
+          "sha256": "476f0ea5fe9cf2ae569269e1defb61c1e9907a01fc5ae06f700f2e51cdcc7e6d"
+        },
+        {
+          "url": "https://www.toukei.metro.tokyo.lg.jp/gaikoku/2018/ga18hv0100.csv",
+          "sha256": "a73579dff0f8929277fd4a01e1e078ce78275f40bf34143e6192b6f7094e3515"
+        }
+      ]
+    },
+    {
+      "date": "2019-10-01",
+      "code": "13201",
+      "name": "八王子市",
+      "total": 562828,
+      "japanese": 549708,
+      "foreign": 13120,
+      "counts": [
+        5130,
+        1335,
+        1063,
+        548,
+        77,
+        4967
+      ],
+      "sources": [
+        {
+          "url": "https://www.toukei.metro.tokyo.lg.jp/juukim/2019/jm19av0000_1.csv",
+          "sha256": "d8b96482eceb520254081b57c3b69eed46c47bb991693e49f44847eecfbe0e8a"
+        },
+        {
+          "url": "https://www.toukei.metro.tokyo.lg.jp/gaikoku/2019/ga19hv0100.csv",
+          "sha256": "3c2b3816eae2b04e768d0537a6a4a2b4f85304a439c76b99bc4666abc403ddeb"
+        }
+      ]
+    },
+    {
+      "date": "2020-10-01",
+      "code": "13201",
+      "name": "八王子市",
+      "total": 561872,
+      "japanese": 548991,
+      "foreign": 12881,
+      "counts": [
+        5132,
+        1336,
+        1114,
+        461,
+        83,
+        4755
+      ],
+      "sources": [
+        {
+          "url": "https://www.toukei.metro.tokyo.lg.jp/juukim/2020/jm20av0000_1.csv",
+          "sha256": "350ff8521f47a7d5bc4fe924945dde7ed6e9c3bf2466f9e8e90693389142afb2"
+        },
+        {
+          "url": "https://www.toukei.metro.tokyo.lg.jp/gaikoku/2020/ga20hv0100.csv",
+          "sha256": "1dbe26c0c49a20f1019285a6e9f2a4820b7861ea7a841bb0539b9987517999e1"
+        }
+      ]
+    },
+    {
+      "date": "2021-10-01",
+      "code": "13201",
+      "name": "八王子市",
+      "total": 562326,
+      "japanese": 549428,
+      "foreign": 12898,
+      "counts": [
+        5080,
+        1323,
+        1258,
+        500,
+        91,
+        4646
+      ],
+      "sources": [
+        {
+          "url": "https://www.toukei.metro.tokyo.lg.jp/juukim/2021/jm21av0000_1.csv",
+          "sha256": "a8f9e6616482a4ba484028508cc37b4de5f6c86b157ea14fa43c6593e74b80fd"
+        },
+        {
+          "url": "https://www.toukei.metro.tokyo.lg.jp/gaikoku/2021/ga21hv0100.csv",
+          "sha256": "4ec6a0b28088bdf94471cf2c1b598a497775c315bcd3c60d0722dcfdc92ee2c5"
+        }
+      ]
+    },
+    {
+      "date": "2022-10-01",
+      "code": "13201",
+      "name": "八王子市",
+      "total": 562605,
+      "japanese": 548546,
+      "foreign": 14059,
+      "counts": [
+        5346,
+        1393,
+        1360,
+        552,
+        157,
+        5251
+      ],
+      "sources": [
+        {
+          "url": "https://www.toukei.metro.tokyo.lg.jp/juukim/2022/jm22av0000_1.csv",
+          "sha256": "a1c179e90635774b96a6710b7a327ecb5291c85e04efa4436da353e77b9429bd"
+        },
+        {
+          "url": "https://www.toukei.metro.tokyo.lg.jp/gaikoku/2022/ga22hv0100.csv",
+          "sha256": "2099458dc3c921992d7d664e90b36899eba2a6d22b114280e1c081d53c7d1266"
+        }
+      ]
+    },
+    {
+      "date": "2023-10-01",
+      "code": "13201",
+      "name": "八王子市",
+      "total": 560913,
+      "japanese": 545788,
+      "foreign": 15125,
+      "counts": [
+        5590,
+        1471,
+        1532,
+        676,
+        204,
+        5652
+      ],
+      "sources": [
+        {
+          "url": "https://www.toukei.metro.tokyo.lg.jp/juukim/2023/jm23av0000_1.csv",
+          "sha256": "7a1d450ae0986865b4c8ec887f4da5ea1c9a34df08e2f520ae4b344e22ad2dad"
+        },
+        {
+          "url": "https://www.toukei.metro.tokyo.lg.jp/gaikoku/2023/ga23hv0100.csv",
+          "sha256": "52004cc0a3a4bc02ea649eb4691744968c89f1713bafb39bad5da46d523e8bf3"
+        }
+      ]
+    },
+    {
+      "date": "2024-10-01",
+      "code": "13201",
+      "name": "八王子市",
+      "total": 559809,
+      "japanese": 543314,
+      "foreign": 16495,
+      "counts": [
+        5805,
+        1501,
+        1922,
+        859,
+        398,
+        6010
+      ],
+      "sources": [
+        {
+          "url": "https://www.toukei.metro.tokyo.lg.jp/juukim/2024/jm24av0000_1.csv",
+          "sha256": "cec1eb3c3b67d1c94d0c218bcc525f71f85602a3167580b11485c41948200f23"
+        },
+        {
+          "url": "https://www.toukei.metro.tokyo.lg.jp/gaikoku/2024/ga24hv0100.csv",
+          "sha256": "a86adc01fcdf08f27f3136837f8167f364872b6e68d1ca5b3eb27fda7411df85"
+        }
+      ]
+    },
+    {
+      "date": "2025-10-01",
+      "code": "13201",
+      "name": "八王子市",
+      "total": 559264,
+      "japanese": 540729,
+      "foreign": 18535,
+      "counts": [
+        6195,
+        1581,
+        2227,
+        1334,
+        677,
+        6521
+      ],
+      "sources": [
+        {
+          "url": "https://www.toukei.metro.tokyo.lg.jp/juukim/2025/jm25av0000_1.csv",
+          "sha256": "fe713478620245bea7d29844ddd1b0881e1d39f91b0ab1963636719b544ef307"
+        },
+        {
+          "url": "https://www.toukei.metro.tokyo.lg.jp/gaikoku/2025/ga25hv0100.csv",
+          "sha256": "2ad010234770ebbf1843ba772adcc680c8ca3153b2180f016c8f2bb6e778715f"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-01",
+      "code": "13201",
+      "name": "八王子市",
+      "total": 559320,
+      "japanese": 539359,
+      "foreign": 19961,
+      "counts": [
+        6400,
+        1633,
+        2232,
+        1614,
+        1077,
+        7005
+      ],
+      "sources": [
+        {
+          "url": "https://www.toukei.metro.tokyo.lg.jp/juukim/2026/jm26av0000_1.csv",
+          "sha256": "1227708550c7b3cf4bf801093803c019bf597f76696eb3e2be297faed04eb2c5"
+        },
+        {
+          "url": "https://www.toukei.metro.tokyo.lg.jp/gaikoku/2026/ga26hv0100.csv",
+          "sha256": "b9ed548227eef488911f19befb7f472e00ec814953964ce6577fe0fc2f9023e5"
+        }
+      ]
+    }
+  ],
+  "comparison": {
+    "date": "2026-10-01",
+    "cities": [
+      {
+        "code": "13201",
+        "name": "八王子市",
+        "total": 559320,
+        "japanese": 539359,
+        "foreign": 19961
+      },
+      {
+        "code": "13209",
+        "name": "町田市",
+        "total": 431417,
+        "japanese": 419280,
+        "foreign": 12137
+      },
+      {
+        "code": "13202",
+        "name": "立川市",
+        "total": 188093,
+        "japanese": 181217,
+        "foreign": 6876
+      },
+      {
+        "code": "13212",
+        "name": "日野市",
+        "total": 189493,
+        "japanese": 184877,
+        "foreign": 4616
+      },
+      {
+        "code": "13206",
+        "name": "府中市",
+        "total": 263429,
+        "japanese": 256442,
+        "foreign": 6987
+      },
+      {
+        "code": "13205",
+        "name": "青梅市",
+        "total": 128157,
+        "japanese": 124333,
+        "foreign": 3824
+      }
+    ]
+  },
+  "residence": {
+    "period": "2025年4月",
+    "source": "https://www.city.hachioji.tokyo.jp/contents/shigikai_1/gikainokatudou/iinnkai/soumukikaku/p035918_d/fil/02_zaijugaikokujin.pdf",
+    "groups": [
+      {
+        "name": "留学",
+        "percent": 26
+      },
+      {
+        "name": "永住者",
+        "percent": 25.6
+      },
+      {
+        "name": "技術・人文知識・国際業務",
+        "percent": 9
+      }
+    ]
+  }
+}

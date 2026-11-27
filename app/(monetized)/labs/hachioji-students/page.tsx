@@ -196,7 +196,6 @@ export default function HachiojiStudentsPage() {
         <section aria-labelledby="conclusion" className="space-y-5">
           <h2 id="conclusion" className={heading}>八王子はまだ学生の街？</h2>
           <p>{last.year}年度の八王子では、{first.year}年より学生数が減ったあとも、市内{scope.citySchools}校で約{scope.cityApproxStudents / 10000}万人が学んでいました。八王子で学ぶ学生がどこで暮らし、卒業後も街とどう関わるかを考えると、「学生の街」の姿を人数だけより具体的に捉えられます。</p>
-          <p className="text-sm text-slate-600">次回は「八王子は国際的になってきている？」を取り上げます。</p>
         </section>
 
         <section id="method" className={`${card} space-y-4`}>
@@ -210,6 +209,7 @@ export default function HachiojiStudentsPage() {
         </section>
 
         <nav aria-label="八王子を数字で読み解くシリーズ" className="grid gap-4 sm:grid-cols-2">
+          <Link href="/labs/hachioji-international" className={`${card} hover:bg-teal-50 sm:col-span-2`}><span className="block text-xs font-bold text-teal-800">次回・第6弾</span><span className="mt-2 block font-semibold text-slate-900">八王子は国際的になってきている？ →</span></Link>
           <Link href="/labs/hachioji-city-center" className={`${card} hover:bg-teal-50`}><span className="block text-xs font-bold text-teal-800">前回・第4弾</span><span className="mt-2 block font-semibold text-slate-900">八王子の中心市街地は発展しつつある？ →</span></Link>
           <Link href="/labs" className={`${card} hover:bg-teal-50`}><span className="font-semibold text-teal-900">Labsの記事一覧へ →</span></Link>
         </nav>
