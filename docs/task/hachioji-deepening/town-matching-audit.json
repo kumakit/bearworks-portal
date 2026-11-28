@@ -966,7 +966,7 @@
         "132010430"
       ],
       "polygonCount": 1,
-      "status": "comparable"
+      "status": "suppressed"
     },
     {
       "code": "10700",
@@ -2118,7 +2118,7 @@
         "13201122001"
       ],
       "polygonCount": 1,
-      "status": "comparable"
+      "status": "suppressed"
     },
     {
       "code": "50252",
@@ -2536,7 +2536,7 @@
         "132011120"
       ],
       "polygonCount": 1,
-      "status": "comparable"
+      "status": "suppressed"
     },
     {
       "code": "60500",

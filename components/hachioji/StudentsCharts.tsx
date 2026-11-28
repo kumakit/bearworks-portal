@@ -315,14 +315,14 @@ export function StudentTrendAndIndexChart({
               className="inline-block w-5 border-t-2 border-dashed border-slate-500"
               aria-hidden="true"
             />
-            2006～2014年傾向（年 {signed(Math.round(analysis.regressionSummary.period1.slope))}人）
+            2006～2014年傾向（年 {analysis.regressionSummary.period1.slope.toFixed(1).replace("-", "−")}人）
           </li>
           <li className="flex items-center gap-1.5">
             <span
               className="inline-block w-5 border-t-2 border-dashed border-amber-700"
               aria-hidden="true"
             />
-            2015～2023年傾向（年 {signed(Math.round(analysis.regressionSummary.period2.slope))}人）
+            2015～2023年傾向（年 {analysis.regressionSummary.period2.slope.toFixed(1).replace("-", "−")}人）
           </li>
           <li className="flex items-center gap-1.5">
             <span className="inline-block h-2.5 w-2.5 rounded-full bg-amber-600" aria-hidden="true" />
@@ -776,7 +776,7 @@ export function CampusLocationMap({
         <svg
           viewBox={campusData.localView.viewBox}
           className="mt-3 h-auto w-full rounded-xl border border-slate-200 bg-slate-50"
-          role="img"
+          role="group"
           aria-label="八王子市と周辺にある大学コンソーシアム八王子加盟25校の位置図。下のプルダウンと一覧表でも所在地を確認できます。"
         >
           <g aria-hidden="true">

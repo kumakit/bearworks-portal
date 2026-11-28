@@ -297,7 +297,7 @@ for (const r26 of d26) {
   let status = "comparable";
   if (BOUNDARY_CHANGED_NORM.has(norm)) {
     status = "boundary_changed";
-  } else if (r26.foreign < 10 || r24.total < 100 || r26.total < 100) {
+  } else if (r24.foreign < 10 || r26.foreign < 10 || r24.total < 100 || r26.total < 100) {
     status = "suppressed";
   }
 
@@ -345,7 +345,7 @@ for (const r26 of d26) {
       note:
         status === "boundary_changed"
           ? "2024年8月10日施行の上野第二地区土地区画整理事業による住所変更対象のため比較対象外"
-          : "少人数（外国人10人未満または総人口100人未満）のため個別数値を非表示",
+          : "少人数（2024年4月末・2026年10月末のいずれかで外国人10人未満または総人口100人未満）のため個別数値を非表示",
     });
   }
 }
@@ -381,7 +381,7 @@ const townMapOutput = {
   generatedOn: "2026-11-28",
   viewBox: "0 0 800 560",
   comparisonDates: { from: "2024-04-30", to: "2026-10-31" },
-  suppressionRule: "2026年10月末の外国人住民数が10人未満、または2024年4月末・2026年10月末のいずれかの総人口が100人未満の町丁は個別数値を非表示",
+  suppressionRule: "2024年4月末・2026年10月末のいずれかで外国人住民数が10人未満、または総人口が100人未満の町丁は個別数値を非表示",
   boundaryChangedRule: "2024年8月10日施行の上野第二地区土地区画整理事業の対象4町丁（上野町、小門町、台町３丁目、台町４丁目）を比較対象外",
   sources: {
     csv2024: { url: CSV_2024_URL, sha256: sha256(buf24) },

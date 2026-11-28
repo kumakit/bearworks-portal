@@ -918,7 +918,7 @@ export function TownForeignMap({ townMap }: { townMap: TownMapProp }) {
       <svg
         viewBox={townMap.viewBox}
         className="mt-3 h-auto w-full rounded-xl border border-slate-200 bg-slate-50"
-        role="img"
+        role="group"
         aria-label="八王子市の町丁別外国人住民地図。下の町丁選択と上位・下位10町丁表でも値を確認できます。"
       >
         <defs>
@@ -1066,7 +1066,7 @@ export function TownForeignMap({ townMap }: { townMap: TownMapProp }) {
         <div className="mt-3 overflow-x-auto">
           <table className="w-full min-w-[520px] text-sm">
             <caption className="sr-only">
-              町丁別の外国人住民割合の変化（2024年4月末→2026年10月末、比較可能180町丁より）
+              町丁別の外国人住民割合の変化（2024年4月末→2026年10月末、比較可能{townMap.counts.comparableTowns}町丁より）
             </caption>
             <thead>
               <tr className="border-b border-slate-200">
@@ -1109,7 +1109,7 @@ export function TownForeignMap({ townMap }: { townMap: TownMapProp }) {
 
       <p className="mt-3 text-xs leading-6 text-slate-600">
         出典：八王子市「町丁別世帯数及び人口」（CC BY 4.0）、政府統計の総合窓口（e-Stat）「令和2年国勢調査 町丁・字等境界データ」を加工して作成。境界は統計用であり、行政上の正式境界と一致しない場合があります。全市合計は各月末CSVのため{" "}
-        {n(townMap.cityTotals.to.foreign)}人（2026年10月末）となり、上部の東京都10月1日表（19,961人）とは基準日が異なります。少人数（外国人10人未満または総人口100人未満）の{townMap.counts.suppressedTowns}町丁と、上野第二地区の住所変更対象{townMap.counts.boundaryChangedTowns}町丁は個別数値を非表示としています。
+        {n(townMap.cityTotals.to.foreign)}人（2026年10月末）となり、上部の東京都10月1日表（19,961人）とは基準日が異なります。少人数（2024年4月末・2026年10月末のいずれかで外国人10人未満または総人口100人未満）の{townMap.counts.suppressedTowns}町丁と、上野第二地区の住所変更対象{townMap.counts.boundaryChangedTowns}町丁は個別数値を非表示としています。
       </p>
     </figure>
   );

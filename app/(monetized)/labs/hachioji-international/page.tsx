@@ -224,7 +224,7 @@ export default function HachiojiInternationalPage() {
         </section>
 
         <section id="composition" className="scroll-mt-6 space-y-5">
-          <h2 className={heading}>増えた1万人超の中身：中国が最多のまま、出身地域が広がった</h2>
+          <h2 className={heading}>増えた1万人超の中身：主要5区分では中国が最多のまま、出身地域が広がった</h2>
           <p>
             全14年間で同じ区分名で比較できる5つの国・地域と「この5区分以外」を比べると、増加した
             {n(decomposition.foreignDiff)}人のうち最も増えた人数が多いのは「{other.name}」（+{n(other.diff)}人・増加全体の{" "}
@@ -261,10 +261,10 @@ export default function HachiojiInternationalPage() {
             <h3 className="font-bold text-slate-900">地図の読み方とプライバシー・比較上の注意</h3>
             <p className="mt-2">
               面積が広い町丁は人数が少なくても色が目立ちやすいため、この地図では「その町丁の総人口に占める外国人住民の割合」と、2時点での「ポイント差（割合が何％ポイント動いたか）」を主指標にしています。比較可能な{" "}
-              {townMap.counts.comparableTowns}町丁では、{topTown.name}（+{topTown.sharePointDiff!.toFixed(2)}pt）や明神町、追分町、滝山町周辺など、駅周辺や市街地・大学に近い地域で割合の上昇や人数の増加が目立ちますが、地域によって増減の向きは異なります。
+              {townMap.counts.comparableTowns}町丁のうち、割合の上昇幅が大きい上位には{topTown.name}（+{topTown.sharePointDiff!.toFixed(2)}pt）、{townMap.top10Increase[1].name}（+{townMap.top10Increase[1].sharePointDiff!.toFixed(2)}pt）、{townMap.top10Increase[2].name}（+{townMap.top10Increase[2].sharePointDiff!.toFixed(2)}pt）などが並びますが、低下した町丁もあり、地域によって増減の向きは異なります。
             </p>
             <p className="mt-2">
-              なお、外国人住民が10人未満または総人口が100人未満の{townMap.counts.suppressedTowns}町丁は、少人数による誤差の振れとプライバシーへの配慮から個別数値を非表示にしています。また、2024年8月の区画整理で住所変更があった4町丁（上野町・小門町・台町３丁目・台町４丁目）も前後比較の対象から外しています。町丁別の国籍データも公表されていません。
+              なお、2024年4月末・2026年10月末のいずれかで外国人住民が10人未満または総人口が100人未満の{townMap.counts.suppressedTowns}町丁は、少人数による誤差の振れとプライバシーへの配慮から個別数値を非表示にしています。また、2024年8月の区画整理で住所変更があった4町丁（上野町・小門町・台町３丁目・台町４丁目）も前後比較の対象から外しています。町丁別の国籍データも公表されていません。
             </p>
           </div>
         </section>

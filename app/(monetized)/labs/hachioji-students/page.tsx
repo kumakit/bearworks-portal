@@ -203,8 +203,8 @@ export default function HachiojiStudentsPage() {
             </p>
             <p className="mt-2">
               「学生数と区間傾向」の点線は、データの傾向を1本の直線で表した「線形回帰の傾き」です。2006～2014年は1年あたり{" "}
-              <strong>{Math.round(regressionSummary.period1.slope)}人</strong>とほぼ横ばいでしたが、2015～2023年は1年あたり{" "}
-              <strong>{Math.round(regressionSummary.period2.slope)}人</strong>へペースが速まりました。ただし、この直線は過去の動きを整理するためのもので、今後の人数を予測するものではありません。
+              <strong>{regressionSummary.period1.slope.toFixed(1).replace("-", "−")}人</strong>とほぼ横ばいでしたが、2015～2023年は1年あたり{" "}
+              <strong>{regressionSummary.period2.slope.toFixed(1).replace("-", "−")}人</strong>へペースが速まりました。ただし、この直線は過去の動きを整理するためのもので、今後の人数を予測するものではありません。
             </p>
           </div>
 

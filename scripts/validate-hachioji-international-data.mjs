@@ -79,7 +79,7 @@ assert.equal(townMap.counts.boundaryChangedTowns, 4);
 for (const t of townMap.towns) {
   assert(t.path && t.path.startsWith("M"), `Missing SVG path: ${t.name}`);
   if (t.status === "comparable") {
-    assert(t.foreign2026 >= 10 && t.total2024 >= 100 && t.total2026 >= 100, `Comparable threshold violated: ${t.name}`);
+    assert(t.foreign2024 >= 10 && t.foreign2026 >= 10 && t.total2024 >= 100 && t.total2026 >= 100, `Comparable threshold violated: ${t.name}`);
     assert.equal(t.foreignDiff, t.foreign2026 - t.foreign2024);
   } else {
     for (const k of ["foreign2024", "total2024", "share2024", "foreign2026", "total2026", "share2026", "foreignDiff", "sharePointDiff"]) {
