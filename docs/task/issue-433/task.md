@@ -7,5 +7,5 @@
 - [x] Antigravityの日本語初稿を受け取り、Codexで数値と表現を確認する。
 - [x] 実装計画の承認を得て、記事、画像、図表、導線を実装する。
 - [x] ローカルでビルド、配信と表示を確認する。
-- [ ] 承認後にPRを作成し、Linux Workers CIと本番を確認する。
-- [ ] 公開URLと検証結果をIssueに記録する。
+- [x] 承認後にPRを作成し、Linux Workers CIと本番を確認する。
+- [x] 公開URLと検証結果をIssueに記録し、完了としてクローズする。 [完了コメント](https://github.com/kumakit/mission-control/issues/433#issuecomment-7229315174)
