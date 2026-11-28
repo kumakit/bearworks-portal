@@ -1,0 +1,2607 @@
+{
+  "generatedOn": "2026-11-28",
+  "matchedCount": 199,
+  "totalCsvRows": 199,
+  "unmatchedCount": 0,
+  "coveragePercent": 100,
+  "rows": [
+    {
+      "code": "00100",
+      "csvName": "横山町",
+      "normalizedName": "横山町",
+      "estatSNames": [
+        "横山町"
+      ],
+      "estatKeyCodes": [
+        "132010010"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "00200",
+      "csvName": "八日町",
+      "normalizedName": "八日町",
+      "estatSNames": [
+        "八日町"
+      ],
+      "estatKeyCodes": [
+        "132010020"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "00300",
+      "csvName": "八幡町",
+      "normalizedName": "八幡町",
+      "estatSNames": [
+        "八幡町"
+      ],
+      "estatKeyCodes": [
+        "132010030"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "00400",
+      "csvName": "八木町",
+      "normalizedName": "八木町",
+      "estatSNames": [
+        "八木町"
+      ],
+      "estatKeyCodes": [
+        "132010040"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "00500",
+      "csvName": "追分町",
+      "normalizedName": "追分町",
+      "estatSNames": [
+        "追分町"
+      ],
+      "estatKeyCodes": [
+        "132010050"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "00601",
+      "csvName": "千人町１丁目",
+      "normalizedName": "千人町1丁目",
+      "estatSNames": [
+        "千人町一丁目"
+      ],
+      "estatKeyCodes": [
+        "13201006001"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "00602",
+      "csvName": "千人町２丁目",
+      "normalizedName": "千人町2丁目",
+      "estatSNames": [
+        "千人町二丁目"
+      ],
+      "estatKeyCodes": [
+        "13201006002"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "00603",
+      "csvName": "千人町３丁目",
+      "normalizedName": "千人町3丁目",
+      "estatSNames": [
+        "千人町三丁目"
+      ],
+      "estatKeyCodes": [
+        "13201006003"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "00604",
+      "csvName": "千人町４丁目",
+      "normalizedName": "千人町4丁目",
+      "estatSNames": [
+        "千人町四丁目"
+      ],
+      "estatKeyCodes": [
+        "13201006004"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "00700",
+      "csvName": "日吉町",
+      "normalizedName": "日吉町",
+      "estatSNames": [
+        "日吉町"
+      ],
+      "estatKeyCodes": [
+        "132010070"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "00801",
+      "csvName": "元本郷町１丁目",
+      "normalizedName": "元本郷町1丁目",
+      "estatSNames": [
+        "元本郷町一丁目"
+      ],
+      "estatKeyCodes": [
+        "13201008001"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "00802",
+      "csvName": "元本郷町２丁目",
+      "normalizedName": "元本郷町2丁目",
+      "estatSNames": [
+        "元本郷町二丁目"
+      ],
+      "estatKeyCodes": [
+        "13201008002"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "00803",
+      "csvName": "元本郷町３丁目",
+      "normalizedName": "元本郷町3丁目",
+      "estatSNames": [
+        "元本郷町三丁目"
+      ],
+      "estatKeyCodes": [
+        "13201008003"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "00804",
+      "csvName": "元本郷町４丁目",
+      "normalizedName": "元本郷町4丁目",
+      "estatSNames": [
+        "元本郷町四丁目"
+      ],
+      "estatKeyCodes": [
+        "13201008004"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "00900",
+      "csvName": "平岡町",
+      "normalizedName": "平岡町",
+      "estatSNames": [
+        "平岡町"
+      ],
+      "estatKeyCodes": [
+        "132010090"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "01000",
+      "csvName": "本郷町",
+      "normalizedName": "本郷町",
+      "estatSNames": [
+        "本郷町"
+      ],
+      "estatKeyCodes": [
+        "132010100"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "01100",
+      "csvName": "大横町",
+      "normalizedName": "大横町",
+      "estatSNames": [
+        "大横町"
+      ],
+      "estatKeyCodes": [
+        "132010110"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "01200",
+      "csvName": "本町",
+      "normalizedName": "本町",
+      "estatSNames": [
+        "本町"
+      ],
+      "estatKeyCodes": [
+        "132010120"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "01301",
+      "csvName": "元横山町１丁目",
+      "normalizedName": "元横山町1丁目",
+      "estatSNames": [
+        "元横山町一丁目"
+      ],
+      "estatKeyCodes": [
+        "13201013001"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "01302",
+      "csvName": "元横山町２丁目",
+      "normalizedName": "元横山町2丁目",
+      "estatSNames": [
+        "元横山町二丁目"
+      ],
+      "estatKeyCodes": [
+        "13201013002"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "01303",
+      "csvName": "元横山町３丁目",
+      "normalizedName": "元横山町3丁目",
+      "estatSNames": [
+        "元横山町三丁目"
+      ],
+      "estatKeyCodes": [
+        "13201013003"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "01400",
+      "csvName": "田町",
+      "normalizedName": "田町",
+      "estatSNames": [
+        "田町"
+      ],
+      "estatKeyCodes": [
+        "132010140"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "01500",
+      "csvName": "新町",
+      "normalizedName": "新町",
+      "estatSNames": [
+        "新町"
+      ],
+      "estatKeyCodes": [
+        "132010150"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "01601",
+      "csvName": "明神町１丁目",
+      "normalizedName": "明神町1丁目",
+      "estatSNames": [
+        "明神町一丁目"
+      ],
+      "estatKeyCodes": [
+        "13201016001"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "01602",
+      "csvName": "明神町２丁目",
+      "normalizedName": "明神町2丁目",
+      "estatSNames": [
+        "明神町二丁目"
+      ],
+      "estatKeyCodes": [
+        "13201016002"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "01603",
+      "csvName": "明神町３丁目",
+      "normalizedName": "明神町3丁目",
+      "estatSNames": [
+        "明神町三丁目"
+      ],
+      "estatKeyCodes": [
+        "13201016003"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "01604",
+      "csvName": "明神町４丁目",
+      "normalizedName": "明神町4丁目",
+      "estatSNames": [
+        "明神町四丁目"
+      ],
+      "estatKeyCodes": [
+        "13201016004"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "01701",
+      "csvName": "子安町１丁目",
+      "normalizedName": "子安町1丁目",
+      "estatSNames": [
+        "子安町一丁目"
+      ],
+      "estatKeyCodes": [
+        "13201017001"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "01702",
+      "csvName": "子安町２丁目",
+      "normalizedName": "子安町2丁目",
+      "estatSNames": [
+        "子安町二丁目"
+      ],
+      "estatKeyCodes": [
+        "13201017002"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "01703",
+      "csvName": "子安町３丁目",
+      "normalizedName": "子安町3丁目",
+      "estatSNames": [
+        "子安町三丁目"
+      ],
+      "estatKeyCodes": [
+        "13201017003"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "01704",
+      "csvName": "子安町４丁目",
+      "normalizedName": "子安町4丁目",
+      "estatSNames": [
+        "子安町四丁目"
+      ],
+      "estatKeyCodes": [
+        "13201017004"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "01800",
+      "csvName": "東町",
+      "normalizedName": "東町",
+      "estatSNames": [
+        "東町"
+      ],
+      "estatKeyCodes": [
+        "132010180"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "01900",
+      "csvName": "旭町",
+      "normalizedName": "旭町",
+      "estatSNames": [
+        "旭町"
+      ],
+      "estatKeyCodes": [
+        "132010190"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "02000",
+      "csvName": "三崎町",
+      "normalizedName": "三崎町",
+      "estatSNames": [
+        "三崎町"
+      ],
+      "estatKeyCodes": [
+        "132010200"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "02100",
+      "csvName": "中町",
+      "normalizedName": "中町",
+      "estatSNames": [
+        "中町"
+      ],
+      "estatKeyCodes": [
+        "132010210"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "02200",
+      "csvName": "南町",
+      "normalizedName": "南町",
+      "estatSNames": [
+        "南町"
+      ],
+      "estatKeyCodes": [
+        "132010220"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "02300",
+      "csvName": "寺町",
+      "normalizedName": "寺町",
+      "estatSNames": [
+        "寺町"
+      ],
+      "estatKeyCodes": [
+        "132010230"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "02400",
+      "csvName": "万町",
+      "normalizedName": "万町",
+      "estatSNames": [
+        "万町"
+      ],
+      "estatKeyCodes": [
+        "132010240"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "02500",
+      "csvName": "上野町",
+      "normalizedName": "上野町",
+      "estatSNames": [
+        "上野町"
+      ],
+      "estatKeyCodes": [
+        "132010250"
+      ],
+      "polygonCount": 1,
+      "status": "boundary_changed"
+    },
+    {
+      "code": "02600",
+      "csvName": "天神町",
+      "normalizedName": "天神町",
+      "estatSNames": [
+        "天神町"
+      ],
+      "estatKeyCodes": [
+        "132010260"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "02700",
+      "csvName": "南新町",
+      "normalizedName": "南新町",
+      "estatSNames": [
+        "南新町"
+      ],
+      "estatKeyCodes": [
+        "132010270"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "02800",
+      "csvName": "小門町",
+      "normalizedName": "小門町",
+      "estatSNames": [
+        "小門町"
+      ],
+      "estatKeyCodes": [
+        "132010280"
+      ],
+      "polygonCount": 1,
+      "status": "boundary_changed"
+    },
+    {
+      "code": "02901",
+      "csvName": "台町１丁目",
+      "normalizedName": "台町1丁目",
+      "estatSNames": [
+        "台町一丁目"
+      ],
+      "estatKeyCodes": [
+        "13201029001"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "02902",
+      "csvName": "台町２丁目",
+      "normalizedName": "台町2丁目",
+      "estatSNames": [
+        "台町二丁目"
+      ],
+      "estatKeyCodes": [
+        "13201029002"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "02903",
+      "csvName": "台町３丁目",
+      "normalizedName": "台町3丁目",
+      "estatSNames": [
+        "台町三丁目"
+      ],
+      "estatKeyCodes": [
+        "13201029003"
+      ],
+      "polygonCount": 1,
+      "status": "boundary_changed"
+    },
+    {
+      "code": "02904",
+      "csvName": "台町４丁目",
+      "normalizedName": "台町4丁目",
+      "estatSNames": [
+        "台町四丁目"
+      ],
+      "estatKeyCodes": [
+        "13201029004"
+      ],
+      "polygonCount": 1,
+      "status": "boundary_changed"
+    },
+    {
+      "code": "03000",
+      "csvName": "中野町",
+      "normalizedName": "中野町",
+      "estatSNames": [
+        "中野町"
+      ],
+      "estatKeyCodes": [
+        "132010300"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "03101",
+      "csvName": "暁町１丁目",
+      "normalizedName": "暁町1丁目",
+      "estatSNames": [
+        "暁町一丁目"
+      ],
+      "estatKeyCodes": [
+        "13201031001"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "03102",
+      "csvName": "暁町２丁目",
+      "normalizedName": "暁町2丁目",
+      "estatSNames": [
+        "暁町二丁目"
+      ],
+      "estatKeyCodes": [
+        "13201031002"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "03103",
+      "csvName": "暁町３丁目",
+      "normalizedName": "暁町3丁目",
+      "estatSNames": [
+        "暁町三丁目"
+      ],
+      "estatKeyCodes": [
+        "13201031003"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "03201",
+      "csvName": "中野山王１丁目",
+      "normalizedName": "中野山王1丁目",
+      "estatSNames": [
+        "中野山王一丁目"
+      ],
+      "estatKeyCodes": [
+        "13201032001"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "03202",
+      "csvName": "中野山王２丁目",
+      "normalizedName": "中野山王2丁目",
+      "estatSNames": [
+        "中野山王二丁目"
+      ],
+      "estatKeyCodes": [
+        "13201032002"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "03203",
+      "csvName": "中野山王３丁目",
+      "normalizedName": "中野山王3丁目",
+      "estatSNames": [
+        "中野山王三丁目"
+      ],
+      "estatKeyCodes": [
+        "13201032003"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "03301",
+      "csvName": "中野上町１丁目",
+      "normalizedName": "中野上町1丁目",
+      "estatSNames": [
+        "中野上町一丁目"
+      ],
+      "estatKeyCodes": [
+        "13201033001"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "03302",
+      "csvName": "中野上町２丁目",
+      "normalizedName": "中野上町2丁目",
+      "estatSNames": [
+        "中野上町二丁目"
+      ],
+      "estatKeyCodes": [
+        "13201033002"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "03303",
+      "csvName": "中野上町３丁目",
+      "normalizedName": "中野上町3丁目",
+      "estatSNames": [
+        "中野上町三丁目"
+      ],
+      "estatKeyCodes": [
+        "13201033003"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "03304",
+      "csvName": "中野上町４丁目",
+      "normalizedName": "中野上町4丁目",
+      "estatSNames": [
+        "中野上町四丁目"
+      ],
+      "estatKeyCodes": [
+        "13201033004"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "03305",
+      "csvName": "中野上町５丁目",
+      "normalizedName": "中野上町5丁目",
+      "estatSNames": [
+        "中野上町五丁目"
+      ],
+      "estatKeyCodes": [
+        "13201033005"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "03401",
+      "csvName": "大和田町１丁目",
+      "normalizedName": "大和田町1丁目",
+      "estatSNames": [
+        "大和田町一丁目"
+      ],
+      "estatKeyCodes": [
+        "13201034001"
+      ],
+      "polygonCount": 2,
+      "status": "comparable"
+    },
+    {
+      "code": "03402",
+      "csvName": "大和田町２丁目",
+      "normalizedName": "大和田町2丁目",
+      "estatSNames": [
+        "大和田町二丁目"
+      ],
+      "estatKeyCodes": [
+        "13201034002"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "03403",
+      "csvName": "大和田町３丁目",
+      "normalizedName": "大和田町3丁目",
+      "estatSNames": [
+        "大和田町三丁目"
+      ],
+      "estatKeyCodes": [
+        "13201034003"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "03404",
+      "csvName": "大和田町４丁目",
+      "normalizedName": "大和田町4丁目",
+      "estatSNames": [
+        "大和田町四丁目"
+      ],
+      "estatKeyCodes": [
+        "13201034004"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "03405",
+      "csvName": "大和田町５丁目",
+      "normalizedName": "大和田町5丁目",
+      "estatSNames": [
+        "大和田町五丁目"
+      ],
+      "estatKeyCodes": [
+        "13201034005"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "03406",
+      "csvName": "大和田町６丁目",
+      "normalizedName": "大和田町6丁目",
+      "estatSNames": [
+        "大和田町六丁目"
+      ],
+      "estatKeyCodes": [
+        "13201034006"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "03407",
+      "csvName": "大和田町７丁目",
+      "normalizedName": "大和田町7丁目",
+      "estatSNames": [
+        "大和田町七丁目"
+      ],
+      "estatKeyCodes": [
+        "13201034007"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "03500",
+      "csvName": "富士見町",
+      "normalizedName": "富士見町",
+      "estatSNames": [
+        "富士見町"
+      ],
+      "estatKeyCodes": [
+        "132010350"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "03600",
+      "csvName": "緑町",
+      "normalizedName": "緑町",
+      "estatSNames": [
+        "緑町"
+      ],
+      "estatKeyCodes": [
+        "132010360"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "03700",
+      "csvName": "清川町",
+      "normalizedName": "清川町",
+      "estatSNames": [
+        "清川町"
+      ],
+      "estatKeyCodes": [
+        "132010370"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "10100",
+      "csvName": "東浅川町",
+      "normalizedName": "東浅川町",
+      "estatSNames": [
+        "東浅川町"
+      ],
+      "estatKeyCodes": [
+        "13201038000",
+        "13201038001"
+      ],
+      "polygonCount": 9,
+      "status": "comparable"
+    },
+    {
+      "code": "10200",
+      "csvName": "初沢町",
+      "normalizedName": "初沢町",
+      "estatSNames": [
+        "初沢町"
+      ],
+      "estatKeyCodes": [
+        "132010390"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "10300",
+      "csvName": "高尾町",
+      "normalizedName": "高尾町",
+      "estatSNames": [
+        "高尾町"
+      ],
+      "estatKeyCodes": [
+        "132010400"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "10400",
+      "csvName": "南浅川町",
+      "normalizedName": "南浅川町",
+      "estatSNames": [
+        "南浅川町"
+      ],
+      "estatKeyCodes": [
+        "132010410"
+      ],
+      "polygonCount": 1,
+      "status": "suppressed"
+    },
+    {
+      "code": "10500",
+      "csvName": "西浅川町",
+      "normalizedName": "西浅川町",
+      "estatSNames": [
+        "西浅川町"
+      ],
+      "estatKeyCodes": [
+        "132010420"
+      ],
+      "polygonCount": 1,
+      "status": "suppressed"
+    },
+    {
+      "code": "10600",
+      "csvName": "裏高尾町",
+      "normalizedName": "裏高尾町",
+      "estatSNames": [
+        "裏高尾町"
+      ],
+      "estatKeyCodes": [
+        "132010430"
+      ],
+      "polygonCount": 1,
+      "status": "suppressed"
+    },
+    {
+      "code": "10700",
+      "csvName": "廿里町",
+      "normalizedName": "廿里町",
+      "estatSNames": [
+        "廿里町"
+      ],
+      "estatKeyCodes": [
+        "132010440"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "15100",
+      "csvName": "下柚木",
+      "normalizedName": "下柚木",
+      "estatSNames": [
+        "下柚木"
+      ],
+      "estatKeyCodes": [
+        "13201045000"
+      ],
+      "polygonCount": 3,
+      "status": "comparable"
+    },
+    {
+      "code": "15102",
+      "csvName": "下柚木２丁目",
+      "normalizedName": "下柚木2丁目",
+      "estatSNames": [
+        "下柚木二丁目"
+      ],
+      "estatKeyCodes": [
+        "13201045002"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "15103",
+      "csvName": "下柚木３丁目",
+      "normalizedName": "下柚木3丁目",
+      "estatSNames": [
+        "下柚木三丁目"
+      ],
+      "estatKeyCodes": [
+        "13201045003"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "15200",
+      "csvName": "上柚木",
+      "normalizedName": "上柚木",
+      "estatSNames": [
+        "上柚木"
+      ],
+      "estatKeyCodes": [
+        "13201046000"
+      ],
+      "polygonCount": 4,
+      "status": "comparable"
+    },
+    {
+      "code": "15202",
+      "csvName": "上柚木２丁目",
+      "normalizedName": "上柚木2丁目",
+      "estatSNames": [
+        "上柚木二丁目"
+      ],
+      "estatKeyCodes": [
+        "13201046002"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "15203",
+      "csvName": "上柚木３丁目",
+      "normalizedName": "上柚木3丁目",
+      "estatSNames": [
+        "上柚木三丁目"
+      ],
+      "estatKeyCodes": [
+        "13201046003"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "15300",
+      "csvName": "中山",
+      "normalizedName": "中山",
+      "estatSNames": [
+        "中山"
+      ],
+      "estatKeyCodes": [
+        "132010470"
+      ],
+      "polygonCount": 2,
+      "status": "comparable"
+    },
+    {
+      "code": "15400",
+      "csvName": "鑓󠄃水",
+      "normalizedName": "鑓水",
+      "estatSNames": [
+        "鑓水"
+      ],
+      "estatKeyCodes": [
+        "13201048000"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "15402",
+      "csvName": "鑓󠄃水２丁目",
+      "normalizedName": "鑓水2丁目",
+      "estatSNames": [
+        "鑓水二丁目"
+      ],
+      "estatKeyCodes": [
+        "13201048002"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "15501",
+      "csvName": "南大沢１丁目",
+      "normalizedName": "南大沢1丁目",
+      "estatSNames": [
+        "南大沢一丁目"
+      ],
+      "estatKeyCodes": [
+        "13201050001"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "15502",
+      "csvName": "南大沢２丁目",
+      "normalizedName": "南大沢2丁目",
+      "estatSNames": [
+        "南大沢二丁目"
+      ],
+      "estatKeyCodes": [
+        "13201050002"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "15503",
+      "csvName": "南大沢３丁目",
+      "normalizedName": "南大沢3丁目",
+      "estatSNames": [
+        "南大沢三丁目"
+      ],
+      "estatKeyCodes": [
+        "13201050003"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "15504",
+      "csvName": "南大沢４丁目",
+      "normalizedName": "南大沢4丁目",
+      "estatSNames": [
+        "南大沢四丁目"
+      ],
+      "estatKeyCodes": [
+        "13201050004"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "15505",
+      "csvName": "南大沢５丁目",
+      "normalizedName": "南大沢5丁目",
+      "estatSNames": [
+        "南大沢五丁目"
+      ],
+      "estatKeyCodes": [
+        "13201050005"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "15600",
+      "csvName": "越野",
+      "normalizedName": "越野",
+      "estatSNames": [
+        "越野"
+      ],
+      "estatKeyCodes": [
+        "132010510"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "15700",
+      "csvName": "松木",
+      "normalizedName": "松木",
+      "estatSNames": [
+        "松木"
+      ],
+      "estatKeyCodes": [
+        "132010520"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "15801",
+      "csvName": "別所１丁目",
+      "normalizedName": "別所1丁目",
+      "estatSNames": [
+        "別所一丁目"
+      ],
+      "estatKeyCodes": [
+        "13201054001"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "15802",
+      "csvName": "別所２丁目",
+      "normalizedName": "別所2丁目",
+      "estatSNames": [
+        "別所二丁目"
+      ],
+      "estatKeyCodes": [
+        "13201054002"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "15901",
+      "csvName": "南陽台１丁目",
+      "normalizedName": "南陽台1丁目",
+      "estatSNames": [
+        "南陽台一丁目"
+      ],
+      "estatKeyCodes": [
+        "13201055001"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "15902",
+      "csvName": "南陽台２丁目",
+      "normalizedName": "南陽台2丁目",
+      "estatSNames": [
+        "南陽台二丁目"
+      ],
+      "estatKeyCodes": [
+        "13201055002"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "15903",
+      "csvName": "南陽台３丁目",
+      "normalizedName": "南陽台3丁目",
+      "estatSNames": [
+        "南陽台三丁目"
+      ],
+      "estatKeyCodes": [
+        "13201055003"
+      ],
+      "polygonCount": 1,
+      "status": "suppressed"
+    },
+    {
+      "code": "16000",
+      "csvName": "堀之内",
+      "normalizedName": "堀之内",
+      "estatSNames": [
+        "堀之内"
+      ],
+      "estatKeyCodes": [
+        "13201056000"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "16002",
+      "csvName": "堀之内２丁目",
+      "normalizedName": "堀之内2丁目",
+      "estatSNames": [
+        "堀之内二丁目"
+      ],
+      "estatKeyCodes": [
+        "13201056002"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "16003",
+      "csvName": "堀之内３丁目",
+      "normalizedName": "堀之内3丁目",
+      "estatSNames": [
+        "堀之内三丁目"
+      ],
+      "estatKeyCodes": [
+        "13201056003"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "16100",
+      "csvName": "東中野",
+      "normalizedName": "東中野",
+      "estatSNames": [
+        "東中野"
+      ],
+      "estatKeyCodes": [
+        "132010570"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "16200",
+      "csvName": "大塚󠄄",
+      "normalizedName": "大塚",
+      "estatSNames": [
+        "大塚"
+      ],
+      "estatKeyCodes": [
+        "13201058000",
+        "13201058001"
+      ],
+      "polygonCount": 11,
+      "status": "comparable"
+    },
+    {
+      "code": "16300",
+      "csvName": "鹿島",
+      "normalizedName": "鹿島",
+      "estatSNames": [
+        "鹿島"
+      ],
+      "estatKeyCodes": [
+        "132010590"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "16400",
+      "csvName": "松が谷",
+      "normalizedName": "松が谷",
+      "estatSNames": [
+        "松が谷"
+      ],
+      "estatKeyCodes": [
+        "132010600"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "20100",
+      "csvName": "並木町",
+      "normalizedName": "並木町",
+      "estatSNames": [
+        "並木町"
+      ],
+      "estatKeyCodes": [
+        "132010610"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "20201",
+      "csvName": "散田町１丁目",
+      "normalizedName": "散田町1丁目",
+      "estatSNames": [
+        "散田町一丁目"
+      ],
+      "estatKeyCodes": [
+        "13201062001"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "20202",
+      "csvName": "散田町２丁目",
+      "normalizedName": "散田町2丁目",
+      "estatSNames": [
+        "散田町二丁目"
+      ],
+      "estatKeyCodes": [
+        "13201062002"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "20203",
+      "csvName": "散田町３丁目",
+      "normalizedName": "散田町3丁目",
+      "estatSNames": [
+        "散田町三丁目"
+      ],
+      "estatKeyCodes": [
+        "13201062003"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "20204",
+      "csvName": "散田町４丁目",
+      "normalizedName": "散田町4丁目",
+      "estatSNames": [
+        "散田町四丁目"
+      ],
+      "estatKeyCodes": [
+        "13201062004"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "20205",
+      "csvName": "散田町５丁目",
+      "normalizedName": "散田町5丁目",
+      "estatSNames": [
+        "散田町五丁目"
+      ],
+      "estatKeyCodes": [
+        "13201062005"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "20300",
+      "csvName": "山田町",
+      "normalizedName": "山田町",
+      "estatSNames": [
+        "山田町"
+      ],
+      "estatKeyCodes": [
+        "132010630"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "20401",
+      "csvName": "めじろ台１丁目",
+      "normalizedName": "めじろ台1丁目",
+      "estatSNames": [
+        "めじろ台一丁目"
+      ],
+      "estatKeyCodes": [
+        "13201064001"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "20402",
+      "csvName": "めじろ台２丁目",
+      "normalizedName": "めじろ台2丁目",
+      "estatSNames": [
+        "めじろ台二丁目"
+      ],
+      "estatKeyCodes": [
+        "13201064002"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "20403",
+      "csvName": "めじろ台３丁目",
+      "normalizedName": "めじろ台3丁目",
+      "estatSNames": [
+        "めじろ台三丁目"
+      ],
+      "estatKeyCodes": [
+        "13201064003"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "20404",
+      "csvName": "めじろ台４丁目",
+      "normalizedName": "めじろ台4丁目",
+      "estatSNames": [
+        "めじろ台四丁目"
+      ],
+      "estatKeyCodes": [
+        "13201064004"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "20500",
+      "csvName": "長房町",
+      "normalizedName": "長房町",
+      "estatSNames": [
+        "長房町"
+      ],
+      "estatKeyCodes": [
+        "13201065000",
+        "13201065001"
+      ],
+      "polygonCount": 10,
+      "status": "comparable"
+    },
+    {
+      "code": "20551",
+      "csvName": "城山手１丁目",
+      "normalizedName": "城山手1丁目",
+      "estatSNames": [
+        "城山手一丁目"
+      ],
+      "estatKeyCodes": [
+        "13201118001"
+      ],
+      "polygonCount": 1,
+      "status": "suppressed"
+    },
+    {
+      "code": "20552",
+      "csvName": "城山手２丁目",
+      "normalizedName": "城山手2丁目",
+      "estatSNames": [
+        "城山手二丁目"
+      ],
+      "estatKeyCodes": [
+        "13201118002"
+      ],
+      "polygonCount": 1,
+      "status": "suppressed"
+    },
+    {
+      "code": "20600",
+      "csvName": "狭間町",
+      "normalizedName": "狭間町",
+      "estatSNames": [
+        "狭間町"
+      ],
+      "estatKeyCodes": [
+        "132010660"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "25100",
+      "csvName": "椚田町",
+      "normalizedName": "椚田町",
+      "estatSNames": [
+        "椚田町"
+      ],
+      "estatKeyCodes": [
+        "13201067000",
+        "13201067001"
+      ],
+      "polygonCount": 12,
+      "status": "comparable"
+    },
+    {
+      "code": "25200",
+      "csvName": "館町",
+      "normalizedName": "館町",
+      "estatSNames": [
+        "館町"
+      ],
+      "estatKeyCodes": [
+        "13201068000",
+        "13201068001"
+      ],
+      "polygonCount": 6,
+      "status": "comparable"
+    },
+    {
+      "code": "25300",
+      "csvName": "寺田町",
+      "normalizedName": "寺田町",
+      "estatSNames": [
+        "寺田町"
+      ],
+      "estatKeyCodes": [
+        "132010690"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "25400",
+      "csvName": "大船町",
+      "normalizedName": "大船町",
+      "estatSNames": [
+        "大船町"
+      ],
+      "estatKeyCodes": [
+        "132010700"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "30100",
+      "csvName": "大楽寺町",
+      "normalizedName": "大楽寺町",
+      "estatSNames": [
+        "大楽寺町"
+      ],
+      "estatKeyCodes": [
+        "132010710"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "30200",
+      "csvName": "上壱分方町",
+      "normalizedName": "上壱分方町",
+      "estatSNames": [
+        "上壱分方町"
+      ],
+      "estatKeyCodes": [
+        "132010720"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "30300",
+      "csvName": "諏訪町",
+      "normalizedName": "諏訪町",
+      "estatSNames": [
+        "諏訪町"
+      ],
+      "estatKeyCodes": [
+        "132010730"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "30400",
+      "csvName": "四谷町",
+      "normalizedName": "四谷町",
+      "estatSNames": [
+        "四谷町"
+      ],
+      "estatKeyCodes": [
+        "132010740"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "30500",
+      "csvName": "叶谷町",
+      "normalizedName": "叶谷町",
+      "estatSNames": [
+        "叶谷町"
+      ],
+      "estatKeyCodes": [
+        "132010750"
+      ],
+      "polygonCount": 1,
+      "status": "suppressed"
+    },
+    {
+      "code": "30600",
+      "csvName": "泉町",
+      "normalizedName": "泉町",
+      "estatSNames": [
+        "泉町"
+      ],
+      "estatKeyCodes": [
+        "132010760"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "30700",
+      "csvName": "横川町",
+      "normalizedName": "横川町",
+      "estatSNames": [
+        "横川町"
+      ],
+      "estatKeyCodes": [
+        "13201077000",
+        "13201077001"
+      ],
+      "polygonCount": 11,
+      "status": "comparable"
+    },
+    {
+      "code": "30800",
+      "csvName": "弐分方町",
+      "normalizedName": "弐分方町",
+      "estatSNames": [
+        "弐分方町"
+      ],
+      "estatKeyCodes": [
+        "132010780"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "30900",
+      "csvName": "川町",
+      "normalizedName": "川町",
+      "estatSNames": [
+        "川町"
+      ],
+      "estatKeyCodes": [
+        "132010790"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "31001",
+      "csvName": "元八王子町１丁目",
+      "normalizedName": "元八王子町1丁目",
+      "estatSNames": [
+        "元八王子町一丁目"
+      ],
+      "estatKeyCodes": [
+        "13201080001"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "31002",
+      "csvName": "元八王子町２丁目",
+      "normalizedName": "元八王子町2丁目",
+      "estatSNames": [
+        "元八王子町二丁目"
+      ],
+      "estatKeyCodes": [
+        "13201080002"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "31003",
+      "csvName": "元八王子町３丁目",
+      "normalizedName": "元八王子町3丁目",
+      "estatSNames": [
+        "元八王子町三丁目"
+      ],
+      "estatKeyCodes": [
+        "13201080003"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "35100",
+      "csvName": "下恩方町",
+      "normalizedName": "下恩方町",
+      "estatSNames": [
+        "下恩方町"
+      ],
+      "estatKeyCodes": [
+        "132010810"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "35200",
+      "csvName": "上恩方町",
+      "normalizedName": "上恩方町",
+      "estatSNames": [
+        "上恩方町"
+      ],
+      "estatKeyCodes": [
+        "132010820"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "35300",
+      "csvName": "西寺方町",
+      "normalizedName": "西寺方町",
+      "estatSNames": [
+        "西寺方町"
+      ],
+      "estatKeyCodes": [
+        "132010830"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "35400",
+      "csvName": "小津町",
+      "normalizedName": "小津町",
+      "estatSNames": [
+        "小津町"
+      ],
+      "estatKeyCodes": [
+        "132010840"
+      ],
+      "polygonCount": 1,
+      "status": "suppressed"
+    },
+    {
+      "code": "40100",
+      "csvName": "川口町",
+      "normalizedName": "川口町",
+      "estatSNames": [
+        "川口町"
+      ],
+      "estatKeyCodes": [
+        "13201085000",
+        "13201085001"
+      ],
+      "polygonCount": 16,
+      "status": "comparable"
+    },
+    {
+      "code": "40200",
+      "csvName": "上川町",
+      "normalizedName": "上川町",
+      "estatSNames": [
+        "上川町"
+      ],
+      "estatKeyCodes": [
+        "132010860"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "40300",
+      "csvName": "犬目町",
+      "normalizedName": "犬目町",
+      "estatSNames": [
+        "犬目町"
+      ],
+      "estatKeyCodes": [
+        "132010870"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "40400",
+      "csvName": "楢原町",
+      "normalizedName": "楢原町",
+      "estatSNames": [
+        "楢原町"
+      ],
+      "estatKeyCodes": [
+        "13201088000",
+        "13201088001"
+      ],
+      "polygonCount": 7,
+      "status": "comparable"
+    },
+    {
+      "code": "40500",
+      "csvName": "美山町",
+      "normalizedName": "美山町",
+      "estatSNames": [
+        "美山町"
+      ],
+      "estatKeyCodes": [
+        "132010890"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "45100",
+      "csvName": "尾崎町",
+      "normalizedName": "尾崎町",
+      "estatSNames": [
+        "尾崎町"
+      ],
+      "estatKeyCodes": [
+        "132010900"
+      ],
+      "polygonCount": 1,
+      "status": "suppressed"
+    },
+    {
+      "code": "45200",
+      "csvName": "左入町",
+      "normalizedName": "左入町",
+      "estatSNames": [
+        "左入町"
+      ],
+      "estatKeyCodes": [
+        "132010910"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "45301",
+      "csvName": "滝山町１丁目",
+      "normalizedName": "滝山町1丁目",
+      "estatSNames": [
+        "滝山町一丁目"
+      ],
+      "estatKeyCodes": [
+        "13201092001"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "45302",
+      "csvName": "滝山町２丁目",
+      "normalizedName": "滝山町2丁目",
+      "estatSNames": [
+        "滝山町二丁目"
+      ],
+      "estatKeyCodes": [
+        "13201092002"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "45400",
+      "csvName": "梅坪町",
+      "normalizedName": "梅坪町",
+      "estatSNames": [
+        "梅坪町"
+      ],
+      "estatKeyCodes": [
+        "132010930"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "45500",
+      "csvName": "谷野町",
+      "normalizedName": "谷野町",
+      "estatSNames": [
+        "谷野町"
+      ],
+      "estatKeyCodes": [
+        "132010940"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "45551",
+      "csvName": "みつい台１丁目",
+      "normalizedName": "みつい台1丁目",
+      "estatSNames": [
+        "みつい台一丁目"
+      ],
+      "estatKeyCodes": [
+        "13201117001"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "45552",
+      "csvName": "みつい台２丁目",
+      "normalizedName": "みつい台2丁目",
+      "estatSNames": [
+        "みつい台二丁目"
+      ],
+      "estatKeyCodes": [
+        "13201117002"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "45601",
+      "csvName": "丹木町１丁目",
+      "normalizedName": "丹木町1丁目",
+      "estatSNames": [
+        "丹木町一丁目"
+      ],
+      "estatKeyCodes": [
+        "13201095001"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "45602",
+      "csvName": "丹木町２丁目",
+      "normalizedName": "丹木町2丁目",
+      "estatSNames": [
+        "丹木町二丁目"
+      ],
+      "estatKeyCodes": [
+        "13201095002"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "45603",
+      "csvName": "丹木町３丁目",
+      "normalizedName": "丹木町3丁目",
+      "estatSNames": [
+        "丹木町三丁目"
+      ],
+      "estatKeyCodes": [
+        "13201095003"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "45701",
+      "csvName": "加住町１丁目",
+      "normalizedName": "加住町1丁目",
+      "estatSNames": [
+        "加住町一丁目"
+      ],
+      "estatKeyCodes": [
+        "13201096001"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "45702",
+      "csvName": "加住町２丁目",
+      "normalizedName": "加住町2丁目",
+      "estatSNames": [
+        "加住町二丁目"
+      ],
+      "estatKeyCodes": [
+        "13201096002"
+      ],
+      "polygonCount": 1,
+      "status": "suppressed"
+    },
+    {
+      "code": "45800",
+      "csvName": "宮下町",
+      "normalizedName": "宮下町",
+      "estatSNames": [
+        "宮下町"
+      ],
+      "estatKeyCodes": [
+        "132010970"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "45900",
+      "csvName": "戸吹町",
+      "normalizedName": "戸吹町",
+      "estatSNames": [
+        "戸吹町"
+      ],
+      "estatKeyCodes": [
+        "132010980"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "46000",
+      "csvName": "高月町",
+      "normalizedName": "高月町",
+      "estatSNames": [
+        "高月町"
+      ],
+      "estatKeyCodes": [
+        "132010990"
+      ],
+      "polygonCount": 1,
+      "status": "suppressed"
+    },
+    {
+      "code": "50100",
+      "csvName": "小比企町",
+      "normalizedName": "小比企町",
+      "estatSNames": [
+        "小比企町"
+      ],
+      "estatKeyCodes": [
+        "132011000"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "50200",
+      "csvName": "片倉町",
+      "normalizedName": "片倉町",
+      "estatSNames": [
+        "片倉町"
+      ],
+      "estatKeyCodes": [
+        "13201101000",
+        "13201101001"
+      ],
+      "polygonCount": 11,
+      "status": "comparable"
+    },
+    {
+      "code": "50251",
+      "csvName": "西片倉１丁目",
+      "normalizedName": "西片倉1丁目",
+      "estatSNames": [
+        "西片倉一丁目"
+      ],
+      "estatKeyCodes": [
+        "13201122001"
+      ],
+      "polygonCount": 1,
+      "status": "suppressed"
+    },
+    {
+      "code": "50252",
+      "csvName": "西片倉２丁目",
+      "normalizedName": "西片倉2丁目",
+      "estatSNames": [
+        "西片倉二丁目"
+      ],
+      "estatKeyCodes": [
+        "13201122002"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "50253",
+      "csvName": "西片倉３丁目",
+      "normalizedName": "西片倉3丁目",
+      "estatSNames": [
+        "西片倉三丁目"
+      ],
+      "estatKeyCodes": [
+        "13201122003"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "50300",
+      "csvName": "宇津貫町",
+      "normalizedName": "宇津貫町",
+      "estatSNames": [
+        "宇津貫町"
+      ],
+      "estatKeyCodes": [
+        "132011020"
+      ],
+      "polygonCount": 2,
+      "status": "suppressed"
+    },
+    {
+      "code": "50401",
+      "csvName": "みなみ野１丁目",
+      "normalizedName": "みなみ野1丁目",
+      "estatSNames": [
+        "みなみ野一丁目"
+      ],
+      "estatKeyCodes": [
+        "13201121001"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "50402",
+      "csvName": "みなみ野２丁目",
+      "normalizedName": "みなみ野2丁目",
+      "estatSNames": [
+        "みなみ野二丁目"
+      ],
+      "estatKeyCodes": [
+        "13201121002"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "50403",
+      "csvName": "みなみ野３丁目",
+      "normalizedName": "みなみ野3丁目",
+      "estatSNames": [
+        "みなみ野三丁目"
+      ],
+      "estatKeyCodes": [
+        "13201121003"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "50404",
+      "csvName": "みなみ野４丁目",
+      "normalizedName": "みなみ野4丁目",
+      "estatSNames": [
+        "みなみ野四丁目"
+      ],
+      "estatKeyCodes": [
+        "13201121004"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "50405",
+      "csvName": "みなみ野５丁目",
+      "normalizedName": "みなみ野5丁目",
+      "estatSNames": [
+        "みなみ野五丁目"
+      ],
+      "estatKeyCodes": [
+        "13201121005"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "50406",
+      "csvName": "みなみ野６丁目",
+      "normalizedName": "みなみ野6丁目",
+      "estatSNames": [
+        "みなみ野六丁目"
+      ],
+      "estatKeyCodes": [
+        "13201121006"
+      ],
+      "polygonCount": 1,
+      "status": "suppressed"
+    },
+    {
+      "code": "50501",
+      "csvName": "兵衛１丁目",
+      "normalizedName": "兵衛1丁目",
+      "estatSNames": [
+        "兵衛一丁目"
+      ],
+      "estatKeyCodes": [
+        "13201123001"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "50502",
+      "csvName": "兵衛２丁目",
+      "normalizedName": "兵衛2丁目",
+      "estatSNames": [
+        "兵衛二丁目"
+      ],
+      "estatKeyCodes": [
+        "13201123002"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "50601",
+      "csvName": "七国１丁目",
+      "normalizedName": "七国1丁目",
+      "estatSNames": [
+        "七国一丁目"
+      ],
+      "estatKeyCodes": [
+        "13201124001"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "50602",
+      "csvName": "七国２丁目",
+      "normalizedName": "七国2丁目",
+      "estatSNames": [
+        "七国二丁目"
+      ],
+      "estatKeyCodes": [
+        "13201124002"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "50603",
+      "csvName": "七国３丁目",
+      "normalizedName": "七国3丁目",
+      "estatSNames": [
+        "七国三丁目"
+      ],
+      "estatKeyCodes": [
+        "13201124003"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "50604",
+      "csvName": "七国４丁目",
+      "normalizedName": "七国4丁目",
+      "estatSNames": [
+        "七国四丁目"
+      ],
+      "estatKeyCodes": [
+        "13201124004"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "50605",
+      "csvName": "七国５丁目",
+      "normalizedName": "七国5丁目",
+      "estatSNames": [
+        "七国五丁目"
+      ],
+      "estatKeyCodes": [
+        "13201124005"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "50606",
+      "csvName": "七国６丁目",
+      "normalizedName": "七国6丁目",
+      "estatSNames": [
+        "七国六丁目"
+      ],
+      "estatKeyCodes": [
+        "13201124006"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "55100",
+      "csvName": "北野町",
+      "normalizedName": "北野町",
+      "estatSNames": [
+        "北野町"
+      ],
+      "estatKeyCodes": [
+        "132011030"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "55300",
+      "csvName": "打越町",
+      "normalizedName": "打越町",
+      "estatSNames": [
+        "打越町"
+      ],
+      "estatKeyCodes": [
+        "13201105000",
+        "13201105001"
+      ],
+      "polygonCount": 4,
+      "status": "comparable"
+    },
+    {
+      "code": "55351",
+      "csvName": "北野台１丁目",
+      "normalizedName": "北野台1丁目",
+      "estatSNames": [
+        "北野台一丁目"
+      ],
+      "estatKeyCodes": [
+        "13201108001"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "55352",
+      "csvName": "北野台２丁目",
+      "normalizedName": "北野台2丁目",
+      "estatSNames": [
+        "北野台二丁目"
+      ],
+      "estatKeyCodes": [
+        "13201108002"
+      ],
+      "polygonCount": 1,
+      "status": "suppressed"
+    },
+    {
+      "code": "55353",
+      "csvName": "北野台３丁目",
+      "normalizedName": "北野台3丁目",
+      "estatSNames": [
+        "北野台三丁目"
+      ],
+      "estatKeyCodes": [
+        "13201108003"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "55354",
+      "csvName": "北野台４丁目",
+      "normalizedName": "北野台4丁目",
+      "estatSNames": [
+        "北野台四丁目"
+      ],
+      "estatKeyCodes": [
+        "13201108004"
+      ],
+      "polygonCount": 1,
+      "status": "suppressed"
+    },
+    {
+      "code": "55355",
+      "csvName": "北野台５丁目",
+      "normalizedName": "北野台5丁目",
+      "estatSNames": [
+        "北野台五丁目"
+      ],
+      "estatKeyCodes": [
+        "13201108005"
+      ],
+      "polygonCount": 1,
+      "status": "suppressed"
+    },
+    {
+      "code": "55400",
+      "csvName": "長沼町",
+      "normalizedName": "長沼町",
+      "estatSNames": [
+        "長沼町"
+      ],
+      "estatKeyCodes": [
+        "132011060"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "55501",
+      "csvName": "絹ケ丘１丁目",
+      "normalizedName": "絹ケ丘1丁目",
+      "estatSNames": [
+        "絹ケ丘一丁目"
+      ],
+      "estatKeyCodes": [
+        "13201107001"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "55502",
+      "csvName": "絹ケ丘２丁目",
+      "normalizedName": "絹ケ丘2丁目",
+      "estatSNames": [
+        "絹ケ丘二丁目"
+      ],
+      "estatKeyCodes": [
+        "13201107002"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "55503",
+      "csvName": "絹ケ丘３丁目",
+      "normalizedName": "絹ケ丘3丁目",
+      "estatSNames": [
+        "絹ケ丘三丁目"
+      ],
+      "estatKeyCodes": [
+        "13201107003"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "60100",
+      "csvName": "高倉町",
+      "normalizedName": "高倉町",
+      "estatSNames": [
+        "高倉町"
+      ],
+      "estatKeyCodes": [
+        "132011090"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "60200",
+      "csvName": "石川町",
+      "normalizedName": "石川町",
+      "estatSNames": [
+        "石川町"
+      ],
+      "estatKeyCodes": [
+        "13201110000",
+        "13201110001"
+      ],
+      "polygonCount": 4,
+      "status": "comparable"
+    },
+    {
+      "code": "60300",
+      "csvName": "宇津木町",
+      "normalizedName": "宇津木町",
+      "estatSNames": [
+        "宇津木町"
+      ],
+      "estatKeyCodes": [
+        "132011110"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "60400",
+      "csvName": "平町",
+      "normalizedName": "平町",
+      "estatSNames": [
+        "平町"
+      ],
+      "estatKeyCodes": [
+        "132011120"
+      ],
+      "polygonCount": 1,
+      "status": "suppressed"
+    },
+    {
+      "code": "60500",
+      "csvName": "小宮町",
+      "normalizedName": "小宮町",
+      "estatSNames": [
+        "小宮町"
+      ],
+      "estatKeyCodes": [
+        "132011130"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "60601",
+      "csvName": "久保山町１丁目",
+      "normalizedName": "久保山町1丁目",
+      "estatSNames": [
+        "久保山町一丁目"
+      ],
+      "estatKeyCodes": [
+        "13201114001"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "60602",
+      "csvName": "久保山町２丁目",
+      "normalizedName": "久保山町2丁目",
+      "estatSNames": [
+        "久保山町二丁目"
+      ],
+      "estatKeyCodes": [
+        "13201114002"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "60700",
+      "csvName": "大谷町",
+      "normalizedName": "大谷町",
+      "estatSNames": [
+        "大谷町"
+      ],
+      "estatKeyCodes": [
+        "132011150"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    },
+    {
+      "code": "60800",
+      "csvName": "丸山町",
+      "normalizedName": "丸山町",
+      "estatSNames": [
+        "丸山町"
+      ],
+      "estatKeyCodes": [
+        "132011160"
+      ],
+      "polygonCount": 1,
+      "status": "comparable"
+    }
+  ]
+}

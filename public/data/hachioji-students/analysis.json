@@ -1,0 +1,461 @@
+{
+  "generatedFrom": "public/data/hachioji-students/student-data.json",
+  "reviewedOn": "2026-11-27",
+  "indexSummary": {
+    "baseYear": 2006,
+    "baseStudents": 104130,
+    "latestYear": 2023,
+    "latestStudents": 89763,
+    "latestIndex2006": 86.2,
+    "peakYear": 2011,
+    "peakStudents": 110084,
+    "peakIndex2006": 105.7,
+    "totalDiff": -14367,
+    "totalChangePercent": -13.8,
+    "cagrPercent": -0.87,
+    "series": [
+      {
+        "year": 2006,
+        "students": 104130,
+        "index2006": 100
+      },
+      {
+        "year": 2007,
+        "students": 104511,
+        "index2006": 100.4
+      },
+      {
+        "year": 2008,
+        "students": 106386,
+        "index2006": 102.2
+      },
+      {
+        "year": 2009,
+        "students": 104679,
+        "index2006": 100.5
+      },
+      {
+        "year": 2010,
+        "students": 107186,
+        "index2006": 102.9
+      },
+      {
+        "year": 2011,
+        "students": 110084,
+        "index2006": 105.7
+      },
+      {
+        "year": 2012,
+        "students": 105229,
+        "index2006": 101.1
+      },
+      {
+        "year": 2013,
+        "students": 103725,
+        "index2006": 99.6
+      },
+      {
+        "year": 2014,
+        "students": 102465,
+        "index2006": 98.4
+      },
+      {
+        "year": 2015,
+        "students": 99259,
+        "index2006": 95.3
+      },
+      {
+        "year": 2016,
+        "students": 95653,
+        "index2006": 91.9
+      },
+      {
+        "year": 2017,
+        "students": 95625,
+        "index2006": 91.8
+      },
+      {
+        "year": 2018,
+        "students": 95090,
+        "index2006": 91.3
+      },
+      {
+        "year": 2019,
+        "students": 94444,
+        "index2006": 90.7
+      },
+      {
+        "year": 2020,
+        "students": 93637,
+        "index2006": 89.9
+      },
+      {
+        "year": 2021,
+        "students": 94253,
+        "index2006": 90.5
+      },
+      {
+        "year": 2022,
+        "students": 94823,
+        "index2006": 91.1
+      },
+      {
+        "year": 2023,
+        "students": 89763,
+        "index2006": 86.2
+      }
+    ]
+  },
+  "yoySummary": {
+    "q1": -1707,
+    "median": -646,
+    "q3": 570,
+    "iqr": 2277,
+    "outsideLowerQ1Years": [
+      2012,
+      2015,
+      2016,
+      2023
+    ],
+    "stable2017to2022Range": {
+      "minDiff": -807,
+      "maxDiff": 616
+    },
+    "rows": [
+      {
+        "year": 2007,
+        "students": 104511,
+        "prevStudents": 104130,
+        "diff": 381,
+        "pct": 0.4,
+        "isMoveYear": false
+      },
+      {
+        "year": 2008,
+        "students": 106386,
+        "prevStudents": 104511,
+        "diff": 1875,
+        "pct": 1.8,
+        "isMoveYear": false
+      },
+      {
+        "year": 2009,
+        "students": 104679,
+        "prevStudents": 106386,
+        "diff": -1707,
+        "pct": -1.6,
+        "isMoveYear": false
+      },
+      {
+        "year": 2010,
+        "students": 107186,
+        "prevStudents": 104679,
+        "diff": 2507,
+        "pct": 2.4,
+        "isMoveYear": false
+      },
+      {
+        "year": 2011,
+        "students": 110084,
+        "prevStudents": 107186,
+        "diff": 2898,
+        "pct": 2.7,
+        "isMoveYear": false
+      },
+      {
+        "year": 2012,
+        "students": 105229,
+        "prevStudents": 110084,
+        "diff": -4855,
+        "pct": -4.4,
+        "isMoveYear": false
+      },
+      {
+        "year": 2013,
+        "students": 103725,
+        "prevStudents": 105229,
+        "diff": -1504,
+        "pct": -1.4,
+        "isMoveYear": false
+      },
+      {
+        "year": 2014,
+        "students": 102465,
+        "prevStudents": 103725,
+        "diff": -1260,
+        "pct": -1.2,
+        "isMoveYear": false
+      },
+      {
+        "year": 2015,
+        "students": 99259,
+        "prevStudents": 102465,
+        "diff": -3206,
+        "pct": -3.1,
+        "isMoveYear": true
+      },
+      {
+        "year": 2016,
+        "students": 95653,
+        "prevStudents": 99259,
+        "diff": -3606,
+        "pct": -3.6,
+        "isMoveYear": true
+      },
+      {
+        "year": 2017,
+        "students": 95625,
+        "prevStudents": 95653,
+        "diff": -28,
+        "pct": 0,
+        "isMoveYear": false
+      },
+      {
+        "year": 2018,
+        "students": 95090,
+        "prevStudents": 95625,
+        "diff": -535,
+        "pct": -0.6,
+        "isMoveYear": false
+      },
+      {
+        "year": 2019,
+        "students": 94444,
+        "prevStudents": 95090,
+        "diff": -646,
+        "pct": -0.7,
+        "isMoveYear": false
+      },
+      {
+        "year": 2020,
+        "students": 93637,
+        "prevStudents": 94444,
+        "diff": -807,
+        "pct": -0.9,
+        "isMoveYear": false
+      },
+      {
+        "year": 2021,
+        "students": 94253,
+        "prevStudents": 93637,
+        "diff": 616,
+        "pct": 0.7,
+        "isMoveYear": false
+      },
+      {
+        "year": 2022,
+        "students": 94823,
+        "prevStudents": 94253,
+        "diff": 570,
+        "pct": 0.6,
+        "isMoveYear": false
+      },
+      {
+        "year": 2023,
+        "students": 89763,
+        "prevStudents": 94823,
+        "diff": -5060,
+        "pct": -5.3,
+        "isMoveYear": true
+      }
+    ]
+  },
+  "regressionSummary": {
+    "note": "過去の推移を整理するための説明用直線であり、将来の予測には使いません。",
+    "period1": {
+      "startYear": 2006,
+      "endYear": 2014,
+      "slope": -98.8,
+      "slopeExact": -98.78333333333333,
+      "intercept": 303931.72222222225,
+      "fitted": [
+        {
+          "year": 2006,
+          "fitted": 105772
+        },
+        {
+          "year": 2007,
+          "fitted": 105674
+        },
+        {
+          "year": 2008,
+          "fitted": 105575
+        },
+        {
+          "year": 2009,
+          "fitted": 105476
+        },
+        {
+          "year": 2010,
+          "fitted": 105377
+        },
+        {
+          "year": 2011,
+          "fitted": 105278
+        },
+        {
+          "year": 2012,
+          "fitted": 105180
+        },
+        {
+          "year": 2013,
+          "fitted": 105081
+        },
+        {
+          "year": 2014,
+          "fitted": 104982
+        }
+      ]
+    },
+    "period2": {
+      "startYear": 2015,
+      "endYear": 2023,
+      "slope": -744.5,
+      "slopeExact": -744.5166666666667,
+      "intercept": 1597906.5944444444,
+      "fitted": [
+        {
+          "year": 2015,
+          "fitted": 97706
+        },
+        {
+          "year": 2016,
+          "fitted": 96961
+        },
+        {
+          "year": 2017,
+          "fitted": 96216
+        },
+        {
+          "year": 2018,
+          "fitted": 95472
+        },
+        {
+          "year": 2019,
+          "fitted": 94727
+        },
+        {
+          "year": 2020,
+          "fitted": 93983
+        },
+        {
+          "year": 2021,
+          "fitted": 93238
+        },
+        {
+          "year": 2022,
+          "fitted": 92494
+        },
+        {
+          "year": 2023,
+          "fitted": 91749
+        }
+      ]
+    },
+    "fullPeriod": {
+      "startYear": 2006,
+      "endYear": 2023,
+      "slope": -994.7,
+      "slopeExact": -994.6625386996905,
+      "intercept": 2103800.01754386,
+      "fitted": [
+        {
+          "year": 2006,
+          "fitted": 108507
+        },
+        {
+          "year": 2007,
+          "fitted": 107512
+        },
+        {
+          "year": 2008,
+          "fitted": 106518
+        },
+        {
+          "year": 2009,
+          "fitted": 105523
+        },
+        {
+          "year": 2010,
+          "fitted": 104528
+        },
+        {
+          "year": 2011,
+          "fitted": 103534
+        },
+        {
+          "year": 2012,
+          "fitted": 102539
+        },
+        {
+          "year": 2013,
+          "fitted": 101544
+        },
+        {
+          "year": 2014,
+          "fitted": 100550
+        },
+        {
+          "year": 2015,
+          "fitted": 99555
+        },
+        {
+          "year": 2016,
+          "fitted": 98560
+        },
+        {
+          "year": 2017,
+          "fitted": 97566
+        },
+        {
+          "year": 2018,
+          "fitted": 96571
+        },
+        {
+          "year": 2019,
+          "fitted": 95576
+        },
+        {
+          "year": 2020,
+          "fitted": 94582
+        },
+        {
+          "year": 2021,
+          "fitted": 93587
+        },
+        {
+          "year": 2022,
+          "fitted": 92592
+        },
+        {
+          "year": 2023,
+          "fitted": 91598
+        }
+      ]
+    }
+  },
+  "surveySummary": {
+    "note": "無作為抽出と仮定した場合の Wilson 95％信頼区間。Web回答のため学生全体へ一般化しません。",
+    "responses": 682,
+    "resident": {
+      "percent": 32.1,
+      "responses": 682,
+      "approxCount": 219,
+      "ciLow": 28.7,
+      "ciHigh": 35.7,
+      "halfWidth": 3.5
+    },
+    "intendsToLive": {
+      "percent": 9.7,
+      "responses": 682,
+      "approxCount": 66,
+      "ciLow": 7.7,
+      "ciHigh": 12.2,
+      "halfWidth": 2.2
+    }
+  },
+  "perCapitaSummary": {
+    "status": "omitted",
+    "reason": "市内の大学等学生数（年度別・2006～2023年）と住民基本台帳の市総人口（各年10月1日・2013年以降など）で期間と基準日が揃わないため見送り。"
+  }
+}

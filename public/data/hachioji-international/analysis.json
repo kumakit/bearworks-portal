@@ -1,0 +1,750 @@
+{
+  "generatedFrom": "public/data/hachioji-international/population.json",
+  "retrievedOn": "2026-11-27",
+  "decomposition": {
+    "fromDate": "2013-10-01",
+    "toDate": "2026-10-01",
+    "totalFrom": 563895,
+    "totalTo": 559320,
+    "totalDiff": -4575,
+    "totalChangePercent": -0.81,
+    "japaneseFrom": 554898,
+    "japaneseTo": 539359,
+    "japaneseDiff": -15539,
+    "japaneseChangePercent": -2.8,
+    "foreignFrom": 8997,
+    "foreignTo": 19961,
+    "foreignDiff": 10964,
+    "foreignChangePercent": 121.86,
+    "offsetRatioPercent": 70.6
+  },
+  "indexSummary": {
+    "baseYear": 2013,
+    "latestYear": 2026,
+    "years": 13,
+    "foreignRatio": 2.22,
+    "foreignCagrPercent": 6.32,
+    "japaneseCagrPercent": -0.22,
+    "totalCagrPercent": -0.06,
+    "series": [
+      {
+        "year": 2013,
+        "date": "2013-10-01",
+        "foreign": 8997,
+        "japanese": 554898,
+        "total": 563895,
+        "foreignShare": 1.6,
+        "foreignIndex": 100,
+        "japaneseIndex": 100,
+        "totalIndex": 100
+      },
+      {
+        "year": 2014,
+        "date": "2014-10-01",
+        "foreign": 9422,
+        "japanese": 553518,
+        "total": 562940,
+        "foreignShare": 1.67,
+        "foreignIndex": 104.7,
+        "japaneseIndex": 99.8,
+        "totalIndex": 99.8
+      },
+      {
+        "year": 2015,
+        "date": "2015-10-01",
+        "foreign": 9928,
+        "japanese": 552853,
+        "total": 562781,
+        "foreignShare": 1.76,
+        "foreignIndex": 110.3,
+        "japaneseIndex": 99.6,
+        "totalIndex": 99.8
+      },
+      {
+        "year": 2016,
+        "date": "2016-10-01",
+        "foreign": 11059,
+        "japanese": 552268,
+        "total": 563327,
+        "foreignShare": 1.96,
+        "foreignIndex": 122.9,
+        "japaneseIndex": 99.5,
+        "totalIndex": 99.9
+      },
+      {
+        "year": 2017,
+        "date": "2017-10-01",
+        "foreign": 11954,
+        "japanese": 551584,
+        "total": 563538,
+        "foreignShare": 2.12,
+        "foreignIndex": 132.9,
+        "japaneseIndex": 99.4,
+        "totalIndex": 99.9
+      },
+      {
+        "year": 2018,
+        "date": "2018-10-01",
+        "foreign": 12737,
+        "japanese": 549785,
+        "total": 562522,
+        "foreignShare": 2.26,
+        "foreignIndex": 141.6,
+        "japaneseIndex": 99.1,
+        "totalIndex": 99.8
+      },
+      {
+        "year": 2019,
+        "date": "2019-10-01",
+        "foreign": 13120,
+        "japanese": 549708,
+        "total": 562828,
+        "foreignShare": 2.33,
+        "foreignIndex": 145.8,
+        "japaneseIndex": 99.1,
+        "totalIndex": 99.8
+      },
+      {
+        "year": 2020,
+        "date": "2020-10-01",
+        "foreign": 12881,
+        "japanese": 548991,
+        "total": 561872,
+        "foreignShare": 2.29,
+        "foreignIndex": 143.2,
+        "japaneseIndex": 98.9,
+        "totalIndex": 99.6
+      },
+      {
+        "year": 2021,
+        "date": "2021-10-01",
+        "foreign": 12898,
+        "japanese": 549428,
+        "total": 562326,
+        "foreignShare": 2.29,
+        "foreignIndex": 143.4,
+        "japaneseIndex": 99,
+        "totalIndex": 99.7
+      },
+      {
+        "year": 2022,
+        "date": "2022-10-01",
+        "foreign": 14059,
+        "japanese": 548546,
+        "total": 562605,
+        "foreignShare": 2.5,
+        "foreignIndex": 156.3,
+        "japaneseIndex": 98.9,
+        "totalIndex": 99.8
+      },
+      {
+        "year": 2023,
+        "date": "2023-10-01",
+        "foreign": 15125,
+        "japanese": 545788,
+        "total": 560913,
+        "foreignShare": 2.7,
+        "foreignIndex": 168.1,
+        "japaneseIndex": 98.4,
+        "totalIndex": 99.5
+      },
+      {
+        "year": 2024,
+        "date": "2024-10-01",
+        "foreign": 16495,
+        "japanese": 543314,
+        "total": 559809,
+        "foreignShare": 2.95,
+        "foreignIndex": 183.3,
+        "japaneseIndex": 97.9,
+        "totalIndex": 99.3
+      },
+      {
+        "year": 2025,
+        "date": "2025-10-01",
+        "foreign": 18535,
+        "japanese": 540729,
+        "total": 559264,
+        "foreignShare": 3.31,
+        "foreignIndex": 206,
+        "japaneseIndex": 97.4,
+        "totalIndex": 99.2
+      },
+      {
+        "year": 2026,
+        "date": "2026-10-01",
+        "foreign": 19961,
+        "japanese": 539359,
+        "total": 559320,
+        "foreignShare": 3.57,
+        "foreignIndex": 221.9,
+        "japaneseIndex": 97.2,
+        "totalIndex": 99.2
+      }
+    ]
+  },
+  "yoySummary": {
+    "periods": {
+      "pre2020": {
+        "label": "2014～2019年",
+        "years": 6,
+        "avgForeignDiff": 687
+      },
+      "stagnation": {
+        "label": "2020～2021年",
+        "years": 2,
+        "avgForeignDiff": -111
+      },
+      "post2022": {
+        "label": "2022～2026年",
+        "years": 5,
+        "avgForeignDiff": 1413,
+        "maxYear": 2025,
+        "maxDiff": 2040,
+        "ratioToPre2020Avg": 2.06
+      }
+    },
+    "rows": [
+      {
+        "year": 2014,
+        "date": "2014-10-01",
+        "foreignDiff": 425,
+        "foreignYoYPct": 4.7,
+        "japaneseDiff": -1380,
+        "totalDiff": -955
+      },
+      {
+        "year": 2015,
+        "date": "2015-10-01",
+        "foreignDiff": 506,
+        "foreignYoYPct": 5.4,
+        "japaneseDiff": -665,
+        "totalDiff": -159
+      },
+      {
+        "year": 2016,
+        "date": "2016-10-01",
+        "foreignDiff": 1131,
+        "foreignYoYPct": 11.4,
+        "japaneseDiff": -585,
+        "totalDiff": 546
+      },
+      {
+        "year": 2017,
+        "date": "2017-10-01",
+        "foreignDiff": 895,
+        "foreignYoYPct": 8.1,
+        "japaneseDiff": -684,
+        "totalDiff": 211
+      },
+      {
+        "year": 2018,
+        "date": "2018-10-01",
+        "foreignDiff": 783,
+        "foreignYoYPct": 6.6,
+        "japaneseDiff": -1799,
+        "totalDiff": -1016
+      },
+      {
+        "year": 2019,
+        "date": "2019-10-01",
+        "foreignDiff": 383,
+        "foreignYoYPct": 3,
+        "japaneseDiff": -77,
+        "totalDiff": 306
+      },
+      {
+        "year": 2020,
+        "date": "2020-10-01",
+        "foreignDiff": -239,
+        "foreignYoYPct": -1.8,
+        "japaneseDiff": -717,
+        "totalDiff": -956
+      },
+      {
+        "year": 2021,
+        "date": "2021-10-01",
+        "foreignDiff": 17,
+        "foreignYoYPct": 0.1,
+        "japaneseDiff": 437,
+        "totalDiff": 454
+      },
+      {
+        "year": 2022,
+        "date": "2022-10-01",
+        "foreignDiff": 1161,
+        "foreignYoYPct": 9,
+        "japaneseDiff": -882,
+        "totalDiff": 279
+      },
+      {
+        "year": 2023,
+        "date": "2023-10-01",
+        "foreignDiff": 1066,
+        "foreignYoYPct": 7.6,
+        "japaneseDiff": -2758,
+        "totalDiff": -1692
+      },
+      {
+        "year": 2024,
+        "date": "2024-10-01",
+        "foreignDiff": 1370,
+        "foreignYoYPct": 9.1,
+        "japaneseDiff": -2474,
+        "totalDiff": -1104
+      },
+      {
+        "year": 2025,
+        "date": "2025-10-01",
+        "foreignDiff": 2040,
+        "foreignYoYPct": 12.4,
+        "japaneseDiff": -2585,
+        "totalDiff": -545
+      },
+      {
+        "year": 2026,
+        "date": "2026-10-01",
+        "foreignDiff": 1426,
+        "foreignYoYPct": 7.7,
+        "japaneseDiff": -1370,
+        "totalDiff": 56
+      }
+    ]
+  },
+  "nationalitySummary": {
+    "categories": [
+      {
+        "name": "中国",
+        "from": 3715,
+        "to": 6400,
+        "diff": 2685,
+        "ratio": 1.72,
+        "contributionPercent": 24.5,
+        "fromShare": 41.3,
+        "toShare": 32.1,
+        "sharePointDiff": -9.2
+      },
+      {
+        "name": "フィリピン",
+        "from": 1043,
+        "to": 1633,
+        "diff": 590,
+        "ratio": 1.57,
+        "contributionPercent": 5.4,
+        "fromShare": 11.6,
+        "toShare": 8.2,
+        "sharePointDiff": -3.4
+      },
+      {
+        "name": "ベトナム",
+        "from": 198,
+        "to": 2232,
+        "diff": 2034,
+        "ratio": 11.27,
+        "contributionPercent": 18.6,
+        "fromShare": 2.2,
+        "toShare": 11.2,
+        "sharePointDiff": 9
+      },
+      {
+        "name": "ネパール",
+        "from": 239,
+        "to": 1614,
+        "diff": 1375,
+        "ratio": 6.75,
+        "contributionPercent": 12.5,
+        "fromShare": 2.7,
+        "toShare": 8.1,
+        "sharePointDiff": 5.4
+      },
+      {
+        "name": "ミャンマー",
+        "from": 27,
+        "to": 1077,
+        "diff": 1050,
+        "ratio": 39.89,
+        "contributionPercent": 9.6,
+        "fromShare": 0.3,
+        "toShare": 5.4,
+        "sharePointDiff": 5.1
+      },
+      {
+        "name": "この5区分以外",
+        "from": 3775,
+        "to": 7005,
+        "diff": 3230,
+        "ratio": 1.86,
+        "contributionPercent": 29.5,
+        "fromShare": 42,
+        "toShare": 35.1,
+        "sharePointDiff": -6.9
+      }
+    ],
+    "threeEmerging": {
+      "names": [
+        "ベトナム",
+        "ネパール",
+        "ミャンマー"
+      ],
+      "diffSum": 4459,
+      "contributionPercent": 40.7
+    },
+    "annualShares": [
+      {
+        "year": 2013,
+        "date": "2013-10-01",
+        "foreign": 8997,
+        "counts": {
+          "中国": 3715,
+          "フィリピン": 1043,
+          "ベトナム": 198,
+          "ネパール": 239,
+          "ミャンマー": 27,
+          "この5区分以外": 3775
+        },
+        "shares": {
+          "中国": 41.29,
+          "フィリピン": 11.59,
+          "ベトナム": 2.2,
+          "ネパール": 2.66,
+          "ミャンマー": 0.3,
+          "この5区分以外": 41.96
+        }
+      },
+      {
+        "year": 2014,
+        "date": "2014-10-01",
+        "foreign": 9422,
+        "counts": {
+          "中国": 3919,
+          "フィリピン": 1090,
+          "ベトナム": 316,
+          "ネパール": 295,
+          "ミャンマー": 29,
+          "この5区分以外": 3773
+        },
+        "shares": {
+          "中国": 41.59,
+          "フィリピン": 11.57,
+          "ベトナム": 3.35,
+          "ネパール": 3.13,
+          "ミャンマー": 0.31,
+          "この5区分以外": 40.04
+        }
+      },
+      {
+        "year": 2015,
+        "date": "2015-10-01",
+        "foreign": 9928,
+        "counts": {
+          "中国": 4111,
+          "フィリピン": 1150,
+          "ベトナム": 433,
+          "ネパール": 332,
+          "ミャンマー": 45,
+          "この5区分以外": 3857
+        },
+        "shares": {
+          "中国": 41.41,
+          "フィリピン": 11.58,
+          "ベトナム": 4.36,
+          "ネパール": 3.34,
+          "ミャンマー": 0.45,
+          "この5区分以外": 38.85
+        }
+      },
+      {
+        "year": 2016,
+        "date": "2016-10-01",
+        "foreign": 11059,
+        "counts": {
+          "中国": 4496,
+          "フィリピン": 1238,
+          "ベトナム": 619,
+          "ネパール": 451,
+          "ミャンマー": 59,
+          "この5区分以外": 4196
+        },
+        "shares": {
+          "中国": 40.65,
+          "フィリピン": 11.19,
+          "ベトナム": 5.6,
+          "ネパール": 4.08,
+          "ミャンマー": 0.53,
+          "この5区分以外": 37.94
+        }
+      },
+      {
+        "year": 2017,
+        "date": "2017-10-01",
+        "foreign": 11954,
+        "counts": {
+          "中国": 4529,
+          "フィリピン": 1303,
+          "ベトナム": 731,
+          "ネパール": 536,
+          "ミャンマー": 107,
+          "この5区分以外": 4748
+        },
+        "shares": {
+          "中国": 37.89,
+          "フィリピン": 10.9,
+          "ベトナム": 6.12,
+          "ネパール": 4.48,
+          "ミャンマー": 0.9,
+          "この5区分以外": 39.72
+        }
+      },
+      {
+        "year": 2018,
+        "date": "2018-10-01",
+        "foreign": 12737,
+        "counts": {
+          "中国": 4777,
+          "フィリピン": 1371,
+          "ベトナム": 852,
+          "ネパール": 590,
+          "ミャンマー": 95,
+          "この5区分以外": 5052
+        },
+        "shares": {
+          "中国": 37.5,
+          "フィリピン": 10.76,
+          "ベトナム": 6.69,
+          "ネパール": 4.63,
+          "ミャンマー": 0.75,
+          "この5区分以外": 39.66
+        }
+      },
+      {
+        "year": 2019,
+        "date": "2019-10-01",
+        "foreign": 13120,
+        "counts": {
+          "中国": 5130,
+          "フィリピン": 1335,
+          "ベトナム": 1063,
+          "ネパール": 548,
+          "ミャンマー": 77,
+          "この5区分以外": 4967
+        },
+        "shares": {
+          "中国": 39.1,
+          "フィリピン": 10.18,
+          "ベトナム": 8.1,
+          "ネパール": 4.18,
+          "ミャンマー": 0.59,
+          "この5区分以外": 37.86
+        }
+      },
+      {
+        "year": 2020,
+        "date": "2020-10-01",
+        "foreign": 12881,
+        "counts": {
+          "中国": 5132,
+          "フィリピン": 1336,
+          "ベトナム": 1114,
+          "ネパール": 461,
+          "ミャンマー": 83,
+          "この5区分以外": 4755
+        },
+        "shares": {
+          "中国": 39.84,
+          "フィリピン": 10.37,
+          "ベトナム": 8.65,
+          "ネパール": 3.58,
+          "ミャンマー": 0.64,
+          "この5区分以外": 36.91
+        }
+      },
+      {
+        "year": 2021,
+        "date": "2021-10-01",
+        "foreign": 12898,
+        "counts": {
+          "中国": 5080,
+          "フィリピン": 1323,
+          "ベトナム": 1258,
+          "ネパール": 500,
+          "ミャンマー": 91,
+          "この5区分以外": 4646
+        },
+        "shares": {
+          "中国": 39.39,
+          "フィリピン": 10.26,
+          "ベトナム": 9.75,
+          "ネパール": 3.88,
+          "ミャンマー": 0.71,
+          "この5区分以外": 36.02
+        }
+      },
+      {
+        "year": 2022,
+        "date": "2022-10-01",
+        "foreign": 14059,
+        "counts": {
+          "中国": 5346,
+          "フィリピン": 1393,
+          "ベトナム": 1360,
+          "ネパール": 552,
+          "ミャンマー": 157,
+          "この5区分以外": 5251
+        },
+        "shares": {
+          "中国": 38.03,
+          "フィリピン": 9.91,
+          "ベトナム": 9.67,
+          "ネパール": 3.93,
+          "ミャンマー": 1.12,
+          "この5区分以外": 37.35
+        }
+      },
+      {
+        "year": 2023,
+        "date": "2023-10-01",
+        "foreign": 15125,
+        "counts": {
+          "中国": 5590,
+          "フィリピン": 1471,
+          "ベトナム": 1532,
+          "ネパール": 676,
+          "ミャンマー": 204,
+          "この5区分以外": 5652
+        },
+        "shares": {
+          "中国": 36.96,
+          "フィリピン": 9.73,
+          "ベトナム": 10.13,
+          "ネパール": 4.47,
+          "ミャンマー": 1.35,
+          "この5区分以外": 37.37
+        }
+      },
+      {
+        "year": 2024,
+        "date": "2024-10-01",
+        "foreign": 16495,
+        "counts": {
+          "中国": 5805,
+          "フィリピン": 1501,
+          "ベトナム": 1922,
+          "ネパール": 859,
+          "ミャンマー": 398,
+          "この5区分以外": 6010
+        },
+        "shares": {
+          "中国": 35.19,
+          "フィリピン": 9.1,
+          "ベトナム": 11.65,
+          "ネパール": 5.21,
+          "ミャンマー": 2.41,
+          "この5区分以外": 36.44
+        }
+      },
+      {
+        "year": 2025,
+        "date": "2025-10-01",
+        "foreign": 18535,
+        "counts": {
+          "中国": 6195,
+          "フィリピン": 1581,
+          "ベトナム": 2227,
+          "ネパール": 1334,
+          "ミャンマー": 677,
+          "この5区分以外": 6521
+        },
+        "shares": {
+          "中国": 33.42,
+          "フィリピン": 8.53,
+          "ベトナム": 12.02,
+          "ネパール": 7.2,
+          "ミャンマー": 3.65,
+          "この5区分以外": 35.18
+        }
+      },
+      {
+        "year": 2026,
+        "date": "2026-10-01",
+        "foreign": 19961,
+        "counts": {
+          "中国": 6400,
+          "フィリピン": 1633,
+          "ベトナム": 2232,
+          "ネパール": 1614,
+          "ミャンマー": 1077,
+          "この5区分以外": 7005
+        },
+        "shares": {
+          "中国": 32.06,
+          "フィリピン": 8.18,
+          "ベトナム": 11.18,
+          "ネパール": 8.09,
+          "ミャンマー": 5.4,
+          "この5区分以外": 35.09
+        }
+      }
+    ]
+  },
+  "nearbySummary": {
+    "date": "2026-10-01",
+    "medianShare": 2.9,
+    "medianForeign": 6931.5,
+    "cities": [
+      {
+        "code": "13201",
+        "name": "八王子市",
+        "total": 559320,
+        "japanese": 539359,
+        "foreign": 19961,
+        "share": 3.57,
+        "isHachioji": true
+      },
+      {
+        "code": "13209",
+        "name": "町田市",
+        "total": 431417,
+        "japanese": 419280,
+        "foreign": 12137,
+        "share": 2.81,
+        "isHachioji": false
+      },
+      {
+        "code": "13202",
+        "name": "立川市",
+        "total": 188093,
+        "japanese": 181217,
+        "foreign": 6876,
+        "share": 3.66,
+        "isHachioji": false
+      },
+      {
+        "code": "13212",
+        "name": "日野市",
+        "total": 189493,
+        "japanese": 184877,
+        "foreign": 4616,
+        "share": 2.44,
+        "isHachioji": false
+      },
+      {
+        "code": "13206",
+        "name": "府中市",
+        "total": 263429,
+        "japanese": 256442,
+        "foreign": 6987,
+        "share": 2.65,
+        "isHachioji": false
+      },
+      {
+        "code": "13205",
+        "name": "青梅市",
+        "total": 128157,
+        "japanese": 124333,
+        "foreign": 3824,
+        "share": 2.98,
+        "isHachioji": false
+      }
+    ]
+  }
+}
